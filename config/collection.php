@@ -384,7 +384,7 @@ return [
             'name' => 'vih_conocido_previa_embarazo',
             'value' => '',
             'max-lenght' => ''
-            ,'required' => ''
+            , 'required' => ''
          ]
       ],
 
@@ -450,7 +450,7 @@ return [
             'name' => 'lugar_control_prenatal',
             'value' => '',
             'max-lenght' => ''
-            ,'required' => ''
+            , 'required' => ''
          ]
       ],
 
@@ -494,7 +494,7 @@ return [
             'name' => 'resultado_dilucion_1_vdrl_embarazo',
             'value' => '',
             'max-lenght' => ''
-            ,'required' => ''
+            , 'required' => ''
          ]
       ],
 
@@ -1042,7 +1042,7 @@ return [
          'tipo' => 'input:select',
          'directivas' => [
             'id' =>
-            'tipo_parto',
+               'tipo_parto',
             'name' => 'tipo_parto',
             'value' => '',
             'max-lenght' => '',
@@ -1810,16 +1810,6 @@ return [
       ],
 
    ]
-
-
-
-
-
-
-
-
-
-
 
 
 ];
