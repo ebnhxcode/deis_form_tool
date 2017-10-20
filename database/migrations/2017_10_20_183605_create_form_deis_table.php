@@ -1,0 +1,183 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateFormDeisTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('form_deis', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('n_correlativo_interno');
+            $table->integer('id_region');
+            $table->integer('id_servicio_salud');
+            $table->integer('run_madre');
+            $table->string('digito_verificador');
+            $table->integer('edad');
+            $table->string('nacionalidad');
+            $table->string('id_pais');
+            $table->string('pueblos_indigenas');
+            $table->string('estado_civil');
+            $table->string('tipo_de_convivencia');
+            $table->string('escolaridad');
+            $table->integer('anos_estudio');
+            $table->string('residencia_gestante');
+            $table->integer('nacidos_vivos_previos_embarazo');
+            $table->integer('nacidos_muertos_previos_embarazo');
+            $table->integer('abortos_previos_embarazo');
+            $table->string('sifilis_previa_embarazo');
+            $table->integer('ano_sifilis_previa_embarazo');
+            $table->string('otra_ets_previa_embarazo');
+            $table->string('vih_conocido_previa_embarazo');
+            $table->timestamp('fecha_confirmacion_isp_vih_responde_si');
+            $table->string('adicciones');
+            $table->timestamp('fecha_ingreso_control_prenatal_embarazo');
+            $table->string('embarazo_con_control_parental');
+            $table->integer('edad_gestacional_ingreso_control_embarazo');
+            $table->string('lugar_control_prenatal');
+            $table->integer('codigo_establecimiento_control_prenatal_embarazo');
+            $table->timestamp('fecha_1_vdrl_embarazo');
+            $table->string('resultado_1_vdrl_embarazo');
+            $table->string('resultado_dilucion_1_vdrl_embarazo');
+            $table->string('eg_1_dvrl_embarazo');
+            $table->timestamp('fecha_2_vdrl_embarazo');
+            $table->string('resultado_2_vdrl_embarazo');
+            $table->string('resultado_dilucion_2_vdrl_embarazo');
+            $table->integer('eg_2_dvrl_embarazo');
+            $table->timestamp('fecha_3_vdrl_embarazo');
+            $table->string('resultado_3_vdrl_embarazo');
+            $table->string('resultado_dilucion_3_vdrl_embarazo');
+            $table->integer('eg_3_dvrl_embarazo');
+            $table->timestamp('fecha_examen_treponemico');
+            $table->string('resultado_treponemico');
+            $table->string('diagnostico_sifilis_embarazo');
+            $table->string('tratamiento_sifilis_farmaco');
+            $table->string('tratamiento_sifilis_dosis');
+            $table->string('tratamiento_sifilis_frecuencia');
+            $table->string('acepta_rechaza_toma_examen_vih');
+            $table->timestamp('fecha_1_examen_vih_embarazo');
+            $table->string('resultado_1_examen_vih_embarazo');
+            $table->integer('eg_1_examen_vih');
+            $table->timestamp('fecha_2_examen_vih_embarazo');
+            $table->string('resultado_2_examen_vih_embarazo');
+            $table->integer('eg_2_examen_vih');
+            $table->timestamp('fecha_resultado_final_isp_examen_vih');
+            $table->string('resultado_final_isp_examen_vih');
+            $table->string('derivada_a_especialidades_embarazo');
+            $table->timestamp('fecha_ingreso_unacess');
+            $table->timestamp('fecha_ingreso_control_unidad_alto_riesgo');
+            $table->timestamp('fecha_ingreso_control_centro_atencion_vih');
+            $table->timestamp('fecha_ingreso_control_otras_especialidades');
+            $table->string('terapia_antiretroviral_farmaco_1');
+            $table->timestamp('fecha_inicio_tar_farmaco_1');
+            $table->string('terapia_antiretroviral_tar_farmaco_2');
+            $table->timestamp('fecha_inicio_tar_farmaco_2');
+            $table->string('terapia_antiretroviral_tar_farmaco_3');
+            $table->timestamp('fecha_inicio_tar_farmaco_3');
+            $table->integer('numero_cd4_ingreso_control_prenatal');
+            $table->timestamp('fecha_examen_linfocitos_cd4_ingreso_control_prenatal');
+            $table->integer('carga_viral_numero_copia_ingreso_control_prenatal');
+            $table->timestamp('fecha_examen_carga_viral_control_prenatal');
+            $table->integer('numero_contactos_sexuales_declarados');
+            $table->integer('numero_contactos_sexuales_estudiados');
+            $table->timestamp('carga_viral_numero_copia_semana_34');
+            $table->timestamp('fecha_examen_carga_viral_semana_34');
+            $table->integer('numero_contactos_sexuales_tratados');
+            $table->string('lugar_atencion_parto');
+            $table->integer('codigo_establecimiento');
+            $table->string('nombre_establecimiento_sin_codigo');
+            $table->timestamp('fecha_parto');
+            $table->timestamp('hora_parto');
+            $table->string('tipo_parto');
+            $table->string('via_parto');
+            $table->string('resultado_vdrl_parto');
+            $table->string('resultado_dilucion_vdrl_parto');
+            $table->string('resultado_examen_treponemico_parto');
+            $table->string('tratamiento_sifilis_parto');
+            $table->string('resultado_examen_vih_parto');
+            $table->string('tratamiento_retroviral_parto');
+            $table->integer('peso_mujer_parto');
+            $table->string('nombre_farmaco_1_vih');
+            $table->string('dosis_farmaco_1_vih');
+            $table->timestamp('fecha_inicio_farmaco_1_vih');
+            $table->timestamp('hora_inicio_farmaco_1_vih');
+            $table->string('nombre_farmaco_2_vih');
+            $table->string('dosis_farmaco_2_vih');
+            $table->timestamp('fecha_inicio_farmaco_2_vih');
+            $table->timestamp('hora_inicio_farmaco_2_vih');
+            $table->string('nombre_farmaco_suspencion_lactancia');
+            $table->timestamp('fecha_administracion_farmaco_suspencion_lactancia');
+            $table->string('estado_recien_nacido');
+            $table->integer('eg_pediatrica');
+            $table->string('sexo_recien_nacido');
+            $table->integer('peso_recien_nacido');
+            $table->string('estado_clinico_recien_nacido');
+            $table->integer('run_recien_nacido');
+            $table->string('digito_verificador_recien_nacido');
+            $table->string('codigo_recien_nacido');
+            $table->timestamp('fecha_examen_vdrl_periferico_recien_nacido');
+            $table->string('resultado_vdrl_periferico_recien_nacido');
+            $table->string('titulacion_vdrl_periferico_recien_nacido');
+            $table->integer('fecha_examen_vdrl_liq_cefalo_recien_nacido');
+            $table->string('resultado_vdrl_liq_cefalo_recien_nacido');
+            $table->string('titulacion_vdrl_liq_cefalo_recien_nacido');
+            $table->string('resultado_radiografia_huesos_largos');
+            $table->string('resultado_citoquimico_liq_cefalo_raquideo');
+            $table->string('resultado_estudio_placentario');
+            $table->string('tratamiento_recien_nacido_farmaco');
+            $table->string('tratamiento_recien_nacido_dosis');
+            $table->integer('tratamiento_recien_nacido_frecuencia');
+            $table->string('sustituto_leche_materna');
+            $table->timestamp('fecha_inicio_sustituto_leche_materna');
+            $table->timestamp('hora_inicio_sustituto_leche_materna');
+            $table->string('entrega_sustituto_leche_materna_al_alta');
+            $table->string('nombre_farmaco_1_vih_recien_nacido');
+            $table->string('dosis_farmaco_1_vih_recien_nacido');
+            $table->timestamp('fecha_inicio_farmaco_1_vih_recien_nacido');
+            $table->timestamp('hora_inicio_farmaco_1_vih_recien_nacido');
+            $table->string('nombre_farmaco_2_vih_recien_nacido');
+            $table->string('dosis_farmaco_2_vih_recien_nacido');
+            $table->timestamp('fecha_inicio_farmaco_2_vih_recien_nacido');
+            $table->timestamp('hora_inicio_farmaco_2_vih_recien_nacido');
+            $table->timestamp('fecha_1_examen_pcr_recien_nacido');
+            $table->string('resultado_1_examen_pcr_recien_nacido');
+            $table->timestamp('fecha_2_examen_pcr_recien_nacido');
+            $table->string('resultado_2_examen_pcr_recien_nacido');
+            $table->timestamp('fecha_3_examen_pcr_recien_nacido');
+            $table->string('resultado_3_examen_pcr_recien_nacido');
+            $table->string('diagnostico_final_vih_isp_recien_nacido');
+            $table->timestamp('fecha_test_elisa_18_meses');
+            $table->string('resultado_test_elisa_18_meses');
+            $table->timestamp('fecha_examen_treponemico_recien_nacido');
+            $table->string('derivacion_recien_nacido_a_seguimiento');
+            $table->string('lugar_derivacion_recien_nacido_a_seguimiento');
+            $table->timestamp('fecha_ingreso_control_recien_nacido_post_nacimiento');
+            $table->string('diagnostico_final_sifilis_recien_nacido');
+            $table->string('estado_seguimiento_mes');
+            $table->string('estado_seguimiento_3_meses');
+            $table->string('estado_seguimiento_6_meses');
+            $table->string('estado_seguimiento_12_meses');
+            $table->string('estado_seguimiento_18_meses');
+
+
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('form_deis');
+    }
+}
