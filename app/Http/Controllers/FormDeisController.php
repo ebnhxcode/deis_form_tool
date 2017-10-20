@@ -10,8 +10,11 @@ use App\Http\Requests;
 class FormDeisController extends Controller
 {
 
-    public function index () {
 
+    public function index () {
+        $returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
+        $returnData['labels'] = config('collection.deis_form_table_labels');
+        return view('formulario.index', $returnData);
     }
 
 
