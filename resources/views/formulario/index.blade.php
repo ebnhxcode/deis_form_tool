@@ -14,7 +14,9 @@
                   <div class="row">
                      <div class="col-md-12">
                         <div class="well well-sm">
-                           <h3 class="text-center">Levantamiento de información sobre nacimientos de 2016 y 2017</h3> <br>
+                           <h3 class="text-center">
+                              Levantamiento de información sobre nacimientos de 2016 y 2017
+                           </h3> <!-- .text-center --> <br>
 
                            <button class="btn-link" type="button" data-toggle="collapse"
                                    data-target="#instructions" aria-expanded="false" aria-controls="instructions">
