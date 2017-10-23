@@ -43,7 +43,9 @@
 
          <!-- Branding Image -->
          <a class="navbar-brand" href="{{ url('/') }}">
-            DEIS · Formulario
+            {{--DEIS · Formulario--}}
+            <img width="120" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
+
          </a>
       </div>
 

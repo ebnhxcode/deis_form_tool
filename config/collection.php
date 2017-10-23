@@ -1,6 +1,15 @@
 <?php
 
 return [
+   #Instrucciones
+   'deis_form_instructions' => [
+      0=>'Debe completar todos los campos que han sido definidos como obligatorios, se pueden reconocer con el simbolo (*).',
+      1=>'Puede guardar el estado del formulario para no perder los cambios realizados (borrador).',
+      2=>'Solo completar con los datos solicitados',
+   ],
+
+
+   #Definicion de campos
    'deis_form_table' => [
       'n_correlativo_interno',
       'region',
@@ -155,6 +164,7 @@ return [
       'variable_151_estandar',
    ],
 
+   #Campos definidos con sus propiedades
    'deis_form_inputs' => [
 
       'n_correlativo_interno' => [
@@ -1822,6 +1832,7 @@ return [
 
    ],
 
+   #Etiquetas para formularios
    'deis_form_table_labels' => [
       'n_correlativo_interno' => [
          'text' => 'Nº correlativo Minsal',
@@ -2277,7 +2288,5 @@ return [
          'text' => 'variable_151_estandar',
       ],
    ],
-
-
 
 ];
