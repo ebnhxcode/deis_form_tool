@@ -76,6 +76,52 @@ const FormularioController = new Vue({
          filters: {},
          methods: {},
       },
+      'inputs':{
+         props: ['name','id','type'],
+         'name': 'inputs',
+         'template': `
+            <input :name="name"
+                   :id="id"
+                   :type="type"
+                   class="form-control" />
+         `,
+         data () {},
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+      'selects':{
+         props: ['name','id'],
+         'name': 'selects',
+         'template': `
+            <select name="name"
+                    id="id"
+                    class="form-control" />
+            </select>
+         `,
+         data () {},
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+      'textareas':{
+         props: ['name','id'],
+         'name': 'textareas',
+         'template': `
+            <textarea name="name"
+                    id="id"
+                    class="form-control" />
+            </textarea>
+         `,
+         data () {},
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+
       /*
        '':{
        props: [''],
@@ -153,6 +199,7 @@ const FormularioController = new Vue({
       },
 
       inputInArray: function (input, array) {
+
          return ($.inArray(input.directivas.type, array) == -1) ? false : true;
       },
 
