@@ -46,9 +46,4 @@ elixir(function (mix) {
      mix.version(['public/css/app.css', 'public/js/all.js']);*/
 
     mix.browserify('app/api/controllers/FormularioController.js', 'public/js/app/api/controllers/FormularioController.js');
-
-    //mix.browserify('app/api/controllers/ContraloriaController.js', 'public/js/app/api/controllers/ContraloriaController.js');
-
-    //mix.browserify('app/api/controllers/GridContraloriaController.js', 'public/js/app/api/controllers/GridContraloriaController.js');
-
 });

@@ -36827,8 +36827,6 @@ var _veeValidate2 = _interopRequireDefault(_veeValidate);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 _vue2.default.use(_vueResource2.default);
 
 _vue2.default.use(_vue2Filters2.default);
@@ -36844,72 +36842,17 @@ _vue2.default.use(_veeValidate2.default, {
 var FormularioController = new _vue2.default({
    el: '#FormularioController ',
    data: function data() {
-      var _nuevo_auditor;
-
       return {
-         'contraloria': {
-            'id_ministerio': null,
-            'id_auditar': null,
-            'id_servicio_salud': null,
-            'id_establecimiento': null,
-            'id_seremi': null,
-            'id_subsecretaria': null,
-            'id_organismo': null,
-            'id_auditor_lider': null,
-            'id_proceso_contraloria': null,
-            'id_clasificacion_materia': null,
-            'ministerio': null,
-            'servicio_salud': null,
-            'establecimiento': null,
-            'seremi': null,
-            'organismo': null,
-            'sub_secretaria': null,
-            'area_auditada': null,
-            'objetivo_contraloria': null,
-            'actividad_contraloria': null,
-            'tipo_contraloria': null,
-            'codigo_caigg': null,
-            'proceso_contraloria': null,
-            'tipo_informe': null,
-            'ano': null,
-            'fecha': null,
-            'numero_informe_unidad': null,
-            'numero_informe': null,
-            'nombre_contraloria': null,
-            'cantidad_hallazgo_contraloria': null,
-            'auditores': null,
-            'existe': false
+         'instructions': [],
+         'inputs': [],
+         'labels': [],
+
+         'inputTypes': {
+            'basics': ['text', 'number', 'email', 'password', 'date', 'time'],
+            'select': ['select'],
+            'textarea': ['textarea']
          },
-         'contraloria_new': [],
-         'ministerio': [],
-         'seremis': [],
-         'servicio_salud': [],
-         'establecimiento': [],
-         'establecimientoTmp': [],
-         'sub_secretaria': [],
-         'organismo': [],
-         'nuevo_auditor': (_nuevo_auditor = {
-            '': null
-         }, _defineProperty(_nuevo_auditor, '', null), _defineProperty(_nuevo_auditor, 'jefatura_equipo', false), _nuevo_auditor),
-         //begin get inicio contraloria
-         'auditor': [],
-         'proceso_contraloria': [],
-         'equipo_auditor': [],
-         'objetivo_contraloria': [],
-         'actividad_contraloria': [],
-         'tipo_contraloria': [],
-         'clasificacion_materia': [],
-         'ano': [],
-         'numero_informe_unidad': [],
-         'tipo_informe': [],
-         'criticidad': [],
-         //end inicio contraloria
-         'establ': false, //establecimiento
-         'sersal': false, //servicio salud
-         'seremi': false, //seremi
-         'organi': false, //organismo
-         'subsec': false, //subsecretaria
-         'filtroEstablecimiento': false,
+
          'paso1_filtro': true,
          'paso2_confirmar': false,
          'paso3_crear': false,
@@ -36986,23 +36929,24 @@ var FormularioController = new _vue2.default({
 
 
       fetchFormulario: function fetchFormulario() {
-         /*
-         this.$http.get('/contraloria/filtro_ajax_data').then(response => { // success callback
-            this.ministerio = response.body.ministerio;
-            this.seremis = response.body.seremi;
-            this.servicio_salud = response.body.servicio_salud;
-            this.establecimiento = response.body.establecimiento;
-            this.sub_secretaria = response.body.sub_secretaria;
-            this.organismo = response.body.organismo;
-            this.auth = response.body.auth;
-         }, response => { // error callback
-            console.log('Error fetch_contraloria: '+response);
+         var _this = this;
+
+         this.$http.get('/formulario').then(function (response) {
+            // success callback
+            console.log(response);
+
+            _this.inputs = response.body.inputs;
+            _this.labels = response.body.labels;
+            _this.instructions = response.body.instructions;
+         }, function (response) {
+            // error callback
+            console.log('Error fetch_formulario: ' + response);
          });
-           var self = this;
-          setTimeout(function(){
+
+         var self = this;
+         setTimeout(function () {
             self.spinner_iniciar = false;
-          }, 1500);
-         */
+         }, 1500);
 
          console.log('FormularioController');
 
@@ -37027,6 +36971,10 @@ var FormularioController = new _vue2.default({
          */
 
          return;
+      },
+
+      inputInArray: function inputInArray(input, array) {
+         return $.inArray(input.directivas.type, array) == -1 ? false : true;
       }
 
       //with_dash() => for explained specific functions

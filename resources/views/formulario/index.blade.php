@@ -25,9 +25,11 @@
 
                            <div class="collapse" id="instructions">
                               <h4>Instrucciones:</h4> <br>
-                              @foreach($instructions as $key => $instruction)
-                                 <h5>· {{$instruction}}</h5>
-                              @endforeach
+
+                              <h5 v-for="i in instructions">
+                                 · @{{i}}
+                              </h5>
+
                            </div><!-- .collapse #instructions -->
 
                         </div><!-- .well .well-sm -->
@@ -35,9 +37,57 @@
 
                      {{ csrf_field() }}
 
+                     <dl class="dl-vertical">
 
+                     <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
+
+
+
+                        <dt>
+                           @{{ labels[i.directivas.id].text }}
+                        </dt>
+
+                        <dd v-if="inputInArray(i,inputTypes.basics)">
+                           <input :name="i.directivas.name"
+                                  :id="i.directivas.id"
+                                  :type="i.directivas.type"
+                                  v-model="i.directivas.name"
+                                  class="form-control input-sm" />
+                        </dd>
+                        <dd v-else-if="inputInArray(i,inputTypes.select)">
+                           <select :name="i.directivas.name"
+                                   :id="i.directivas.id"
+                                   v-model="i.directivas.name"
+                                   class="form-control input-sm">
+
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+
+                           </select>
+
+                        </dd>
+
+                        <dd v-else-if="inputInArray(i,inputTypes.textarea)">
+
+                           <textarea :name="i.directivas.name"
+                                     :id="i.directivas.id"
+                                     v-model="i.directivas.name"
+                                     class="form-control input-sm">
+                           </textarea>
+
+                        </dd>
+
+
+
+                     </div><!-- .col-md-* -->
+
+                     </dl>
+
+                     {{--
                      @forelse($inputs as $key => $input)
-                        <div class="col-md-6">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
                            <dl class="dl-vertical">
                               <dt>{{$labels[$input->directivas->id]['text']}}</dt>
                               <dd>
@@ -67,16 +117,15 @@
                               </dd>
                            </dl>
 
-                           {{--
                            <label for="{{$input->directivas->id}}">
                               {{$labels[$input->directivas->id]['text']}}
                            </label>
-                           --}}
 
                         </div><!-- .col-md-* -->
                      @empty
                         No hay campos
                      @endforelse
+                     --}}
 
                   </div><!-- .row -->
                </div><!-- .panel-body -->
