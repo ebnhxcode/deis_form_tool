@@ -39,93 +39,54 @@
 
                      <dl class="dl-vertical">
 
-                     <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
+                        <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
 
+                           <!-- Etiquetas de los campos -->
+                           <dt>
+                              @{{ labels[i.directivas.id].text }}
+                           </dt>
 
-
-                        <dt>
-                           @{{ labels[i.directivas.id].text }}
-                        </dt>
-
-                        <dd v-if="inputInArray(i,inputTypes.basics)">
-                           <input :name="i.directivas.name"
-                                  :id="i.directivas.id"
-                                  :type="i.directivas.type"
-                                  v-model="i.directivas.name"
-                                  class="form-control input-sm" />
-                        </dd>
-                        <dd v-else-if="inputInArray(i,inputTypes.select)">
-                           <select :name="i.directivas.name"
-                                   :id="i.directivas.id"
-                                   v-model="i.directivas.name"
-                                   class="form-control input-sm">
-
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-
-                           </select>
-
-                        </dd>
-
-                        <dd v-else-if="inputInArray(i,inputTypes.textarea)">
-
-                           <textarea :name="i.directivas.name"
+                           <!-- Input basicos como text,number,time,date,etc -->
+                           <dd v-if="inputInArray(i,inputTypes.basics)">
+                              <input :name="i.directivas.name"
                                      :id="i.directivas.id"
+                                     :type="i.directivas.type"
                                      v-model="i.directivas.name"
-                                     class="form-control input-sm">
-                           </textarea>
+                                     class="form-control input-sm" />
+                           </dd>
 
-                        </dd>
+                           <!-- Select Inputs -->
+                           <dd v-else-if="inputInArray(i,inputTypes.select)">
+                              <select :name="i.directivas.name"
+                                      :id="i.directivas.id"
+                                      v-model="i.directivas.name"
+                                      class="form-control input-sm">
 
+                                 <option value="0">0</option>
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
 
+                              </select><!-- .form-control -->
 
-                     </div><!-- .col-md-* -->
+                           </dd>
 
-                     </dl>
+                           <!-- Textarea Inputs -->
+                           <dd v-else-if="inputInArray(i,inputTypes.textarea)">
 
-                     {{--
-                     @forelse($inputs as $key => $input)
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                           <dl class="dl-vertical">
-                              <dt>{{$labels[$input->directivas->id]['text']}}</dt>
-                              <dd>
-                                 @if (in_array($input->directivas->type, ['text', 'number', 'email', 'password', 'date', 'time']))
-                                    <input name="{{$input->directivas->name}}"
-                                           id="{{$input->directivas->id}}"
-                                           type="{{$input->directivas->type}}"
-                                           class="form-control input-sm" />
-
-                                 @elseif (in_array($input->directivas->type, ['select']))
-                                    <select name="{{$input->directivas->name}}"
-                                            id="{{$input->directivas->id}}"
-                                            class="form-control input-sm">
-                                       <option value="0">0</option>
-                                       <option value="1">1</option>
-                                       <option value="2">2</option>
-                                       <option value="3">3</option>
-                                    </select>
-
-                                 @elseif (in_array($input->directivas->type, ['textarea']))
-                                    <textarea name="{{$input->directivas->name}}"
-                                              id="{{$input->directivas->id}}"
-                                              class="form-control input-sm">
+                              <textarea :name="i.directivas.name"
+                                        :id="i.directivas.id"
+                                        v-model="i.directivas.name"
+                                        class="form-control input-sm">
                               </textarea>
-                                 @endif
 
-                              </dd>
-                           </dl>
+                           </dd>
 
-                           <label for="{{$input->directivas->id}}">
-                              {{$labels[$input->directivas->id]['text']}}
-                           </label>
+
 
                         </div><!-- .col-md-* -->
-                     @empty
-                        No hay campos
-                     @endforelse
-                     --}}
+
+                     </dl><!-- .dl-vertical -->
 
                   </div><!-- .row -->
                </div><!-- .panel-body -->
