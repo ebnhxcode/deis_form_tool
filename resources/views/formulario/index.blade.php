@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-   <div class="container">
+   <div class="container" id="FormularioController">
       <div class="row">
          <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
@@ -35,10 +35,9 @@
 
                      {{ csrf_field() }}
 
+
                      @forelse($inputs as $key => $input)
-
-                        <div class="col-md-12">
-
+                        <div class="col-md-6">
                            <dl class="dl-vertical">
                               <dt>{{$labels[$input->directivas->id]['text']}}</dt>
                               <dd>
@@ -46,12 +45,12 @@
                                     <input name="{{$input->directivas->name}}"
                                            id="{{$input->directivas->id}}"
                                            type="{{$input->directivas->type}}"
-                                           class="form-control" />
+                                           class="form-control input-sm" />
 
                                  @elseif (in_array($input->directivas->type, ['select']))
                                     <select name="{{$input->directivas->name}}"
                                             id="{{$input->directivas->id}}"
-                                            class="form-control">
+                                            class="form-control input-sm">
                                        <option value="0">0</option>
                                        <option value="1">1</option>
                                        <option value="2">2</option>
@@ -61,24 +60,20 @@
                                  @elseif (in_array($input->directivas->type, ['textarea']))
                                     <textarea name="{{$input->directivas->name}}"
                                               id="{{$input->directivas->id}}"
-                                              class="form-control">
+                                              class="form-control input-sm">
                               </textarea>
                                  @endif
 
                               </dd>
                            </dl>
 
-
-{{--
+                           {{--
                            <label for="{{$input->directivas->id}}">
                               {{$labels[$input->directivas->id]['text']}}
                            </label>
---}}
-
-
+                           --}}
 
                         </div><!-- .col-md-* -->
-
                      @empty
                         No hay campos
                      @endforelse
@@ -92,3 +87,6 @@
    </div><!-- .container -->
 @endsection
 
+@section('VueControllers')
+   {!!Html::script('js/app/api/controllers/FormularioController.js')!!}
+@endsection
