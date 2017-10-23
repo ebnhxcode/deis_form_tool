@@ -7,16 +7,9 @@ use App\Http\Requests;
 
 
 
-class FormDeisController extends Controller
-{
-
-
-
-
+class FormDeisController extends Controller {
     public function __construct () {
-
-
-
+        $this->middleware('auth');
     }
 
 

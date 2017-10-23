@@ -46,20 +46,21 @@
                               @{{ labels[i.directivas.id].text }}
                            </dt>
 
+                           
+
                            <!-- Input basicos como text,number,time,date,etc -->
                            <dd v-if="inputInArray(i,inputTypes.basics)">
                               <input :name="i.directivas.name"
                                      :id="i.directivas.id"
                                      :type="i.directivas.type"
-                                     v-model="i.directivas.name"
                                      class="form-control input-sm" />
                            </dd>
+
 
                            <!-- Select Inputs -->
                            <dd v-else-if="inputInArray(i,inputTypes.select)">
                               <select :name="i.directivas.name"
                                       :id="i.directivas.id"
-                                      v-model="i.directivas.name"
                                       class="form-control input-sm">
 
                                  <option value="0">0</option>
@@ -76,10 +77,12 @@
 
                               <textarea :name="i.directivas.name"
                                         :id="i.directivas.id"
-                                        v-model="i.directivas.name"
                                         class="form-control input-sm">
                               </textarea>
 
+                           </dd>
+                           <dd v-else>
+                              Sin Campos
                            </dd>
 
 
