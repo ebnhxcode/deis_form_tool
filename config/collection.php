@@ -323,8 +323,8 @@ return [
          ]
       ],
 
-
       #Control de embarazo - control_embarazo
+         #Parte 1 control de embarazo
       'embarazo_con_control_parental' => [
          'directivas' => [
             'type' => 'select',
@@ -410,6 +410,378 @@ return [
             'type' => 'number',
             'id' => 'codigo_establecimiento_control_prenatal_embarazo',
             'name' => 'codigo_establecimiento_control_prenatal_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+
+         #Parte 2 control de embarazo
+      'fecha_1_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_1_vdrl_embarazo',
+            'name' => 'fecha_1_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_1_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_1_vdrl_embarazo',
+            'name' => 'resultado_1_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_dilucion_1_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_dilucion_1_vdrl_embarazo',
+            'name' => 'resultado_dilucion_1_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => ''
+            , 'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'eg_1_dvrl_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_1_dvrl_embarazo',
+            'name' => 'eg_1_dvrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'fecha_2_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_2_vdrl_embarazo',
+            'name' => 'fecha_2_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_2_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_2_vdrl_embarazo',
+            'name' => 'resultado_2_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_dilucion_2_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_dilucion_2_vdrl_embarazo',
+            'name' => 'resultado_dilucion_2_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'eg_2_dvrl_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_2_dvrl_embarazo',
+            'name' => 'eg_2_dvrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'fecha_3_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_3_vdrl_embarazo',
+            'name' => 'fecha_3_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_3_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_3_vdrl_embarazo',
+            'name' => 'resultado_3_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_dilucion_3_vdrl_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_dilucion_3_vdrl_embarazo',
+            'name' => 'resultado_dilucion_3_vdrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'eg_3_dvrl_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_3_dvrl_embarazo',
+            'name' => 'eg_3_dvrl_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+
+         #Parte 3 control de embarazo
+      'acepta_rechaza_toma_examen_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'acepta_rechaza_toma_examen_vih',
+            'name' => 'acepta_rechaza_toma_examen_vih',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'fecha_administracion_1_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo',
+         ]
+      ],
+      'fecha_1_examen_vih_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_1_examen_vih_embarazo',
+            'name' => 'fecha_1_examen_vih_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_1_examen_vih_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_1_examen_vih_embarazo',
+            'name' => 'resultado_1_examen_vih_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'eg_1_examen_vih' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_1_examen_vih',
+            'name' => 'eg_1_examen_vih',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'fecha_2_examen_vih_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_2_examen_vih_embarazo',
+            'name' => 'fecha_2_examen_vih_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_2_examen_vih_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_2_examen_vih_embarazo',
+            'name' => 'resultado_2_examen_vih_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'eg_2_examen_vih' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_2_examen_vih',
+            'name' => 'eg_2_examen_vih',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'fecha_resultado_final_isp_examen_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_resultado_final_isp_examen_vih',
+            'name' => 'fecha_resultado_final_isp_examen_vih',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'resultado_final_isp_examen_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_final_isp_examen_vih',
+            'name' => 'resultado_final_isp_examen_vih',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'derivada_a_especialidades_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'derivada_a_especialidades_embarazo',
+            'name' => 'derivada_a_especialidades_embarazo',
             'value' => '',
             'max-lenght' => '',
             'required' => ''
@@ -734,213 +1106,6 @@ return [
 
 
 
-
-
-
-      'fecha_1_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_1_vdrl_embarazo',
-            'name' => 'fecha_1_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_1_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_1_vdrl_embarazo',
-            'name' => 'resultado_1_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_dilucion_1_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_dilucion_1_vdrl_embarazo',
-            'name' => 'resultado_dilucion_1_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => ''
-            , 'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'eg_1_dvrl_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_1_dvrl_embarazo',
-            'name' => 'eg_1_dvrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_2_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_2_vdrl_embarazo',
-            'name' => 'fecha_2_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_2_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_2_vdrl_embarazo',
-            'name' => 'resultado_2_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_dilucion_2_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_dilucion_2_vdrl_embarazo',
-            'name' => 'resultado_dilucion_2_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'eg_2_dvrl_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_2_dvrl_embarazo',
-            'name' => 'eg_2_dvrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_3_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_3_vdrl_embarazo',
-            'name' => 'fecha_3_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_3_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_3_vdrl_embarazo',
-            'name' => 'resultado_3_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_dilucion_3_vdrl_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_dilucion_3_vdrl_embarazo',
-            'name' => 'resultado_dilucion_3_vdrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'eg_3_dvrl_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_3_dvrl_embarazo',
-            'name' => 'eg_3_dvrl_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
       'fecha_examen_treponemico' => [
          'directivas' => [
             'type' => 'date',
@@ -1043,175 +1208,9 @@ return [
          ]
       ],
 
-      'acepta_rechaza_toma_examen_vih' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'acepta_rechaza_toma_examen_vih',
-            'name' => 'acepta_rechaza_toma_examen_vih',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'fecha_1_examen_vih_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_1_examen_vih_embarazo',
-            'name' => 'fecha_1_examen_vih_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'resultado_1_examen_vih_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_1_examen_vih_embarazo',
-            'name' => 'resultado_1_examen_vih_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'eg_1_examen_vih' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_1_examen_vih',
-            'name' => 'eg_1_examen_vih',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_2_examen_vih_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_2_examen_vih_embarazo',
-            'name' => 'fecha_2_examen_vih_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_2_examen_vih_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_2_examen_vih_embarazo',
-            'name' => 'resultado_2_examen_vih_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'eg_2_examen_vih' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_2_examen_vih',
-            'name' => 'eg_2_examen_vih',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_resultado_final_isp_examen_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_resultado_final_isp_examen_vih',
-            'name' => 'fecha_resultado_final_isp_examen_vih',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_final_isp_examen_vih' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_final_isp_examen_vih',
-            'name' => 'resultado_final_isp_examen_vih',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'derivada_a_especialidades_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'derivada_a_especialidades_embarazo',
-            'name' => 'derivada_a_especialidades_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'fecha_ingreso_unacess' => [
          'directivas' => [
@@ -2877,22 +2876,7 @@ return [
             'nombre' => '',
          ]
       ],
-      'fecha_administracion_1_dosis_penicilina_gestante' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => '',
-         ]
-      ],
+
       'fecha_administracion_ult_dosis_penicilina_gestante' => [
          'directivas' => [
             'type' => 'date',

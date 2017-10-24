@@ -33,11 +33,6 @@ return [
          'description' => 'Datos recién nacido',
          'class' => '',
       ],
-      'tratamiento_recien_nacido' => [
-         'name' => 'tratamiento_recien_nacido',
-         'description' => 'Tratamiento recién nacido',
-         'class' => '',
-      ],
    ]
 
 ];

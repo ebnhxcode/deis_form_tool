@@ -10,6 +10,7 @@ class CreateFormDeisTable extends Migration
      *
      * @return void
      */
+    #patricio.aguilera@minsal.cl
     public function up () {
         Schema::create('form_deis', function (Blueprint $table) {
             $table->increments('id');
