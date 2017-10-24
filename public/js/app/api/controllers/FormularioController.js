@@ -37010,6 +37010,10 @@ var FormularioController = new _vue2.default({
       inputInArray: function inputInArray(input, array) {
 
          return $.inArray(input.directivas.type, array) == -1 ? false : true;
+      },
+
+      inputsQuantity: function inputsQuantity(inputType) {
+         console.log(inputType);
       }
 
       //with_dash() => for explained specific functions

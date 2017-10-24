@@ -203,6 +203,12 @@ const FormularioController = new Vue({
          return ($.inArray(input.directivas.type, array) == -1) ? false : true;
       },
 
+      inputsQuantity: function (inputType){
+         console.log(inputType);
+
+
+      },
+
       //with_dash() => for explained specific functions
    },
 });

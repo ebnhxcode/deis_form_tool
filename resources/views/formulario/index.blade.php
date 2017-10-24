@@ -42,17 +42,13 @@
                         <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
 
 
-
+                           {{--<div v-if="inputsQuantity(i.directivas.type)"></div>--}}
 
 
                            <!-- Etiquetas de los campos -->
                            <dt>
-                              @{{ labels[i.directivas.id].text }}
+                              @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
                            </dt>
-
-
-                           
-
 
                            <!-- Input basicos como text,number,time,date,etc -->
                            <dd v-if="inputInArray(i,inputTypes.basics)">

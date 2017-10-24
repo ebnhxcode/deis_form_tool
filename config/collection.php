@@ -1066,6 +1066,22 @@ return [
 
       'terapia_antiretroviral_tar_farmaco_3' => [
          'directivas' => [
+            'type' => 'select',
+            'select' => [
+               'id' => 'terapia_antiretroviral_tar_farmaco_3',
+               'name' => 'terapia_antiretroviral_tar_farmaco_3',
+               'value' => '',
+               'max-lenght' => '',
+               'required' => ''
+            ],
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ]
+      ],
+      /*
+      'terapia_antiretroviral_tar_farmaco_3' => [
+         'directivas' => [
             'type' => 'select+text',
             'select' => [
                'id' => 'terapia_antiretroviral_tar_farmaco_3',
@@ -1086,6 +1102,7 @@ return [
             'nombre' => 'sin_examenes'
          ]
       ],
+      */
 
       'fecha_inicio_tar_farmaco_3' => [
          'directivas' => [
