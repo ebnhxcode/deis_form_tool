@@ -323,6 +323,7 @@ return [
          ]
       ],
 
+
       #Control de embarazo - control_embarazo
       'embarazo_con_control_parental' => [
          'directivas' => [
@@ -356,8 +357,72 @@ return [
             'nombre' => 'control_embarazo'
          ]
       ],
+      'fecha_ultima_regla' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ultima_regla',
+            'name' => 'fecha_ultima_regla',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo',
+         ]
+      ],
+      'edad_gestacional_ingreso_control_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'edad_gestacional_ingreso_control_embarazo',
+            'name' => 'edad_gestacional_ingreso_control_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'lugar_control_prenatal' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'lugar_control_prenatal',
+            'name' => 'lugar_control_prenatal',
+            'value' => '',
+            'max-lenght' => ''
+            , 'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'codigo_establecimiento_control_prenatal_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'codigo_establecimiento_control_prenatal_embarazo',
+            'name' => 'codigo_establecimiento_control_prenatal_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
 
-
+      #Patologías Sífilis - patologias_sifilis
       'region' => [
          'directivas' => [
             'type' => 'select',
@@ -670,56 +735,7 @@ return [
 
 
 
-      'edad_gestacional_ingreso_control_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'edad_gestacional_ingreso_control_embarazo',
-            'name' => 'edad_gestacional_ingreso_control_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'lugar_control_prenatal' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'lugar_control_prenatal',
-            'name' => 'lugar_control_prenatal',
-            'value' => '',
-            'max-lenght' => ''
-            , 'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'codigo_establecimiento_control_prenatal_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'codigo_establecimiento_control_prenatal_embarazo',
-            'name' => 'codigo_establecimiento_control_prenatal_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'fecha_1_vdrl_embarazo' => [
          'directivas' => [
@@ -2844,22 +2860,7 @@ return [
             'nombre' => '',
          ]
       ],
-      'fecha_ultima_regla' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ultima_regla',
-            'name' => 'fecha_ultima_regla',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => '',
-         ]
-      ],
+
       'pareja_vih_positivo' => [
          'directivas' => [
             'type' => 'select',
