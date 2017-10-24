@@ -14,6 +14,7 @@ return [
       'nombres_madre',
       'primer_apellido_madre',
       'segundo_apellido_madre',
+      'fecha_nacimiento_madre',
       'n_correlativo_interno',
       'region',
       'servicio_salud',
@@ -176,6 +177,7 @@ return [
    #Campos definidos con sus propiedades
    'deis_form_inputs' => [
 
+      #Identificacion de la mujer - identificacion_mujer
       'nombres_madre' => [
          'directivas' => [
             'type' => 'text',
@@ -192,7 +194,6 @@ return [
             'nombre' => 'identificacion_mujer'
          ]
       ],
-
       'primer_apellido_madre' => [
          'directivas' => [
             'type' => 'text',
@@ -209,7 +210,6 @@ return [
             'nombre' => 'identificacion_mujer'
          ]
       ],
-
       'segundo_apellido_madre' => [
          'directivas' => [
             'type' => 'text',
@@ -226,7 +226,22 @@ return [
             'nombre' => 'identificacion_mujer'
          ]
       ],
-
+      'fecha_nacimiento_madre' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_nacimiento_madre',
+            'name' => 'fecha_nacimiento_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
       'n_correlativo_interno' => [
          'directivas' => [
             'type' => 'number',
@@ -243,6 +258,105 @@ return [
             'nombre' => 'identificacion_mujer'
          ]
       ],
+      'run_madre' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'run_madre',
+            'name' => 'run_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
+      'pais_origen' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'pais_origen',
+            'name' => 'pais_origen',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
+      'pueblos_indigenas' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'pueblos_indigenas',
+            'name' => 'pueblos_indigenas',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
+      'nacionalidad' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'nacionalidad',
+            'name' => 'nacionalidad',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
+
+      #Control de embarazo - control_embarazo
+      'embarazo_con_control_parental' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'embarazo_con_control_parental',
+            'name' => 'embarazo_con_control_parental',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+      'fecha_ingreso_control_prenatal_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_prenatal_embarazo',
+            'name' => 'fecha_ingreso_control_prenatal_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ]
+      ],
+
 
       'region' => [
          'directivas' => [
@@ -275,23 +389,6 @@ return [
          ],
          'seccion' => [
             'nombre' => ''
-         ]
-      ],
-
-      'run_madre' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'run_madre',
-            'name' => 'run_madre',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'identificacion_mujer'
          ]
       ],
 
@@ -329,56 +426,7 @@ return [
          ]
       ],
 
-      'nacionalidad' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'nacionalidad',
-            'name' => 'nacionalidad',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'identificacion_mujer'
-         ]
-      ],
 
-      'pais_origen' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'pais_origen',
-            'name' => 'pais_origen',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'identificacion_mujer'
-         ]
-      ],
-
-      'pueblos_indigenas' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'pueblos_indigenas',
-            'name' => 'pueblos_indigenas',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'identificacion_mujer'
-         ]
-      ],
 
       'estado_civil' => [
          'directivas' => [
@@ -619,39 +667,8 @@ return [
          ]
       ],
 
-      'fecha_ingreso_control_prenatal_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_prenatal_embarazo',
-            'name' => 'fecha_ingreso_control_prenatal_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'embarazo_con_control_parental' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'embarazo_con_control_parental',
-            'name' => 'embarazo_con_control_parental',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
+
 
       'edad_gestacional_ingreso_control_embarazo' => [
          'directivas' => [
@@ -2905,7 +2922,9 @@ return [
       'segundo_apellido_madre' => [
          'text' => 'Segundo Apellido de la madre',
       ],
-
+      'fecha_nacimiento_madre' => [
+         'text' => 'Fecha de nacimiento de la madre',
+      ],
       'n_correlativo_interno' => [
          'text' => 'Nº correlativo Minsal',
       ],

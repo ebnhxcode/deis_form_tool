@@ -13,6 +13,11 @@ class CreateFormDeisTable extends Migration
     public function up () {
         Schema::create('form_deis', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombres_madre')->nullable(true);
+            $table->string('primer_apellido_madre')->nullable(true);
+            $table->string('segundo_apellido_madre')->nullable(true);
+            $table->timestamp('fecha_nacimiento_madre')->nullable(true);
+            $table->string('segundo_apellido_madre')->nullable(true);
             $table->integer('n_correlativo_interno')->nullable(true);
             $table->integer('id_region')->nullable(true);
             $table->integer('id_servicio_salud')->nullable(true);
@@ -164,6 +169,11 @@ class CreateFormDeisTable extends Migration
             $table->string('estado_seguimiento_12_meses')->nullable(true);
             $table->string('estado_seguimiento_18_meses')->nullable(true);
 
+            $table->string('mujer_continua_tratamiento_antiretroviral')->nullable(true);
+            $table->timestamp('fecha_ultima_regla')->nullable(true);
+            $table->string('pareja_vih_positivo')->nullable(true);
+            $table->timestamp('fecha_administracion_1_dosis_penicilina_gestante')->nullable(true);
+            $table->timestamp('fecha_administracion_ult_dosis_penicilina_gestante')->nullable(true);
 
 
             $table->timestamps();

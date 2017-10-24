@@ -76,7 +76,7 @@
                         <div class="well well-sm">
                            <h3 class="text-center">
                               Levantamiento de información sobre nacimientos de 2016 y 2017
-                              <img class="pull-right" width="120" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
+                              <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
                            <button class="btn-link" type="button" data-toggle="collapse"
@@ -106,42 +106,10 @@
                            <div class="panel-heading">
                               <!-- Nav tabs -->
                               <ul class="nav nav-tabs small" role="tablist">
-                                 
-                                 <li role="presentation" class="active" v-for="tab in nav_tab_form_deis">
-                                    <a :href="tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
-                                       Identificación de la Mujer
-                                    </a>
-                                 </li>
 
-
-                                 <li role="presentation">
-                                    <a href="#control_embarazo" aria-controls="control_embarazo" role="tab" data-toggle="tab">
-                                       Control de Embarazo
-                                    </a>
-                                 </li>
-                                 <li role="presentation">
-                                    <a href="#patologias_sifilis" aria-controls="patologias_sifilis" role="tab" data-toggle="tab">
-                                       Patologías Sífilis
-                                    </a>
-                                 </li>
-                                 <li role="presentation">
-                                    <a href="#patologias_vih" aria-controls="patologias_vih" role="tab" data-toggle="tab">
-                                       Patologías VIH
-                                    </a>
-                                 </li>
-                                 <li role="presentation">
-                                    <a href="#datos_parto" aria-controls="datos_parto" role="tab" data-toggle="tab">
-                                       Datos del Parto
-                                    </a>
-                                 </li>
-                                 <li role="presentation">
-                                    <a href="#datos_recien_nacido" aria-controls="datos_recien_nacido" role="tab" data-toggle="tab">
-                                       Datos recién nacido
-                                    </a>
-                                 </li>
-                                 <li role="presentation">
-                                    <a href="#tratamiento_recien_nacido" aria-controls="tratamiento_recien_nacido" role="tab" data-toggle="tab">
-                                       Tratamiento recién nacido
+                                 <li role="presentation" :class="tab.class" v-for="tab in nav_tab_form_deis">
+                                    <a :href="'#'+tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
+                                       @{{ tab.description }}
                                     </a>
                                  </li>
                               </ul>
@@ -150,26 +118,56 @@
                            <div class="panel-body">
                               <!-- Tab panes -->
                               <div class="tab-content">
-                                 <div role="tabpanel" class="tab-pane fade in active" id="identificacion_mujer">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'identificacion_mujer'])
-                                 </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="control_embarazo">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'control_embarazo'])
-                                 </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="patologias_sifilis">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'patologias_sifilis'])
-                                 </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="patologias_vih">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'patologias_vih'])
-                                 </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="datos_parto">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'datos_parto'])
-                                 </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="datos_recien_nacido">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'datos_recien_nacido'])
-                                 </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="tratamiento_recien_nacido">
-                                    @include ('formulario.form_partials.inputs', ['seccion' => 'tratamiento_recien_nacido'])
+
+                                 <div role="tabpanel" class="tab-pane fade in active" :id="tab.name" v-for="tab in nav_tab_form_deis">
+
+                                    <dl class="dl-vertical">
+
+                                       <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
+
+                                             <!-- Etiquetas de los campos -->
+                                          <dt>
+                                             @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
+                                          </dt>
+
+                                          <!-- Input basicos como text,number,time,date,etc -->
+                                          <dd v-if="inputInArray(i,inputTypes.basics)">
+                                             <inputs :name="i.directivas.name"
+                                                     :id="i.directivas.id"
+                                                     :type="i.directivas.type"></inputs>
+                                          </dd>
+
+                                          <!-- Select Inputs -->
+                                          <dd v-else-if="inputInArray(i,inputTypes.select)">
+                                             <select :name="i.directivas.name"
+                                                     :id="i.directivas.id"
+                                                     class="form-control">
+
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                             </select><!-- .form-control -->
+                                          </dd>
+
+                                          <!-- Textarea Inputs -->
+                                          <dd v-else-if="inputInArray(i,inputTypes.textarea)">
+
+                                             <textarea :name="i.directivas.name"
+                                                       :id="i.directivas.id"
+                                                       class="form-control">
+                                             </textarea>
+
+                                          </dd>
+
+                                          <dd v-else>
+                                             Sin Campos
+                                          </dd>
+                                          <br>
+                                       </div><!-- .col-md-* -->
+
+                                    </dl><!-- .dl-vertical -->
+
                                  </div>
 
                               </div><!-- .panel-heading -->

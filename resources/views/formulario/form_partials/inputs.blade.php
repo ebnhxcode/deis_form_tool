@@ -1,6 +1,5 @@
 <dl class="dl-vertical">
 
-
    <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
       {{--<div v-if="inputsQuantity(i.directivas.type)"></div>--}}
          <!-- Etiquetas de los campos -->
