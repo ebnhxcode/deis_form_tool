@@ -615,6 +615,22 @@ return [
             'nombre' => 'control_embarazo'
          ]
       ],
+      'fecha_administracion_1_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo',
+         ]
+      ],
 
          #Parte 3 control de embarazo
       'acepta_rechaza_toma_examen_vih' => [
@@ -631,22 +647,6 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
-         ]
-      ],
-      'fecha_administracion_1_dosis_penicilina_gestante' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo',
          ]
       ],
       'fecha_1_examen_vih_embarazo' => [
