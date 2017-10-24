@@ -36846,6 +36846,7 @@ var FormularioController = new _vue2.default({
          'instructions': [],
          'inputs': [],
          'labels': [],
+         'nav_tab_form_deis': [],
 
          'inputTypes': {
             'basics': ['text', 'number', 'email', 'password', 'date', 'time'],
@@ -36972,6 +36973,7 @@ var FormularioController = new _vue2.default({
             _this.inputs = response.body.inputs;
             _this.labels = response.body.labels;
             _this.instructions = response.body.instructions;
+            _this.nav_tab_form_deis = response.body.nav_tab_form_deis;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);

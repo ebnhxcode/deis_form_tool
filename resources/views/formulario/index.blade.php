@@ -106,11 +106,14 @@
                            <div class="panel-heading">
                               <!-- Nav tabs -->
                               <ul class="nav nav-tabs small" role="tablist">
-                                 <li role="presentation" class="active">
-                                    <a href="#identificacion_mujer" aria-controls="identificacion_mujer" role="tab" data-toggle="tab">
+                                 
+                                 <li role="presentation" class="active" v-for="tab in nav_tab_form_deis">
+                                    <a :href="tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
                                        Identificación de la Mujer
                                     </a>
                                  </li>
+
+
                                  <li role="presentation">
                                     <a href="#control_embarazo" aria-controls="control_embarazo" role="tab" data-toggle="tab">
                                        Control de Embarazo

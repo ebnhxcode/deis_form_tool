@@ -24,6 +24,7 @@ const FormularioController = new Vue({
          'instructions':[],
          'inputs':[],
          'labels':[],
+         'nav_tab_form_deis':[],
 
          'inputTypes':{
             'basics':['text', 'number', 'email', 'password', 'date', 'time'],
@@ -161,6 +162,7 @@ const FormularioController = new Vue({
             this.inputs = response.body.inputs;
             this.labels = response.body.labels;
             this.instructions = response.body.instructions;
+            this.nav_tab_form_deis = response.body.nav_tab_form_deis;
 
          }, response => { // error callback
             console.log('Error fetch_formulario: '+response);
