@@ -11,6 +11,9 @@ return [
 
    #Definicion de campos
    'deis_form_table' => [
+      'nombres_madre',
+      'primer_apellido_madre',
+      'segundo_apellido_madre',
       'n_correlativo_interno',
       'region',
       'servicio_salud',
@@ -178,6 +181,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -192,6 +198,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -206,6 +215,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -220,6 +232,60 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'nombres_madre' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'nombres_madre',
+            'name' => 'nombres_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'primer_apellido_madre' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'primer_apellido_madre',
+            'name' => 'primer_apellido_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'segundo_apellido_madre' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'segundo_apellido_madre',
+            'name' => 'segundo_apellido_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -234,6 +300,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -248,6 +317,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -262,6 +334,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -276,6 +351,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -290,6 +368,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -304,6 +385,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -318,6 +402,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -332,6 +419,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -346,6 +436,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -360,6 +453,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -374,6 +470,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -388,6 +487,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -402,6 +504,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -416,6 +521,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -430,6 +538,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -445,6 +556,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -459,6 +573,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -473,6 +590,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -487,6 +607,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -501,6 +624,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -515,6 +641,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -529,6 +658,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -543,6 +675,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -557,6 +692,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -571,6 +709,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -585,6 +726,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -599,6 +743,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -613,6 +760,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -627,6 +777,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -641,6 +794,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -655,6 +811,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -669,6 +828,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -683,6 +845,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -697,6 +862,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -711,6 +879,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -725,6 +896,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -739,6 +913,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -753,6 +930,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -767,6 +947,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -781,6 +964,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -795,6 +981,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -809,6 +998,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -823,6 +1015,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -837,6 +1032,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -851,6 +1049,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -865,6 +1066,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -879,6 +1083,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -893,6 +1100,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -907,6 +1117,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -921,6 +1134,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -935,6 +1151,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -949,6 +1168,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -963,6 +1185,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -977,6 +1202,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -991,6 +1219,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1005,6 +1236,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1019,6 +1253,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1033,6 +1270,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1047,6 +1287,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1061,6 +1304,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1077,6 +1323,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
       /*
@@ -1100,8 +1349,11 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
-         ]
-      ],
+         ],
+      'seccion
+ => [
+      'nombre]=>''        ]
+      ,
       */
 
       'fecha_inicio_tar_farmaco_3' => [
@@ -1115,6 +1367,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1129,6 +1384,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1143,6 +1401,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1157,6 +1418,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1171,6 +1435,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1185,6 +1452,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1199,6 +1469,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1213,6 +1486,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1227,6 +1503,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1241,6 +1520,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1255,6 +1537,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1269,6 +1554,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1283,6 +1571,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1297,6 +1588,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1311,6 +1605,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1326,6 +1623,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1340,6 +1640,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1354,6 +1657,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1368,6 +1674,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1382,6 +1691,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1396,6 +1708,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1410,6 +1725,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1424,6 +1742,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1438,6 +1759,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1452,6 +1776,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1466,6 +1793,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1480,6 +1810,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1494,6 +1827,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1508,6 +1844,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1522,6 +1861,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1536,6 +1878,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1550,6 +1895,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1564,6 +1912,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1578,6 +1929,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1592,6 +1946,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1606,6 +1963,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1620,6 +1980,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1634,6 +1997,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1648,6 +2014,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1662,6 +2031,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1676,6 +2048,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1690,6 +2065,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1704,6 +2082,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1718,6 +2099,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1732,6 +2116,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1746,6 +2133,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1760,6 +2150,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1774,6 +2167,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1788,6 +2184,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1802,6 +2201,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1816,6 +2218,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1830,6 +2235,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1844,6 +2252,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1858,6 +2269,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1872,6 +2286,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1886,6 +2303,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1900,6 +2320,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1914,6 +2337,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1928,6 +2354,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1942,6 +2371,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1956,6 +2388,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1970,6 +2405,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1984,6 +2422,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -1998,6 +2439,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2012,6 +2456,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2026,6 +2473,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2040,6 +2490,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2054,6 +2507,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2068,6 +2524,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2082,6 +2541,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2096,6 +2558,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2110,6 +2575,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2124,6 +2592,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2138,6 +2609,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2152,6 +2626,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2166,6 +2643,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2180,6 +2660,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2194,6 +2677,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2208,6 +2694,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2222,6 +2711,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2236,6 +2728,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2250,6 +2745,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2264,6 +2762,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2278,6 +2779,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2292,6 +2796,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2306,6 +2813,9 @@ return [
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
          ]
       ],
 
@@ -2313,6 +2823,16 @@ return [
 
    #Etiquetas para formularios
    'deis_form_table_labels' => [
+      'nombres_madre' => [
+         'text' => 'Nombres de la Madre',
+      ],
+      'primer_apellido_madre' => [
+         'text' => 'Primer Apellido de la  madre',
+      ],
+      'segundo_apellido_madre' => [
+         'text' => 'Segundo Apellido de la madre',
+      ],
+
       'n_correlativo_interno' => [
          'text' => 'Nº correlativo Minsal',
       ],

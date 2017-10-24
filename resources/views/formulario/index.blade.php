@@ -1,7 +1,66 @@
 @extends('layouts.app')
+<style>
+   .panel.with-nav-tabs .panel-heading {
+      padding: 5px 5px 0 5px;
+   }
+
+
+   .panel.with-nav-tabs .nav-tabs {
+      border-bottom: none;
+   }
+
+   .panel.with-nav-tabs .nav-justified {
+      margin-bottom: -1px;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > li > a,
+   .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+   .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+      color: #fff;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > .open > a,
+   .with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+   .with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+   .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+   .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+      color: #fff;
+      background-color: #3071a9;
+      border-color: transparent;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+   .with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+   .with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+      color: #428bca;
+      background-color: #fff;
+      border-color: #428bca;
+      border-bottom-color: transparent;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+      background-color: #428bca;
+      border-color: #3071a9;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+      color: #fff;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+      background-color: #3071a9;
+   }
+
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+   .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+      background-color: #4a9fe9;
+   }
+</style>
 
 @section('content')
-   <div class="container" id="FormularioController">
+   <div class="{{--container--}}" id="FormularioController">
       <div class="row">
          <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
@@ -13,9 +72,11 @@
                <div class="panel-body">
                   <div class="row">
                      <div class="col-md-12">
+
                         <div class="well well-sm">
                            <h3 class="text-center">
                               Levantamiento de información sobre nacimientos de 2016 y 2017
+                              <img class="pull-right" width="120" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
                            <button class="btn-link" type="button" data-toggle="collapse"
@@ -33,69 +94,121 @@
                            </div><!-- .collapse #instructions -->
 
                         </div><!-- .well .well-sm -->
+
                      </div><!-- .col-md-* -->
 
                      {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}
 
-                     <dl class="dl-vertical">
+                     <div class="col-md-12">
 
-                        <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
+                        <div id="" class="panel with-nav-tabs panel-primary">
+                           <!-- Items elementos de cabecera -->
+                           <div class="panel-heading">
+                              <!-- Nav tabs -->
+                              <ul class="nav nav-tabs small" role="tablist">
+                                 <li role="presentation" class="active">
+                                    <a href="#identificacion_mujer" aria-controls="identificacion_mujer" role="tab" data-toggle="tab">
+                                       Identificación de la Mujer
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#control_embarazo" aria-controls="control_embarazo" role="tab" data-toggle="tab">
+                                       Control de Embarazo
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#patologias_sifilis" aria-controls="patologias_sifilis" role="tab" data-toggle="tab">
+                                       Patologías Sífilis
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#patologias_vih" aria-controls="patologias_vih" role="tab" data-toggle="tab">
+                                       Patologías VIH
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#datos_parto" aria-controls="datos_parto" role="tab" data-toggle="tab">
+                                       Datos del Parto
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#datos_recien_nacido" aria-controls="datos_recien_nacido" role="tab" data-toggle="tab">
+                                       Datos recién nacido
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#tratamiento_recien_nacido" aria-controls="tratamiento_recien_nacido" role="tab" data-toggle="tab">
+                                       Tratamiento recién nacido
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div><!-- .panel-heading -->
 
+                           <div class="panel-body">
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                 <div role="tabpanel" class="tab-pane fade in active" id="identificacion_mujer">
+                                    <dl class="dl-vertical">
 
-                           {{--<div v-if="inputsQuantity(i.directivas.type)"></div>--}}
+                                       <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
+                                          {{--<div v-if="inputsQuantity(i.directivas.type)"></div>--}}
+                                             <!-- Etiquetas de los campos -->
+                                          <dt>
+                                             @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
+                                          </dt>
 
+                                          <!-- Input basicos como text,number,time,date,etc -->
+                                          <dd v-if="inputInArray(i,inputTypes.basics)">
+                                             <inputs :name="i.directivas.name"
+                                                     :id="i.directivas.id"
+                                                     :type="i.directivas.type"></inputs>
+                                          </dd>
 
-                           <!-- Etiquetas de los campos -->
-                           <dt>
-                              @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
-                           </dt>
+                                          <!-- Select Inputs -->
+                                          <dd v-else-if="inputInArray(i,inputTypes.select)">
+                                             <select :name="i.directivas.name"
+                                                     :id="i.directivas.id"
+                                                     class="form-control">
 
-                           <!-- Input basicos como text,number,time,date,etc -->
-                           <dd v-if="inputInArray(i,inputTypes.basics)">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                             </select><!-- .form-control -->
+                                          </dd>
 
-                              <inputs :name="i.directivas.name"
-                                      :id="i.directivas.id"
-                                      :type="i.directivas.type"></inputs>
+                                          <!-- Textarea Inputs -->
+                                          <dd v-else-if="inputInArray(i,inputTypes.textarea)">
 
-                           </dd>
+                                          <textarea :name="i.directivas.name"
+                                                    :id="i.directivas.id"
+                                                    class="form-control">
+                                          </textarea>
 
+                                          </dd>
 
-                           <!-- Select Inputs -->
-                           <dd v-else-if="inputInArray(i,inputTypes.select)">
+                                          <dd v-else>
+                                             Sin Campos
+                                          </dd>
+                                          <br>
+                                       </div><!-- .col-md-* -->
 
-                              <select :name="i.directivas.name"
-                                      :id="i.directivas.id"
-                                      class="form-control">
+                                    </dl><!-- .dl-vertical -->
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane fade" id="control_embarazo"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="patologias_sifilis"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="patologias_vih"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="datos_parto"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="datos_recien_nacido"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="tratamiento_recien_nacido"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="seguimientos"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="seguimientos"></div>
 
-                                 <option value="0">0</option>
-                                 <option value="1">1</option>
-                                 <option value="2">2</option>
-                                 <option value="3">3</option>
+                              </div><!-- .panel-heading -->
+                           </div><!-- .panel-heading -->
+                        </div><!-- .panel-heading -->
+                     </div><!-- .col-md-* -->
 
-                              </select><!-- .form-control -->
-
-                           </dd>
-
-                           <!-- Textarea Inputs -->
-                           <dd v-else-if="inputInArray(i,inputTypes.textarea)">
-
-                              <textarea :name="i.directivas.name"
-                                        :id="i.directivas.id"
-                                        class="form-control">
-                              </textarea>
-
-                           </dd>
-
-                           <dd v-else>
-                              Sin Campos
-                           </dd>
-
-                           <br>
-
-
-                        </div><!-- .col-md-* -->
-
-                     </dl><!-- .dl-vertical -->
 
                   </div><!-- .row -->
                </div><!-- .panel-body -->
