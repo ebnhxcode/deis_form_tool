@@ -148,61 +148,26 @@
                               <!-- Tab panes -->
                               <div class="tab-content">
                                  <div role="tabpanel" class="tab-pane fade in active" id="identificacion_mujer">
-                                    <dl class="dl-vertical">
-
-                                       <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs">
-                                          {{--<div v-if="inputsQuantity(i.directivas.type)"></div>--}}
-                                             <!-- Etiquetas de los campos -->
-                                          <dt>
-                                             @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
-                                          </dt>
-
-                                          <!-- Input basicos como text,number,time,date,etc -->
-                                          <dd v-if="inputInArray(i,inputTypes.basics)">
-                                             <inputs :name="i.directivas.name"
-                                                     :id="i.directivas.id"
-                                                     :type="i.directivas.type"></inputs>
-                                          </dd>
-
-                                          <!-- Select Inputs -->
-                                          <dd v-else-if="inputInArray(i,inputTypes.select)">
-                                             <select :name="i.directivas.name"
-                                                     :id="i.directivas.id"
-                                                     class="form-control">
-
-                                                <option value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                             </select><!-- .form-control -->
-                                          </dd>
-
-                                          <!-- Textarea Inputs -->
-                                          <dd v-else-if="inputInArray(i,inputTypes.textarea)">
-
-                                          <textarea :name="i.directivas.name"
-                                                    :id="i.directivas.id"
-                                                    class="form-control">
-                                          </textarea>
-
-                                          </dd>
-
-                                          <dd v-else>
-                                             Sin Campos
-                                          </dd>
-                                          <br>
-                                       </div><!-- .col-md-* -->
-
-                                    </dl><!-- .dl-vertical -->
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'identificacion_mujer'])
                                  </div>
-                                 <div role="tabpanel" class="tab-pane fade" id="control_embarazo"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="patologias_sifilis"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="patologias_vih"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="datos_parto"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="datos_recien_nacido"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="tratamiento_recien_nacido"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="seguimientos"></div>
-                                 <div role="tabpanel" class="tab-pane fade" id="seguimientos"></div>
+                                 <div role="tabpanel" class="tab-pane fade" id="control_embarazo">
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'control_embarazo'])
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane fade" id="patologias_sifilis">
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'patologias_sifilis'])
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane fade" id="patologias_vih">
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'patologias_vih'])
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane fade" id="datos_parto">
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'datos_parto'])
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane fade" id="datos_recien_nacido">
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'datos_recien_nacido'])
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane fade" id="tratamiento_recien_nacido">
+                                    @include ('formulario.form_partials.inputs', ['seccion' => 'tratamiento_recien_nacido'])
+                                 </div>
 
                               </div><!-- .panel-heading -->
                            </div><!-- .panel-heading -->

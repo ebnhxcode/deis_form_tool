@@ -165,10 +165,67 @@ return [
       'estado_seguimiento_12_meses',
       'estado_seguimiento_18_meses',
       'variable_151_estandar',
+      'mujer_continua_tratamiento_antiretroviral',
+      'fecha_ultima_regla',
+      'pareja_vih_positivo',
+      'fecha_administracion_1_dosis_penicilina_gestante',
+      'fecha_administracion_ult_dosis_penicilina_gestante',
+
    ],
 
    #Campos definidos con sus propiedades
    'deis_form_inputs' => [
+
+      'nombres_madre' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'nombres_madre',
+            'name' => 'nombres_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'primer_apellido_madre' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'primer_apellido_madre',
+            'name' => 'primer_apellido_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'segundo_apellido_madre' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'segundo_apellido_madre',
+            'name' => 'segundo_apellido_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
 
       'n_correlativo_interno' => [
          'directivas' => [
@@ -226,57 +283,6 @@ return [
             'type' => 'number',
             'id' => 'run_madre',
             'name' => 'run_madre',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombres_madre' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'nombres_madre',
-            'name' => 'nombres_madre',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'primer_apellido_madre' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'primer_apellido_madre',
-            'name' => 'primer_apellido_madre',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'segundo_apellido_madre' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'segundo_apellido_madre',
-            'name' => 'segundo_apellido_madre',
             'value' => '',
             'max-lenght' => '',
             'required' => ''
@@ -2802,20 +2808,87 @@ return [
          ]
       ],
 
-      'variable_151_estandar' => [
+
+
+
+      'mujer_continua_tratamiento_antiretroviral' => [
          'directivas' => [
             'type' => 'select',
-            'id' => 'variable_151_estandar',
-            'name' => 'variable_151_estandar',
+            'id' => 'mujer_continua_tratamiento_antiretroviral',
+            'name' => 'mujer_continua_tratamiento_antiretroviral',
             'value' => '',
             'max-lenght' => '',
             'required' => ''
          ],
          'bloque' => [
-            'nombre' => 'sin_examenes'
+            'nombre' => 'sin_examenes',
          ],
          'seccion' => [
-            'nombre' => ''
+            'nombre' => '',
+         ]
+      ],
+      'fecha_ultima_regla' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ultima_regla',
+            'name' => 'fecha_ultima_regla',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => '',
+         ]
+      ],
+      'pareja_vih_positivo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'pareja_vih_positivo',
+            'name' => 'pareja_vih_positivo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => '',
+         ]
+      ],
+      'fecha_administracion_1_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => '',
+         ]
+      ],
+      'fecha_administracion_ult_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => '',
          ]
       ],
 
@@ -3285,6 +3358,21 @@ return [
       ],
       'variable_151_estandar' => [
          'text' => 'variable_151_estandar',
+      ],
+      'mujer_continua_tratamiento_antiretroviral' => [
+         'text' => 'Mujer continua con tratamiento antirretroviral a los 12 meses post parto',
+      ],
+      'fecha_ultima_regla' => [
+         'text' => 'Fecha última regla (FUR)',
+      ],
+      'pareja_vih_positivo' => [
+         'text' => 'Pareja VIH positivo',
+      ],
+      'fecha_administracion_1_dosis_penicilina_gestante' => [
+         'text' => 'Fecha administración primera dosis penicilina gestante',
+      ],
+      'fecha_administracion_ult_dosis_penicilina_gestante' => [
+         'text' => 'Fecha administración última dosis penicilina gestante',
       ],
    ],
 
