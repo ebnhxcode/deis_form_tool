@@ -119,7 +119,7 @@
                               <!-- Tab panes -->
                               <div class="tab-content">
 
-                                 <div role="tabpanel" class="tab-pane fade in active" :id="tab.name" v-for="tab in nav_tab_form_deis">
+                                 <div role="tabpanel" :class="'tab-pane fade in '+tab.class" :id="tab.name" v-for="tab in nav_tab_form_deis">
 
                                     <dl class="dl-vertical">
 
