@@ -165,7 +165,16 @@
                                           </dd>
                                           <br>
                                        </div><!-- .col-md-* -->
-                                       <input id="" name="" class="btn btn-success" type="button" value="Guardar">
+
+                                       <div class="col-xs-6 col-sm-6 col-md-6">
+                                          <dt>
+                                             Guardar
+                                          </dt>
+
+                                          <dd>
+                                             <input id="" name="" class="btn btn-success" type="button" value="Guardar">
+                                          </dd>
+                                       </div><!-- .col-md-* -->
 
                                     </dl><!-- .dl-vertical -->
 
