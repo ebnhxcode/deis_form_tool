@@ -1195,7 +1195,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'ano_sifilis_previa_embarazo' => [
          'directivas' => [
@@ -1212,7 +1215,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'otra_its_previa_embarazo' => [
          'directivas' => [
@@ -1229,7 +1235,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
          #Cuarto bloque
       'fecha_examen_treponemico' => [
@@ -1247,7 +1256,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'resultado_treponemico' => [
          'directivas' => [
@@ -1264,7 +1276,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'diagnostico_sifilis_embarazo' => [
          'directivas' => [
@@ -1281,12 +1296,78 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
          #Quinto bloque
 
 
       ################################
+
+      'tratamiento_sifilis_farmaco' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_farmaco',
+            'name' => 'tratamiento_sifilis_farmaco',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+      'tratamiento_sifilis_dosis' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_dosis',
+            'name' => 'tratamiento_sifilis_dosis',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+      'tratamiento_sifilis_frecuencia' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_frecuencia',
+            'name' => 'tratamiento_sifilis_frecuencia',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+
+
       #  Hacer el bind v-model con el que no tiene prefijo _sifilis
       'fecha_administracion_1_dosis_penicilina_gestante_sifilis' => [
          'directivas' => [
@@ -1322,11 +1403,12 @@ return [
             'nombre' => 'patologias_sifilis',
          ]
       ],
-      'tratamiento_sifilis_farmaco' => [
+
+      'numero_contactos_sexuales_declarados' => [
          'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_farmaco',
-            'name' => 'tratamiento_sifilis_farmaco',
+            'type' => 'number',
+            'id' => 'numero_contactos_sexuales_declarados',
+            'name' => 'numero_contactos_sexuales_declarados',
             'value' => '',
             'max_lenght' => '',
             'required' => '',
@@ -1337,41 +1419,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
-      ],
-      'tratamiento_sifilis_dosis' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_dosis',
-            'name' => 'tratamiento_sifilis_dosis',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
          ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
          ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis'
-         ]
-      ],
-      'tratamiento_sifilis_frecuencia' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_frecuencia',
-            'name' => 'tratamiento_sifilis_frecuencia',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis'
-         ]
       ],
       'numero_contactos_sexuales_estudiados' => [
          'directivas' => [
@@ -1388,24 +1439,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
-      ],
-      'carga_viral_numero_copia_semana_34' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'carga_viral_numero_copia_semana_34',
-            'name' => 'carga_viral_numero_copia_semana_34',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
          ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
          ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis'
-         ]
       ],
       'numero_contactos_sexuales_tratados' => [
          'directivas' => [
@@ -1422,8 +1459,14 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
+
+
+
       ######
 
       #Patologías VIH -
@@ -1567,7 +1610,23 @@ return [
          ]
       ],
 
-
+      'carga_viral_numero_copia_semana_34' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'carga_viral_numero_copia_semana_34',
+            'name' => 'carga_viral_numero_copia_semana_34',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
 
 
       ##################################
@@ -1822,23 +1881,7 @@ return [
 
 
 
-      'numero_contactos_sexuales_declarados' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'numero_contactos_sexuales_declarados',
-            'name' => 'numero_contactos_sexuales_declarados',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
+
 
 
 
@@ -3273,7 +3316,7 @@ return [
          'text' => 'Escolaridad',
       ],
       'anos_estudio' => [
-         'text' => 'Años estudios ( último año aprobado del nivel de escolaridad registrado)',
+         'text' => 'Años de estudios ( último año aprobado )',
       ],
       'residencia_gestante' => [
          'text' => 'Residencia de la gestante',
@@ -3321,7 +3364,7 @@ return [
          'text' => 'Lugar Control Prenatal (Otro)',
       ],
       'codigo_establecimiento_control_prenatal_embarazo' => [
-         'text' => 'Código Establecimiento del control prenatal de este embarazo',
+         'text' => 'Código Establecimiento del control prenatal',
       ],
       'fecha_1_vdrl_embarazo' => [
          'text' => 'Fecha 1º VDRL de este embarazo',
