@@ -195,7 +195,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -213,6 +214,7 @@ return [
             'max_lenght' => '',
             'required' => '',
             'class' => '',
+            'style' => '',
             'readonly' => 'readonly'
          ],
          'bloque' => [
@@ -231,7 +233,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -251,7 +254,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -271,7 +275,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -291,7 +296,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -311,7 +317,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -331,7 +338,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -351,7 +359,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -374,7 +383,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -394,7 +404,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -414,7 +425,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -434,7 +446,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -454,7 +467,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -474,7 +488,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -494,7 +509,8 @@ return [
             'value' => '',
             'max_lenght' => ''
             , 'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -515,7 +531,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -532,7 +549,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -549,7 +567,8 @@ return [
             'value' => '',
             'max_lenght' => ''
             , 'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -566,7 +585,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -584,7 +604,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -601,7 +622,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -618,7 +640,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -635,7 +658,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -652,7 +676,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -669,7 +694,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -686,7 +712,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -703,7 +730,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -720,7 +748,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -741,7 +770,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -761,7 +791,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -781,7 +812,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -801,7 +833,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -821,7 +854,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -841,7 +875,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -861,7 +896,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -881,7 +917,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -898,7 +935,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -916,7 +954,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -939,7 +978,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -956,7 +996,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -973,7 +1014,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -990,7 +1032,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1007,7 +1050,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1028,7 +1072,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1048,7 +1093,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1068,7 +1114,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1088,7 +1135,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1108,7 +1156,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1129,7 +1178,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1149,7 +1199,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1169,7 +1220,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1189,7 +1241,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1209,7 +1262,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1229,7 +1283,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1250,7 +1305,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1270,7 +1326,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1290,7 +1347,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1315,7 +1373,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1335,7 +1394,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1355,7 +1415,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1378,7 +1439,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -1395,7 +1457,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -1413,7 +1476,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1433,7 +1497,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1453,7 +1518,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1480,7 +1546,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1497,7 +1564,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1515,7 +1583,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1532,7 +1601,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1549,7 +1619,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1569,7 +1640,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1589,7 +1661,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1609,7 +1682,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1629,7 +1703,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1649,7 +1724,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1671,7 +1747,8 @@ return [
             'value' => '',
             'max_lenght' => ''
             , 'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1691,7 +1768,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1711,7 +1789,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1732,7 +1811,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -1753,7 +1833,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1773,7 +1854,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1793,7 +1875,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1815,7 +1898,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1835,7 +1919,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1856,7 +1941,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1876,7 +1962,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1898,7 +1985,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1919,7 +2007,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1939,7 +2028,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1963,7 +2053,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1981,7 +2072,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1999,7 +2091,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2017,7 +2110,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2036,7 +2130,8 @@ return [
                'value' => '',
                'max_lenght' => '',
                'required' => '',
-               'class' => ''
+               'class' => '',
+               'style' => '',
             ],
          ],
          'bloque' => [
@@ -2055,7 +2150,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2073,7 +2169,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2104,7 +2201,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2122,7 +2220,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2140,7 +2239,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2158,7 +2258,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2198,7 +2299,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2216,7 +2318,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2234,7 +2337,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2252,7 +2356,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2270,7 +2375,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2289,7 +2395,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2307,7 +2414,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2325,7 +2433,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2343,7 +2452,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2361,7 +2471,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2379,7 +2490,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2397,7 +2509,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2415,7 +2528,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2433,7 +2547,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2451,7 +2566,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2469,7 +2585,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2487,7 +2604,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2505,7 +2623,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2523,7 +2642,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2541,7 +2661,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2559,7 +2680,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2577,7 +2699,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2595,7 +2718,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2613,7 +2737,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2631,7 +2756,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2649,7 +2775,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2667,7 +2794,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2685,7 +2813,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2703,7 +2832,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2721,7 +2851,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2739,7 +2870,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2757,7 +2889,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2775,7 +2908,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2793,7 +2927,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2811,7 +2946,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2829,7 +2965,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2847,7 +2984,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2865,7 +3003,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2883,7 +3022,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2901,7 +3041,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2919,7 +3060,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2937,7 +3079,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2955,7 +3098,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2973,7 +3117,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2991,7 +3136,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3009,7 +3155,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3027,7 +3174,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3045,7 +3193,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3063,7 +3212,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3081,7 +3231,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3099,7 +3250,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3117,7 +3269,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3135,7 +3288,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3153,7 +3307,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3171,7 +3326,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3189,7 +3345,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3207,7 +3364,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3225,7 +3383,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3243,7 +3402,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3261,7 +3421,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3279,7 +3440,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3297,7 +3459,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3315,7 +3478,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3333,7 +3497,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3351,7 +3516,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3369,7 +3535,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3387,7 +3554,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3405,7 +3573,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3423,7 +3592,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3441,7 +3611,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3459,7 +3630,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3477,7 +3649,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3495,7 +3668,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3513,7 +3687,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3531,7 +3706,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3552,7 +3728,8 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-            'class' => ''
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',

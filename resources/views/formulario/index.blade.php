@@ -140,6 +140,7 @@
                                                      :required="i.directivas.required"
                                                      :readonly="i.directivas.readonly"
                                                      :class="i.directivas.class!=''?i.directivas.class:'form-control'"
+                                                     :style="i.directivas.style!=''?i.directivas.style:''"
                                              ></inputs>
                                           </dd>
 

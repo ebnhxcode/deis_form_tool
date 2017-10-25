@@ -242,7 +242,7 @@ const FormularioController = new Vue({
          methods: {},
       },
       'inputs':{
-         props: ['name','id','type', 'max_length', 'required', 'readonly', 'class_custom'],
+         props: ['name','id','type', 'max_length', 'required', 'readonly', 'class_custom', 'style_custom'],
          'name': 'inputs',
          'template': `
             <input :name="name"
@@ -251,6 +251,7 @@ const FormularioController = new Vue({
                    :max-lenght="max_lenght"
                    :required="required"
                    :readonly="readonly"
+                   :style="style_custom!=''?style_custom:''"
                    :class="class_custom!=''?class_custom:'form-control'" />
          `,
          data () {},
