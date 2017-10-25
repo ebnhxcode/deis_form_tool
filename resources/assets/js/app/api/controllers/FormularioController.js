@@ -242,7 +242,7 @@ const FormularioController = new Vue({
          methods: {},
       },
       'inputs':{
-         props: ['name','id','type', 'max_length'],
+         props: ['name','id','type', 'max_length', 'required', 'readonly', 'class_custom'],
          'name': 'inputs',
          'template': `
             <input :name="name"
@@ -251,7 +251,7 @@ const FormularioController = new Vue({
                    :max-lenght="max_lenght"
                    :required="required"
                    :readonly="readonly"
-                  class="form-control" />
+                   :class="class_custom!=''?class_custom:'form-control'" />
          `,
          data () {},
          ready () {},
@@ -265,7 +265,9 @@ const FormularioController = new Vue({
          'template': `
             <select name="name"
                     id="id"
-                    class="form-control" />
+                   :required="required"
+                   :readonly="readonly"
+                   :class="'form-control '+class" />
             </select>
          `,
          data () {},
@@ -280,7 +282,9 @@ const FormularioController = new Vue({
          'template': `
             <textarea name="name"
                     id="id"
-                    class="form-control" />
+                   :required="required"
+                   :readonly="readonly"
+                   :class="'form-control '+class" />
             </textarea>
          `,
          data () {},

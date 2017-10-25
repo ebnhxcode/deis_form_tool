@@ -123,10 +123,11 @@
 
                                     <dl class="dl-vertical">
 
-                                       <div class="col-xs-6 col-sm-6 col-md-6" v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
+                                       <div :class="i.class_custom ? i.class_custom.class : 'col-xs-6 col-sm-6 col-md-6'"
+                                            v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
 
                                              <!-- Etiquetas de los campos -->
-                                          <dt>
+                                          <dt class="small">
                                              @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
                                           </dt>
 
@@ -138,6 +139,7 @@
                                                      :max-length="i.directivas.max_length"
                                                      :required="i.directivas.required"
                                                      :readonly="i.directivas.readonly"
+                                                     :class="i.directivas.class!=''?i.directivas.class:'form-control'"
                                              ></inputs>
                                           </dd>
 

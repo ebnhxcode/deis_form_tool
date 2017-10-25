@@ -192,7 +192,8 @@ return [
             'name' => 'run_madre',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -209,6 +210,7 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
+            'class' => '',
             'readonly' => 'readonly'
          ],
          'bloque' => [
@@ -226,13 +228,17 @@ return [
             'name' => 'nombres_madre',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-6'
          ]
       ],
       'primer_apellido_madre' => [
@@ -242,13 +248,17 @@ return [
             'name' => 'primer_apellido_madre',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-3'
          ]
       ],
       'segundo_apellido_madre' => [
@@ -258,13 +268,17 @@ return [
             'name' => 'segundo_apellido_madre',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-3'
          ]
       ],
       'fecha_nacimiento_madre' => [
@@ -274,7 +288,8 @@ return [
             'name' => 'fecha_nacimiento_madre',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -290,7 +305,8 @@ return [
             'name' => 'nacionalidad',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -306,7 +322,8 @@ return [
             'name' => 'pais_origen',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -322,7 +339,8 @@ return [
             'name' => 'pueblos_indigenas',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -341,7 +359,8 @@ return [
             'name' => 'embarazo_con_control_parental',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -357,7 +376,8 @@ return [
             'name' => 'fecha_ingreso_control_prenatal_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -373,7 +393,8 @@ return [
             'name' => 'fecha_ultima_regla',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -389,7 +410,8 @@ return [
             'name' => 'edad_gestacional_ingreso_control_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -405,7 +427,8 @@ return [
             'name' => 'codigo_establecimiento_control_prenatal_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -420,8 +443,9 @@ return [
             'id' => 'lugar_control_prenatal',
             'name' => 'lugar_control_prenatal',
             'value' => '',
-            'max_lenght' => ''
-            , 'required' => ''
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -437,13 +461,17 @@ return [
             'name' => 'lugar_control_prenatal_otro',
             'value' => '',
             'max_lenght' => ''
-            , 'required' => ''
+            , 'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
          ]
       ],
          #Parte 2 control de embarazo
@@ -454,13 +482,17 @@ return [
             'name' => 'fecha_1_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-3'
          ]
       ],
       'resultado_1_vdrl_embarazo' => [
@@ -470,13 +502,17 @@ return [
             'name' => 'resultado_1_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-3'
          ]
       ],
       'resultado_dilucion_1_vdrl_embarazo' => [
@@ -486,13 +522,17 @@ return [
             'name' => 'resultado_dilucion_1_vdrl_embarazo',
             'value' => '',
             'max_lenght' => ''
-            , 'required' => ''
+            , 'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-3'
          ]
       ],
       'eg_1_dvrl_embarazo' => [
@@ -502,15 +542,20 @@ return [
             'name' => 'eg_1_dvrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-3'
          ]
       ],
+
       'fecha_2_vdrl_embarazo' => [
          'directivas' => [
             'type' => 'date',
@@ -518,7 +563,8 @@ return [
             'name' => 'fecha_2_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -534,7 +580,8 @@ return [
             'name' => 'resultado_2_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -550,7 +597,8 @@ return [
             'name' => 'resultado_dilucion_2_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -566,7 +614,8 @@ return [
             'name' => 'eg_2_dvrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -582,7 +631,8 @@ return [
             'name' => 'fecha_3_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -598,7 +648,8 @@ return [
             'name' => 'resultado_3_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -614,7 +665,8 @@ return [
             'name' => 'resultado_dilucion_3_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -630,7 +682,8 @@ return [
             'name' => 'eg_3_dvrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -646,7 +699,8 @@ return [
             'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -663,7 +717,8 @@ return [
             'name' => 'acepta_rechaza_toma_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -679,7 +734,8 @@ return [
             'name' => 'fecha_1_examen_vih_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -695,7 +751,8 @@ return [
             'name' => 'resultado_1_examen_vih_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -711,7 +768,8 @@ return [
             'name' => 'eg_1_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -727,7 +785,8 @@ return [
             'name' => 'fecha_2_examen_vih_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -743,7 +802,8 @@ return [
             'name' => 'resultado_2_examen_vih_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -759,7 +819,8 @@ return [
             'name' => 'eg_2_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -775,7 +836,8 @@ return [
             'name' => 'fecha_resultado_final_isp_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -791,7 +853,8 @@ return [
             'name' => 'resultado_final_isp_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -808,7 +871,8 @@ return [
             'name' => 'derivada_a_especialidades_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -830,7 +894,8 @@ return [
             'name' => 'fecha_ingreso_unacess',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -846,7 +911,8 @@ return [
             'name' => 'fecha_ingreso_control_unidad_alto_riesgo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -862,7 +928,8 @@ return [
             'name' => 'fecha_ingreso_control_centro_atencion_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -878,7 +945,8 @@ return [
             'name' => 'fecha_ingreso_control_otras_especialidades',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -894,7 +962,8 @@ return [
             'name' => 'fecha_ingreso_control_otras_especialidades_otro',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -911,7 +980,8 @@ return [
             'name' => 'estado_civil',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -927,7 +997,8 @@ return [
             'name' => 'tipo_de_convivencia',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -943,7 +1014,8 @@ return [
             'name' => 'escolaridad',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -959,7 +1031,8 @@ return [
             'name' => 'anos_estudio',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -975,7 +1048,8 @@ return [
             'name' => 'residencia_gestante',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -992,7 +1066,8 @@ return [
             'name' => 'nacidos_vivos_previos_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1008,7 +1083,8 @@ return [
             'name' => 'nacidos_muertos_previos_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1024,7 +1100,8 @@ return [
             'name' => 'abortos_previos_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1040,7 +1117,8 @@ return [
             'name' => 'sifilis_previa_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1056,7 +1134,8 @@ return [
             'name' => 'ano_sifilis_previa_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1072,7 +1151,8 @@ return [
             'name' => 'otra_its_previa_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1089,7 +1169,8 @@ return [
             'name' => 'fecha_examen_treponemico',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1105,7 +1186,8 @@ return [
             'name' => 'resultado_treponemico',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1121,7 +1203,8 @@ return [
             'name' => 'diagnostico_sifilis_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1138,8 +1221,9 @@ return [
             'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
-         ],
+            'required' => '',
+      'class
+ => '         ],
          'bloque' => [
             'nombre' => 'sin_examenes',
          ],
@@ -1154,7 +1238,8 @@ return [
             'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -1170,7 +1255,8 @@ return [
             'name' => 'tratamiento_sifilis_farmaco',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1186,7 +1272,8 @@ return [
             'name' => 'tratamiento_sifilis_dosis',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1202,7 +1289,8 @@ return [
             'name' => 'tratamiento_sifilis_frecuencia',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1218,7 +1306,8 @@ return [
             'name' => 'numero_contactos_sexuales_estudiados',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1234,7 +1323,8 @@ return [
             'name' => 'carga_viral_numero_copia_semana_34',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1250,7 +1340,8 @@ return [
             'name' => 'numero_contactos_sexuales_tratados',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1270,7 +1361,8 @@ return [
             'name' => 'vih_conocido_previa_embarazo',
             'value' => '',
             'max_lenght' => ''
-            , 'required' => ''
+            , 'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1286,7 +1378,8 @@ return [
             'name' => 'fecha_confirmacion_isp_vih_responde_si',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1302,7 +1395,8 @@ return [
             'name' => 'adicciones',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1318,7 +1412,8 @@ return [
             'name' => 'pareja_vih_positivo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
@@ -1335,7 +1430,8 @@ return [
             'name' => 'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1351,7 +1447,8 @@ return [
             'name' => 'numero_cd4_ingreso_control_prenatal',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1368,7 +1465,8 @@ return [
             'name' => 'fecha_examen_carga_viral_control_prenatal',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1384,7 +1482,8 @@ return [
             'name' => 'fecha_examen_carga_viral_semana_34',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1407,7 +1506,8 @@ return [
             'name' => 'region',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1424,7 +1524,8 @@ return [
             'name' => 'servicio_salud',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1441,7 +1542,8 @@ return [
             'name' => 'digito_verificador',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1458,7 +1560,8 @@ return [
             'name' => 'edad',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1485,7 +1588,8 @@ return [
             'name' => 'terapia_antiretroviral_farmaco_1',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1502,7 +1606,8 @@ return [
             'name' => 'fecha_inicio_tar_farmaco_1',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1519,7 +1624,8 @@ return [
             'name' => 'terapia_antiretroviral_tar_farmaco_2',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1536,7 +1642,8 @@ return [
             'name' => 'fecha_inicio_tar_farmaco_2',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1554,7 +1661,8 @@ return [
                'name' => 'terapia_antiretroviral_tar_farmaco_3',
                'value' => '',
                'max_lenght' => '',
-               'required' => ''
+               'required' => '',
+               'class' => ''
             ],
          ],
          'bloque' => [
@@ -1571,7 +1679,8 @@ return [
                'name' => 'terapia_antiretroviral_tar_farmaco_3',
                'value' => '',
                'max_lenght' => '',
-               'required' => ''
+               'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1588,7 +1697,8 @@ return [
             'name' => 'terapia_antiretroviral_tar_farmaco_3_otro',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1605,7 +1715,8 @@ return [
             'name' => 'fecha_inicio_tar_farmaco_3',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1624,7 +1735,8 @@ return [
             'name' => 'carga_viral_numero_copia_ingreso_control_prenatal',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1643,7 +1755,8 @@ return [
             'name' => 'numero_contactos_sexuales_declarados',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1664,7 +1777,8 @@ return [
             'name' => 'lugar_atencion_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1681,7 +1795,8 @@ return [
             'name' => 'codigo_establecimiento',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1698,7 +1813,8 @@ return [
             'name' => 'nombre_establecimiento_sin_codigo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1715,7 +1831,8 @@ return [
             'name' => 'fecha_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1732,7 +1849,8 @@ return [
             'name' => 'hora_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1750,7 +1868,8 @@ return [
             'name' => 'tipo_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1767,7 +1886,8 @@ return [
             'name' => 'via_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1784,7 +1904,8 @@ return [
             'name' => 'resultado_vdrl_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1801,7 +1922,8 @@ return [
             'name' => 'resultado_dilucion_vdrl_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1818,7 +1940,8 @@ return [
             'name' => 'resultado_examen_treponemico_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1835,7 +1958,8 @@ return [
             'name' => 'tratamiento_sifilis_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1852,7 +1976,8 @@ return [
             'name' => 'resultado_examen_vih_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1869,7 +1994,8 @@ return [
             'name' => 'tratamiento_retroviral_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1886,7 +2012,8 @@ return [
             'name' => 'peso_mujer_parto',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1903,7 +2030,8 @@ return [
             'name' => 'nombre_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1920,7 +2048,8 @@ return [
             'name' => 'dosis_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1937,7 +2066,8 @@ return [
             'name' => 'fecha_inicio_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1954,7 +2084,8 @@ return [
             'name' => 'hora_inicio_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1971,7 +2102,8 @@ return [
             'name' => 'nombre_farmaco_2_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -1988,7 +2120,8 @@ return [
             'name' => 'dosis_farmaco_2_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2005,7 +2138,8 @@ return [
             'name' => 'fecha_inicio_farmaco_2_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2022,7 +2156,8 @@ return [
             'name' => 'hora_inicio_farmaco_2_vih',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2039,7 +2174,8 @@ return [
             'name' => 'nombre_farmaco_suspencion_lactancia',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2056,7 +2192,8 @@ return [
             'name' => 'fecha_administracion_farmaco_suspencion_lactancia',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2073,7 +2210,8 @@ return [
             'name' => 'estado_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2090,7 +2228,8 @@ return [
             'name' => 'eg_pediatrica',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2107,7 +2246,8 @@ return [
             'name' => 'sexo_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2124,7 +2264,8 @@ return [
             'name' => 'peso_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2141,7 +2282,8 @@ return [
             'name' => 'estado_clinico_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2158,7 +2300,8 @@ return [
             'name' => 'run_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2175,7 +2318,8 @@ return [
             'name' => 'digito_verificador_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2192,7 +2336,8 @@ return [
             'name' => 'codigo_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2209,7 +2354,8 @@ return [
             'name' => 'fecha_examen_vdrl_periferico_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2226,7 +2372,8 @@ return [
             'name' => 'resultado_vdrl_periferico_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2243,7 +2390,8 @@ return [
             'name' => 'titulacion_vdrl_periferico_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2260,7 +2408,8 @@ return [
             'name' => 'fecha_examen_vdrl_liq_cefalo_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2277,7 +2426,8 @@ return [
             'name' => 'resultado_vdrl_liq_cefalo_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2294,7 +2444,8 @@ return [
             'name' => 'titulacion_vdrl_liq_cefalo_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2311,7 +2462,8 @@ return [
             'name' => 'resultado_radiografia_huesos_largos',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2328,7 +2480,8 @@ return [
             'name' => 'resultado_citoquimico_liq_cefalo_raquideo',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2345,7 +2498,8 @@ return [
             'name' => 'resultado_estudio_placentario',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2362,7 +2516,8 @@ return [
             'name' => 'tratamiento_recien_nacido_farmaco',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2379,7 +2534,8 @@ return [
             'name' => 'tratamiento_recien_nacido_dosis',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2396,7 +2552,8 @@ return [
             'name' => 'tratamiento_recien_nacido_frecuencia',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2413,7 +2570,8 @@ return [
             'name' => 'sustituto_leche_materna',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2430,7 +2588,8 @@ return [
             'name' => 'fecha_inicio_sustituto_leche_materna',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2447,7 +2606,8 @@ return [
             'name' => 'hora_inicio_sustituto_leche_materna',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2464,7 +2624,8 @@ return [
             'name' => 'entrega_sustituto_leche_materna_al_alta',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2481,7 +2642,8 @@ return [
             'name' => 'nombre_farmaco_1_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2498,7 +2660,8 @@ return [
             'name' => 'dosis_farmaco_1_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2515,7 +2678,8 @@ return [
             'name' => 'fecha_inicio_farmaco_1_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2532,7 +2696,8 @@ return [
             'name' => 'hora_inicio_farmaco_1_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2549,7 +2714,8 @@ return [
             'name' => 'nombre_farmaco_2_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2566,7 +2732,8 @@ return [
             'name' => 'dosis_farmaco_2_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2583,7 +2750,8 @@ return [
             'name' => 'fecha_inicio_farmaco_2_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2600,7 +2768,8 @@ return [
             'name' => 'hora_inicio_farmaco_2_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2617,7 +2786,8 @@ return [
             'name' => 'fecha_1_examen_pcr_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2634,7 +2804,8 @@ return [
             'name' => 'resultado_1_examen_pcr_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2651,7 +2822,8 @@ return [
             'name' => 'fecha_2_examen_pcr_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2668,7 +2840,8 @@ return [
             'name' => 'resultado_2_examen_pcr_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2685,7 +2858,8 @@ return [
             'name' => 'fecha_3_examen_pcr_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2702,7 +2876,8 @@ return [
             'name' => 'resultado_3_examen_pcr_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2719,7 +2894,8 @@ return [
             'name' => 'diagnostico_final_vih_isp_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2736,7 +2912,8 @@ return [
             'name' => 'fecha_test_elisa_18_meses',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2753,7 +2930,8 @@ return [
             'name' => 'resultado_test_elisa_18_meses',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2770,7 +2948,8 @@ return [
             'name' => 'fecha_examen_treponemico_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2787,7 +2966,8 @@ return [
             'name' => 'derivacion_recien_nacido_a_seguimiento',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2804,7 +2984,8 @@ return [
             'name' => 'lugar_derivacion_recien_nacido_a_seguimiento',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2821,7 +3002,8 @@ return [
             'name' => 'fecha_ingreso_control_recien_nacido_post_nacimiento',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2838,7 +3020,8 @@ return [
             'name' => 'diagnostico_final_sifilis_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2855,7 +3038,8 @@ return [
             'name' => 'estado_seguimiento_mes',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2872,7 +3056,8 @@ return [
             'name' => 'estado_seguimiento_3_meses',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2889,7 +3074,8 @@ return [
             'name' => 'estado_seguimiento_6_meses',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2906,7 +3092,8 @@ return [
             'name' => 'estado_seguimiento_12_meses',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2923,7 +3110,8 @@ return [
             'name' => 'estado_seguimiento_18_meses',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2943,7 +3131,8 @@ return [
             'name' => 'mujer_continua_tratamiento_antiretroviral',
             'value' => '',
             'max_lenght' => '',
-            'required' => ''
+            'required' => '',
+            'class' => ''
          ],
          'bloque' => [
             'nombre' => 'sin_examenes',
