@@ -1933,7 +1933,6 @@ return [
             'class' => 'col-md-8 col-md-8'
          ],
       ],
-
       'fecha_examen_carga_viral_control_prenatal' => [
          'directivas' => [
             'type' => 'date',
@@ -2044,8 +2043,6 @@ return [
       ],
 
          #Cuarto Bloque
-
-
       'terapia_antiretroviral_farmaco_1' => [
          'directivas' => [
             'type' => 'select',
@@ -2354,7 +2351,358 @@ return [
          ]
       ],
          #Segundo Bloque
+      'resultado_vdrl_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_vdrl_parto',
+            'name' => 'resultado_vdrl_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'resultado_dilucion_vdrl_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_dilucion_vdrl_parto',
+            'name' => 'resultado_dilucion_vdrl_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'resultado_examen_treponemico_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_examen_treponemico_parto',
+            'name' => 'resultado_examen_treponemico_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'tratamiento_sifilis_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_parto',
+            'name' => 'tratamiento_sifilis_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
 
+      'resultado_examen_vih_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_examen_vih_parto',
+            'name' => 'resultado_examen_vih_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ]
+      ],
+      'tratamiento_retroviral_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_retroviral_parto',
+            'name' => 'tratamiento_retroviral_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ]
+      ],
+         #Tercer Bloque
+
+      'peso_mujer_parto' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'peso_mujer_parto',
+            'name' => 'peso_mujer_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ]
+      ],
+
+            #Farmaco 1
+      'nombre_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'nombre_farmaco_1_vih',
+            'name' => 'nombre_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'dosis_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'dosis_farmaco_1_vih',
+            'name' => 'dosis_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'fecha_inicio_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_farmaco_1_vih',
+            'name' => 'fecha_inicio_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'hora_inicio_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_inicio_farmaco_1_vih',
+            'name' => 'hora_inicio_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+            #Farmaco 2
+      'nombre_farmaco_2_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'nombre_farmaco_2_vih',
+            'name' => 'nombre_farmaco_2_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'dosis_farmaco_2_vih' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'dosis_farmaco_2_vih',
+            'name' => 'dosis_farmaco_2_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'fecha_inicio_farmaco_2_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_farmaco_2_vih',
+            'name' => 'fecha_inicio_farmaco_2_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'hora_inicio_farmaco_2_vih' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_inicio_farmaco_2_vih',
+            'name' => 'hora_inicio_farmaco_2_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+            #Farmaco lactancia
+      'nombre_farmaco_suspencion_lactancia' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'nombre_farmaco_suspencion_lactancia',
+            'name' => 'nombre_farmaco_suspencion_lactancia',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ]
+      ],
+      'fecha_administracion_farmaco_suspencion_lactancia' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_farmaco_suspencion_lactancia',
+            'name' => 'fecha_administracion_farmaco_suspencion_lactancia',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ]
+      ],
 
 
       ##################################
@@ -2459,328 +2807,7 @@ return [
 
 
 
-      'resultado_vdrl_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_vdrl_parto',
-            'name' => 'resultado_vdrl_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'resultado_dilucion_vdrl_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_dilucion_vdrl_parto',
-            'name' => 'resultado_dilucion_vdrl_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_examen_treponemico_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_examen_treponemico_parto',
-            'name' => 'resultado_examen_treponemico_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tratamiento_sifilis_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_parto',
-            'name' => 'tratamiento_sifilis_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_examen_vih_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_examen_vih_parto',
-            'name' => 'resultado_examen_vih_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tratamiento_retroviral_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_retroviral_parto',
-            'name' => 'tratamiento_retroviral_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'peso_mujer_parto' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'peso_mujer_parto',
-            'name' => 'peso_mujer_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombre_farmaco_1_vih' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'nombre_farmaco_1_vih',
-            'name' => 'nombre_farmaco_1_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'dosis_farmaco_1_vih' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'dosis_farmaco_1_vih',
-            'name' => 'dosis_farmaco_1_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_inicio_farmaco_1_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_farmaco_1_vih',
-            'name' => 'fecha_inicio_farmaco_1_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'hora_inicio_farmaco_1_vih' => [
-         'directivas' => [
-            'type' => 'time',
-            'id' => 'hora_inicio_farmaco_1_vih',
-            'name' => 'hora_inicio_farmaco_1_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombre_farmaco_2_vih' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'nombre_farmaco_2_vih',
-            'name' => 'nombre_farmaco_2_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'dosis_farmaco_2_vih' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'dosis_farmaco_2_vih',
-            'name' => 'dosis_farmaco_2_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_inicio_farmaco_2_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_farmaco_2_vih',
-            'name' => 'fecha_inicio_farmaco_2_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'hora_inicio_farmaco_2_vih' => [
-         'directivas' => [
-            'type' => 'time',
-            'id' => 'hora_inicio_farmaco_2_vih',
-            'name' => 'hora_inicio_farmaco_2_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombre_farmaco_suspencion_lactancia' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'nombre_farmaco_suspencion_lactancia',
-            'name' => 'nombre_farmaco_suspencion_lactancia',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_administracion_farmaco_suspencion_lactancia' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_farmaco_suspencion_lactancia',
-            'name' => 'fecha_administracion_farmaco_suspencion_lactancia',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'estado_recien_nacido' => [
          'directivas' => [
@@ -4055,13 +4082,13 @@ return [
          'text' => 'Via del Parto',
       ],
       'resultado_vdrl_parto' => [
-         'text' => 'Resultado VDRL  Parto',
+         'text' => 'Resultado VDRL',
       ],
       'resultado_dilucion_vdrl_parto' => [
-         'text' => 'Resultado Dilución VDRL  Parto',
+         'text' => 'Resultado Titulado (Dilución)',
       ],
       'resultado_examen_treponemico_parto' => [
-         'text' => 'Resultado Examen Treponemico Parto',
+         'text' => 'Resultado Examen Treponemico',
       ],
       'tratamiento_sifilis_parto' => [
          'text' => 'Tratamiento de Sifilis al Parto',
