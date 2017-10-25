@@ -79,6 +79,7 @@ class CreateFormDeisTable extends Migration
             $table->timestamp('fecha_ingreso_control_unidad_alto_riesgo')->nullable(true);
             $table->timestamp('fecha_ingreso_control_centro_atencion_vih')->nullable(true);
             $table->timestamp('fecha_ingreso_control_otras_especialidades')->nullable(true);
+            $table->string('fecha_ingreso_control_otras_especialidades_otro')->nullable(true);
             $table->string('terapia_antiretroviral_farmaco_1')->nullable(true);
             $table->timestamp('fecha_inicio_tar_farmaco_1')->nullable(true);
             $table->string('terapia_antiretroviral_tar_farmaco_2')->nullable(true);

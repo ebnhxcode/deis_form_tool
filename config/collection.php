@@ -810,7 +810,7 @@ return [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
-            'nombre' => ''
+            'nombre' => 'patologias_sifilis'
          ]
       ],
 
@@ -827,10 +827,9 @@ return [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
-            'nombre' => ''
+            'nombre' => 'patologias_sifilis'
          ]
       ],
-
       'fecha_ingreso_control_centro_atencion_vih' => [
          'directivas' => [
             'type' => 'date',
@@ -844,10 +843,9 @@ return [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
-            'nombre' => ''
+            'nombre' => 'patologias_sifilis'
          ]
       ],
-
       'fecha_ingreso_control_otras_especialidades' => [
          'directivas' => [
             'type' => 'date',
@@ -861,7 +859,23 @@ return [
             'nombre' => 'sin_examenes'
          ],
          'seccion' => [
-            'nombre' => ''
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'fecha_ingreso_control_otras_especialidades_otro' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'fecha_ingreso_control_otras_especialidades_otro',
+            'name' => 'fecha_ingreso_control_otras_especialidades_otro',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
          ]
       ],
 
@@ -3103,6 +3117,9 @@ return [
       ],
       'fecha_ingreso_control_otras_especialidades' => [
          'text' => 'Fecha de ingreso a control a otro lugar de especialidades',
+      ],
+      'fecha_ingreso_control_otras_especialidades_otro' => [
+         'text' => 'Otro',
       ],
       'terapia_antiretroviral_farmaco_1' => [
          'text' => 'Terapia Antiretroviral ingreso al control prenatal de este embarazo. Fármaco 1',
