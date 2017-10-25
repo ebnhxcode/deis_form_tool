@@ -91,6 +91,7 @@ class CreateFormDeisTable extends Migration
             $table->timestamp('fecha_examen_linfocitos_cd4_ingreso_control_prenatal')->nullable(true);
             $table->integer('carga_viral_numero_copia_ingreso_control_prenatal')->nullable(true);
             $table->timestamp('fecha_examen_carga_viral_control_prenatal')->nullable(true);
+            $table->integer('numero_carga_viral_control_prenatal')->nullable(true);
             $table->integer('numero_contactos_sexuales_declarados')->nullable(true);
             $table->integer('numero_contactos_sexuales_estudiados')->nullable(true);
             $table->timestamp('carga_viral_numero_copia_semana_34')->nullable(true);

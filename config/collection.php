@@ -88,6 +88,7 @@ return [
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
       'carga_viral_numero_copia_ingreso_control_prenatal',
       'fecha_examen_carga_viral_control_prenatal',
+      'numero_carga_viral_control_prenatal',
       'numero_contactos_sexuales_declarados',
       'numero_contactos_sexuales_estudiados',
       'carga_viral_numero_copia_semana_34',
@@ -1805,7 +1806,7 @@ return [
          ],
       ],
 
-         #Segundo Bloque
+         #Tercer Bloque
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
          'directivas' => [
             'type' => 'date',
@@ -1821,7 +1822,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'numero_cd4_ingreso_control_prenatal' => [
          'directivas' => [
@@ -1838,7 +1842,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-8 col-md-8'
+         ],
       ],
 
       'fecha_examen_carga_viral_control_prenatal' => [
@@ -1856,8 +1863,54 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+
+      'numero_carga_viral_control_prenatal' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_carga_viral_control_prenatal',
+            'name' => 'numero_carga_viral_control_prenatal',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-8 col-md-8'
+         ],
+      ],
+
+      'carga_viral_numero_copia_ingreso_control_prenatal' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'carga_viral_numero_copia_ingreso_control_prenatal',
+            'name' => 'carga_viral_numero_copia_ingreso_control_prenatal',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
          ]
       ],
+
       'fecha_examen_carga_viral_semana_34' => [
          'directivas' => [
             'type' => 'date',
@@ -2127,23 +2180,7 @@ return [
 
 
 
-      'carga_viral_numero_copia_ingreso_control_prenatal' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'carga_viral_numero_copia_ingreso_control_prenatal',
-            'name' => 'carga_viral_numero_copia_ingreso_control_prenatal',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
+
 
 
 
@@ -3753,7 +3790,7 @@ return [
          'text' => 'Fecha de Inicio de Terapia Antiretroviral (TAR)  al ingreso al control prenatal de este embarazo. Fármaco 3',
       ],
       'numero_cd4_ingreso_control_prenatal' => [
-         'text' => 'Número de CD4 al Ingreso de este control  Prenatal',
+         'text' => 'Resultado CD4',
       ],
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
          'text' => 'Fecha de Examen de Linfocitos CD4, al ingreso de éste  control prenatal',
@@ -3763,6 +3800,9 @@ return [
       ],
       'fecha_examen_carga_viral_control_prenatal' => [
          'text' => 'Fecha de Examen de Carga Viral, al ingreso de éste  control prenatal',
+      ],
+      'numero_carga_viral_control_prenatal' => [
+         'text' => 'Resultado Carga Viral',
       ],
       'numero_contactos_sexuales_declarados' => [
          'text' => 'Número Contactos sexuales declarados',
