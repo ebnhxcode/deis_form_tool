@@ -4132,6 +4132,7 @@ return [
       ],
       'lugar_atencion_parto' => [
          'text' => 'Lugar del parto',
+         'tag' => 'Datos del Parto',
       ],
       'codigo_establecimiento' => [
          'text' => 'Codigo del Establecimiento',
@@ -4156,6 +4157,7 @@ return [
       ],
       'resultado_vdrl_parto' => [
          'text' => 'Resultado VDRL',
+         'tag' => 'Examenes de sífilis durante el parto',
       ],
       'resultado_dilucion_vdrl_parto' => [
          'text' => 'Resultado Titulado (Dilución)',
@@ -4168,12 +4170,14 @@ return [
       ],
       'resultado_examen_vih_parto' => [
          'text' => 'Resultado Examen VIH Parto',
+         'tag' => 'Examenes de vih durante el parto',
       ],
       'tratamiento_retroviral_parto' => [
          'text' => 'Tratamiento antiretroviral al parto',
       ],
       'peso_mujer_parto' => [
          'text' => 'Peso de la mujer al parto',
+         'tag' => 'Tratamiento de VIH',
       ],
       'nombre_farmaco_1_vih' => [
          'text' => 'Nombre Farmaco 1 (VIH)',

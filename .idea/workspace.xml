@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collection.php" afterPath="$PROJECT_DIR$/config/collection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/formulario/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/formulario/index.blade.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/config/collection.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.40518638">
-              <caret line="4081" column="37" selection-start-line="4081" selection-start-column="37" selection-end-line="4081" selection-end-column="37" />
+              <caret line="4179" column="37" selection-start-line="4179" selection-start-column="37" selection-end-line="4179" selection-end-column="37" />
               <folding>
                 <element signature="e#404#6883#1#PHP" expanded="false" />
                 <element signature="e#7037#7482#1#PHP" expanded="false" />
@@ -1253,7 +1252,7 @@
     <entry file="file://$PROJECT_DIR$/config/collection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40518638">
-          <caret line="4081" column="37" selection-start-line="4081" selection-start-column="37" selection-end-line="4081" selection-end-column="37" />
+          <caret line="4179" column="37" selection-start-line="4179" selection-start-column="37" selection-end-line="4179" selection-end-column="37" />
           <folding>
             <element signature="e#404#6883#1#PHP" expanded="false" />
             <element signature="e#7037#7482#1#PHP" expanded="false" />
