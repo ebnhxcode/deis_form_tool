@@ -129,6 +129,7 @@
                                              <h3>
                                                 @{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}
                                              </h3>
+                                             <hr>
                                           </div>
 
 

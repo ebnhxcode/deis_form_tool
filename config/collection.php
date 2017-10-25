@@ -3926,6 +3926,7 @@ return [
       ],
       'nacidos_vivos_previos_embarazo' => [
          'text' => 'Nacidos vivos previo al embarazo',
+         'tag' => 'Antecedentes',
       ],
       'nacidos_muertos_previos_embarazo' => [
          'text' => 'Nacidos Muertos antes de este embarazo',
@@ -3944,6 +3945,7 @@ return [
       ],
       'vih_conocido_previa_embarazo' => [
          'text' => 'VIH conocido   Previa a este embarazo',
+         'tag' => 'Antecedentes',
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
          'text' => 'Fecha Confirmación ISP de VIH (SI)',
@@ -4009,6 +4011,7 @@ return [
       ],
       'fecha_examen_treponemico' => [
          'text' => 'Fecha Examen treponémico',
+         'tag' => 'Control de la sífilis en este embarazo',
       ],
       'resultado_treponemico' => [
          'text' => 'Resultado Treponemico',
@@ -4018,6 +4021,7 @@ return [
       ],
       'tratamiento_sifilis_farmaco' => [
          'text' => 'Tratamiento Sifilis  Fámaco',
+         'tag' => 'Tratamiento de Sifilis',
       ],
       'tratamiento_sifilis_dosis' => [
          'text' => 'Tratamiento Sifilis Dosis',
@@ -4059,6 +4063,7 @@ return [
       ],
       'fecha_ingreso_unacess' => [
          'text' => 'Fecha de ingreso a UNACESS',
+         'tag' => 'Datos Sociodemográficos',
       ],
       'fecha_ingreso_control_unidad_alto_riesgo' => [
          'text' => 'Fecha de ingreso a ALTO RIESGO',
@@ -4074,6 +4079,7 @@ return [
       ],
       'terapia_antiretroviral_farmaco_1' => [
          'text' => 'Fármaco 1',
+         'tag' => 'Tratamiento de VIH',
       ],
       'fecha_inicio_tar_farmaco_1' => [
          'text' => 'Fecha de Inicio Fármaco 1',
@@ -4098,6 +4104,7 @@ return [
       ],
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
          'text' => 'Fecha de Examen de Linfocitos CD4',
+         'tag' => 'Control del VIH en este embarazo',
       ],
       'carga_viral_numero_copia_ingreso_control_prenatal' => [
          'text' => 'Carga Viral . Número de copia al ingreso de éste control prenatal',
