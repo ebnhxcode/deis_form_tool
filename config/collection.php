@@ -173,6 +173,7 @@ return [
       'fecha_ultima_regla',
       'pareja_vih_positivo',
       'fecha_administracion_1_dosis_penicilina_gestante',
+      'fecha_administracion_1_dosis_penicilina_gestante_sifilis',
       'fecha_administracion_ult_dosis_penicilina_gestante',
 
    ],
@@ -1012,6 +1013,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
          ]
       ],
          #Segundo bloque
@@ -1030,6 +1034,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'tipo_de_convivencia' => [
@@ -1047,6 +1054,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'escolaridad' => [
@@ -1064,6 +1074,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'anos_estudio' => [
@@ -1081,6 +1094,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'residencia_gestante' => [
@@ -1098,7 +1114,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ],
       ],
          #Tercer bloque
       'nacidos_vivos_previos_embarazo' => [
@@ -1116,7 +1135,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'nacidos_muertos_previos_embarazo' => [
          'directivas' => [
@@ -1133,7 +1155,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'abortos_previos_embarazo' => [
          'directivas' => [
@@ -1150,7 +1175,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
       'sifilis_previa_embarazo' => [
          'directivas' => [
@@ -1256,7 +1284,11 @@ return [
          ]
       ],
          #Quinto bloque
-      /*'fecha_administracion_1_dosis_penicilina_gestante' => [
+
+
+      ################################
+      #  Hacer el bind v-model con el que no tiene prefijo _sifilis
+      'fecha_administracion_1_dosis_penicilina_gestante_sifilis' => [
          'directivas' => [
             'type' => 'date',
             'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
@@ -1264,15 +1296,15 @@ return [
             'value' => '',
             'max_lenght' => '',
             'required' => '',
-      'class
- => '         ],
+            'class' => ''
+         ],
          'bloque' => [
             'nombre' => 'sin_examenes',
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis',
          ]
-      ],*/
+      ],
       'fecha_administracion_ult_dosis_penicilina_gestante' => [
          'directivas' => [
             'type' => 'date',
