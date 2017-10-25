@@ -96,6 +96,7 @@ return [
       'numero_contactos_sexuales_tratados',
       'lugar_atencion_parto',
       'codigo_establecimiento',
+      'tipo_establecimiento',
       'nombre_establecimiento_sin_codigo',
       'fecha_parto',
       'hora_parto',
@@ -2063,7 +2064,6 @@ return [
             'nombre' => 'patologias_vih'
          ]
       ],
-
       'fecha_inicio_tar_farmaco_1' => [
          'directivas' => [
             'type' => 'date',
@@ -2082,7 +2082,6 @@ return [
             'nombre' => 'patologias_vih'
          ]
       ],
-
       'terapia_antiretroviral_tar_farmaco_2' => [
          'directivas' => [
             'type' => 'select',
@@ -2101,7 +2100,6 @@ return [
             'nombre' => 'patologias_vih'
          ]
       ],
-
       'fecha_inicio_tar_farmaco_2' => [
          'directivas' => [
             'type' => 'date',
@@ -2120,7 +2118,6 @@ return [
             'nombre' => 'patologias_vih'
          ]
       ],
-
       'terapia_antiretroviral_tar_farmaco_3' => [
          'directivas' => [
             'type' => 'select',
@@ -2141,7 +2138,6 @@ return [
             'nombre' => 'patologias_vih'
          ]
       ],
-
       'fecha_inicio_tar_farmaco_3' => [
          'directivas' => [
             'type' => 'date',
@@ -2160,7 +2156,6 @@ return [
             'nombre' => 'patologias_vih'
          ]
       ],
-
       'terapia_antiretroviral_tar_farmaco_3_otro' => [
          'directivas' => [
             'type' => 'text',
@@ -2185,8 +2180,180 @@ return [
       ],
 
 
-
-
+      #Datos del Parto - datos_parto
+         #Primer Bloque
+      'lugar_atencion_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'lugar_atencion_parto',
+            'name' => 'lugar_atencion_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'codigo_establecimiento' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'codigo_establecimiento',
+            'name' => 'codigo_establecimiento',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'nombre_establecimiento_sin_codigo' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'nombre_establecimiento_sin_codigo',
+            'name' => 'nombre_establecimiento_sin_codigo',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-5 col-md-5'
+         ]
+      ],
+      'tipo_establecimiento' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tipo_establecimiento',
+            'name' => 'tipo_establecimiento',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'fecha_parto' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_parto',
+            'name' => 'fecha_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'hora_parto' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_parto',
+            'name' => 'hora_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'tipo_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tipo_parto',
+            'name' => 'tipo_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'via_parto' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'via_parto',
+            'name' => 'via_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+         #Segundo Bloque
 
 
 
@@ -2291,139 +2458,6 @@ return [
 
 
 
-      'lugar_atencion_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'lugar_atencion_parto',
-            'name' => 'lugar_atencion_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'codigo_establecimiento' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'codigo_establecimiento',
-            'name' => 'codigo_establecimiento',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombre_establecimiento_sin_codigo' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'nombre_establecimiento_sin_codigo',
-            'name' => 'nombre_establecimiento_sin_codigo',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_parto' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_parto',
-            'name' => 'fecha_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'hora_parto' => [
-         'directivas' => [
-            'type' => 'time',
-            'id' => 'hora_parto',
-            'name' => 'hora_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-
-      'tipo_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tipo_parto',
-            'name' => 'tipo_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'via_parto' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'via_parto',
-            'name' => 'via_parto',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'resultado_vdrl_parto' => [
          'directivas' => [
@@ -3997,10 +4031,13 @@ return [
          'text' => 'Número de parejas tratadas',
       ],
       'lugar_atencion_parto' => [
-         'text' => 'Lugar de la atención del parto',
+         'text' => 'Lugar del parto',
       ],
       'codigo_establecimiento' => [
          'text' => 'Codigo del Establecimiento',
+      ],
+      'tipo_establecimiento' => [
+         'text' => 'Tipo de Establecimiento',
       ],
       'nombre_establecimiento_sin_codigo' => [
          'text' => 'Nombre Del Establecimiento que no tenga código',
