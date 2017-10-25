@@ -794,7 +794,88 @@ return [
          ]
       ],
 
+
+
       #Patologías Sífilis - patologias_sifilis
+      'fecha_ingreso_unacess' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_unacess',
+            'name' => 'fecha_ingreso_unacess',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'fecha_ingreso_control_unidad_alto_riesgo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_unidad_alto_riesgo',
+            'name' => 'fecha_ingreso_control_unidad_alto_riesgo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'fecha_ingreso_control_centro_atencion_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_centro_atencion_vih',
+            'name' => 'fecha_ingreso_control_centro_atencion_vih',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'fecha_ingreso_control_otras_especialidades' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_otras_especialidades',
+            'name' => 'fecha_ingreso_control_otras_especialidades',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+
+
+
+      ######
+
+
+
+
+
+
+
       'region' => [
          'directivas' => [
             'type' => 'select',
@@ -1212,73 +1293,6 @@ return [
 
 
 
-      'fecha_ingreso_unacess' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_unacess',
-            'name' => 'fecha_ingreso_unacess',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_ingreso_control_unidad_alto_riesgo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_unidad_alto_riesgo',
-            'name' => 'fecha_ingreso_control_unidad_alto_riesgo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_ingreso_control_centro_atencion_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_centro_atencion_vih',
-            'name' => 'fecha_ingreso_control_centro_atencion_vih',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_ingreso_control_otras_especialidades' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_otras_especialidades',
-            'name' => 'fecha_ingreso_control_otras_especialidades',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'terapia_antiretroviral_farmaco_1' => [
          'directivas' => [
