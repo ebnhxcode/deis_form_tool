@@ -178,6 +178,39 @@ return [
    'deis_form_inputs' => [
 
       #Identificacion de la mujer - identificacion_mujer
+      'run_madre' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'run_madre',
+            'name' => 'run_madre',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
+      'n_correlativo_interno' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'n_correlativo_interno',
+            'name' => 'n_correlativo_interno',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'identificacion_mujer'
+         ]
+      ],
+
       'nombres_madre' => [
          'directivas' => [
             'type' => 'text',
@@ -242,27 +275,11 @@ return [
             'nombre' => 'identificacion_mujer'
          ]
       ],
-      'n_correlativo_interno' => [
+      'nacionalidad' => [
          'directivas' => [
-            'type' => 'number',
-            'id' => 'n_correlativo_interno',
-            'name' => 'n_correlativo_interno',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'identificacion_mujer'
-         ]
-      ],
-      'run_madre' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'run_madre',
-            'name' => 'run_madre',
+            'type' => 'text',
+            'id' => 'nacionalidad',
+            'name' => 'nacionalidad',
             'value' => '',
             'max-lenght' => '',
             'required' => ''
@@ -295,22 +312,6 @@ return [
             'type' => 'select',
             'id' => 'pueblos_indigenas',
             'name' => 'pueblos_indigenas',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'identificacion_mujer'
-         ]
-      ],
-      'nacionalidad' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'nacionalidad',
-            'name' => 'nacionalidad',
             'value' => '',
             'max-lenght' => '',
             'required' => ''
@@ -801,6 +802,7 @@ return [
          'directivas' => [
             'type' => 'date',
             'id' => 'fecha_ingreso_unacess',
+            'id' => 'fecha_ingreso_unacess',
             'name' => 'fecha_ingreso_unacess',
             'value' => '',
             'max-lenght' => '',
@@ -1105,7 +1107,7 @@ return [
          ]
       ],
          #Quinto bloque
-      'fecha_administracion_1_dosis_penicilina_gestante' => [
+      /*'fecha_administracion_1_dosis_penicilina_gestante' => [
          'directivas' => [
             'type' => 'date',
             'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
@@ -1120,7 +1122,7 @@ return [
          'seccion' => [
             'nombre' => 'patologias_sifilis',
          ]
-      ],
+      ],*/
       'fecha_administracion_ult_dosis_penicilina_gestante' => [
          'directivas' => [
             'type' => 'date',
@@ -1185,7 +1187,188 @@ return [
             'nombre' => 'patologias_sifilis'
          ]
       ],
+      'numero_contactos_sexuales_estudiados' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_contactos_sexuales_estudiados',
+            'name' => 'numero_contactos_sexuales_estudiados',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'carga_viral_numero_copia_semana_34' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'carga_viral_numero_copia_semana_34',
+            'name' => 'carga_viral_numero_copia_semana_34',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'numero_contactos_sexuales_tratados' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_contactos_sexuales_tratados',
+            'name' => 'numero_contactos_sexuales_tratados',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
       ######
+
+      #Patologías VIH -
+         #Primer Bloque
+      'vih_conocido_previa_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'vih_conocido_previa_embarazo',
+            'name' => 'vih_conocido_previa_embarazo',
+            'value' => '',
+            'max-lenght' => ''
+            , 'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'fecha_confirmacion_isp_vih_responde_si' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_confirmacion_isp_vih_responde_si',
+            'name' => 'fecha_confirmacion_isp_vih_responde_si',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'adicciones' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'adicciones',
+            'name' => 'adicciones',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'pareja_vih_positivo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'pareja_vih_positivo',
+            'name' => 'pareja_vih_positivo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih',
+         ]
+      ],
+         #Segundo Bloque
+      'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
+            'name' => 'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'numero_cd4_ingreso_control_prenatal' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_cd4_ingreso_control_prenatal',
+            'name' => 'numero_cd4_ingreso_control_prenatal',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+
+      'fecha_examen_carga_viral_control_prenatal' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_carga_viral_control_prenatal',
+            'name' => 'fecha_examen_carga_viral_control_prenatal',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'fecha_examen_carga_viral_semana_34' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_carga_viral_semana_34',
+            'name' => 'fecha_examen_carga_viral_semana_34',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
 
 
 
@@ -1261,42 +1444,6 @@ return [
          ]
       ],
 
-
-
-
-      'vih_conocido_previa_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'vih_conocido_previa_embarazo',
-            'name' => 'vih_conocido_previa_embarazo',
-            'value' => '',
-            'max-lenght' => ''
-            , 'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_confirmacion_isp_vih_responde_si' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_confirmacion_isp_vih_responde_si',
-            'name' => 'fecha_confirmacion_isp_vih_responde_si',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
 
 
@@ -1393,33 +1540,39 @@ return [
             'nombre' => ''
          ]
       ],
-      /*
       'terapia_antiretroviral_tar_farmaco_3' => [
          'directivas' => [
-            'type' => 'select+text',
-            'select' => [
+            'type' => 'select',
                'id' => 'terapia_antiretroviral_tar_farmaco_3',
                'name' => 'terapia_antiretroviral_tar_farmaco_3',
                'value' => '',
                'max-lenght' => '',
                'required' => ''
-            ],
-            'text' => [
-               'id' => 'terapia_antiretroviral_tar_farmaco_3_otro',
-               'name' => 'terapia_antiretroviral_tar_farmaco_3_otro',
-               'value' => '',
-               'max-lenght' => '',
-               'required' => ''
-            ],
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
          ],
-      'seccion
- => [
-      'nombre]=>''        ]
-      ,
-      */
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+
+      'terapia_antiretroviral_tar_farmaco_3_otro' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'terapia_antiretroviral_tar_farmaco_3_otro',
+            'name' => 'terapia_antiretroviral_tar_farmaco_3_otro',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
 
       'fecha_inicio_tar_farmaco_3' => [
          'directivas' => [
@@ -1438,39 +1591,7 @@ return [
          ]
       ],
 
-      'numero_cd4_ingreso_control_prenatal' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'numero_cd4_ingreso_control_prenatal',
-            'name' => 'numero_cd4_ingreso_control_prenatal',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
-            'name' => 'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'carga_viral_numero_copia_ingreso_control_prenatal' => [
          'directivas' => [
@@ -1489,22 +1610,7 @@ return [
          ]
       ],
 
-      'fecha_examen_carga_viral_control_prenatal' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_carga_viral_control_prenatal',
-            'name' => 'fecha_examen_carga_viral_control_prenatal',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
+
 
       'numero_contactos_sexuales_declarados' => [
          'directivas' => [
@@ -1523,73 +1629,9 @@ return [
          ]
       ],
 
-      'numero_contactos_sexuales_estudiados' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'numero_contactos_sexuales_estudiados',
-            'name' => 'numero_contactos_sexuales_estudiados',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'carga_viral_numero_copia_semana_34' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'carga_viral_numero_copia_semana_34',
-            'name' => 'carga_viral_numero_copia_semana_34',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'fecha_examen_carga_viral_semana_34' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_carga_viral_semana_34',
-            'name' => 'fecha_examen_carga_viral_semana_34',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'numero_contactos_sexuales_tratados' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'numero_contactos_sexuales_tratados',
-            'name' => 'numero_contactos_sexuales_tratados',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'lugar_atencion_parto' => [
          'directivas' => [
@@ -2887,22 +2929,7 @@ return [
          ]
       ],
 
-      'pareja_vih_positivo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'pareja_vih_positivo',
-            'name' => 'pareja_vih_positivo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => '',
-         ]
-      ],
+
 
 
 
