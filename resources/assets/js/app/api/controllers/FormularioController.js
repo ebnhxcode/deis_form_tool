@@ -357,7 +357,7 @@ const FormularioController = new Vue({
       },
 
 
-      guardarFormulario: function () {
+      guardarFormulario: function (tabName) {
          this.spinner_finalizar = true;
          var formData = new FormData();
          formData.append('campo', {object:'Object'});
@@ -365,6 +365,7 @@ const FormularioController = new Vue({
          formData.append('_token', $('#_token').val());
 
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         console.log(tabName);
 
          /*
          this.$http.post('/formulario', formData).then(response => { // success callback

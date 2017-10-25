@@ -197,7 +197,7 @@
                                           </dt>
 
                                           <dd>
-                                             <input id="" name="" class="btn btn-success" type="button" value="Guardar">
+                                             <input id="" name="" @click.prevent="guardarFormulario(tab.name)" class="btn btn-success" type="button" value="Guardar">
                                           </dd>
                                        </div><!-- .col-md-* -->
 
