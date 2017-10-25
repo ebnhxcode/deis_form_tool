@@ -1933,7 +1933,7 @@ return [
       ],
       'carga_viral_numero_copia_semana_34' => [
          'directivas' => [
-            'type' => 'date',
+            'type' => 'number',
             'id' => 'carga_viral_numero_copia_semana_34',
             'name' => 'carga_viral_numero_copia_semana_34',
             'value' => '',
@@ -2175,28 +2175,6 @@ return [
 
 
 
-
-
-
-
-      /* Este estaba duplicado
-      'terapia_antiretroviral_tar_farmaco_3' => [
-         'directivas' => [
-            'type' => 'select',
-               'id' => 'terapia_antiretroviral_tar_farmaco_3',
-               'name' => 'terapia_antiretroviral_tar_farmaco_3',
-               'value' => '',
-               'max_lenght' => '',
-               'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],*/
 
 
 
@@ -3638,10 +3616,10 @@ return [
          'text' => 'Tipo de Convivencia',
       ],
       'escolaridad' => [
-         'text' => 'Escolaridad',
+         'text' => 'Nivel de Escolaridad',
       ],
       'anos_estudio' => [
-         'text' => 'Años de estudios ( último año aprobado )',
+         'text' => 'Años de estudios',
       ],
       'residencia_gestante' => [
          'text' => 'Residencia de la gestante',
@@ -3668,19 +3646,19 @@ return [
          'text' => 'VIH conocido   Previa a este embarazo',
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
-         'text' => 'Fecha Confirmación ISP de VIH conocido que responde SI',
+         'text' => 'Fecha Confirmación ISP de VIH (SI)',
       ],
       'adicciones' => [
          'text' => 'Adicciones',
       ],
       'fecha_ingreso_control_prenatal_embarazo' => [
-         'text' => 'Fecha Ingreso a control prenatal de este embarazo',
+         'text' => 'Fecha Ingreso a control prenatal',
       ],
       'embarazo_con_control_parental' => [
-         'text' => 'Este embarazo está con control prenatal (SI/NO)',
+         'text' => '¿Embarazo controlado?',
       ],
       'edad_gestacional_ingreso_control_embarazo' => [
-         'text' => 'Edad Gestacional al ingreso a control de este embarazo',
+         'text' => 'Edad Gestacional al ingreso',
       ],
       'lugar_control_prenatal' => [
          'text' => 'Lugar Control Prenatal',
@@ -3689,7 +3667,7 @@ return [
          'text' => 'Lugar Control Prenatal (Otro)',
       ],
       'codigo_establecimiento_control_prenatal_embarazo' => [
-         'text' => 'Código Establecimiento del control prenatal',
+         'text' => 'Tipo de Establecimiento control prenatal',
       ],
       'fecha_1_vdrl_embarazo' => [
          'text' => 'Fecha 1º VDRL de este embarazo',
@@ -3776,13 +3754,13 @@ return [
          'text' => 'Derivada a Especialidades en este embarazo',
       ],
       'fecha_ingreso_unacess' => [
-         'text' => 'Fecha de ingreso a Unidad de atención y control en salud sexual (UNACESS)',
+         'text' => 'Fecha de ingreso a UNACESS',
       ],
       'fecha_ingreso_control_unidad_alto_riesgo' => [
-         'text' => 'Fecha de ingreso a control a la unidad de alto riesgo',
+         'text' => 'Fecha de ingreso a ALTO RIESGO',
       ],
       'fecha_ingreso_control_centro_atencion_vih' => [
-         'text' => 'Fecha de ingreso a control al centro de atención de VIH/ Infectología',
+         'text' => 'Fecha de ingreso a centro de atención VIH',
       ],
       'fecha_ingreso_control_otras_especialidades' => [
          'text' => 'Fecha de ingreso a control a otro lugar de especialidades',
@@ -3827,19 +3805,19 @@ return [
          'text' => 'Resultado Carga Viral',
       ],
       'numero_contactos_sexuales_declarados' => [
-         'text' => 'Número Contactos sexuales declarados',
+         'text' => 'Número de parejas declarados',
       ],
       'numero_contactos_sexuales_estudiados' => [
-         'text' => 'Número Contactos sexuales estudiados',
+         'text' => 'Número de parejas estudiados',
       ],
       'carga_viral_numero_copia_semana_34' => [
-         'text' => 'Carga Viral . Número de copia semana 34 de gestación',
+         'text' => 'Resultado Carga Viral',
       ],
       'fecha_examen_carga_viral_semana_34' => [
-         'text' => 'Fecha de Examen de Carga Viral, semana 34 de gestación.',
+         'text' => 'Fecha de Examen de Carga Viral',
       ],
       'numero_contactos_sexuales_tratados' => [
-         'text' => 'Número Contactos sexuales tratados o en tratamiento',
+         'text' => 'Número de parejas tratadas',
       ],
       'lugar_atencion_parto' => [
          'text' => 'Lugar de la atención del parto',
@@ -4073,7 +4051,7 @@ return [
          'text' => 'Mujer continua con tratamiento antirretroviral a los 12 meses post parto',
       ],
       'fecha_ultima_regla' => [
-         'text' => 'Fecha última regla (FUR)',
+         'text' => 'Fecha última regla',
       ],
       'pareja_vih_positivo' => [
          'text' => 'Pareja VIH positivo',

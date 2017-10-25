@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collection.php" afterPath="$PROJECT_DIR$/config/collection.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
@@ -36,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/formulario/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39708266">
+            <state vertical-scroll-proportion="-28.73077">
               <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding>
                 <element signature="e#24#1928#0#HTML" expanded="false" />
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collection.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="collection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="2029" column="49" selection-start-line="2029" selection-start-column="49" selection-end-line="2029" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.3327674">
+              <caret line="3669" column="27" selection-start-line="3669" selection-start-column="27" selection-end-line="3669" selection-end-column="27" />
               <folding>
                 <element signature="e#6928#7345#1#PHP" expanded="false" />
                 <element signature="e#7380#7861#1#PHP" expanded="false" />
@@ -101,7 +102,6 @@
                 <element signature="e#30235#30802#1#PHP" expanded="false" />
                 <element signature="e#30853#31360#1#PHP" expanded="false" />
                 <element signature="e#31393#31914#1#PHP" expanded="false" />
-                <element signature="e#31939#32444#1#PHP" expanded="false" />
                 <element signature="e#32470#32977#1#PHP" expanded="false" />
                 <element signature="e#33010#33524#1#PHP" expanded="false" />
                 <element signature="e#33592#34136#1#PHP" expanded="false" />
@@ -128,7 +128,6 @@
                 <element signature="e#45856#46419#1#PHP" expanded="false" />
                 <element signature="e#46449#46952#1#PHP" expanded="false" />
                 <element signature="e#46989#47506#1#PHP" expanded="false" />
-                <element signature="e#47535#48036#1#PHP" expanded="false" />
                 <element signature="e#48066#48569#1#PHP" expanded="false" />
                 <element signature="e#48606#49116#1#PHP" expanded="false" />
                 <element signature="e#49184#49720#1#PHP" expanded="false" />
@@ -144,14 +143,10 @@
                 <element signature="e#55205#55755#1#PHP" expanded="false" />
                 <element signature="e#55764#56387#0#PHP" expanded="false" />
                 <element signature="e#56435#56981#1#PHP" expanded="false" />
-                <element signature="e#57029#57575#1#PHP" expanded="false" />
-                <element signature="e#57648#58107#1#PHP" expanded="false" />
-                <element signature="e#58148#58593#1#PHP" expanded="false" />
-                <element signature="e#58644#59111#1#PHP" expanded="false" />
-                <element signature="e#59152#59597#1#PHP" expanded="false" />
-                <element signature="e#59648#60174#1#PHP" expanded="false" />
-                <element signature="e#60215#60660#1#PHP" expanded="false" />
-                <element signature="e#60716#61268#1#PHP" expanded="false" />
+                <element signature="e#57650#58109#1#PHP" expanded="false" />
+                <element signature="e#58150#58595#1#PHP" expanded="false" />
+                <element signature="e#58646#59113#1#PHP" expanded="false" />
+                <element signature="e#59154#59599#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -231,12 +226,12 @@
         <option value="$PROJECT_DIR$/resources/views/formulario/form_partials/inputs.blade.php" />
         <option value="$PROJECT_DIR$/config/collections.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
-        <option value="$PROJECT_DIR$/resources/views/formulario/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/formulario/index.blade.php" />
         <option value="$PROJECT_DIR$/config/collection.php" />
       </list>
     </option>
@@ -1147,21 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="253" column="56" selection-start-line="253" selection-start-column="56" selection-end-line="253" selection-end-column="56" />
-          <folding>
-            <element signature="e#8686#9057#0" expanded="false" />
-            <element signature="e#9076#9435#0" expanded="false" />
-            <element signature="e#10923#11186#0" expanded="false" />
-            <marker date="1508928263496" expanded="true" signature="9627:9886" placeholder="..." />
-            <marker date="1508928263496" expanded="true" signature="10149:10309" placeholder="..." />
-            <marker date="1508928263496" expanded="true" signature="10600:10760" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1186,10 +1166,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="253" column="56" selection-start-line="253" selection-start-column="56" selection-end-line="253" selection-end-column="56" />
+          <folding>
+            <element signature="e#8686#9057#0" expanded="false" />
+            <element signature="e#9076#9435#0" expanded="false" />
+            <element signature="e#10923#11186#0" expanded="false" />
+            <marker date="1508928263496" expanded="true" signature="9627:9886" placeholder="..." />
+            <marker date="1508928263496" expanded="true" signature="10149:10309" placeholder="..." />
+            <marker date="1508928263496" expanded="true" signature="10600:10760" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/formulario/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.73077">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#1928#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="2029" column="49" selection-start-line="2029" selection-start-column="49" selection-end-line="2029" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.3327674">
+          <caret line="3669" column="27" selection-start-line="3669" selection-start-column="27" selection-end-line="3669" selection-end-column="27" />
           <folding>
             <element signature="e#6928#7345#1#PHP" expanded="false" />
             <element signature="e#7380#7861#1#PHP" expanded="false" />
@@ -1238,7 +1243,6 @@
             <element signature="e#30235#30802#1#PHP" expanded="false" />
             <element signature="e#30853#31360#1#PHP" expanded="false" />
             <element signature="e#31393#31914#1#PHP" expanded="false" />
-            <element signature="e#31939#32444#1#PHP" expanded="false" />
             <element signature="e#32470#32977#1#PHP" expanded="false" />
             <element signature="e#33010#33524#1#PHP" expanded="false" />
             <element signature="e#33592#34136#1#PHP" expanded="false" />
@@ -1265,7 +1269,6 @@
             <element signature="e#45856#46419#1#PHP" expanded="false" />
             <element signature="e#46449#46952#1#PHP" expanded="false" />
             <element signature="e#46989#47506#1#PHP" expanded="false" />
-            <element signature="e#47535#48036#1#PHP" expanded="false" />
             <element signature="e#48066#48569#1#PHP" expanded="false" />
             <element signature="e#48606#49116#1#PHP" expanded="false" />
             <element signature="e#49184#49720#1#PHP" expanded="false" />
@@ -1281,24 +1284,10 @@
             <element signature="e#55205#55755#1#PHP" expanded="false" />
             <element signature="e#55764#56387#0#PHP" expanded="false" />
             <element signature="e#56435#56981#1#PHP" expanded="false" />
-            <element signature="e#57029#57575#1#PHP" expanded="false" />
-            <element signature="e#57648#58107#1#PHP" expanded="false" />
-            <element signature="e#58148#58593#1#PHP" expanded="false" />
-            <element signature="e#58644#59111#1#PHP" expanded="false" />
-            <element signature="e#59152#59597#1#PHP" expanded="false" />
-            <element signature="e#59648#60174#1#PHP" expanded="false" />
-            <element signature="e#60215#60660#1#PHP" expanded="false" />
-            <element signature="e#60716#61268#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/formulario/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39708266">
-          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#1928#0#HTML" expanded="false" />
+            <element signature="e#57650#58109#1#PHP" expanded="false" />
+            <element signature="e#58150#58595#1#PHP" expanded="false" />
+            <element signature="e#58646#59113#1#PHP" expanded="false" />
+            <element signature="e#59154#59599#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
