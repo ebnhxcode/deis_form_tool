@@ -161,6 +161,7 @@ return [
       ],
 
 
+
       'terapia_antiretroviral_farmaco_1' => [
          'Zidovudina' => 'Zidovudina',
          'Abacabir' => 'Abacabir',
@@ -215,8 +216,16 @@ return [
          'No Realizado' => 'No Realizado',
       ],
 
-      '' => [
-         '' => '',
+      'vih_conocido_previa_embarazo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+         'Desconocido' => 'Desconocido',
+      ],
+
+      'pareja_vih_positivo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+         'Desconocido' => 'Desconocido',
       ],
 
       '' => [
