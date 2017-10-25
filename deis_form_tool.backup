@@ -40,6 +40,7 @@ SET default_with_oids = false;
 
 CREATE TABLE form_deis (
     id integer NOT NULL,
+    estado_registro integer,
     nombres_madre character varying(255),
     primer_apellido_madre character varying(255),
     segundo_apellido_madre character varying(255),
@@ -73,6 +74,7 @@ CREATE TABLE form_deis (
     lugar_control_prenatal character varying(255),
     lugar_control_prenatal_otro character varying(255),
     codigo_establecimiento_control_prenatal_embarazo integer,
+    tipo_establecimiento_control_prenatal_embarazo character varying(255),
     fecha_1_vdrl_embarazo timestamp(0) without time zone,
     resultado_1_vdrl_embarazo character varying(255),
     resultado_dilucion_1_vdrl_embarazo character varying(255),
@@ -152,6 +154,8 @@ CREATE TABLE form_deis (
     peso_recien_nacido integer,
     estado_clinico_recien_nacido character varying(255),
     run_recien_nacido integer,
+    fecha_nacimiento_recien_nacido timestamp(0) without time zone,
+    hora_nacimiento_recien_nacido timestamp(0) without time zone,
     digito_verificador_recien_nacido character varying(255),
     codigo_recien_nacido character varying(255),
     fecha_examen_vdrl_periferico_recien_nacido timestamp(0) without time zone,
@@ -232,6 +236,76 @@ ALTER SEQUENCE form_deis_id_seq OWNED BY form_deis.id;
 
 
 --
+-- Name: log_navegacions; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE log_navegacions (
+    id integer NOT NULL,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE log_navegacions OWNER TO postgres;
+
+--
+-- Name: log_navegacions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE log_navegacions_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE log_navegacions_id_seq OWNER TO postgres;
+
+--
+-- Name: log_navegacions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE log_navegacions_id_seq OWNED BY log_navegacions.id;
+
+
+--
+-- Name: log_navegations; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE log_navegations (
+    id integer NOT NULL,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE log_navegations OWNER TO postgres;
+
+--
+-- Name: log_navegations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE log_navegations_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE log_navegations_id_seq OWNER TO postgres;
+
+--
+-- Name: log_navegations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE log_navegations_id_seq OWNED BY log_navegations.id;
+
+
+--
 -- Name: migrations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -263,9 +337,10 @@ ALTER TABLE password_resets OWNER TO postgres;
 CREATE TABLE users (
     id integer NOT NULL,
     name character varying(255) NOT NULL,
-    full_name character varying(255),
-    first_name character varying(255),
     last_name character varying(255),
+    full_name character varying(255),
+    "position" character varying(255),
+    establecimiento character varying(255),
     rut character varying(255),
     email character varying(255) NOT NULL,
     password character varying(255) NOT NULL,
@@ -309,6 +384,20 @@ ALTER TABLE ONLY form_deis ALTER COLUMN id SET DEFAULT nextval('form_deis_id_seq
 
 
 --
+-- Name: log_navegacions id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY log_navegacions ALTER COLUMN id SET DEFAULT nextval('log_navegacions_id_seq'::regclass);
+
+
+--
+-- Name: log_navegations id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY log_navegations ALTER COLUMN id SET DEFAULT nextval('log_navegations_id_seq'::regclass);
+
+
+--
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -319,7 +408,23 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 -- Data for Name: form_deis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre, fecha_nacimiento_madre, n_correlativo_interno, id_region, id_servicio_salud, run_madre, digito_verificador, edad, nacionalidad, id_pais, pueblos_indigenas, estado_civil, tipo_de_convivencia, escolaridad, anos_estudio, residencia_gestante, nacidos_vivos_previos_embarazo, nacidos_muertos_previos_embarazo, abortos_previos_embarazo, sifilis_previa_embarazo, ano_sifilis_previa_embarazo, otra_its_previa_embarazo, vih_conocido_previa_embarazo, fecha_confirmacion_isp_vih_responde_si, adicciones, fecha_ingreso_control_prenatal_embarazo, embarazo_con_control_parental, edad_gestacional_ingreso_control_embarazo, lugar_control_prenatal, lugar_control_prenatal_otro, codigo_establecimiento_control_prenatal_embarazo, fecha_1_vdrl_embarazo, resultado_1_vdrl_embarazo, resultado_dilucion_1_vdrl_embarazo, eg_1_dvrl_embarazo, fecha_2_vdrl_embarazo, resultado_2_vdrl_embarazo, resultado_dilucion_2_vdrl_embarazo, eg_2_dvrl_embarazo, fecha_3_vdrl_embarazo, resultado_3_vdrl_embarazo, resultado_dilucion_3_vdrl_embarazo, eg_3_dvrl_embarazo, fecha_examen_treponemico, resultado_treponemico, diagnostico_sifilis_embarazo, tratamiento_sifilis_farmaco, tratamiento_sifilis_dosis, tratamiento_sifilis_frecuencia, acepta_rechaza_toma_examen_vih, fecha_1_examen_vih_embarazo, resultado_1_examen_vih_embarazo, eg_1_examen_vih, fecha_2_examen_vih_embarazo, resultado_2_examen_vih_embarazo, eg_2_examen_vih, fecha_resultado_final_isp_examen_vih, resultado_final_isp_examen_vih, derivada_a_especialidades_embarazo, fecha_ingreso_unacess, fecha_ingreso_control_unidad_alto_riesgo, fecha_ingreso_control_centro_atencion_vih, fecha_ingreso_control_otras_especialidades, fecha_ingreso_control_otras_especialidades_otro, terapia_antiretroviral_farmaco_1, fecha_inicio_tar_farmaco_1, terapia_antiretroviral_tar_farmaco_2, fecha_inicio_tar_farmaco_2, terapia_antiretroviral_tar_farmaco_3, fecha_inicio_tar_farmaco_3, numero_cd4_ingreso_control_prenatal, fecha_examen_linfocitos_cd4_ingreso_control_prenatal, carga_viral_numero_copia_ingreso_control_prenatal, fecha_examen_carga_viral_control_prenatal, numero_carga_viral_control_prenatal, numero_contactos_sexuales_declarados, numero_contactos_sexuales_estudiados, carga_viral_numero_copia_semana_34, fecha_examen_carga_viral_semana_34, numero_contactos_sexuales_tratados, lugar_atencion_parto, codigo_establecimiento, nombre_establecimiento_sin_codigo, fecha_parto, hora_parto, tipo_parto, via_parto, resultado_vdrl_parto, resultado_dilucion_vdrl_parto, resultado_examen_treponemico_parto, tratamiento_sifilis_parto, resultado_examen_vih_parto, tratamiento_retroviral_parto, peso_mujer_parto, nombre_farmaco_1_vih, dosis_farmaco_1_vih, fecha_inicio_farmaco_1_vih, hora_inicio_farmaco_1_vih, nombre_farmaco_2_vih, dosis_farmaco_2_vih, fecha_inicio_farmaco_2_vih, hora_inicio_farmaco_2_vih, nombre_farmaco_suspencion_lactancia, fecha_administracion_farmaco_suspencion_lactancia, estado_recien_nacido, eg_pediatrica, sexo_recien_nacido, peso_recien_nacido, estado_clinico_recien_nacido, run_recien_nacido, digito_verificador_recien_nacido, codigo_recien_nacido, fecha_examen_vdrl_periferico_recien_nacido, resultado_vdrl_periferico_recien_nacido, titulacion_vdrl_periferico_recien_nacido, fecha_examen_vdrl_liq_cefalo_recien_nacido, resultado_vdrl_liq_cefalo_recien_nacido, titulacion_vdrl_liq_cefalo_recien_nacido, resultado_radiografia_huesos_largos, resultado_citoquimico_liq_cefalo_raquideo, resultado_estudio_placentario, tratamiento_recien_nacido_farmaco, tratamiento_recien_nacido_dosis, tratamiento_recien_nacido_frecuencia, sustituto_leche_materna, fecha_inicio_sustituto_leche_materna, hora_inicio_sustituto_leche_materna, entrega_sustituto_leche_materna_al_alta, nombre_farmaco_1_vih_recien_nacido, dosis_farmaco_1_vih_recien_nacido, fecha_inicio_farmaco_1_vih_recien_nacido, hora_inicio_farmaco_1_vih_recien_nacido, nombre_farmaco_2_vih_recien_nacido, dosis_farmaco_2_vih_recien_nacido, fecha_inicio_farmaco_2_vih_recien_nacido, hora_inicio_farmaco_2_vih_recien_nacido, fecha_1_examen_pcr_recien_nacido, resultado_1_examen_pcr_recien_nacido, fecha_2_examen_pcr_recien_nacido, resultado_2_examen_pcr_recien_nacido, fecha_3_examen_pcr_recien_nacido, resultado_3_examen_pcr_recien_nacido, diagnostico_final_vih_isp_recien_nacido, fecha_test_elisa_18_meses, resultado_test_elisa_18_meses, fecha_examen_treponemico_recien_nacido, derivacion_recien_nacido_a_seguimiento, lugar_derivacion_recien_nacido_a_seguimiento, fecha_ingreso_control_recien_nacido_post_nacimiento, diagnostico_final_sifilis_recien_nacido, estado_seguimiento_mes, estado_seguimiento_3_meses, estado_seguimiento_6_meses, estado_seguimiento_12_meses, estado_seguimiento_18_meses, mujer_continua_tratamiento_antiretroviral, fecha_ultima_regla, pareja_vih_positivo, fecha_administracion_1_dosis_penicilina_gestante, fecha_administracion_ult_dosis_penicilina_gestante, created_at, updated_at) FROM stdin;
+COPY form_deis (id, estado_registro, nombres_madre, primer_apellido_madre, segundo_apellido_madre, fecha_nacimiento_madre, n_correlativo_interno, id_region, id_servicio_salud, run_madre, digito_verificador, edad, nacionalidad, id_pais, pueblos_indigenas, estado_civil, tipo_de_convivencia, escolaridad, anos_estudio, residencia_gestante, nacidos_vivos_previos_embarazo, nacidos_muertos_previos_embarazo, abortos_previos_embarazo, sifilis_previa_embarazo, ano_sifilis_previa_embarazo, otra_its_previa_embarazo, vih_conocido_previa_embarazo, fecha_confirmacion_isp_vih_responde_si, adicciones, fecha_ingreso_control_prenatal_embarazo, embarazo_con_control_parental, edad_gestacional_ingreso_control_embarazo, lugar_control_prenatal, lugar_control_prenatal_otro, codigo_establecimiento_control_prenatal_embarazo, tipo_establecimiento_control_prenatal_embarazo, fecha_1_vdrl_embarazo, resultado_1_vdrl_embarazo, resultado_dilucion_1_vdrl_embarazo, eg_1_dvrl_embarazo, fecha_2_vdrl_embarazo, resultado_2_vdrl_embarazo, resultado_dilucion_2_vdrl_embarazo, eg_2_dvrl_embarazo, fecha_3_vdrl_embarazo, resultado_3_vdrl_embarazo, resultado_dilucion_3_vdrl_embarazo, eg_3_dvrl_embarazo, fecha_examen_treponemico, resultado_treponemico, diagnostico_sifilis_embarazo, tratamiento_sifilis_farmaco, tratamiento_sifilis_dosis, tratamiento_sifilis_frecuencia, acepta_rechaza_toma_examen_vih, fecha_1_examen_vih_embarazo, resultado_1_examen_vih_embarazo, eg_1_examen_vih, fecha_2_examen_vih_embarazo, resultado_2_examen_vih_embarazo, eg_2_examen_vih, fecha_resultado_final_isp_examen_vih, resultado_final_isp_examen_vih, derivada_a_especialidades_embarazo, fecha_ingreso_unacess, fecha_ingreso_control_unidad_alto_riesgo, fecha_ingreso_control_centro_atencion_vih, fecha_ingreso_control_otras_especialidades, fecha_ingreso_control_otras_especialidades_otro, terapia_antiretroviral_farmaco_1, fecha_inicio_tar_farmaco_1, terapia_antiretroviral_tar_farmaco_2, fecha_inicio_tar_farmaco_2, terapia_antiretroviral_tar_farmaco_3, fecha_inicio_tar_farmaco_3, numero_cd4_ingreso_control_prenatal, fecha_examen_linfocitos_cd4_ingreso_control_prenatal, carga_viral_numero_copia_ingreso_control_prenatal, fecha_examen_carga_viral_control_prenatal, numero_carga_viral_control_prenatal, numero_contactos_sexuales_declarados, numero_contactos_sexuales_estudiados, carga_viral_numero_copia_semana_34, fecha_examen_carga_viral_semana_34, numero_contactos_sexuales_tratados, lugar_atencion_parto, codigo_establecimiento, nombre_establecimiento_sin_codigo, fecha_parto, hora_parto, tipo_parto, via_parto, resultado_vdrl_parto, resultado_dilucion_vdrl_parto, resultado_examen_treponemico_parto, tratamiento_sifilis_parto, resultado_examen_vih_parto, tratamiento_retroviral_parto, peso_mujer_parto, nombre_farmaco_1_vih, dosis_farmaco_1_vih, fecha_inicio_farmaco_1_vih, hora_inicio_farmaco_1_vih, nombre_farmaco_2_vih, dosis_farmaco_2_vih, fecha_inicio_farmaco_2_vih, hora_inicio_farmaco_2_vih, nombre_farmaco_suspencion_lactancia, fecha_administracion_farmaco_suspencion_lactancia, estado_recien_nacido, eg_pediatrica, sexo_recien_nacido, peso_recien_nacido, estado_clinico_recien_nacido, run_recien_nacido, fecha_nacimiento_recien_nacido, hora_nacimiento_recien_nacido, digito_verificador_recien_nacido, codigo_recien_nacido, fecha_examen_vdrl_periferico_recien_nacido, resultado_vdrl_periferico_recien_nacido, titulacion_vdrl_periferico_recien_nacido, fecha_examen_vdrl_liq_cefalo_recien_nacido, resultado_vdrl_liq_cefalo_recien_nacido, titulacion_vdrl_liq_cefalo_recien_nacido, resultado_radiografia_huesos_largos, resultado_citoquimico_liq_cefalo_raquideo, resultado_estudio_placentario, tratamiento_recien_nacido_farmaco, tratamiento_recien_nacido_dosis, tratamiento_recien_nacido_frecuencia, sustituto_leche_materna, fecha_inicio_sustituto_leche_materna, hora_inicio_sustituto_leche_materna, entrega_sustituto_leche_materna_al_alta, nombre_farmaco_1_vih_recien_nacido, dosis_farmaco_1_vih_recien_nacido, fecha_inicio_farmaco_1_vih_recien_nacido, hora_inicio_farmaco_1_vih_recien_nacido, nombre_farmaco_2_vih_recien_nacido, dosis_farmaco_2_vih_recien_nacido, fecha_inicio_farmaco_2_vih_recien_nacido, hora_inicio_farmaco_2_vih_recien_nacido, fecha_1_examen_pcr_recien_nacido, resultado_1_examen_pcr_recien_nacido, fecha_2_examen_pcr_recien_nacido, resultado_2_examen_pcr_recien_nacido, fecha_3_examen_pcr_recien_nacido, resultado_3_examen_pcr_recien_nacido, diagnostico_final_vih_isp_recien_nacido, fecha_test_elisa_18_meses, resultado_test_elisa_18_meses, fecha_examen_treponemico_recien_nacido, derivacion_recien_nacido_a_seguimiento, lugar_derivacion_recien_nacido_a_seguimiento, fecha_ingreso_control_recien_nacido_post_nacimiento, diagnostico_final_sifilis_recien_nacido, estado_seguimiento_mes, estado_seguimiento_3_meses, estado_seguimiento_6_meses, estado_seguimiento_12_meses, estado_seguimiento_18_meses, mujer_continua_tratamiento_antiretroviral, fecha_ultima_regla, pareja_vih_positivo, fecha_administracion_1_dosis_penicilina_gestante, fecha_administracion_ult_dosis_penicilina_gestante, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: log_navegacions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY log_navegacions (id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: log_navegations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY log_navegations (id, created_at, updated_at) FROM stdin;
 \.
 
 
@@ -331,6 +436,8 @@ COPY migrations (migration, batch) FROM stdin;
 2014_10_12_000000_create_users_table	1
 2014_10_12_100000_create_password_resets_table	1
 2017_10_20_183605_create_form_deis_table	1
+2017_10_25_140649_create_log_navegations_table	1
+2017_10_25_144731_create_log_navegacions_table	1
 \.
 
 
@@ -346,7 +453,7 @@ COPY password_resets (email, token, created_at) FROM stdin;
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY users (id, name, full_name, first_name, last_name, rut, email, password, created_by, updated_by, remember_token, created_at, updated_at) FROM stdin;
+COPY users (id, name, last_name, full_name, "position", establecimiento, rut, email, password, created_by, updated_by, remember_token, created_at, updated_at) FROM stdin;
 \.
 
 
@@ -355,6 +462,20 @@ COPY users (id, name, full_name, first_name, last_name, rut, email, password, cr
 --
 
 SELECT pg_catalog.setval('form_deis_id_seq', 1, false);
+
+
+--
+-- Name: log_navegacions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('log_navegacions_id_seq', 1, false);
+
+
+--
+-- Name: log_navegations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('log_navegations_id_seq', 1, false);
 
 
 --
@@ -370,6 +491,22 @@ SELECT pg_catalog.setval('users_id_seq', 1, false);
 
 ALTER TABLE ONLY form_deis
     ADD CONSTRAINT form_deis_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: log_navegacions log_navegacions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY log_navegacions
+    ADD CONSTRAINT log_navegacions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: log_navegations log_navegations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY log_navegations
+    ADD CONSTRAINT log_navegations_pkey PRIMARY KEY (id);
 
 
 --
