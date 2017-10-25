@@ -379,6 +379,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'fecha_ingreso_control_prenatal_embarazo' => [
@@ -396,6 +399,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'fecha_ultima_regla' => [
@@ -413,6 +419,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo',
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'edad_gestacional_ingreso_control_embarazo' => [
@@ -430,11 +439,14 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'codigo_establecimiento_control_prenatal_embarazo' => [
          'directivas' => [
-            'type' => 'number',
+            'type' => 'select',
             'id' => 'codigo_establecimiento_control_prenatal_embarazo',
             'name' => 'codigo_establecimiento_control_prenatal_embarazo',
             'value' => '',
@@ -447,6 +459,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'lugar_control_prenatal' => [
@@ -464,6 +479,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'lugar_control_prenatal_otro' => [
@@ -502,9 +520,6 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-md-3'
          ]
       ],
       'resultado_1_vdrl_embarazo' => [
@@ -522,9 +537,6 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-md-3'
          ]
       ],
       'resultado_dilucion_1_vdrl_embarazo' => [
@@ -542,9 +554,6 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-md-3'
          ]
       ],
       'eg_1_dvrl_embarazo' => [
@@ -562,9 +571,6 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-md-3'
          ]
       ],
 
@@ -719,6 +725,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo',
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
          ]
       ],
          #Parte 3 control de embarazo
@@ -737,6 +746,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
          ]
       ],
       'fecha_1_examen_vih_embarazo' => [
@@ -754,6 +766,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'resultado_1_examen_vih_embarazo' => [
@@ -771,6 +786,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'eg_1_examen_vih' => [
@@ -788,6 +806,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'fecha_2_examen_vih_embarazo' => [
@@ -805,6 +826,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'resultado_2_examen_vih_embarazo' => [
@@ -822,6 +846,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'eg_2_examen_vih' => [
@@ -839,6 +866,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'fecha_resultado_final_isp_examen_vih' => [
