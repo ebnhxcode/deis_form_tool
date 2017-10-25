@@ -128,6 +128,8 @@ class CreateFormDeisTable extends Migration
             $table->integer('peso_recien_nacido')->nullable(true);
             $table->string('estado_clinico_recien_nacido')->nullable(true);
             $table->integer('run_recien_nacido')->nullable(true);
+            $table->timestamp('fecha_nacimiento_recien_nacido')->nullable(true);
+            $table->timestamp('hora_nacimiento_recien_nacido')->nullable(true);
             $table->string('digito_verificador_recien_nacido')->nullable(true);
             $table->string('codigo_recien_nacido')->nullable(true);
             $table->timestamp('fecha_examen_vdrl_periferico_recien_nacido')->nullable(true);

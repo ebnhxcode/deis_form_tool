@@ -125,6 +125,8 @@ return [
       'peso_recien_nacido',
       'estado_clinico_recien_nacido',
       'run_recien_nacido',
+      'fecha_nacimiento_recien_nacido',
+      'hora_nacimiento_recien_nacido',
       'digito_verificador_recien_nacido',
       'codigo_recien_nacido',
       'fecha_examen_vdrl_periferico_recien_nacido',
@@ -2705,6 +2707,371 @@ return [
       ],
 
 
+      #Datos recién nacido - datos_recien_nacido
+         #Primera Parte
+      'run_recien_nacido' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'run_recien_nacido',
+            'name' => 'run_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'fecha_nacimiento_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_nacimiento_recien_nacido',
+            'name' => 'fecha_nacimiento_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'hora_nacimiento_recien_nacido' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_nacimiento_recien_nacido',
+            'name' => 'hora_nacimiento_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'estado_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_recien_nacido',
+            'name' => 'estado_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'sexo_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'sexo_recien_nacido',
+            'name' => 'sexo_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-2 col-md-2'
+         ]
+      ],
+      'eg_pediatrica' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_pediatrica',
+            'name' => 'eg_pediatrica',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-1 col-md-1'
+         ]
+      ],
+      'peso_recien_nacido' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'peso_recien_nacido',
+            'name' => 'peso_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-1 col-md-1'
+         ]
+      ],
+      #El campo de acontinuacion, Estado clinico recien nacido
+      /*
+      'estado_clinico_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_clinico_recien_nacido',
+            'name' => 'estado_clinico_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => ''
+         ]
+      ],
+      */
+         #Segunda Parte
+      'fecha_examen_vdrl_periferico_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_vdrl_periferico_recien_nacido',
+            'name' => 'fecha_examen_vdrl_periferico_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'resultado_vdrl_periferico_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_vdrl_periferico_recien_nacido',
+            'name' => 'resultado_vdrl_periferico_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'titulacion_vdrl_periferico_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'titulacion_vdrl_periferico_recien_nacido',
+            'name' => 'titulacion_vdrl_periferico_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'fecha_examen_vdrl_liq_cefalo_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_vdrl_liq_cefalo_recien_nacido',
+            'name' => 'fecha_examen_vdrl_liq_cefalo_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'resultado_vdrl_liq_cefalo_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_vdrl_liq_cefalo_recien_nacido',
+            'name' => 'resultado_vdrl_liq_cefalo_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'titulacion_vdrl_liq_cefalo_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'titulacion_vdrl_liq_cefalo_recien_nacido',
+            'name' => 'titulacion_vdrl_liq_cefalo_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'resultado_radiografia_huesos_largos' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_radiografia_huesos_largos',
+            'name' => 'resultado_radiografia_huesos_largos',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'resultado_citoquimico_liq_cefalo_raquideo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_citoquimico_liq_cefalo_raquideo',
+            'name' => 'resultado_citoquimico_liq_cefalo_raquideo',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'resultado_estudio_placentario' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_estudio_placentario',
+            'name' => 'resultado_estudio_placentario',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+
       ##################################
       #  No vinculados a una seccion   #
 
@@ -2785,144 +3152,6 @@ return [
       ],
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      'estado_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_recien_nacido',
-            'name' => 'estado_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'eg_pediatrica' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_pediatrica',
-            'name' => 'eg_pediatrica',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'sexo_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'sexo_recien_nacido',
-            'name' => 'sexo_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'peso_recien_nacido' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'peso_recien_nacido',
-            'name' => 'peso_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'estado_clinico_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_clinico_recien_nacido',
-            'name' => 'estado_clinico_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'run_recien_nacido' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'run_recien_nacido',
-            'name' => 'run_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
       'digito_verificador_recien_nacido' => [
          'directivas' => [
             'type' => 'text',
@@ -2961,176 +3190,7 @@ return [
          ]
       ],
 
-      'fecha_examen_vdrl_periferico_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_vdrl_periferico_recien_nacido',
-            'name' => 'fecha_examen_vdrl_periferico_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'resultado_vdrl_periferico_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_vdrl_periferico_recien_nacido',
-            'name' => 'resultado_vdrl_periferico_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'titulacion_vdrl_periferico_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'titulacion_vdrl_periferico_recien_nacido',
-            'name' => 'titulacion_vdrl_periferico_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_examen_vdrl_liq_cefalo_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_vdrl_liq_cefalo_recien_nacido',
-            'name' => 'fecha_examen_vdrl_liq_cefalo_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_vdrl_liq_cefalo_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_vdrl_liq_cefalo_recien_nacido',
-            'name' => 'resultado_vdrl_liq_cefalo_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'titulacion_vdrl_liq_cefalo_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'titulacion_vdrl_liq_cefalo_recien_nacido',
-            'name' => 'titulacion_vdrl_liq_cefalo_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_radiografia_huesos_largos' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_radiografia_huesos_largos',
-            'name' => 'resultado_radiografia_huesos_largos',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_citoquimico_liq_cefalo_raquideo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_citoquimico_liq_cefalo_raquideo',
-            'name' => 'resultado_citoquimico_liq_cefalo_raquideo',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_estudio_placentario' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_estudio_placentario',
-            'name' => 'resultado_estudio_placentario',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'tratamiento_recien_nacido_farmaco' => [
          'directivas' => [
@@ -4133,22 +4193,28 @@ return [
          'text' => 'Fecha de administración de  Fármaco para suspender la lactancia',
       ],
       'estado_recien_nacido' => [
-         'text' => 'Estado del recién nacido al nacer',
+         'text' => 'Estado del recién nacido',
       ],
       'eg_pediatrica' => [
-         'text' => 'Eg Pediatrica',
+         'text' => 'Eg Pediat.',
       ],
       'sexo_recien_nacido' => [
          'text' => 'Sexo Recién Nacido',
       ],
       'peso_recien_nacido' => [
-         'text' => 'Peso Recién Nacido (grs)',
+         'text' => 'Peso (grs)',
       ],
       'estado_clinico_recien_nacido' => [
          'text' => 'Estado Clinico del Recién Nacido',
       ],
       'run_recien_nacido' => [
          'text' => 'Run Recién Nacido',
+      ],
+      'fecha_nacimiento_recien_nacido' => [
+         'text' => 'Fecha de Nacimiento',
+      ],
+      'hora_nacimiento_recien_nacido' => [
+         'text' => 'Hora',
       ],
       'digito_verificador_recien_nacido' => [
          'text' => 'Digito verificador',
@@ -4166,13 +4232,13 @@ return [
          'text' => 'Titulación  de VDRL periférico del Recién nacido',
       ],
       'fecha_examen_vdrl_liq_cefalo_recien_nacido' => [
-         'text' => 'Fecha de examen  VDRL líquido céfalo raquídeo  del Recien nacido',
+         'text' => 'Fecha de examen VDRL líquido céfalo raquídeo',
       ],
       'resultado_vdrl_liq_cefalo_recien_nacido' => [
-         'text' => 'Resultado de VDRL líquido céfalo raquídeo  del Recién nacido',
+         'text' => 'Resultado de VDRL líquido céfalo raquídeo',
       ],
       'titulacion_vdrl_liq_cefalo_recien_nacido' => [
-         'text' => 'Titulación  de VDRL líquido céfalo raquídeo  del Recién nacido',
+         'text' => 'Titulación  de VDRL líquido céfalo raquídeo',
       ],
       'resultado_radiografia_huesos_largos' => [
          'text' => 'Resultado de Radiografía de huesos largos',

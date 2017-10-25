@@ -139,7 +139,7 @@
                                                      :max-length="i.directivas.max_length"
                                                      :required="i.directivas.required"
                                                      :readonly="i.directivas.readonly"
-                                                     :class="i.directivas.class!=''?i.directivas.class:'form-control'"
+                                                     :class="i.directivas.class!=''?i.directivas.class:'form-control input-sm'"
                                                      :style="i.directivas.style!=''?i.directivas.style:''"
                                              ></inputs>
                                           </dd>
@@ -148,7 +148,7 @@
                                           <dd v-else-if="inputInArray(i,inputTypes.select)">
                                              <select :name="i.directivas.name"
                                                      :id="i.directivas.id"
-                                                     class="form-control">
+                                                     class="form-control input-sm">
 
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
@@ -162,7 +162,7 @@
 
                                              <textarea :name="i.directivas.name"
                                                        :id="i.directivas.id"
-                                                       class="form-control">
+                                                       class="form-control input-sm">
                                              </textarea>
 
                                           </dd>
