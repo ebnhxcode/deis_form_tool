@@ -421,7 +421,6 @@ return [
             'nombre' => 'control_embarazo'
          ]
       ],
-
          #Parte 2 control de embarazo
       'fecha_1_vdrl_embarazo' => [
          'directivas' => [
@@ -631,7 +630,6 @@ return [
             'nombre' => 'control_embarazo',
          ]
       ],
-
          #Parte 3 control de embarazo
       'acepta_rechaza_toma_examen_vih' => [
          'directivas' => [
@@ -777,6 +775,7 @@ return [
             'nombre' => 'control_embarazo'
          ]
       ],
+         #Parte 4 control de embarazo
       'derivada_a_especialidades_embarazo' => [
          'directivas' => [
             'type' => 'select',
@@ -1056,10 +1055,137 @@ return [
             'nombre' => 'patologias_sifilis'
          ]
       ],
+         #Cuarto bloque
+      'fecha_examen_treponemico' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_treponemico',
+            'name' => 'fecha_examen_treponemico',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'resultado_treponemico' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_treponemico',
+            'name' => 'resultado_treponemico',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'diagnostico_sifilis_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'diagnostico_sifilis_embarazo',
+            'name' => 'diagnostico_sifilis_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+         #Quinto bloque
+      'fecha_administracion_1_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis',
+         ]
+      ],
+      'fecha_administracion_ult_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis',
+         ]
+      ],
+      'tratamiento_sifilis_farmaco' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_farmaco',
+            'name' => 'tratamiento_sifilis_farmaco',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'tratamiento_sifilis_dosis' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_dosis',
+            'name' => 'tratamiento_sifilis_dosis',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'tratamiento_sifilis_frecuencia' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_sifilis_frecuencia',
+            'name' => 'tratamiento_sifilis_frecuencia',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
       ######
-
-
-
 
 
 
@@ -1175,107 +1301,6 @@ return [
 
 
 
-      'fecha_examen_treponemico' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_treponemico',
-            'name' => 'fecha_examen_treponemico',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_treponemico' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_treponemico',
-            'name' => 'resultado_treponemico',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'diagnostico_sifilis_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'diagnostico_sifilis_embarazo',
-            'name' => 'diagnostico_sifilis_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tratamiento_sifilis_farmaco' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_farmaco',
-            'name' => 'tratamiento_sifilis_farmaco',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tratamiento_sifilis_dosis' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_dosis',
-            'name' => 'tratamiento_sifilis_dosis',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tratamiento_sifilis_frecuencia' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_sifilis_frecuencia',
-            'name' => 'tratamiento_sifilis_frecuencia',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
 
 
@@ -2879,22 +2904,7 @@ return [
          ]
       ],
 
-      'fecha_administracion_ult_dosis_penicilina_gestante' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => '',
-         ]
-      ],
+
 
    ],
 
