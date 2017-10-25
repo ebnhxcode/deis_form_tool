@@ -276,11 +276,61 @@ return [
       ],
 
 
-      '' => [
+      'estado_recien_nacido' => [
+         'Vivo' => 'Vivo',
+         'Muerto' => 'Muerto',
+      ],
+
+      'sexo_recien_nacido' => [
+         'Hombre' => 'Hombre',
+         'Mujer' => 'Mujer',
+         'Intersex' => 'Intersex',
+         'Desconocido' => 'Desconocido',
+      ],
+
+      'resultado_vdrl_periferico_recien_nacido' => [
+         'No Reactivo' => 'No Reactivo',
+         'Reactivo' => 'Reactivo',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'titulacion_vdrl_periferico_recien_nacido' => [
+         '1:2' => '1:2',
+         '1:4' => '1:4',
+         '1:8' => '1:8',
+         '1:16' => '1:16',
+         '1:64' => '1:64',
+         '1:128' => '1:128',
+         '1:256' => '1:256',
+      ],
+
+      'resultado_vdrl_liq_cefalo_recien_nacido' => [
+         'No Reactivo' => 'No Reactivo',
+         'Reactivo' => 'Reactivo',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'titulacion_vdrl_liq_cefalo_recien_nacido' => [
+         '1:2' => '1:2',
+         '1:4' => '1:4',
+         '1:8' => '1:8',
+         '1:16' => '1:16',
+         '1:64' => '1:64',
+         '1:128' => '1:128',
+         '1:256' => '1:256',
+      ],
+
+      'resultado_radiografia_huesos_largos' => [
+         'Normal' => 'Normal',
+         'Alterado' => 'Alterado',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_citoquimico_liq_cefalo_raquideo' => [
          '' => '',
       ],
 
-      '' => [
+      'resultado_estudio_placentario' => [
          '' => '',
       ],
 
