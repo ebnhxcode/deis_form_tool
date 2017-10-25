@@ -18,7 +18,6 @@ class CreateFormDeisTable extends Migration
             $table->string('primer_apellido_madre')->nullable(true);
             $table->string('segundo_apellido_madre')->nullable(true);
             $table->timestamp('fecha_nacimiento_madre')->nullable(true);
-            $table->string('segundo_apellido_madre')->nullable(true);
             $table->integer('n_correlativo_interno')->nullable(true);
             $table->integer('id_region')->nullable(true);
             $table->integer('id_servicio_salud')->nullable(true);
