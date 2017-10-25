@@ -46,6 +46,7 @@ class CreateFormDeisTable extends Migration
             $table->string('embarazo_con_control_parental')->nullable(true);
             $table->integer('edad_gestacional_ingreso_control_embarazo')->nullable(true);
             $table->string('lugar_control_prenatal')->nullable(true);
+            $table->string('lugar_control_prenatal_otro')->nullable(true);
             $table->integer('codigo_establecimiento_control_prenatal_embarazo')->nullable(true);
             $table->timestamp('fecha_1_vdrl_embarazo')->nullable(true);
             $table->string('resultado_1_vdrl_embarazo')->nullable(true);

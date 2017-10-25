@@ -134,7 +134,11 @@
                                           <dd v-if="inputInArray(i,inputTypes.basics)">
                                              <inputs :name="i.directivas.name"
                                                      :id="i.directivas.id"
-                                                     :type="i.directivas.type"></inputs>
+                                                     :type="i.directivas.type"
+                                                     :max-length="i.directivas.max_length"
+                                                     :required="i.directivas.required"
+                                                     :readonly="i.directivas.readonly"
+                                             ></inputs>
                                           </dd>
 
                                           <!-- Select Inputs -->
