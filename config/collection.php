@@ -3027,7 +3027,6 @@ return [
             'class' => 'col-sm-4 col-md-4'
          ]
       ],
-
       'resultado_citoquimico_liq_cefalo_raquideo' => [
          'directivas' => [
             'type' => 'select',
@@ -3071,6 +3070,69 @@ return [
          ]
       ],
 
+      'tratamiento_recien_nacido_farmaco' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tratamiento_recien_nacido_farmaco',
+            'name' => 'tratamiento_recien_nacido_farmaco',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'tratamiento_recien_nacido_dosis' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'tratamiento_recien_nacido_dosis',
+            'name' => 'tratamiento_recien_nacido_dosis',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'tratamiento_recien_nacido_frecuencia' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'tratamiento_recien_nacido_frecuencia',
+            'name' => 'tratamiento_recien_nacido_frecuencia',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
 
       ##################################
       #  No vinculados a una seccion   #
@@ -3093,7 +3155,6 @@ return [
             'nombre' => ''
          ]
       ],
-
       'servicio_salud' => [
          'directivas' => [
             'type' => 'select',
@@ -3112,7 +3173,6 @@ return [
             'nombre' => ''
          ]
       ],
-
       'digito_verificador' => [
          'directivas' => [
             'type' => 'text',
@@ -3131,7 +3191,6 @@ return [
             'nombre' => ''
          ]
       ],
-
       'edad' => [
          'directivas' => [
             'type' => 'number',
@@ -3150,8 +3209,6 @@ return [
             'nombre' => ''
          ]
       ],
-
-
       'digito_verificador_recien_nacido' => [
          'directivas' => [
             'type' => 'text',
@@ -3170,7 +3227,6 @@ return [
             'nombre' => ''
          ]
       ],
-
       'codigo_recien_nacido' => [
          'directivas' => [
             'type' => 'text',
@@ -3192,62 +3248,7 @@ return [
 
 
 
-      'tratamiento_recien_nacido_farmaco' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tratamiento_recien_nacido_farmaco',
-            'name' => 'tratamiento_recien_nacido_farmaco',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'tratamiento_recien_nacido_dosis' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'tratamiento_recien_nacido_dosis',
-            'name' => 'tratamiento_recien_nacido_dosis',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tratamiento_recien_nacido_frecuencia' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'tratamiento_recien_nacido_frecuencia',
-            'name' => 'tratamiento_recien_nacido_frecuencia',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'sustituto_leche_materna' => [
          'directivas' => [
@@ -4209,6 +4210,7 @@ return [
       ],
       'run_recien_nacido' => [
          'text' => 'Run Recién Nacido',
+         'tag' => 'Datos del Recién Nacido',
       ],
       'fecha_nacimiento_recien_nacido' => [
          'text' => 'Fecha de Nacimiento',
@@ -4224,6 +4226,7 @@ return [
       ],
       'fecha_examen_vdrl_periferico_recien_nacido' => [
          'text' => 'Fecha de exámen  VDRL periférico del Recién nacido',
+         'tag' => 'Examenes Sifilis',
       ],
       'resultado_vdrl_periferico_recien_nacido' => [
          'text' => 'Resultado de VDRL periférico del Recién nacido',
@@ -4250,13 +4253,14 @@ return [
          'text' => 'Resultado Estudio Placentario',
       ],
       'tratamiento_recien_nacido_farmaco' => [
-         'text' => 'Tratamiento del Recién Nacido.  nombre del Fármaco',
+         'text' => 'Farmaco',
+         'tag' => 'Tratamiento sífilis',
       ],
       'tratamiento_recien_nacido_dosis' => [
-         'text' => 'Tratamiento Dosis del recién nacido',
+         'text' => 'Dosis',
       ],
       'tratamiento_recien_nacido_frecuencia' => [
-         'text' => 'Tratamiento Frecuencia del recién nacido',
+         'text' => 'Frecuencia N° de Días',
       ],
       'sustituto_leche_materna' => [
          'text' => 'Sustituto de Leche Materna',

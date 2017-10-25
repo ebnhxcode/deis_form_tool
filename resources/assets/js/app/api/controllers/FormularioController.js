@@ -31,6 +31,9 @@ const FormularioController = new Vue({
             'select':['select'],
             'textarea':['textarea'],
          },
+         'tags': [
+            'h1','h2','h3','h4','h5','h6'
+         ],
 
          'paso1_filtro':true,
          'paso2_confirmar':false,

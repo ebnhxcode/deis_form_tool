@@ -123,56 +123,67 @@
 
                                     <dl class="dl-vertical">
 
-                                       <div :class="i.class_custom ? i.class_custom.class : 'col-xs-6 col-sm-6 col-md-6'"
-                                            v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
+                                       <div v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
+
+                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].tag" class="col-md-12">
+                                             <h3>
+                                                @{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}
+                                             </h3>
+                                             <br>
+                                          </div>
+
+
+
+                                          <div :class="i.class_custom ? i.class_custom.class : 'col-xs-6 col-sm-6 col-md-6'">
 
                                              <!-- Etiquetas de los campos -->
-                                          <dt class="small">
-                                             @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
-                                          </dt>
+                                             <dt class="small">
+                                                @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
+                                             </dt>
 
-                                          <!-- Input basicos como text,number,time,date,etc -->
-                                          <dd v-if="inputInArray(i,inputTypes.basics)">
-                                             <inputs :name="i.directivas.name"
-                                                     :id="i.directivas.id"
-                                                     :type="i.directivas.type"
-                                                     :max-length="i.directivas.max_length"
-                                                     :required="i.directivas.required"
-                                                     :readonly="i.directivas.readonly"
-                                                     :class="i.directivas.class!=''?i.directivas.class:'form-control input-sm'"
-                                                     :style="i.directivas.style!=''?i.directivas.style:''"
-                                             ></inputs>
-                                          </dd>
+                                             <!-- Input basicos como text,number,time,date,etc -->
+                                             <dd v-if="inputInArray(i,inputTypes.basics)">
+                                                <inputs :name="i.directivas.name"
+                                                        :id="i.directivas.id"
+                                                        :type="i.directivas.type"
+                                                        :max-length="i.directivas.max_length"
+                                                        :required="i.directivas.required"
+                                                        :readonly="i.directivas.readonly"
+                                                        :class="i.directivas.class!=''?i.directivas.class:'form-control input-sm'"
+                                                        :style="i.directivas.style!=''?i.directivas.style:''"
+                                                ></inputs>
+                                             </dd>
 
-                                          <!-- Select Inputs -->
-                                          <dd v-else-if="inputInArray(i,inputTypes.select)">
-                                             <select :name="i.directivas.name"
-                                                     :id="i.directivas.id"
-                                                     class="form-control input-sm">
+                                             <!-- Select Inputs -->
+                                             <dd v-else-if="inputInArray(i,inputTypes.select)">
+                                                <select :name="i.directivas.name"
+                                                        :id="i.directivas.id"
+                                                        class="form-control input-sm">
 
-                                                <option value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                             </select><!-- .form-control -->
-                                          </dd>
+                                                   <option value="0">0</option>
+                                                   <option value="1">1</option>
+                                                   <option value="2">2</option>
+                                                   <option value="3">3</option>
+                                                </select><!-- .form-control -->
+                                             </dd>
 
-                                          <!-- Textarea Inputs -->
-                                          <dd v-else-if="inputInArray(i,inputTypes.textarea)">
+                                             <!-- Textarea Inputs -->
+                                             <dd v-else-if="inputInArray(i,inputTypes.textarea)">
 
                                              <textarea :name="i.directivas.name"
                                                        :id="i.directivas.id"
                                                        class="form-control input-sm">
                                              </textarea>
 
-                                          </dd>
+                                             </dd>
 
-                                          <dd v-else>
-                                             Sin Campos
-                                          </dd>
-                                          <br>
-                                          <br>
-                                       </div><!-- .col-md-* -->
+                                             <dd v-else>
+                                                Sin Campos
+                                             </dd>
+                                             <br>
+                                             <br>
+                                          </div><!-- .col-md-* -->
+                                       </div>
 
                                        <div class="col-xs-12 col-sm-12 col-md-12">
                                           <dt>
