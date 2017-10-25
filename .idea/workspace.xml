@@ -59,9 +59,10 @@
       <file leaf-file-name="collection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.363047">
-              <caret line="3366" column="63" selection-start-line="3366" selection-start-column="63" selection-end-line="3366" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.66288495">
+              <caret line="1744" column="8" selection-start-line="1744" selection-start-column="8" selection-end-line="1744" selection-end-column="8" />
               <folding>
+                <element signature="e#404#6729#1#PHP" expanded="false" />
                 <element signature="e#6883#7300#1#PHP" expanded="false" />
                 <element signature="e#7335#7816#1#PHP" expanded="false" />
                 <element signature="e#7844#8353#1#PHP" expanded="false" />
@@ -129,6 +130,23 @@
                 <element signature="e#41761#42317#1#PHP" expanded="false" />
                 <element signature="e#42367#42923#1#PHP" expanded="false" />
                 <element signature="e#42971#43523#1#PHP" expanded="false" />
+                <element signature="e#43629#44109#1#PHP" expanded="false" />
+                <element signature="e#44167#44640#1#PHP" expanded="false" />
+                <element signature="e#44734#45209#1#PHP" expanded="false" />
+                <element signature="e#45269#45746#1#PHP" expanded="false" />
+                <element signature="e#45811#46374#1#PHP" expanded="false" />
+                <element signature="e#46404#46907#1#PHP" expanded="false" />
+                <element signature="e#46944#47461#1#PHP" expanded="false" />
+                <element signature="e#47490#47991#1#PHP" expanded="false" />
+                <element signature="e#48021#48524#1#PHP" expanded="false" />
+                <element signature="e#48561#49071#1#PHP" expanded="false" />
+                <element signature="e#49139#49675#1#PHP" expanded="false" />
+                <element signature="e#49727#50280#1#PHP" expanded="false" />
+                <element signature="e#50304#50803#1#PHP" expanded="false" />
+                <element signature="e#50837#51349#1#PHP" expanded="false" />
+                <element signature="e#51465#52017#1#PHP" expanded="false" />
+                <element signature="e#52071#52623#1#PHP" expanded="false" />
+                <element signature="e#52675#53223#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -147,8 +165,8 @@
       <file leaf-file-name="2017_10_20_183605_create_form_deis_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -842,6 +860,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1077" column="22" selection-start-line="1077" selection-start-column="22" selection-end-line="1077" selection-end-column="22" />
           <folding>
+            <element signature="e#404#6729#1#PHP" expanded="false" />
             <element signature="e#6883#7300#1#PHP" expanded="false" />
             <element signature="e#7335#7816#1#PHP" expanded="false" />
             <element signature="e#7844#8353#1#PHP" expanded="false" />
@@ -909,6 +928,23 @@
             <element signature="e#41761#42317#1#PHP" expanded="false" />
             <element signature="e#42367#42923#1#PHP" expanded="false" />
             <element signature="e#42971#43523#1#PHP" expanded="false" />
+            <element signature="e#43629#44109#1#PHP" expanded="false" />
+            <element signature="e#44167#44640#1#PHP" expanded="false" />
+            <element signature="e#44734#45209#1#PHP" expanded="false" />
+            <element signature="e#45269#45746#1#PHP" expanded="false" />
+            <element signature="e#45811#46374#1#PHP" expanded="false" />
+            <element signature="e#46404#46907#1#PHP" expanded="false" />
+            <element signature="e#46944#47461#1#PHP" expanded="false" />
+            <element signature="e#47490#47991#1#PHP" expanded="false" />
+            <element signature="e#48021#48524#1#PHP" expanded="false" />
+            <element signature="e#48561#49071#1#PHP" expanded="false" />
+            <element signature="e#49139#49675#1#PHP" expanded="false" />
+            <element signature="e#49727#50280#1#PHP" expanded="false" />
+            <element signature="e#50304#50803#1#PHP" expanded="false" />
+            <element signature="e#50837#51349#1#PHP" expanded="false" />
+            <element signature="e#51465#52017#1#PHP" expanded="false" />
+            <element signature="e#52071#52623#1#PHP" expanded="false" />
+            <element signature="e#52675#53223#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1206,14 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/collections.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1245,11 +1273,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.363047">
-          <caret line="3366" column="63" selection-start-line="3366" selection-start-column="63" selection-end-line="3366" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.66288495">
+          <caret line="1744" column="8" selection-start-line="1744" selection-start-column="8" selection-end-line="1744" selection-end-column="8" />
           <folding>
+            <element signature="e#404#6729#1#PHP" expanded="false" />
             <element signature="e#6883#7300#1#PHP" expanded="false" />
             <element signature="e#7335#7816#1#PHP" expanded="false" />
             <element signature="e#7844#8353#1#PHP" expanded="false" />
@@ -1317,6 +1354,23 @@
             <element signature="e#41761#42317#1#PHP" expanded="false" />
             <element signature="e#42367#42923#1#PHP" expanded="false" />
             <element signature="e#42971#43523#1#PHP" expanded="false" />
+            <element signature="e#43629#44109#1#PHP" expanded="false" />
+            <element signature="e#44167#44640#1#PHP" expanded="false" />
+            <element signature="e#44734#45209#1#PHP" expanded="false" />
+            <element signature="e#45269#45746#1#PHP" expanded="false" />
+            <element signature="e#45811#46374#1#PHP" expanded="false" />
+            <element signature="e#46404#46907#1#PHP" expanded="false" />
+            <element signature="e#46944#47461#1#PHP" expanded="false" />
+            <element signature="e#47490#47991#1#PHP" expanded="false" />
+            <element signature="e#48021#48524#1#PHP" expanded="false" />
+            <element signature="e#48561#49071#1#PHP" expanded="false" />
+            <element signature="e#49139#49675#1#PHP" expanded="false" />
+            <element signature="e#49727#50280#1#PHP" expanded="false" />
+            <element signature="e#50304#50803#1#PHP" expanded="false" />
+            <element signature="e#50837#51349#1#PHP" expanded="false" />
+            <element signature="e#51465#52017#1#PHP" expanded="false" />
+            <element signature="e#52071#52623#1#PHP" expanded="false" />
+            <element signature="e#52675#53223#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

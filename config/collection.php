@@ -1467,10 +1467,201 @@ return [
 
 
 
-      ######
+      #Patologías VIH - patologias_vih
 
-      #Patologías VIH -
-         #Primer Bloque
+         #Primer bloque
+      'fecha_ingreso_unacess_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_unacess',
+            'id' => 'fecha_ingreso_unacess',
+            'name' => 'fecha_ingreso_unacess',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'fecha_ingreso_control_unidad_alto_riesgo_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_unidad_alto_riesgo',
+            'name' => 'fecha_ingreso_control_unidad_alto_riesgo',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      #Este caso es asi-> _vih_vih
+      'fecha_ingreso_control_centro_atencion_vih_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_centro_atencion_vih',
+            'name' => 'fecha_ingreso_control_centro_atencion_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'fecha_ingreso_control_otras_especialidades_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_otras_especialidades',
+            'name' => 'fecha_ingreso_control_otras_especialidades',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+      'fecha_ingreso_control_otras_especialidades_otro_vih' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'fecha_ingreso_control_otras_especialidades_otro',
+            'name' => 'fecha_ingreso_control_otras_especialidades_otro',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ]
+      ],
+      'estado_civil_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_civil',
+            'name' => 'estado_civil',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'tipo_de_convivencia_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tipo_de_convivencia',
+            'name' => 'tipo_de_convivencia',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'escolaridad_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'escolaridad',
+            'name' => 'escolaridad',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'anos_estudio_vih' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'anos_estudio',
+            'name' => 'anos_estudio',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'residencia_gestante_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'residencia_gestante',
+            'name' => 'residencia_gestante',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ],
+      ],
+
+         #Segundo bloque
       'vih_conocido_previa_embarazo' => [
          'directivas' => [
             'type' => 'select',
@@ -1486,6 +1677,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
@@ -1503,6 +1697,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'adicciones' => [
@@ -1520,8 +1717,12 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
+
       'pareja_vih_positivo' => [
          'directivas' => [
             'type' => 'select',
@@ -1537,8 +1738,73 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih',
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ],
       ],
+      #Hacer el bind v-model con el que no tiene prefijo _vih
+      'numero_contactos_sexuales_declarados_vih' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_contactos_sexuales_declarados',
+            'name' => 'numero_contactos_sexuales_declarados',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+      'numero_contactos_sexuales_estudiados_vih' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_contactos_sexuales_estudiados',
+            'name' => 'numero_contactos_sexuales_estudiados',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+      'numero_contactos_sexuales_tratados_vih' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'numero_contactos_sexuales_tratados',
+            'name' => 'numero_contactos_sexuales_tratados',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
+
          #Segundo Bloque
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
          'directivas' => [
