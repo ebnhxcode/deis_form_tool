@@ -37,6 +37,11 @@ return [
 
    'deis_form_table_options' => [
 
+      'embarazo_con_control_parental' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
       'codigo_establecimiento_control_prenatal_embarazo' => [
          'Publico'=>'Publico',
          'Privado'=>'Privado',
@@ -49,12 +54,22 @@ return [
          '100025'=>'HOSPITAL SAN JUAN DE DIOS',
       ],
 
+      'acepta_rechaza_toma_examen_vih' => [
+         'Acepta' => 'Acepta',
+         'Rechaza' => 'Rechaza',
+      ],
+
       'resultado_final_isp_examen_vih' => [
          'Positivo' => 'Positivo',
          'Negativo' => 'Negativo',
          'Registra Muestra Anterior' => 'Registra Muestra Anterior',
          'Pendiente' => 'Pendiente',
          'No Realizado' => 'No Realizado',
+      ],
+
+      'derivada_a_especialidades_embarazo' => [
+         'Si' => 'Si',
+         'No' => 'No',
       ],
 
       'estado_civil' => [
@@ -153,21 +168,62 @@ return [
          'Atazanavir' => 'Atazanavir',
          'Fosamprenavir' => 'Fosamprenavir',
          'Liponavir / Ritonavir' => 'Liponavir / Ritonavir',
-         'Saquinavir + Ritonavir' => '',
+         'Saquinavir + Ritonavir' => 'Saquinavir + Ritonavir',
          'Raltegravir' => 'Raltegravir',
          'Otro' => 'Otro',
       ],
 
+      'lugar_atencion_parto' => [
+         '100025'=>'HOSPITAL SAN JUAN DE DIOS',
+      ],
+
+      'codigo_establecimiento' => [
+         'Publico' => 'Publico',
+         'Privado' => 'Privado',
+         'Otro' => 'Otro',
+      ],
+
+
+      'tipo_parto' => [
+         'Simple' => 'Simple',
+         'Doble' => 'Doble',
+         'Triple' => 'Triple',
+         'Otro' => 'Otro',
+         'Ignorado' => 'Ignorado',
+      ],
+
+
+      'via_parto' => [
+         'Parto Vaginal' => 'Parto Vaginal',
+         'Parto Cesarea' => 'Parto Cesarea',
+      ],
+
+
+      'resultado_vdrl_parto' => [
+         'No Reactivo' => 'No Reactivo',
+         'Reactivo' => 'Reactivo',
+         'No Realizado' => 'No Realizado',
+      ],
 
       '' => [
          '' => '',
       ],
 
+      '' => [
+         '' => '',
+      ],
 
       '' => [
          '' => '',
       ],
 
+      '' => [
+         '' => '',
+      ],
+
+      '' => [
+         '' => '',
+      ],
 
    ]
 

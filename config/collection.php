@@ -546,7 +546,7 @@ return [
       ],
       'resultado_1_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_1_vdrl_embarazo',
             'name' => 'resultado_1_vdrl_embarazo',
             'value' => '',
@@ -564,7 +564,7 @@ return [
       ],
       'resultado_dilucion_1_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_dilucion_1_vdrl_embarazo',
             'name' => 'resultado_dilucion_1_vdrl_embarazo',
             'value' => '',
@@ -619,7 +619,7 @@ return [
       ],
       'resultado_2_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_2_vdrl_embarazo',
             'name' => 'resultado_2_vdrl_embarazo',
             'value' => '',
@@ -637,7 +637,7 @@ return [
       ],
       'resultado_dilucion_2_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_dilucion_2_vdrl_embarazo',
             'name' => 'resultado_dilucion_2_vdrl_embarazo',
             'value' => '',
@@ -671,6 +671,7 @@ return [
             'nombre' => 'control_embarazo'
          ]
       ],
+
       'fecha_3_vdrl_embarazo' => [
          'directivas' => [
             'type' => 'date',
@@ -691,7 +692,7 @@ return [
       ],
       'resultado_3_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_3_vdrl_embarazo',
             'name' => 'resultado_3_vdrl_embarazo',
             'value' => '',
@@ -709,7 +710,7 @@ return [
       ],
       'resultado_dilucion_3_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_dilucion_3_vdrl_embarazo',
             'name' => 'resultado_dilucion_3_vdrl_embarazo',
             'value' => '',
@@ -809,7 +810,7 @@ return [
       ],
       'resultado_1_examen_vih_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_1_examen_vih_embarazo',
             'name' => 'resultado_1_examen_vih_embarazo',
             'value' => '',
@@ -872,7 +873,7 @@ return [
       ],
       'resultado_2_examen_vih_embarazo' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_2_examen_vih_embarazo',
             'name' => 'resultado_2_examen_vih_embarazo',
             'value' => '',
@@ -4066,6 +4067,7 @@ return [
       'fecha_1_vdrl_embarazo' => [
          'text' => 'Fecha 1º VDRL de este embarazo',
          'tag' => 'Examenes detección de sífilis',
+         'subtag' => 'Examen 1',
       ],
       'resultado_1_vdrl_embarazo' => [
          'text' => 'Resultado 1º VDRL  en este embarazo',
@@ -4078,6 +4080,7 @@ return [
       ],
       'fecha_2_vdrl_embarazo' => [
          'text' => 'Fecha 2º VDRL de este embarazo',
+         'subtag' => 'Examen 2',
       ],
       'resultado_2_vdrl_embarazo' => [
          'text' => 'Resultado 2º VDRL   en este embarazo',
@@ -4090,6 +4093,7 @@ return [
       ],
       'fecha_3_vdrl_embarazo' => [
          'text' => 'Fecha 3º VDRL de este embarazo',
+         'subtag' => 'Examen 3',
       ],
       'resultado_3_vdrl_embarazo' => [
          'text' => 'Resultado 3º VDRL   en este embarazo',

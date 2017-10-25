@@ -129,9 +129,14 @@
                                              <h3>
                                                 @{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}
                                              </h3>
-                                             <hr>
+                                             <br>
                                           </div>
 
+                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].subtag" class="col-md-12">
+                                             <h4>
+                                                @{{ labels[i.directivas.id].subtag ? labels[i.directivas.id].subtag : '' }}
+                                             </h4>
+                                          </div>
 
 
                                           <div :class="i.class_custom ? i.class_custom.class : 'col-xs-6 col-sm-6 col-md-6'">
