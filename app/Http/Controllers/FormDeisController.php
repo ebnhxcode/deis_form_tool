@@ -18,6 +18,7 @@ class FormDeisController extends Controller {
         $returnData['labels'] = config('collection.deis_form_table_labels');
         $returnData['instructions'] = config('collection.deis_form_instructions');
         $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
+        $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
         if ($request->wantsJson()) {
             return response()->json($returnData);
         }

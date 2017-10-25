@@ -3448,7 +3448,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'resultado_1_examen_pcr_recien_nacido' => [
          'directivas' => [
             'type' => 'select',
@@ -3467,7 +3466,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'fecha_2_examen_pcr_recien_nacido' => [
          'directivas' => [
             'type' => 'date',
@@ -3486,7 +3484,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'resultado_2_examen_pcr_recien_nacido' => [
          'directivas' => [
             'type' => 'select',
@@ -3505,7 +3502,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'fecha_3_examen_pcr_recien_nacido' => [
          'directivas' => [
             'type' => 'date',
@@ -3524,7 +3520,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'resultado_3_examen_pcr_recien_nacido' => [
          'directivas' => [
             'type' => 'select',
@@ -3543,7 +3538,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'diagnostico_final_vih_isp_recien_nacido' => [
          'directivas' => [
             'type' => 'select',
@@ -3565,7 +3559,6 @@ return [
             'class' => 'col-md-12'
          ]
       ],
-
       'fecha_test_elisa_18_meses' => [
          'directivas' => [
             'type' => 'date',
@@ -3584,7 +3577,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
       'resultado_test_elisa_18_meses' => [
          'directivas' => [
             'type' => 'text',
@@ -3601,6 +3593,200 @@ return [
          ],
          'seccion' => [
             'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+         #Quinta Parte
+
+      'derivacion_recien_nacido_a_seguimiento' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'derivacion_recien_nacido_a_seguimiento',
+            'name' => 'derivacion_recien_nacido_a_seguimiento',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'lugar_derivacion_recien_nacido_a_seguimiento' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'lugar_derivacion_recien_nacido_a_seguimiento',
+            'name' => 'lugar_derivacion_recien_nacido_a_seguimiento',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'fecha_ingreso_control_recien_nacido_post_nacimiento' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_recien_nacido_post_nacimiento',
+            'name' => 'fecha_ingreso_control_recien_nacido_post_nacimiento',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'estado_seguimiento_mes' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_seguimiento_mes',
+            'name' => 'estado_seguimiento_mes',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'estado_seguimiento_3_meses' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_seguimiento_3_meses',
+            'name' => 'estado_seguimiento_3_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'estado_seguimiento_6_meses' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_seguimiento_6_meses',
+            'name' => 'estado_seguimiento_6_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'estado_seguimiento_12_meses' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_seguimiento_12_meses',
+            'name' => 'estado_seguimiento_12_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-6 col-md-6'
+         ]
+      ],
+      'estado_seguimiento_18_meses' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_seguimiento_18_meses',
+            'name' => 'estado_seguimiento_18_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-6 col-md-6'
+         ]
+      ],
+      'mujer_continua_tratamiento_antiretroviral' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'mujer_continua_tratamiento_antiretroviral',
+            'name' => 'mujer_continua_tratamiento_antiretroviral',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido',
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
          ]
       ],
 
@@ -3719,62 +3905,9 @@ return [
 
 
 
-      'derivacion_recien_nacido_a_seguimiento' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'derivacion_recien_nacido_a_seguimiento',
-            'name' => 'derivacion_recien_nacido_a_seguimiento',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'lugar_derivacion_recien_nacido_a_seguimiento' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'lugar_derivacion_recien_nacido_a_seguimiento',
-            'name' => 'lugar_derivacion_recien_nacido_a_seguimiento',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'fecha_ingreso_control_recien_nacido_post_nacimiento' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_recien_nacido_post_nacimiento',
-            'name' => 'fecha_ingreso_control_recien_nacido_post_nacimiento',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
+
 
       'diagnostico_final_sifilis_recien_nacido' => [
          'directivas' => [
@@ -3795,122 +3928,9 @@ return [
          ]
       ],
 
-      'estado_seguimiento_mes' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_seguimiento_mes',
-            'name' => 'estado_seguimiento_mes',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'estado_seguimiento_3_meses' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_seguimiento_3_meses',
-            'name' => 'estado_seguimiento_3_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'estado_seguimiento_6_meses' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_seguimiento_6_meses',
-            'name' => 'estado_seguimiento_6_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'estado_seguimiento_12_meses' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_seguimiento_12_meses',
-            'name' => 'estado_seguimiento_12_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'estado_seguimiento_18_meses' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_seguimiento_18_meses',
-            'name' => 'estado_seguimiento_18_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
 
 
-
-      'mujer_continua_tratamiento_antiretroviral' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'mujer_continua_tratamiento_antiretroviral',
-            'name' => 'mujer_continua_tratamiento_antiretroviral',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => '',
-         ]
-      ],
 
 
 
@@ -4398,6 +4418,7 @@ return [
       ],
       'derivacion_recien_nacido_a_seguimiento' => [
          'text' => 'Derivación del recien nacido a seguimiento',
+         'tag' => 'Seguimiento niño expuesto',
       ],
       'lugar_derivacion_recien_nacido_a_seguimiento' => [
          'text' => 'Lugar de derivación del recien nacido a seguimiento',
@@ -4442,5 +4463,7 @@ return [
          'text' => 'Fecha administración última dosis penicilina gestante',
       ],
    ],
+
+
 
 ];

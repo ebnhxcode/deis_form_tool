@@ -33,6 +33,18 @@ return [
          'description' => 'Datos recién nacido',
          'class' => '',
       ],
+   ],
+
+   'deis_form_table_options' => [
+
+      'codigo_establecimiento_control_prenatal_embarazo' => [
+         'Privado'=>'Privado',
+         'Mixto'=>'Mixto',
+         'Otro'=>'Otro',
+         'Desconocido'=>'Desconocido',
+      ]
+
    ]
+
 
 ];
