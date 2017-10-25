@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/LogNavegacionController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/LogNavegacion.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2017_10_25_140113_create_log_navegacions_table.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,16 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FormDeisController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -168,8 +156,8 @@
       <file leaf-file-name="2017_10_20_183605_create_form_deis_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38165137">
-              <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.08798646">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -197,16 +185,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="draw.dat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/draw.dat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -244,6 +222,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+        <option value="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -265,8 +245,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="8" />
-    <option name="width" value="1328" />
-    <option name="height" value="715" />
+    <option name="width" value="1360" />
+    <option name="height" value="761" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -629,6 +609,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Providers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -692,7 +690,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///var/www/html/deis_form_tool/resources/assets/js/app/api/controllers/FormularioController.js&#10;0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php&#9;FILE&#9;file:///var/www/html/deis_form_tool/storage/framework/views/0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php&#10;FormDeisController&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/Controllers/FormDeisController.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///var/www/html/deis_form_tool/vendor/composer/autoload_classmap.php&#10;0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php&#9;FILE&#9;file:///var/www/html/deis_form_tool/storage/framework/views/0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php&#10;FormDeisController&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/Controllers/FormDeisController.php" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
@@ -745,11 +743,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="8" width="1328" height="715" extended-state="6" />
+    <frame x="0" y="8" width="1360" height="761" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17771085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17352942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -810,121 +808,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding>
-            <element signature="e#8686#9057#0" expanded="false" />
-            <element signature="e#9076#9435#0" expanded="false" />
-            <element signature="e#10923#11186#0" expanded="false" />
-            <marker date="1508928263496" expanded="true" signature="9627:9886" placeholder="..." />
-            <marker date="1508928263496" expanded="true" signature="10149:10309" placeholder="..." />
-            <marker date="1508928263496" expanded="true" signature="10600:10760" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1077" column="22" selection-start-line="1077" selection-start-column="22" selection-end-line="1077" selection-end-column="22" />
-          <folding>
-            <element signature="e#6928#7345#1#PHP" expanded="false" />
-            <element signature="e#7380#7861#1#PHP" expanded="false" />
-            <element signature="e#7889#8398#1#PHP" expanded="false" />
-            <element signature="e#8433#8958#1#PHP" expanded="false" />
-            <element signature="e#8994#9521#1#PHP" expanded="false" />
-            <element signature="e#9557#10084#1#PHP" expanded="false" />
-            <element signature="e#10110#10619#1#PHP" expanded="false" />
-            <element signature="e#10644#11151#1#PHP" expanded="false" />
-            <element signature="e#11182#11701#1#PHP" expanded="false" />
-            <element signature="e#11829#12368#1#PHP" expanded="false" />
-            <element signature="e#12421#12978#1#PHP" expanded="false" />
-            <element signature="e#13010#13527#1#PHP" expanded="false" />
-            <element signature="e#13303#13355#1#PHP" expanded="false" />
-            <element signature="e#13582#14145#1#PHP" expanded="false" />
-            <element signature="e#14207#14784#1#PHP" expanded="false" />
-            <element signature="e#14820#15345#1#PHP" expanded="false" />
-            <element signature="e#15386#15912#1#PHP" expanded="false" />
-            <element signature="e#15985#16422#1#PHP" expanded="false" />
-            <element signature="e#16461#16908#1#PHP" expanded="false" />
-            <element signature="e#16956#17422#1#PHP" expanded="false" />
-            <element signature="e#17454#17887#1#PHP" expanded="false" />
-            <element signature="e#17923#18360#1#PHP" expanded="false" />
-            <element signature="e#18399#18846#1#PHP" expanded="false" />
-            <element signature="e#18894#19359#1#PHP" expanded="false" />
-            <element signature="e#19391#19824#1#PHP" expanded="false" />
-            <element signature="e#19859#20296#1#PHP" expanded="false" />
-            <element signature="e#20335#20782#1#PHP" expanded="false" />
-            <element signature="e#20830#21295#1#PHP" expanded="false" />
-            <element signature="e#21327#21760#1#PHP" expanded="false" />
-            <element signature="e#21822#22391#1#PHP" expanded="false" />
-            <element signature="e#22473#23006#1#PHP" expanded="false" />
-            <element signature="e#23047#23580#1#PHP" expanded="false" />
-            <element signature="e#23625#24168#1#PHP" expanded="false" />
-            <element signature="e#24197#24708#1#PHP" expanded="false" />
-            <element signature="e#24749#25282#1#PHP" expanded="false" />
-            <element signature="e#25327#25870#1#PHP" expanded="false" />
-            <element signature="e#25899#26410#1#PHP" expanded="false" />
-            <element signature="e#26460#26927#1#PHP" expanded="false" />
-            <element signature="e#26971#27428#1#PHP" expanded="false" />
-            <element signature="e#27514#27979#1#PHP" expanded="false" />
-            <element signature="e#28088#28572#1#PHP" expanded="false" />
-            <element signature="e#28626#29103#1#PHP" expanded="false" />
-            <element signature="e#29158#29637#1#PHP" expanded="false" />
-            <element signature="e#29693#30174#1#PHP" expanded="false" />
-            <element signature="e#30235#30802#1#PHP" expanded="false" />
-            <element signature="e#30853#31360#1#PHP" expanded="false" />
-            <element signature="e#31393#31914#1#PHP" expanded="false" />
-            <element signature="e#31939#32444#1#PHP" expanded="false" />
-            <element signature="e#32470#32977#1#PHP" expanded="false" />
-            <element signature="e#33010#33524#1#PHP" expanded="false" />
-            <element signature="e#33592#34136#1#PHP" expanded="false" />
-            <element signature="e#34182#34730#1#PHP" expanded="false" />
-            <element signature="e#34768#35300#1#PHP" expanded="false" />
-            <element signature="e#35337#35867#1#PHP" expanded="false" />
-            <element signature="e#35908#36446#1#PHP" expanded="false" />
-            <element signature="e#36484#37016#1#PHP" expanded="false" />
-            <element signature="e#37078#37608#1#PHP" expanded="false" />
-            <element signature="e#37643#38169#1#PHP" expanded="false" />
-            <element signature="e#38211#38751#1#PHP" expanded="false" />
-            <element signature="e#38858#39396#1#PHP" expanded="false" />
-            <element signature="e#39435#39969#1#PHP" expanded="false" />
-            <element signature="e#40013#40557#1#PHP" expanded="false" />
-            <element signature="e#40697#41192#1#PHP" expanded="false" />
-            <element signature="e#41256#41755#1#PHP" expanded="false" />
-            <element signature="e#41806#42362#1#PHP" expanded="false" />
-            <element signature="e#42412#42968#1#PHP" expanded="false" />
-            <element signature="e#43016#43568#1#PHP" expanded="false" />
-            <element signature="e#43674#44154#1#PHP" expanded="false" />
-            <element signature="e#44212#44685#1#PHP" expanded="false" />
-            <element signature="e#44779#45254#1#PHP" expanded="false" />
-            <element signature="e#45314#45791#1#PHP" expanded="false" />
-            <element signature="e#45856#46419#1#PHP" expanded="false" />
-            <element signature="e#46449#46952#1#PHP" expanded="false" />
-            <element signature="e#46989#47506#1#PHP" expanded="false" />
-            <element signature="e#47535#48036#1#PHP" expanded="false" />
-            <element signature="e#48066#48569#1#PHP" expanded="false" />
-            <element signature="e#48606#49116#1#PHP" expanded="false" />
-            <element signature="e#49184#49720#1#PHP" expanded="false" />
-            <element signature="e#49772#50325#1#PHP" expanded="false" />
-            <element signature="e#50349#50848#1#PHP" expanded="false" />
-            <element signature="e#50882#51394#1#PHP" expanded="false" />
-            <element signature="e#51510#52062#1#PHP" expanded="false" />
-            <element signature="e#52116#52668#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/draw.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1118,13 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20490368">
           <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7800338">
-          <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1352,18 +1228,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.291228">
+          <caret line="3299" column="97" selection-start-line="3299" selection-start-column="97" selection-end-line="3299" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_25_140649_create_log_navegations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0910683">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18388791">
+          <caret line="323" column="19" selection-start-line="323" selection-start-column="19" selection-end-line="323" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13660245">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22767076">
+          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8161121">
+          <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35194585">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="e#33#71#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38165137">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.08798646">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding />
         </state>
       </provider>
