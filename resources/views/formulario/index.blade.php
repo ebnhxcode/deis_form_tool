@@ -63,13 +63,13 @@
    <div class="{{--container--}}" id="FormularioController">
       <div class="row">
          <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
+            <div class="{{--panel panel-default--}}">
                <div class="panel-heading">
                   Formulario · Informaciones de transmision Vertical de VIH y Sífilis
                   <span class="pull-right">Inicio del formulario</span>
                </div>
 
-               <div class="panel-body">
+               <div class="{{--panel-body--}}">
                   <div class="row">
                      <div class="col-md-12">
 
@@ -149,7 +149,7 @@
                                                         :max-length="i.directivas.max_length"
                                                         :required="i.directivas.required"
                                                         :readonly="i.directivas.readonly"
-                                                        :class="i.directivas.class!=''?i.directivas.class:'form-control input-sm'"
+                                                        :class="i.directivas.class!=''?i.directivas.class:'form-control'"
                                                         :style="i.directivas.style!=''?i.directivas.style:''"
                                                 ></inputs>
                                              </dd>
@@ -158,7 +158,7 @@
                                              <dd v-else-if="inputInArray(i,inputTypes.select)">
                                                 <select :name="i.directivas.name"
                                                         :id="i.directivas.id"
-                                                        class="form-control input-sm">
+                                                        class="form-control">
 
                                                    <option value="0">0</option>
                                                    <option value="1">1</option>
@@ -172,7 +172,7 @@
 
                                              <textarea :name="i.directivas.name"
                                                        :id="i.directivas.id"
-                                                       class="form-control input-sm">
+                                                       class="form-control">
                                              </textarea>
 
                                              </dd>
@@ -180,7 +180,6 @@
                                              <dd v-else>
                                                 Sin Campos
                                              </dd>
-                                             <br>
                                              <br>
                                           </div><!-- .col-md-* -->
                                        </div>

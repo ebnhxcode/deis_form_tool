@@ -3070,6 +3070,8 @@ return [
          ]
       ],
 
+
+         #Tercera Parte
       'tratamiento_recien_nacido_farmaco' => [
          'directivas' => [
             'type' => 'select',
@@ -3133,6 +3135,475 @@ return [
             'class' => 'col-sm-4 col-md-4'
          ]
       ],
+      'fecha_examen_treponemico_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_examen_treponemico_recien_nacido',
+            'name' => 'fecha_examen_treponemico_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+      #Hacer el data bind al model por el uso del prefijo para la tab, _datos_recien_nacido
+      'resultado_examen_treponemico_parto_datos_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_examen_treponemico_parto',
+            'name' => 'resultado_examen_treponemico_parto',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+         #Cuarta Parte
+      'sustituto_leche_materna' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'sustituto_leche_materna',
+            'name' => 'sustituto_leche_materna',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'fecha_inicio_sustituto_leche_materna' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_sustituto_leche_materna',
+            'name' => 'fecha_inicio_sustituto_leche_materna',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'hora_inicio_sustituto_leche_materna' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_inicio_sustituto_leche_materna',
+            'name' => 'hora_inicio_sustituto_leche_materna',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'entrega_sustituto_leche_materna_al_alta' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'entrega_sustituto_leche_materna_al_alta',
+            'name' => 'entrega_sustituto_leche_materna_al_alta',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'nombre_farmaco_1_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'nombre_farmaco_1_vih_recien_nacido',
+            'name' => 'nombre_farmaco_1_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'fecha_inicio_farmaco_1_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_farmaco_1_vih_recien_nacido',
+            'name' => 'fecha_inicio_farmaco_1_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'hora_inicio_farmaco_1_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_inicio_farmaco_1_vih_recien_nacido',
+            'name' => 'hora_inicio_farmaco_1_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'dosis_farmaco_1_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'dosis_farmaco_1_vih_recien_nacido',
+            'name' => 'dosis_farmaco_1_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+      'nombre_farmaco_2_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'nombre_farmaco_2_vih_recien_nacido',
+            'name' => 'nombre_farmaco_2_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'fecha_inicio_farmaco_2_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_farmaco_2_vih_recien_nacido',
+            'name' => 'fecha_inicio_farmaco_2_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'hora_inicio_farmaco_2_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_inicio_farmaco_2_vih_recien_nacido',
+            'name' => 'hora_inicio_farmaco_2_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'dosis_farmaco_2_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'dosis_farmaco_2_vih_recien_nacido',
+            'name' => 'dosis_farmaco_2_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+
+
+      'fecha_1_examen_pcr_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_1_examen_pcr_recien_nacido',
+            'name' => 'fecha_1_examen_pcr_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'resultado_1_examen_pcr_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_1_examen_pcr_recien_nacido',
+            'name' => 'resultado_1_examen_pcr_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'fecha_2_examen_pcr_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_2_examen_pcr_recien_nacido',
+            'name' => 'fecha_2_examen_pcr_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'resultado_2_examen_pcr_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_2_examen_pcr_recien_nacido',
+            'name' => 'resultado_2_examen_pcr_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'fecha_3_examen_pcr_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_3_examen_pcr_recien_nacido',
+            'name' => 'fecha_3_examen_pcr_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'resultado_3_examen_pcr_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_3_examen_pcr_recien_nacido',
+            'name' => 'resultado_3_examen_pcr_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'diagnostico_final_vih_isp_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'diagnostico_final_vih_isp_recien_nacido',
+            'name' => 'diagnostico_final_vih_isp_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ]
+      ],
+
+      'fecha_test_elisa_18_meses' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_test_elisa_18_meses',
+            'name' => 'fecha_test_elisa_18_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+      'resultado_test_elisa_18_meses' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'resultado_test_elisa_18_meses',
+            'name' => 'resultado_test_elisa_18_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
 
       ##################################
       #  No vinculados a una seccion   #
@@ -3247,426 +3718,6 @@ return [
       ],
 
 
-
-
-
-      'sustituto_leche_materna' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'sustituto_leche_materna',
-            'name' => 'sustituto_leche_materna',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_inicio_sustituto_leche_materna' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_sustituto_leche_materna',
-            'name' => 'fecha_inicio_sustituto_leche_materna',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'hora_inicio_sustituto_leche_materna' => [
-         'directivas' => [
-            'type' => 'time',
-            'id' => 'hora_inicio_sustituto_leche_materna',
-            'name' => 'hora_inicio_sustituto_leche_materna',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'entrega_sustituto_leche_materna_al_alta' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'entrega_sustituto_leche_materna_al_alta',
-            'name' => 'entrega_sustituto_leche_materna_al_alta',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombre_farmaco_1_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'nombre_farmaco_1_vih_recien_nacido',
-            'name' => 'nombre_farmaco_1_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'dosis_farmaco_1_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'dosis_farmaco_1_vih_recien_nacido',
-            'name' => 'dosis_farmaco_1_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_inicio_farmaco_1_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_farmaco_1_vih_recien_nacido',
-            'name' => 'fecha_inicio_farmaco_1_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'hora_inicio_farmaco_1_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'time',
-            'id' => 'hora_inicio_farmaco_1_vih_recien_nacido',
-            'name' => 'hora_inicio_farmaco_1_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nombre_farmaco_2_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'nombre_farmaco_2_vih_recien_nacido',
-            'name' => 'nombre_farmaco_2_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'dosis_farmaco_2_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'dosis_farmaco_2_vih_recien_nacido',
-            'name' => 'dosis_farmaco_2_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_inicio_farmaco_2_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_farmaco_2_vih_recien_nacido',
-            'name' => 'fecha_inicio_farmaco_2_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'hora_inicio_farmaco_2_vih_recien_nacido' => [
-         'directivas' => [
-            'type' => 'time',
-            'id' => 'hora_inicio_farmaco_2_vih_recien_nacido',
-            'name' => 'hora_inicio_farmaco_2_vih_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_1_examen_pcr_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_1_examen_pcr_recien_nacido',
-            'name' => 'fecha_1_examen_pcr_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_1_examen_pcr_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_1_examen_pcr_recien_nacido',
-            'name' => 'resultado_1_examen_pcr_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_2_examen_pcr_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_2_examen_pcr_recien_nacido',
-            'name' => 'fecha_2_examen_pcr_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_2_examen_pcr_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_2_examen_pcr_recien_nacido',
-            'name' => 'resultado_2_examen_pcr_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_3_examen_pcr_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_3_examen_pcr_recien_nacido',
-            'name' => 'fecha_3_examen_pcr_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_3_examen_pcr_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_3_examen_pcr_recien_nacido',
-            'name' => 'resultado_3_examen_pcr_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'diagnostico_final_vih_isp_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'diagnostico_final_vih_isp_recien_nacido',
-            'name' => 'diagnostico_final_vih_isp_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_test_elisa_18_meses' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_test_elisa_18_meses',
-            'name' => 'fecha_test_elisa_18_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'resultado_test_elisa_18_meses' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'resultado_test_elisa_18_meses',
-            'name' => 'resultado_test_elisa_18_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_examen_treponemico_recien_nacido' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_examen_treponemico_recien_nacido',
-            'name' => 'fecha_examen_treponemico_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'derivacion_recien_nacido_a_seguimiento' => [
          'directivas' => [
@@ -4280,6 +4331,7 @@ return [
       ],
       'sustituto_leche_materna' => [
          'text' => 'Sustituto de Leche Materna',
+         'tag' => 'Examenes VIH',
       ],
       'fecha_inicio_sustituto_leche_materna' => [
          'text' => 'Fecha inicio Sustituto de Leche Materna',
@@ -4333,7 +4385,7 @@ return [
          'text' => 'Resultado  3° exámen de PCR recien nacido',
       ],
       'diagnostico_final_vih_isp_recien_nacido' => [
-         'text' => 'Diagnóstico Final ( VIH)del Instituto de Salud Pública del Recién Nacido',
+         'text' => 'Diagnóstico Final (VIH) del Instituto de Salud Pública del Recién Nacido',
       ],
       'fecha_test_elisa_18_meses' => [
          'text' => 'Fecha Test de Elisa 18 meses edad',
