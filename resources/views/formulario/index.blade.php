@@ -141,6 +141,7 @@
                                                 @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
                                              </dt>
 
+
                                              <!-- Input basicos como text,number,time,date,etc -->
                                              <dd v-if="inputInArray(i,inputTypes.basics)">
                                                 <inputs :name="i.directivas.name"
@@ -160,10 +161,12 @@
                                                         :id="i.directivas.id"
                                                         class="form-control">
 
-                                                   <option value="0">0</option>
-                                                   <option value="1">1</option>
-                                                   <option value="2">2</option>
-                                                   <option value="3">3</option>
+
+                                                   <option value="">Seleccione</option>
+                                                   <option v-for="o in deis_form_table_options[i.directivas.name]" :value="o">
+                                                      @{{ o }}
+                                                   </option>
+
                                                 </select><!-- .form-control -->
                                              </dd>
 

@@ -1191,7 +1191,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-md-3 col-md-3'
          ],
       ],
       'nacidos_muertos_previos_embarazo' => [
@@ -1212,7 +1212,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-md-3 col-md-3'
          ],
       ],
       'abortos_previos_embarazo' => [
@@ -1233,8 +1233,30 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-md-3 col-md-3'
          ],
+      ],
+      #Hacer el bind sin el prefijo _vih
+      'adicciones_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'adicciones',
+            'name' => 'adicciones',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
       ],
       'sifilis_previa_embarazo' => [
          'directivas' => [
@@ -2120,15 +2142,13 @@ return [
       'terapia_antiretroviral_tar_farmaco_3' => [
          'directivas' => [
             'type' => 'select',
-            'select' => [
-               'id' => 'terapia_antiretroviral_tar_farmaco_3',
-               'name' => 'terapia_antiretroviral_tar_farmaco_3',
-               'value' => '',
-               'max_lenght' => '',
-               'required' => '',
-               'class' => '',
-               'style' => '',
-            ],
+            'id' => 'terapia_antiretroviral_tar_farmaco_3',
+            'name' => 'terapia_antiretroviral_tar_farmaco_3',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'

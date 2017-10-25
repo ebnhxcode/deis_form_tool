@@ -36847,12 +36847,14 @@ var FormularioController = new _vue2.default({
          'inputs': [],
          'labels': [],
          'nav_tab_form_deis': [],
+         'deis_form_table_options': [],
 
          'inputTypes': {
             'basics': ['text', 'number', 'email', 'password', 'date', 'time'],
             'select': ['select'],
             'textarea': ['textarea']
          },
+         'tags': ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
 
          'paso1_filtro': true,
          'paso2_confirmar': false,
@@ -37061,9 +37063,9 @@ var FormularioController = new _vue2.default({
          methods: {}
       },
       'inputs': {
-         props: ['name', 'id', 'type', 'max_length', 'required', 'readonly', 'class_custom'],
+         props: ['name', 'id', 'type', 'max_length', 'required', 'readonly', 'class_custom', 'style_custom'],
          'name': 'inputs',
-         'template': '\n            <input :name="name"\n                   :id="id"\n                   :type="type"\n                   :max-lenght="max_lenght"\n                   :required="required"\n                   :readonly="readonly"\n                   :class="class_custom!=\'\'?class_custom:\'form-control\'" />\n         ',
+         'template': '\n            <input :name="name"\n                   :id="id"\n                   :type="type"\n                   :max-lenght="max_lenght"\n                   :required="required"\n                   :readonly="readonly"\n                   :style="style_custom!=\'\'?style_custom:\'\'"\n                   :class="class_custom!=\'\'?class_custom:\'form-control\'" />\n         ',
          data: function data() {},
          ready: function ready() {},
          created: function created() {},
@@ -37137,6 +37139,7 @@ var FormularioController = new _vue2.default({
             _this.labels = response.body.labels;
             _this.instructions = response.body.instructions;
             _this.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            _this.deis_form_table_options = response.body.deis_form_table_options;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
