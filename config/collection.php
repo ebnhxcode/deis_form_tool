@@ -1868,7 +1868,6 @@ return [
             'class' => 'col-md-4 col-md-4'
          ],
       ],
-
       'numero_carga_viral_control_prenatal' => [
          'directivas' => [
             'type' => 'number',
@@ -1890,6 +1889,7 @@ return [
          ],
       ],
 
+      /*
       'carga_viral_numero_copia_ingreso_control_prenatal' => [
          'directivas' => [
             'type' => 'number',
@@ -1909,7 +1909,7 @@ return [
          'seccion' => [
             'nombre' => 'patologias_vih'
          ]
-      ],
+      ],*/
 
       'fecha_examen_carga_viral_semana_34' => [
          'directivas' => [
@@ -1926,9 +1926,11 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
       ],
-
       'carga_viral_numero_copia_semana_34' => [
          'directivas' => [
             'type' => 'date',
@@ -1944,8 +1946,151 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-8 col-md-8'
+         ],
+      ],
+
+         #Cuarto Bloque
+
+
+      'terapia_antiretroviral_farmaco_1' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'terapia_antiretroviral_farmaco_1',
+            'name' => 'terapia_antiretroviral_farmaco_1',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
          ]
       ],
+
+      'fecha_inicio_tar_farmaco_1' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_tar_farmaco_1',
+            'name' => 'fecha_inicio_tar_farmaco_1',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+
+      'terapia_antiretroviral_tar_farmaco_2' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'terapia_antiretroviral_tar_farmaco_2',
+            'name' => 'terapia_antiretroviral_tar_farmaco_2',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+
+      'fecha_inicio_tar_farmaco_2' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_tar_farmaco_2',
+            'name' => 'fecha_inicio_tar_farmaco_2',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+
+      'terapia_antiretroviral_tar_farmaco_3' => [
+         'directivas' => [
+            'type' => 'select',
+            'select' => [
+               'id' => 'terapia_antiretroviral_tar_farmaco_3',
+               'name' => 'terapia_antiretroviral_tar_farmaco_3',
+               'value' => '',
+               'max_lenght' => '',
+               'required' => '',
+               'class' => ''
+            ],
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+
+      'fecha_inicio_tar_farmaco_3' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_inicio_tar_farmaco_3',
+            'name' => 'fecha_inicio_tar_farmaco_3',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ]
+      ],
+
+      'terapia_antiretroviral_tar_farmaco_3_otro' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'terapia_antiretroviral_tar_farmaco_3_otro',
+            'name' => 'terapia_antiretroviral_tar_farmaco_3_otro',
+            'value' => '',
+            'max_lenght' => '',
+            'required' => '',
+            'class' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ]
+
+      ],
+
+
+
+
+
 
 
       ##################################
@@ -2033,97 +2178,8 @@ return [
 
 
 
-      'terapia_antiretroviral_farmaco_1' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'terapia_antiretroviral_farmaco_1',
-            'name' => 'terapia_antiretroviral_farmaco_1',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'fecha_inicio_tar_farmaco_1' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_tar_farmaco_1',
-            'name' => 'fecha_inicio_tar_farmaco_1',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'terapia_antiretroviral_tar_farmaco_2' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'terapia_antiretroviral_tar_farmaco_2',
-            'name' => 'terapia_antiretroviral_tar_farmaco_2',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'fecha_inicio_tar_farmaco_2' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_tar_farmaco_2',
-            'name' => 'fecha_inicio_tar_farmaco_2',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'terapia_antiretroviral_tar_farmaco_3' => [
-         'directivas' => [
-            'type' => 'select',
-            'select' => [
-               'id' => 'terapia_antiretroviral_tar_farmaco_3',
-               'name' => 'terapia_antiretroviral_tar_farmaco_3',
-               'value' => '',
-               'max_lenght' => '',
-               'required' => '',
-               'class' => ''
-            ],
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
+      /* Este estaba duplicado
       'terapia_antiretroviral_tar_farmaco_3' => [
          'directivas' => [
             'type' => 'select',
@@ -2140,43 +2196,9 @@ return [
          'seccion' => [
             'nombre' => ''
          ]
-      ],
+      ],*/
 
-      'terapia_antiretroviral_tar_farmaco_3_otro' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'terapia_antiretroviral_tar_farmaco_3_otro',
-            'name' => 'terapia_antiretroviral_tar_farmaco_3_otro',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
-      'fecha_inicio_tar_farmaco_3' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_inicio_tar_farmaco_3',
-            'name' => 'fecha_inicio_tar_farmaco_3',
-            'value' => '',
-            'max_lenght' => '',
-            'required' => '',
-            'class' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
 
 
@@ -3769,37 +3791,37 @@ return [
          'text' => 'Otro',
       ],
       'terapia_antiretroviral_farmaco_1' => [
-         'text' => 'Terapia Antiretroviral ingreso al control prenatal de este embarazo. Fármaco 1',
+         'text' => 'Fármaco 1',
       ],
       'fecha_inicio_tar_farmaco_1' => [
-         'text' => 'Fecha de Inicio de Terapia Antiretroviral (TAR)  al ingreso al control prenatal de este embarazo. Fármaco 1',
+         'text' => 'Fecha de Inicio Fármaco 1',
       ],
       'terapia_antiretroviral_tar_farmaco_2' => [
-         'text' => 'Terapia Antiretroviral (TAR)  al ingreso al control prenatal de este embarazo. Fármaco 2',
+         'text' => 'Fármaco 2',
       ],
       'fecha_inicio_tar_farmaco_2' => [
-         'text' => 'Fecha de Inicio de Terapia Antiretroviral (TAR)  al ingreso al control prenatal de este embarazo. Fármaco 2',
+         'text' => 'Fecha de Inicio Fármaco 2',
       ],
       'terapia_antiretroviral_tar_farmaco_3' => [
-         'text' => 'Terapia Antiretroviral (TAR)  al ingreso al control prenatal de este embarazo. Fármaco 3',
+         'text' => 'Fármaco 3',
       ],
       'terapia_antiretroviral_tar_farmaco_3_otro' => [
-         'text' => 'Otro Fármaco 3',
+         'text' => 'Otro Fármaco, ¿Cual otro?',
       ],
       'fecha_inicio_tar_farmaco_3' => [
-         'text' => 'Fecha de Inicio de Terapia Antiretroviral (TAR)  al ingreso al control prenatal de este embarazo. Fármaco 3',
+         'text' => 'Fecha de Inicio Fármaco 3',
       ],
       'numero_cd4_ingreso_control_prenatal' => [
          'text' => 'Resultado CD4',
       ],
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal' => [
-         'text' => 'Fecha de Examen de Linfocitos CD4, al ingreso de éste  control prenatal',
+         'text' => 'Fecha de Examen de Linfocitos CD4',
       ],
       'carga_viral_numero_copia_ingreso_control_prenatal' => [
          'text' => 'Carga Viral . Número de copia al ingreso de éste control prenatal',
       ],
       'fecha_examen_carga_viral_control_prenatal' => [
-         'text' => 'Fecha de Examen de Carga Viral, al ingreso de éste  control prenatal',
+         'text' => 'Fecha de Examen de Carga Viral',
       ],
       'numero_carga_viral_control_prenatal' => [
          'text' => 'Resultado Carga Viral',
