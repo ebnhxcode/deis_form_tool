@@ -184,11 +184,30 @@ return [
          'Otro' => 'Otro',
       ],
 
+
+
+      'vih_conocido_previa_embarazo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+         'Desconocido' => 'Desconocido',
+      ],
+
+      'pareja_vih_positivo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+         'Desconocido' => 'Desconocido',
+      ],
+
+      'via_parto' => [
+         'Parto Vaginal' => 'Parto Vaginal',
+         'Parto Cesarea' => 'Parto Cesarea',
+      ],
+
       'lugar_atencion_parto' => [
          '100025'=>'HOSPITAL SAN JUAN DE DIOS',
       ],
 
-      'codigo_establecimiento' => [
+      'tipo_establecimiento' => [
          'Publico' => 'Publico',
          'Privado' => 'Privado',
          'Otro' => 'Otro',
@@ -204,28 +223,61 @@ return [
       ],
 
 
-      'via_parto' => [
-         'Parto Vaginal' => 'Parto Vaginal',
-         'Parto Cesarea' => 'Parto Cesarea',
-      ],
-
-
       'resultado_vdrl_parto' => [
          'No Reactivo' => 'No Reactivo',
          'Reactivo' => 'Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
-      'vih_conocido_previa_embarazo' => [
-         'Si' => 'Si',
-         'No' => 'No',
-         'Desconocido' => 'Desconocido',
+
+      'resultado_dilucion_vdrl_parto' => [
+         '1:2' => '1:2',
+         '1:4' => '1:4',
+         '1:8' => '1:8',
+         '1:16' => '1:16',
+         '1:64' => '1:64',
+         '1:128' => '1:128',
+         '1:256' => '1:256',
       ],
 
-      'pareja_vih_positivo' => [
+      'resultado_examen_treponemico_parto' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'tratamiento_sifilis_parto' => [
          'Si' => 'Si',
          'No' => 'No',
-         'Desconocido' => 'Desconocido',
+      ],
+
+      'resultado_examen_vih_parto' => [
+         'No Reactivo' => 'No Reactivo',
+         'Reactivo' => 'Reactivo',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'tratamiento_retroviral_parto' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
+      'nombre_farmaco_1_vih' => [
+         'Zidovudina (AZT)' => 'Zidovudina (AZT)',
+      ],
+
+      'nombre_farmaco_2_vih' => [
+         'Nevirapina' => 'Nevirapina',
+      ],
+
+      'nombre_farmaco_suspencion_lactancia' => [
+         'Cabergolina' => 'Cabergolina',
+         'Bromocriptina' => 'Bromocriptina',
+      ],
+
+
+      '' => [
+         '' => '',
       ],
 
       '' => [

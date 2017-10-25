@@ -4252,7 +4252,7 @@ return [
       ],
       'resultado_vdrl_parto' => [
          'text' => 'Resultado VDRL',
-         'tag' => 'Examenes de sífilis durante el parto',
+         'subtag' => 'Examenes de sífilis durante el parto',
       ],
       'resultado_dilucion_vdrl_parto' => [
          'text' => 'Resultado Titulado (Dilución)',
@@ -4265,7 +4265,7 @@ return [
       ],
       'resultado_examen_vih_parto' => [
          'text' => 'Resultado Examen VIH Parto',
-         'tag' => 'Examenes de vih durante el parto',
+         'subtag' => 'Examenes de vih durante el parto',
       ],
       'tratamiento_retroviral_parto' => [
          'text' => 'Tratamiento antiretroviral al parto',
