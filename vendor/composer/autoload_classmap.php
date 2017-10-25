@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CreateFormDeisTable' => $baseDir . '/database/migrations/2017_10_20_183605_create_form_deis_table.php',
-    'CreateLogNavegacionsTable' => $baseDir . '/database/migrations/2017_10_25_140113_create_log_navegacions_table.php',
+    'CreateLogNavegationsTable' => $baseDir . '/database/migrations/2017_10_25_140649_create_log_navegations_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

@@ -14,6 +14,7 @@ class CreateFormDeisTable extends Migration
     public function up () {
         Schema::create('form_deis', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('estado_registro')->nullable(true);#Para prevenir doble modificacion
             $table->string('nombres_madre')->nullable(true);
             $table->string('primer_apellido_madre')->nullable(true);
             $table->string('segundo_apellido_madre')->nullable(true);
