@@ -238,7 +238,7 @@ return [
             'nombre' => 'identificacion_mujer'
          ],
          'class_custom' => [
-            'class' => 'col-md-6'
+            'class' => 'col-sm-6 col-md-6'
          ]
       ],
       'primer_apellido_madre' => [
@@ -258,7 +258,7 @@ return [
             'nombre' => 'identificacion_mujer'
          ],
          'class_custom' => [
-            'class' => 'col-md-3'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'segundo_apellido_madre' => [
@@ -278,7 +278,7 @@ return [
             'nombre' => 'identificacion_mujer'
          ],
          'class_custom' => [
-            'class' => 'col-md-3'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_nacimiento_madre' => [
@@ -296,6 +296,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'nacionalidad' => [
@@ -313,6 +316,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'pais_origen' => [
@@ -330,6 +336,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'pueblos_indigenas' => [
@@ -347,6 +356,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 

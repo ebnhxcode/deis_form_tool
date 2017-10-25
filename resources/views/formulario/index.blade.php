@@ -128,7 +128,7 @@
 
                                              <!-- Etiquetas de los campos -->
                                           <dt class="small">
-                                             @{{ labels[i.directivas.id] ? labels[i.directivas.id].text:'Sin Etiqueta' }}
+                                             @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
                                           </dt>
 
                                           <!-- Input basicos como text,number,time,date,etc -->
