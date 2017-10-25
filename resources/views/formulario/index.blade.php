@@ -166,7 +166,7 @@
                                           <br>
                                        </div><!-- .col-md-* -->
 
-                                       <div class="col-xs-6 col-sm-6 col-md-6">
+                                       <div class="col-xs-12 col-sm-12 col-md-12">
                                           <dt>
                                              Guardar
                                           </dt>

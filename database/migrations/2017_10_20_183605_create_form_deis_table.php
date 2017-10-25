@@ -38,7 +38,7 @@ class CreateFormDeisTable extends Migration
             $table->integer('abortos_previos_embarazo')->nullable(true);
             $table->string('sifilis_previa_embarazo')->nullable(true);
             $table->integer('ano_sifilis_previa_embarazo')->nullable(true);
-            $table->string('otra_ets_previa_embarazo')->nullable(true);
+            $table->string('otra_its_previa_embarazo')->nullable(true);
             $table->string('vih_conocido_previa_embarazo')->nullable(true);
             $table->timestamp('fecha_confirmacion_isp_vih_responde_si')->nullable(true);
             $table->string('adicciones')->nullable(true);

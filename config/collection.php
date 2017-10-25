@@ -34,7 +34,7 @@ return [
       'abortos_previos_embarazo',
       'sifilis_previa_embarazo',
       'ano_sifilis_previa_embarazo',
-      'otra_ets_previa_embarazo',
+      'otra_its_previa_embarazo',
       'vih_conocido_previa_embarazo',
       'fecha_confirmacion_isp_vih_responde_si',
       'adicciones',
@@ -797,6 +797,7 @@ return [
 
 
       #Patologías Sífilis - patologias_sifilis
+         #Primer bloque
       'fecha_ingreso_unacess' => [
          'directivas' => [
             'type' => 'date',
@@ -813,7 +814,6 @@ return [
             'nombre' => 'patologias_sifilis'
          ]
       ],
-
       'fecha_ingreso_control_unidad_alto_riesgo' => [
          'directivas' => [
             'type' => 'date',
@@ -878,10 +878,184 @@ return [
             'nombre' => 'patologias_sifilis'
          ]
       ],
-
-
-
-
+         #Segundo bloque
+      'estado_civil' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'estado_civil',
+            'name' => 'estado_civil',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'tipo_de_convivencia' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'tipo_de_convivencia',
+            'name' => 'tipo_de_convivencia',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'escolaridad' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'escolaridad',
+            'name' => 'escolaridad',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'anos_estudio' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'anos_estudio',
+            'name' => 'anos_estudio',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'residencia_gestante' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'residencia_gestante',
+            'name' => 'residencia_gestante',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+         #Tercer bloque
+      'nacidos_vivos_previos_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'nacidos_vivos_previos_embarazo',
+            'name' => 'nacidos_vivos_previos_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'nacidos_muertos_previos_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'nacidos_muertos_previos_embarazo',
+            'name' => 'nacidos_muertos_previos_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'abortos_previos_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'abortos_previos_embarazo',
+            'name' => 'abortos_previos_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'sifilis_previa_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'sifilis_previa_embarazo',
+            'name' => 'sifilis_previa_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'ano_sifilis_previa_embarazo' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'ano_sifilis_previa_embarazo',
+            'name' => 'ano_sifilis_previa_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
+      'otra_its_previa_embarazo' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'otra_its_previa_embarazo',
+            'name' => 'otra_its_previa_embarazo',
+            'value' => '',
+            'max-lenght' => '',
+            'required' => ''
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ]
+      ],
       ######
 
 
@@ -889,6 +1063,9 @@ return [
 
 
 
+
+      ##################################
+      #  No vinculados a una seccion   #
 
       'region' => [
          'directivas' => [
@@ -960,193 +1137,6 @@ return [
 
 
 
-      'estado_civil' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'estado_civil',
-            'name' => 'estado_civil',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'tipo_de_convivencia' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'tipo_de_convivencia',
-            'name' => 'tipo_de_convivencia',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'escolaridad' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'escolaridad',
-            'name' => 'escolaridad',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'anos_estudio' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'anos_estudio',
-            'name' => 'anos_estudio',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'residencia_gestante' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'residencia_gestante',
-            'name' => 'residencia_gestante',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nacidos_vivos_previos_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'nacidos_vivos_previos_embarazo',
-            'name' => 'nacidos_vivos_previos_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'nacidos_muertos_previos_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'nacidos_muertos_previos_embarazo',
-            'name' => 'nacidos_muertos_previos_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'abortos_previos_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'abortos_previos_embarazo',
-            'name' => 'abortos_previos_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'sifilis_previa_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'sifilis_previa_embarazo',
-            'name' => 'sifilis_previa_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-      'ano_sifilis_previa_embarazo' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'ano_sifilis_previa_embarazo',
-            'name' => 'ano_sifilis_previa_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
-
-
-      'otra_ets_previa_embarazo' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'otra_ets_previa_embarazo',
-            'name' => 'otra_ets_previa_embarazo',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
       'vih_conocido_previa_embarazo' => [
          'directivas' => [
@@ -1182,22 +1172,6 @@ return [
          ]
       ],
 
-      'adicciones' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'adicciones',
-            'name' => 'adicciones',
-            'value' => '',
-            'max-lenght' => '',
-            'required' => ''
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => ''
-         ]
-      ],
 
 
 
@@ -2995,7 +2969,7 @@ return [
       'ano_sifilis_previa_embarazo' => [
          'text' => 'Año Sífilis  Previa a este embarazo  (SI)',
       ],
-      'otra_ets_previa_embarazo' => [
+      'otra_its_previa_embarazo' => [
          'text' => 'Otras ITS  Previa a este embarazo',
       ],
       'vih_conocido_previa_embarazo' => [

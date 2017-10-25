@@ -4,6 +4,7 @@
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collection.php" afterPath="$PROJECT_DIR$/config/collection.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/formulario/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/formulario/index.blade.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-7.0">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
@@ -50,18 +51,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/formulario/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="176" column="63" selection-start-line="176" selection-start-column="63" selection-end-line="176" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inputs.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/formulario/form_partials/inputs.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -70,8 +61,8 @@
       <file leaf-file-name="collection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42307693">
-              <caret line="3121" column="24" selection-start-line="3121" selection-start-column="24" selection-end-line="3121" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.54545456">
+              <caret line="1062" column="0" selection-start-line="1062" selection-start-column="0" selection-end-line="1062" selection-end-column="0" />
               <folding>
                 <element signature="e#404#6518#1#PHP" expanded="false" />
                 <element signature="e#6672#7070#1#PHP" expanded="false" />
@@ -115,18 +106,24 @@
                 <element signature="e#23387#23817#1#PHP" expanded="false" />
                 <element signature="e#23865#24303#1#PHP" expanded="false" />
                 <element signature="e#23892#24142#1#PHP" expanded="false" />
-                <element signature="e#34606#35006#1#PHP" expanded="false" />
+                <element signature="e#24412#24824#1#PHP" expanded="false" />
+                <element signature="e#24878#25328#1#PHP" expanded="false" />
+                <element signature="e#25383#25835#1#PHP" expanded="false" />
+                <element signature="e#25891#26345#1#PHP" expanded="false" />
+                <element signature="e#26406#26870#1#PHP" expanded="false" />
+                <element signature="e#26921#27317#1#PHP" expanded="false" />
+                <element signature="e#27350#27760#1#PHP" expanded="false" />
+                <element signature="e#27785#28179#1#PHP" expanded="false" />
+                <element signature="e#28205#28601#1#PHP" expanded="false" />
+                <element signature="e#28634#29044#1#PHP" expanded="false" />
+                <element signature="e#29112#29544#1#PHP" expanded="false" />
+                <element signature="e#29590#30026#1#PHP" expanded="false" />
+                <element signature="e#30064#30484#1#PHP" expanded="false" />
+                <element signature="e#30521#30939#1#PHP" expanded="false" />
+                <element signature="e#30980#31406#1#PHP" expanded="false" />
+                <element signature="e#31444#31864#1#PHP" expanded="false" />
+                <element signature="e#34546#34946#1#PHP" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormDeis.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/FormDeis.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -134,8 +131,8 @@
       <file leaf-file-name="2017_10_20_183605_create_form_deis_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.884615">
-              <caret line="81" column="75" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="75" />
+            <state vertical-scroll-proportion="-1.3846154">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -161,7 +158,7 @@
       <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.5">
               <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="103" />
               <folding />
             </state>
@@ -205,9 +202,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
         <option value="$PROJECT_DIR$/resources/views/formulario/form_partials/inputs.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/formulario/index.blade.php" />
         <option value="$PROJECT_DIR$/config/collections.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/formulario/index.blade.php" />
         <option value="$PROJECT_DIR$/config/collection.php" />
       </list>
     </option>
@@ -771,7 +768,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -872,7 +869,23 @@
             <element signature="e#23387#23817#1#PHP" expanded="false" />
             <element signature="e#23865#24303#1#PHP" expanded="false" />
             <element signature="e#23892#24142#1#PHP" expanded="false" />
-            <element signature="e#34606#35006#1#PHP" expanded="false" />
+            <element signature="e#24412#24824#1#PHP" expanded="false" />
+            <element signature="e#24878#25328#1#PHP" expanded="false" />
+            <element signature="e#25383#25835#1#PHP" expanded="false" />
+            <element signature="e#25891#26345#1#PHP" expanded="false" />
+            <element signature="e#26406#26870#1#PHP" expanded="false" />
+            <element signature="e#26921#27317#1#PHP" expanded="false" />
+            <element signature="e#27350#27760#1#PHP" expanded="false" />
+            <element signature="e#27785#28179#1#PHP" expanded="false" />
+            <element signature="e#28205#28601#1#PHP" expanded="false" />
+            <element signature="e#28634#29044#1#PHP" expanded="false" />
+            <element signature="e#29112#29544#1#PHP" expanded="false" />
+            <element signature="e#29590#30026#1#PHP" expanded="false" />
+            <element signature="e#30064#30484#1#PHP" expanded="false" />
+            <element signature="e#30521#30939#1#PHP" expanded="false" />
+            <element signature="e#30980#31406#1#PHP" expanded="false" />
+            <element signature="e#31444#31864#1#PHP" expanded="false" />
+            <element signature="e#34546#34946#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1103,7 +1116,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-7.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
@@ -1140,26 +1153,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/formulario/form_partials/inputs.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/formulario/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="63" selection-start-line="176" selection-start-column="63" selection-end-line="176" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/collections.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7163695">
           <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/draw.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/formulario/form_partials/inputs.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1186,34 +1207,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/draw.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.884615">
-          <caret line="81" column="75" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="75" />
+        <state vertical-scroll-proportion="-1.3846154">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/formulario/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42307693">
-          <caret line="3121" column="24" selection-start-line="3121" selection-start-column="24" selection-end-line="3121" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.54545456">
+          <caret line="1062" column="0" selection-start-line="1062" selection-start-column="0" selection-end-line="1062" selection-end-column="0" />
           <folding>
             <element signature="e#404#6518#1#PHP" expanded="false" />
             <element signature="e#6672#7070#1#PHP" expanded="false" />
@@ -1257,7 +1270,23 @@
             <element signature="e#23387#23817#1#PHP" expanded="false" />
             <element signature="e#23865#24303#1#PHP" expanded="false" />
             <element signature="e#23892#24142#1#PHP" expanded="false" />
-            <element signature="e#34606#35006#1#PHP" expanded="false" />
+            <element signature="e#24412#24824#1#PHP" expanded="false" />
+            <element signature="e#24878#25328#1#PHP" expanded="false" />
+            <element signature="e#25383#25835#1#PHP" expanded="false" />
+            <element signature="e#25891#26345#1#PHP" expanded="false" />
+            <element signature="e#26406#26870#1#PHP" expanded="false" />
+            <element signature="e#26921#27317#1#PHP" expanded="false" />
+            <element signature="e#27350#27760#1#PHP" expanded="false" />
+            <element signature="e#27785#28179#1#PHP" expanded="false" />
+            <element signature="e#28205#28601#1#PHP" expanded="false" />
+            <element signature="e#28634#29044#1#PHP" expanded="false" />
+            <element signature="e#29112#29544#1#PHP" expanded="false" />
+            <element signature="e#29590#30026#1#PHP" expanded="false" />
+            <element signature="e#30064#30484#1#PHP" expanded="false" />
+            <element signature="e#30521#30939#1#PHP" expanded="false" />
+            <element signature="e#30980#31406#1#PHP" expanded="false" />
+            <element signature="e#31444#31864#1#PHP" expanded="false" />
+            <element signature="e#34546#34946#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
