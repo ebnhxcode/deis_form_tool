@@ -3471,7 +3471,7 @@ return [
       ],
       'resultado_1_examen_pcr_recien_nacido' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_1_examen_pcr_recien_nacido',
             'name' => 'resultado_1_examen_pcr_recien_nacido',
             'value' => '',
@@ -3507,7 +3507,7 @@ return [
       ],
       'resultado_2_examen_pcr_recien_nacido' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_2_examen_pcr_recien_nacido',
             'name' => 'resultado_2_examen_pcr_recien_nacido',
             'value' => '',
@@ -3543,7 +3543,7 @@ return [
       ],
       'resultado_3_examen_pcr_recien_nacido' => [
          'directivas' => [
-            'type' => 'select',
+            'type' => 'text',
             'id' => 'resultado_3_examen_pcr_recien_nacido',
             'name' => 'resultado_3_examen_pcr_recien_nacido',
             'value' => '',
@@ -3600,7 +3600,7 @@ return [
       ],
       'resultado_test_elisa_18_meses' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_test_elisa_18_meses',
             'name' => 'resultado_test_elisa_18_meses',
             'value' => '',
@@ -3637,7 +3637,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-2 col-md-2'
          ]
       ],
       'lugar_derivacion_recien_nacido_a_seguimiento' => [
@@ -3679,7 +3679,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-6 col-md-6'
          ]
       ],
 
@@ -4441,7 +4441,7 @@ return [
          'text' => 'Fecha Exámen treponémico del Recien Nacido',
       ],
       'derivacion_recien_nacido_a_seguimiento' => [
-         'text' => 'Derivación del recien nacido a seguimiento',
+         'text' => 'Derivación del recien nacido',
          'tag' => 'Seguimiento niño expuesto',
       ],
       'lugar_derivacion_recien_nacido_a_seguimiento' => [

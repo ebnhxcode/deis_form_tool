@@ -144,7 +144,7 @@ return [
          'Penicilina Benzatina' => 'Penicilina Benzatina',
          'Penicilina Sodica' => 'Penicilina Sodica',
          'Penicilina Sodica Mas' => 'Penicilina Sodica Mas',
-         'Otro Ántibiotico' => 'Otro Ántibiotico',
+         'Otro Antibiotico' => 'Otro Antibiotico',
       ],
 
       'tratamiento_sifilis_dosis' => [
@@ -267,7 +267,7 @@ return [
       ],
 
       'nombre_farmaco_2_vih' => [
-         'Nevirapina' => 'Nevirapina',
+         'Nevirapina' => 'Nevirapina (NVP)',
       ],
 
       'nombre_farmaco_suspencion_lactancia' => [
@@ -327,25 +327,126 @@ return [
       ],
 
       'resultado_citoquimico_liq_cefalo_raquideo' => [
-         '' => '',
+         'Normal' => 'Normal',
+         'Alterado' => 'Alterado',
+         'No Realizado' => 'No Realizado',
       ],
 
       'resultado_estudio_placentario' => [
-         '' => '',
+         'Infeccion por Treponema' => 'Infeccion por Treponema',
+         'No Infeccion por Treponema' => 'No Infeccion por Treponema',
+         'No Realizado' => 'No Realizado',
       ],
+
+      'tratamiento_recien_nacido_farmaco' => [
+         'Penicilina Sodica' => 'Penicilina Sodica',
+         'Penicilina Benzatina' => 'Penicilina Benzatina',
+         'Otro Antibiotico' => 'Otro Antibiotico',
+         'No Aplica' => 'No Aplica',
+         'No Administrado' => 'No Administrado',
+      ],
+
+      'resultado_examen_treponemico_parto_datos_recien_nacido' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'sustituto_leche_materna' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
+      'entrega_sustituto_leche_materna_al_alta' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
+      'nombre_farmaco_1_vih_recien_nacido' => [
+         'Zidovudina (AZT)' => 'Zidovudina (AZT)',
+      ],
+
+      'nombre_farmaco_2_vih_recien_nacido' => [
+         'Nevirapina' => 'Nevirapina (NVP)',
+      ],
+
+      'diagnostico_final_vih_isp_recien_nacido' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+      ],
+
+
+
+      'resultado_test_elisa_18_meses' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+
+      'derivacion_recien_nacido_a_seguimiento' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
+
+      'estado_seguimiento_mes' => [
+         'Control' => 'Control',
+         'Alta' => 'Alta',
+         'Abandono' => 'Abandono',
+         'Traslado dentro del pais' => 'Traslado dentro del pais',
+         'Traslado fuera del pais' => 'Traslado fuera del pais',
+      ],
+
+
+      'estado_seguimiento_3_meses' => [
+         'Control' => 'Control',
+         'Alta' => 'Alta',
+         'Abandono' => 'Abandono',
+         'Traslado dentro del pais' => 'Traslado dentro del pais',
+         'Traslado fuera del pais' => 'Traslado fuera del pais',
+      ],
+
+
+      'estado_seguimiento_6_meses' => [
+         'Control' => 'Control',
+         'Alta' => 'Alta',
+         'Abandono' => 'Abandono',
+         'Traslado dentro del pais' => 'Traslado dentro del pais',
+         'Traslado fuera del pais' => 'Traslado fuera del pais',
+      ],
+
+
+      'estado_seguimiento_12_meses' => [
+         'Control' => 'Control',
+         'Alta' => 'Alta',
+         'Abandono' => 'Abandono',
+         'Traslado dentro del pais' => 'Traslado dentro del pais',
+         'Traslado fuera del pais' => 'Traslado fuera del pais',
+      ],
+
+
+      'estado_seguimiento_18_meses' => [
+         'Control' => 'Control',
+         'Alta' => 'Alta',
+         'Abandono' => 'Abandono',
+         'Traslado dentro del pais' => 'Traslado dentro del pais',
+         'Traslado fuera del pais' => 'Traslado fuera del pais',
+      ],
+
+
+      'mujer_continua_tratamiento_antiretroviral' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
 
       '' => [
          '' => '',
       ],
-
-      '' => [
-         '' => '',
-      ],
-
-      '' => [
-         '' => '',
-      ],
-
    ]
 
 

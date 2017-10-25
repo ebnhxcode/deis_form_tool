@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collection.php" afterPath="$PROJECT_DIR$/config/collection.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collections.php" afterPath="$PROJECT_DIR$/config/collections.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="collection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.296296">
-              <caret line="3071" column="7" selection-start-line="3071" selection-start-column="7" selection-end-line="3071" selection-end-column="7" />
+            <state vertical-scroll-proportion="-10.5">
+              <caret line="3791" column="48" selection-start-line="3791" selection-start-column="7" selection-end-line="3791" selection-end-column="48" />
               <folding>
                 <element signature="e#404#6883#1#PHP" expanded="false" />
                 <element signature="e#7037#7482#1#PHP" expanded="false" />
@@ -202,28 +203,26 @@
                 <element signature="e#99267#99855#1#PHP" expanded="false" />
                 <element signature="e#99902#100478#1#PHP" expanded="false" />
                 <element signature="e#100526#101016#1#PHP" expanded="false" />
-                <element signature="e#101066#101566#1#PHP" expanded="false" />
-                <element signature="e#101612#102102#1#PHP" expanded="false" />
-                <element signature="e#102152#102652#1#PHP" expanded="false" />
-                <element signature="e#102698#103188#1#PHP" expanded="false" />
-                <element signature="e#103238#103738#1#PHP" expanded="false" />
-                <element signature="e#103791#104373#1#PHP" expanded="false" />
-                <element signature="e#104412#104888#1#PHP" expanded="false" />
-                <element signature="e#104931#105415#1#PHP" expanded="false" />
-                <element signature="e#105492#106080#1#PHP" expanded="false" />
-                <element signature="e#106138#106736#1#PHP" expanded="false" />
-                <element signature="e#107450#108006#1#PHP" expanded="false" />
-                <element signature="e#108046#108610#1#PHP" expanded="false" />
-                <element signature="e#108650#109214#1#PHP" expanded="false" />
-                <element signature="e#109256#109822#1#PHP" expanded="false" />
-                <element signature="e#109863#110429#1#PHP" expanded="false" />
-                <element signature="e#110484#111072#1#PHP" expanded="false" />
-                <element signature="e#111177#111598#1#PHP" expanded="false" />
-                <element signature="e#111626#112063#1#PHP" expanded="false" />
-                <element signature="e#112095#112538#1#PHP" expanded="false" />
-                <element signature="e#112556#112973#1#PHP" expanded="false" />
-                <element signature="e#113019#113490#1#PHP" expanded="false" />
-                <element signature="e#113524#113971#1#PHP" expanded="false" />
+                <element signature="e#101066#101564#1#PHP" expanded="false" />
+                <element signature="e#101610#102100#1#PHP" expanded="false" />
+                <element signature="e#102150#102648#1#PHP" expanded="false" />
+                <element signature="e#102694#103184#1#PHP" expanded="false" />
+                <element signature="e#103234#103732#1#PHP" expanded="false" />
+                <element signature="e#103785#104367#1#PHP" expanded="false" />
+                <element signature="e#104406#104882#1#PHP" expanded="false" />
+                <element signature="e#104925#105411#1#PHP" expanded="false" />
+                <element signature="e#107446#108002#1#PHP" expanded="false" />
+                <element signature="e#108042#108606#1#PHP" expanded="false" />
+                <element signature="e#108646#109210#1#PHP" expanded="false" />
+                <element signature="e#109252#109818#1#PHP" expanded="false" />
+                <element signature="e#109859#110425#1#PHP" expanded="false" />
+                <element signature="e#110480#111068#1#PHP" expanded="false" />
+                <element signature="e#111173#111594#1#PHP" expanded="false" />
+                <element signature="e#111622#112059#1#PHP" expanded="false" />
+                <element signature="e#112091#112534#1#PHP" expanded="false" />
+                <element signature="e#112552#112969#1#PHP" expanded="false" />
+                <element signature="e#113015#113486#1#PHP" expanded="false" />
+                <element signature="e#113520#113967#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -232,8 +231,8 @@
       <file leaf-file-name="collections.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/collections.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6839546">
-              <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.76823336">
+              <caret line="436" column="64" selection-start-line="436" selection-start-column="64" selection-end-line="436" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -1266,8 +1265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.296296">
-          <caret line="3071" column="7" selection-start-line="3071" selection-start-column="7" selection-end-line="3071" selection-end-column="7" />
+        <state vertical-scroll-proportion="-10.5">
+          <caret line="3791" column="48" selection-start-line="3791" selection-start-column="7" selection-end-line="3791" selection-end-column="48" />
           <folding>
             <element signature="e#404#6883#1#PHP" expanded="false" />
             <element signature="e#7037#7482#1#PHP" expanded="false" />
@@ -1429,36 +1428,34 @@
             <element signature="e#99267#99855#1#PHP" expanded="false" />
             <element signature="e#99902#100478#1#PHP" expanded="false" />
             <element signature="e#100526#101016#1#PHP" expanded="false" />
-            <element signature="e#101066#101566#1#PHP" expanded="false" />
-            <element signature="e#101612#102102#1#PHP" expanded="false" />
-            <element signature="e#102152#102652#1#PHP" expanded="false" />
-            <element signature="e#102698#103188#1#PHP" expanded="false" />
-            <element signature="e#103238#103738#1#PHP" expanded="false" />
-            <element signature="e#103791#104373#1#PHP" expanded="false" />
-            <element signature="e#104412#104888#1#PHP" expanded="false" />
-            <element signature="e#104931#105415#1#PHP" expanded="false" />
-            <element signature="e#105492#106080#1#PHP" expanded="false" />
-            <element signature="e#106138#106736#1#PHP" expanded="false" />
-            <element signature="e#107450#108006#1#PHP" expanded="false" />
-            <element signature="e#108046#108610#1#PHP" expanded="false" />
-            <element signature="e#108650#109214#1#PHP" expanded="false" />
-            <element signature="e#109256#109822#1#PHP" expanded="false" />
-            <element signature="e#109863#110429#1#PHP" expanded="false" />
-            <element signature="e#110484#111072#1#PHP" expanded="false" />
-            <element signature="e#111177#111598#1#PHP" expanded="false" />
-            <element signature="e#111626#112063#1#PHP" expanded="false" />
-            <element signature="e#112095#112538#1#PHP" expanded="false" />
-            <element signature="e#112556#112973#1#PHP" expanded="false" />
-            <element signature="e#113019#113490#1#PHP" expanded="false" />
-            <element signature="e#113524#113971#1#PHP" expanded="false" />
+            <element signature="e#101066#101564#1#PHP" expanded="false" />
+            <element signature="e#101610#102100#1#PHP" expanded="false" />
+            <element signature="e#102150#102648#1#PHP" expanded="false" />
+            <element signature="e#102694#103184#1#PHP" expanded="false" />
+            <element signature="e#103234#103732#1#PHP" expanded="false" />
+            <element signature="e#103785#104367#1#PHP" expanded="false" />
+            <element signature="e#104406#104882#1#PHP" expanded="false" />
+            <element signature="e#104925#105411#1#PHP" expanded="false" />
+            <element signature="e#107446#108002#1#PHP" expanded="false" />
+            <element signature="e#108042#108606#1#PHP" expanded="false" />
+            <element signature="e#108646#109210#1#PHP" expanded="false" />
+            <element signature="e#109252#109818#1#PHP" expanded="false" />
+            <element signature="e#109859#110425#1#PHP" expanded="false" />
+            <element signature="e#110480#111068#1#PHP" expanded="false" />
+            <element signature="e#111173#111594#1#PHP" expanded="false" />
+            <element signature="e#111622#112059#1#PHP" expanded="false" />
+            <element signature="e#112091#112534#1#PHP" expanded="false" />
+            <element signature="e#112552#112969#1#PHP" expanded="false" />
+            <element signature="e#113015#113486#1#PHP" expanded="false" />
+            <element signature="e#113520#113967#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/collections.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6839546">
-          <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.76823336">
+          <caret line="436" column="64" selection-start-line="436" selection-start-column="64" selection-end-line="436" selection-end-column="64" />
           <folding />
         </state>
       </provider>
