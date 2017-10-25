@@ -114,6 +114,16 @@ return [
          'Desconocido' => 'Desconocido',
       ],
 
+      'sifilis_previa_embarazo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
+      'otra_its_previa_embarazo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+      ],
+
       'resultado_treponemico' => [
          'Positivo' => 'Positivo',
          'Negativo' => 'Negativo',
