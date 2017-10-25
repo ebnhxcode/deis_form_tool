@@ -3892,6 +3892,7 @@ return [
       ],
       'run_madre' => [
          'text' => 'Run Madre',
+         'tag' => 'Datos de identificación de la madre',
       ],
       'digito_verificador' => [
          'text' => 'Dígito Verificador',
@@ -3955,6 +3956,7 @@ return [
       ],
       'embarazo_con_control_parental' => [
          'text' => '¿Embarazo controlado?',
+         'tag' => 'Datos del Embarazo',
       ],
       'edad_gestacional_ingreso_control_embarazo' => [
          'text' => 'Edad Gestacional al ingreso',
@@ -3970,6 +3972,7 @@ return [
       ],
       'fecha_1_vdrl_embarazo' => [
          'text' => 'Fecha 1º VDRL de este embarazo',
+         'tag' => 'Examenes detección de sífilis',
       ],
       'resultado_1_vdrl_embarazo' => [
          'text' => 'Resultado 1º VDRL  en este embarazo',
@@ -4024,6 +4027,7 @@ return [
       ],
       'acepta_rechaza_toma_examen_vih' => [
          'text' => 'Acepta/rechaza toma de examen VIH',
+         'tag' => 'Exámenes de detección de VIH',
       ],
       'fecha_1_examen_vih_embarazo' => [
          'text' => 'Fecha 1º examen VIH  en este embarazo',
@@ -4051,6 +4055,7 @@ return [
       ],
       'derivada_a_especialidades_embarazo' => [
          'text' => 'Derivada a Especialidades en este embarazo',
+         'tag' => 'Derivacion a especialidades por sífilis o vih',
       ],
       'fecha_ingreso_unacess' => [
          'text' => 'Fecha de ingreso a UNACESS',
