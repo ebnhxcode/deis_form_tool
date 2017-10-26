@@ -576,7 +576,7 @@ return [
          #Parte 2 control de embarazo
       'resultado_dilucion_1_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_dilucion_1_vdrl_embarazo',
             'name' => 'resultado_dilucion_1_vdrl_embarazo',
             'value' => '',
@@ -597,7 +597,7 @@ return [
       ],
       'resultado_1_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_1_vdrl_embarazo',
             'name' => 'resultado_1_vdrl_embarazo',
             'value' => '',
@@ -664,7 +664,7 @@ return [
 
       'resultado_dilucion_2_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_dilucion_2_vdrl_embarazo',
             'name' => 'resultado_dilucion_2_vdrl_embarazo',
             'value' => '',
@@ -686,7 +686,7 @@ return [
       ],
       'resultado_2_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_2_vdrl_embarazo',
             'name' => 'resultado_2_vdrl_embarazo',
             'value' => '',
@@ -753,7 +753,7 @@ return [
 
       'resultado_dilucion_3_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_dilucion_3_vdrl_embarazo',
             'name' => 'resultado_dilucion_3_vdrl_embarazo',
             'value' => '',
@@ -775,7 +775,7 @@ return [
       ],
       'resultado_3_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_3_vdrl_embarazo',
             'name' => 'resultado_3_vdrl_embarazo',
             'value' => '',
@@ -858,7 +858,7 @@ return [
             'nombre' => 'control_embarazo',
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
          #Parte 3 control de embarazo
@@ -934,7 +934,7 @@ return [
 
       'resultado_1_examen_vih_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_1_examen_vih_embarazo',
             'name' => 'resultado_1_examen_vih_embarazo',
             'value' => '',
@@ -983,7 +983,7 @@ return [
             'name' => 'eg_1_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1000,7 +1000,7 @@ return [
       ],
       'resultado_2_examen_vih_embarazo' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_2_examen_vih_embarazo',
             'name' => 'resultado_2_examen_vih_embarazo',
             'value' => '',
@@ -1049,7 +1049,7 @@ return [
             'name' => 'eg_2_examen_vih',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1083,6 +1083,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
@@ -4399,7 +4402,6 @@ return [
       'acepta_rechaza_toma_examen_vih' => [
          'text' => 'Acepta/rechaza toma de examen VIH',
          'tag' => 'Exámenes de detección de VIH',
-         'empty_column' => 'col-sm-3 col-md-3',
       ],
       'fecha_1_examen_vih_embarazo' => [
          'text' => 'Fecha 1º examen VIH  en este embarazo',
@@ -4411,7 +4413,7 @@ return [
          'order' => '1.'
       ],
       'eg_1_examen_vih' => [
-         'text' => 'EG del Primer Examen VIH',
+         'text' => 'EG del 1° Examen VIH',
          'empty_column' => 'col-sm-3 col-md-3',
          'order' => '3.'
       ],

@@ -445,9 +445,84 @@ return [
       ],
 
 
+      'resultado_1_vdrl_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_dilucion_1_vdrl_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+
+      'resultado_2_vdrl_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_dilucion_2_vdrl_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_3_vdrl_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_dilucion_3_vdrl_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_1_examen_vih_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'resultado_2_examen_vih_embarazo' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+
       '' => [
          '' => '',
       ],
+
+
+      '' => [
+         '' => '',
+      ],
+
+
+      '' => [
+         '' => '',
+      ],
+
+
+      '' => [
+         '' => '',
+      ],
+
+
    ]
 
 
