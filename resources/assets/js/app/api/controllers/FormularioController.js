@@ -357,27 +357,21 @@ const FormularioController = new Vue({
       guardarFormulario: function (tabName) {
          //this.spinner_finalizar = true;
          var formData = new FormData();
-         formData.append('campo', {object:'Object'});
-
-         formData.append('_token', $('#_token').val());
-
-         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //console.log(tabName);
-
          for (let i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {
-               console.log( $('#'+this.inputs[i].directivas.name).val() );
+               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
             }
          }
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         formData.append('_token', $('#_token').val());
 
-
-         /*
          this.$http.post('/formulario', formData).then(response => { // success callback
-            //console.log(response);
+            console.log(response);
          }, response => { // error callback
             console.log('Error : '+response);
          });
-         */
+
 
 
          return;

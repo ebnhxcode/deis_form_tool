@@ -7,19 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 class FormDeis extends Model
 {
    protected $table = "form_deis";
+   protected $primaryKey = 'id';
    protected $fillable = [
+      'estado_registro',
       'nombres_madre',
       'primer_apellido_madre',
       'segundo_apellido_madre',
       'fecha_nacimiento_madre',
       'n_correlativo_interno',
-      'region',
-      'servicio_salud',
+      'id_region',
+      'id_servicio_salud',
       'run_madre',
       'digito_verificador',
       'edad',
       'nacionalidad',
-      'pais_origen',
+      'id_pais',
       'pueblos_indigenas',
       'estado_civil',
       'tipo_de_convivencia',
@@ -41,6 +43,7 @@ class FormDeis extends Model
       'lugar_control_prenatal',
       'lugar_control_prenatal_otro',
       'codigo_establecimiento_control_prenatal_embarazo',
+      'tipo_establecimiento_control_prenatal_embarazo',
       'fecha_1_vdrl_embarazo',
       'resultado_1_vdrl_embarazo',
       'resultado_dilucion_1_vdrl_embarazo',
@@ -79,7 +82,6 @@ class FormDeis extends Model
       'terapia_antiretroviral_tar_farmaco_2',
       'fecha_inicio_tar_farmaco_2',
       'terapia_antiretroviral_tar_farmaco_3',
-      'terapia_antiretroviral_tar_farmaco_3_otro',
       'fecha_inicio_tar_farmaco_3',
       'numero_cd4_ingreso_control_prenatal',
       'fecha_examen_linfocitos_cd4_ingreso_control_prenatal',
@@ -93,7 +95,6 @@ class FormDeis extends Model
       'numero_contactos_sexuales_tratados',
       'lugar_atencion_parto',
       'codigo_establecimiento',
-      'tipo_establecimiento',
       'nombre_establecimiento_sin_codigo',
       'fecha_parto',
       'hora_parto',
@@ -169,12 +170,11 @@ class FormDeis extends Model
       'estado_seguimiento_6_meses',
       'estado_seguimiento_12_meses',
       'estado_seguimiento_18_meses',
-      'variable_151_estandar',
       'mujer_continua_tratamiento_antiretroviral',
-      'fecha_ultima_regla',
+      'fecha_ultima_regla_gestacional',
+      'fecha_ultima_regla_operacional',
       'pareja_vih_positivo',
       'fecha_administracion_1_dosis_penicilina_gestante',
-      'fecha_administracion_1_dosis_penicilina_gestante_sifilis',
-      'fecha_administracion_ult_dosis_penicilina_gestante',
+      'fecha_administracion_ult_dosis_penicilina_gestante'
    ];
 }

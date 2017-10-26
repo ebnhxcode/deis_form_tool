@@ -492,7 +492,7 @@ return [
             'name' => 'edad_gestacional_ingreso_control_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -557,8 +557,9 @@ return [
             'id' => 'lugar_control_prenatal_otro',
             'name' => 'lugar_control_prenatal_otro',
             'value' => '',
-            'max_lenght' => ''
-            , 'required' => '',
+            'max_lenght' => '',
+            'placeholder' => 'Ej: Hospital clinico ejemplo',
+            'required' => '',
             'class' => '',
             'style' => '',
          ],
@@ -645,7 +646,7 @@ return [
             'name' => 'eg_1_dvrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -734,7 +735,7 @@ return [
             'name' => 'eg_2_dvrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -823,7 +824,7 @@ return [
             'name' => 'eg_3_dvrl_embarazo',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -880,7 +881,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-md-4'
          ]
       ],
       'fecha_1_examen_vih_embarazo' => [
@@ -4387,6 +4388,7 @@ return [
       'acepta_rechaza_toma_examen_vih' => [
          'text' => 'Acepta/rechaza toma de examen VIH',
          'tag' => 'Exámenes de detección de VIH',
+         'empty_column' => 'col-sm-8 col-md-8',
       ],
       'fecha_1_examen_vih_embarazo' => [
          'text' => 'Fecha 1º examen VIH  en este embarazo',

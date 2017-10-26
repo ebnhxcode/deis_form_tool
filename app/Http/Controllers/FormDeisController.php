@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\FormDeis;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
 
-
 class FormDeisController extends Controller {
+
     public function __construct () {
         $this->middleware('auth');
     }
@@ -34,8 +35,22 @@ class FormDeisController extends Controller {
 
 
     public function store (Request $request) {
-        return $request->all();
 
+        $fd = new FormDeis();
+        $formData = $request->all();
+        foreach ($formData as $key => $d) {
+            if ($d) { $fd[$key] = $d; }
+        }
+
+        return $fd->save();
+        #return gettype($formData);
+
+        return $fd;
+        $result = FormDeis::create($formData);
+
+
+
+        return $result;
     }
 
 
@@ -48,6 +63,7 @@ class FormDeisController extends Controller {
 
 
     public function update (Request $request, $id) {
+        return 1;
     }
 
 

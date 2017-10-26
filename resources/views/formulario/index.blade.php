@@ -122,7 +122,7 @@
                                  <div role="tabpanel" :class="'tab-pane fade in '+tab.class" :id="tab.name" v-for="tab in nav_tab_form_deis">
 
                                     <dl class="dl-vertical">
-
+                                       <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
                                        <div v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
 
                                           <!-- Prop para permitir insertar una cabecera de titulo -->

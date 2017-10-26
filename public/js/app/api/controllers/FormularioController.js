@@ -36856,10 +36856,6 @@ var FormularioController = new _vue2.default({
          },
          'tags': ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
 
-         'paso1_filtro': true,
-         'paso2_confirmar': false,
-         'paso3_crear': false,
-         'paso4_finalizar': false,
          'spinner_iniciar': true,
          'spinner_finalizar': false,
 
@@ -37133,7 +37129,7 @@ var FormularioController = new _vue2.default({
 
          this.$http.get('/formulario').then(function (response) {
             // success callback
-            console.log(response);
+            //console.log(response);
 
             _this.inputs = response.body.inputs;
             _this.labels = response.body.labels;
@@ -37150,34 +37146,31 @@ var FormularioController = new _vue2.default({
             self.spinner_iniciar = false;
          }, 1500);
 
-         console.log('FormularioController');
+         //console.log('FormularioController');
+
 
          return;
       },
 
       guardarFormulario: function guardarFormulario(tabName) {
-         this.spinner_finalizar = true;
+         //this.spinner_finalizar = true;
          var formData = new FormData();
-         formData.append('campo', { object: 'Object' });
-
-         formData.append('_token', $('#_token').val());
-
-         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         console.log(tabName);
-
+         //console.log(tabName);
          for (var i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {
-               console.log($('#' + this.inputs[i].directivas.name).val());
+               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
             }
          }
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         formData.append('_token', $('#_token').val());
 
-         /*
-         this.$http.post('/formulario', formData).then(response => { // success callback
-            //console.log(response);
-         }, response => { // error callback
-            console.log('Error : '+response);
+         this.$http.post('/formulario', formData).then(function (response) {
+            // success callback
+            console.log(response);
+         }, function (response) {
+            // error callback
+            console.log('Error : ' + response);
          });
-         */
 
          return;
       },
