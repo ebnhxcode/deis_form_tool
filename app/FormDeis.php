@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class FormDeis extends Model
 {
-   protected $table = "form_deis";
    protected $primaryKey = 'id';
    protected $fillable = [
       'estado_registro',

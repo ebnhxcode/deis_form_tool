@@ -37,6 +37,7 @@ class FormDeisController extends Controller {
     public function store (Request $request) {
 
         $fd = new FormDeis();
+        return $fd;
         $formData = $request->all();
         foreach ($formData as $key => $d) {
             if ($d) { $fd[$key] = $d; }
