@@ -36848,6 +36848,7 @@ var FormularioController = new _vue2.default({
          'labels': [],
          'nav_tab_form_deis': [],
          'deis_form_table_options': [],
+         'fdc': [],
 
          'inputTypes': {
             'basics': ['text', 'number', 'email', 'password', 'date', 'time'],
@@ -37136,6 +37137,7 @@ var FormularioController = new _vue2.default({
             _this.instructions = response.body.instructions;
             _this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this.deis_form_table_options = response.body.deis_form_table_options;
+            _this.fdc = response.body.fdc;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
@@ -37158,7 +37160,7 @@ var FormularioController = new _vue2.default({
          //console.log(tabName);
          for (var i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {
-               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
+               formData.append('' + this.inputs[i].directivas.name, '' + this.inputs[i].directivas.value);
             }
          }
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
@@ -37169,7 +37171,7 @@ var FormularioController = new _vue2.default({
             console.log(response);
          }, function (response) {
             // error callback
-            console.log('Error : ' + response);
+            console.log(response);
          });
 
          return;

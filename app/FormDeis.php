@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FormDeis extends Model
 {
+   #protected $dateFormat = 'Y-m-d H:i:s+';
    protected $primaryKey = 'id';
    protected $table = 'form_deis';
    protected $fillable = [
