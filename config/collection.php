@@ -2393,7 +2393,7 @@ return [
             'name' => 'codigo_establecimiento',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 123456',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2415,7 +2415,7 @@ return [
             'name' => 'nombre_establecimiento_sin_codigo',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Nombre del Establecimiento',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2430,7 +2430,7 @@ return [
             'class' => 'col-md-12'
          ],
          'class_custom' => [
-            'class' => 'col-sm-5 col-md-5'
+            'class' => 'col-sm-4 col-md-4'
          ]
       ],
       'tipo_establecimiento' => [
@@ -2452,7 +2452,7 @@ return [
             'nombre' => 'datos_parto'
          ],
          'class_custom' => [
-            'class' => 'col-sm-2 col-md-2'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_parto' => [
@@ -2680,7 +2680,7 @@ return [
             'name' => 'peso_mujer_parto',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 55',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2692,7 +2692,7 @@ return [
             'nombre' => 'datos_parto'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-md-offset-9 col-md-3'
          ]
       ],
 
@@ -2726,7 +2726,7 @@ return [
             'name' => 'dosis_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Dosis de cantidad / horas',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2815,7 +2815,7 @@ return [
             'name' => 'dosis_farmaco_2_vih',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Dosis de cantidad / horas',
             'required' => '',
             'class' => '',
             'style' => '',

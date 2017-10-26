@@ -201,7 +201,6 @@
 
                                           <div v-if="labels[i.directivas.id] && labels[i.directivas.id].empty_column"
                                                :class="labels[i.directivas.id].empty_column">
-                                             @{{ labels[i.directivas.id].empty_column }}
                                           </div>
                                        </div>
 
