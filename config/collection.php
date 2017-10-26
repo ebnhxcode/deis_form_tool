@@ -2971,7 +2971,7 @@ return [
             'placeholder' => '',
             'required' => '',
             'class' => '',
-            'style' => '',
+            'style' => 'min-width: 90px !important;',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2980,7 +2980,51 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-2 col-md-2'
+            'class' => 'col-sm-1 col-md-1'
+         ]
+      ],
+      'eg_pediatrica' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'eg_pediatrica',
+            'name' => 'eg_pediatrica',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => 'Ej: 1',
+            'required' => '',
+            'class' => '',
+            'style' => 'min-width: 90px !important;',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-1 col-md-1'
+         ]
+      ],
+      'peso_recien_nacido' => [
+         'directivas' => [
+            'type' => 'number',
+            'id' => 'peso_recien_nacido',
+            'name' => 'peso_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => 'Ej: 3300',
+            'required' => '',
+            'class' => '',
+            'style' => 'min-width: 120px !important;',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-1 col-md-1'
          ]
       ],
       'estado_recien_nacido' => [
@@ -3002,7 +3046,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-2 col-md-2'
+            'class' => 'col-sm-2 col-md-2 col-md-offset-1'
          ]
       ],
       'sexo_recien_nacido' => [
@@ -3025,50 +3069,6 @@ return [
          ],
          'class_custom' => [
             'class' => 'col-sm-2 col-md-2'
-         ]
-      ],
-      'eg_pediatrica' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'eg_pediatrica',
-            'name' => 'eg_pediatrica',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'datos_recien_nacido'
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-1 col-md-1'
-         ]
-      ],
-      'peso_recien_nacido' => [
-         'directivas' => [
-            'type' => 'number',
-            'id' => 'peso_recien_nacido',
-            'name' => 'peso_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'datos_recien_nacido'
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-1 col-md-1'
          ]
       ],
       #El campo de acontinuacion, Estado clinico recien nacido
@@ -3847,6 +3847,51 @@ return [
          ]
       ],
 
+      'resultado_final_isp_examen_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_final_isp_examen_vih_recien_nacido',
+            'name' => 'resultado_final_isp_examen_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-6 col-md-6'
+         ]
+      ],
+      'fecha_resultado_final_isp_examen_vih_recien_nacido' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'resultado_final_isp_examen_vih_recien_nacido',
+            'name' => 'resultado_final_isp_examen_vih_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-6 col-md-6'
+         ]
+      ],
+
          #Quinta Parte
 
       'derivacion_recien_nacido_a_seguimiento' => [
@@ -4423,6 +4468,12 @@ return [
       'resultado_final_isp_examen_vih' => [
          'text' => 'Resultado Final ISP Exámen VIH',
       ],
+      'fecha_resultado_final_isp_examen_vih_recien_nacido' => [
+         'text' => 'Fecha Resultado Final ISP Examen VIH Recien nacido',
+      ],
+      'resultado_final_isp_examen_vih_recien_nacido' => [
+         'text' => 'Resultado Final ISP Exámen VIH Recien nacido',
+      ],
       'derivada_a_especialidades_embarazo' => [
          'text' => 'Derivada a Especialidades en este embarazo',
          'tag' => 'Derivacion a especialidades por sífilis o VIH',
@@ -4610,10 +4661,11 @@ return [
       ],
       'fecha_examen_vdrl_periferico_recien_nacido' => [
          'text' => 'Fecha de exámen  VDRL periférico del Recién nacido',
-         'tag' => 'Examenes Sifilis',
       ],
       'resultado_vdrl_periferico_recien_nacido' => [
          'text' => 'Resultado de VDRL periférico del Recién nacido',
+         'tag' => 'Examenes Sifilis',
+         'subtag' => 'Examenes Sifilis',
       ],
       'titulacion_vdrl_periferico_recien_nacido' => [
          'text' => 'Titulación  de VDRL periférico del Recién nacido',

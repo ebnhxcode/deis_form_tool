@@ -75,7 +75,9 @@ class CreateFormDeisTable extends Migration
             $table->string('resultado_2_examen_vih_embarazo')->unsigned()->nullable(true);
             $table->integer('eg_2_examen_vih')->unsigned()->nullable(true);
             $table->timestamp('fecha_resultado_final_isp_examen_vih')->unsigned()->nullable(true);
+            $table->timestamp('fecha_resultado_final_isp_examen_vih_recien_nacido')->unsigned()->nullable(true);
             $table->string('resultado_final_isp_examen_vih')->unsigned()->nullable(true);
+            $table->string('resultado_final_isp_examen_vih_recien_nacido')->unsigned()->nullable(true);
             $table->string('derivada_a_especialidades_embarazo')->unsigned()->nullable(true);
             $table->timestamp('fecha_ingreso_unacess')->unsigned()->nullable(true);
             $table->timestamp('fecha_ingreso_control_unidad_alto_riesgo')->unsigned()->nullable(true);

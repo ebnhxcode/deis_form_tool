@@ -542,6 +542,13 @@ return [
          'No Realizado' => 'No Realizado',
       ],
 
+      'resultado_final_isp_examen_vih_recien_nacido' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Registra Muestra Anterior' => 'Registra Muestra Anterior',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
 
    ]
 
