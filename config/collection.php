@@ -1540,7 +1540,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-sm-3 col-md-3'
+            'class' => 'col-sm-4 col-md-4'
          ],
       ],
       'tratamiento_sifilis_dosis' => [
@@ -1562,7 +1562,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-sm-3 col-md-3'
+            'class' => 'col-sm-4 col-md-4'
          ],
       ],
       'tratamiento_sifilis_frecuencia' => [
@@ -1584,56 +1584,12 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-sm-3 col-md-3'
+            'class' => 'col-sm-4 col-md-4'
          ],
       ],
 
 
-      #  Hacer el bind v-model con el que no tiene prefijo _sifilis
-      'fecha_administracion_1_dosis_penicilina_gestante_sifilis' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis',
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-3 col-md-3'
-         ],
-      ],
-      'fecha_administracion_ult_dosis_penicilina_gestante' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis',
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-3 col-md-3'
-         ],
-      ],
+
 
       'numero_contactos_sexuales_declarados' => [
          'directivas' => [
@@ -1642,7 +1598,7 @@ return [
             'name' => 'numero_contactos_sexuales_declarados',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 0',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1664,7 +1620,7 @@ return [
             'name' => 'numero_contactos_sexuales_estudiados',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 0',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1686,7 +1642,7 @@ return [
             'name' => 'numero_contactos_sexuales_tratados',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 0',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1702,7 +1658,52 @@ return [
          ],
       ],
 
+      #  Hacer el bind v-model con el que no tiene prefijo _sifilis
+      'fecha_administracion_1_dosis_penicilina_gestante_sifilis' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis',
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
 
+      ],
+      'fecha_administracion_ult_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis',
+         ],
+         'class_custom' => [
+            'class' => 'col-md-4 col-md-4'
+         ],
+      ],
 
       #Patologías VIH - patologias_vih
 
@@ -2015,7 +2016,7 @@ return [
             'name' => 'numero_contactos_sexuales_declarados',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 0',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2037,7 +2038,7 @@ return [
             'name' => 'numero_contactos_sexuales_estudiados',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 0',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2059,7 +2060,7 @@ return [
             'name' => 'numero_contactos_sexuales_tratados',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 0',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -4396,7 +4397,6 @@ return [
       ],
       'tratamiento_sifilis_frecuencia' => [
          'text' => 'Tratamiento Sifilis Frecuencia',
-         'empty_column' => 'col-md-3',
       ],
       'acepta_rechaza_toma_examen_vih' => [
          'text' => 'Acepta/rechaza toma de examen VIH',
@@ -4773,7 +4773,6 @@ return [
       ],
       'fecha_administracion_ult_dosis_penicilina_gestante' => [
          'text' => 'Fecha administración última dosis penicilina',
-         'empty_column' => 'col-md-6 col-sm-6',
       ],
    ],
 
