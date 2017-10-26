@@ -36,6 +36,20 @@ class FormDeisController extends Controller {
 
 
     public function create () {
+        #dd($this->fdc);
+        $returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
+        $returnData['labels'] = config('collection.deis_form_table_labels');
+        $returnData['instructions'] = config('collection.deis_form_instructions');
+        $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
+        $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
+        $returnData['fdc'] = $this->fdc;
+        if ($request->wantsJson()) {
+            return response()->json($returnData);
+        }
+        #$returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
+        #$returnData['labels'] = config('collection.deis_form_table_labels');
+        #$returnData['instructions'] = config('collection.deis_form_instructions');
+        return view('formulario.create', $returnData);
     }
 
 

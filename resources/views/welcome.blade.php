@@ -18,7 +18,7 @@
                     @if (!auth()->check())
                         Ir a <a href="{{url('/login')}}" class="btn btn-success"><i class="fa fa-btn fa-sign-in"></i> Login</a>
                     @else
-                        Ir al <a href="{{url('/formulario')}}" class="btn btn-primary"><i class="fa fa-btn fa-sign-in"></i> Formulario</a>
+                        Ir al <a href="{{url('/formulario/create')}}" class="btn btn-primary"><i class="fa fa-btn fa-sign-in"></i> Formulario</a>
                     @endif
                 </div>
                 
