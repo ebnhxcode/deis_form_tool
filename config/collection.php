@@ -2924,7 +2924,7 @@ return [
             'name' => 'run_recien_nacido',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 123456789',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -3693,7 +3693,7 @@ return [
       ],
       'resultado_1_examen_pcr_recien_nacido' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_1_examen_pcr_recien_nacido',
             'name' => 'resultado_1_examen_pcr_recien_nacido',
             'value' => '',
@@ -3731,7 +3731,7 @@ return [
       ],
       'resultado_2_examen_pcr_recien_nacido' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_2_examen_pcr_recien_nacido',
             'name' => 'resultado_2_examen_pcr_recien_nacido',
             'value' => '',
@@ -3769,7 +3769,7 @@ return [
       ],
       'resultado_3_examen_pcr_recien_nacido' => [
          'directivas' => [
-            'type' => 'text',
+            'type' => 'select',
             'id' => 'resultado_3_examen_pcr_recien_nacido',
             'name' => 'resultado_3_examen_pcr_recien_nacido',
             'value' => '',
@@ -3878,7 +3878,7 @@ return [
             'name' => 'lugar_derivacion_recien_nacido_a_seguimiento',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Lugar definido para la derivación',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -4483,10 +4483,10 @@ return [
          'text' => 'Resultado Carga Viral',
       ],
       'numero_contactos_sexuales_declarados' => [
-         'text' => 'Número de parejas declarados',
+         'text' => 'Número de parejas declaradas',
       ],
       'numero_contactos_sexuales_estudiados' => [
-         'text' => 'Número de parejas estudiados',
+         'text' => 'Número de parejas estudiadas',
       ],
       'carga_viral_numero_copia_semana_34' => [
          'text' => 'Resultado Carga Viral',
@@ -4648,7 +4648,7 @@ return [
       ],
       'sustituto_leche_materna' => [
          'text' => 'Sustituto de Leche Materna',
-         'tag' => 'Examenes VIH',
+         'tag' => 'Seguimiento VIH R.N.',
       ],
       'fecha_inicio_sustituto_leche_materna' => [
          'text' => 'Fecha inicio Sustituto de Leche Materna',
