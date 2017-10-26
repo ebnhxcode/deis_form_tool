@@ -378,7 +378,7 @@ return [
          'Pendiente' => 'Pendiente',
       ],
 
-      
+
       'resultado_test_elisa_18_meses' => [
          'Reactivo' => 'Reactivo',
          'No Reactivo' => 'No Reactivo',
@@ -500,23 +500,46 @@ return [
       ],
 
 
-      '' => [
-         '' => '',
+      'resultado_1_examen_pcr_recien_nacido' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+      'resultado_2_examen_pcr_recien_nacido' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+      'resultado_3_examen_pcr_recien_nacido' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
+      ],
+
+      'numero_cd4_ingreso_control_prenatal' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
       ],
 
 
-      '' => [
-         '' => '',
+      'numero_carga_viral_control_prenatal' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
       ],
 
 
-      '' => [
-         '' => '',
-      ],
-
-
-      '' => [
-         '' => '',
+      'carga_viral_numero_copia_semana_34' => [
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
+         'No Realizado' => 'No Realizado',
       ],
 
 

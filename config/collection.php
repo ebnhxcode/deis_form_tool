@@ -2088,7 +2088,7 @@ return [
       ],
       'numero_cd4_ingreso_control_prenatal' => [
          'directivas' => [
-            'type' => 'number',
+            'type' => 'select',
             'id' => 'numero_cd4_ingreso_control_prenatal',
             'name' => 'numero_cd4_ingreso_control_prenatal',
             'value' => '',
@@ -2132,7 +2132,7 @@ return [
       ],
       'numero_carga_viral_control_prenatal' => [
          'directivas' => [
-            'type' => 'number',
+            'type' => 'select',
             'id' => 'numero_carga_viral_control_prenatal',
             'name' => 'numero_carga_viral_control_prenatal',
             'value' => '',
@@ -2201,7 +2201,7 @@ return [
       ],
       'carga_viral_numero_copia_semana_34' => [
          'directivas' => [
-            'type' => 'number',
+            'type' => 'select',
             'id' => 'carga_viral_numero_copia_semana_34',
             'name' => 'carga_viral_numero_copia_semana_34',
             'value' => '',
