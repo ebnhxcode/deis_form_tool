@@ -77,7 +77,7 @@
                               Lista de Formularios · Informaciones de transmision Vertical de VIH y Sífilis
                               <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
-                           
+
 
                         </div><!-- .well .well-sm -->
 

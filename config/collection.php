@@ -881,7 +881,77 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-md-4'
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+
+      'resultado_final_isp_examen_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_final_isp_examen_vih',
+            'name' => 'resultado_final_isp_examen_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'fecha_resultado_final_isp_examen_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_resultado_final_isp_examen_vih',
+            'name' => 'fecha_resultado_final_isp_examen_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+               'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+
+
+
+      'resultado_1_examen_vih_embarazo' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'resultado_1_examen_vih_embarazo',
+            'name' => 'resultado_1_examen_vih_embarazo',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_1_examen_vih_embarazo' => [
@@ -903,29 +973,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
-         ]
-      ],
-      'resultado_1_examen_vih_embarazo' => [
-         'directivas' => [
-            'type' => 'text',
-            'id' => 'resultado_1_examen_vih_embarazo',
-            'name' => 'resultado_1_examen_vih_embarazo',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'eg_1_examen_vih' => [
@@ -947,29 +995,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
-         ]
-      ],
-      'fecha_2_examen_vih_embarazo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_2_examen_vih_embarazo',
-            'name' => 'fecha_2_examen_vih_embarazo',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'resultado_2_examen_vih_embarazo' => [
@@ -991,7 +1017,29 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+      'fecha_2_examen_vih_embarazo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_2_examen_vih_embarazo',
+            'name' => 'fecha_2_examen_vih_embarazo',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'eg_2_examen_vih' => [
@@ -1013,47 +1061,10 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
-      'fecha_resultado_final_isp_examen_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_resultado_final_isp_examen_vih',
-            'name' => 'fecha_resultado_final_isp_examen_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo'
-         ]
-      ],
-      'resultado_final_isp_examen_vih' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_final_isp_examen_vih',
-            'name' => 'resultado_final_isp_examen_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo'
-         ]
-      ],
+
          #Parte 4 control de embarazo
       'derivada_a_especialidades_embarazo' => [
          'directivas' => [
@@ -4213,13 +4224,13 @@ return [
          'text' => 'Nombres',
       ],
       'primer_apellido_madre' => [
-         'text' => 'Primer Apellido de la  madre',
+         'text' => 'Primer Apellido',
       ],
       'segundo_apellido_madre' => [
-         'text' => 'Segundo Apellido de la madre',
+         'text' => 'Segundo Apellido',
       ],
       'fecha_nacimiento_madre' => [
-         'text' => 'Fecha de nacimiento de la madre',
+         'text' => 'Fecha de nacimiento',
       ],
       'n_correlativo_interno' => [
          'text' => 'Nº correlativo Minsal',
@@ -4328,41 +4339,41 @@ return [
          'order' => '1.'
       ],
       'eg_1_dvrl_embarazo' => [
-         'text' => 'EG 1º VDRL  en este embarazo',
+         'text' => 'EG 1º VDRL',
          'order' => '4.'
       ],
       'fecha_2_vdrl_embarazo' => [
-         'text' => 'Fecha 2º VDRL de este embarazo',
+         'text' => 'Fecha 2º VDRL',
          'order' => '3.'
       ],
       'resultado_2_vdrl_embarazo' => [
-         'text' => 'Resultado 2º VDRL   en este embarazo',
+         'text' => 'Resultado 2º VDRL',
          'order' => '2.'
       ],
       'resultado_dilucion_2_vdrl_embarazo' => [
-         'text' => 'Resultado Dilución  2º VDRL   en este embarazo',
+         'text' => 'Resultado Dilución  2º VDRL',
          'subtag' => 'Examen 2',
          'order' => '1.'
       ],
       'eg_2_dvrl_embarazo' => [
-         'text' => 'EG 2º VDRL  en este embarazo',
+         'text' => 'EG 2º VDRL',
          'order' => '4.'
       ],
       'fecha_3_vdrl_embarazo' => [
-         'text' => 'Fecha 3º VDRL de este embarazo',
+         'text' => 'Fecha 3º VDRL',
          'order' => '3.'
       ],
       'resultado_3_vdrl_embarazo' => [
-         'text' => 'Resultado 3º VDRL   en este embarazo',
+         'text' => 'Resultado 3º VDRL',
          'order' => '2.'
       ],
       'resultado_dilucion_3_vdrl_embarazo' => [
-         'text' => 'Resultado Dilución  3º VDRL en este embarazo',
+         'text' => 'Resultado Dilución  3º VDRL',
          'subtag' => 'Examen 3',
          'order' => '1.'
       ],
       'eg_3_dvrl_embarazo' => [
-         'text' => 'EG 3º VDRL  en este embarazo',
+         'text' => 'EG 3º VDRL',
          'order' => '4.'
       ],
       'fecha_examen_treponemico' => [
@@ -4388,35 +4399,45 @@ return [
       'acepta_rechaza_toma_examen_vih' => [
          'text' => 'Acepta/rechaza toma de examen VIH',
          'tag' => 'Exámenes de detección de VIH',
-         'empty_column' => 'col-sm-8 col-md-8',
+         'empty_column' => 'col-sm-3 col-md-3',
       ],
       'fecha_1_examen_vih_embarazo' => [
          'text' => 'Fecha 1º examen VIH  en este embarazo',
+         'order' => '2.'
       ],
       'resultado_1_examen_vih_embarazo' => [
-         'text' => 'Resultado  1º examen VIH  en este embarazo',
+         'text' => 'Resultado  1º examen VIH',
+         'subtag' => 'Primer Examen',
+         'order' => '1.'
       ],
       'eg_1_examen_vih' => [
          'text' => 'EG del Primer Examen VIH',
+         'empty_column' => 'col-sm-3 col-md-3',
+         'order' => '3.'
       ],
       'fecha_2_examen_vih_embarazo' => [
-         'text' => 'Fecha 2º examen VIH  en este embarazo',
+         'text' => 'Fecha 2º examen VIH',
+         'order' => '2.'
       ],
       'resultado_2_examen_vih_embarazo' => [
-         'text' => 'Resultado  2º examen VIH  en este embarazo',
+         'text' => 'Resultado  2º examen VIH',
+         'subtag' => 'Segundo Examen',
+         'order' => '1.'
       ],
       'eg_2_examen_vih' => [
          'text' => 'EG del 2° Examen VIH',
+         'empty_column' => 'col-sm-3 col-md-3',
+         'order' => '3.'
       ],
       'fecha_resultado_final_isp_examen_vih' => [
-         'text' => 'Fecha Resultado Final Instituto Salud Pública Examen VIH',
+         'text' => 'Fecha Resultado Final ISP Examen VIH',
       ],
       'resultado_final_isp_examen_vih' => [
-         'text' => 'Resultado Final Instituto Salud Pública Exámen VIH',
+         'text' => 'Resultado Final ISP Exámen VIH',
       ],
       'derivada_a_especialidades_embarazo' => [
          'text' => 'Derivada a Especialidades en este embarazo',
-         'tag' => 'Derivacion a especialidades por sífilis o vih',
+         'tag' => 'Derivacion a especialidades por sífilis o VIH',
       ],
       'fecha_ingreso_unacess' => [
          'text' => 'Fecha de ingreso a UNACESS',
@@ -4527,7 +4548,7 @@ return [
       ],
       'resultado_examen_vih_parto' => [
          'text' => 'Resultado Examen VIH Parto',
-         'subtag' => 'Examenes de vih durante el parto',
+         'subtag' => 'Examenes de VIH durante el parto',
       ],
       'tratamiento_retroviral_parto' => [
          'text' => 'Tratamiento antiretroviral al parto',
