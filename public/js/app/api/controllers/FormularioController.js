@@ -37063,9 +37063,9 @@ var FormularioController = new _vue2.default({
          methods: {}
       },
       'inputs': {
-         props: ['name', 'id', 'type', 'max_length', 'required', 'readonly', 'class_custom', 'style_custom'],
+         props: ['name', 'id', 'type', 'max_length', 'required', 'readonly', 'class_custom', 'style_custom', 'placeholder'],
          'name': 'inputs',
-         'template': '\n            <input :name="name"\n                   :id="id"\n                   :type="type"\n                   :max-lenght="max_lenght"\n                   :required="required"\n                   :readonly="readonly"\n                   :style="style_custom!=\'\'?style_custom:\'\'"\n                   :class="class_custom!=\'\'?class_custom:\'form-control\'" />\n         ',
+         'template': '\n            <input :name="name!=\'\'?name:id"\n                   :id="id!=\'\'?id:name"\n                   :type="type!=\'\'?type:text"\n                   :max-lenght="max_lenght!=\'\'?max_lenght:25"\n                   :required="required!=\'\'?required:false"\n                   :readonly="readonly!=\'\'?readonly:false"\n                   :style="style_custom!=\'\'?style_custom:\'\'"\n                   :class="class_custom!=\'\'?class_custom:\'form-control\'"\n                   :placeholder="placeholder!=\'\'?placeholder:\'\'" />\n         ',
          data: function data() {},
          ready: function ready() {},
          created: function created() {},

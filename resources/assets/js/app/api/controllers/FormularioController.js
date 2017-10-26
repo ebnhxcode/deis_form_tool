@@ -21,7 +21,7 @@ const FormularioController = new Vue({
    el: '#FormularioController ',
    data(){
       return {
-         'instructions':[],   
+         'instructions':[],
          'inputs':[],
          'labels':[],
          'nav_tab_form_deis':[],
@@ -246,17 +246,18 @@ const FormularioController = new Vue({
          methods: {},
       },
       'inputs':{
-         props: ['name','id','type', 'max_length', 'required', 'readonly', 'class_custom', 'style_custom'],
+         props: ['name','id','type', 'max_length', 'required', 'readonly', 'class_custom', 'style_custom', 'placeholder'],
          'name': 'inputs',
          'template': `
-            <input :name="name"
-                   :id="id"
-                   :type="type"
-                   :max-lenght="max_lenght"
-                   :required="required"
-                   :readonly="readonly"
+            <input :name="name!=''?name:id"
+                   :id="id!=''?id:name"
+                   :type="type!=''?type:text"
+                   :max-lenght="max_lenght!=''?max_lenght:25"
+                   :required="required!=''?required:false"
+                   :readonly="readonly!=''?readonly:false"
                    :style="style_custom!=''?style_custom:''"
-                   :class="class_custom!=''?class_custom:'form-control'" />
+                   :class="class_custom!=''?class_custom:'form-control'"
+                   :placeholder="placeholder!=''?placeholder:''" />
          `,
          data () {},
          ready () {},
