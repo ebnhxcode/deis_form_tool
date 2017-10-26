@@ -21,7 +21,7 @@ const FormularioController = new Vue({
    el: '#FormularioController ',
    data(){
       return {
-         'instructions':[],
+         'instructions':[],   
          'inputs':[],
          'labels':[],
          'nav_tab_form_deis':[],
@@ -367,6 +367,13 @@ const FormularioController = new Vue({
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          console.log(tabName);
 
+         for (let i in this.inputs) {
+            if (this.inputs[i].seccion.nombre == tabName) {
+               console.log( $('#'+this.inputs[i].directivas.name).val() );
+            }
+         }
+
+
          /*
          this.$http.post('/formulario', formData).then(response => { // success callback
             //console.log(response);
@@ -374,6 +381,7 @@ const FormularioController = new Vue({
             console.log('Error : '+response);
          });
          */
+
 
          return;
       },

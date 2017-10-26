@@ -37165,6 +37165,12 @@ var FormularioController = new _vue2.default({
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          console.log(tabName);
 
+         for (var i in this.inputs) {
+            if (this.inputs[i].seccion.nombre == tabName) {
+               console.log($('#' + this.inputs[i].directivas.name).val());
+            }
+         }
+
          /*
          this.$http.post('/formulario', formData).then(response => { // success callback
             //console.log(response);
