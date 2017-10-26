@@ -127,7 +127,7 @@
                                           <!-- Prop para permitir insertar una cabecera de titulo -->
                                           <div v-if="labels[i.directivas.id] && labels[i.directivas.id].tag" class="col-md-12">
                                              <h3>
-                                                @{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}
+                                                <b>@{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}</b>
                                              </h3>
                                              <br>
                                           </div>
@@ -135,7 +135,7 @@
                                           <div v-if="labels[i.directivas.id] && labels[i.directivas.id].subtag" class="col-md-12"
                                                style="padding-bottom: 10px;">
                                              <h4>
-                                                @{{ labels[i.directivas.id].subtag ? labels[i.directivas.id].subtag : '' }}
+                                                <b>@{{ labels[i.directivas.id].subtag ? labels[i.directivas.id].subtag : '' }}</b>
                                              </h4>
                                           </div>
 

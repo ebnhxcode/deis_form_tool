@@ -70,7 +70,9 @@ return [
       'resultado_2_examen_vih_embarazo',
       'eg_2_examen_vih',
       'fecha_resultado_final_isp_examen_vih',
+      'fecha_resultado_final_isp_examen_vih_recien_nacido',
       'resultado_final_isp_examen_vih',
+      'resultado_final_isp_examen_vih_recien_nacido',
       'derivada_a_especialidades_embarazo',
       'fecha_ingreso_unacess',
       'fecha_ingreso_control_unidad_alto_riesgo',
@@ -3326,7 +3328,7 @@ return [
             'name' => 'tratamiento_recien_nacido_dosis',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Dosis de cantidad / horas',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -3348,7 +3350,7 @@ return [
             'name' => 'tratamiento_recien_nacido_frecuencia',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 5',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -3423,7 +3425,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_inicio_sustituto_leche_materna' => [
@@ -3445,7 +3447,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'hora_inicio_sustituto_leche_materna' => [
@@ -3467,7 +3469,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'entrega_sustituto_leche_materna_al_alta' => [
@@ -3489,7 +3491,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
@@ -3512,7 +3514,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_inicio_farmaco_1_vih_recien_nacido' => [
@@ -3534,7 +3536,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'hora_inicio_farmaco_1_vih_recien_nacido' => [
@@ -3556,7 +3558,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'dosis_farmaco_1_vih_recien_nacido' => [
@@ -3578,7 +3580,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
@@ -3601,7 +3603,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_inicio_farmaco_2_vih_recien_nacido' => [
@@ -3623,7 +3625,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'hora_inicio_farmaco_2_vih_recien_nacido' => [
@@ -3645,7 +3647,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'dosis_farmaco_2_vih_recien_nacido' => [
@@ -3667,7 +3669,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
@@ -3786,47 +3788,7 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-      'diagnostico_final_vih_isp_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'diagnostico_final_vih_isp_recien_nacido',
-            'name' => 'diagnostico_final_vih_isp_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'datos_recien_nacido'
-         ],
-         'class_custom' => [
-            'class' => 'col-md-12'
-         ]
-      ],
-      'fecha_test_elisa_18_meses' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_test_elisa_18_meses',
-            'name' => 'fecha_test_elisa_18_meses',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'datos_recien_nacido'
-         ]
-      ],
+
       'resultado_test_elisa_18_meses' => [
          'directivas' => [
             'type' => 'select',
@@ -3846,6 +3808,28 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
+
+      'fecha_test_elisa_18_meses' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_test_elisa_18_meses',
+            'name' => 'fecha_test_elisa_18_meses',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ]
+      ],
+
+
 
       'resultado_final_isp_examen_vih_recien_nacido' => [
          'directivas' => [
@@ -3872,8 +3856,8 @@ return [
       'fecha_resultado_final_isp_examen_vih_recien_nacido' => [
          'directivas' => [
             'type' => 'date',
-            'id' => 'resultado_final_isp_examen_vih_recien_nacido',
-            'name' => 'resultado_final_isp_examen_vih_recien_nacido',
+            'id' => 'fecha_resultado_final_isp_examen_vih_recien_nacido',
+            'name' => 'fecha_resultado_final_isp_examen_vih_recien_nacido',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -3891,7 +3875,28 @@ return [
             'class' => 'col-sm-6 col-md-6'
          ]
       ],
-
+      'diagnostico_final_vih_isp_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'diagnostico_final_vih_isp_recien_nacido',
+            'name' => 'diagnostico_final_vih_isp_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ]
+      ],
          #Quinta Parte
 
       'derivacion_recien_nacido_a_seguimiento' => [
@@ -4469,14 +4474,14 @@ return [
          'text' => 'Resultado Final ISP Exámen VIH',
       ],
       'fecha_resultado_final_isp_examen_vih_recien_nacido' => [
-         'text' => 'Fecha Resultado Final ISP Examen VIH Recien nacido',
+         'text' => 'Fecha Resultado Final ISP Examen VIH Recién nacido',
       ],
       'resultado_final_isp_examen_vih_recien_nacido' => [
-         'text' => 'Resultado Final ISP Exámen VIH Recien nacido',
+         'text' => 'Resultado Final ISP Exámen VIH Recién nacido',
       ],
       'derivada_a_especialidades_embarazo' => [
          'text' => 'Derivada a Especialidades en este embarazo',
-         'tag' => 'Derivacion a especialidades por sífilis o VIH',
+         'tag' => 'Derivación a especialidades por sífilis o VIH',
       ],
       'fecha_ingreso_unacess' => [
          'text' => 'Fecha de ingreso a UNACESS',
@@ -4699,20 +4704,22 @@ return [
          'text' => 'Frecuencia N° de Días',
       ],
       'sustituto_leche_materna' => [
-         'text' => 'Sustituto de Leche Materna',
+         'text' => '¿Sustituto de Leche Materna?',
          'tag' => 'Seguimiento VIH R.N.',
+         'subtag' => 'Leche materna'
       ],
       'fecha_inicio_sustituto_leche_materna' => [
          'text' => 'Fecha inicio Sustituto de Leche Materna',
       ],
       'hora_inicio_sustituto_leche_materna' => [
-         'text' => 'Hora  inicio sustituto de Leche Materna',
+         'text' => 'Hora inicio sustituto de Leche Materna',
       ],
       'entrega_sustituto_leche_materna_al_alta' => [
-         'text' => 'Entrega de Sustituto de Leche Materna al alta',
+         'text' => '¿Entrega de Sustituto de Leche Materna al alta?',
       ],
       'nombre_farmaco_1_vih_recien_nacido' => [
-         'text' => 'Nombre Farmaco 1 ( VIH) Recién Nacido',
+         'text' => 'Nombre Farmaco 1 (VIH) Recién Nacido',
+         'subtag' => 'Farmaco 1 recien nacido',
       ],
       'dosis_farmaco_1_vih_recien_nacido' => [
          'text' => 'Dosis Farmaco 1 (VIH) Recién Nacido',
@@ -4725,6 +4732,7 @@ return [
       ],
       'nombre_farmaco_2_vih_recien_nacido' => [
          'text' => 'Nombre Farmaco 2 (VIH) Recién Nacido',
+         'subtag' => 'Farmaco 2 recien nacido',
       ],
       'dosis_farmaco_2_vih_recien_nacido' => [
          'text' => 'Dosis Farmaco 2 (VIH) Recién Nacido',
@@ -4737,6 +4745,7 @@ return [
       ],
       'fecha_1_examen_pcr_recien_nacido' => [
          'text' => 'Fecha 1° exámen de PCR recién nacido',
+         'subtag' => 'Exámenes PCR del recién nacido',
       ],
       'resultado_1_examen_pcr_recien_nacido' => [
          'text' => 'Resultado  1° exámen de PCR recien nacido',
@@ -4761,6 +4770,7 @@ return [
       ],
       'resultado_test_elisa_18_meses' => [
          'text' => 'Resultado Test de Elisa a los 18 meses de edad',
+         'subtag' => 'Resultados Test Elisa',
       ],
       'fecha_examen_treponemico_recien_nacido' => [
          'text' => 'Fecha Exámen treponémico del Recien Nacido',
