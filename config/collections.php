@@ -37,6 +37,21 @@ return [
 
    'deis_form_table_options' => [
 
+      'pueblos_indigenas' => [
+         'Mapuche' => 'Mapuche',
+         'Aymara' => 'Aymara',
+         'Rapa Nui' => 'Rapa Nui',
+         'Lican-Antai' => 'Lican-Antai',
+         'Quechua' => 'Quechua',
+         'Colla' => 'Colla',
+         'Diaguita' => 'Diaguita',
+         'Kawesqar' => 'Kawesqar',
+         'Yagan' => 'Yagan',
+         'Otro' => 'Otro',
+         'Ninguno' => 'Ninguno',
+
+      ],
+
       'embarazo_con_control_parental' => [
          'Si' => 'Si',
          'No' => 'No',
@@ -232,6 +247,7 @@ return [
 
 
       'resultado_dilucion_vdrl_parto' => [
+         '1:1' => '1:1',
          '1:2' => '1:2',
          '1:4' => '1:4',
          '1:8' => '1:8',
@@ -296,6 +312,7 @@ return [
       ],
 
       'titulacion_vdrl_periferico_recien_nacido' => [
+         '1:1' => '1:1',
          '1:2' => '1:2',
          '1:4' => '1:4',
          '1:8' => '1:8',
@@ -312,6 +329,7 @@ return [
       ],
 
       'titulacion_vdrl_liq_cefalo_recien_nacido' => [
+         '1:1' => '1:1',
          '1:2' => '1:2',
          '1:4' => '1:4',
          '1:8' => '1:8',
@@ -450,6 +468,7 @@ return [
       ],
 
       'resultado_dilucion_1_vdrl_embarazo' => [
+         '1:1' => '1:1',
          '1:2' => '1:2',
          '1:4' => '1:4',
          '1:8' => '1:8',
@@ -468,6 +487,7 @@ return [
       ],
 
       'resultado_dilucion_2_vdrl_embarazo' => [
+         '1:1' => '1:1',
          '1:2' => '1:2',
          '1:4' => '1:4',
          '1:8' => '1:8',
@@ -485,6 +505,7 @@ return [
       ],
 
       'resultado_dilucion_3_vdrl_embarazo' => [
+         '1:1' => '1:1',
          '1:2' => '1:2',
          '1:4' => '1:4',
          '1:8' => '1:8',

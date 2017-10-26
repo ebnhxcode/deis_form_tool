@@ -143,18 +143,27 @@
                               <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
-                           <button class="btn-link" type="button" data-toggle="collapse"
+                           <button class="btn btn-success" type="button" data-toggle="collapse"
                                    data-target="#instructions" aria-expanded="false" aria-controls="instructions">
                               <small>Leer instrucciones</small>
                            </button>
 
-                           <button class="btn btn-sm btn-link pull-right small" @click.prevent="buscar_formulario">
+                           <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario">
                               Buscar formulario
                               <i class="fa fa-search"></i>
-                              <modal_buscar_formulario
-                                 v-if="show_modal_buscar_formulario == true">
-                              </modal_buscar_formulario>
                            </button>
+                           <modal_buscar_formulario
+                              v-if="show_modal_buscar_formulario == true">
+                              <h3 slot="header">
+                                 Buscar formulario
+                                 <button class="btn btn-sm btn-default pull-right" @click.prevent="show_modal_buscar_formulario = false">
+                                    Cerrar
+                                 </button>
+                                 <!--
+                                    <button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>
+                                 -->
+                              </h3>
+                           </modal_buscar_formulario>
 
                            <div class="collapse" id="instructions">
                               <h4>Instrucciones:</h4> <br>

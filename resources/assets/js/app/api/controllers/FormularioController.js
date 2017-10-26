@@ -312,9 +312,71 @@ const FormularioController = new Vue({
 
 						      <div class="modal-body">
 							      <slot name="body">
-                              <dl class="dl-vertical">
+
+
+
+
+
+
+                        <div id="" class="panel with-nav-tabs panel-primary">
+                           <!-- Items elementos de cabecera -->
+                           <div class="panel-heading">
+                              <!-- Nav tabs -->
+                              <ul class="nav nav-tabs small" role="tablist">
+
+                                 <li role="presentation" class="active">
+                                    <a href="#lista_formularios" aria-controls="lista_formularios" role="tab" data-toggle="tab">
+                                       Lista de Formularios
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div><!-- .panel-heading -->
+
+                           <div class="panel-body">
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+
+                                 <div role="tabpanel" class="'tab-pane fade in active" id="lista_formularios">
+
+                                    <div class="table-responsive">
+                                       <table class="table table-striped">
+                                          <thead>
+                                             <tr>
+                                                <th>Head 1</th>
+                                                <th>Head 2</th>
+                                                <th>Head 3</th>
+                                                <th>Head 4</th>
+                                                <th>Head 5</th>
+                                                <th>Head 6</th>
+                                             </tr>
+                                          </thead>
+                                          <tbody>
+                                             <tr>
+                                                <td>Item 1</td>
+                                                <td>Item 2</td>
+                                                <td>Item 3</td>
+                                                <td>Item 4</td>
+                                                <td>Item 5</td>
+                                                <td>Item 6</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+
+                                 </div>
+
+                              </div><!-- .panel-heading -->
+                           </div><!-- .panel-heading -->
+                        </div><!-- .panel-heading -->
+
+
+
+
+                              <!--
+                               <dl class="dl-vertical">
                                  <div class="row">
 									         <div style="overflow-y: scroll;max-height: 400px;">
+
                                        <div class="col-md-6">
                                           <dt></dt>
                                           <dd class="well well-sm"></dd>
@@ -324,9 +386,10 @@ const FormularioController = new Vue({
                                           <dd class="well well-sm"></dd>
                                        </div>
 
-                                    </div><!-- styled -->
-                                 </div><!-- .row -->
+                                    </div>
+                                 </div>
                               </dl>
+                              -->
 							      </slot>
 						      </div>
 

@@ -1,11 +1,20 @@
 <?php
 
 return [
+   #Edades Gestacionales
+   'edades_gestacionales' => [
+      1=>1,2=>2,3=>3,4=>4,5=>5,6=>6,7=>7,8=>8,9=>9,10=>10,
+      11=>11,12=>12,13=>13,14=>14,15=>15,16=>16,17=>17,18=>18,19=>19,20=>20,
+      21=>21,22=>22,23=>23,24=>24,25=>25,26=>26,27=>27,28=>28,29=>29,30=>30,
+      31=>31,32=>32,33=>33,34=>34,35=>35,36=>36,37=>37,38=>38,39=>39,40=>40,
+      41=>41,42=>42
+   ],
    #Instrucciones
    'deis_form_instructions' => [
       0=>'Debe completar todos los campos que han sido definidos como obligatorios, se pueden reconocer con el simbolo (*).',
       1=>'Puede guardar el estado del formulario para no perder los cambios realizados (borrador).',
       2=>'Solo completar con los datos solicitados',
+      3=>'Cuando digite fechas, siempre debe comenzar por el día',
    ],
 
 
@@ -884,50 +893,7 @@ return [
          ]
       ],
 
-      'resultado_final_isp_examen_vih' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'resultado_final_isp_examen_vih',
-            'name' => 'resultado_final_isp_examen_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-            'class' => 'col-sm-3 col-md-3'
-         ]
-      ],
-      'fecha_resultado_final_isp_examen_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_resultado_final_isp_examen_vih',
-            'name' => 'fecha_resultado_final_isp_examen_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'control_embarazo'
-         ],
-         'class_custom' => [
-               'class' => 'col-sm-3 col-md-3'
-         ]
-      ],
+
 
 
 
@@ -1061,6 +1027,51 @@ return [
          ],
          'class_custom' => [
             'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+
+      'resultado_final_isp_examen_vih' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'resultado_final_isp_examen_vih',
+            'name' => 'resultado_final_isp_examen_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4'
+         ]
+      ],
+      'fecha_resultado_final_isp_examen_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_resultado_final_isp_examen_vih',
+            'name' => 'fecha_resultado_final_isp_examen_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-4 col-md-4 col-md-offset-1'
          ]
       ],
 
@@ -2970,7 +2981,7 @@ return [
             'placeholder' => '',
             'required' => '',
             'class' => '',
-            'style' => 'min-width: 90px !important;',
+            'style' => 'min-width: 80px !important;',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -2992,7 +3003,7 @@ return [
             'placeholder' => 'Ej: 1',
             'required' => '',
             'class' => '',
-            'style' => 'min-width: 90px !important;',
+            'style' => 'min-width: 80px !important;',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -3014,7 +3025,7 @@ return [
             'placeholder' => 'Ej: 3300',
             'required' => '',
             'class' => '',
-            'style' => 'min-width: 120px !important;',
+            'style' => 'min-width: 110px !important;',
          ],
          'bloque' => [
             'nombre' => 'sin_examenes'
@@ -4354,7 +4365,7 @@ return [
          'text' => 'Lugar Control Prenatal',
       ],
       'lugar_control_prenatal_otro' => [
-         'text' => 'Lugar Control Prenatal (Otro)',
+         'text' => 'Otro Lugar Control Prenatal: Especifique',
       ],
       'codigo_establecimiento_control_prenatal_embarazo' => [
          'text' => 'Tipo de Establecimiento control prenatal',
@@ -4461,7 +4472,6 @@ return [
       ],
       'eg_2_examen_vih' => [
          'text' => 'EG del 2° Examen VIH',
-         'empty_column' => 'col-sm-3 col-md-3',
          'order' => '3.'
       ],
       'fecha_resultado_final_isp_examen_vih' => [
@@ -4469,6 +4479,7 @@ return [
       ],
       'resultado_final_isp_examen_vih' => [
          'text' => 'Resultado Final ISP Exámen VIH',
+         'subtag' => 'Resultado de examen ISP',
       ],
       'fecha_resultado_final_isp_examen_vih_recien_nacido' => [
          'text' => 'Fecha Resultado Final ISP Examen VIH Recién nacido',
