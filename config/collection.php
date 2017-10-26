@@ -197,7 +197,7 @@ return [
             'name' => 'run_madre',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 123456789',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -207,7 +207,8 @@ return [
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
-         ]
+         ],
+         'class_custom' => ''
       ],
       'n_correlativo_interno' => [
          'directivas' => [

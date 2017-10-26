@@ -36,10 +36,6 @@ const FormularioController = new Vue({
             'h1','h2','h3','h4','h5','h6'
          ],
 
-         'paso1_filtro':true,
-         'paso2_confirmar':false,
-         'paso3_crear':false,
-         'paso4_finalizar':false,
          'spinner_iniciar':true,
          'spinner_finalizar':false,
 
@@ -334,7 +330,7 @@ const FormularioController = new Vue({
 
       fetchFormulario: function () {
          this.$http.get('/formulario').then(response => { // success callback
-            console.log(response);
+            //console.log(response);
 
             this.inputs = response.body.inputs;
             this.labels = response.body.labels;
@@ -351,7 +347,7 @@ const FormularioController = new Vue({
             self.spinner_iniciar = false;
           }, 1500);
 
-         console.log('FormularioController');
+         //console.log('FormularioController');
 
 
          return;
@@ -359,14 +355,14 @@ const FormularioController = new Vue({
 
 
       guardarFormulario: function (tabName) {
-         this.spinner_finalizar = true;
+         //this.spinner_finalizar = true;
          var formData = new FormData();
          formData.append('campo', {object:'Object'});
 
          formData.append('_token', $('#_token').val());
 
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         console.log(tabName);
+         //console.log(tabName);
 
          for (let i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {

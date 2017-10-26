@@ -125,13 +125,14 @@
 
                                        <div v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
 
+                                          <!-- Prop para permitir insertar una cabecera de titulo -->
                                           <div v-if="labels[i.directivas.id] && labels[i.directivas.id].tag" class="col-md-12">
                                              <h3>
                                                 @{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}
                                              </h3>
                                              <br>
                                           </div>
-
+                                          <!-- Prop para permitir insertar una cabecera de subtitulo -->
                                           <div v-if="labels[i.directivas.id] && labels[i.directivas.id].subtag" class="col-md-12">
                                              <h4>
                                                 @{{ labels[i.directivas.id].subtag ? labels[i.directivas.id].subtag : '' }}
@@ -146,10 +147,9 @@
                                                 @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
                                              </dt>
 
-
                                              <!-- Input basicos como text,number,time,date,etc -->
                                              <dd v-if="inputInArray(i,inputTypes.basics)">
-                                                <inputs :name="i.directivas.name"
+                                                <input :name="i.directivas.name"
                                                         :id="i.directivas.id"
                                                         :type="i.directivas.type"
                                                         :max-length="i.directivas.max_length"
@@ -157,8 +157,8 @@
                                                         :readonly="i.directivas.readonly"
                                                         :class="i.directivas.class!=''?i.directivas.class:'form-control'"
                                                         :style="i.directivas.style!=''?i.directivas.style:''"
-                                                        v-model="deis_form_inputs[i.directivas.name]"
-                                                ></inputs>
+                                                        v-model="i.directivas.value"
+                                                >
                                              </dd>
 
                                              <!-- Select Inputs -->
