@@ -37162,7 +37162,7 @@ var FormularioController = new _vue2.default({
             }
          }
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         formData.append('_token', $('#_token').val());
+         //formData.append('_token', $('#_token').val());
 
          this.$http.post('/formulario', formData).then(function (response) {
             // success callback

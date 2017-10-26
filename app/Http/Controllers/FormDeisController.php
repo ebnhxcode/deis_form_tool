@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\FormDeis;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use DB;
 
 
 class FormDeisController extends Controller {
@@ -37,13 +38,14 @@ class FormDeisController extends Controller {
     public function store (Request $request) {
 
         $fd = new FormDeis();
-        return $fd;
         $formData = $request->all();
         foreach ($formData as $key => $d) {
             if ($d) { $fd[$key] = $d; }
         }
+        return $fd;
+        $result = FormDeis::create($formData);
 
-        return $fd->save();
+        return $result;
         #return gettype($formData);
 
         return $fd;

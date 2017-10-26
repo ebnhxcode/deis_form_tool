@@ -165,7 +165,7 @@ return [
 
       'terapia_antiretroviral_farmaco_1' => [
          'Zidovudina' => 'Zidovudina',
-         'Abacabir' => 'Abacabir',
+         'Abacavir' => 'Abacavir',
          'Tenofovir' => 'Tenofovir',
       ],
 
@@ -179,7 +179,7 @@ return [
          'Nevirapina' => 'Nevirapina',
          'Atazanavir' => 'Atazanavir',
          'Fosamprenavir' => 'Fosamprenavir',
-         'Liponavir / Ritonavir' => 'Liponavir / Ritonavir',
+         'Lopinavir / Ritonavir' => 'Lopinavir / Ritonavir',
          'Saquinavir + Ritonavir' => 'Saquinavir + Ritonavir',
          'Raltegravir' => 'Raltegravir',
          'Otro' => 'Otro',

@@ -364,7 +364,7 @@ const FormularioController = new Vue({
             }
          }
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         formData.append('_token', $('#_token').val());
+         //formData.append('_token', $('#_token').val());
 
          this.$http.post('/formulario', formData).then(response => { // success callback
             console.log(response);
