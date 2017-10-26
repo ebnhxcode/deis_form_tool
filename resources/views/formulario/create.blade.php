@@ -149,7 +149,7 @@
                            </button>
 
                            <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario">
-                              Buscar formulario
+                              Buscar Persona
                               <i class="fa fa-search"></i>
                            </button>
                            <modal_buscar_formulario

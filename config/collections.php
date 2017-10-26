@@ -461,9 +461,8 @@ return [
 
 
       'resultado_1_vdrl_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
@@ -480,9 +479,8 @@ return [
 
 
       'resultado_2_vdrl_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
@@ -498,9 +496,8 @@ return [
       ],
 
       'resultado_3_vdrl_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
@@ -516,26 +513,24 @@ return [
       ],
 
       'resultado_1_examen_vih_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
       'resultado_2_examen_vih_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
 
       'resultado_1_examen_pcr_recien_nacido' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
+
       'resultado_2_examen_pcr_recien_nacido' => [
          'Positivo' => 'Positivo',
          'Negativo' => 'Negativo',

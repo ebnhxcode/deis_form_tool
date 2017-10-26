@@ -4308,6 +4308,7 @@ return [
       ],
       'estado_civil' => [
          'text' => 'Estado Civil',
+         'subtag' => 'Datos Sociodemográficos',
       ],
       'tipo_de_convivencia' => [
          'text' => 'Tipo de Convivencia',
@@ -4496,7 +4497,6 @@ return [
       ],
       'fecha_ingreso_control_unidad_alto_riesgo' => [
          'text' => 'Fecha de ingreso a ALTO RIESGO',
-         'tag' => 'Datos Sociodemográficos',
          'subtag' => 'Fechas de ingreso a especialidades'
       ],
       'fecha_ingreso_control_centro_atencion_vih' => [
