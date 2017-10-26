@@ -1091,8 +1091,30 @@ return [
 
 
 
-      #Patologías Sífilis - patologias_sifilis
+      #Patologías Sífilis | Control Sifilis - patologias_sifilis
          #Primer bloque
+      'fecha_ingreso_control_unidad_alto_riesgo' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ingreso_control_unidad_alto_riesgo',
+            'name' => 'fecha_ingreso_control_unidad_alto_riesgo',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
       'fecha_ingreso_unacess' => [
          'directivas' => [
             'type' => 'date',
@@ -1111,44 +1133,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
-         ]
-      ],
-      'fecha_ingreso_control_unidad_alto_riesgo' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_unidad_alto_riesgo',
-            'name' => 'fecha_ingreso_control_unidad_alto_riesgo',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
          ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis'
-         ]
-      ],
-      'fecha_ingreso_control_centro_atencion_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_control_centro_atencion_vih',
-            'name' => 'fecha_ingreso_control_centro_atencion_vih',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis'
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_ingreso_control_otras_especialidades' => [
@@ -1168,6 +1155,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_ingreso_control_otras_especialidades_otro' => [
@@ -1177,7 +1167,7 @@ return [
             'name' => 'fecha_ingreso_control_otras_especialidades_otro',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Lugar de Especilidad',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1189,7 +1179,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
          #Segundo bloque
@@ -1300,7 +1290,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
          #Tercer bloque
@@ -1412,7 +1402,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       'ano_sifilis_previa_embarazo' => [
@@ -1434,7 +1424,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       'otra_its_previa_embarazo' => [
@@ -1456,7 +1446,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
          #Cuarto bloque
@@ -1479,7 +1469,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       'resultado_treponemico' => [
@@ -1501,7 +1491,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       'diagnostico_sifilis_embarazo' => [
@@ -1523,7 +1513,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
          #Quinto bloque
@@ -1550,7 +1540,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       'tratamiento_sifilis_dosis' => [
@@ -1572,7 +1562,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       'tratamiento_sifilis_frecuencia' => [
@@ -1594,7 +1584,7 @@ return [
             'nombre' => 'patologias_sifilis'
          ],
          'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
 
@@ -1617,7 +1607,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis',
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ],
       ],
       'fecha_administracion_ult_dosis_penicilina_gestante' => [
          'directivas' => [
@@ -1636,7 +1629,10 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_sifilis',
-         ]
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ],
       ],
 
       'numero_contactos_sexuales_declarados' => [
@@ -1884,7 +1880,7 @@ return [
             'name' => 'anos_estudio',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 5',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1941,7 +1937,7 @@ return [
             'nombre' => 'patologias_vih'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
@@ -4297,6 +4293,7 @@ return [
       ],
       'otra_its_previa_embarazo' => [
          'text' => 'Otras ITS  Previa a este embarazo',
+         'empty_column' => 'col-sm-3 col-md-3'
       ],
       'vih_conocido_previa_embarazo' => [
          'text' => 'VIH conocido   Previa a este embarazo',
@@ -4388,6 +4385,7 @@ return [
       ],
       'diagnostico_sifilis_embarazo' => [
          'text' => 'Diagnostico de Sifilis en Embarazo',
+         'empty_column' => 'col-sm-3 col-md-3',
       ],
       'tratamiento_sifilis_farmaco' => [
          'text' => 'Tratamiento Sifilis  Fámaco',
@@ -4398,6 +4396,7 @@ return [
       ],
       'tratamiento_sifilis_frecuencia' => [
          'text' => 'Tratamiento Sifilis Frecuencia',
+         'empty_column' => 'col-md-3',
       ],
       'acepta_rechaza_toma_examen_vih' => [
          'text' => 'Acepta/rechaza toma de examen VIH',
@@ -4443,19 +4442,20 @@ return [
       ],
       'fecha_ingreso_unacess' => [
          'text' => 'Fecha de ingreso a UNACESS',
-         'tag' => 'Datos Sociodemográficos',
       ],
       'fecha_ingreso_control_unidad_alto_riesgo' => [
          'text' => 'Fecha de ingreso a ALTO RIESGO',
+         'tag' => 'Datos Sociodemográficos',
+         'subtag' => 'Fechas de ingreso a especialidades'
       ],
       'fecha_ingreso_control_centro_atencion_vih' => [
          'text' => 'Fecha de ingreso a centro de atención VIH',
       ],
       'fecha_ingreso_control_otras_especialidades' => [
-         'text' => 'Fecha de ingreso a control a otro lugar de especialidades',
+         'text' => 'Fecha de ingreso a control en otro lugar',
       ],
       'fecha_ingreso_control_otras_especialidades_otro' => [
-         'text' => 'Otro',
+         'text' => 'Otro lugar de especialidades',
       ],
       'terapia_antiretroviral_farmaco_1' => [
          'text' => 'Fármaco 1',
@@ -4769,10 +4769,11 @@ return [
          'text' => 'Pareja VIH positivo',
       ],
       'fecha_administracion_1_dosis_penicilina_gestante' => [
-         'text' => 'Fecha administración primera dosis penicilina gestante',
+         'text' => 'Fecha administración primera dosis penicilina',
       ],
       'fecha_administracion_ult_dosis_penicilina_gestante' => [
-         'text' => 'Fecha administración última dosis penicilina gestante',
+         'text' => 'Fecha administración última dosis penicilina',
+         'empty_column' => 'col-md-6 col-sm-6',
       ],
    ],
 
