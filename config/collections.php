@@ -378,13 +378,10 @@ return [
          'Pendiente' => 'Pendiente',
       ],
 
-
-
+      
       'resultado_test_elisa_18_meses' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
-         'No Realizado' => 'No Realizado',
+         'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
       ],
 
 

@@ -132,7 +132,8 @@
                                              <br>
                                           </div>
                                           <!-- Prop para permitir insertar una cabecera de subtitulo -->
-                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].subtag" class="col-md-12">
+                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].subtag" class="col-md-12"
+                                               style="padding-bottom: 10px;">
                                              <h4>
                                                 @{{ labels[i.directivas.id].subtag ? labels[i.directivas.id].subtag : '' }}
                                              </h4>

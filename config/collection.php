@@ -1256,7 +1256,7 @@ return [
             'name' => 'anos_estudio',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: 5',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1588,9 +1588,6 @@ return [
          ],
       ],
 
-
-
-
       'numero_contactos_sexuales_declarados' => [
          'directivas' => [
             'type' => 'number',
@@ -1708,26 +1705,6 @@ return [
       #Patologías VIH - patologias_vih
 
          #Primer bloque
-      'fecha_ingreso_unacess_vih' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_ingreso_unacess',
-            'id' => 'fecha_ingreso_unacess',
-            'name' => 'fecha_ingreso_unacess',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_vih'
-         ]
-      ],
       'fecha_ingreso_control_unidad_alto_riesgo_vih' => [
          'directivas' => [
             'type' => 'date',
@@ -1745,6 +1722,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       #Este caso es asi-> _vih_vih
@@ -1765,6 +1745,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_ingreso_control_otras_especialidades_vih' => [
@@ -1784,6 +1767,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'patologias_vih'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_ingreso_control_otras_especialidades_otro_vih' => [
@@ -1793,7 +1779,7 @@ return [
             'name' => 'fecha_ingreso_control_otras_especialidades_otro',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Otro lugar especialidad',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -1805,7 +1791,7 @@ return [
             'nombre' => 'patologias_vih'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'estado_civil_vih' => [
@@ -1915,8 +1901,8 @@ return [
             'nombre' => 'patologias_vih'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
-         ],
+            'class' => 'col-sm-3 col-md-3'
+         ]
       ],
 
          #Segundo bloque
@@ -1960,7 +1946,7 @@ return [
             'nombre' => 'patologias_vih'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'adicciones' => [
@@ -1982,7 +1968,7 @@ return [
             'nombre' => 'patologias_vih'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
@@ -2005,10 +1991,11 @@ return [
             'nombre' => 'patologias_vih',
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-sm-3 col-md-3'
          ],
       ],
       #Hacer el bind v-model con el que no tiene prefijo _vih
+
       'numero_contactos_sexuales_declarados_vih' => [
          'directivas' => [
             'type' => 'number',
@@ -2357,7 +2344,7 @@ return [
             'name' => 'terapia_antiretroviral_tar_farmaco_3_otro',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Nombre del Fármaco',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -4297,7 +4284,7 @@ return [
          'empty_column' => 'col-sm-3 col-md-3'
       ],
       'vih_conocido_previa_embarazo' => [
-         'text' => 'VIH conocido   Previa a este embarazo',
+         'text' => 'VIH conocido Previa a este embarazo',
          'tag' => 'Antecedentes',
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
@@ -4506,6 +4493,7 @@ return [
       ],
       'fecha_examen_carga_viral_semana_34' => [
          'text' => 'Fecha de Examen de Carga Viral',
+         'tag' => 'Exámenes Semana 34',
       ],
       'numero_contactos_sexuales_tratados' => [
          'text' => 'Número de parejas tratadas',
