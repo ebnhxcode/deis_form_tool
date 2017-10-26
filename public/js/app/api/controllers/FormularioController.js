@@ -37157,19 +37157,30 @@ var FormularioController = new _vue2.default({
       guardarFormulario: function guardarFormulario(tabName) {
          //this.spinner_finalizar = true;
          var formData = new FormData();
+         //var formData = [];
          var permiteGuardar = false;
          //console.log(tabName);
          for (var i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {
-               formData.append('' + this.inputs[i].directivas.name, '' + this.inputs[i].directivas.value);
+               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
             }
          }
+
+         /*
+         let headers = new Headers({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json;'
+         });
+         */
+         //let options = new RequestOptions({ headers: this.headers });
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
+         formData.append('_id_formulario', this.fdc.id);
 
          this.$http.post('/formulario', formData).then(function (response) {
             // success callback
             console.log(response);
+            alert('Guardado');
          }, function (response) {
             // error callback
             console.log(response);
@@ -37190,6 +37201,8 @@ var FormularioController = new _vue2.default({
       //with_dash() => for explained specific functions
    }
 });
+
+var ListaController = new _vue2.default({});
 
 },{"lodash":2,"vee-validate":5,"vee-validate/dist/locale/es":4,"vue-resource":6,"vue/dist/vue.common":7,"vue2-filters":8}]},{},[9]);
 

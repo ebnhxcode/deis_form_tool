@@ -190,9 +190,6 @@ return [
 
       #Identificacion de la mujer - identificacion_mujer
 
-
-
-
       'run_madre' => [
          'directivas' => [
             'type' => 'text',

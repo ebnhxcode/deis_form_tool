@@ -359,18 +359,30 @@ const FormularioController = new Vue({
       guardarFormulario: function (tabName) {
          //this.spinner_finalizar = true;
          var formData = new FormData();
+         //var formData = [];
          var permiteGuardar = false;
          //console.log(tabName);
          for (let i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {
-               formData.append(`${this.inputs[i].directivas.name}`, `${this.inputs[i].directivas.value}`);
+               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
             }
          }
+
+
+         /*
+         let headers = new Headers({
+            'Content-Type': 'application/json',
+            'Accept': 'application/json;'
+         });
+         */
+         //let options = new RequestOptions({ headers: this.headers });
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
+         formData.append('_id_formulario', this.fdc.id);
 
          this.$http.post('/formulario', formData).then(response => { // success callback
             console.log(response);
+            alert('Guardado');
          }, response => { // error callback
             console.log(response);
          });

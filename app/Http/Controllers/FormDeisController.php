@@ -31,8 +31,10 @@ class FormDeisController extends Controller {
         $returnData['instructions'] = config('collection.deis_form_instructions');
         $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
         $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
-        $returnData['fdc'] = $this->fdc;
         if ($request->wantsJson()) {
+            $this->fdc = new FormDeis();
+            $this->fdc->save();
+            $returnData['fdc'] = $this->fdc;
             return response()->json($returnData);
         }
         #$returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
@@ -43,13 +45,20 @@ class FormDeisController extends Controller {
 
 
     public function store (Request $request) {
+
         $formData = $request->all();
         $fd = [];
+
+        $form_deis = FormDeis::find($formData['_id_formulario']);
+        $formData['_id_formulario'] = null;
 
         foreach ($formData as $key => $d)
             if ($d) $fd[$key] = $d;
 
-        $result = FormDeis::create($fd);
+
+
+        #$result = FormDeis::create($fd);
+        $result = $form_deis->update($fd);
 
         return $result;
 
@@ -73,7 +82,19 @@ class FormDeisController extends Controller {
 
 
     public function update (Request $request, $id) {
-        return 1;
+
+        $formData = $request->all();
+        return $formData;
+
+        foreach ($formData as $key => $d)
+            if ($d) $fd[$key] = $d;
+
+        return $fd;
+
+        $form_deis = FormDeis::find($id);
+        $result = $form_deis->update($fd);
+
+        return $result;
     }
 
 
