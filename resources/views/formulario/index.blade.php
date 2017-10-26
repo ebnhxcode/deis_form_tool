@@ -144,7 +144,13 @@
 
                                              <!-- Etiquetas de los campos -->
                                              <dt class="small">
-                                                @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
+                                                <!-- Prop para permitir insertar numero de orden de completado -->
+                                                <span v-if="labels[i.directivas.id] && labels[i.directivas.id].order" style="zoom:1.4;">
+                                                   @{{ labels[i.directivas.id].order ? labels[i.directivas.id].order : '' }}-
+                                                </span>
+                                                <span>
+                                                   @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
+                                                </span>
                                              </dt>
 
                                              <!-- Input basicos como text,number,time,date,etc -->
@@ -157,6 +163,7 @@
                                                         :readonly="i.directivas.readonly"
                                                         :class="i.directivas.class!=''?i.directivas.class:'form-control'"
                                                         :style="i.directivas.style!=''?i.directivas.style:''"
+                                                        :placeholder="i.directivas.placeholder!=''?i.directivas.placeholder:''"
                                                         v-model="i.directivas.value"
                                                 >
                                              </dd>
@@ -191,6 +198,9 @@
                                              </dd>
                                              <br>
                                           </div><!-- .col-md-* -->
+
+                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].empty_column" :class="labels[i.directivas.id].empty_column">
+                                          </div>
                                        </div>
 
                                        <div class="col-xs-12 col-sm-12 col-md-12">

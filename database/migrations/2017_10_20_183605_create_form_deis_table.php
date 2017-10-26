@@ -177,7 +177,8 @@ class CreateFormDeisTable extends Migration
             $table->string('estado_seguimiento_18_meses')->nullable(true);
 
             $table->string('mujer_continua_tratamiento_antiretroviral')->nullable(true);
-            $table->timestamp('fecha_ultima_regla')->nullable(true);
+            $table->timestamp('fecha_ultima_regla_gestacional')->nullable(true);
+            $table->timestamp('fecha_ultima_regla_operacional')->nullable(true);
             $table->string('pareja_vih_positivo')->nullable(true);
             $table->timestamp('fecha_administracion_1_dosis_penicilina_gestante')->nullable(true);
             $table->timestamp('fecha_administracion_ult_dosis_penicilina_gestante')->nullable(true);

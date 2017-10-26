@@ -174,7 +174,8 @@ return [
       'estado_seguimiento_18_meses',
       'variable_151_estandar',
       'mujer_continua_tratamiento_antiretroviral',
-      'fecha_ultima_regla',
+      'fecha_ultima_regla_gestacional',
+      'fecha_ultima_regla_operacional',
       'pareja_vih_positivo',
       'fecha_administracion_1_dosis_penicilina_gestante',
       'fecha_administracion_1_dosis_penicilina_gestante_sifilis',
@@ -208,7 +209,9 @@ return [
          'seccion' => [
             'nombre' => 'identificacion_mujer'
          ],
-         'class_custom' => ''
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
       ],
       'n_correlativo_interno' => [
          'directivas' => [
@@ -217,7 +220,7 @@ return [
             'name' => 'n_correlativo_interno',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => '1234567890',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -228,6 +231,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'identificacion_mujer'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
@@ -238,7 +244,7 @@ return [
             'name' => 'nombres_madre',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Nombre1 Nombre2',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -260,7 +266,7 @@ return [
             'name' => 'primer_apellido_madre',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Apellido1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -282,7 +288,7 @@ return [
             'name' => 'segundo_apellido_madre',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => '',
+            'placeholder' => 'Ej: Apellido2',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -388,6 +394,7 @@ return [
 
       #Control de embarazo - control_embarazo
          #Parte 1 control de embarazo
+
       'embarazo_con_control_parental' => [
          'directivas' => [
             'type' => 'select',
@@ -407,7 +414,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_ingreso_control_prenatal_embarazo' => [
@@ -429,14 +436,14 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
-      'fecha_ultima_regla' => [
+      'fecha_ultima_regla_gestacional' => [
          'directivas' => [
             'type' => 'date',
-            'id' => 'fecha_ultima_regla',
-            'name' => 'fecha_ultima_regla',
+            'id' => 'fecha_ultima_regla_gestacional',
+            'name' => 'fecha_ultima_regla_gestacional',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -451,9 +458,33 @@ return [
             'nombre' => 'control_embarazo',
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
+      'fecha_ultima_regla_operacional' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_ultima_regla_operacional',
+            'name' => 'fecha_ultima_regla_operacional',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'control_embarazo',
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+
+
       'edad_gestacional_ingreso_control_embarazo' => [
          'directivas' => [
             'type' => 'number',
@@ -473,7 +504,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'codigo_establecimiento_control_prenatal_embarazo' => [
@@ -495,7 +526,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'lugar_control_prenatal' => [
@@ -517,7 +548,7 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-sm-4 col-md-4'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'lugar_control_prenatal_otro' => [
@@ -538,19 +569,18 @@ return [
             'nombre' => 'control_embarazo'
          ],
          'class_custom' => [
-            'class' => 'col-md-12'
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
          #Parte 2 control de embarazo
-      'fecha_1_vdrl_embarazo' => [
+      'resultado_dilucion_1_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_1_vdrl_embarazo',
-            'name' => 'fecha_1_vdrl_embarazo',
+            'type' => 'text',
+            'id' => 'resultado_dilucion_1_vdrl_embarazo',
+            'name' => 'resultado_dilucion_1_vdrl_embarazo',
             'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
+            'max_lenght' => ''
+            , 'required' => '',
             'class' => '',
             'style' => '',
          ],
@@ -559,6 +589,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'resultado_1_vdrl_embarazo' => [
@@ -578,16 +611,20 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
-      'resultado_dilucion_1_vdrl_embarazo' => [
+      'fecha_1_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
-            'id' => 'resultado_dilucion_1_vdrl_embarazo',
-            'name' => 'resultado_dilucion_1_vdrl_embarazo',
+            'type' => 'date',
+            'id' => 'fecha_1_vdrl_embarazo',
+            'name' => 'fecha_1_vdrl_embarazo',
             'value' => '',
-            'max_lenght' => ''
-            , 'required' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
             'class' => '',
             'style' => '',
          ],
@@ -596,6 +633,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'eg_1_dvrl_embarazo' => [
@@ -615,14 +655,17 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
-      'fecha_2_vdrl_embarazo' => [
+      'resultado_dilucion_2_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_2_vdrl_embarazo',
-            'name' => 'fecha_2_vdrl_embarazo',
+            'type' => 'text',
+            'id' => 'resultado_dilucion_2_vdrl_embarazo',
+            'name' => 'resultado_dilucion_2_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -635,6 +678,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'resultado_2_vdrl_embarazo' => [
@@ -654,13 +700,16 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
-      'resultado_dilucion_2_vdrl_embarazo' => [
+      'fecha_2_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
-            'id' => 'resultado_dilucion_2_vdrl_embarazo',
-            'name' => 'resultado_dilucion_2_vdrl_embarazo',
+            'type' => 'date',
+            'id' => 'fecha_2_vdrl_embarazo',
+            'name' => 'fecha_2_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -673,6 +722,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'eg_2_dvrl_embarazo' => [
@@ -692,14 +744,17 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
 
-      'fecha_3_vdrl_embarazo' => [
+      'resultado_dilucion_3_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_3_vdrl_embarazo',
-            'name' => 'fecha_3_vdrl_embarazo',
+            'type' => 'text',
+            'id' => 'resultado_dilucion_3_vdrl_embarazo',
+            'name' => 'resultado_dilucion_3_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -712,6 +767,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'resultado_3_vdrl_embarazo' => [
@@ -731,13 +789,16 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
-      'resultado_dilucion_3_vdrl_embarazo' => [
+      'fecha_3_vdrl_embarazo' => [
          'directivas' => [
-            'type' => 'text',
-            'id' => 'resultado_dilucion_3_vdrl_embarazo',
-            'name' => 'resultado_dilucion_3_vdrl_embarazo',
+            'type' => 'date',
+            'id' => 'fecha_3_vdrl_embarazo',
+            'name' => 'fecha_3_vdrl_embarazo',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -750,6 +811,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'eg_3_dvrl_embarazo' => [
@@ -769,6 +833,9 @@ return [
          ],
          'seccion' => [
             'nombre' => 'control_embarazo'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
          ]
       ],
       'fecha_administracion_1_dosis_penicilina_gestante' => [
@@ -4165,6 +4232,7 @@ return [
       'run_madre' => [
          'text' => 'Run Madre',
          'tag' => 'Datos de identificación de la madre',
+         'empty_column' => 'col-md-6 col-md-6',
       ],
       'digito_verificador' => [
          'text' => 'Dígito Verificador',
@@ -4210,7 +4278,7 @@ return [
          'text' => 'Sífilis  Previa a este embarazo',
       ],
       'ano_sifilis_previa_embarazo' => [
-         'text' => 'Año Sífilis  Previa a este embarazo  (SI)',
+         'text' => 'Año Sífilis  Previa a este embarazo',
       ],
       'otra_its_previa_embarazo' => [
          'text' => 'Otras ITS  Previa a este embarazo',
@@ -4220,7 +4288,7 @@ return [
          'tag' => 'Antecedentes',
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
-         'text' => 'Fecha Confirmación ISP de VIH (SI)',
+         'text' => 'Fecha Confirmación ISP de VIH',
       ],
       'adicciones' => [
          'text' => 'Adicciones',
@@ -4246,43 +4314,55 @@ return [
       ],
       'fecha_1_vdrl_embarazo' => [
          'text' => 'Fecha 1º VDRL de este embarazo',
-         'tag' => 'Examenes detección de sífilis',
-         'subtag' => 'Examen 1',
+         'order' => '3.'
       ],
       'resultado_1_vdrl_embarazo' => [
          'text' => 'Resultado 1º VDRL  en este embarazo',
+         'order' => '2.'
       ],
       'resultado_dilucion_1_vdrl_embarazo' => [
          'text' => 'Resultado Dilución  1º VDRL  en este embarazo',
+         'tag' => 'Examenes detección de sífilis',
+         'subtag' => 'Examen 1',
+         'order' => '1.'
       ],
       'eg_1_dvrl_embarazo' => [
          'text' => 'EG 1º VDRL  en este embarazo',
+         'order' => '4.'
       ],
       'fecha_2_vdrl_embarazo' => [
          'text' => 'Fecha 2º VDRL de este embarazo',
-         'subtag' => 'Examen 2',
+         'order' => '3.'
       ],
       'resultado_2_vdrl_embarazo' => [
          'text' => 'Resultado 2º VDRL   en este embarazo',
+         'order' => '2.'
       ],
       'resultado_dilucion_2_vdrl_embarazo' => [
          'text' => 'Resultado Dilución  2º VDRL   en este embarazo',
+         'subtag' => 'Examen 2',
+         'order' => '1.'
       ],
       'eg_2_dvrl_embarazo' => [
          'text' => 'EG 2º VDRL  en este embarazo',
+         'order' => '4.'
       ],
       'fecha_3_vdrl_embarazo' => [
          'text' => 'Fecha 3º VDRL de este embarazo',
-         'subtag' => 'Examen 3',
+         'order' => '3.'
       ],
       'resultado_3_vdrl_embarazo' => [
          'text' => 'Resultado 3º VDRL   en este embarazo',
+         'order' => '2.'
       ],
       'resultado_dilucion_3_vdrl_embarazo' => [
-         'text' => 'Resultado Dilución  3º VDRL   en este embarazo',
+         'text' => 'Resultado Dilución  3º VDRL en este embarazo',
+         'subtag' => 'Examen 3',
+         'order' => '1.'
       ],
       'eg_3_dvrl_embarazo' => [
          'text' => 'EG 3º VDRL  en este embarazo',
+         'order' => '4.'
       ],
       'fecha_examen_treponemico' => [
          'text' => 'Fecha Examen treponémico',
@@ -4654,8 +4734,11 @@ return [
       'mujer_continua_tratamiento_antiretroviral' => [
          'text' => 'Mujer continua con tratamiento antirretroviral a los 12 meses post parto',
       ],
-      'fecha_ultima_regla' => [
-         'text' => 'Fecha última regla',
+      'fecha_ultima_regla_gestacional' => [
+         'text' => 'FUR Gestacional',
+      ],
+      'fecha_ultima_regla_operacional' => [
+         'text' => 'FUR Operacional',
       ],
       'pareja_vih_positivo' => [
          'text' => 'Pareja VIH positivo',

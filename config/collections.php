@@ -15,12 +15,12 @@ return [
       ],
       'patologias_sifilis' => [
          'name' => 'patologias_sifilis',
-         'description' => 'Patologías Sífilis',
+         'description' => 'Control Sífilis',
          'class' => '',
       ],
       'patologias_vih' => [
          'name' => 'patologias_vih',
-         'description' => 'Patologías VIH',
+         'description' => 'Control VIH',
          'class' => '',
       ],
       'datos_parto' => [
@@ -51,7 +51,8 @@ return [
       ],
 
       'lugar_control_prenatal' => [
-         '100025'=>'HOSPITAL SAN JUAN DE DIOS',
+         '100025'=>'Hospital San Juan De Dios',
+         '100026'=>'Otro',
       ],
 
       'acepta_rechaza_toma_examen_vih' => [
@@ -204,7 +205,7 @@ return [
       ],
 
       'lugar_atencion_parto' => [
-         '100025'=>'HOSPITAL SAN JUAN DE DIOS',
+         '100025'=>'Hospital San Juan De Dios',
       ],
 
       'tipo_establecimiento' => [
