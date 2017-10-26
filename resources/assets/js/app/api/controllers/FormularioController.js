@@ -37,6 +37,7 @@ const FormularioController = new Vue({
             'h1','h2','h3','h4','h5','h6'
          ],
 
+         'show_modal_buscar_formulario':false,
          'spinner_iniciar':true,
          'spinner_finalizar':false,
 
@@ -296,7 +297,68 @@ const FormularioController = new Vue({
          filters: {},
          methods: {},
       },
+      'modal_buscar_formulario':{
+         props: [''],
+         template: `
+			   <!-- template for the modal component -->
+			   <transition name="modal">
+				   <div class="modal-mask">
+					   <div class="modal-wrapper">
+					      <div class="modal-container">
 
+						      <div class="modal-header">
+							      <slot name="header"></slot>
+						      </div>
+
+						      <div class="modal-body">
+							      <slot name="body">
+                              <dl class="dl-vertical">
+                                 <div class="row">
+									         <div style="overflow-y: scroll;max-height: 400px;">
+                                       <div class="col-md-6">
+                                          <dt></dt>
+                                          <dd class="well well-sm"></dd>
+                                       </div>
+                                       <div class="col-md-6">
+                                          <dt></dt>
+                                          <dd class="well well-sm"></dd>
+                                       </div>
+
+                                    </div><!-- styled -->
+                                 </div><!-- .row -->
+                              </dl>
+							      </slot>
+						      </div>
+
+						      <!--
+						      <div class="modal-footer">
+							      <slot name="footer">
+							         <button class="btn btn-sm btn-success" @click="$emit('close')">
+								         Aceptar
+							         </button>
+                           </slot>
+						      </div>
+						      -->
+					      </div>
+                  </div>
+				   </div>
+			   </transition>
+			`,
+         name: 'modal_buscar_formulario',
+         data () {
+            return {
+
+            }
+         },
+         ready () {
+         },
+         created () {
+         },
+         methods: {
+         },
+         watch: {
+         },
+      },
       /*
        '':{
        props: [''],
@@ -327,7 +389,9 @@ const FormularioController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
-
+      buscar_formulario: function () {
+         this.show_modal_buscar_formulario = true;
+      },
 
       fetchFormulario: function () {
          this.$http.get('/formulario/create').then(response => { // success callback

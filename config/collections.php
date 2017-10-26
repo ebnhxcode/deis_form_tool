@@ -450,10 +450,13 @@ return [
       ],
 
       'resultado_dilucion_1_vdrl_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
-         'No Realizado' => 'No Realizado',
+         '1:2' => '1:2',
+         '1:4' => '1:4',
+         '1:8' => '1:8',
+         '1:16' => '1:16',
+         '1:64' => '1:64',
+         '1:128' => '1:128',
+         '1:256' => '1:256',
       ],
 
 
@@ -465,10 +468,13 @@ return [
       ],
 
       'resultado_dilucion_2_vdrl_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
-         'No Realizado' => 'No Realizado',
+         '1:2' => '1:2',
+         '1:4' => '1:4',
+         '1:8' => '1:8',
+         '1:16' => '1:16',
+         '1:64' => '1:64',
+         '1:128' => '1:128',
+         '1:256' => '1:256',
       ],
 
       'resultado_3_vdrl_embarazo' => [
@@ -479,10 +485,13 @@ return [
       ],
 
       'resultado_dilucion_3_vdrl_embarazo' => [
-         'Positivo' => 'Positivo',
-         'Negativo' => 'Negativo',
-         'Pendiente' => 'Pendiente',
-         'No Realizado' => 'No Realizado',
+         '1:2' => '1:2',
+         '1:4' => '1:4',
+         '1:8' => '1:8',
+         '1:16' => '1:16',
+         '1:64' => '1:64',
+         '1:128' => '1:128',
+         '1:256' => '1:256',
       ],
 
       'resultado_1_examen_vih_embarazo' => [

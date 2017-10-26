@@ -46,21 +46,23 @@ class FormDeisController extends Controller {
 
     public function store (Request $request) {
 
-        $formData = $request->all();
-        $fd = [];
+        if ($request->wantsJson()) {
+            $formData = $request->all();
+            $fd = [];
 
-        $form_deis = FormDeis::find($formData['_id_formulario']);
-        $formData['_id_formulario'] = null;
+            $form_deis = FormDeis::find($formData['_id_formulario']);
+            $formData['_id_formulario'] = null;
 
-        foreach ($formData as $key => $d)
-            if ($d) $fd[$key] = $d;
+            foreach ($formData as $key => $d)
+                if ($d) $fd[$key] = $d;
 
 
 
-        #$result = FormDeis::create($fd);
-        $result = $form_deis->update($fd);
+            #$result = FormDeis::create($fd);
+            $result = $form_deis->update($fd);
 
-        return $result;
+            return response()->json(['result' => $result]);
+        }
 
 
         /*
