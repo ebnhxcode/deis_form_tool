@@ -330,7 +330,7 @@ const FormularioController = new Vue({
 
 
       fetchFormulario: function () {
-         this.$http.get('/formulario').then(response => { // success callback
+         this.$http.get('/formulario/create').then(response => { // success callback
             //console.log(response);
 
             this.inputs = response.body.inputs;
@@ -395,4 +395,8 @@ const FormularioController = new Vue({
    },
 });
 
+const ListaController = new Vue({
 
+
+
+});

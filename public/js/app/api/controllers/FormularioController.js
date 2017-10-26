@@ -37128,7 +37128,7 @@ var FormularioController = new _vue2.default({
       fetchFormulario: function fetchFormulario() {
          var _this = this;
 
-         this.$http.get('/formulario').then(function (response) {
+         this.$http.get('/formulario/create').then(function (response) {
             // success callback
             //console.log(response);
 
@@ -37157,6 +37157,7 @@ var FormularioController = new _vue2.default({
       guardarFormulario: function guardarFormulario(tabName) {
          //this.spinner_finalizar = true;
          var formData = new FormData();
+         var permiteGuardar = false;
          //console.log(tabName);
          for (var i in this.inputs) {
             if (this.inputs[i].seccion.nombre == tabName) {

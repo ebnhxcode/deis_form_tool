@@ -65,8 +65,7 @@
          <div class="col-md-10 col-md-offset-1">
             <div class="{{--panel panel-default--}}">
                <div class="panel-heading">
-                  Formulario · Informaciones de transmision Vertical de VIH y Sífilis
-                  <span class="pull-right">Inicio del formulario</span>
+
                </div>
 
                <div class="{{--panel-body--}}">
@@ -75,7 +74,7 @@
 
                         <div class="well well-sm">
                            <h3 class="text-center">
-                              Levantamiento de información sobre nacimientos de 2016 y 2017
+                              Formulario · Informaciones de transmision Vertical de VIH y Sífilis
                               <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
