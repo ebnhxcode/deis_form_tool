@@ -328,6 +328,7 @@ class ComposerStaticInit7d069f72e5ee16f55591adc2bd034f27
     );
 
     public static $classMap = array (
+        'CreateFormDeisInputsTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_26_060732_create_form_deis_inputs_table.php',
         'CreateFormDeisTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_20_183605_create_form_deis_table.php',
         'CreateLogNavegacionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_25_144731_create_log_navegacions_table.php',
         'CreateLogNavegationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_10_25_140649_create_log_navegations_table.php',

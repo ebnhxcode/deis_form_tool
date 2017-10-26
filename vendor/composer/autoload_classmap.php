@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateFormDeisInputsTable' => $baseDir . '/database/migrations/2017_10_26_060732_create_form_deis_inputs_table.php',
     'CreateFormDeisTable' => $baseDir . '/database/migrations/2017_10_20_183605_create_form_deis_table.php',
     'CreateLogNavegacionsTable' => $baseDir . '/database/migrations/2017_10_25_144731_create_log_navegacions_table.php',
     'CreateLogNavegationsTable' => $baseDir . '/database/migrations/2017_10_25_140649_create_log_navegations_table.php',
