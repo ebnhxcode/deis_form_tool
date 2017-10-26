@@ -143,12 +143,13 @@
                               <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
-                           <button class="btn btn-success" type="button" data-toggle="collapse"
+                           <button class="btn btn-success" type="button" data-toggle="collapse" style="box-shadow: 2px 1px 2px 1px #dbdbdb;"
                                    data-target="#instructions" aria-expanded="false" aria-controls="instructions">
                               <small>Leer instrucciones</small>
                            </button>
 
-                           <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario">
+                           <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario"
+                                   style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
                               Buscar Persona
                               <i class="fa fa-search"></i>
                            </button>
@@ -291,7 +292,9 @@
                                           </dt>
 
                                           <dd>
-                                             <input id="" name="" @click.prevent="guardarFormulario(tab.name)" class="btn btn-success" type="button" value="Guardar">
+                                             <input id="" name="" @click.prevent="guardarFormulario(tab.name)"
+                                                    class="btn btn-success" type="button" value="Guardar"
+                                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
                                           </dd>
                                        </div><!-- .col-md-* -->
 

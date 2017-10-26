@@ -325,8 +325,8 @@ const FormularioController = new Vue({
                               <ul class="nav nav-tabs small" role="tablist">
 
                                  <li role="presentation" class="active">
-                                    <a href="#lista_formularios" aria-controls="lista_formularios" role="tab" data-toggle="tab">
-                                       Lista de Formularios
+                                    <a href="#lista_personas" aria-controls="lista_personas" role="tab" data-toggle="tab">
+                                       Lista de Personas
                                     </a>
                                  </li>
                               </ul>
@@ -336,8 +336,9 @@ const FormularioController = new Vue({
                               <!-- Tab panes -->
                               <div class="tab-content">
 
-                                 <div role="tabpanel" class="'tab-pane fade in active" id="lista_formularios">
+                                 <div role="tabpanel" class="'tab-pane fade in active" id="lista_personas">
 
+                                    <hr>
                                     <div class="table-responsive">
                                        <table class="table table-striped">
                                           <thead>
