@@ -21,5 +21,6 @@ Route::auth();
 
 
 Route::resource ('/formulario' , 'FormDeisController') ;
+Route::resource ('/input' , 'InputController') ;
 
 Route::get ('/home', 'HomeController@index') ;
