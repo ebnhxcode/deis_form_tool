@@ -3,8 +3,10 @@
 return [
    #Edades Gestacionales
    'edades_gestacionales' => [
+      /*
       1=>1,2=>2,3=>3,4=>4,5=>5,6=>6,7=>7,8=>8,9=>9,10=>10,
       11=>11,12=>12,13=>13,14=>14,15=>15,16=>16,17=>17,18=>18,19=>19,20=>20,
+      */
       21=>21,22=>22,23=>23,24=>24,25=>25,26=>26,27=>27,28=>28,29=>29,30=>30,
       31=>31,32=>32,33=>33,34=>34,35=>35,36=>36,37=>37,38=>38,39=>39,40=>40,
       41=>41,42=>42
@@ -122,8 +124,11 @@ return [
       'peso_mujer_parto',
       'nombre_farmaco_1_vih',
       'dosis_farmaco_1_vih',
+      'dosis_2_farmaco_1_vih',
       'fecha_inicio_farmaco_1_vih',
+      'fecha_2_inicio_farmaco_1_vih',
       'hora_inicio_farmaco_1_vih',
+      'hora_2_inicio_farmaco_1_vih',
       'nombre_farmaco_2_vih',
       'dosis_farmaco_2_vih',
       'fecha_inicio_farmaco_2_vih',
@@ -1598,6 +1603,47 @@ return [
          ],
       ],
 
+      #  Hacer el bind v-model con el que no tiene prefijo _sifilis
+      'fecha_administracion_1_dosis_penicilina_gestante_sifilis' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis',
+         ]
+
+      ],
+      'fecha_administracion_ult_dosis_penicilina_gestante' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes',
+         ],
+         'seccion' => [
+            'nombre' => 'patologias_sifilis',
+         ]
+      ],
+
       'numero_contactos_sexuales_declarados' => [
          'directivas' => [
             'type' => 'number',
@@ -1665,52 +1711,6 @@ return [
          ],
       ],
 
-      #  Hacer el bind v-model con el que no tiene prefijo _sifilis
-      'fecha_administracion_1_dosis_penicilina_gestante_sifilis' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_1_dosis_penicilina_gestante',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis',
-         ],
-         'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
-         ],
-
-      ],
-      'fecha_administracion_ult_dosis_penicilina_gestante' => [
-         'directivas' => [
-            'type' => 'date',
-            'id' => 'fecha_administracion_ult_dosis_penicilina_gestante',
-            'name' => 'fecha_administracion_ult_dosis_penicilina_gestante',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes',
-         ],
-         'seccion' => [
-            'nombre' => 'patologias_sifilis',
-         ],
-         'class_custom' => [
-            'class' => 'col-md-4 col-md-4'
-         ],
-      ],
 
       #Patologías VIH - patologias_vih
 
@@ -2736,7 +2736,7 @@ return [
             'name' => 'dosis_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
-            'placeholder' => 'Ej: Dosis de cantidad / horas',
+            'placeholder' => 'Ej: Carga n° 1',
             'required' => '',
             'class' => '',
             'style' => '',
@@ -2751,6 +2751,7 @@ return [
             'class' => 'col-sm-3 col-md-3'
          ]
       ],
+
       'fecha_inicio_farmaco_1_vih' => [
          'directivas' => [
             'type' => 'date',
@@ -2773,11 +2774,82 @@ return [
             'class' => 'col-sm-3 col-md-3'
          ]
       ],
+
+
       'hora_inicio_farmaco_1_vih' => [
          'directivas' => [
             'type' => 'time',
             'id' => 'hora_inicio_farmaco_1_vih',
             'name' => 'hora_inicio_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+
+      'dosis_2_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'text',
+            'id' => 'dosis_2_farmaco_1_vih',
+            'name' => 'dosis_2_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => 'Ej: Carga n° 2',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3 col-md-offset-3'
+         ]
+      ],
+
+      'fecha_2_inicio_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'date',
+            'id' => 'fecha_2_inicio_farmaco_1_vih',
+            'name' => 'fecha_2_inicio_farmaco_1_vih',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_parto'
+         ],
+         'class_custom' => [
+            'class' => 'col-sm-3 col-md-3'
+         ]
+      ],
+
+      'hora_2_inicio_farmaco_1_vih' => [
+         'directivas' => [
+            'type' => 'time',
+            'id' => 'hora_2_inicio_farmaco_1_vih',
+            'name' => 'hora_2_inicio_farmaco_1_vih',
             'value' => '',
             'max_lenght' => '',
             'placeholder' => '',
@@ -3797,6 +3869,30 @@ return [
          ]
       ],
 
+
+      'diagnostico_final_vih_isp_recien_nacido' => [
+         'directivas' => [
+            'type' => 'select',
+            'id' => 'diagnostico_final_vih_isp_recien_nacido',
+            'name' => 'diagnostico_final_vih_isp_recien_nacido',
+            'value' => '',
+            'max_lenght' => '',
+            'placeholder' => '',
+            'required' => '',
+            'class' => '',
+            'style' => '',
+         ],
+         'bloque' => [
+            'nombre' => 'sin_examenes'
+         ],
+         'seccion' => [
+            'nombre' => 'datos_recien_nacido'
+         ],
+         'class_custom' => [
+            'class' => 'col-md-12'
+         ]
+      ],
+
       'resultado_test_elisa_18_meses' => [
          'directivas' => [
             'type' => 'select',
@@ -3836,7 +3932,6 @@ return [
             'nombre' => 'datos_recien_nacido'
          ]
       ],
-
 
 
       'resultado_final_isp_examen_vih_recien_nacido' => [
@@ -3883,28 +3978,7 @@ return [
             'class' => 'col-sm-6 col-md-6'
          ]
       ],
-      'diagnostico_final_vih_isp_recien_nacido' => [
-         'directivas' => [
-            'type' => 'select',
-            'id' => 'diagnostico_final_vih_isp_recien_nacido',
-            'name' => 'diagnostico_final_vih_isp_recien_nacido',
-            'value' => '',
-            'max_lenght' => '',
-            'placeholder' => '',
-            'required' => '',
-            'class' => '',
-            'style' => '',
-         ],
-         'bloque' => [
-            'nombre' => 'sin_examenes'
-         ],
-         'seccion' => [
-            'nombre' => 'datos_recien_nacido'
-         ],
-         'class_custom' => [
-            'class' => 'col-md-12'
-         ]
-      ],
+
          #Quinta Parte
 
       'derivacion_recien_nacido_a_seguimiento' => [
@@ -4314,7 +4388,7 @@ return [
          'text' => 'Tipo de Convivencia',
       ],
       'escolaridad' => [
-         'text' => 'Nivel de Escolaridad',
+         'text' => 'Nivel de escolaridad',
       ],
       'anos_estudio' => [
          'text' => 'Años de estudios',
@@ -4327,27 +4401,27 @@ return [
          'tag' => 'Antecedentes',
       ],
       'nacidos_muertos_previos_embarazo' => [
-         'text' => 'Nacidos Muertos antes de este embarazo',
+         'text' => 'Nacidos muertos antes de este embarazo',
       ],
       'abortos_previos_embarazo' => [
          'text' => 'Abortos previos a este embarazo',
       ],
       'sifilis_previa_embarazo' => [
-         'text' => 'Sífilis  Previa a este embarazo',
+         'text' => 'Sífilis previo a este embarazo',
       ],
       'ano_sifilis_previa_embarazo' => [
-         'text' => 'Año Sífilis  Previa a este embarazo',
+         'text' => 'Año sífilis previo a este embarazo',
       ],
       'otra_its_previa_embarazo' => [
-         'text' => 'Otras ITS  Previa a este embarazo',
+         'text' => 'Otras ITS  previas a este embarazo',
          'empty_column' => 'col-sm-3 col-md-3'
       ],
       'vih_conocido_previa_embarazo' => [
-         'text' => 'VIH conocido Previa a este embarazo',
+         'text' => 'VIH conocido previa a este embarazo',
          'tag' => 'Antecedentes',
       ],
       'fecha_confirmacion_isp_vih_responde_si' => [
-         'text' => 'Fecha Confirmación ISP de VIH',
+         'text' => 'Fecha confirmación ISP de VIH',
       ],
       'adicciones' => [
          'text' => 'Adicciones',
@@ -4435,8 +4509,8 @@ return [
          'empty_column' => 'col-sm-3 col-md-3',
       ],
       'tratamiento_sifilis_farmaco' => [
-         'text' => 'Tratamiento Sifilis  Fámaco',
-         'tag' => 'Tratamiento de Sifilis',
+         'text' => 'Tratamiento Sífilis  Fámaco',
+         'tag' => 'Tratamiento de Sífilis de la Gestante',
       ],
       'tratamiento_sifilis_dosis' => [
          'text' => 'Tratamiento Sifilis Dosis',
@@ -4486,7 +4560,7 @@ return [
          'text' => 'Fecha Resultado Final ISP Examen VIH Recién nacido',
       ],
       'resultado_final_isp_examen_vih_recien_nacido' => [
-         'text' => 'Resultado Final ISP Exámen VIH Recién nacido',
+         'text' => 'Resultado Final ISP Exámen VIH Recién nacido lactante',
       ],
       'derivada_a_especialidades_embarazo' => [
          'text' => 'Derivada a Especialidades en este embarazo',
@@ -4510,7 +4584,7 @@ return [
       ],
       'terapia_antiretroviral_farmaco_1' => [
          'text' => 'Fármaco 1',
-         'tag' => 'Tratamiento de VIH',
+         'tag' => 'Tratamiento de VIH de la Gestante',
       ],
       'fecha_inicio_tar_farmaco_1' => [
          'text' => 'Fecha de Inicio Fármaco 1',
@@ -4623,6 +4697,17 @@ return [
       'hora_inicio_farmaco_1_vih' => [
          'text' => 'Hora de Inicio  Farmaco 1 (VIH)',
       ],
+
+      'dosis_2_farmaco_1_vih' => [
+         'text' => 'Dosis Carga 2 Farmaco 1 (VIH)',
+      ],
+      'fecha_2_inicio_farmaco_1_vih' => [
+         'text' => 'Fecha de Inicio Carga 2 Farmaco 1 (VIH)',
+      ],
+      'hora_2_inicio_farmaco_1_vih' => [
+         'text' => 'Hora de Inicio Carga 2 Farmaco 1 (VIH)',
+      ],
+
       'nombre_farmaco_2_vih' => [
          'text' => 'Nombre Farmaco 2 (VIH)',
       ],
@@ -4645,7 +4730,7 @@ return [
          'text' => 'Estado del recién nacido',
       ],
       'eg_pediatrica' => [
-         'text' => 'Eg Pediat.',
+         'text' => 'EG Pediat.',
       ],
       'sexo_recien_nacido' => [
          'text' => 'Sexo Recién Nacido',

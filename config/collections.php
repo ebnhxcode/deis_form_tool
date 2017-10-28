@@ -118,8 +118,9 @@ return [
          'Fija' => 'Fija',
          'Transitoria' => 'Transitoria',
          'Situacion de Calle' => 'Situacion de Calle',
-         'Otra' => 'Otra',
+         'Sename' => 'Sename',
          'Desconocido' => 'Desconocido',
+         'Otra' => 'Otra',
       ],
 
       'adicciones' => [
@@ -400,6 +401,7 @@ return [
       'resultado_test_elisa_18_meses' => [
          'Reactivo' => 'Reactivo',
          'No Reactivo' => 'No Reactivo',
+         'No Realizado' => 'No Realizado',
       ],
 
 
@@ -526,8 +528,9 @@ return [
 
 
       'resultado_1_examen_pcr_recien_nacido' => [
-         'Reactivo' => 'Reactivo',
-         'No Reactivo' => 'No Reactivo',
+         'Positivo' => 'Positivo',
+         'Negativo' => 'Negativo',
+         'Pendiente' => 'Pendiente',
          'No Realizado' => 'No Realizado',
       ],
 

@@ -116,8 +116,11 @@ class CreateFormDeisTable extends Migration
             $table->integer('peso_mujer_parto')->unsigned()->nullable(true);
             $table->string('nombre_farmaco_1_vih')->unsigned()->nullable(true);
             $table->string('dosis_farmaco_1_vih')->unsigned()->nullable(true);
+            $table->string('dosis_2_farmaco_1_vih')->unsigned()->nullable(true);
             $table->timestamp('fecha_inicio_farmaco_1_vih')->unsigned()->nullable(true);
+            $table->timestamp('fecha_2_inicio_farmaco_1_vih')->unsigned()->nullable(true);
             $table->timestamp('hora_inicio_farmaco_1_vih')->unsigned()->nullable(true);
+            $table->timestamp('hora_2_inicio_farmaco_1_vih')->unsigned()->nullable(true);
             $table->string('nombre_farmaco_2_vih')->unsigned()->nullable(true);
             $table->string('dosis_farmaco_2_vih')->unsigned()->nullable(true);
             $table->timestamp('fecha_inicio_farmaco_2_vih')->unsigned()->nullable(true);
