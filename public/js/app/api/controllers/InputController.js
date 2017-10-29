@@ -36845,7 +36845,9 @@ var InputController = new _vue2.default({
       return {
          'mini_loader': false,
          'modal_procesar_json': false,
-         'textarea': ''
+         'modal_procesar_json_attr': false,
+         'textarea': '',
+         'textarea_attr': ''
       };
    },
 
@@ -37021,7 +37023,8 @@ var InputController = new _vue2.default({
                self.mini_loader = false;
             }, 3000);
          }, 3000);
-      }
+      },
+      procesar_json_attr: function procesar_json_attr() {}
 
       //with_dash() => for explained specific functions
    }

@@ -23,7 +23,9 @@ const InputController = new Vue({
       return {
          'mini_loader':false,
          'modal_procesar_json':false,
+         'modal_procesar_json_attr':false,
          'textarea':'',
+         'textarea_attr':'',
       }
    },
    computed: {},
@@ -336,6 +338,9 @@ const InputController = new Vue({
                self.mini_loader = false;
             },3000);
          },3000);
+
+      },
+      procesar_json_attr: function () {
 
       },
 
