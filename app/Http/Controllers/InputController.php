@@ -23,6 +23,12 @@ class InputController extends Controller
     }
 
     public function store (Request $request) {
+        #return gettype($request->textarea);
+        return (array)json_decode(json_encode($request->textarea));
+
+
+
+
     }
 
     public function show ($id) {

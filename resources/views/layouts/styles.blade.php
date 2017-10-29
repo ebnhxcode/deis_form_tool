@@ -123,3 +123,222 @@
       transform: scale(1.1);
    }
 </style>
+
+
+<!-- Loader -->
+<style>
+   .loader,
+   .loader:before,
+   .loader:after {
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation: load7 1.8s infinite ease-in-out;
+      animation: load7 1.8s infinite ease-in-out;
+   }
+   .loader {
+      color: #b0bfbf;
+      font-size: 10px;
+      margin: 80px auto;
+      position: relative;
+      text-indent: -9999em;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+   }
+   .loader:before,
+   .loader:after {
+      content: '';
+      position: absolute;
+      top: 0;
+   }
+   .loader:before {
+      left: -3.5em;
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+   }
+   .loader:after {
+      left: 3.5em;
+   }
+   @-webkit-keyframes load7 {
+      0%,
+      80%,
+      100% {
+         box-shadow: 0 2.5em 0 -1.3em;
+      }
+      40% {
+         box-shadow: 0 2.5em 0 0;
+      }
+   }
+   @keyframes load7 {
+      0%,
+      80%,
+      100% {
+         box-shadow: 0 2.5em 0 -1.3em;
+      }
+      40% {
+         box-shadow: 0 2.5em 0 0;
+      }
+   }
+</style>
+
+<!-- Mini Loader -->
+<style>
+   .mini-loader,
+   .mini-loader:before,
+   .mini-loader:after {
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation: load7 1.8s infinite ease-in-out;
+      animation: load7 1.8s infinite ease-in-out;
+   }
+   .mini-loader {
+      color: #2a3284;
+      font-size:2px;
+      margin: 15px auto;
+      position: relative;
+      text-indent: -9999em;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+   }
+   .mini-loader:before,
+   .mini-loader:after {
+      content: '';
+      position: absolute;
+      top: 0;
+   }
+   .mini-loader:before {
+      left: -3.5em;
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+   }
+   .mini-loader:after {
+      left: 3.5em;
+   }
+   @-webkit-keyframes load7 {
+      0%,
+      80%,
+      100% {
+         box-shadow: 0 2.5em 0 -1.3em;
+      }
+      40% {
+         box-shadow: 0 2.5em 0 0;
+      }
+   }
+   @keyframes load7 {
+      0%,
+      80%,
+      100% {
+         box-shadow: 0 2.5em 0 -1.3em;
+      }
+      40% {
+         box-shadow: 0 2.5em 0 0;
+      }
+   }
+</style>
+
+<!-- Vue Transitions -->
+<style>
+   /* Enter and leave animations can use different */
+   /* durations and timing functions.              */
+   .slide-fade-enter-active {
+      transition: all .3s ease;
+   }
+   .slide-fade-leave-active {
+      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+   }
+   .slide-fade-enter, .slide-fade-leave-to
+      /* .slide-fade-leave-active below version 2.1.8 */ {
+      transform: translateX(10px);
+      opacity: 0;
+   }
+</style>
+
+<!-- Success Circle -->
+<style>
+   /**
+     Coded by /u/j0be in scss.
+     See scss source here -> https://codepen.io/j0be/pen/MKRVyN
+  */
+   body { padding: .5em; /*text-align: center;*/ }
+   h1 { margin-bottom: 1em; }
+   .circle-loader {
+      margin: 0 0 10px 10px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-left-color: #5cb85c;
+      animation-name: loader-spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+   }
+   .circle-loader,
+   .circle-loader:after {
+      border-radius: 50%;
+      width: 5em;
+      height: 5em;
+   }
+   .load-complete {
+      -webkit-animation: none;
+      animation: none;
+      border-color: #5cb85c;
+      transition: border 500ms ease-out;
+   }
+   .checkmark { display: none; }
+   .checkmark.draw:after {
+      animation-duration: 800ms;
+      animation-timing-function: ease;
+      animation-name: checkmark;
+      transform: scaleX(-1) rotate(145deg);
+   }
+   .checkmark:after {
+      opacity: 1;
+      height: 3em;
+      width: 1.3em;
+      transform-origin: left top;
+      border-right: 2px solid #5cb85c;
+      border-top: 2px solid #5cb85c;
+      content: '';
+      left: .9em;
+      top: 3em;
+      position: absolute;
+   }
+   @keyframes loader-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+   }
+   @keyframes checkmark {
+      0% {
+         height: 0;
+         width: 0;
+         opacity: 1;
+      }
+      20% {
+         height: 0;
+         width: .5em;
+         opacity: 1;
+      }
+      40% {
+         height: 3em;
+         width: 1.3em;
+         opacity: 1;
+      }
+      100% {
+         height: 3em;
+         width: 1.3em;
+         opacity: 1;
+      }
+   }
+</style>

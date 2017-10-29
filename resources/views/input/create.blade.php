@@ -2,6 +2,9 @@
 @include('layouts.styles')
 
 @section('content')
+   <!-- jQuery 2.1.4 -->
+   <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+
    <div class="{{--container--}}" id="InputController">
       <div class="row">
          <div class="col-md-10 col-md-offset-1">
@@ -33,51 +36,94 @@
                            <div class="col-md-4">
                               <div class="list-group">
                                  <div class="list-group-item">
-                                    <span>
-                                       Instrucciones <br>
-                                       · Use el Textarea para pegar el código json en php
-                                       · Use el formato de a continuación
+                                    <h3>
+                                       Instrucciones
+                                    </h3>
+                                    <hr>
+                                    <span class="small">
+                                       · Use el Textarea para pegar el código json en php <br>
+                                       · Use el formato de a continuación <br>
+                                       · El sistema tiene soporte exclusivo para el formato <br>
+                                       <br>
+                                       <pre class="small">
 
-                                       <pre>
-                           <?php echo htmlspecialchars("<!-- Plantilla del layout padre -->"); ?><br>
-                                          <?php echo "@extends('layouts.app')"; ?><br>
-                                          <?php echo htmlspecialchars("<!-- Inclusion del contenido dentro del espacio heredado por el parent -->"); ?><br>
-                                          <?php echo "@section('content')"; ?><br>
-                                          <?php echo htmlspecialchars("<div class='container' id='ManualController'>"); ?> <br>
-                                          <?php echo htmlspecialchars("<div class='row'>"); ?> <br>
-                                          <?php echo htmlspecialchars("</div><!-- .row -->"); ?> <br>
-                                          <?php echo htmlspecialchars("</div><!-- .container -->"); ?> <br>
-                                          <?php echo "@endsection"; ?><br>
-                                          <?php echo "<!-- Import del controller -->"; ?><br>
-                                          <?php echo htmlspecialchars("{!! Html::script('js/app/api/controllers/ManualController.js') !!}"); ?> <br>
+'nombre_campo' => [
+   'directivas' => [
+      'type' => 'text|select|textarea',
+      'id' => 'nombre_campo',
+      'name' => 'nombre_campo',
+      'value' => '',
+      'max_lenght' => '',
+      'placeholder' => '',
+      'required' => '',
+      'class' => '',
+      'style' => '',
+   ],
+   'bloque' => [
+      'nombre' => 'nombre_bloque',
+   ],
+   'seccion' => [
+      'nombre' => 'nombre_seccion',
+   ]
+],
                                        </pre>
-
-
-                                    </span>
-                                 </div>
-                              </div>
+                                    </span><!-- .small -->
+                                 </div><!-- .list-group-item -->
+                              </div><!-- .list-group -->
 
                            </div><!-- .col-md-* -->
                            <div class="col-md-8">
 
-                              <label for="json">
-                                 Pegue aqui el json
-                              </label>
+                              <div class="list-group">
+                                 <div class="list-group-item">
+                                    <h3>
+                                       Formulario de creación
+                                    </h3>
+                                    <hr>
 
-                              <code>
-                                 <textarea name="" id="json" {{--cols="30"--}} rows="20"
-                                           class="form-control">
+                                    <label for="json">
+                                       Pegue aqui el json
+                                    </label>
 
-                                 </textarea>
-                              </code>
+                                    <code>
+                                       <textarea name="" id="json" {{--cols="30"--}} rows="20"
+                                                 class="form-control small"
+                                                 v-model="textarea">
 
-                              <div id="" class="row">
-                                 <div class="col-md-12">
-                                    <button class="btn btn-success">
-                                       Procesar
-                                    </button>
-                                 </div><!-- .col-md-* -->
-                              </div><!-- .row -->
+                                       </textarea>
+                                    </code>
+
+                                    <div id="" class="row">
+                                       <div class="col-md-12">
+                                          <transition v-if="mini_loader == true" name="slide-fade">
+                                             <div class="pull-right">
+                                                <div class="circle-loader">
+                                                   <div class="checkmark draw"></div>
+                                                </div>
+                                             </div>
+                                          </transition>
+                                          <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
+                                          <button id="toggle" class="btn btn-success pull-left"
+                                                  @click.prevent="procesar_json">
+                                             Procesar
+                                          </button>
+                                       </div><!-- .col-md-* -->
+                                       <modal_procesar_json :json="textarea"
+                                                            v-if="modal_procesar_json == true">
+                                          <h3 slot="header">
+                                             Buscar formulario
+                                             <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json = false">
+                                                Cerrar
+                                             </button>
+                                             <!--
+                                    <button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>
+                                 -->
+                                          </h3>
+                                       </modal_procesar_json>
+                                    </div><!-- .row -->
+
+                                 </div><!-- .list-group-item -->
+                              </div><!-- .list-group -->
 
                            </div><!-- .col-md-* -->
 
@@ -95,5 +141,5 @@
 @endsection
 
 @section('VueControllers')
-   {!!Html::script('js/app/api/controllers/FormularioController.js')!!}
+   {!!Html::script('js/app/api/controllers/InputController.js')!!}
 @endsection
