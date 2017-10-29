@@ -19,7 +19,7 @@ class CreateFormDeisInputsTable extends Migration
             $table->string('id')->unsigned()->nullable(true);
             $table->string('name')->unsigned()->nullable(true);
             $table->string('value')->unsigned()->nullable(true);
-            $table->string('max_lenght')->unsigned()->nullable(true);
+            $table->string('max_length')->unsigned()->nullable(true);
             $table->string('placeholder')->unsigned()->nullable(true);
             $table->string('required')->unsigned()->nullable(true);
             $table->string('class')->unsigned()->nullable(true);

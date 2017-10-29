@@ -75,7 +75,7 @@ class InputController extends Controller
                 $fdi->id = isset($field['directivas']['id'])?$field['directivas']['id']:'';
                 $fdi->name = isset($field['directivas']['name'])?$field['directivas']['name']:'';
                 $fdi->value = isset($field['directivas']['value'])?$field['directivas']['value']:'';
-                $fdi->max_lenght = isset($field['directivas']['max_lenght'])?$field['directivas']['max_lenght']:'';
+                $fdi->max_length = isset($field['directivas']['max_length'])?$field['directivas']['max_length']:'';
                 $fdi->placeholder = isset($field['directivas']['placeholder'])?$field['directivas']['placeholder']:'';
                 $fdi->required = isset($field['directivas']['required'])?$field['directivas']['required']:'';
                 $fdi->class = isset($field['directivas']['class'])?$field['directivas']['class']:'';

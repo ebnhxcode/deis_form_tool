@@ -13,7 +13,7 @@ class FormDeisInput extends Model
       'id',
       'name',
       'value',
-      'max_lenght',
+      'max_length',
       'placeholder',
       'required',
       'class',
