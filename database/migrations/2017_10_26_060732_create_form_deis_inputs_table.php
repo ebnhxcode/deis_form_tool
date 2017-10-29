@@ -15,19 +15,18 @@ class CreateFormDeisInputsTable extends Migration
         Schema::create('form_deis_inputs', function (Blueprint $table) {
             $table->increments('id_input');
 
-            $table->string('type');
-            $table->string('id');
-            $table->string('name');
-            $table->string('value');
-            $table->string('max_lenght');
-            $table->string('placeholder');
-            $table->string('required');
-            $table->string('class');
-            $table->string('style');
-
-            $table->string('bloque');
-            $table->string('seccion');
-            $table->string('class_custom');
+            $table->string('type')->unsigned()->nullable(true);
+            $table->string('id')->unsigned()->nullable(true);
+            $table->string('name')->unsigned()->nullable(true);
+            $table->string('value')->unsigned()->nullable(true);
+            $table->string('max_lenght')->unsigned()->nullable(true);
+            $table->string('placeholder')->unsigned()->nullable(true);
+            $table->string('required')->unsigned()->nullable(true);
+            $table->string('class')->unsigned()->nullable(true);
+            $table->string('style')->unsigned()->nullable(true);
+            $table->string('bloque')->unsigned()->nullable(true);
+            $table->string('seccion')->unsigned()->nullable(true);
+            $table->string('class_custom')->unsigned()->nullable(true);
             $table->timestamps();
         });
     }
