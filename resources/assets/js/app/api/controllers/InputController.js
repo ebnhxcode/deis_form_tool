@@ -169,25 +169,6 @@ const InputController = new Vue({
                                           <th>Id</th>
                                           <th>type</th>
                                           <th>id</th>
-                                          <th>name</th>
-                                          <th>value</th>
-                                          <th>max_length</th>
-                                          <th>placeholder</th>
-                                          <th>required</th>
-                                          <th>class</th>
-                                          <th>style</th>
-                                          <th>bloque</th>
-                                          <th>seccion</th>
-                                          <th>class_custom</th>
-                                          <!--
-                                          <th>label</th>
-                                          <th>tag</th>
-                                          <th>subtag</th>
-                                          <th>empty_column</th>
-                                          <th>order</th>
-                                          <th>created_at</th>
-                                          <th>updated_at</th>
-                                          -->
                                        </tr>
                                     </thead>
                                     <tbody>
@@ -199,28 +180,9 @@ const InputController = new Vue({
                                                 <i class="fa fa-pencil"></i>
                                              </button>
                                           </td>
-                                          <td>{{input.id_input || 'Sin dato'}}</td>
-                                          <td>{{input.type || 'Sin dato'}}</td>
-                                          <td>{{input.id || 'Sin dato'}}</td>
-                                          <td>{{input.name || 'Sin dato'}}</td>
-                                          <td>{{input.value || 'Sin dato'}}</td>
-                                          <td>{{input.max_length || 'Sin dato'}}</td>
-                                          <td>{{input.placeholder || 'Sin dato'}}</td>
-                                          <td>{{input.required || 'Sin dato'}}</td>
-                                          <td>{{input.class || 'Sin dato'}}</td>
-                                          <td>{{input.style || 'Sin dato'}}</td>
-                                          <td>{{input.bloque || 'Sin dato'}}</td>
-                                          <td>{{input.seccion || 'Sin dato'}}</td>
-                                          <td>{{input.class_custom || 'Sin dato'}}</td>
-                                          <!--
-                                          <td>{{input.label || 'Sin dato'}}</td>
-                                          <td>{{input.tag || 'Sin dato'}}</td>
-                                          <td>{{input.subtag || 'Sin dato'}}</td>
-                                          <td>{{input.empty_column || 'Sin dato'}}</td>
-                                          <td>{{input.order || 'Sin dato'}}</td>
-                                          <td>{{input.created_at || 'Sin dato'}}</td>
-                                          <td>{{input.updated_at || 'Sin dato'}}</td>
-                                          -->
+                                          <td>{{input.id_input}}</td>
+                                          <td>{{input.type}}</td>
+                                          <td>{{input.id}}</td>
                                        </tr>
 
 
@@ -353,7 +315,7 @@ const InputController = new Vue({
       },
       procesar_json_attr: function () {
          this.mini_loader = true;
-         this.modal_procesar_json = true;
+         this.modal_procesar_json_attr = true;
 
          var formData = new FormData();
          var permiteGuardar = false;
