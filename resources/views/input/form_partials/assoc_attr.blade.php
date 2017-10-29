@@ -14,7 +14,7 @@
    <code>
       <textarea name="" id="json" {{--cols="30"--}} rows="20"
                 class="form-control small"
-                v-model="textarea">
+                v-model="textarea_attr">
 
       </textarea>
    </code>
@@ -34,18 +34,18 @@
             Procesar
          </button>
       </div><!-- .col-md-* -->
-      <modal_procesar_json_attr :json="textarea"
-                           v-if="modal_procesar_json == true">
+      <modal_procesar_json :json="textarea_attr"
+                           v-if="modal_procesar_json_attr == true">
          <h3 slot="header">
             Buscar formulario
-            <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json = false">
+            <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json_attr = false">
                Cerrar
             </button>
             <!--
                <button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>
             -->
          </h3>
-      </modal_procesar_json_attr>
+      </modal_procesar_json>
    </div><!-- .row -->
 
 

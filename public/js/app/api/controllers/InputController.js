@@ -37024,7 +37024,38 @@ var InputController = new _vue2.default({
             }, 3000);
          }, 3000);
       },
-      procesar_json_attr: function procesar_json_attr() {}
+      procesar_json_attr: function procesar_json_attr() {
+         var _this2 = this;
+
+         this.mini_loader = true;
+         this.modal_procesar_json = true;
+
+         var formData = new FormData();
+         var permiteGuardar = false;
+         formData.append('textarea_attr', this.textarea_attr);
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         //formData.append('_token', $('#_token').val());
+         this.$http.post('/input/add/label', formData).then(function (response) {
+            // success callback
+            _this2.textarea_attr = response.body;
+
+            //console.log(response);
+            console.log(_this2.textarea_attr);
+            //alert('Guardado');
+         }, function (response) {
+            // error callback
+            console.log(response);
+         });
+
+         var self = this;
+         setTimeout(function () {
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            setTimeout(function () {
+               self.mini_loader = false;
+            }, 3000);
+         }, 3000);
+      }
 
       //with_dash() => for explained specific functions
    }

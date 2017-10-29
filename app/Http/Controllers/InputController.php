@@ -23,6 +23,17 @@ class InputController extends Controller
         return view('input.create', $this->returnData);
     }
 
+    public function addLabelToInput (Request $request) {
+        $arr_txt = '';
+        $created_labels = [];
+        if (isset($request->textarea_attr) && $request->textarea_attr) {
+            $arr_txt = $request->textarea_attr;
+        }
+        $arr_txt = eval($arr_txt);
+
+        return $arr_txt;
+    }
+
     public function store (Request $request) {
         $arr_txt = '';
         $created_inputs = [];

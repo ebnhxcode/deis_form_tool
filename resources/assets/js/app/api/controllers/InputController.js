@@ -341,7 +341,36 @@ const InputController = new Vue({
 
       },
       procesar_json_attr: function () {
+         this.mini_loader = true;
+         this.modal_procesar_json = true;
 
+         var formData = new FormData();
+         var permiteGuardar = false;
+         formData.append('textarea_attr', this.textarea_attr);
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         //formData.append('_token', $('#_token').val());
+         this.$http.post('/input/add/label', formData).then(response => { // success callback
+            this.textarea_attr = response.body;
+
+
+
+            //console.log(response);
+            console.log(this.textarea_attr);
+            //alert('Guardado');
+         }, response => { // error callback
+            console.log(response);
+         });
+
+
+
+         var self = this;
+         setTimeout(()=>{
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            setTimeout(()=>{
+               self.mini_loader = false;
+            },3000);
+         },3000);
       },
 
       //with_dash() => for explained specific functions

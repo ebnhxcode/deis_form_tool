@@ -21,6 +21,7 @@ Route::auth();
 
 
 Route::resource ('/formulario' , 'FormDeisController') ;
+Route::post ('/input/add/label' , 'InputController@addLabelToInput') ;
 Route::resource ('/input' , 'InputController') ;
 
 Route::get ('/home', 'HomeController@index') ;

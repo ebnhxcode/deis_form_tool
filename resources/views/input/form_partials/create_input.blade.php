@@ -12,7 +12,7 @@
    <code>
       <textarea name="" id="json" {{--cols="30"--}} rows="20"
                 class="form-control small"
-                v-model="textarea_attr">
+                v-model="textarea">
 
       </textarea>
    </code>
@@ -28,15 +28,15 @@
          </transition>
          <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
          <button id="toggle" class="btn btn-success pull-left"
-                 @click.prevent="procesar_json_attr">
+                 @click.prevent="procesar_json">
             Procesar
          </button>
       </div><!-- .col-md-* -->
-      <modal_procesar_json :json="textarea_attr"
-                           v-if="modal_procesar_json_attr == true">
+      <modal_procesar_json :json="textarea"
+                           v-if="modal_procesar_json == true">
          <h3 slot="header">
             Buscar input
-            <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json_attr = false">
+            <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json = false">
                Cerrar
             </button>
             <!--
