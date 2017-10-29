@@ -36991,6 +36991,8 @@ var InputController = new _vue2.default({
    methods: {
       //camelCase() => for specific functions
       procesar_json: function procesar_json() {
+         var _this = this;
+
          this.mini_loader = true;
          this.modal_procesar_json = true;
 
@@ -36999,10 +37001,12 @@ var InputController = new _vue2.default({
          formData.append('textarea', this.textarea);
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
-
          this.$http.post('/input', formData).then(function (response) {
             // success callback
-            console.log(response);
+            _this.textarea = response.body;
+
+            //console.log(response);
+            console.log(_this.textarea);
             //alert('Guardado');
          }, function (response) {
             // error callback

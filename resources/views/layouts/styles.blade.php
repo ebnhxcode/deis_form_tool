@@ -57,6 +57,7 @@
       background-color: #4a9fe9;
    }
 </style>
+
 <!-- Estilo modal -->
 <style>
    .modal-mask {
@@ -123,7 +124,6 @@
       transform: scale(1.1);
    }
 </style>
-
 
 <!-- Loader -->
 <style>

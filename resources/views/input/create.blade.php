@@ -47,7 +47,7 @@
                                        <br>
                                        <pre class="small">
 
-'nombre_campo' => [
+return ['nombre_campo' => [
    'directivas' => [
       'type' => 'text|select|textarea',
       'id' => 'nombre_campo',
@@ -65,7 +65,7 @@
    'seccion' => [
       'nombre' => 'nombre_seccion',
    ]
-],
+]];
                                        </pre>
                                     </span><!-- .small -->
                                  </div><!-- .list-group-item -->

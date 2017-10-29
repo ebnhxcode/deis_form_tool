@@ -314,15 +314,17 @@ const InputController = new Vue({
          formData.append('textarea', this.textarea);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
-
          this.$http.post('/input', formData).then(response => { // success callback
-            console.log(response);
+            this.textarea = response.body;
+
+
+
+            //console.log(response);
+            console.log(this.textarea);
             //alert('Guardado');
          }, response => { // error callback
             console.log(response);
          });
-
-
 
 
 
