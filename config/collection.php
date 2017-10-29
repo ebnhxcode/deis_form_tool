@@ -4340,7 +4340,11 @@ return [
    #Etiquetas para formularios
    'deis_form_table_labels' => [
       'nombres_madre' => [
-         'text' => 'Nombres',
+         'text' => 'Resultado Dilución  1º VDRL  en este embarazo',
+         'tag' => 'Examenes detección de sífilis',
+         'subtag' => 'Examen 1',
+         'order' => '1.',
+         'empty_column' => 'col-md-6 col-md-6',
       ],
       'primer_apellido_madre' => [
          'text' => 'Primer Apellido',

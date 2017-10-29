@@ -30,8 +30,33 @@ class InputController extends Controller
             $arr_txt = $request->textarea_attr;
         }
         $arr_txt = eval($arr_txt);
+        foreach ($arr_txt as $key => $field) {
+            $fdi = FormDeisInput::where('id', $key)->first();
 
-        return $arr_txt;
+            if ($fdi) {
+                if (isset($field['text'])) {
+                    $fdi->label = $field['text'];
+                }
+                if (isset($field['tag'])) {
+                    $fdi->tag = $field['tag'];
+                }
+                if (isset($field['subtag'])) {
+                    $fdi->subtag = $field['subtag'];
+                }
+                if (isset($field['empty_column'])) {
+                    $fdi->empty_column = $field['empty_column'];
+                }
+                if (isset($field['order'])) {
+                    $fdi->order = $field['order'];
+                }
+            }
+
+            $fdi->save();
+            array_push($created_labels, $fdi);
+            return $fdi;
+        }
+
+        return $created_labels;
     }
 
     public function store (Request $request) {
