@@ -22,6 +22,12 @@ class FormDeisInput extends Model
       'bloque',
       'seccion',
       'class_custom',
+
+      'label',
+      'tag',
+      'subtag',
+      'empty_column',
+      'order',
    ];
 
 

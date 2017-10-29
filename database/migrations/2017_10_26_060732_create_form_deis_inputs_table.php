@@ -27,6 +27,11 @@ class CreateFormDeisInputsTable extends Migration
             $table->string('bloque')->unsigned()->nullable(true);
             $table->string('seccion')->unsigned()->nullable(true);
             $table->string('class_custom')->unsigned()->nullable(true);
+            $table->string('label')->unsigned()->nullable(true);
+            $table->string('tag')->unsigned()->nullable(true);
+            $table->string('subtag')->unsigned()->nullable(true);
+            $table->string('empty_column')->unsigned()->nullable(true);
+            $table->string('order')->unsigned()->nullable(true);
             $table->timestamps();
         });
     }
