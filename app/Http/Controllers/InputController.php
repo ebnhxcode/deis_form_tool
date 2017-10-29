@@ -27,9 +27,21 @@ class InputController extends Controller
         if (isset($request->textarea) && $request->textarea) {
             $arr_txt = $request->textarea;
         }
+        $arr_txt = eval($arr_txt);
+
+        foreach ($arr_txt as $key => $field) {
 
 
-        return eval($arr_txt);
+
+
+
+            return $field;
+
+
+
+        }
+
+        return ;
 
     }
 

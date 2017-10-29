@@ -64,6 +64,9 @@ return ['nombre_campo' => [
    ],
    'seccion' => [
       'nombre' => 'nombre_seccion',
+   ],
+   'class_custom' => [
+      'class' => 'col-md-12'
    ]
 ]];
                                        </pre>
