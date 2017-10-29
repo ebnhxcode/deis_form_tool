@@ -151,7 +151,7 @@ const InputController = new Vue({
 			   <transition name="modal">
 				   <div class="modal-mask">
 					   <div class="modal-wrapper">
-					      <div class="modal-container" style="max-height: 750px !important;">
+					      <div class="modal-container" style="max-height: 850px !important;">
 
 						      <div class="modal-header">
 							      <slot name="header"></slot>
@@ -161,91 +161,73 @@ const InputController = new Vue({
 							      <slot name="body">
 
 
+                              <div class="table-responsive">
+                                 <table class="table table-striped">
+                                    <thead>
+                                       <tr>
+                                          <th>Acción</th>
+                                          <th>Id</th>
+                                          <th>type</th>
+                                          <th>id</th>
+                                          <th>name</th>
+                                          <th>value</th>
+                                          <th>max_length</th>
+                                          <th>placeholder</th>
+                                          <th>required</th>
+                                          <th>class</th>
+                                          <th>style</th>
+                                          <th>bloque</th>
+                                          <th>seccion</th>
+                                          <th>class_custom</th>
+                                          <!--
+                                          <th>label</th>
+                                          <th>tag</th>
+                                          <th>subtag</th>
+                                          <th>empty_column</th>
+                                          <th>order</th>
+                                          <th>created_at</th>
+                                          <th>updated_at</th>
+                                          -->
+                                       </tr>
+                                    </thead>
+                                    <tbody>
 
-                              <div id="" class="panel with-nav-tabs panel-primary">
-                                 <!-- Items elementos de cabecera -->
-                                 <div class="panel-heading">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav nav-tabs small" role="tablist">
 
-                                       <li role="presentation" class="active">
-                                          <a href="#lista_inputs" aria-controls="lista_inputs" role="tab" data-toggle="tab">
-                                             Lista de Inputs
-                                          </a>
-                                       </li>
-                                    </ul>
-                                 </div><!-- .panel-heading -->
+                                       <tr v-for="input in json">
+                                          <td>
+                                             <button class="btn btn-sm btn-primary">
+                                                <i class="fa fa-pencil"></i>
+                                             </button>
+                                          </td>
+                                          <td>{{input.id_input || 'Sin dato'}}</td>
+                                          <td>{{input.type || 'Sin dato'}}</td>
+                                          <td>{{input.id || 'Sin dato'}}</td>
+                                          <td>{{input.name || 'Sin dato'}}</td>
+                                          <td>{{input.value || 'Sin dato'}}</td>
+                                          <td>{{input.max_length || 'Sin dato'}}</td>
+                                          <td>{{input.placeholder || 'Sin dato'}}</td>
+                                          <td>{{input.required || 'Sin dato'}}</td>
+                                          <td>{{input.class || 'Sin dato'}}</td>
+                                          <td>{{input.style || 'Sin dato'}}</td>
+                                          <td>{{input.bloque || 'Sin dato'}}</td>
+                                          <td>{{input.seccion || 'Sin dato'}}</td>
+                                          <td>{{input.class_custom || 'Sin dato'}}</td>
+                                          <!--
+                                          <td>{{input.label || 'Sin dato'}}</td>
+                                          <td>{{input.tag || 'Sin dato'}}</td>
+                                          <td>{{input.subtag || 'Sin dato'}}</td>
+                                          <td>{{input.empty_column || 'Sin dato'}}</td>
+                                          <td>{{input.order || 'Sin dato'}}</td>
+                                          <td>{{input.created_at || 'Sin dato'}}</td>
+                                          <td>{{input.updated_at || 'Sin dato'}}</td>
+                                          -->
+                                       </tr>
 
-                                 <div class="panel-body">
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
 
-                                       <div role="tabpanel" class="'tab-pane fade in active" id="lista_inputs">
+                                    </tbody>
+                                 </table>
+                              </div>
 
-                                          <hr>
-                                          <div class="table-responsive">
-                                             <table class="table table-striped">
-                                                <thead>
-                                                   <tr>
-                                                      <th>Acción</th>
-                                                      <th>Id</th>
-                                                      <th>type</th>
-                                                      <th>id</th>
-                                                      <th>name</th>
-                                                      <th>value</th>
-                                                      <th>max_length</th>
-                                                      <th>placeholder</th>
-                                                      <th>required</th>
-                                                      <th>class</th>
-                                                      <th>style</th>
-                                                      <th>bloque</th>
-                                                      <th>seccion</th>
-                                                      <th>class_custom</th>
-                                                      <th>label</th>
-                                                      <th>tag</th>
-                                                      <th>subtag</th>
-                                                      <th>empty_column</th>
-                                                      <th>order</th>
-                                                      <th>created_at</th>
-                                                      <th>updated_at</th>
-                                                   </tr>
-                                                </thead>
-                                                <tbody>
-                                                   <tr v-for="input in json">
-                                                      <td>
-                                                         <button class="btn btn-sm btn-primary" @click.prevent="">
-                                                            <i class="fa fa-pencil"></i>
-                                                         </button>
-                                                      </td>
-                                                      <td>{{input.id_input}}</td>
-                                                      <td>{{input.type}}</td>
-                                                      <td>{{input.id}}</td>
-                                                      <td>{{input.name}}</td>
-                                                      <td>{{input.value}}</td>
-                                                      <td>{{input.max_length}}</td>
-                                                      <td>{{input.placeholder}}</td>
-                                                      <td>{{input.required}}</td>
-                                                      <td>{{input.class}}</td>
-                                                      <td>{{input.style}}</td>
-                                                      <td>{{input.bloque}}</td>
-                                                      <td>{{input.seccion}}</td>
-                                                      <td>{{input.class_custom}}</td>
-                                                      <td>{{input.label}}</td>
-                                                      <td>{{input.tag}}</td>
-                                                      <td>{{input.subtag}}</td>
-                                                      <td>{{input.empty_column}}</td>
-                                                      <td>{{input.order}}</td>
-                                                      <td>{{input.created_at}}</td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
-                                          </div>
-
-                                       </div>
-
-                                    </div><!-- .panel-heading -->
-                                 </div><!-- .panel-heading -->
-                              </div><!-- .panel-heading -->
 
 
 
