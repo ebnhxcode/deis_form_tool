@@ -16,7 +16,9 @@
 
       </textarea>
    </code>
+   <span id="json_error" class="text-danger small errors"></span>
 
+   <br>
 
    <label for="tables">
       Seleccione la tabla a la que asociará estos campos
@@ -28,6 +30,7 @@
          @{{ t.table_name }}
       </option>
    </select>
+   <span id="table_name_error" class="text-danger small errors"></span>
    <br>
 
    <div id="" class="row">

@@ -25,10 +25,15 @@ const InputController = new Vue({
          'modal_procesar_json':false,
          'modal_procesar_json_attr':false,
          'json':'',
+         'json_error':'',
          'json_attr':'',
+         'json_attr_error':'',
          'table_name':'',
+         'table_name_error':'',
          'table_name_attr':'',
+         'table_name_attr_error':'',
          'tables':[],
+         'err':[],
       }
    },
    computed: {},
@@ -284,7 +289,11 @@ const InputController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
+      checkInputs: function () {
 
+
+
+      },
       fetchInput: function () {
          this.$http.get('/input/create').then(response => { // success callback
             //console.log(response);
@@ -304,31 +313,36 @@ const InputController = new Vue({
       },
 
       procesar_json: function () {
-         this.mini_loader = true;
-         this.modal_procesar_json = true;
+         var j = this.json;
+         var tn = this.table_name;
+         var permiteGuardar = (j&&j!=null&&j!=''&&tn&&tn!=null&&tn!='')?true:false;
 
-         var formData = new FormData();
-         var permiteGuardar = false;
-         formData.append('json', this.json);
-         console.log(this.json);
-         formData.append('table_name', this.table_name);
-         console.log(this.table_name);
+         if (permiteGuardar == true) {
+            //this.modal_procesar_json = true;
+            //this.mini_loader = true;
+            var formData = new FormData();
+            formData.append('json', j);
+            formData.append('table_name', tn);//formData.append('_token', $('#_token').val());
+            Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
 
+            this.$http.post('/input', formData).then(response => { // success callback
+               //this.json = response.body.created_inputs;
+               $('.errors').text('');
+               console.log(response);
+               //console.log(this.json);
+               //alert('Guardado');
+            }, response => { // error callback
+               //console.log(response);
+               $('.errors').text('');
+               this.err = response.body;
+               for (let i in this.err) {
+                  var error = this.err[i][0];
+                  $(`#${i}_error`).text(error);
+               }
+            });
+         }
 
-         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
-         this.$http.post('/input', formData).then(response => { // success callback
-            //this.json = response.body.created_inputs;
-
-            console.log(response);
-            //console.log(this.json);
-            //alert('Guardado');
-         }, response => { // error callback
-            console.log(response);
-         });
-
-
-
+         /*
          var self = this;
          setTimeout(()=>{
             $('.circle-loader').toggleClass('load-complete');
@@ -337,6 +351,7 @@ const InputController = new Vue({
                self.mini_loader = false;
             },3000);
          },3000);
+         */
 
       },
       procesar_json_attr: function () {

@@ -36847,10 +36847,15 @@ var InputController = new _vue2.default({
          'modal_procesar_json': false,
          'modal_procesar_json_attr': false,
          'json': '',
+         'json_error': '',
          'json_attr': '',
+         'json_attr_error': '',
          'table_name': '',
+         'table_name_error': '',
          'table_name_attr': '',
-         'tables': []
+         'table_name_attr_error': '',
+         'tables': [],
+         'err': []
       };
    },
 
@@ -36996,7 +37001,7 @@ var InputController = new _vue2.default({
    filters: {},
    methods: {
       //camelCase() => for specific functions
-
+      checkInputs: function checkInputs() {},
       fetchInput: function fetchInput() {
          var _this = this;
 
@@ -37019,6 +37024,8 @@ var InputController = new _vue2.default({
       },
 
       procesar_json: function procesar_json() {
+         var _this2 = this;
+
          this.mini_loader = true;
          this.modal_procesar_json = true;
 
@@ -37034,13 +37041,19 @@ var InputController = new _vue2.default({
          this.$http.post('/input', formData).then(function (response) {
             // success callback
             //this.json = response.body.created_inputs;
-
+            $('.errors').text('');
             console.log(response);
             //console.log(this.json);
             //alert('Guardado');
          }, function (response) {
             // error callback
-            console.log(response);
+            //console.log(response);
+            $('.errors').text('');
+            _this2.err = response.body;
+            for (var i in _this2.err) {
+               var error = _this2.err[i][0];
+               $('#' + i + '_error').text(error);
+            }
          });
 
          var self = this;
@@ -37053,7 +37066,7 @@ var InputController = new _vue2.default({
          }, 3000);
       },
       procesar_json_attr: function procesar_json_attr() {
-         var _this2 = this;
+         var _this3 = this;
 
          this.mini_loader = true;
          this.modal_procesar_json_attr = true;
@@ -37066,10 +37079,10 @@ var InputController = new _vue2.default({
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input/add/label', formData).then(function (response) {
             // success callback
-            _this2.json_attr = response.body;
+            _this3.json_attr = response.body;
 
             //console.log(response);
-            console.log(_this2.json_attr);
+            console.log(_this3.json_attr);
             //alert('Guardado');
          }, function (response) {
             // error callback
