@@ -5,9 +5,7 @@
       <div class="row">
          <div class="col-md-10 col-md-offset-1">
             <div class="{{--panel panel-default--}}">
-               <div class="panel-heading">
-
-               </div>
+               <div class="panel-heading"></div><!-- .panel-heading -->
 
                <div class="{{--panel-body--}}">
                   <div class="row">
@@ -36,23 +34,20 @@
                                  <button class="btn btn-sm btn-default pull-right" @click.prevent="show_modal_buscar_formulario = false">
                                     Cerrar
                                  </button>
-                                 <!--
-                                    <button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>
-                                 -->
+                                 <!--<button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>-->
                               </h3>
                            </modal_buscar_formulario>
 
                            <div class="collapse" id="instructions">
                               <h4>Instrucciones:</h4> <br>
-
-                              <h5 v-for="i in instructions">
-                                 · @{{i}}
-                              </h5>
-
+                              <ul>
+                                 <li v-for="i in instructions">
+                                    <h5>@{{i}}</h5>
+                                 </li>
+                              </ul>
                            </div><!-- .collapse #instructions -->
 
                         </div><!-- .well .well-sm -->
-
                      </div><!-- .col-md-* -->
 
                      {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}
@@ -64,7 +59,6 @@
                            <div class="panel-heading">
                               <!-- Nav tabs -->
                               <ul class="nav nav-tabs small" role="tablist">
-
                                  <li role="presentation" :class="tab.class" v-for="tab in nav_tab_form_deis">
                                     <a :href="'#'+tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
                                        @{{ tab.description }}
@@ -81,37 +75,23 @@
 
                                     <dl class="dl-vertical">
                                        <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
-
-
                                        <div v-for="i in inputs" v-if="i.seccion == tab.name">
-
                                           <!-- Prop para permitir insertar una cabecera de titulo -->
                                           <div v-if="i.tag" class="col-md-12">
-                                             <h3>
-                                                <b>@{{ i.tag ? i.tag : '' }}</b>
-                                             </h3>
-                                             <br>
+                                             <h3><b>@{{ i.tag ? i.tag : '' }}</b></h3><br>
                                           </div>
                                           <!-- Prop para permitir insertar una cabecera de subtitulo -->
                                           <div v-if="i.subtag" class="col-md-12"
                                                style="padding-bottom: 10px;">
-                                             <h4>
-                                                <b>@{{ i.subtag ? i.subtag : '' }}</b>
-                                             </h4>
+                                             <h4><b>@{{ i.subtag ? i.subtag : '' }}</b></h4>
                                           </div>
 
-
                                           <div :class="i.class_custom ? i.class_custom : 'col-xs-6 col-sm-6 col-md-6'">
-
                                              <!-- Etiquetas de los campos -->
                                              <dt class="small">
                                                 <!-- Prop para permitir insertar numero de orden de completado -->
-                                                <span v-if="i.order" style="zoom:1.4;">
-                                                   @{{ i.order ? i.order : '' }}-
-                                                </span>
-                                                <span>
-                                                   @{{ i.label ? i.label: 'Sin Etiqueta' }}
-                                                </span>
+                                                <span v-if="i.order" style="zoom:1.4;">@{{ i.order ? i.order : '' }}-</span>
+                                                <span>@{{ i.label ? i.label: 'Sin Etiqueta' }}</span>
                                              </dt>
 
                                              <!-- Input basicos como text,number,time,date,etc -->
@@ -125,8 +105,7 @@
                                                        :class="i.class!=''?i.class:'form-control'"
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
-                                                       v-model="i.value"
-                                                >
+                                                       v-model="i.value">
                                              </dd>
 
                                              <!-- Select Inputs -->
@@ -134,24 +113,19 @@
                                                 <select :name="i.name"
                                                         :id="i.id"
                                                         class="form-control">
-
-
                                                    <option value="">Seleccione</option>
                                                    <option v-for="o in deis_form_table_options[i.name]" :value="o">
                                                       @{{ o }}
                                                    </option>
-
                                                 </select><!-- .form-control -->
                                              </dd>
 
                                              <!-- Textarea Inputs -->
                                              <dd v-else-if="inputInArray(i,inputTypes.textarea)">
-
                                              <textarea :name="i.name"
                                                        :id="i.id"
                                                        class="form-control">
                                              </textarea>
-
                                              </dd>
 
                                              <dd v-else>
@@ -168,7 +142,6 @@
                                        <div class="col-xs-12 col-sm-12 col-md-12">
                                           <dt>
                                           </dt>
-
                                           <dd>
                                              <input id="" name="" @click.prevent="guardarFormulario(tab.name)"
                                                     class="btn btn-success" type="button" value="Guardar"
@@ -178,7 +151,7 @@
 
                                     </dl><!-- .dl-vertical -->
 
-                                 </div>
+                                 </div><!-- .tab-pane -->
 
                               </div><!-- .panel-heading -->
                            </div><!-- .panel-heading -->
