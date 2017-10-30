@@ -24,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.5">
-              <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/input/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,11 +34,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017_10_30_132042_create_comuna_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017_10_30_132042_create_comuna_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37394246">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_10_20_183605_create_form_deis_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_10_25_144731_create_log_navegacions_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_25_144731_create_log_navegacions_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_10_30_132012_create_establecimiento_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47810858">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -90,65 +110,6 @@
             <state vertical-scroll-proportion="-4.314815">
               <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/collection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.1234567">
-              <caret line="39" column="79" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="79" />
-              <folding>
-                <element signature="e#1503#8254#1#PHP" expanded="false" />
-                <element signature="e#8323#127293#1#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/InputController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="456" column="25" selection-start-line="456" selection-start-column="25" selection-end-line="456" selection-end-column="25" />
-              <folding>
-                <element signature="e#453#17563#0" expanded="false" />
-                <element signature="e#1101#1472#0" expanded="false" />
-                <element signature="e#1491#1850#0" expanded="false" />
-                <element signature="e#1868#2140#0" expanded="false" />
-                <element signature="e#2163#2445#0" expanded="false" />
-                <element signature="e#2462#3277#0" expanded="false" />
-                <element signature="e#3295#3722#0" expanded="false" />
-                <element signature="e#3742#4175#0" expanded="false" />
-                <element signature="e#4205#14368#0" expanded="false" />
-                <element signature="e#14376#14639#0" expanded="false" />
-                <element signature="e#17811#18182#0" expanded="false" />
-                <element signature="e#18201#18560#0" expanded="false" />
-                <element signature="e#18578#18850#0" expanded="false" />
-                <element signature="e#18873#19155#0" expanded="false" />
-                <marker date="1509358021925" expanded="true" signature="2680:3147" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="3410:3570" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="3861:4021" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4305:13490" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4321:13478" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4402:13476" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4445:13447" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4494:13422" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4548:13394" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4603:4695" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4748:12938" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4797:12904" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4908:11966" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="4986:11926" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="5033:6222" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="5077:6174" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="6269:11881" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="12006:12849" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="12006:12864" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="12972:13346" placeholder="..." />
-                <marker date="1509358021925" expanded="true" signature="12972:13361" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -206,6 +167,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php" />
+        <option value="$PROJECT_DIR$/fdt_schema.backup" />
       </list>
     </option>
   </component>
@@ -227,8 +189,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="8" />
-    <option name="width" value="1360" />
-    <option name="height" value="761" />
+    <option name="width" value="1328" />
+    <option name="height" value="715" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -737,11 +699,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="8" width="1360" height="761" extended-state="6" />
+    <frame x="0" y="8" width="1328" height="715" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19044118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19503012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -809,34 +771,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40805605">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46192893">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042139385">
-          <caret line="35" column="84" selection-start-line="35" selection-start-column="84" selection-end-line="35" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/draw.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/formulario/form_partials/inputs.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0">
@@ -953,13 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1182,26 +1109,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.75">
-          <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25283632">
           <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50567263">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1222,6 +1133,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.75">
+          <caret line="31" column="126" selection-start-line="31" selection-start-column="126" selection-end-line="31" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.75">
@@ -1232,8 +1151,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37394246">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_20_183605_create_form_deis_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_25_144731_create_log_navegacions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdt_schema.backup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8475712">
+          <caret line="260" column="32" selection-start-line="260" selection-start-column="32" selection-end-line="260" selection-end-column="32" />
+          <caret line="313" column="45" selection-start-line="313" selection-start-column="45" selection-end-line="313" selection-end-column="45" />
+          <caret line="347" column="38" selection-start-line="347" selection-start-column="38" selection-end-line="347" selection-end-column="38" />
+          <caret line="381" column="38" selection-start-line="381" selection-start-column="38" selection-end-line="381" selection-end-column="38" />
+          <caret line="497" column="28" selection-start-line="497" selection-start-column="28" selection-end-line="497" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdt_data.backup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36348408">
+          <caret line="126" column="430" selection-start-line="126" selection-start-column="426" selection-end-line="126" selection-end-column="430" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdt.backup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41373533">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47810858">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
