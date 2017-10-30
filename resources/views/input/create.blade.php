@@ -108,7 +108,7 @@ return ['nombre_campo' => [
 
                                        <!-- Partial - Formulario de Creacion de Inputs en base a JSON en PHP -->
                                        @include('input.form_partials.create_input')
-                                       <modal_procesar_json :json="json"
+                                       <modal_procesar_json :json="json_modal"
                                                             v-if="modal_procesar_json == true">
                                           <h3 slot="header">
                                              Buscar input

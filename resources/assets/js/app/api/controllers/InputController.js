@@ -26,6 +26,7 @@ const InputController = new Vue({
          'modal_procesar_json':false,
          'modal_procesar_json_attr':false,
          'json':'',
+         'json_modal':'',
          'json_error':'',
          'json_attr':'',
          'json_attr_error':'',
@@ -404,7 +405,8 @@ const InputController = new Vue({
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          $('.errors').text('');
          this.$http.post('/input', formData).then(response => { // success callback
-            this.json = response.body.created_inputs;
+            //this.json = response.body.created_inputs;
+            this.json_modal = response.body.created_inputs;
             this.modal_procesar_json = true;
             this.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');

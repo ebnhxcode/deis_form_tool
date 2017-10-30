@@ -36848,6 +36848,7 @@ var InputController = new _vue2.default({
          'modal_procesar_json': false,
          'modal_procesar_json_attr': false,
          'json': '',
+         'json_modal': '',
          'json_error': '',
          'json_attr': '',
          'json_attr_error': '',
@@ -37053,7 +37054,8 @@ var InputController = new _vue2.default({
          $('.errors').text('');
          this.$http.post('/input', formData).then(function (response) {
             // success callback
-            _this3.json = response.body.created_inputs;
+            //this.json = response.body.created_inputs;
+            _this3.json_modal = response.body.created_inputs;
             _this3.modal_procesar_json = true;
             _this3.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');
