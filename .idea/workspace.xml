@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,21 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017_10_30_132012_create_establecimiento_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php">
+      <file leaf-file-name="2017_10_30_132037_create_region_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="21" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017_10_30_132029_create_servicio_salud_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26395938">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.44246355">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -154,18 +143,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InputController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.75">
-              <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
-              <folding>
-                <element signature="e#40#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -216,6 +193,7 @@
         <option value="$PROJECT_DIR$/resources/views/input/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" />
       </list>
     </option>
   </component>
@@ -819,13 +797,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/framework/views/0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30847457">
@@ -1221,6 +1192,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25283632">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50567263">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/input/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.961538">
@@ -1229,18 +1216,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26395938">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.44246355">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding />
         </state>
       </provider>
