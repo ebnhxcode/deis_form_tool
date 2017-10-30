@@ -36849,6 +36849,7 @@ var InputController = new _vue2.default({
          'modal_procesar_json_attr': false,
          'json': '',
          'json_modal': '',
+         'json_modal_attr': '',
          'json_error': '',
          'json_attr': '',
          'json_attr_modal': '',
@@ -37073,34 +37074,33 @@ var InputController = new _vue2.default({
          });
       },
       procesar_json_attr: function procesar_json_attr() {
+         var _this4 = this;
+
          this.mini_loader = true;
          var ja = this.json_attr;
-         console.log(this.table_name_attr);
-         //var tna = this.table_name_attr.table_name_attr;
-         /*
+         var tna = this.table_name_attr.table_name;
          var formData = new FormData();
-         formData.append('json_attr', this.json_attr);
-         formData.append('table_name_attr', this.table_name_attr);
-         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
-         this.$http.post('/input/add/label', formData).then(response => { // success callback
-            this.json_attr = response.body;
-            this.modal_procesar_json_attr = true;
-            //console.log(response);
-            console.log(this.json_attr);
-            //alert('Guardado');
-         }, response => { // error callback
-            console.log(response);
-         });
-            var self = this;
-         setTimeout(()=>{
+         formData.append('json_attr', ja);
+         formData.append('table_name_attr', tna);
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         $('.errors').text('');
+         this.$http.post('/input/add/label', formData).then(function (response) {
+            // success callback
+            _this4.json_modal_attr = response.body.created_labels;
+            _this4.modal_procesar_json_attr = true;
+            _this4.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            setTimeout(()=>{
-               self.mini_loader = false;
-            },3000);
-         },3000);
-         */
+            _this4.mini_loader = false;
+         }, function (response) {
+            // error callback
+            _this4.boton_abrir_modal = false;
+            _this4.err = response.body;
+            for (var i in _this4.err) {
+               var error = _this4.err[i][0];
+               $('#' + i + '_error_attr').text(error);
+            }
+         });
       }
 
       //with_dash() => for explained specific functions

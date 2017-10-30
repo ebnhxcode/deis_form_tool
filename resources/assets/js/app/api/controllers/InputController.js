@@ -27,6 +27,7 @@ const InputController = new Vue({
          'modal_procesar_json_attr':false,
          'json':'',
          'json_modal':'',
+         'json_modal_attr':'',
          'json_error':'',
          'json_attr':'',
          'json_attr_modal':'',
@@ -426,33 +427,27 @@ const InputController = new Vue({
          this.mini_loader = true;
          var ja = this.json_attr;
          var tna = this.table_name_attr.table_name;
-         /*
          var formData = new FormData();
-         formData.append('json_attr', this.json_attr);
-         formData.append('table_name_attr', this.table_name_attr);
+         formData.append('json_attr', ja);
+         formData.append('table_name_attr', tna);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
+         $('.errors').text('');
          this.$http.post('/input/add/label', formData).then(response => { // success callback
-            this.json_attr = response.body;
+            this.json_modal_attr = response.body.created_labels;
             this.modal_procesar_json_attr = true;
-            //console.log(response);
-            console.log(this.json_attr);
-            //alert('Guardado');
-         }, response => { // error callback
-            console.log(response);
-         });
-
-
-
-         var self = this;
-         setTimeout(()=>{
+            this.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            setTimeout(()=>{
-               self.mini_loader = false;
-            },3000);
-         },3000);
-         */
+            this.mini_loader = false;
+         }, response => { // error callback
+            this.boton_abrir_modal = false;
+            this.err = response.body;
+            for (let i in this.err) {
+               var error = this.err[i][0];
+               $(`#${i}_error_attr`).text(error);
+            }
+         });
+
       },
 
       //with_dash() => for explained specific functions

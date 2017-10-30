@@ -122,7 +122,7 @@ return ['nombre_campo' => [
                                        </modal_procesar_json>
                                        <!-- Partial - Formulario de asociacion de otros atributos a los inputs creados -->
                                        @include('input.form_partials.assoc_attr')
-                                       <modal_procesar_json :json="json_attr_modal"
+                                       <modal_procesar_json :json="json_modal_attr"
                                                             v-if="modal_procesar_json_attr == true">
                                           <h3 slot="header">
                                              Inputs modificados, editables de último paso

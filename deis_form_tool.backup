@@ -141,8 +141,11 @@ CREATE TABLE form_deis (
     peso_mujer_parto integer,
     nombre_farmaco_1_vih character varying(255),
     dosis_farmaco_1_vih character varying(255),
+    dosis_2_farmaco_1_vih character varying(255),
     fecha_inicio_farmaco_1_vih timestamp(0) without time zone,
+    fecha_2_inicio_farmaco_1_vih timestamp(0) without time zone,
     hora_inicio_farmaco_1_vih timestamp(0) without time zone,
+    hora_2_inicio_farmaco_1_vih timestamp(0) without time zone,
     nombre_farmaco_2_vih character varying(255),
     dosis_farmaco_2_vih character varying(255),
     fecha_inicio_farmaco_2_vih timestamp(0) without time zone,
@@ -243,18 +246,24 @@ ALTER SEQUENCE form_deis_id_seq OWNED BY form_deis.id;
 
 CREATE TABLE form_deis_inputs (
     id_input integer NOT NULL,
-    type character varying(255) NOT NULL,
-    id character varying(255) NOT NULL,
-    name character varying(255) NOT NULL,
-    value character varying(255) NOT NULL,
-    max_lenght character varying(255) NOT NULL,
-    placeholder character varying(255) NOT NULL,
-    required character varying(255) NOT NULL,
-    class character varying(255) NOT NULL,
-    style character varying(255) NOT NULL,
-    bloque character varying(255) NOT NULL,
-    seccion character varying(255) NOT NULL,
-    class_custom character varying(255) NOT NULL,
+    table_name character varying(255),
+    type character varying(255),
+    id character varying(255),
+    name character varying(255),
+    value character varying(255),
+    max_length character varying(255),
+    placeholder character varying(255),
+    required character varying(255),
+    class character varying(255),
+    style character varying(255),
+    bloque character varying(255),
+    seccion character varying(255),
+    class_custom character varying(255),
+    label character varying(255),
+    tag character varying(255),
+    subtag character varying(255),
+    empty_column character varying(255),
+    "order" character varying(255),
     created_at timestamp(0) without time zone,
     updated_at timestamp(0) without time zone
 );
@@ -464,7 +473,7 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 -- Data for Name: form_deis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre, fecha_nacimiento_madre, n_correlativo_interno, id_region, id_servicio_salud, run_madre, digito_verificador, edad, nacionalidad, id_pais, pueblos_indigenas, estado_civil, tipo_de_convivencia, escolaridad, anos_estudio, residencia_gestante, nacidos_vivos_previos_embarazo, nacidos_muertos_previos_embarazo, abortos_previos_embarazo, sifilis_previa_embarazo, ano_sifilis_previa_embarazo, otra_its_previa_embarazo, vih_conocido_previa_embarazo, fecha_confirmacion_isp_vih_responde_si, adicciones, fecha_ingreso_control_prenatal_embarazo, embarazo_con_control_parental, edad_gestacional_ingreso_control_embarazo, lugar_control_prenatal, lugar_control_prenatal_otro, codigo_establecimiento_control_prenatal_embarazo, tipo_establecimiento_control_prenatal_embarazo, fecha_1_vdrl_embarazo, resultado_1_vdrl_embarazo, resultado_dilucion_1_vdrl_embarazo, eg_1_dvrl_embarazo, fecha_2_vdrl_embarazo, resultado_2_vdrl_embarazo, resultado_dilucion_2_vdrl_embarazo, eg_2_dvrl_embarazo, fecha_3_vdrl_embarazo, resultado_3_vdrl_embarazo, resultado_dilucion_3_vdrl_embarazo, eg_3_dvrl_embarazo, fecha_examen_treponemico, resultado_treponemico, diagnostico_sifilis_embarazo, tratamiento_sifilis_farmaco, tratamiento_sifilis_dosis, tratamiento_sifilis_frecuencia, acepta_rechaza_toma_examen_vih, fecha_1_examen_vih_embarazo, resultado_1_examen_vih_embarazo, eg_1_examen_vih, fecha_2_examen_vih_embarazo, resultado_2_examen_vih_embarazo, eg_2_examen_vih, fecha_resultado_final_isp_examen_vih, fecha_resultado_final_isp_examen_vih_recien_nacido, resultado_final_isp_examen_vih, resultado_final_isp_examen_vih_recien_nacido, derivada_a_especialidades_embarazo, fecha_ingreso_unacess, fecha_ingreso_control_unidad_alto_riesgo, fecha_ingreso_control_centro_atencion_vih, fecha_ingreso_control_otras_especialidades, fecha_ingreso_control_otras_especialidades_otro, terapia_antiretroviral_farmaco_1, fecha_inicio_tar_farmaco_1, terapia_antiretroviral_tar_farmaco_2, fecha_inicio_tar_farmaco_2, terapia_antiretroviral_tar_farmaco_3, fecha_inicio_tar_farmaco_3, numero_cd4_ingreso_control_prenatal, fecha_examen_linfocitos_cd4_ingreso_control_prenatal, carga_viral_numero_copia_ingreso_control_prenatal, fecha_examen_carga_viral_control_prenatal, numero_carga_viral_control_prenatal, numero_contactos_sexuales_declarados, numero_contactos_sexuales_estudiados, carga_viral_numero_copia_semana_34, fecha_examen_carga_viral_semana_34, numero_contactos_sexuales_tratados, lugar_atencion_parto, codigo_establecimiento, nombre_establecimiento_sin_codigo, fecha_parto, hora_parto, tipo_parto, via_parto, resultado_vdrl_parto, resultado_dilucion_vdrl_parto, resultado_examen_treponemico_parto, tratamiento_sifilis_parto, resultado_examen_vih_parto, tratamiento_retroviral_parto, peso_mujer_parto, nombre_farmaco_1_vih, dosis_farmaco_1_vih, fecha_inicio_farmaco_1_vih, hora_inicio_farmaco_1_vih, nombre_farmaco_2_vih, dosis_farmaco_2_vih, fecha_inicio_farmaco_2_vih, hora_inicio_farmaco_2_vih, nombre_farmaco_suspencion_lactancia, fecha_administracion_farmaco_suspencion_lactancia, estado_recien_nacido, eg_pediatrica, sexo_recien_nacido, peso_recien_nacido, estado_clinico_recien_nacido, run_recien_nacido, fecha_nacimiento_recien_nacido, hora_nacimiento_recien_nacido, digito_verificador_recien_nacido, codigo_recien_nacido, fecha_examen_vdrl_periferico_recien_nacido, resultado_vdrl_periferico_recien_nacido, titulacion_vdrl_periferico_recien_nacido, fecha_examen_vdrl_liq_cefalo_recien_nacido, resultado_vdrl_liq_cefalo_recien_nacido, titulacion_vdrl_liq_cefalo_recien_nacido, resultado_radiografia_huesos_largos, resultado_citoquimico_liq_cefalo_raquideo, resultado_estudio_placentario, tratamiento_recien_nacido_farmaco, tratamiento_recien_nacido_dosis, tratamiento_recien_nacido_frecuencia, sustituto_leche_materna, fecha_inicio_sustituto_leche_materna, hora_inicio_sustituto_leche_materna, entrega_sustituto_leche_materna_al_alta, nombre_farmaco_1_vih_recien_nacido, dosis_farmaco_1_vih_recien_nacido, fecha_inicio_farmaco_1_vih_recien_nacido, hora_inicio_farmaco_1_vih_recien_nacido, nombre_farmaco_2_vih_recien_nacido, dosis_farmaco_2_vih_recien_nacido, fecha_inicio_farmaco_2_vih_recien_nacido, hora_inicio_farmaco_2_vih_recien_nacido, fecha_1_examen_pcr_recien_nacido, resultado_1_examen_pcr_recien_nacido, fecha_2_examen_pcr_recien_nacido, resultado_2_examen_pcr_recien_nacido, fecha_3_examen_pcr_recien_nacido, resultado_3_examen_pcr_recien_nacido, diagnostico_final_vih_isp_recien_nacido, fecha_test_elisa_18_meses, resultado_test_elisa_18_meses, fecha_examen_treponemico_recien_nacido, derivacion_recien_nacido_a_seguimiento, lugar_derivacion_recien_nacido_a_seguimiento, fecha_ingreso_control_recien_nacido_post_nacimiento, diagnostico_final_sifilis_recien_nacido, estado_seguimiento_mes, estado_seguimiento_3_meses, estado_seguimiento_6_meses, estado_seguimiento_12_meses, estado_seguimiento_18_meses, mujer_continua_tratamiento_antiretroviral, fecha_ultima_regla_gestacional, fecha_ultima_regla_operacional, pareja_vih_positivo, fecha_administracion_1_dosis_penicilina_gestante, fecha_administracion_ult_dosis_penicilina_gestante, created_at, updated_at) FROM stdin;
+COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre, fecha_nacimiento_madre, n_correlativo_interno, id_region, id_servicio_salud, run_madre, digito_verificador, edad, nacionalidad, id_pais, pueblos_indigenas, estado_civil, tipo_de_convivencia, escolaridad, anos_estudio, residencia_gestante, nacidos_vivos_previos_embarazo, nacidos_muertos_previos_embarazo, abortos_previos_embarazo, sifilis_previa_embarazo, ano_sifilis_previa_embarazo, otra_its_previa_embarazo, vih_conocido_previa_embarazo, fecha_confirmacion_isp_vih_responde_si, adicciones, fecha_ingreso_control_prenatal_embarazo, embarazo_con_control_parental, edad_gestacional_ingreso_control_embarazo, lugar_control_prenatal, lugar_control_prenatal_otro, codigo_establecimiento_control_prenatal_embarazo, tipo_establecimiento_control_prenatal_embarazo, fecha_1_vdrl_embarazo, resultado_1_vdrl_embarazo, resultado_dilucion_1_vdrl_embarazo, eg_1_dvrl_embarazo, fecha_2_vdrl_embarazo, resultado_2_vdrl_embarazo, resultado_dilucion_2_vdrl_embarazo, eg_2_dvrl_embarazo, fecha_3_vdrl_embarazo, resultado_3_vdrl_embarazo, resultado_dilucion_3_vdrl_embarazo, eg_3_dvrl_embarazo, fecha_examen_treponemico, resultado_treponemico, diagnostico_sifilis_embarazo, tratamiento_sifilis_farmaco, tratamiento_sifilis_dosis, tratamiento_sifilis_frecuencia, acepta_rechaza_toma_examen_vih, fecha_1_examen_vih_embarazo, resultado_1_examen_vih_embarazo, eg_1_examen_vih, fecha_2_examen_vih_embarazo, resultado_2_examen_vih_embarazo, eg_2_examen_vih, fecha_resultado_final_isp_examen_vih, fecha_resultado_final_isp_examen_vih_recien_nacido, resultado_final_isp_examen_vih, resultado_final_isp_examen_vih_recien_nacido, derivada_a_especialidades_embarazo, fecha_ingreso_unacess, fecha_ingreso_control_unidad_alto_riesgo, fecha_ingreso_control_centro_atencion_vih, fecha_ingreso_control_otras_especialidades, fecha_ingreso_control_otras_especialidades_otro, terapia_antiretroviral_farmaco_1, fecha_inicio_tar_farmaco_1, terapia_antiretroviral_tar_farmaco_2, fecha_inicio_tar_farmaco_2, terapia_antiretroviral_tar_farmaco_3, fecha_inicio_tar_farmaco_3, numero_cd4_ingreso_control_prenatal, fecha_examen_linfocitos_cd4_ingreso_control_prenatal, carga_viral_numero_copia_ingreso_control_prenatal, fecha_examen_carga_viral_control_prenatal, numero_carga_viral_control_prenatal, numero_contactos_sexuales_declarados, numero_contactos_sexuales_estudiados, carga_viral_numero_copia_semana_34, fecha_examen_carga_viral_semana_34, numero_contactos_sexuales_tratados, lugar_atencion_parto, codigo_establecimiento, nombre_establecimiento_sin_codigo, fecha_parto, hora_parto, tipo_parto, via_parto, resultado_vdrl_parto, resultado_dilucion_vdrl_parto, resultado_examen_treponemico_parto, tratamiento_sifilis_parto, resultado_examen_vih_parto, tratamiento_retroviral_parto, peso_mujer_parto, nombre_farmaco_1_vih, dosis_farmaco_1_vih, dosis_2_farmaco_1_vih, fecha_inicio_farmaco_1_vih, fecha_2_inicio_farmaco_1_vih, hora_inicio_farmaco_1_vih, hora_2_inicio_farmaco_1_vih, nombre_farmaco_2_vih, dosis_farmaco_2_vih, fecha_inicio_farmaco_2_vih, hora_inicio_farmaco_2_vih, nombre_farmaco_suspencion_lactancia, fecha_administracion_farmaco_suspencion_lactancia, estado_recien_nacido, eg_pediatrica, sexo_recien_nacido, peso_recien_nacido, estado_clinico_recien_nacido, run_recien_nacido, fecha_nacimiento_recien_nacido, hora_nacimiento_recien_nacido, digito_verificador_recien_nacido, codigo_recien_nacido, fecha_examen_vdrl_periferico_recien_nacido, resultado_vdrl_periferico_recien_nacido, titulacion_vdrl_periferico_recien_nacido, fecha_examen_vdrl_liq_cefalo_recien_nacido, resultado_vdrl_liq_cefalo_recien_nacido, titulacion_vdrl_liq_cefalo_recien_nacido, resultado_radiografia_huesos_largos, resultado_citoquimico_liq_cefalo_raquideo, resultado_estudio_placentario, tratamiento_recien_nacido_farmaco, tratamiento_recien_nacido_dosis, tratamiento_recien_nacido_frecuencia, sustituto_leche_materna, fecha_inicio_sustituto_leche_materna, hora_inicio_sustituto_leche_materna, entrega_sustituto_leche_materna_al_alta, nombre_farmaco_1_vih_recien_nacido, dosis_farmaco_1_vih_recien_nacido, fecha_inicio_farmaco_1_vih_recien_nacido, hora_inicio_farmaco_1_vih_recien_nacido, nombre_farmaco_2_vih_recien_nacido, dosis_farmaco_2_vih_recien_nacido, fecha_inicio_farmaco_2_vih_recien_nacido, hora_inicio_farmaco_2_vih_recien_nacido, fecha_1_examen_pcr_recien_nacido, resultado_1_examen_pcr_recien_nacido, fecha_2_examen_pcr_recien_nacido, resultado_2_examen_pcr_recien_nacido, fecha_3_examen_pcr_recien_nacido, resultado_3_examen_pcr_recien_nacido, diagnostico_final_vih_isp_recien_nacido, fecha_test_elisa_18_meses, resultado_test_elisa_18_meses, fecha_examen_treponemico_recien_nacido, derivacion_recien_nacido_a_seguimiento, lugar_derivacion_recien_nacido_a_seguimiento, fecha_ingreso_control_recien_nacido_post_nacimiento, diagnostico_final_sifilis_recien_nacido, estado_seguimiento_mes, estado_seguimiento_3_meses, estado_seguimiento_6_meses, estado_seguimiento_12_meses, estado_seguimiento_18_meses, mujer_continua_tratamiento_antiretroviral, fecha_ultima_regla_gestacional, fecha_ultima_regla_operacional, pareja_vih_positivo, fecha_administracion_1_dosis_penicilina_gestante, fecha_administracion_ult_dosis_penicilina_gestante, created_at, updated_at) FROM stdin;
 \.
 
 
@@ -472,7 +481,364 @@ COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre
 -- Data for Name: form_deis_inputs; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY form_deis_inputs (id_input, type, id, name, value, max_lenght, placeholder, required, class, style, bloque, seccion, class_custom, created_at, updated_at) FROM stdin;
+COPY form_deis_inputs (id_input, table_name, type, id, name, value, max_length, placeholder, required, class, style, bloque, seccion, class_custom, label, tag, subtag, empty_column, "order", created_at, updated_at) FROM stdin;
+12	form_deis_inputs	date	fecha_ultima_regla_gestacional	fecha_ultima_regla_gestacional							sin_examenes	control_embarazo	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+13	form_deis_inputs	date	fecha_ultima_regla_operacional	fecha_ultima_regla_operacional							sin_examenes	control_embarazo	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+30	form_deis_inputs	date	fecha_administracion_1_dosis_penicilina_gestante	fecha_administracion_1_dosis_penicilina_gestante							sin_examenes	control_embarazo	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+4	form_deis_inputs	text	primer_apellido_madre	primer_apellido_madre			Ej: Apellido1				sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Primer Apellido	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+6	form_deis_inputs	date	fecha_nacimiento_madre	fecha_nacimiento_madre							sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Fecha de nacimiento	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+2	form_deis_inputs	number	n_correlativo_interno	n_correlativo_interno							sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Nº correlativo Minsal	\N	\N	\N	\N	2017-10-30 08:27:20	2017-10-30 08:27:54
+1	form_deis_inputs	text	run_madre	run_madre			Ej: 123456789				sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Run Madre	Datos de identificación de la madre	\N	col-md-6 col-md-6	\N	2017-10-30 08:27:20	2017-10-30 08:27:54
+7	form_deis_inputs	select	nacionalidad	nacionalidad							sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Nacionalidad	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+8	form_deis_inputs	select	pais_origen	pais_origen							sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Pais de Origen	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+9	form_deis_inputs	select	pueblos_indigenas	pueblos_indigenas							sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Pueblos Indigenas	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+10	form_deis_inputs	select	embarazo_con_control_parental	embarazo_con_control_parental							sin_examenes	control_embarazo	col-sm-3 col-md-3	¿Embarazo controlado?	Datos del Embarazo	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+14	form_deis_inputs	number	edad_gestacional_ingreso_control_embarazo	edad_gestacional_ingreso_control_embarazo			Ej: 1				sin_examenes	control_embarazo	col-sm-3 col-md-3	Edad Gestacional al ingreso	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+16	form_deis_inputs	select	lugar_control_prenatal	lugar_control_prenatal							sin_examenes	control_embarazo	col-sm-3 col-md-3	Lugar Control Prenatal	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+17	form_deis_inputs	text	lugar_control_prenatal_otro	lugar_control_prenatal_otro			Ej: Hospital clinico ejemplo				sin_examenes	control_embarazo	col-sm-3 col-md-3	Otro Lugar Control Prenatal: Especifique	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+20	form_deis_inputs	date	fecha_1_vdrl_embarazo	fecha_1_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Fecha 1º VDRL de este embarazo	\N	\N	\N	3.	2017-10-30 08:27:21	2017-10-30 08:27:54
+19	form_deis_inputs	select	resultado_1_vdrl_embarazo	resultado_1_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado 1º VDRL  en este embarazo	\N	\N	\N	2.	2017-10-30 08:27:21	2017-10-30 08:27:54
+18	form_deis_inputs	select	resultado_dilucion_1_vdrl_embarazo	resultado_dilucion_1_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado Dilución  1º VDRL  en este embarazo	Examenes detección de sífilis	Examen 1	\N	1.	2017-10-30 08:27:21	2017-10-30 08:27:54
+21	form_deis_inputs	number	eg_1_dvrl_embarazo	eg_1_dvrl_embarazo			Ej: 1				sin_examenes	control_embarazo	col-sm-3 col-md-3	EG 1º VDRL	\N	\N	\N	4.	2017-10-30 08:27:21	2017-10-30 08:27:54
+24	form_deis_inputs	date	fecha_2_vdrl_embarazo	fecha_2_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Fecha 2º VDRL	\N	\N	\N	3.	2017-10-30 08:27:21	2017-10-30 08:27:54
+23	form_deis_inputs	select	resultado_2_vdrl_embarazo	resultado_2_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado 2º VDRL	\N	\N	\N	2.	2017-10-30 08:27:21	2017-10-30 08:27:54
+25	form_deis_inputs	number	eg_2_dvrl_embarazo	eg_2_dvrl_embarazo			Ej: 1				sin_examenes	control_embarazo	col-sm-3 col-md-3	EG 2º VDRL	\N	\N	\N	4.	2017-10-30 08:27:21	2017-10-30 08:27:54
+28	form_deis_inputs	date	fecha_3_vdrl_embarazo	fecha_3_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Fecha 3º VDRL	\N	\N	\N	3.	2017-10-30 08:27:21	2017-10-30 08:27:54
+27	form_deis_inputs	select	resultado_3_vdrl_embarazo	resultado_3_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado 3º VDRL	\N	\N	\N	2.	2017-10-30 08:27:21	2017-10-30 08:27:54
+26	form_deis_inputs	select	resultado_dilucion_3_vdrl_embarazo	resultado_dilucion_3_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado Dilución  3º VDRL	\N	Examen 3	\N	1.	2017-10-30 08:27:21	2017-10-30 08:27:54
+29	form_deis_inputs	number	eg_3_dvrl_embarazo	eg_3_dvrl_embarazo			Ej: 1				sin_examenes	control_embarazo	col-sm-3 col-md-3	EG 3º VDRL	\N	\N	\N	4.	2017-10-30 08:27:21	2017-10-30 08:27:54
+31	form_deis_inputs	select	acepta_rechaza_toma_examen_vih	acepta_rechaza_toma_examen_vih							sin_examenes	control_embarazo	col-sm-3 col-md-3	Acepta/rechaza toma de examen VIH	Exámenes de detección de VIH	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+33	form_deis_inputs	date	fecha_1_examen_vih_embarazo	fecha_1_examen_vih_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Fecha 1º examen VIH  en este embarazo	\N	\N	\N	2.	2017-10-30 08:27:21	2017-10-30 08:27:54
+34	form_deis_inputs	number	eg_1_examen_vih	eg_1_examen_vih			Ej: 1				sin_examenes	control_embarazo	col-sm-3 col-md-3	EG del 1° Examen VIH	\N	\N	col-sm-3 col-md-3	3.	2017-10-30 08:27:21	2017-10-30 08:27:54
+36	form_deis_inputs	date	fecha_2_examen_vih_embarazo	fecha_2_examen_vih_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Fecha 2º examen VIH	\N	\N	\N	2.	2017-10-30 08:27:21	2017-10-30 08:27:54
+35	form_deis_inputs	select	resultado_2_examen_vih_embarazo	resultado_2_examen_vih_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado  2º examen VIH	\N	Segundo Examen	\N	1.	2017-10-30 08:27:21	2017-10-30 08:27:54
+37	form_deis_inputs	number	eg_2_examen_vih	eg_2_examen_vih			Ej: 1				sin_examenes	control_embarazo	col-sm-3 col-md-3	EG del 2° Examen VIH	\N	\N	\N	3.	2017-10-30 08:27:21	2017-10-30 08:27:54
+38	form_deis_inputs	select	resultado_final_isp_examen_vih	resultado_final_isp_examen_vih							sin_examenes	control_embarazo	col-sm-4 col-md-4	Resultado Final ISP Exámen VIH	\N	Resultado de examen ISP	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+40	form_deis_inputs	select	derivada_a_especialidades_embarazo	derivada_a_especialidades_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Derivada a Especialidades en este embarazo	Derivación a especialidades por sífilis o VIH	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+42	form_deis_inputs	date	fecha_ingreso_unacess	fecha_ingreso_unacess							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Fecha de ingreso a UNACESS	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+43	form_deis_inputs	date	fecha_ingreso_control_otras_especialidades	fecha_ingreso_control_otras_especialidades							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Fecha de ingreso a control en otro lugar	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+63	form_deis_inputs	date	fecha_administracion_1_dosis_penicilina_gestante	fecha_administracion_1_dosis_penicilina_gestante							sin_examenes	patologias_sifilis	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+64	form_deis_inputs	date	fecha_administracion_ult_dosis_penicilina_gestante	fecha_administracion_ult_dosis_penicilina_gestante							sin_examenes	patologias_sifilis	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+65	form_deis_inputs	number	numero_contactos_sexuales_declarados	numero_contactos_sexuales_declarados			Ej: 0				sin_examenes	patologias_sifilis	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+66	form_deis_inputs	number	numero_contactos_sexuales_estudiados	numero_contactos_sexuales_estudiados			Ej: 0				sin_examenes	patologias_sifilis	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+67	form_deis_inputs	number	numero_contactos_sexuales_tratados	numero_contactos_sexuales_tratados			Ej: 0				sin_examenes	patologias_sifilis	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+70	form_deis_inputs	date	fecha_ingreso_control_otras_especialidades	fecha_ingreso_control_otras_especialidades							sin_examenes	patologias_vih	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+80	form_deis_inputs	select	pareja_vih_positivo	pareja_vih_positivo							sin_examenes	patologias_vih	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+81	form_deis_inputs	number	numero_contactos_sexuales_declarados	numero_contactos_sexuales_declarados			Ej: 0				sin_examenes	patologias_vih	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+82	form_deis_inputs	number	numero_contactos_sexuales_estudiados	numero_contactos_sexuales_estudiados			Ej: 0				sin_examenes	patologias_vih	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+83	form_deis_inputs	number	numero_contactos_sexuales_tratados	numero_contactos_sexuales_tratados			Ej: 0				sin_examenes	patologias_vih	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+46	form_deis_inputs	select	tipo_de_convivencia	tipo_de_convivencia							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Tipo de Convivencia	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+47	form_deis_inputs	select	escolaridad	escolaridad							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Nivel de escolaridad	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+48	form_deis_inputs	number	anos_estudio	anos_estudio			Ej: 5				sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Años de estudios	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+49	form_deis_inputs	select	residencia_gestante	residencia_gestante							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Residencia de la gestante	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+51	form_deis_inputs	number	nacidos_muertos_previos_embarazo	nacidos_muertos_previos_embarazo							sin_examenes	patologias_sifilis	col-md-3 col-md-3	Nacidos muertos antes de este embarazo	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+52	form_deis_inputs	number	abortos_previos_embarazo	abortos_previos_embarazo							sin_examenes	patologias_sifilis	col-md-3 col-md-3	Abortos previos a este embarazo	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+54	form_deis_inputs	select	sifilis_previa_embarazo	sifilis_previa_embarazo							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Sífilis previo a este embarazo	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+55	form_deis_inputs	number	ano_sifilis_previa_embarazo	ano_sifilis_previa_embarazo							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Año sífilis previo a este embarazo	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+56	form_deis_inputs	select	otra_its_previa_embarazo	otra_its_previa_embarazo							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Otras ITS  previas a este embarazo	\N	\N	col-sm-3 col-md-3	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+78	form_deis_inputs	date	fecha_confirmacion_isp_vih_responde_si	fecha_confirmacion_isp_vih_responde_si							sin_examenes	patologias_vih	col-sm-3 col-md-3	Fecha confirmación ISP de VIH	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+53	form_deis_inputs	select	adicciones	adicciones							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Adicciones	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+57	form_deis_inputs	date	fecha_examen_treponemico	fecha_examen_treponemico							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Fecha Examen treponémico	Control de la sífilis en este embarazo	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+58	form_deis_inputs	select	resultado_treponemico	resultado_treponemico							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Resultado Treponemico	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+60	form_deis_inputs	select	tratamiento_sifilis_farmaco	tratamiento_sifilis_farmaco							sin_examenes	patologias_sifilis	col-sm-4 col-md-4	Tratamiento Sífilis  Fámaco	Tratamiento de Sífilis de la Gestante	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+61	form_deis_inputs	select	tratamiento_sifilis_dosis	tratamiento_sifilis_dosis							sin_examenes	patologias_sifilis	col-sm-4 col-md-4	Tratamiento Sifilis Dosis	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+62	form_deis_inputs	select	tratamiento_sifilis_frecuencia	tratamiento_sifilis_frecuencia							sin_examenes	patologias_sifilis	col-sm-4 col-md-4	Tratamiento Sifilis Frecuencia	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+69	form_deis_inputs	date	fecha_ingreso_control_centro_atencion_vih	fecha_ingreso_control_centro_atencion_vih							sin_examenes	patologias_vih	col-sm-3 col-md-3	Fecha de ingreso a centro de atención VIH	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+85	form_deis_inputs	number	numero_cd4_ingreso_control_prenatal	numero_cd4_ingreso_control_prenatal							sin_examenes	patologias_vih	col-md-8 col-md-8	Resultado CD4	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+84	form_deis_inputs	date	fecha_examen_linfocitos_cd4_ingreso_control_prenatal	fecha_examen_linfocitos_cd4_ingreso_control_prenatal							sin_examenes	patologias_vih	col-md-4 col-md-4	Fecha de Examen de Linfocitos CD4	Control del VIH en este embarazo	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+72	form_deis_inputs	select	estado_civil	estado_civil							sin_examenes	patologias_vih	col-sm-3 col-md-3	Estado Civil	\N	Datos Sociodemográficos	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:49
+73	form_deis_inputs	select	tipo_de_convivencia	tipo_de_convivencia							sin_examenes	patologias_vih	col-sm-3 col-md-3	Tipo de Convivencia	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+74	form_deis_inputs	select	escolaridad	escolaridad							sin_examenes	patologias_vih	col-sm-3 col-md-3	Nivel de escolaridad	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+75	form_deis_inputs	number	anos_estudio	anos_estudio			Ej: 5				sin_examenes	patologias_vih	col-sm-3 col-md-3	Años de estudios	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+76	form_deis_inputs	select	residencia_gestante	residencia_gestante							sin_examenes	patologias_vih	col-sm-3 col-md-3	Residencia de la gestante	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+79	form_deis_inputs	select	adicciones	adicciones							sin_examenes	patologias_vih	col-sm-3 col-md-3	Adicciones	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+71	form_deis_inputs	text	fecha_ingreso_control_otras_especialidades_otro	fecha_ingreso_control_otras_especialidades_otro			Ej: Otro lugar especialidad				sin_examenes	patologias_vih	col-sm-3 col-md-3	Otro lugar de especialidades	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+200	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+201	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+202	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+203	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+204	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+86	form_deis_inputs	date	fecha_examen_carga_viral_control_prenatal	fecha_examen_carga_viral_control_prenatal							sin_examenes	patologias_vih	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+87	form_deis_inputs	number	numero_carga_viral_control_prenatal	numero_carga_viral_control_prenatal							sin_examenes	patologias_vih	col-md-8 col-md-8	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+88	form_deis_inputs	date	fecha_examen_carga_viral_semana_34	fecha_examen_carga_viral_semana_34							sin_examenes	patologias_vih	col-md-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+89	form_deis_inputs	number	carga_viral_numero_copia_semana_34	carga_viral_numero_copia_semana_34							sin_examenes	patologias_vih	col-md-8 col-md-8	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+97	form_deis_inputs	select	lugar_atencion_parto	lugar_atencion_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+98	form_deis_inputs	number	codigo_establecimiento	codigo_establecimiento			Ej: 123456				sin_examenes	datos_parto	col-sm-2 col-md-2	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+99	form_deis_inputs	text	nombre_establecimiento_sin_codigo	nombre_establecimiento_sin_codigo			Ej: Nombre del Establecimiento				sin_examenes	datos_parto	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+100	form_deis_inputs	select	tipo_establecimiento	tipo_establecimiento							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+101	form_deis_inputs	date	fecha_parto	fecha_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+102	form_deis_inputs	time	hora_parto	hora_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+103	form_deis_inputs	select	tipo_parto	tipo_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+104	form_deis_inputs	select	via_parto	via_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+105	form_deis_inputs	select	resultado_vdrl_parto	resultado_vdrl_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+106	form_deis_inputs	select	resultado_dilucion_vdrl_parto	resultado_dilucion_vdrl_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+107	form_deis_inputs	select	resultado_examen_treponemico_parto	resultado_examen_treponemico_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+108	form_deis_inputs	select	tratamiento_sifilis_parto	tratamiento_sifilis_parto							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+109	form_deis_inputs	select	resultado_examen_vih_parto	resultado_examen_vih_parto							sin_examenes	datos_parto	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+110	form_deis_inputs	select	tratamiento_retroviral_parto	tratamiento_retroviral_parto							sin_examenes	datos_parto	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+111	form_deis_inputs	number	peso_mujer_parto	peso_mujer_parto			Ej: 55				sin_examenes	datos_parto	col-md-offset-9 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+112	form_deis_inputs	select	nombre_farmaco_1_vih	nombre_farmaco_1_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+113	form_deis_inputs	text	dosis_farmaco_1_vih	dosis_farmaco_1_vih			Ej: Carga n° 1				sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+114	form_deis_inputs	date	fecha_inicio_farmaco_1_vih	fecha_inicio_farmaco_1_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+115	form_deis_inputs	time	hora_inicio_farmaco_1_vih	hora_inicio_farmaco_1_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+116	form_deis_inputs	text	dosis_2_farmaco_1_vih	dosis_2_farmaco_1_vih			Ej: Carga n° 2				sin_examenes	datos_parto	col-sm-3 col-md-3 col-md-offset-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+117	form_deis_inputs	date	fecha_2_inicio_farmaco_1_vih	fecha_2_inicio_farmaco_1_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+118	form_deis_inputs	time	hora_2_inicio_farmaco_1_vih	hora_2_inicio_farmaco_1_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+119	form_deis_inputs	select	nombre_farmaco_2_vih	nombre_farmaco_2_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+120	form_deis_inputs	text	dosis_farmaco_2_vih	dosis_farmaco_2_vih			Ej: Dosis de cantidad / horas				sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+121	form_deis_inputs	date	fecha_inicio_farmaco_2_vih	fecha_inicio_farmaco_2_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+122	form_deis_inputs	time	hora_inicio_farmaco_2_vih	hora_inicio_farmaco_2_vih							sin_examenes	datos_parto	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+123	form_deis_inputs	select	nombre_farmaco_suspencion_lactancia	nombre_farmaco_suspencion_lactancia							sin_examenes	datos_parto	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+124	form_deis_inputs	date	fecha_administracion_farmaco_suspencion_lactancia	fecha_administracion_farmaco_suspencion_lactancia							sin_examenes	datos_parto	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+125	form_deis_inputs	number	run_recien_nacido	run_recien_nacido			Ej: 123456789				sin_examenes	datos_recien_nacido	col-sm-2 col-md-2	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+126	form_deis_inputs	date	fecha_nacimiento_recien_nacido	fecha_nacimiento_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-2 col-md-2	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+127	form_deis_inputs	time	hora_nacimiento_recien_nacido	hora_nacimiento_recien_nacido						min-width: 80px !important;	sin_examenes	datos_recien_nacido	col-sm-1 col-md-1	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+128	form_deis_inputs	number	eg_pediatrica	eg_pediatrica			Ej: 1			min-width: 80px !important;	sin_examenes	datos_recien_nacido	col-sm-1 col-md-1	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+129	form_deis_inputs	number	peso_recien_nacido	peso_recien_nacido			Ej: 3300			min-width: 110px !important;	sin_examenes	datos_recien_nacido	col-sm-1 col-md-1	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+91	form_deis_inputs	date	fecha_inicio_tar_farmaco_1	fecha_inicio_tar_farmaco_1							sin_examenes	patologias_vih	\N	Fecha de Inicio Fármaco 1	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+92	form_deis_inputs	select	terapia_antiretroviral_tar_farmaco_2	terapia_antiretroviral_tar_farmaco_2							sin_examenes	patologias_vih	\N	Fármaco 2	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+93	form_deis_inputs	date	fecha_inicio_tar_farmaco_2	fecha_inicio_tar_farmaco_2							sin_examenes	patologias_vih	\N	Fecha de Inicio Fármaco 2	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+94	form_deis_inputs	select	terapia_antiretroviral_tar_farmaco_3	terapia_antiretroviral_tar_farmaco_3							sin_examenes	patologias_vih	\N	Fármaco 3	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+95	form_deis_inputs	date	fecha_inicio_tar_farmaco_3	fecha_inicio_tar_farmaco_3							sin_examenes	patologias_vih	\N	Fecha de Inicio Fármaco 3	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+205	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+206	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+207	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+208	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+209	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+130	form_deis_inputs	select	estado_recien_nacido	estado_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-2 col-md-2 col-md-offset-1	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+131	form_deis_inputs	select	sexo_recien_nacido	sexo_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-2 col-md-2	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+132	form_deis_inputs	date	fecha_examen_vdrl_periferico_recien_nacido	fecha_examen_vdrl_periferico_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+133	form_deis_inputs	select	resultado_vdrl_periferico_recien_nacido	resultado_vdrl_periferico_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+134	form_deis_inputs	select	titulacion_vdrl_periferico_recien_nacido	titulacion_vdrl_periferico_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+135	form_deis_inputs	date	fecha_examen_vdrl_liq_cefalo_recien_nacido	fecha_examen_vdrl_liq_cefalo_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+136	form_deis_inputs	select	resultado_vdrl_liq_cefalo_recien_nacido	resultado_vdrl_liq_cefalo_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+137	form_deis_inputs	select	titulacion_vdrl_liq_cefalo_recien_nacido	titulacion_vdrl_liq_cefalo_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+138	form_deis_inputs	select	resultado_radiografia_huesos_largos	resultado_radiografia_huesos_largos							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+139	form_deis_inputs	select	resultado_citoquimico_liq_cefalo_raquideo	resultado_citoquimico_liq_cefalo_raquideo							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+140	form_deis_inputs	select	resultado_estudio_placentario	resultado_estudio_placentario							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+141	form_deis_inputs	select	tratamiento_recien_nacido_farmaco	tratamiento_recien_nacido_farmaco							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+142	form_deis_inputs	text	tratamiento_recien_nacido_dosis	tratamiento_recien_nacido_dosis			Ej: Dosis de cantidad / horas				sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+143	form_deis_inputs	number	tratamiento_recien_nacido_frecuencia	tratamiento_recien_nacido_frecuencia			Ej: 5				sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+144	form_deis_inputs	date	fecha_examen_treponemico_recien_nacido	fecha_examen_treponemico_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+145	form_deis_inputs	select	resultado_examen_treponemico_parto	resultado_examen_treponemico_parto							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+146	form_deis_inputs	select	sustituto_leche_materna	sustituto_leche_materna							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+147	form_deis_inputs	date	fecha_inicio_sustituto_leche_materna	fecha_inicio_sustituto_leche_materna							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+148	form_deis_inputs	time	hora_inicio_sustituto_leche_materna	hora_inicio_sustituto_leche_materna							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+149	form_deis_inputs	select	entrega_sustituto_leche_materna_al_alta	entrega_sustituto_leche_materna_al_alta							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+150	form_deis_inputs	select	nombre_farmaco_1_vih_recien_nacido	nombre_farmaco_1_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+151	form_deis_inputs	date	fecha_inicio_farmaco_1_vih_recien_nacido	fecha_inicio_farmaco_1_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+152	form_deis_inputs	time	hora_inicio_farmaco_1_vih_recien_nacido	hora_inicio_farmaco_1_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+153	form_deis_inputs	text	dosis_farmaco_1_vih_recien_nacido	dosis_farmaco_1_vih_recien_nacido			Ej: Dosis de cantidid / horas				sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+154	form_deis_inputs	select	nombre_farmaco_2_vih_recien_nacido	nombre_farmaco_2_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+155	form_deis_inputs	date	fecha_inicio_farmaco_2_vih_recien_nacido	fecha_inicio_farmaco_2_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+156	form_deis_inputs	time	hora_inicio_farmaco_2_vih_recien_nacido	hora_inicio_farmaco_2_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+157	form_deis_inputs	text	dosis_farmaco_2_vih_recien_nacido	dosis_farmaco_2_vih_recien_nacido			Ej: Dosis de cantidid / horas				sin_examenes	datos_recien_nacido	col-sm-3 col-md-3	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+158	form_deis_inputs	date	fecha_1_examen_pcr_recien_nacido	fecha_1_examen_pcr_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+159	form_deis_inputs	select	resultado_1_examen_pcr_recien_nacido	resultado_1_examen_pcr_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+160	form_deis_inputs	date	fecha_2_examen_pcr_recien_nacido	fecha_2_examen_pcr_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+161	form_deis_inputs	select	resultado_2_examen_pcr_recien_nacido	resultado_2_examen_pcr_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+162	form_deis_inputs	date	fecha_3_examen_pcr_recien_nacido	fecha_3_examen_pcr_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+163	form_deis_inputs	select	resultado_3_examen_pcr_recien_nacido	resultado_3_examen_pcr_recien_nacido							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+164	form_deis_inputs	select	diagnostico_final_vih_isp_recien_nacido	diagnostico_final_vih_isp_recien_nacido							sin_examenes	datos_recien_nacido	col-md-12	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+165	form_deis_inputs	select	resultado_test_elisa_18_meses	resultado_test_elisa_18_meses							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+166	form_deis_inputs	date	fecha_test_elisa_18_meses	fecha_test_elisa_18_meses							sin_examenes	datos_recien_nacido	\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+167	form_deis_inputs	select	resultado_final_isp_examen_vih_recien_nacido	resultado_final_isp_examen_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-6 col-md-6	Resultado Final ISP Exámen VIH Recién nacido lactante	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+210	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+211	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+212	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+213	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+214	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+169	form_deis_inputs	select	derivacion_recien_nacido_a_seguimiento	derivacion_recien_nacido_a_seguimiento							sin_examenes	datos_recien_nacido	col-sm-2 col-md-2	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+170	form_deis_inputs	text	lugar_derivacion_recien_nacido_a_seguimiento	lugar_derivacion_recien_nacido_a_seguimiento			Ej: Lugar definido para la derivación				sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+171	form_deis_inputs	date	fecha_ingreso_control_recien_nacido_post_nacimiento	fecha_ingreso_control_recien_nacido_post_nacimiento							sin_examenes	datos_recien_nacido	col-sm-6 col-md-6	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+172	form_deis_inputs	select	estado_seguimiento_mes	estado_seguimiento_mes							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+173	form_deis_inputs	select	estado_seguimiento_3_meses	estado_seguimiento_3_meses							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+174	form_deis_inputs	select	estado_seguimiento_6_meses	estado_seguimiento_6_meses							sin_examenes	datos_recien_nacido	col-sm-4 col-md-4	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+175	form_deis_inputs	select	estado_seguimiento_12_meses	estado_seguimiento_12_meses							sin_examenes	datos_recien_nacido	col-sm-6 col-md-6	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+176	form_deis_inputs	select	estado_seguimiento_18_meses	estado_seguimiento_18_meses							sin_examenes	datos_recien_nacido	col-sm-6 col-md-6	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+177	form_deis_inputs	select	mujer_continua_tratamiento_antiretroviral	mujer_continua_tratamiento_antiretroviral							sin_examenes	datos_recien_nacido	col-md-12	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+182	form_deis_inputs	text	digito_verificador_recien_nacido	digito_verificador_recien_nacido							sin_examenes		\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+183	form_deis_inputs	text	codigo_recien_nacido	codigo_recien_nacido							sin_examenes		\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+184	form_deis_inputs	select	diagnostico_final_sifilis_recien_nacido	diagnostico_final_sifilis_recien_nacido							sin_examenes		\N	\N	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:21
+3	form_deis_inputs	text	nombres_madre	nombres_madre			Ej: Nombre1 Nombre2				sin_examenes	identificacion_mujer	col-sm-6 col-md-6	Nombres	\N	\N	\N	\N	2017-10-30 08:27:20	2017-10-30 08:27:54
+5	form_deis_inputs	text	segundo_apellido_madre	segundo_apellido_madre			Ej: Apellido2				sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Segundo Apellido	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+178	form_deis_inputs	select	region	region							sin_examenes		\N	Región	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+179	form_deis_inputs	select	servicio_salud	servicio_salud							sin_examenes		\N	Servicio de Salud	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+180	form_deis_inputs	text	digito_verificador	digito_verificador							sin_examenes		\N	Dígito Verificador	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+181	form_deis_inputs	number	edad	edad							sin_examenes		\N	Edad	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+45	form_deis_inputs	select	estado_civil	estado_civil							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Estado Civil	\N	Datos Sociodemográficos	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+50	form_deis_inputs	number	nacidos_vivos_previos_embarazo	nacidos_vivos_previos_embarazo							sin_examenes	patologias_sifilis	col-md-3 col-md-3	Nacidos vivos previo al embarazo	Antecedentes	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+77	form_deis_inputs	select	vih_conocido_previa_embarazo	vih_conocido_previa_embarazo							sin_examenes	patologias_vih	col-sm-3 col-md-3	VIH conocido previa a este embarazo	Antecedentes	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+11	form_deis_inputs	date	fecha_ingreso_control_prenatal_embarazo	fecha_ingreso_control_prenatal_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Fecha Ingreso a control prenatal	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+15	form_deis_inputs	select	codigo_establecimiento_control_prenatal_embarazo	codigo_establecimiento_control_prenatal_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Tipo de Establecimiento control prenatal	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+22	form_deis_inputs	select	resultado_dilucion_2_vdrl_embarazo	resultado_dilucion_2_vdrl_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado Dilución  2º VDRL	\N	Examen 2	\N	1.	2017-10-30 08:27:21	2017-10-30 08:27:54
+59	form_deis_inputs	select	diagnostico_sifilis_embarazo	diagnostico_sifilis_embarazo							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Diagnostico de Sifilis en Embarazo	\N	\N	col-sm-3 col-md-3	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+32	form_deis_inputs	select	resultado_1_examen_vih_embarazo	resultado_1_examen_vih_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Resultado  1º examen VIH	\N	Primer Examen	\N	1.	2017-10-30 08:27:21	2017-10-30 08:27:54
+39	form_deis_inputs	date	fecha_resultado_final_isp_examen_vih	fecha_resultado_final_isp_examen_vih							sin_examenes	control_embarazo	col-sm-4 col-md-4 col-md-offset-1	Fecha Resultado Final ISP Examen VIH	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+168	form_deis_inputs	date	fecha_resultado_final_isp_examen_vih_recien_nacido	fecha_resultado_final_isp_examen_vih_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-6 col-md-6	Fecha Resultado Final ISP Examen VIH Recién nacido	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+41	form_deis_inputs	date	fecha_ingreso_control_unidad_alto_riesgo	fecha_ingreso_control_unidad_alto_riesgo							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Fecha de ingreso a ALTO RIESGO	\N	Fechas de ingreso a especialidades	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+44	form_deis_inputs	text	fecha_ingreso_control_otras_especialidades_otro	fecha_ingreso_control_otras_especialidades_otro			Ej: Lugar de Especilidad				sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Otro lugar de especialidades	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+90	form_deis_inputs	select	terapia_antiretroviral_farmaco_1	terapia_antiretroviral_farmaco_1							sin_examenes	patologias_vih	\N	Fármaco 1	Tratamiento de VIH de la Gestante	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+96	form_deis_inputs	text	terapia_antiretroviral_tar_farmaco_3_otro	terapia_antiretroviral_tar_farmaco_3_otro			Ej: Nombre del Fármaco				sin_examenes	patologias_vih	col-md-12	Otro Fármaco, ¿Cual otro?	\N	\N	\N	\N	2017-10-30 08:27:21	2017-10-30 08:27:54
+68	form_deis_inputs	date	fecha_ingreso_control_unidad_alto_riesgo	fecha_ingreso_control_unidad_alto_riesgo							sin_examenes	patologias_vih	col-sm-3 col-md-3	Fecha de ingreso a ALTO RIESGO	\N	Fechas de ingreso a especialidades	\N	\N	2017-10-30 08:27:21	2017-10-30 08:35:50
+185	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+186	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+187	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+188	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+189	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+190	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+191	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+192	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+193	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+194	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+195	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+196	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+197	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+198	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+199	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+215	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+216	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+217	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+218	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+219	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+220	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+221	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+222	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+223	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+224	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+225	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+226	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+227	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+228	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+229	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+230	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+231	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+232	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+233	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+234	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+235	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+236	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+237	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+238	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+239	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+240	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+241	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+242	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+243	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+244	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+245	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+246	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+247	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+248	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+249	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+250	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+251	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+252	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+253	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+254	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+255	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+256	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+257	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+258	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+259	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+260	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+261	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+262	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+263	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+264	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+265	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+266	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+267	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+268	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+269	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+270	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+271	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+272	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+273	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+274	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:55	2017-10-30 08:36:55
+275	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+276	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+277	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+278	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+279	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+280	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+281	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+282	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+283	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+284	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+285	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+286	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+287	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+288	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+289	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+290	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+291	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+292	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+293	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+294	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+295	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+296	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+297	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+298	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+299	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+300	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+301	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+302	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+303	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+304	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+305	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+306	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+307	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+308	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+309	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+310	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+311	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+312	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+313	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+314	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+315	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+316	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+317	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+318	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+319	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+320	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+321	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+322	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+323	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+324	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+325	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+326	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+327	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+328	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+329	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+330	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+331	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+332	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+333	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+334	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+335	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+336	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+337	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+338	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+339	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+340	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+341	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+342	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+343	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+344	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+345	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+346	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+347	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+348	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+349	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+350	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+351	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+352	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+353	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+354	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+355	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+356	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
+357	form_deis_inputs	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 08:36:56	2017-10-30 08:36:56
 \.
 
 
@@ -519,7 +885,6 @@ COPY password_resets (email, token, created_at) FROM stdin;
 --
 
 COPY users (id, name, last_name, full_name, "position", establecimiento, rut, email, password, created_by, updated_by, remember_token, created_at, updated_at) FROM stdin;
-1	Pruebas Minsal	\N	\N	\N	\N	\N	test@minsal.cl	$2y$10$JHwYqC5vbQRLqO6RCVrduuzwzLrWLUtGVhiIpTJOth4qQWW7osNK2	\N	\N	\N	2017-10-26 19:17:02	2017-10-26 19:17:02
 \.
 
 
@@ -534,7 +899,7 @@ SELECT pg_catalog.setval('form_deis_id_seq', 1, false);
 -- Name: form_deis_inputs_id_input_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('form_deis_inputs_id_input_seq', 1, false);
+SELECT pg_catalog.setval('form_deis_inputs_id_input_seq', 357, true);
 
 
 --
@@ -555,7 +920,7 @@ SELECT pg_catalog.setval('log_navegations_id_seq', 1, false);
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('users_id_seq', 1, true);
+SELECT pg_catalog.setval('users_id_seq', 1, false);
 
 
 --

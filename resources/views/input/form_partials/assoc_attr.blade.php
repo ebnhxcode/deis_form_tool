@@ -49,7 +49,7 @@
          </button>
          <button class="btn btn-primary pull-left"
                  v-if="boton_abrir_modal == true"
-                 @click.prevent="modal_procesar_json = true">
+                 @click.prevent="modal_procesar_json_attr = true">
             Abrir modal
          </button>
       </div><!-- .col-md-* -->

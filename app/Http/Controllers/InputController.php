@@ -27,14 +27,21 @@ class InputController extends Controller
     }
 
     public function addLabelToInput (Request $request) {
+        $this->validate($request, [
+           'json_attr' => 'required',
+           'table_name_attr' => 'required',
+        ]);
+
         $arr_txt = '';
         $created_labels = [];
-        if (isset($request->json_attr) && $request->json_attr) {
-            $arr_txt = $request->json_attr;
-        }
+
+        $arr_txt = $request->json_attr;
+        $table_name = isset($request->table_name_attr)?$request->table_name_attr:null;
         $arr_txt = eval($arr_txt);
+
         foreach ($arr_txt as $key => $field) {
-            $fdi = FormDeisInput::where('id', $key)->first();
+            $fdi = FormDeisInput::where('id', $key)->where('table_name', $table_name)->first();
+
 
             if ($fdi) {
                 if (isset($field['text'])) {
@@ -52,15 +59,12 @@ class InputController extends Controller
                 if (isset($field['order'])) {
                     $fdi->order = $field['order'];
                 }
+                $fdi->save();
             }
 
-            $fdi->save();
-            array_push($created_labels, $fdi);
-            return $fdi;
         }
-
-        #Buscar por base de datos segun el input del select por el nombre de la tabla
-        return $created_labels;
+        $created_labels = FormDeisInput::where('table_name', $table_name)->get();
+        return response()->json(['created_labels' => $created_labels]);
     }
 
     public function store (Request $request) {
