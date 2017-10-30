@@ -63,7 +63,10 @@
                         <table class="table table-striped small">
                            <thead>
                            <tr>
-                              <th style="min-width: 140px !important;">Acción</th>
+                              <th>Acción</th>
+                              <th style="min-width: 140px !important;">label</th>
+                              <th style="min-width: 140px !important;">tag</th>
+                              <th style="min-width: 140px !important;">subtag</th>
                               <th style="min-width: 140px !important;">placeholder</th>
                               <th style="min-width: 140px !important;">required</th>
                               <th style="min-width: 140px !important;">class</th>
@@ -71,16 +74,13 @@
                               <th style="min-width: 140px !important;">bloque</th>
                               <th style="min-width: 140px !important;">seccion</th>
                               <th style="min-width: 140px !important;">class_custom</th>
-                              <th style="min-width: 140px !important;">label</th>
-                              <th style="min-width: 140px !important;">tag</th>
-                              <th style="min-width: 140px !important;">subtag</th>
                               <th style="min-width: 140px !important;">empty_column</th>
                               <th style="min-width: 140px !important;">order</th>
+                              <th style="min-width: 140px !important;">max_length</th>
                               <th style="min-width: 140px !important;">type</th>
                               <th style="min-width: 140px !important;">id</th>
                               <th style="min-width: 140px !important;">name</th>
                               <th style="min-width: 140px !important;">value</th>
-                              <th style="min-width: 140px !important;">max_length</th>
                            </tr>
                            </thead>
                            <tbody>
@@ -93,6 +93,18 @@
                                  <button v-else class="btn btn-sm btn-success" @click.prevent="save(input)">
                                     <i class="fa fa-check"></i>
                                  </button>
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.label}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.label">
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.tag}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.tag">
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.subtag}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.subtag">
                               </td>
                               <td>
                                  <span v-if="editBy != input.id">@{{input.placeholder}}</span>
@@ -123,24 +135,16 @@
                                  <input v-else type="text" class="form-control input-sm" v-model="input.class_custom">
                               </td>
                               <td>
-                                 <span v-if="editBy != input.id">@{{input.label}}</span>
-                                 <input v-else type="text" class="form-control input-sm" v-model="input.label">
-                              </td>
-                              <td>
-                                 <span v-if="editBy != input.id">@{{input.tag}}</span>
-                                 <input v-else type="text" class="form-control input-sm" v-model="input.tag">
-                              </td>
-                              <td>
-                                 <span v-if="editBy != input.id">@{{input.subtag}}</span>
-                                 <input v-else type="text" class="form-control input-sm" v-model="input.subtag">
-                              </td>
-                              <td>
                                  <span v-if="editBy != input.id">@{{input.empty_column}}</span>
                                  <input v-else type="text" class="form-control input-sm" v-model="input.empty_column">
                               </td>
                               <td>
                                  <span v-if="editBy != input.id">@{{input.order}}</span>
                                  <input v-else type="text" class="form-control input-sm" v-model="input.order">
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.max_length}}</span>
+                                 <input v-else type="number" class="form-control input-sm" v-model="input.max_length">
                               </td>
                               <td>
                                  @{{input.type}}
@@ -155,10 +159,6 @@
                               </td>
                               <td>
                                  @{{input.value}}
-                              </td>
-                              <td>
-                                 <span v-if="editBy != input.id">@{{input.max_length}}</span>
-                                 <input v-else type="number" class="form-control input-sm" v-model="input.max_length">
                               </td>
                            </tr>
 
