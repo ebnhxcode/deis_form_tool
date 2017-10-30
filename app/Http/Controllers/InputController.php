@@ -13,7 +13,7 @@ class InputController extends Controller
     public function index (Request $request) {
         $this->returnData['tables'] = config('collection.tables');
         if ( $request->wantsJson() ) {
-            $json = FormDeisInput::where('table_name', $table_name='form_deis_inputs')->get();
+            $json = FormDeisInput::where('table_name', $table_name='form_deis_inputs')->orderby('id_input','asc')->get();
             $this->returnData['json'] = $json;
             return response()->json($this->returnData);
         }
@@ -115,6 +115,13 @@ class InputController extends Controller
     }
 
     public function show ($id) {
+        /*
+        $json = FormDeisInput::where('table_name', $table_name='form_deis_inputs')->orderby('id_input','asc')->get();
+        foreach ($json as $key => $j) {
+            $j->order_layout_form = $j->id_input;
+            $j->save();
+        }
+        */
     }
 
     public function edit ($id) {

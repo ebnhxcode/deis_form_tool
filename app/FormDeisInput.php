@@ -28,6 +28,7 @@ class FormDeisInput extends Model
       'subtag',
       'empty_column',
       'order',
+      'order_layout_form',
    ];
 
 

@@ -64,6 +64,8 @@
                            <thead>
                            <tr>
                               <th>Acción</th>
+                              <th style="min-width: 140px !important;">id_input</th>
+                              <th style="min-width: 140px !important;">order_layout_form</th>
                               <th style="min-width: 140px !important;">label</th>
                               <th style="min-width: 140px !important;">tag</th>
                               <th style="min-width: 140px !important;">subtag</th>
@@ -93,6 +95,13 @@
                                  <button v-else class="btn btn-sm btn-success" @click.prevent="save(input)">
                                     <i class="fa fa-check"></i>
                                  </button>
+                              </td>
+                              <td>
+                                 @{{input.id_input}}
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.order_layout_form}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.order_layout_form">
                               </td>
                               <td>
                                  <span v-if="editBy != input.id">@{{input.label}}</span>

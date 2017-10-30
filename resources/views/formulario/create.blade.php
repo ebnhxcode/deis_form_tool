@@ -90,12 +90,11 @@
                                           </div>
 
                                           <div :class="i.class_custom ? i.class_custom : 'col-xs-6 col-sm-6 col-md-6'">
-                                             @{{ i.id }}
                                              <!-- Etiquetas de los campos -->
                                              <dt class="small">
                                                 <!-- Prop para permitir insertar numero de orden de completado -->
                                                 <span v-if="i.order" style="zoom:1.4;">@{{ i.order ? i.order : '' }}-</span>
-                                                <span>@{{ i.label ? i.label: 'Sin Etiqueta' }}</span>
+                                                <span>@{{ i.label ? i.label : 'Sin Etiqueta' }}</span>
                                              </dt>
 
                                              <!-- Input basicos como text,number,time,date,etc -->
