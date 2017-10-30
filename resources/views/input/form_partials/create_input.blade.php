@@ -44,7 +44,7 @@
          </transition>
          <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
          <button id="toggle" class="btn btn-success pull-left"
-                 @click.prevent="procesar_json">
+                 @click.prevent="procesar_json"><!--ok-->
             Procesar
          </button>
          <button class="btn btn-primary pull-left"
@@ -53,7 +53,6 @@
             Abrir modal
          </button>
       </div><!-- .col-md-* -->
-
    </div><!-- .row -->
 
 </div><!-- .tab-pane -->

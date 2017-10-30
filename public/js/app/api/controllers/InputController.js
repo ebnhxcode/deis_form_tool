@@ -36851,6 +36851,7 @@ var InputController = new _vue2.default({
          'json_modal': '',
          'json_error': '',
          'json_attr': '',
+         'json_attr_modal': '',
          'json_attr_error': '',
          'table_name': '',
          'table_name_error': '',
@@ -37070,9 +37071,28 @@ var InputController = new _vue2.default({
                $('#' + i + '_error').text(error);
             }
          });
-
+      },
+      procesar_json_attr: function procesar_json_attr() {
+         this.mini_loader = true;
+         var ja = this.json_attr;
+         console.log(this.table_name_attr);
+         //var tna = this.table_name_attr.table_name_attr;
          /*
-         var self = this;
+         var formData = new FormData();
+         formData.append('json_attr', this.json_attr);
+         formData.append('table_name_attr', this.table_name_attr);
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         //formData.append('_token', $('#_token').val());
+         this.$http.post('/input/add/label', formData).then(response => { // success callback
+            this.json_attr = response.body;
+            this.modal_procesar_json_attr = true;
+            //console.log(response);
+            console.log(this.json_attr);
+            //alert('Guardado');
+         }, response => { // error callback
+            console.log(response);
+         });
+            var self = this;
          setTimeout(()=>{
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
@@ -37081,38 +37101,6 @@ var InputController = new _vue2.default({
             },3000);
          },3000);
          */
-      },
-      procesar_json_attr: function procesar_json_attr() {
-         var _this4 = this;
-
-         this.mini_loader = true;
-         this.modal_procesar_json_attr = true;
-
-         var formData = new FormData();
-         var permiteGuardar = false;
-         formData.append('json_attr', this.json_attr);
-         formData.append('table_name_attr', this.table_name_attr);
-         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
-         this.$http.post('/input/add/label', formData).then(function (response) {
-            // success callback
-            _this4.json_attr = response.body;
-            //console.log(response);
-            console.log(_this4.json_attr);
-            //alert('Guardado');
-         }, function (response) {
-            // error callback
-            console.log(response);
-         });
-
-         var self = this;
-         setTimeout(function () {
-            $('.circle-loader').toggleClass('load-complete');
-            $('.checkmark').toggle();
-            setTimeout(function () {
-               self.mini_loader = false;
-            }, 3000);
-         }, 3000);
       }
 
       //with_dash() => for explained specific functions

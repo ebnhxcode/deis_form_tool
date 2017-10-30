@@ -111,7 +111,7 @@ return ['nombre_campo' => [
                                        <modal_procesar_json :json="json_modal"
                                                             v-if="modal_procesar_json == true">
                                           <h3 slot="header">
-                                             Buscar input
+                                             Inputs creados, editables de último paso
                                              <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json = false">
                                                 Cerrar
                                              </button>
@@ -122,7 +122,18 @@ return ['nombre_campo' => [
                                        </modal_procesar_json>
                                        <!-- Partial - Formulario de asociacion de otros atributos a los inputs creados -->
                                        @include('input.form_partials.assoc_attr')
-
+                                       <modal_procesar_json :json="json_attr_modal"
+                                                            v-if="modal_procesar_json_attr == true">
+                                          <h3 slot="header">
+                                             Inputs modificados, editables de último paso
+                                             <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json_attr = false">
+                                                Cerrar
+                                             </button>
+                                             <!--
+               <button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>
+            -->
+                                          </h3>
+                                       </modal_procesar_json>
                                     </div><!-- .tab-content -->
                                  </div><!-- .panel-body -->
 

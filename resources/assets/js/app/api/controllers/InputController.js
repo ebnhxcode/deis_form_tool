@@ -29,6 +29,7 @@ const InputController = new Vue({
          'json_modal':'',
          'json_error':'',
          'json_attr':'',
+         'json_attr_modal':'',
          'json_attr_error':'',
          'table_name':'',
          'table_name_error':'',
@@ -420,31 +421,20 @@ const InputController = new Vue({
                $(`#${i}_error`).text(error);
             }
          });
-
-         /*
-         var self = this;
-         setTimeout(()=>{
-            $('.circle-loader').toggleClass('load-complete');
-            $('.checkmark').toggle();
-            setTimeout(()=>{
-               self.mini_loader = false;
-            },3000);
-         },3000);
-         */
-
       },
       procesar_json_attr: function () {
          this.mini_loader = true;
-         this.modal_procesar_json_attr = true;
-
+         var ja = this.json_attr;
+         var tna = this.table_name_attr.table_name;
+         /*
          var formData = new FormData();
-         var permiteGuardar = false;
          formData.append('json_attr', this.json_attr);
          formData.append('table_name_attr', this.table_name_attr);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input/add/label', formData).then(response => { // success callback
             this.json_attr = response.body;
+            this.modal_procesar_json_attr = true;
             //console.log(response);
             console.log(this.json_attr);
             //alert('Guardado');
@@ -462,6 +452,7 @@ const InputController = new Vue({
                self.mini_loader = false;
             },3000);
          },3000);
+         */
       },
 
       //with_dash() => for explained specific functions
