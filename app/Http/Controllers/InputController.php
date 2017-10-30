@@ -74,7 +74,6 @@ class InputController extends Controller
 
         $arr_txt = $request->json;
         $table_name = isset($request->table_name)?$request->table_name:null;
-        return $table_name;
         $arr_txt = eval($arr_txt);
 
         foreach ($arr_txt as $key => $field) {
@@ -103,7 +102,6 @@ class InputController extends Controller
 
             $fdi->save();
         }
-
         $created_inputs = FormDeisInput::where('table_name', $table_name)->get();
         return response()->json(['created_inputs' => $created_inputs]);
     }

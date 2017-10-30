@@ -313,36 +313,31 @@ const InputController = new Vue({
       },
 
       procesar_json: function () {
+         this.mini_loader = true;
          var j = this.json;
-         var tn = this.table_name;
-         var permiteGuardar = (j&&j!=null&&j!=''&&tn&&tn!=null&&tn!='')?true:false;
+         var tn = this.table_name.table_name;
+         //var permiteGuardar = true;//(j&&j!=null&&j!=''&&tn&&tn!=null&&tn!='')?true:false;
+         //if (permiteGuardar == true) {
+         var formData = new FormData();
+         formData.append('json', j);
+         formData.append('table_name', tn);//formData.append('_token', $('#_token').val());
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         $('.errors').text('');
+         this.$http.post('/input', formData).then(response => { // success callback
+            this.json = response.body.created_inputs;
+            this.modal_procesar_json = true;
+            console.log(response);
+            //alert('Guardado');
+         }, response => { // error callback
+            //console.log(response);
+            this.err = response.body;
+            for (let i in this.err) {
+               var error = this.err[i][0];
+               $(`#${i}_error`).text(error);
+            }
+         });
+         //}
 
-         if (permiteGuardar == true) {
-            //this.modal_procesar_json = true;
-            //this.mini_loader = true;
-            var formData = new FormData();
-            formData.append('json', j);
-            formData.append('table_name', tn);//formData.append('_token', $('#_token').val());
-            Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-
-            this.$http.post('/input', formData).then(response => { // success callback
-               //this.json = response.body.created_inputs;
-               $('.errors').text('');
-               console.log(response);
-               //console.log(this.json);
-               //alert('Guardado');
-            }, response => { // error callback
-               //console.log(response);
-               $('.errors').text('');
-               this.err = response.body;
-               for (let i in this.err) {
-                  var error = this.err[i][0];
-                  $(`#${i}_error`).text(error);
-               }
-            });
-         }
-
-         /*
          var self = this;
          setTimeout(()=>{
             $('.circle-loader').toggleClass('load-complete');
@@ -351,7 +346,6 @@ const InputController = new Vue({
                self.mini_loader = false;
             },3000);
          },3000);
-         */
 
       },
       procesar_json_attr: function () {

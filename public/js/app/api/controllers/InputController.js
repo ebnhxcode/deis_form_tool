@@ -37027,34 +37027,31 @@ var InputController = new _vue2.default({
          var _this2 = this;
 
          this.mini_loader = true;
-         this.modal_procesar_json = true;
-
+         var j = this.json;
+         var tn = this.table_name.table_name;
+         //var permiteGuardar = true;//(j&&j!=null&&j!=''&&tn&&tn!=null&&tn!='')?true:false;
+         //if (permiteGuardar == true) {
          var formData = new FormData();
-         var permiteGuardar = false;
-         formData.append('json', this.json);
-         console.log(this.json);
-         formData.append('table_name', this.table_name);
-         console.log(this.table_name);
-
+         formData.append('json', j);
+         formData.append('table_name', tn); //formData.append('_token', $('#_token').val());
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
+         $('.errors').text('');
          this.$http.post('/input', formData).then(function (response) {
             // success callback
-            //this.json = response.body.created_inputs;
-            $('.errors').text('');
+            _this2.json = response.body.created_inputs;
+            _this2.modal_procesar_json = true;
             console.log(response);
-            //console.log(this.json);
             //alert('Guardado');
          }, function (response) {
             // error callback
             //console.log(response);
-            $('.errors').text('');
             _this2.err = response.body;
             for (var i in _this2.err) {
                var error = _this2.err[i][0];
                $('#' + i + '_error').text(error);
             }
          });
+         //}
 
          var self = this;
          setTimeout(function () {
