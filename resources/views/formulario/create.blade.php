@@ -42,7 +42,7 @@
                               <h4>Instrucciones:</h4> <br>
                               <ul>
                                  <li v-for="i in instructions">
-                                    <h5>@{{i}}</h5>
+                                    <h4>@{{i}}</h4>
                                  </li>
                               </ul>
                            </div><!-- .collapse #instructions -->

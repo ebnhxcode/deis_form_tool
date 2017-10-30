@@ -241,8 +241,8 @@ return [
 
 
       'resultado_vdrl_parto' => [
-         'No Reactivo' => 'No Reactivo',
          'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
@@ -270,8 +270,8 @@ return [
       ],
 
       'resultado_examen_vih_parto' => [
-         'No Reactivo' => 'No Reactivo',
          'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
@@ -307,8 +307,8 @@ return [
       ],
 
       'resultado_vdrl_periferico_recien_nacido' => [
-         'No Reactivo' => 'No Reactivo',
          'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
@@ -324,8 +324,8 @@ return [
       ],
 
       'resultado_vdrl_liq_cefalo_recien_nacido' => [
-         'No Reactivo' => 'No Reactivo',
          'Reactivo' => 'Reactivo',
+         'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
       ],
 
