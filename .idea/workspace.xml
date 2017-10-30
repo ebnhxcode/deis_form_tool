@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collections.php" afterPath="$PROJECT_DIR$/config/collections.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deis_form_tool.backup" afterPath="$PROJECT_DIR$/deis_form_tool.backup" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/formulario/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/formulario/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/input/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/input/index.blade.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +27,7 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="27.26923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
               <folding />
             </state>
@@ -41,7 +37,7 @@
       <file leaf-file-name="create_input.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/input/form_partials/create_input.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding />
             </state>
@@ -51,7 +47,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/input/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.846153">
+            <state vertical-scroll-proportion="0.0">
               <caret line="150" column="110" selection-start-line="150" selection-start-column="110" selection-end-line="150" selection-end-column="110" />
               <folding />
             </state>
@@ -141,8 +137,8 @@
       <file leaf-file-name="collections.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/collections.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14711033">
-              <caret line="581" column="31" selection-start-line="581" selection-start-column="31" selection-end-line="581" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.39754817">
+              <caret line="592" column="55" selection-start-line="592" selection-start-column="55" selection-end-line="592" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -151,7 +147,7 @@
       <file leaf-file-name="collection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="76" />
               <folding>
                 <element signature="e#1503#8254#1#PHP" expanded="false" />
@@ -289,8 +285,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1197,7 +1193,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="27.26923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
           <folding />
         </state>
@@ -1205,7 +1201,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/input/form_partials/create_input.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding />
         </state>
@@ -1213,7 +1209,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/input/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.846153">
+        <state vertical-scroll-proportion="0.0">
           <caret line="150" column="110" selection-start-line="150" selection-start-column="110" selection-end-line="150" selection-end-column="110" />
           <folding />
         </state>
@@ -1221,7 +1217,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="76" />
           <folding>
             <element signature="e#1503#8254#1#PHP" expanded="false" />
@@ -1232,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/collections.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14711033">
-          <caret line="581" column="31" selection-start-line="581" selection-start-column="31" selection-end-line="581" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.39754817">
+          <caret line="592" column="55" selection-start-line="592" selection-start-column="55" selection-end-line="592" selection-end-column="55" />
           <folding />
         </state>
       </provider>
