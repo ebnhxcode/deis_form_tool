@@ -113,6 +113,9 @@ class InputController extends Controller
     }
 
     public function update (Request $request, $id) {
+        $input = FormDeisInput::find($id);
+        $input->update($request->all());
+        return response()->json(['input' => $input]);
     }
 
     public function destroy ($id) {

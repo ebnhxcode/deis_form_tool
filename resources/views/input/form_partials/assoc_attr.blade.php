@@ -19,6 +19,10 @@
       </textarea>
    </code>
 
+
+
+   <br>
+
    <label for="tables">
       Seleccione la tabla de los campos que asociará las nuevas propiedades
    </label>

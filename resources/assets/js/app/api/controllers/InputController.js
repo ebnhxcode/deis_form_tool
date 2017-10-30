@@ -171,7 +171,7 @@ const InputController = new Vue({
                               <slot name="body">
 
                                  <div class="table-responsive" style="overflow-y: scroll;max-height: 400px;">
-                                    <table class="table table-striped">
+                                    <table class="table table-striped small">
                                        <thead>
                                        <tr>
                                           <th>Acción</th>
@@ -198,25 +198,79 @@ const InputController = new Vue({
 
                                        <tr v-for="input in json">
                                           <td>
-                                             <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
+                                             <button v-if="editBy!=input.id" class="btn btn-sm btn-primary" @click.prevent="edit(input.id)">
+                                                <i class="fa fa-pencil"></i>
+                                             </button>
+                                             <button v-else class="btn btn-sm btn-success" @click.prevent="save(input)">
+                                                <i class="fa fa-check"></i>
+                                             </button>
                                           </td>
-                                          <td>input.type</td>
-                                          <td>input.id</td>
-                                          <td>input.name</td>
-                                          <td>input.value</td>
-                                          <td>input.max_length</td>
-                                          <td>input.placeholder</td>
-                                          <td>input.required</td>
-                                          <td>input.class</td>
-                                          <td>input.style</td>
-                                          <td>input.bloque</td>
-                                          <td>input.seccion</td>
-                                          <td>input.class_custom</td>
-                                          <td>input.label</td>
-                                          <td>input.tag</td>
-                                          <td>input.subtag</td>
-                                          <td>input.empty_column</td>
-                                          <td>input.order</td>
+                                          <td>
+                                             {{input.type}}
+                                             <span></span>
+                                             <span></span>
+                                          </td>
+                                          <td>
+                                             {{input.id}}
+                                          </td>
+                                          <td>
+                                             {{input.name}}
+                                          </td>
+                                          <td>
+                                             {{input.value}}
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.max_length}}</span>
+                                             <input v-else type="number" class="form-control" v-model="input.max_length">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.placeholder}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.placeholder">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.required}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.required">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.class}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.class">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.style}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.style">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.bloque}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.bloque">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.seccion}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.seccion">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.class_custom}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.class_custom">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.label}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.label">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.tag}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.tag">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.subtag}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.subtag">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.empty_column}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.empty_column">
+                                          </td>
+                                          <td>
+                                             <span v-if="editBy != input.id">{{input.order}}</span>
+                                             <input v-else type="text" class="form-control" v-model="input.order">
+                                          </td>
                                        </tr>
 
 
@@ -264,7 +318,7 @@ const InputController = new Vue({
          name: 'modal_procesar_json',
          data () {
             return {
-
+               'editBy':'',
             }
          },
          ready () {
@@ -272,6 +326,19 @@ const InputController = new Vue({
          created () {
          },
          methods: {
+            edit: function (input_id_directive) {
+               this.editBy = input_id_directive;
+            },
+            save: function (input) {
+               Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+               this.$http.put('/input/'+input.id_input, input).then(response => { // success callback
+                  //console.log(response);
+                  this.editBy = '';
+                  return response.body.input;
+               }, response => { // error callback
+                  console.log(response);
+               });
+            },
          },
          watch: {
          },

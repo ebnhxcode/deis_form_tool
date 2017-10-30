@@ -36954,15 +36954,35 @@ var InputController = new _vue2.default({
       },
       'modal_procesar_json': {
          props: ['json'],
-         template: '\n            <!-- <script type="text/x-template"> -->\n               <!-- template for the modal component -->\n               <transition name="modal">\n                  <div class="modal-mask">\n                     <div class="modal-wrapper">\n                        <div class="modal-container">\n\n                           <div class="modal-header">\n                              <slot name="header"></slot>\n                           </div>\n\n                           <div class="modal-body">\n                              <slot name="body">\n\n                                 <div class="table-responsive" style="overflow-y: scroll;max-height: 400px;">\n                                    <table class="table table-striped">\n                                       <thead>\n                                       <tr>\n                                          <th>Acci\xF3n</th>\n                                          <th>type</th>\n                                          <th>id</th>\n                                          <th>name</th>\n                                          <th>value</th>\n                                          <th>max_length</th>\n                                          <th>placeholder</th>\n                                          <th>required</th>\n                                          <th>class</th>\n                                          <th>style</th>\n                                          <th>bloque</th>\n                                          <th>seccion</th>\n                                          <th>class_custom</th>\n                                          <th>label</th>\n                                          <th>tag</th>\n                                          <th>subtag</th>\n                                          <th>empty_column</th>\n                                          <th>order</th>\n                                       </tr>\n                                       </thead>\n                                       <tbody>\n\n                                       <tr v-for="input in json">\n                                          <td>\n                                             <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>\n                                          </td>\n                                          <td>input.type</td>\n                                          <td>input.id</td>\n                                          <td>input.name</td>\n                                          <td>input.value</td>\n                                          <td>input.max_length</td>\n                                          <td>input.placeholder</td>\n                                          <td>input.required</td>\n                                          <td>input.class</td>\n                                          <td>input.style</td>\n                                          <td>input.bloque</td>\n                                          <td>input.seccion</td>\n                                          <td>input.class_custom</td>\n                                          <td>input.label</td>\n                                          <td>input.tag</td>\n                                          <td>input.subtag</td>\n                                          <td>input.empty_column</td>\n                                          <td>input.order</td>\n                                       </tr>\n\n\n\n                                       </tbody>\n                                    </table>\n                                 </div>\n\n                                 <!--\n                                  <dl class="dl-vertical">\n                                    <div class="row">\n                                       <div style="overflow-y: scroll;max-height: 400px;">\n\n                                          <div class="col-md-6">\n                                             <dt></dt>\n                                             <dd class="well well-sm"></dd>\n                                          </div>\n                                          <div class="col-md-6">\n                                             <dt></dt>\n                                             <dd class="well well-sm"></dd>\n                                          </div>\n\n                                       </div>\n                                    </div>\n                                 </dl>\n                                 -->\n                              </slot>\n                           </div>\n\n                           <!--\n                           <div class="modal-footer">\n                              <slot name="footer">\n                                 <button class="btn btn-sm btn-success" @click="$emit(\'close\')">\n                                    Aceptar\n                                 </button>\n                              </slot>\n                           </div>\n                           -->\n                        </div>\n                     </div>\n                  </div>\n               </transition>\n            <!-- </script> -->\n         ',
+         template: '\n            <!-- <script type="text/x-template"> -->\n               <!-- template for the modal component -->\n               <transition name="modal">\n                  <div class="modal-mask">\n                     <div class="modal-wrapper">\n                        <div class="modal-container">\n\n                           <div class="modal-header">\n                              <slot name="header"></slot>\n                           </div>\n\n                           <div class="modal-body">\n                              <slot name="body">\n\n                                 <div class="table-responsive" style="overflow-y: scroll;max-height: 400px;">\n                                    <table class="table table-striped small">\n                                       <thead>\n                                       <tr>\n                                          <th>Acci\xF3n</th>\n                                          <th>type</th>\n                                          <th>id</th>\n                                          <th>name</th>\n                                          <th>value</th>\n                                          <th>max_length</th>\n                                          <th>placeholder</th>\n                                          <th>required</th>\n                                          <th>class</th>\n                                          <th>style</th>\n                                          <th>bloque</th>\n                                          <th>seccion</th>\n                                          <th>class_custom</th>\n                                          <th>label</th>\n                                          <th>tag</th>\n                                          <th>subtag</th>\n                                          <th>empty_column</th>\n                                          <th>order</th>\n                                       </tr>\n                                       </thead>\n                                       <tbody>\n\n                                       <tr v-for="input in json">\n                                          <td>\n                                             <button v-if="editBy!=input.id" class="btn btn-sm btn-primary" @click.prevent="edit(input.id)">\n                                                <i class="fa fa-pencil"></i>\n                                             </button>\n                                             <button v-else class="btn btn-sm btn-success" @click.prevent="save(input)">\n                                                <i class="fa fa-check"></i>\n                                             </button>\n                                          </td>\n                                          <td>\n                                             {{input.type}}\n                                             <span></span>\n                                             <span></span>\n                                          </td>\n                                          <td>\n                                             {{input.id}}\n                                          </td>\n                                          <td>\n                                             {{input.name}}\n                                          </td>\n                                          <td>\n                                             {{input.value}}\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.max_length}}</span>\n                                             <input v-else type="number" class="form-control" v-model="input.max_length">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.placeholder}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.placeholder">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.required}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.required">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.class}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.class">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.style}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.style">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.bloque}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.bloque">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.seccion}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.seccion">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.class_custom}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.class_custom">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.label}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.label">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.tag}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.tag">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.subtag}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.subtag">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.empty_column}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.empty_column">\n                                          </td>\n                                          <td>\n                                             <span v-if="editBy != input.id">{{input.order}}</span>\n                                             <input v-else type="text" class="form-control" v-model="input.order">\n                                          </td>\n                                       </tr>\n\n\n\n                                       </tbody>\n                                    </table>\n                                 </div>\n\n                                 <!--\n                                  <dl class="dl-vertical">\n                                    <div class="row">\n                                       <div style="overflow-y: scroll;max-height: 400px;">\n\n                                          <div class="col-md-6">\n                                             <dt></dt>\n                                             <dd class="well well-sm"></dd>\n                                          </div>\n                                          <div class="col-md-6">\n                                             <dt></dt>\n                                             <dd class="well well-sm"></dd>\n                                          </div>\n\n                                       </div>\n                                    </div>\n                                 </dl>\n                                 -->\n                              </slot>\n                           </div>\n\n                           <!--\n                           <div class="modal-footer">\n                              <slot name="footer">\n                                 <button class="btn btn-sm btn-success" @click="$emit(\'close\')">\n                                    Aceptar\n                                 </button>\n                              </slot>\n                           </div>\n                           -->\n                        </div>\n                     </div>\n                  </div>\n               </transition>\n            <!-- </script> -->\n         ',
          name: 'modal_procesar_json',
          data: function data() {
-            return {};
+            return {
+               'editBy': ''
+            };
          },
          ready: function ready() {},
          created: function created() {},
 
-         methods: {},
+         methods: {
+            edit: function edit(input_id_directive) {
+               this.editBy = input_id_directive;
+            },
+            save: function save(input) {
+               var _this = this;
+
+               _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+               this.$http.put('/input/' + input.id_input, input).then(function (response) {
+                  // success callback
+                  //console.log(response);
+                  _this.editBy = '';
+                  return response.body.input;
+               }, function (response) {
+                  // error callback
+                  console.log(response);
+               });
+            }
+         },
          watch: {}
       }
       /*
@@ -37003,11 +37023,11 @@ var InputController = new _vue2.default({
    methods: {
       //camelCase() => for specific functions
       fetchInput: function fetchInput() {
-         var _this = this;
+         var _this2 = this;
 
          this.$http.get('/input/create').then(function (response) {
             // success callback
-            _this.tables = response.body.tables;
+            _this2.tables = response.body.tables;
          }, function (response) {
             // error callback
             console.log('Error fetch_input: ' + response);
@@ -37021,7 +37041,7 @@ var InputController = new _vue2.default({
       },
 
       procesar_json: function procesar_json() {
-         var _this2 = this;
+         var _this3 = this;
 
          this.mini_loader = true;
          var j = this.json;
@@ -37033,18 +37053,18 @@ var InputController = new _vue2.default({
          $('.errors').text('');
          this.$http.post('/input', formData).then(function (response) {
             // success callback
-            _this2.json = response.body.created_inputs;
-            _this2.modal_procesar_json = true;
-            _this2.boton_abrir_modal = true;
+            _this3.json = response.body.created_inputs;
+            _this3.modal_procesar_json = true;
+            _this3.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            _this2.mini_loader = false;
+            _this3.mini_loader = false;
          }, function (response) {
             // error callback
-            _this2.boton_abrir_modal = false;
-            _this2.err = response.body;
-            for (var i in _this2.err) {
-               var error = _this2.err[i][0];
+            _this3.boton_abrir_modal = false;
+            _this3.err = response.body;
+            for (var i in _this3.err) {
+               var error = _this3.err[i][0];
                $('#' + i + '_error').text(error);
             }
          });
@@ -37061,7 +37081,7 @@ var InputController = new _vue2.default({
          */
       },
       procesar_json_attr: function procesar_json_attr() {
-         var _this3 = this;
+         var _this4 = this;
 
          this.mini_loader = true;
          this.modal_procesar_json_attr = true;
@@ -37074,9 +37094,9 @@ var InputController = new _vue2.default({
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input/add/label', formData).then(function (response) {
             // success callback
-            _this3.json_attr = response.body;
+            _this4.json_attr = response.body;
             //console.log(response);
-            console.log(_this3.json_attr);
+            console.log(_this4.json_attr);
             //alert('Guardado');
          }, function (response) {
             // error callback
