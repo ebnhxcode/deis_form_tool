@@ -289,16 +289,9 @@ const InputController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
-      checkInputs: function () {
-
-
-
-      },
       fetchInput: function () {
          this.$http.get('/input/create').then(response => { // success callback
-            //console.log(response);
             this.tables = response.body.tables;
-
          }, response => { // error callback
             console.log('Error fetch_input: '+response);
          });
@@ -307,8 +300,6 @@ const InputController = new Vue({
          setTimeout(function(){
             self.spinner_iniciar = false;
          }, 1500);
-         //console.log('FormularioController');
-
          return;
       },
 
@@ -316,8 +307,6 @@ const InputController = new Vue({
          this.mini_loader = true;
          var j = this.json;
          var tn = this.table_name.table_name;
-         //var permiteGuardar = true;//(j&&j!=null&&j!=''&&tn&&tn!=null&&tn!='')?true:false;
-         //if (permiteGuardar == true) {
          var formData = new FormData();
          formData.append('json', j);
          formData.append('table_name', tn);//formData.append('_token', $('#_token').val());
@@ -326,17 +315,13 @@ const InputController = new Vue({
          this.$http.post('/input', formData).then(response => { // success callback
             this.json = response.body.created_inputs;
             this.modal_procesar_json = true;
-            console.log(response);
-            //alert('Guardado');
          }, response => { // error callback
-            //console.log(response);
             this.err = response.body;
             for (let i in this.err) {
                var error = this.err[i][0];
                $(`#${i}_error`).text(error);
             }
          });
-         //}
 
          var self = this;
          setTimeout(()=>{
@@ -360,9 +345,6 @@ const InputController = new Vue({
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input/add/label', formData).then(response => { // success callback
             this.json_attr = response.body;
-
-
-
             //console.log(response);
             console.log(this.json_attr);
             //alert('Guardado');
