@@ -37035,12 +37035,6 @@ var InputController = new _vue2.default({
             // error callback
             console.log('Error fetch_input: ' + response);
          });
-
-         var self = this;
-         setTimeout(function () {
-            self.spinner_iniciar = false;
-         }, 1500);
-         return;
       },
 
       procesar_json: function procesar_json() {
@@ -37100,6 +37094,124 @@ var InputController = new _vue2.default({
                var error = _this4.err[i][0];
                $('#' + i + '_error_attr').text(error);
             }
+         });
+      }
+
+      //with_dash() => for explained specific functions
+   }
+});
+
+var ListaController = new _vue2.default({
+   el: '#ListaController ',
+   data: function data() {
+      return {
+         'editBy': '',
+         'json': ''
+      };
+   },
+
+   computed: {},
+   watch: {},
+   components: {
+      'mini-spinner': {
+         props: [''],
+         'name': 'mini-spinner',
+         'template': '\n\t         <div class="loader-mini text-center">Cargando tabla, espere por favor...</div>\n\t      ',
+         data: function data() {
+            return {
+               visible: false
+            };
+         },
+         ready: function ready() {},
+         created: function created() {},
+
+         filters: {},
+         methods: {}
+      },
+      'spinner': {
+         props: [''],
+         'name': 'spinner',
+         'template': '\n         <div class="loader text-center">Cargando tabla, espere por favor...</div>\n      ',
+         data: function data() {
+            return {
+               visible: false
+            };
+         },
+         ready: function ready() {},
+         created: function created() {},
+
+         filters: {},
+         methods: {}
+      },
+      'loader': {
+         props: [''],
+         'name': 'loader',
+         'template': '<div class="loader">Loading...</div>',
+         data: function data() {
+            return {};
+         },
+         ready: function ready() {},
+         created: function created() {},
+
+         filters: {},
+         methods: {}
+      },
+      'mini-loader': {
+         props: [''],
+         'name': 'mini-loader',
+         'template': '<div class="mini-loader">Loading...</div>',
+         data: function data() {
+            return {};
+         },
+         ready: function ready() {},
+         created: function created() {},
+
+         filters: {},
+         methods: {}
+      }
+   },
+   created: function created() {
+      this.fetchLista();
+   },
+
+   ready: {},
+   filters: {},
+   methods: {
+      //camelCase() => for specific functions
+      fetchLista: function fetchLista() {
+         var _this5 = this;
+
+         this.$http.get('/input').then(function (response) {
+            // success callback
+            _this5.tables = response.body.tables;
+            _this5.json = response.body.json;
+         }, function (response) {
+            // error callback
+            console.log('Error fetch_lista: ' + response);
+         });
+
+         var self = this;
+         setTimeout(function () {
+            self.spinner_iniciar = false;
+         }, 1500);
+         return;
+      },
+
+      edit: function edit(input_id_directive) {
+         this.editBy = input_id_directive;
+      },
+      save: function save(input) {
+         var _this6 = this;
+
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         this.$http.put('/input/' + input.id_input, input).then(function (response) {
+            // success callback
+            //console.log(response);
+            _this6.editBy = '';
+            return response.body.input;
+         }, function (response) {
+            // error callback
+            console.log(response);
          });
       }
 

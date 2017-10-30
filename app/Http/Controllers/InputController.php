@@ -11,9 +11,14 @@ class InputController extends Controller
 {
     private $returnData = [];
     public function index (Request $request) {
+        $this->returnData['tables'] = config('collection.tables');
+        if ( $request->wantsJson() ) {
+            $json = FormDeisInput::where('table_name', $table_name='form_deis_inputs')->get();
+            $this->returnData['json'] = $json;
+            return response()->json($this->returnData);
+        }
 
-
-
+        return view('input.index', $this->returnData);
     }
 
     public function create (Request $request) {
@@ -21,7 +26,6 @@ class InputController extends Controller
         if ( $request->wantsJson() ) {
             return response()->json($this->returnData);
         }
-
 
         return view('input.create', $this->returnData);
     }

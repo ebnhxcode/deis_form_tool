@@ -389,12 +389,6 @@ const InputController = new Vue({
          }, response => { // error callback
             console.log('Error fetch_input: '+response);
          });
-
-         var self = this;
-         setTimeout(function(){
-            self.spinner_iniciar = false;
-         }, 1500);
-         return;
       },
 
       procesar_json: function () {
@@ -448,6 +442,118 @@ const InputController = new Vue({
             }
          });
 
+      },
+
+      //with_dash() => for explained specific functions
+   },
+});
+
+const ListaController = new Vue({
+   el: '#ListaController ',
+   data(){
+      return {
+         'editBy':'',
+         'json':'',
+      }
+   },
+   computed: {},
+   watch: {
+   },
+   components: {
+      'mini-spinner': {
+         props: [''],
+         'name': 'mini-spinner',
+         'template': `
+	         <div class="loader-mini text-center">Cargando tabla, espere por favor...</div>
+	      `,
+         data () {
+            return {
+               visible: false,
+            }
+         },
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+      'spinner': {
+         props: [''],
+         'name': 'spinner',
+         'template': `
+         <div class="loader text-center">Cargando tabla, espere por favor...</div>
+      `,
+         data () {
+            return {
+               visible: false,
+            }
+         },
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+      'loader': {
+         props: [''],
+         'name': 'loader',
+         'template':`<div class="loader">Loading...</div>`,
+         data () {
+            return {
+            }
+         },
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+      'mini-loader': {
+         props: [''],
+         'name': 'mini-loader',
+         'template':`<div class="mini-loader">Loading...</div>`,
+         data () {
+            return {
+            }
+         },
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+   },
+   created(){
+      this.fetchLista();
+   },
+   ready: {},
+   filters: {
+   },
+   methods: {
+      //camelCase() => for specific functions
+      fetchLista: function () {
+         this.$http.get('/input').then(response => { // success callback
+            this.tables = response.body.tables;
+            this.json = response.body.json;
+         }, response => { // error callback
+            console.log('Error fetch_lista: '+response);
+         });
+
+         var self = this;
+         setTimeout(function(){
+            self.spinner_iniciar = false;
+         }, 1500);
+         return;
+      },
+
+      edit: function (input_id_directive) {
+         this.editBy = input_id_directive;
+      },
+      save: function (input) {
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         this.$http.put('/input/'+input.id_input, input).then(response => { // success callback
+            //console.log(response);
+            this.editBy = '';
+            return response.body.input;
+         }, response => { // error callback
+            console.log(response);
+         });
       },
 
       //with_dash() => for explained specific functions
