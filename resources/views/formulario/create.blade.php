@@ -76,6 +76,9 @@
                                     <dl class="dl-vertical">
                                        <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
                                        <div v-for="i in inputs" v-if="i.seccion == tab.name">
+
+                                          @{{ i.id }}
+
                                           <!-- Prop para permitir insertar una cabecera de titulo -->
                                           <div v-if="i.tag" class="col-md-12">
                                              <h3><b>@{{ i.tag ? i.tag : '' }}</b></h3><br>

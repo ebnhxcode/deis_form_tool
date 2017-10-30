@@ -147,9 +147,8 @@
                                  <input v-else type="number" class="form-control input-sm" v-model="input.max_length">
                               </td>
                               <td>
-                                 @{{input.type}}
-                                 <span></span>
-                                 <span></span>
+                                 <span v-if="editBy != input.id">@{{input.type}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.type">
                               </td>
                               <td>
                                  @{{input.id}}
