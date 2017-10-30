@@ -48,18 +48,7 @@
             Procesar
          </button>
       </div><!-- .col-md-* -->
-      <modal_procesar_json :json="json"
-                           v-if="modal_procesar_json == true">
-         <h3 slot="header">
-            Buscar input
-            <button class="btn btn-sm btn-default pull-right" @click.prevent="modal_procesar_json = false">
-               Cerrar
-            </button>
-            <!--
-               <button @click.prevent="" class="btn btn-sm btn-success pull-right">Guardar</button>
-            -->
-         </h3>
-      </modal_procesar_json>
+
    </div><!-- .row -->
 
 </div><!-- .tab-pane -->

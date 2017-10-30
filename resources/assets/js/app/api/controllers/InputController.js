@@ -155,7 +155,7 @@ const InputController = new Vue({
       'modal_procesar_json':{
          props: ['json'],
          template:`
-            <script type="text/x-template">
+            <!-- <script type="text/x-template"> -->
                <!-- template for the modal component -->
                <transition name="modal">
                   <div class="modal-mask">
@@ -174,19 +174,48 @@ const InputController = new Vue({
                                        <thead>
                                        <tr>
                                           <th>Acción</th>
-                                          <th>Id</th>
                                           <th>type</th>
                                           <th>id</th>
+                                          <th>name</th>
+                                          <th>value</th>
+                                          <th>max_length</th>
+                                          <th>placeholder</th>
+                                          <th>required</th>
+                                          <th>class</th>
+                                          <th>style</th>
+                                          <th>bloque</th>
+                                          <th>seccion</th>
+                                          <th>class_custom</th>
+                                          <th>label</th>
+                                          <th>tag</th>
+                                          <th>subtag</th>
+                                          <th>empty_column</th>
+                                          <th>order</th>
                                        </tr>
                                        </thead>
                                        <tbody>
 
-                                       <tr>
-                                          <td colspan="4">
-                                             <pre>
-                                                {{ json }}
-                                             </pre>
+                                       <tr v-for="input in json">
+                                          <td>
+                                             <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
                                           </td>
+                                          <td>input.type</td>
+                                          <td>input.id</td>
+                                          <td>input.name</td>
+                                          <td>input.value</td>
+                                          <td>input.max_length</td>
+                                          <td>input.placeholder</td>
+                                          <td>input.required</td>
+                                          <td>input.class</td>
+                                          <td>input.style</td>
+                                          <td>input.bloque</td>
+                                          <td>input.seccion</td>
+                                          <td>input.class_custom</td>
+                                          <td>input.label</td>
+                                          <td>input.tag</td>
+                                          <td>input.subtag</td>
+                                          <td>input.empty_column</td>
+                                          <td>input.order</td>
                                        </tr>
 
 
@@ -229,7 +258,7 @@ const InputController = new Vue({
                      </div>
                   </div>
                </transition>
-            </script>
+            <!-- </script> -->
          `,
          name: 'modal_procesar_json',
          data () {
