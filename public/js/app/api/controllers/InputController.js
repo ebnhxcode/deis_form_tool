@@ -37106,7 +37106,8 @@ var ListaController = new _vue2.default({
    data: function data() {
       return {
          'editBy': '',
-         'json': ''
+         'json': '',
+         'filterTerm': ''
       };
    },
 

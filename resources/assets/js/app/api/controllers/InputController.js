@@ -454,6 +454,7 @@ const ListaController = new Vue({
       return {
          'editBy':'',
          'json':'',
+         'filterTerm':'',
       }
    },
    computed: {},
