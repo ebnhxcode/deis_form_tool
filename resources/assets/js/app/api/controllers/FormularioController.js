@@ -23,7 +23,7 @@ const FormularioController = new Vue({
       return {
          'instructions':[],
          'inputs':[],
-         'labels':[],
+         //'labels':[],
          'nav_tab_form_deis':[],
          'deis_form_table_options':[],
          'fdc':[],
@@ -462,7 +462,7 @@ const FormularioController = new Vue({
             //console.log(response);
 
             this.inputs = response.body.inputs;
-            this.labels = response.body.labels;
+            //this.labels = response.body.labels;
             this.instructions = response.body.instructions;
             this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             this.deis_form_table_options = response.body.deis_form_table_options;
@@ -522,7 +522,7 @@ const FormularioController = new Vue({
 
       inputInArray: function (input, array) {
 
-         return ($.inArray(input.directivas.type, array) == -1) ? false : true;
+         return ($.inArray(input.type, array) == -1) ? false : true;
       },
 
       inputsQuantity: function (inputType){

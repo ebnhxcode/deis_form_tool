@@ -81,61 +81,63 @@
 
                                     <dl class="dl-vertical">
                                        <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
-                                       <div v-for="i in inputs" v-if="i.seccion.nombre == tab.name">
+
+
+                                       <div v-for="i in inputs" v-if="i.seccion == tab.name">
 
                                           <!-- Prop para permitir insertar una cabecera de titulo -->
-                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].tag" class="col-md-12">
+                                          <div v-if="i.tag" class="col-md-12">
                                              <h3>
-                                                <b>@{{ labels[i.directivas.id].tag ? labels[i.directivas.id].tag : '' }}</b>
+                                                <b>@{{ i.tag ? i.tag : '' }}</b>
                                              </h3>
                                              <br>
                                           </div>
                                           <!-- Prop para permitir insertar una cabecera de subtitulo -->
-                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].subtag" class="col-md-12"
+                                          <div v-if="i.subtag" class="col-md-12"
                                                style="padding-bottom: 10px;">
                                              <h4>
-                                                <b>@{{ labels[i.directivas.id].subtag ? labels[i.directivas.id].subtag : '' }}</b>
+                                                <b>@{{ i.subtag ? i.subtag : '' }}</b>
                                              </h4>
                                           </div>
 
 
-                                          <div :class="i.class_custom ? i.class_custom.class : 'col-xs-6 col-sm-6 col-md-6'">
+                                          <div :class="i.class_custom ? i.class_custom : 'col-xs-6 col-sm-6 col-md-6'">
 
                                              <!-- Etiquetas de los campos -->
                                              <dt class="small">
                                                 <!-- Prop para permitir insertar numero de orden de completado -->
-                                                <span v-if="labels[i.directivas.id] && labels[i.directivas.id].order" style="zoom:1.4;">
-                                                   @{{ labels[i.directivas.id].order ? labels[i.directivas.id].order : '' }}-
+                                                <span v-if="i.order" style="zoom:1.4;">
+                                                   @{{ i.order ? i.order : '' }}-
                                                 </span>
                                                 <span>
-                                                   @{{ labels[i.directivas.id] ? labels[i.directivas.id].text : 'Sin Etiqueta' }}
+                                                   @{{ i.label ? i.label: 'Sin Etiqueta' }}
                                                 </span>
                                              </dt>
 
                                              <!-- Input basicos como text,number,time,date,etc -->
                                              <dd v-if="inputInArray(i,inputTypes.basics)">
-                                                <input :name="i.directivas.name"
-                                                       :id="i.directivas.id"
-                                                       :type="i.directivas.type"
-                                                       :max-length="i.directivas.max_length"
-                                                       :required="i.directivas.required"
-                                                       :readonly="i.directivas.readonly"
-                                                       :class="i.directivas.class!=''?i.directivas.class:'form-control'"
-                                                       :style="i.directivas.style!=''?i.directivas.style:''"
-                                                       :placeholder="i.directivas.placeholder!=''?i.directivas.placeholder:''"
-                                                       v-model="i.directivas.value"
+                                                <input :name="i.name"
+                                                       :id="i.id"
+                                                       :type="i.type"
+                                                       :max-length="i.max_length"
+                                                       :required="i.required"
+                                                       :readonly="i.readonly"
+                                                       :class="i.class!=''?i.class:'form-control'"
+                                                       :style="i.style!=''?i.style:''"
+                                                       :placeholder="i.placeholder!=''?i.placeholder:''"
+                                                       v-model="i.value"
                                                 >
                                              </dd>
 
                                              <!-- Select Inputs -->
                                              <dd v-else-if="inputInArray(i,inputTypes.select)">
-                                                <select :name="i.directivas.name"
-                                                        :id="i.directivas.id"
+                                                <select :name="i.name"
+                                                        :id="i.id"
                                                         class="form-control">
 
 
                                                    <option value="">Seleccione</option>
-                                                   <option v-for="o in deis_form_table_options[i.directivas.name]" :value="o">
+                                                   <option v-for="o in deis_form_table_options[i.name]" :value="o">
                                                       @{{ o }}
                                                    </option>
 
@@ -145,8 +147,8 @@
                                              <!-- Textarea Inputs -->
                                              <dd v-else-if="inputInArray(i,inputTypes.textarea)">
 
-                                             <textarea :name="i.directivas.name"
-                                                       :id="i.directivas.id"
+                                             <textarea :name="i.name"
+                                                       :id="i.id"
                                                        class="form-control">
                                              </textarea>
 
@@ -158,8 +160,8 @@
                                              <br>
                                           </div><!-- .col-md-* -->
 
-                                          <div v-if="labels[i.directivas.id] && labels[i.directivas.id].empty_column"
-                                               :class="labels[i.directivas.id].empty_column">
+                                          <div v-if="i.empty_column"
+                                               :class="i.empty_column">
                                           </div>
                                        </div>
 

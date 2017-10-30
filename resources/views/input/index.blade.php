@@ -33,7 +33,7 @@
 
                      <input type="text" class="form-control" placeholder="Ingrese criterio de búsqueda para filtrar">
                      <br>
-                     <div class="table-responsive" style="overflow-y: scroll;max-height: 1000px;">
+                     <div class="table-responsive" style="overflow-y: scroll;max-height: 400px;">
                         <table class="table table-striped small">
                            <thead>
                            <tr>

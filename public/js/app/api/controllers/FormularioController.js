@@ -36845,7 +36845,7 @@ var FormularioController = new _vue2.default({
       return {
          'instructions': [],
          'inputs': [],
-         'labels': [],
+         //'labels':[],
          'nav_tab_form_deis': [],
          'deis_form_table_options': [],
          'fdc': [],
@@ -37148,7 +37148,7 @@ var FormularioController = new _vue2.default({
             //console.log(response);
 
             _this.inputs = response.body.inputs;
-            _this.labels = response.body.labels;
+            //this.labels = response.body.labels;
             _this.instructions = response.body.instructions;
             _this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this.deis_form_table_options = response.body.deis_form_table_options;
@@ -37206,7 +37206,7 @@ var FormularioController = new _vue2.default({
 
       inputInArray: function inputInArray(input, array) {
 
-         return $.inArray(input.directivas.type, array) == -1 ? false : true;
+         return $.inArray(input.type, array) == -1 ? false : true;
       },
 
       inputsQuantity: function inputsQuantity(inputType) {

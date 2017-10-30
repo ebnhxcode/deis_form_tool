@@ -6,6 +6,7 @@ use App\FormDeis;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
+use App\FormDeisInput;
 
 
 class FormDeisController extends Controller {
@@ -26,8 +27,9 @@ class FormDeisController extends Controller {
 
     public function create (Request $request) {
         #dd($this->fdc);
-        $returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
-        $returnData['labels'] = config('collection.deis_form_table_labels');
+        #$returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
+        #$returnData['labels'] = config('collection.deis_form_table_labels');
+        $returnData['inputs'] = FormDeisInput::where('table_name', $table_name='form_deis_inputs')->orderby('id_input','asc')->get();
         $returnData['instructions'] = config('collection.deis_form_instructions');
         $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
         $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
