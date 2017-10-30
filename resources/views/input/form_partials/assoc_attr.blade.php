@@ -12,12 +12,24 @@
 
 
    <code>
-      <textarea name="" id="json" {{--cols="30"--}} rows="20"
+      <textarea name="json_attr" id="json_attr" {{--cols="30"--}} rows="20"
                 class="form-control small"
-                v-model="textarea_attr">
+                v-model="json_attr">
 
       </textarea>
    </code>
+
+   <label for="tables">
+      Seleccione la tabla de los campos que asociará las nuevas propiedades
+   </label>
+
+   <select name="table_name" id="table_name" v-model="table_name" class="form-control">
+      <option value="">Seleccione</option>
+      <option :value="t" v-for="t in tables">
+         @{{ t.table_name_attr }}
+      </option>
+   </select>
+   <br>
 
    <div id="" class="row">
       <div class="col-md-12">

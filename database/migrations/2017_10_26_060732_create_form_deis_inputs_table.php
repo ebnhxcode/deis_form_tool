@@ -14,6 +14,7 @@ class CreateFormDeisInputsTable extends Migration
     {
         Schema::create('form_deis_inputs', function (Blueprint $table) {
             $table->increments('id_input');
+            $table->string('table_name')->unsigned()->nullable(true);
 
             $table->string('type')->unsigned()->nullable(true);
             $table->string('id')->unsigned()->nullable(true);

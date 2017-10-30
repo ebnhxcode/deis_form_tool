@@ -24,8 +24,11 @@ const InputController = new Vue({
          'mini_loader':false,
          'modal_procesar_json':false,
          'modal_procesar_json_attr':false,
-         'textarea':'',
-         'textarea_attr':'',
+         'json':'',
+         'json_attr':'',
+         'table_name':'',
+         'table_name_attr':'',
+         'tables':[],
       }
    },
    computed: {},
@@ -266,6 +269,7 @@ const InputController = new Vue({
        */
    },
    created(){
+      this.fetchInput();
       /*
       $(document).ready( function () {
          $('#toggle').click(function() {
@@ -280,22 +284,44 @@ const InputController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
+
+      fetchInput: function () {
+         this.$http.get('/input/create').then(response => { // success callback
+            //console.log(response);
+            this.tables = response.body.tables;
+
+         }, response => { // error callback
+            console.log('Error fetch_input: '+response);
+         });
+
+         var self = this;
+         setTimeout(function(){
+            self.spinner_iniciar = false;
+         }, 1500);
+         //console.log('FormularioController');
+
+         return;
+      },
+
       procesar_json: function () {
          this.mini_loader = true;
          this.modal_procesar_json = true;
 
          var formData = new FormData();
          var permiteGuardar = false;
-         formData.append('textarea', this.textarea);
+         formData.append('json', this.json);
+         console.log(this.json);
+         formData.append('table_name', this.table_name);
+         console.log(this.table_name);
+
+
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input', formData).then(response => { // success callback
-            this.textarea = response.body;
+            //this.json = response.body.created_inputs;
 
-
-
-            //console.log(response);
-            console.log(this.textarea);
+            console.log(response);
+            //console.log(this.json);
             //alert('Guardado');
          }, response => { // error callback
             console.log(response);
@@ -319,16 +345,17 @@ const InputController = new Vue({
 
          var formData = new FormData();
          var permiteGuardar = false;
-         formData.append('textarea_attr', this.textarea_attr);
+         formData.append('json_attr', this.json_attr);
+         formData.append('table_name_attr', this.table_name_attr);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input/add/label', formData).then(response => { // success callback
-            this.textarea_attr = response.body;
+            this.json_attr = response.body;
 
 
 
             //console.log(response);
-            console.log(this.textarea_attr);
+            console.log(this.json_attr);
             //alert('Guardado');
          }, response => { // error callback
             console.log(response);

@@ -17,7 +17,10 @@ class InputController extends Controller
     }
 
     public function create (Request $request) {
-        #$this->returnData[''];
+        $this->returnData['tables'] = config('collection.tables');
+        if ( $request->wantsJson() ) {
+            return response()->json($this->returnData);
+        }
 
 
         return view('input.create', $this->returnData);
@@ -26,8 +29,8 @@ class InputController extends Controller
     public function addLabelToInput (Request $request) {
         $arr_txt = '';
         $created_labels = [];
-        if (isset($request->textarea_attr) && $request->textarea_attr) {
-            $arr_txt = $request->textarea_attr;
+        if (isset($request->json_attr) && $request->json_attr) {
+            $arr_txt = $request->json_attr;
         }
         $arr_txt = eval($arr_txt);
         foreach ($arr_txt as $key => $field) {
@@ -56,20 +59,27 @@ class InputController extends Controller
             return $fdi;
         }
 
+        #Buscar por base de datos segun el input del select por el nombre de la tabla
         return $created_labels;
     }
 
     public function store (Request $request) {
+        $this->validate($request, [
+            'json' => 'required',
+            'table_name' => 'required',
+        ]);
+
         $arr_txt = '';
         $created_inputs = [];
-        if (isset($request->textarea) && $request->textarea) {
-            $arr_txt = $request->textarea;
-        }
+
+        $arr_txt = $request->json;
+        $table_name = isset($request->table_name)?$request->table_name:null;
+        return $table_name;
         $arr_txt = eval($arr_txt);
 
         foreach ($arr_txt as $key => $field) {
             $fdi = new FormDeisInput();
-
+            $fdi->table_name = $table_name;
             if (isset($field['directivas'])) {
                 $fdi->type = isset($field['directivas']['type'])?$field['directivas']['type']:'';
                 $fdi->id = isset($field['directivas']['id'])?$field['directivas']['id']:'';
@@ -92,12 +102,10 @@ class InputController extends Controller
             }
 
             $fdi->save();
-            array_push($created_inputs, $fdi);
         }
 
-
-        return $created_inputs;
-
+        $created_inputs = FormDeisInput::where('table_name', $table_name)->get();
+        return response()->json(['created_inputs' => $created_inputs]);
     }
 
     public function show ($id) {

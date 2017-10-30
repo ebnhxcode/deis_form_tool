@@ -36846,8 +36846,11 @@ var InputController = new _vue2.default({
          'mini_loader': false,
          'modal_procesar_json': false,
          'modal_procesar_json_attr': false,
-         'textarea': '',
-         'textarea_attr': ''
+         'json': '',
+         'json_attr': '',
+         'table_name': '',
+         'table_name_attr': '',
+         'tables': []
       };
    },
 
@@ -36978,6 +36981,7 @@ var InputController = new _vue2.default({
        */
    },
    created: function created() {
+      this.fetchInput();
       /*
       $(document).ready( function () {
          $('#toggle').click(function() {
@@ -36992,23 +36996,47 @@ var InputController = new _vue2.default({
    filters: {},
    methods: {
       //camelCase() => for specific functions
-      procesar_json: function procesar_json() {
+
+      fetchInput: function fetchInput() {
          var _this = this;
 
+         this.$http.get('/input/create').then(function (response) {
+            // success callback
+            //console.log(response);
+            _this.tables = response.body.tables;
+         }, function (response) {
+            // error callback
+            console.log('Error fetch_input: ' + response);
+         });
+
+         var self = this;
+         setTimeout(function () {
+            self.spinner_iniciar = false;
+         }, 1500);
+         //console.log('FormularioController');
+
+         return;
+      },
+
+      procesar_json: function procesar_json() {
          this.mini_loader = true;
          this.modal_procesar_json = true;
 
          var formData = new FormData();
          var permiteGuardar = false;
-         formData.append('textarea', this.textarea);
+         formData.append('json', this.json);
+         console.log(this.json);
+         formData.append('table_name', this.table_name);
+         console.log(this.table_name);
+
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input', formData).then(function (response) {
             // success callback
-            _this.textarea = response.body;
+            //this.json = response.body.created_inputs;
 
-            //console.log(response);
-            console.log(_this.textarea);
+            console.log(response);
+            //console.log(this.json);
             //alert('Guardado');
          }, function (response) {
             // error callback
@@ -37032,15 +37060,16 @@ var InputController = new _vue2.default({
 
          var formData = new FormData();
          var permiteGuardar = false;
-         formData.append('textarea_attr', this.textarea_attr);
+         formData.append('json_attr', this.json_attr);
+         formData.append('table_name_attr', this.table_name_attr);
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          //formData.append('_token', $('#_token').val());
          this.$http.post('/input/add/label', formData).then(function (response) {
             // success callback
-            _this2.textarea_attr = response.body;
+            _this2.json_attr = response.body;
 
             //console.log(response);
-            console.log(_this2.textarea_attr);
+            console.log(_this2.json_attr);
             //alert('Guardado');
          }, function (response) {
             // error callback

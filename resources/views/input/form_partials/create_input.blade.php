@@ -10,12 +10,25 @@
    </label>
 
    <code>
-      <textarea name="" id="json" {{--cols="30"--}} rows="20"
+      <textarea name="json" id="json" {{--cols="30"--}} rows="20"
                 class="form-control small"
-                v-model="textarea">
+                v-model="json">
 
       </textarea>
    </code>
+
+
+   <label for="tables">
+      Seleccione la tabla a la que asociará estos campos
+   </label>
+
+   <select name="table_name" id="table_name" v-model="table_name" class="form-control">
+      <option value="">Seleccione</option>
+      <option :value="t" v-for="t in tables">
+         @{{ t.table_name }}
+      </option>
+   </select>
+   <br>
 
    <div id="" class="row">
       <div class="col-md-12">
@@ -32,7 +45,7 @@
             Procesar
          </button>
       </div><!-- .col-md-* -->
-      <modal_procesar_json :json="textarea"
+      <modal_procesar_json :json="json"
                            v-if="modal_procesar_json == true">
          <h3 slot="header">
             Buscar input

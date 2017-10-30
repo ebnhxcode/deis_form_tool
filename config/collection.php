@@ -1,6 +1,29 @@
 <?php
 
 return [
+   'tables' => [
+      'form_deis' => [
+         'controller' => 'FormDeisController',
+         'model' => 'FormDeis',
+         'table_name' => 'form_deis',
+      ],
+      'form_deis_inputs' => [
+         'controller' => 'InputController',
+         'model' => 'FormDeisInput',
+         'table_name' => 'form_deis_inputs',
+      ],
+      'users' => [
+         'controller' => 'UserController',
+         'model' => 'User',
+         'table_name' => 'users',
+      ],
+      'log_navegations' => [
+         'controller' => 'LogNavigationController',
+         'model' => 'LogNavigation',
+         'table_name' => 'log_navigations',
+      ],
+   ],
+
    #Edades Gestacionales
    'edades_gestacionales' => [
       /*
