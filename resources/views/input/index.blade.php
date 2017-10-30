@@ -64,8 +64,8 @@
                            <thead>
                            <tr>
                               <th>Acción</th>
-                              <th style="min-width: 140px !important;">id_input</th>
-                              <th style="min-width: 140px !important;">order_layout_form</th>
+                              <th>id_input</th>
+                              <th>order_layout_form</th>
                               <th style="min-width: 140px !important;">label</th>
                               <th style="min-width: 140px !important;">tag</th>
                               <th style="min-width: 140px !important;">subtag</th>
@@ -89,10 +89,10 @@
                            <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
                            <tr v-for="input in filterBy(json, filterTerm)" :key="input">
                               <td>
-                                 <button v-if="editBy!=input.id" class="btn btn-sm btn-primary" @click.prevent="edit(input.id)">
+                                 <button v-if="editBy!=input.id" class="btn btn-xs btn-primary" @click.prevent="edit(input.id)">
                                     <i class="fa fa-pencil"></i>
                                  </button>
-                                 <button v-else class="btn btn-sm btn-success" @click.prevent="save(input)">
+                                 <button v-else class="btn btn-xs btn-success" @click.prevent="save(input)">
                                     <i class="fa fa-check"></i>
                                  </button>
                               </td>
