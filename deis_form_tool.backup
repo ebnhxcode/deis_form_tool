@@ -35,6 +35,42 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: comuna; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE comuna (
+    id_comuna character varying(255),
+    id_region character varying(255),
+    nombre_comuna character varying(255),
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE comuna OWNER TO postgres;
+
+--
+-- Name: establecimiento; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE establecimiento (
+    id_establecimiento character varying(255),
+    id_establecimiento_antiguo character varying(255),
+    id_servicio character varying(255),
+    id_region character varying(255),
+    id_comuna character varying(255),
+    nombre_establecimiento character varying(255),
+    tipo_establecimiento character varying(255),
+    vigencia_desde character varying(255),
+    fecha_cierre character varying(255),
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE establecimiento OWNER TO postgres;
+
+--
 -- Name: form_deis; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -377,6 +413,20 @@ CREATE TABLE migrations (
 ALTER TABLE migrations OWNER TO postgres;
 
 --
+-- Name: pais; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE pais (
+    id_pais character varying(255),
+    nombre_pais character varying(255),
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE pais OWNER TO postgres;
+
+--
 -- Name: password_resets; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -388,6 +438,38 @@ CREATE TABLE password_resets (
 
 
 ALTER TABLE password_resets OWNER TO postgres;
+
+--
+-- Name: region; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE region (
+    id_region character varying(255),
+    nombre_region character varying(255),
+    alias character varying(255),
+    orden character varying(255),
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE region OWNER TO postgres;
+
+--
+-- Name: servicio_salud; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE servicio_salud (
+    id_sericio_salud character varying(255),
+    id_region character varying(255),
+    nombre_servicio_salud character varying(255),
+    orden character varying(255),
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE servicio_salud OWNER TO postgres;
 
 --
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
@@ -471,6 +553,22 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 
 
 --
+-- Data for Name: comuna; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY comuna (id_comuna, id_region, nombre_comuna, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: establecimiento; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY establecimiento (id_establecimiento, id_establecimiento_antiguo, id_servicio, id_region, id_comuna, nombre_establecimiento, tipo_establecimiento, vigencia_desde, fecha_cierre, created_at, updated_at) FROM stdin;
+\.
+
+
+--
 -- Data for Name: form_deis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -520,6 +618,7 @@ COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre
 43	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 14:29:20	2017-10-30 14:29:20
 44	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 14:29:31	2017-10-30 14:29:31
 45	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 14:32:03	2017-10-30 14:32:03
+46	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-30 14:37:57	2017-10-30 14:37:57
 \.
 
 
@@ -742,6 +841,19 @@ COPY migrations (migration, batch) FROM stdin;
 2017_10_25_140649_create_log_navegations_table	1
 2017_10_25_144731_create_log_navegacions_table	1
 2017_10_26_060732_create_form_deis_inputs_table	1
+2017_10_30_132012_create_establecimiento_table	2
+2017_10_30_132029_create_servicio_salud_table	2
+2017_10_30_132037_create_region_table	2
+2017_10_30_132042_create_comuna_table	2
+2017_10_30_132049_create_pais_table	2
+\.
+
+
+--
+-- Data for Name: pais; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY pais (id_pais, nombre_pais, created_at, updated_at) FROM stdin;
 \.
 
 
@@ -750,6 +862,22 @@ COPY migrations (migration, batch) FROM stdin;
 --
 
 COPY password_resets (email, token, created_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: region; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY region (id_region, nombre_region, alias, orden, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: servicio_salud; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY servicio_salud (id_sericio_salud, id_region, nombre_servicio_salud, orden, created_at, updated_at) FROM stdin;
 \.
 
 
@@ -766,7 +894,7 @@ COPY users (id, name, last_name, full_name, "position", establecimiento, rut, em
 -- Name: form_deis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('form_deis_id_seq', 45, true);
+SELECT pg_catalog.setval('form_deis_id_seq', 46, true);
 
 
 --
