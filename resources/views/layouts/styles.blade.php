@@ -78,7 +78,7 @@
    }
 
    .modal-container {
-      width: 8000px;
+      width: 850px;
       margin: 0px auto;
       padding: 20px 30px;
       background-color: #fff;

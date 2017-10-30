@@ -47,6 +47,11 @@
                  @click.prevent="procesar_json">
             Procesar
          </button>
+         <button class="btn btn-primary pull-left"
+                 v-if="boton_abrir_modal == true"
+                 @click.prevent="modal_procesar_json = true">
+            Abrir modal
+         </button>
       </div><!-- .col-md-* -->
 
    </div><!-- .row -->

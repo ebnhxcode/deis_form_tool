@@ -21,6 +21,7 @@ const InputController = new Vue({
    el: '#InputController ',
    data(){
       return {
+         'boton_abrir_modal':false,
          'mini_loader':false,
          'modal_procesar_json':false,
          'modal_procesar_json_attr':false,
@@ -169,7 +170,7 @@ const InputController = new Vue({
                            <div class="modal-body">
                               <slot name="body">
 
-                                 <div class="table-responsive">
+                                 <div class="table-responsive" style="overflow-y: scroll;max-height: 400px;">
                                     <table class="table table-striped">
                                        <thead>
                                        <tr>
@@ -338,7 +339,12 @@ const InputController = new Vue({
          this.$http.post('/input', formData).then(response => { // success callback
             this.json = response.body.created_inputs;
             this.modal_procesar_json = true;
+            this.boton_abrir_modal = true;
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            this.mini_loader = false;
          }, response => { // error callback
+            this.boton_abrir_modal = false;
             this.err = response.body;
             for (let i in this.err) {
                var error = this.err[i][0];
@@ -346,6 +352,7 @@ const InputController = new Vue({
             }
          });
 
+         /*
          var self = this;
          setTimeout(()=>{
             $('.circle-loader').toggleClass('load-complete');
@@ -354,6 +361,7 @@ const InputController = new Vue({
                self.mini_loader = false;
             },3000);
          },3000);
+         */
 
       },
       procesar_json_attr: function () {
