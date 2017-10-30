@@ -5,23 +5,22 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateEstablecimientoTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        //
+    public function up () {
+        Schema::create('establecimiento', function (Blueprint $table) {
+            #$table->increments('id_establecimiento');
+            $table->string('id_establecimiento')->unsigned()->nullable(true);
+            $table->string('id_establecimiento_antiguo')->unsigned()->nullable(true);
+            $table->string('id_servicio')->unsigned()->nullable(true);
+            $table->string('id_region')->unsigned()->nullable(true);
+            $table->string('id_comuna')->unsigned()->nullable(true);
+            $table->string('nombre_establecimiento')->unsigned()->nullable(true);
+            $table->string('id')->unsigned()->nullable(true);
+
+            $table->timestamps();
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        //
+    public function down () {
+        Schema::drop('establecimiento');
     }
 }
