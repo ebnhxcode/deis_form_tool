@@ -14,7 +14,9 @@ class CreateEstablecimientoTable extends Migration
             $table->string('id_region')->unsigned()->nullable(true);
             $table->string('id_comuna')->unsigned()->nullable(true);
             $table->string('nombre_establecimiento')->unsigned()->nullable(true);
-            $table->string('id')->unsigned()->nullable(true);
+            $table->string('tipo_establecimiento')->unsigned()->nullable(true);
+            $table->string('vigencia_desde')->unsigned()->nullable(true);
+            $table->string('fecha_cierre')->unsigned()->nullable(true);
 
             $table->timestamps();
         });
