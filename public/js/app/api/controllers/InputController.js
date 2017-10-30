@@ -36953,7 +36953,7 @@ var InputController = new _vue2.default({
       },
       'modal_procesar_json': {
          props: ['json'],
-         template: '\n\t\t\t   <!-- template for the modal component -->\n\t\t\t   <transition name="modal">\n\t\t\t\t   <div class="modal-mask">\n\t\t\t\t\t   <div class="modal-wrapper">\n\t\t\t\t\t      <div class="modal-container" style="max-height: 850px !important;">\n\n\t\t\t\t\t\t      <div class="modal-header">\n\t\t\t\t\t\t\t      <slot name="header"></slot>\n\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t      <div class="modal-body">\n\t\t\t\t\t\t\t      <slot name="body">\n\n\n                              <div class="table-responsive">\n                                 <table class="table table-striped">\n                                    <thead>\n                                       <tr>\n                                          <th>Acci\xF3n</th>\n                                          <th>Id</th>\n                                          <th>type</th>\n                                          <th>id</th>\n                                       </tr>\n                                    </thead>\n                                    <tbody>\n\n\n                                       <tr v-for="input in json">\n                                          <td>\n                                             <button class="btn btn-sm btn-primary">\n                                                <i class="fa fa-pencil"></i>\n                                             </button>\n                                          </td>\n                                          <td>{{input.id_input}}</td>\n                                          <td>{{input.type}}</td>\n                                          <td>{{input.id}}</td>\n                                       </tr>\n\n\n                                    </tbody>\n                                 </table>\n                              </div>\n\n\n\n\n\n                              <!--\n                               <dl class="dl-vertical">\n                                 <div class="row">\n\t\t\t\t\t\t\t\t\t         <div style="overflow-y: scroll;max-height: 400px;">\n\n                                       <div class="col-md-6">\n                                          <dt></dt>\n                                          <dd class="well well-sm"></dd>\n                                       </div>\n                                       <div class="col-md-6">\n                                          <dt></dt>\n                                          <dd class="well well-sm"></dd>\n                                       </div>\n\n                                    </div>\n                                 </div>\n                              </dl>\n                              -->\n\t\t\t\t\t\t\t      </slot>\n\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t      <!--\n\t\t\t\t\t\t      <div class="modal-footer">\n\t\t\t\t\t\t\t      <slot name="footer">\n\t\t\t\t\t\t\t         <button class="btn btn-sm btn-success" @click="$emit(\'close\')">\n\t\t\t\t\t\t\t\t         Aceptar\n\t\t\t\t\t\t\t         </button>\n                           </slot>\n\t\t\t\t\t\t      </div>\n\t\t\t\t\t\t      -->\n\t\t\t\t\t      </div>\n                  </div>\n\t\t\t\t   </div>\n\t\t\t   </transition>\n\t\t\t',
+         template: '\n            <script type="text/x-template">\n               <!-- template for the modal component -->\n               <transition name="modal">\n                  <div class="modal-mask">\n                     <div class="modal-wrapper">\n                        <div class="modal-container">\n\n                           <div class="modal-header">\n                              <slot name="header"></slot>\n                           </div>\n\n                           <div class="modal-body">\n                              <slot name="body">\n\n                                 <div class="table-responsive">\n                                    <table class="table table-striped">\n                                       <thead>\n                                       <tr>\n                                          <th>Acci\xF3n</th>\n                                          <th>Id</th>\n                                          <th>type</th>\n                                          <th>id</th>\n                                       </tr>\n                                       </thead>\n                                       <tbody>\n\n                                       <tr>\n                                          <td colspan="4">\n                                             <pre>\n                                                {{ json }}\n                                             </pre>\n                                          </td>\n                                       </tr>\n\n\n\n                                       </tbody>\n                                    </table>\n                                 </div>\n\n                                 <!--\n                                  <dl class="dl-vertical">\n                                    <div class="row">\n                                       <div style="overflow-y: scroll;max-height: 400px;">\n\n                                          <div class="col-md-6">\n                                             <dt></dt>\n                                             <dd class="well well-sm"></dd>\n                                          </div>\n                                          <div class="col-md-6">\n                                             <dt></dt>\n                                             <dd class="well well-sm"></dd>\n                                          </div>\n\n                                       </div>\n                                    </div>\n                                 </dl>\n                                 -->\n                              </slot>\n                           </div>\n\n                           <!--\n                           <div class="modal-footer">\n                              <slot name="footer">\n                                 <button class="btn btn-sm btn-success" @click="$emit(\'close\')">\n                                    Aceptar\n                                 </button>\n                              </slot>\n                           </div>\n                           -->\n                        </div>\n                     </div>\n                  </div>\n               </transition>\n            </script>\n         ',
          name: 'modal_procesar_json',
          data: function data() {
             return {};
@@ -37001,13 +37001,11 @@ var InputController = new _vue2.default({
    filters: {},
    methods: {
       //camelCase() => for specific functions
-      checkInputs: function checkInputs() {},
       fetchInput: function fetchInput() {
          var _this = this;
 
          this.$http.get('/input/create').then(function (response) {
             // success callback
-            //console.log(response);
             _this.tables = response.body.tables;
          }, function (response) {
             // error callback
@@ -37018,8 +37016,6 @@ var InputController = new _vue2.default({
          setTimeout(function () {
             self.spinner_iniciar = false;
          }, 1500);
-         //console.log('FormularioController');
-
          return;
       },
 
@@ -37029,8 +37025,6 @@ var InputController = new _vue2.default({
          this.mini_loader = true;
          var j = this.json;
          var tn = this.table_name.table_name;
-         //var permiteGuardar = true;//(j&&j!=null&&j!=''&&tn&&tn!=null&&tn!='')?true:false;
-         //if (permiteGuardar == true) {
          var formData = new FormData();
          formData.append('json', j);
          formData.append('table_name', tn); //formData.append('_token', $('#_token').val());
@@ -37040,18 +37034,14 @@ var InputController = new _vue2.default({
             // success callback
             _this2.json = response.body.created_inputs;
             _this2.modal_procesar_json = true;
-            console.log(response);
-            //alert('Guardado');
          }, function (response) {
             // error callback
-            //console.log(response);
             _this2.err = response.body;
             for (var i in _this2.err) {
                var error = _this2.err[i][0];
                $('#' + i + '_error').text(error);
             }
          });
-         //}
 
          var self = this;
          setTimeout(function () {
@@ -37077,7 +37067,6 @@ var InputController = new _vue2.default({
          this.$http.post('/input/add/label', formData).then(function (response) {
             // success callback
             _this3.json_attr = response.body;
-
             //console.log(response);
             console.log(_this3.json_attr);
             //alert('Guardado');

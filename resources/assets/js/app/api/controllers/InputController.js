@@ -8,6 +8,7 @@ Vue.use(Vue2Filters);
 import es from 'vee-validate/dist/locale/es';
 import VeeValidate, { Validator } from 'vee-validate';
 
+
 // Add locale helper.
 Validator.addLocale(es);
 
@@ -15,7 +16,6 @@ Validator.addLocale(es);
 Vue.use(VeeValidate, {
    locale: 'es'
 });
-
 
 const InputController = new Vue({
    el: '#InputController ',
@@ -154,89 +154,83 @@ const InputController = new Vue({
       },
       'modal_procesar_json':{
          props: ['json'],
-         template: `
-			   <!-- template for the modal component -->
-			   <transition name="modal">
-				   <div class="modal-mask">
-					   <div class="modal-wrapper">
-					      <div class="modal-container" style="max-height: 850px !important;">
+         template:`
+            <script type="text/x-template">
+               <!-- template for the modal component -->
+               <transition name="modal">
+                  <div class="modal-mask">
+                     <div class="modal-wrapper">
+                        <div class="modal-container">
 
-						      <div class="modal-header">
-							      <slot name="header"></slot>
-						      </div>
+                           <div class="modal-header">
+                              <slot name="header"></slot>
+                           </div>
 
-						      <div class="modal-body">
-							      <slot name="body">
+                           <div class="modal-body">
+                              <slot name="body">
 
-
-                              <div class="table-responsive">
-                                 <table class="table table-striped">
-                                    <thead>
+                                 <div class="table-responsive">
+                                    <table class="table table-striped">
+                                       <thead>
                                        <tr>
                                           <th>Acción</th>
                                           <th>Id</th>
                                           <th>type</th>
                                           <th>id</th>
                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                       </thead>
+                                       <tbody>
 
-
-                                       <tr v-for="input in json">
-                                          <td>
-                                             <button class="btn btn-sm btn-primary">
-                                                <i class="fa fa-pencil"></i>
-                                             </button>
+                                       <tr>
+                                          <td colspan="4">
+                                             <pre>
+                                                {{ json }}
+                                             </pre>
                                           </td>
-                                          <td>{{input.id_input}}</td>
-                                          <td>{{input.type}}</td>
-                                          <td>{{input.id}}</td>
                                        </tr>
 
 
-                                    </tbody>
-                                 </table>
-                              </div>
 
-
-
-
-
-                              <!--
-                               <dl class="dl-vertical">
-                                 <div class="row">
-									         <div style="overflow-y: scroll;max-height: 400px;">
-
-                                       <div class="col-md-6">
-                                          <dt></dt>
-                                          <dd class="well well-sm"></dd>
-                                       </div>
-                                       <div class="col-md-6">
-                                          <dt></dt>
-                                          <dd class="well well-sm"></dd>
-                                       </div>
-
-                                    </div>
+                                       </tbody>
+                                    </table>
                                  </div>
-                              </dl>
-                              -->
-							      </slot>
-						      </div>
 
-						      <!--
-						      <div class="modal-footer">
-							      <slot name="footer">
-							         <button class="btn btn-sm btn-success" @click="$emit('close')">
-								         Aceptar
-							         </button>
-                           </slot>
-						      </div>
-						      -->
-					      </div>
+                                 <!--
+                                  <dl class="dl-vertical">
+                                    <div class="row">
+                                       <div style="overflow-y: scroll;max-height: 400px;">
+
+                                          <div class="col-md-6">
+                                             <dt></dt>
+                                             <dd class="well well-sm"></dd>
+                                          </div>
+                                          <div class="col-md-6">
+                                             <dt></dt>
+                                             <dd class="well well-sm"></dd>
+                                          </div>
+
+                                       </div>
+                                    </div>
+                                 </dl>
+                                 -->
+                              </slot>
+                           </div>
+
+                           <!--
+                           <div class="modal-footer">
+                              <slot name="footer">
+                                 <button class="btn btn-sm btn-success" @click="$emit('close')">
+                                    Aceptar
+                                 </button>
+                              </slot>
+                           </div>
+                           -->
+                        </div>
+                     </div>
                   </div>
-				   </div>
-			   </transition>
-			`,
+               </transition>
+            </script>
+         `,
          name: 'modal_procesar_json',
          data () {
             return {
