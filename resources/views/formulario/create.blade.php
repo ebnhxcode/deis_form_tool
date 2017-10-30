@@ -77,7 +77,7 @@
                                        <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
                                        <div v-for="i in inputs" v-if="i.seccion == tab.name">
 
-                                          @{{ i.id }}
+
 
                                           <!-- Prop para permitir insertar una cabecera de titulo -->
                                           <div v-if="i.tag" class="col-md-12">
@@ -90,6 +90,7 @@
                                           </div>
 
                                           <div :class="i.class_custom ? i.class_custom : 'col-xs-6 col-sm-6 col-md-6'">
+                                             @{{ i.id }}
                                              <!-- Etiquetas de los campos -->
                                              <dt class="small">
                                                 <!-- Prop para permitir insertar numero de orden de completado -->
