@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017_10_30_132037_create_region_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php">
+      <file leaf-file-name="2017_10_30_132042_create_comuna_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44246355">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.4179357">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_10_30_132049_create_pais_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.75">
+              <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -194,6 +205,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132012_create_establecimiento_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132029_create_servicio_salud_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php" />
       </list>
     </option>
   </component>
@@ -797,20 +810,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30847457">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/Example.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.06532663">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40805605">
@@ -1208,6 +1207,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21069692">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/input/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.961538">
@@ -1216,10 +1223,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132037_create_region_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132049_create_pais_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44246355">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        <state vertical-scroll-proportion="-2.75">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_10_30_132042_create_comuna_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4179357">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
