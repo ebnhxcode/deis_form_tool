@@ -20,7 +20,8 @@ class CreateEstablecimientoTable extends Migration
 
             $table->timestamps();
         });
-    }
+    }git st
+
 
     public function down () {
         Schema::drop('establecimiento');
