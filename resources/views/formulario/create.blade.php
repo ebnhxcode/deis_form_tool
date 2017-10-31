@@ -23,7 +23,7 @@
                               <small>Leer instrucciones</small>
                            </button>
 
-                           <button class="btn btn-sm btn-success pull-right small" @click.prevent="buscar_formulario"
+                           <button class="btn btn-sm btn-success pull-right small" @click.prevent="crear_nuevo_formulario"
                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;margin-left: 10px;">
                               Crear nuevo&nbsp;
                               <i class="fa fa-plus"></i>
@@ -61,7 +61,7 @@
 
                      <div class="col-md-12">
 
-                        <div id="" class="panel with-nav-tabs panel-primary">
+                        <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true">
                            <!-- Items elementos de cabecera -->
                            <div class="panel-heading">
                               <!-- Nav tabs -->

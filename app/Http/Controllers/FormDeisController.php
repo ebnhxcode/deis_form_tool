@@ -32,27 +32,27 @@ class FormDeisController extends Controller {
         return response()->json(['formularios'=>$formularios]);
     }
 
-
-    public function create (Request $request) {
-        #dd($this->fdc);
-        #$returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
-        #$returnData['labels'] = config('collection.deis_form_table_labels');
-        $returnData['inputs'] = FormDeisInput::where('table_name', $table_name='form_deis_inputs')->orderby('order_layout_form','asc')->get();
-        $returnData['instructions'] = config('collection.deis_form_instructions');
-        $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
-        $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
-        $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
-        $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais','id_pais')];
-        $returnData['deis_form_table_options'] += ['lugar_atencion_parto' => Establecimiento::pluck('nombre_establecimiento','id_establecimiento')];
-#        $returnData['pais_origen'] = Pais::pluck('nombre_pais','id_pais');
-
-
+    public function datos_formulario (Request $request) {
         if ($request->wantsJson()) {
             $this->fdc = new FormDeis();
             $this->fdc->save();
             $this->fdc = FormDeis::find($this->fdc->id);
             $this->fdc->n_correlativo_interno = $this->fdc->id;
             $returnData['fdc'] = $this->fdc;
+            $returnData['inputs'] = FormDeisInput::where('table_name', $table_name = 'form_deis_inputs')->orderby('order_layout_form', 'asc')->get();
+            $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
+            $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
+            $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
+            $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais', 'id_pais')];
+            $returnData['deis_form_table_options'] += ['lugar_atencion_parto' => Establecimiento::pluck('nombre_establecimiento', 'id_establecimiento')];
+            return response()->json($returnData);
+        }
+    }
+
+    public function create (Request $request) {
+        $returnData['instructions'] = config('collection.deis_form_instructions');
+
+        if ($request->wantsJson()) {
             return response()->json($returnData);
         }
         #$returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
