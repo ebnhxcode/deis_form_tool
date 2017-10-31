@@ -20,7 +20,7 @@ class CreateEstablecimientoTable extends Migration
 
             $table->timestamps();
         });
-    }git st
+    }
 
 
     public function down () {
