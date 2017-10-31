@@ -468,6 +468,7 @@ const FormularioController = new Vue({
             this.deis_form_table_options = response.body.deis_form_table_options;
             this.fdc = response.body.fdc;
 
+
          }, response => { // error callback
             console.log('Error fetch_formulario: '+response);
          });
