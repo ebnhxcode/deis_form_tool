@@ -150,6 +150,13 @@
                                              <input id="" name="" @click.prevent="guardarFormulario(tab.name)"
                                                     class="btn btn-success" type="button" value="Guardar"
                                                     style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
+                                             <transition v-if="mini_loader == true" name="slide-fade">
+                                                <div class="pull-right">
+                                                   <div class="circle-loader">
+                                                      <div class="checkmark draw"></div>
+                                                   </div>
+                                                </div>
+                                             </transition>
                                           </dd>
                                        </div><!-- .col-md-* -->
 

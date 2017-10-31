@@ -40,6 +40,7 @@ const FormularioController = new Vue({
          'show_modal_buscar_formulario':false,
          'spinner_iniciar':true,
          'spinner_finalizar':false,
+         'mini_loader':false,
 
          'hayGuardadoActivo':false,
          'idFormularioActivo':'',
@@ -206,8 +207,6 @@ const FormularioController = new Vue({
             'fecha_administracion_1_dosis_penicilina_gestante':'',
             'fecha_administracion_ult_dosis_penicilina_gestante':''
          },
-
-
       }
    },
    computed: {},
@@ -239,6 +238,19 @@ const FormularioController = new Vue({
          data () {
             return {
                visible: false,
+            }
+         },
+         ready () {},
+         created(){},
+         filters: {},
+         methods: {},
+      },
+      'mini-loader': {
+         props: [''],
+         'name': 'mini-loader',
+         'template':`<div class="mini-loader">Loading...</div>`,
+         data () {
+            return {
             }
          },
          ready () {},
@@ -492,17 +504,20 @@ const FormularioController = new Vue({
 
 
       guardarFormulario: function (tabName) {
+         this.mini_loader = true;
          //this.spinner_finalizar = true;
          var formData = new FormData();
          //var formData = [];
          var permiteGuardar = false;
          //console.log(tabName);
          for (let i in this.inputs) {
-            if (this.inputs[i].seccion.nombre == tabName) {
-               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
+            if (this.inputs[i].seccion == tabName) {
+               if (this.fdc[this.inputs[i].name] != null ) {
+                  //Le pasa el valor en v-model
+                  formData.append(this.inputs[i].name, this.fdc[this.inputs[i].name]);
+               }
             }
          }
-         formData.append('n_correlativo_interno', this.fdc.id);
 
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          formData.append('_id_formulario', this.fdc.id);
@@ -510,13 +525,14 @@ const FormularioController = new Vue({
          this.$http.post('/formulario', formData).then(response => { // success callback
             console.log(response);
 
-            alert('Guardado');
+            //alert('Guardado');
 
             //Si guardar salio bien
             this.hayGuardadoActivo = true;
             this.idFormularioActivo = this.fdc.id;
-
-
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            this.mini_loader = false;
 
          }, response => { // error callback
             console.log(response);

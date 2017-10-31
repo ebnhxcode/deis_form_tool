@@ -39,7 +39,6 @@ class FormDeisController extends Controller {
             $this->fdc->save();
             $this->fdc = FormDeis::find($this->fdc->id);
             $this->fdc->n_correlativo_interno = $this->fdc->id;
-
             $returnData['fdc'] = $this->fdc;
             return response()->json($returnData);
         }

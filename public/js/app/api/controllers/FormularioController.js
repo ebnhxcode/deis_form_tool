@@ -36860,6 +36860,7 @@ var FormularioController = new _vue2.default({
          'show_modal_buscar_formulario': false,
          'spinner_iniciar': true,
          'spinner_finalizar': false,
+         'mini_loader': false,
 
          'hayGuardadoActivo': false,
          'idFormularioActivo': '',
@@ -37026,7 +37027,6 @@ var FormularioController = new _vue2.default({
             'fecha_administracion_1_dosis_penicilina_gestante': '',
             'fecha_administracion_ult_dosis_penicilina_gestante': ''
          }
-
       };
    },
 
@@ -37056,6 +37056,19 @@ var FormularioController = new _vue2.default({
             return {
                visible: false
             };
+         },
+         ready: function ready() {},
+         created: function created() {},
+
+         filters: {},
+         methods: {}
+      },
+      'mini-loader': {
+         props: [''],
+         'name': 'mini-loader',
+         'template': '<div class="mini-loader">Loading...</div>',
+         data: function data() {
+            return {};
          },
          ready: function ready() {},
          created: function created() {},
@@ -37156,7 +37169,6 @@ var FormularioController = new _vue2.default({
             _this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this.deis_form_table_options = response.body.deis_form_table_options;
             _this.fdc = response.body.fdc;
-            $('#n_correlativo_interno').val(_this.fdc.id);
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
@@ -37176,14 +37188,19 @@ var FormularioController = new _vue2.default({
       },
 
       guardarFormulario: function guardarFormulario(tabName) {
+         var _this2 = this;
+
+         this.mini_loader = true;
          //this.spinner_finalizar = true;
          var formData = new FormData();
          //var formData = [];
          var permiteGuardar = false;
          //console.log(tabName);
          for (var i in this.inputs) {
-            if (this.inputs[i].seccion.nombre == tabName) {
-               formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
+            if (this.inputs[i].seccion == tabName) {
+               if (this.fdc[this.inputs[i].name] != null) {
+                  formData.append(this.inputs[i].name, this.fdc[this.inputs[i].name]);
+               }
             }
          }
 
@@ -37193,7 +37210,15 @@ var FormularioController = new _vue2.default({
          this.$http.post('/formulario', formData).then(function (response) {
             // success callback
             console.log(response);
-            alert('Guardado');
+
+            //alert('Guardado');
+
+            //Si guardar salio bien
+            _this2.hayGuardadoActivo = true;
+            _this2.idFormularioActivo = _this2.fdc.id;
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            _this2.mini_loader = false;
          }, function (response) {
             // error callback
             console.log(response);
