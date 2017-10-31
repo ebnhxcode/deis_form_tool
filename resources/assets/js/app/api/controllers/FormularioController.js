@@ -44,6 +44,8 @@ const FormularioController = new Vue({
          'mini_loader':false,
 
          'formularioNuevoActivo':false,
+         'formularioEditActivo':false,
+         'formularioActivoObj':[],
 
          'hayGuardadoActivo':false,
          'idFormularioActivo':'',
@@ -396,8 +398,11 @@ const FormularioController = new Vue({
                });
             },
             modificar_usuario_seleccionado: function (formulario) {
+               this.$parent.renderizar_solo_inputs();
                this.$parent.fdc = formulario;
                this.$parent.show_modal_buscar_formulario = false;
+               this.$parent.formularioEditActivo = true;
+
             },
          },
          watch: {
@@ -442,8 +447,20 @@ const FormularioController = new Vue({
             this.renderizar_formulario();
             this.formularioNuevoActivo = true;
          }else{
+            this.fdc = this.formularioActivoObj;
             alert('Ya se está creando un nuevo formulario');
          }
+      },
+
+      renderizar_solo_inputs: function () {
+         this.$http.get('/formulario/inputs_formulario').then(response => { // success callback
+            this.inputs = response.body.inputs;
+            this.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            this.deis_form_table_options = response.body.deis_form_table_options;
+            this.pais_origen = response.body.pais_origen;
+         }, response => { // error callback
+            console.log('Error datos_formulario: '+response);
+         });
       },
 
       renderizar_formulario: function () {
@@ -453,11 +470,14 @@ const FormularioController = new Vue({
             this.deis_form_table_options = response.body.deis_form_table_options;
             this.pais_origen = response.body.pais_origen;
             this.fdc = response.body.fdc;
+            this.formularioActivoObj = response.body.fdc;
 
          }, response => { // error callback
             console.log('Error datos_formulario: '+response);
          });
       },
+
+
 
       fetchFormulario: function () {
          this.$http.get('/formulario/create').then(response => { // success callback

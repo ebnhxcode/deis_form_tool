@@ -58,10 +58,10 @@
                      </div><!-- .col-md-* -->
 
                      {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}
-
+                     <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
                      <div class="col-md-12">
 
-                        <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true">
+                        <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true || formularioEditActivo == true">
                            <!-- Items elementos de cabecera -->
                            <div class="panel-heading">
                               <!-- Nav tabs -->

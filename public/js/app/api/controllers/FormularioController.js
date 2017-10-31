@@ -36864,6 +36864,8 @@ var FormularioController = new _vue2.default({
          'mini_loader': false,
 
          'formularioNuevoActivo': false,
+         'formularioEditActivo': false,
+         'formularioActivoObj': [],
 
          'hayGuardadoActivo': false,
          'idFormularioActivo': ''
@@ -36985,8 +36987,10 @@ var FormularioController = new _vue2.default({
                });
             },
             modificar_usuario_seleccionado: function modificar_usuario_seleccionado(formulario) {
+               this.$parent.renderizar_solo_inputs();
                this.$parent.fdc = formulario;
                this.$parent.show_modal_buscar_formulario = false;
+               this.$parent.formularioEditActivo = true;
             }
          },
          watch: {}
@@ -37030,20 +37034,37 @@ var FormularioController = new _vue2.default({
             this.renderizar_formulario();
             this.formularioNuevoActivo = true;
          } else {
+            this.fdc = this.formularioActivoObj;
             alert('Ya se está creando un nuevo formulario');
          }
       },
 
-      renderizar_formulario: function renderizar_formulario() {
+      renderizar_solo_inputs: function renderizar_solo_inputs() {
          var _this2 = this;
 
-         this.$http.get('/formulario/datos_formulario').then(function (response) {
+         this.$http.get('/formulario/inputs_formulario').then(function (response) {
             // success callback
             _this2.inputs = response.body.inputs;
             _this2.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this2.deis_form_table_options = response.body.deis_form_table_options;
             _this2.pais_origen = response.body.pais_origen;
-            _this2.fdc = response.body.fdc;
+         }, function (response) {
+            // error callback
+            console.log('Error datos_formulario: ' + response);
+         });
+      },
+
+      renderizar_formulario: function renderizar_formulario() {
+         var _this3 = this;
+
+         this.$http.get('/formulario/datos_formulario').then(function (response) {
+            // success callback
+            _this3.inputs = response.body.inputs;
+            _this3.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            _this3.deis_form_table_options = response.body.deis_form_table_options;
+            _this3.pais_origen = response.body.pais_origen;
+            _this3.fdc = response.body.fdc;
+            _this3.formularioActivoObj = response.body.fdc;
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
@@ -37051,11 +37072,11 @@ var FormularioController = new _vue2.default({
       },
 
       fetchFormulario: function fetchFormulario() {
-         var _this3 = this;
+         var _this4 = this;
 
          this.$http.get('/formulario/create').then(function (response) {
             // success callback
-            _this3.instructions = response.body.instructions;
+            _this4.instructions = response.body.instructions;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
@@ -37093,7 +37114,7 @@ var FormularioController = new _vue2.default({
       },
 
       guardarFormulario: function guardarFormulario(tabName) {
-         var _this4 = this;
+         var _this5 = this;
 
          this.mini_loader = true;
          //this.spinner_finalizar = true;
@@ -37120,11 +37141,11 @@ var FormularioController = new _vue2.default({
             //alert('Guardado');
 
             //Si guardar salio bien
-            _this4.hayGuardadoActivo = true;
-            _this4.idFormularioActivo = _this4.fdc.id;
+            _this5.hayGuardadoActivo = true;
+            _this5.idFormularioActivo = _this5.fdc.id;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            _this4.mini_loader = false;
+            _this5.mini_loader = false;
          }, function (response) {
             // error callback
             console.log(response);

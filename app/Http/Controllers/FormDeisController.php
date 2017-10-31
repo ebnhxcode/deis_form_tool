@@ -32,6 +32,18 @@ class FormDeisController extends Controller {
         return response()->json(['formularios'=>$formularios]);
     }
 
+    public function inputs_formulario (Request $request) {
+        if ($request->wantsJson()) {
+            $returnData['inputs'] = FormDeisInput::where('table_name', $table_name = 'form_deis_inputs')->orderby('order_layout_form', 'asc')->get();
+            $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
+            $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
+            $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
+            $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais', 'id_pais')];
+            $returnData['deis_form_table_options'] += ['lugar_atencion_parto' => Establecimiento::pluck('nombre_establecimiento', 'id_establecimiento')];
+            return response()->json($returnData);
+        }
+    }
+
     public function datos_formulario (Request $request) {
         if ($request->wantsJson()) {
             $this->fdc = new FormDeis();

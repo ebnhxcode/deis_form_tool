@@ -21,6 +21,7 @@ Route::auth();
 
 Route::post ('/formulario/buscar_por_rut' , 'FormDeisController@buscar_por_rut') ;
 Route::get ('/formulario/datos_formulario' , 'FormDeisController@datos_formulario') ;
+Route::get ('/formulario/inputs_formulario' , 'FormDeisController@inputs_formulario') ;
 Route::resource ('/formulario' , 'FormDeisController') ;
 
 Route::post ('/input/add/label' , 'InputController@addLabelToInput') ;
