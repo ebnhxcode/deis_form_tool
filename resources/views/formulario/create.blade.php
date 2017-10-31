@@ -129,10 +129,11 @@
                                                         :style="i.style!=''?i.style:''"
                                                         :placeholder="i.placeholder!=''?i.placeholder:''"
                                                         :readonly="i.readonly!=''?i.readonly:''"
+                                                        :value="fdc[i.name]"
                                                         v-model="fdc[i.name]">
 
                                                    <option value="">Seleccione</option>
-                                                   <option v-for="o in deis_form_table_options[i.name]" :value="o">
+                                                   <option v-for="o,i in deis_form_table_options[i.name]" :value="i">
                                                       @{{ o }}
                                                    </option>
 

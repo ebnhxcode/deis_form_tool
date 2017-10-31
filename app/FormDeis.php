@@ -22,7 +22,7 @@ class FormDeis extends Model
       'digito_verificador',
       'edad',
       'nacionalidad',
-      'id_pais',
+      'pais_origen',
       'pueblos_indigenas',
       'estado_civil',
       'tipo_de_convivencia',

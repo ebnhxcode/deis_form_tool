@@ -179,12 +179,14 @@ const FormularioController = new Vue({
 
                                        <li role="presentation" class="active">
                                           <a href="#lista_personas_run" aria-controls="lista_personas_run" role="tab" data-toggle="tab">
-                                             Búsqueda de Personas - Run Madre
+                                             Búsqueda de Personas - <b>Run Madre</b>
                                           </a>
                                        </li>
                                        <li role="presentation">
-                                          <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo" role="tab" data-toggle="tab">
-                                             Búsqueda de Personas - Correlativo
+                                          <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo"
+                                             role="tab" data-toggle="tab">
+
+                                             Búsqueda de Personas - <b>Correlativo</b>
                                           </a>
                                        </li>
 
@@ -195,12 +197,12 @@ const FormularioController = new Vue({
                                     <!-- Tab panes -->
                                     <div class="tab-content">
 
-                                       <div role="tabpanel" class="'tab-pane fade in active" id="lista_personas_run">
+                                       <div role="tabpanel" class="tab-pane fade in active" id="lista_personas_run">
 
 
                                           <dl class="dl-vertical">
                                              <div class="row">
-                                                <div class="col-md-12"><!-- style="overflow-y: scroll;max-height: 400px;" -->
+                                                <div class="col-md-12" style="overflow-y: scroll;max-height: 400px;">
 
                                                    <dt>
                                                       Run Madre
@@ -208,71 +210,71 @@ const FormularioController = new Vue({
                                                    <dd>
                                                       <input class="form-control"
                                                              type="text"
+                                                             style="padding-bottom: 5px;"
                                                              name="run_madre"
                                                              placeholder="Ej: 123456789 Sin puntos ni guión"
                                                              id="run_madre"
                                                              v-model="run_madre">
-                                                             <br>
+
                                                       <button class="btn btn-sm btn-info" @click.prevent="buscar_por_rut">
                                                          Buscar&nbsp;<i class="fa fa-search"></i>
                                                       </button>
+
+                                                      <div class="table-responsive" v-if="formulario_vacio == false">
+                                                         Resultados encontrados
+                                                         <br>
+                                                         <table class="table table-striped small">
+                                                            <thead>
+                                                               <tr>
+                                                                  <th>Accion</th>
+                                                                  <th>Correlativo</th>
+                                                                  <th>Run Madre</th>
+                                                                  <th>Nombres</th>
+                                                                  <th>Apellido Paterno</th>
+                                                                  <th>Apellido Materno</th>
+                                                               </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                               <tr v-for="f in formularios">
+                                                                  <td>
+                                                                     <button class="btn btn-sm btn-primary"
+                                                                        @click.prevent="modificar_usuario_seleccionado(f)">
+                                                                        <i class="fa fa-pencil"></i>
+                                                                     </button>
+                                                                  </td>
+                                                                  <td>{{f.n_correlativo_interno}}</td>
+                                                                  <td>{{f.run_madre}}</td>
+                                                                  <td>{{f.nombres_madre}}</td>
+                                                                  <td>{{f.primer_apellido_madre}}</td>
+                                                                  <td>{{f.segundo_apellido_madre}}</td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </div><!-- .table-responsive -->
                                                    </dd>
 
-
+                                                   <!--
                                                    <dt></dt>
                                                    <dd</dd>
-
-                                                   <!--
                                                    <div class="col-md-6">
                                                       <dt></dt>
                                                       <dd class="well well-sm"></dd>
                                                    </div>
                                                    -->
 
-                                                </div>
+                                                </div><!-- .col-md-12 -->
                                              </div>
                                           </dl><!-- dl-horizontal -->
 
-                                          <div class="table-responsive" v-if="formulario_vacio == false">
-                                             Resultados encontrados
-                                             <br>
-                                             <table class="table table-striped small">
-                                                <thead>
-                                                   <tr>
-                                                      <th>Accion</th>
-                                                      <th>Correlativo</th>
-                                                      <th>Run Madre</th>
-                                                      <th>Nombres</th>
-                                                      <th>Apellido Paterno</th>
-                                                      <th>Apellido Materno</th>
-                                                   </tr>
-                                                </thead>
-                                                <tbody>
-                                                   <tr v-for="f in formularios">
-                                                      <td>
-                                                         <button class="btn btn-sm btn-primary"
-                                                            @click.prevent="modificar_usuario_seleccionado(f)">
-                                                            <i class="fa fa-pencil"></i>
-                                                         </button>
-                                                      </td>
-                                                      <td>{{f.n_correlativo_interno}}</td>
-                                                      <td>{{f.run_madre}}</td>
-                                                      <td>{{f.nombres_madre}}</td>
-                                                      <td>{{f.primer_apellido_madre}}</td>
-                                                      <td>{{f.segundo_apellido_madre}}</td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
-                                          </div>
 
-                                       </div><!-- .tab-pane .fade -->
+                                       </div><!-- .tab-pane .fade #lista_personas_run -->
 
-                                       <div role="tabpanel" class="'tab-pane fade" id="lista_personas_correlativo">
+                                       <div role="tabpanel" class="tab-pane fade" id="lista_personas_correlativo">
 
 
                                           <dl class="dl-vertical">
                                              <div class="row">
-                                                <div  class="col-md-12"><!-- style="overflow-y: scroll;max-height: 400px;" -->
+                                                <div class="col-md-12" style="overflow-y: scroll;max-height: 400px;">
 
                                                    <dt>
                                                       Número de correlativo
@@ -282,49 +284,53 @@ const FormularioController = new Vue({
                                                              type="number"
                                                              name="n_correlativo_interno"
                                                              id="n_correlativo_interno">
+
+                                                     <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">
+                                                         Buscar&nbsp;<i class="fa fa-search"></i>
+                                                      </button>
+
+
+                                                      <div class="table-responsive" v-if="formulario_vacio_correlativo == false">
+                                                         Resultados encontrados
+                                                         <br>
+                                                         <table class="table table-striped small">
+                                                            <thead>
+                                                               <tr>
+                                                                  <th>Correlativo</th>
+                                                                  <th>Run Madre</th>
+                                                                  <th>Nombres</th>
+                                                                  <th>Apellido Paterno</th>
+                                                                  <th>Apellido Materno</th>
+                                                               </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                               <tr v-for="f in formularios">
+                                                                  <td>{{f.n_correlativo_interno}}</td>
+                                                                  <td>{{f.run_madre}}</td>
+                                                                  <td>{{f.nombres_madre}}</td>
+                                                                  <td>{{f.primer_apellido_madre}}</td>
+                                                                  <td>{{f.segundo_apellido_madre}}</td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </div><!-- .table-responsive -->
                                                    </dd>
 
 
+                                                   <!--
                                                    <dt></dt>
                                                    <dd</dd>
-
-                                                   <!--
                                                    <div class="col-md-6">
                                                       <dt></dt>
                                                       <dd class="well well-sm"></dd>
                                                    </div>
                                                    -->
 
-                                                </div>
-                                             </div>
+                                                </div><!-- .col-md-12 -->
+                                             </div><!-- .row -->
                                           </dl><!-- dl-horizontal -->
 
-                                          <div class="table-responsive" v-if="formulario_vacio == false">
-                                             Resultados encontrados
-                                             <br>
-                                             <table class="table table-striped">
-                                                <thead>
-                                                   <tr>
-                                                      <th>Correlativo</th>
-                                                      <th>Run Madre</th>
-                                                      <th>Nombres</th>
-                                                      <th>Apellido Paterno</th>
-                                                      <th>Apellido Materno</th>
-                                                   </tr>
-                                                </thead>
-                                                <tbody>
-                                                   <tr v-for="f in formularios">
-                                                      <td>f.n_correlativo_interno</td>
-                                                      <td>f.run_madre</td>
-                                                      <td>f.nombres_madre</td>
-                                                      <td>f.primer_apellido_madre</td>
-                                                      <td>f.segundo_apellido_madre</td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
-                                          </div>
-
-                                       </div><!-- .tab-pane .fade #lista_personas -->
+                                       </div><!-- .tab-pane .fade #lista_personas_correlativo -->
 
                                     </div><!-- .panel-heading -->
                                  </div><!-- .panel-heading -->
@@ -374,7 +380,7 @@ const FormularioController = new Vue({
                'run_madre':'',
                'n_correlativo_interno':'',
                'formularios':[],
-               'formulario_vacio':false,
+               'formulario_vacio':true,
             }
          },
          ready () {
@@ -391,7 +397,7 @@ const FormularioController = new Vue({
                this.$http.post('/formulario/buscar_por_rut', formData).then(response => { // success callback
                   //console.log(response);
                   this.formularios = response.body.formularios;
-                  this.formulario_vacio = $.isEmptyObject(this.formularios);
+                  this.formulario_vacio = $.isEmptyObject(this.formularios)==true?true:false;
 
                }, response => { // error callback
                   console.log(response);
@@ -438,6 +444,7 @@ const FormularioController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
+
       buscar_formulario: function () {
          this.show_modal_buscar_formulario = true;
       },
@@ -452,69 +459,12 @@ const FormularioController = new Vue({
          }
       },
 
-      renderizar_solo_inputs: function () {
-         this.$http.get('/formulario/inputs_formulario').then(response => { // success callback
-            this.inputs = response.body.inputs;
-            this.nav_tab_form_deis = response.body.nav_tab_form_deis;
-            this.deis_form_table_options = response.body.deis_form_table_options;
-            this.pais_origen = response.body.pais_origen;
-         }, response => { // error callback
-            console.log('Error datos_formulario: '+response);
-         });
-      },
-
-      renderizar_formulario: function () {
-         this.$http.get('/formulario/datos_formulario').then(response => { // success callback
-            this.inputs = response.body.inputs;
-            this.nav_tab_form_deis = response.body.nav_tab_form_deis;
-            this.deis_form_table_options = response.body.deis_form_table_options;
-            this.pais_origen = response.body.pais_origen;
-            this.fdc = response.body.fdc;
-            this.formularioActivoObj = response.body.fdc;
-
-         }, response => { // error callback
-            console.log('Error datos_formulario: '+response);
-         });
-      },
-
-
-
       fetchFormulario: function () {
          this.$http.get('/formulario/create').then(response => { // success callback
             this.instructions = response.body.instructions;
          }, response => { // error callback
             console.log('Error fetch_formulario: '+response);
          });
-
-         /*
-         var options = {'id_select' : 'id_organismo','name' : 'nombre_organismo','id' : 'id_organismo'};
-         appendOptionsIntoCombo(data, options);
-            }); //.get
-         });
-
-         function appendOptionsIntoCombo (data, options) {
-         $.each(data, function (i, v) {
-            var o = new Option(v[options.name], v[options.id]);
-            $(`#${options.id_select}`).append($(o).html(v[options.name]));
-         });
-         }
-
-          $(document).ready(function () {
-          $.each(this.pais_origen, function (i, v){
-          var o = new Option(v.id_pais, v.id_pais);
-          $('#pais_origen').append($(o).html(v.nombre_pais));
-          });
-          });
-         */
-         /*
-          var self = this;
-          setTimeout(function(){
-            self.spinner_iniciar = false;
-          }, 1500);
-         */
-
-         //console.log('FormularioController');
-
 
          return;
       },
@@ -565,10 +515,29 @@ const FormularioController = new Vue({
          return ($.inArray(input.type, array) == -1) ? false : true;
       },
 
-      inputsQuantity: function (inputType){
-         console.log(inputType);
+      renderizar_solo_inputs: function () {
+         this.$http.get('/formulario/inputs_formulario').then(response => { // success callback
+            this.inputs = response.body.inputs;
+            this.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            this.deis_form_table_options = response.body.deis_form_table_options;
+            this.pais_origen = response.body.pais_origen;
+         }, response => { // error callback
+            console.log('Error datos_formulario: '+response);
+         });
+      },
 
+      renderizar_formulario: function () {
+         this.$http.get('/formulario/datos_formulario').then(response => { // success callback
+            this.inputs = response.body.inputs;
+            this.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            this.deis_form_table_options = response.body.deis_form_table_options;
+            this.pais_origen = response.body.pais_origen;
+            this.fdc = response.body.fdc;
+            this.formularioActivoObj = response.body.fdc;
 
+         }, response => { // error callback
+            console.log('Error datos_formulario: '+response);
+         });
       },
 
       //with_dash() => for explained specific functions

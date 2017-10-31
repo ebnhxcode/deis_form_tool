@@ -86,7 +86,7 @@ class FormDeisController extends Controller {
             foreach ($formData as $key => $d)
                 if ($d) $fd[$key] = $d;
 
-
+            return $fd;
             #$result = FormDeis::create($fd);
             $result = $form_deis->update($fd);
 

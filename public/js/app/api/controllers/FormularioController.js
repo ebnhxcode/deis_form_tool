@@ -36954,14 +36954,14 @@ var FormularioController = new _vue2.default({
       },
       'modal_buscar_formulario': {
          props: [''],
-         template: '\n\t\t\t   <!-- template for the modal component -->\n\t\t\t   <transition name="modal">\n\t\t\t\t   <div class="modal-mask">\n\t\t\t\t\t   <div class="modal-wrapper">\n\t\t\t\t\t      <div class="modal-container">\n\n\t\t\t\t\t\t      <div class="modal-header">\n\t\t\t\t\t\t\t      <slot name="header"></slot>\n\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t      <div class="modal-body">\n\t\t\t\t\t\t\t      <slot name="body">\n\n                              <div id="" class="panel with-nav-tabs panel-primary">\n                                 <!-- Items elementos de cabecera -->\n                                 <div class="panel-heading">\n                                    <!-- Nav tabs -->\n                                    <ul class="nav nav-tabs small" role="tablist">\n\n                                       <li role="presentation" class="active">\n                                          <a href="#lista_personas_run" aria-controls="lista_personas_run" role="tab" data-toggle="tab">\n                                             B\xFAsqueda de Personas - Run Madre\n                                          </a>\n                                       </li>\n                                       <li role="presentation">\n                                          <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo" role="tab" data-toggle="tab">\n                                             B\xFAsqueda de Personas - Correlativo\n                                          </a>\n                                       </li>\n\n                                    </ul>\n                                 </div><!-- .panel-heading -->\n\n                                 <div class="panel-body">\n                                    <!-- Tab panes -->\n                                    <div class="tab-content">\n\n                                       <div role="tabpanel" class="\'tab-pane fade in active" id="lista_personas_run">\n\n\n                                          <dl class="dl-vertical">\n                                             <div class="row">\n                                                <div class="col-md-12"><!-- style="overflow-y: scroll;max-height: 400px;" -->\n\n                                                   <dt>\n                                                      Run Madre\n                                                   </dt>\n                                                   <dd>\n                                                      <input class="form-control"\n                                                             type="text"\n                                                             name="run_madre"\n                                                             placeholder="Ej: 123456789 Sin puntos ni gui\xF3n"\n                                                             id="run_madre"\n                                                             v-model="run_madre">\n                                                             <br>\n                                                      <button class="btn btn-sm btn-info" @click.prevent="buscar_por_rut">\n                                                         Buscar&nbsp;<i class="fa fa-search"></i>\n                                                      </button>\n                                                   </dd>\n\n\n                                                   <dt></dt>\n                                                   <dd</dd>\n\n                                                   <!--\n                                                   <div class="col-md-6">\n                                                      <dt></dt>\n                                                      <dd class="well well-sm"></dd>\n                                                   </div>\n                                                   -->\n\n                                                </div>\n                                             </div>\n                                          </dl><!-- dl-horizontal -->\n\n                                          <div class="table-responsive" v-if="formulario_vacio == false">\n                                             Resultados encontrados\n                                             <br>\n                                             <table class="table table-striped small">\n                                                <thead>\n                                                   <tr>\n                                                      <th>Accion</th>\n                                                      <th>Correlativo</th>\n                                                      <th>Run Madre</th>\n                                                      <th>Nombres</th>\n                                                      <th>Apellido Paterno</th>\n                                                      <th>Apellido Materno</th>\n                                                   </tr>\n                                                </thead>\n                                                <tbody>\n                                                   <tr v-for="f in formularios">\n                                                      <td>\n                                                         <button class="btn btn-sm btn-primary"\n                                                            @click.prevent="modificar_usuario_seleccionado(f)">\n                                                            <i class="fa fa-pencil"></i>\n                                                         </button>\n                                                      </td>\n                                                      <td>{{f.n_correlativo_interno}}</td>\n                                                      <td>{{f.run_madre}}</td>\n                                                      <td>{{f.nombres_madre}}</td>\n                                                      <td>{{f.primer_apellido_madre}}</td>\n                                                      <td>{{f.segundo_apellido_madre}}</td>\n                                                   </tr>\n                                                </tbody>\n                                             </table>\n                                          </div>\n\n                                       </div><!-- .tab-pane .fade -->\n\n                                       <div role="tabpanel" class="\'tab-pane fade" id="lista_personas_correlativo">\n\n\n                                          <dl class="dl-vertical">\n                                             <div class="row">\n                                                <div  class="col-md-12"><!-- style="overflow-y: scroll;max-height: 400px;" -->\n\n                                                   <dt>\n                                                      N\xFAmero de correlativo\n                                                   </dt>\n                                                   <dd>\n                                                      <input class="form-control"\n                                                             type="number"\n                                                             name="n_correlativo_interno"\n                                                             id="n_correlativo_interno">\n                                                   </dd>\n\n\n                                                   <dt></dt>\n                                                   <dd</dd>\n\n                                                   <!--\n                                                   <div class="col-md-6">\n                                                      <dt></dt>\n                                                      <dd class="well well-sm"></dd>\n                                                   </div>\n                                                   -->\n\n                                                </div>\n                                             </div>\n                                          </dl><!-- dl-horizontal -->\n\n                                          <div class="table-responsive" v-if="formulario_vacio == false">\n                                             Resultados encontrados\n                                             <br>\n                                             <table class="table table-striped">\n                                                <thead>\n                                                   <tr>\n                                                      <th>Correlativo</th>\n                                                      <th>Run Madre</th>\n                                                      <th>Nombres</th>\n                                                      <th>Apellido Paterno</th>\n                                                      <th>Apellido Materno</th>\n                                                   </tr>\n                                                </thead>\n                                                <tbody>\n                                                   <tr v-for="f in formularios">\n                                                      <td>f.n_correlativo_interno</td>\n                                                      <td>f.run_madre</td>\n                                                      <td>f.nombres_madre</td>\n                                                      <td>f.primer_apellido_madre</td>\n                                                      <td>f.segundo_apellido_madre</td>\n                                                   </tr>\n                                                </tbody>\n                                             </table>\n                                          </div>\n\n                                       </div><!-- .tab-pane .fade #lista_personas -->\n\n                                    </div><!-- .panel-heading -->\n                                 </div><!-- .panel-heading -->\n                              </div><!-- .panel-heading -->\n\n\n\n\n                              <!--\n                               <dl class="dl-vertical">\n                                 <div class="row">\n\t\t\t\t\t\t\t\t\t         <div style="overflow-y: scroll;max-height: 400px;">\n\n                                       <div class="col-md-6">\n                                          <dt></dt>\n                                          <dd class="well well-sm"></dd>\n                                       </div>\n                                       <div class="col-md-6">\n                                          <dt></dt>\n                                          <dd class="well well-sm"></dd>\n                                       </div>\n\n                                    </div>\n                                 </div>\n                              </dl>\n                              -->\n\t\t\t\t\t\t\t      </slot>\n\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t      <!--\n\t\t\t\t\t\t      <div class="modal-footer">\n\t\t\t\t\t\t\t      <slot name="footer">\n\t\t\t\t\t\t\t         <button class="btn btn-sm btn-success" @click="$emit(\'close\')">\n\t\t\t\t\t\t\t\t         Aceptar\n\t\t\t\t\t\t\t         </button>\n                           </slot>\n\t\t\t\t\t\t      </div>\n\t\t\t\t\t\t      -->\n\t\t\t\t\t      </div>\n                  </div>\n\t\t\t\t   </div>\n\t\t\t   </transition>\n\t\t\t',
+         template: '\n\t\t\t   <!-- template for the modal component -->\n\t\t\t   <transition name="modal">\n\t\t\t\t   <div class="modal-mask">\n\t\t\t\t\t   <div class="modal-wrapper">\n\t\t\t\t\t      <div class="modal-container">\n\n\t\t\t\t\t\t      <div class="modal-header">\n\t\t\t\t\t\t\t      <slot name="header"></slot>\n\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t      <div class="modal-body">\n\t\t\t\t\t\t\t      <slot name="body">\n\n                              <div id="" class="panel with-nav-tabs panel-primary">\n                                 <!-- Items elementos de cabecera -->\n                                 <div class="panel-heading">\n                                    <!-- Nav tabs -->\n                                    <ul class="nav nav-tabs small" role="tablist">\n\n                                       <li role="presentation" class="active">\n                                          <a href="#lista_personas_run" aria-controls="lista_personas_run" role="tab" data-toggle="tab">\n                                             B\xFAsqueda de Personas - <b>Run Madre</b>\n                                          </a>\n                                       </li>\n                                       <li role="presentation">\n                                          <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo"\n                                             role="tab" data-toggle="tab">\n\n                                             B\xFAsqueda de Personas - <b>Correlativo</b>\n                                          </a>\n                                       </li>\n\n                                    </ul>\n                                 </div><!-- .panel-heading -->\n\n                                 <div class="panel-body">\n                                    <!-- Tab panes -->\n                                    <div class="tab-content">\n\n                                       <div role="tabpanel" class="tab-pane fade in active" id="lista_personas_run">\n\n\n                                          <dl class="dl-vertical">\n                                             <div class="row">\n                                                <div class="col-md-12" style="overflow-y: scroll;max-height: 400px;">\n\n                                                   <dt>\n                                                      Run Madre\n                                                   </dt>\n                                                   <dd>\n                                                      <input class="form-control"\n                                                             type="text"\n                                                             style="padding-bottom: 5px;"\n                                                             name="run_madre"\n                                                             placeholder="Ej: 123456789 Sin puntos ni gui\xF3n"\n                                                             id="run_madre"\n                                                             v-model="run_madre">\n\n                                                      <button class="btn btn-sm btn-info" @click.prevent="buscar_por_rut">\n                                                         Buscar&nbsp;<i class="fa fa-search"></i>\n                                                      </button>\n\n                                                      <div class="table-responsive" v-if="formulario_vacio == false">\n                                                         Resultados encontrados\n                                                         <br>\n                                                         <table class="table table-striped small">\n                                                            <thead>\n                                                               <tr>\n                                                                  <th>Accion</th>\n                                                                  <th>Correlativo</th>\n                                                                  <th>Run Madre</th>\n                                                                  <th>Nombres</th>\n                                                                  <th>Apellido Paterno</th>\n                                                                  <th>Apellido Materno</th>\n                                                               </tr>\n                                                            </thead>\n                                                            <tbody>\n                                                               <tr v-for="f in formularios">\n                                                                  <td>\n                                                                     <button class="btn btn-sm btn-primary"\n                                                                        @click.prevent="modificar_usuario_seleccionado(f)">\n                                                                        <i class="fa fa-pencil"></i>\n                                                                     </button>\n                                                                  </td>\n                                                                  <td>{{f.n_correlativo_interno}}</td>\n                                                                  <td>{{f.run_madre}}</td>\n                                                                  <td>{{f.nombres_madre}}</td>\n                                                                  <td>{{f.primer_apellido_madre}}</td>\n                                                                  <td>{{f.segundo_apellido_madre}}</td>\n                                                               </tr>\n                                                            </tbody>\n                                                         </table>\n                                                      </div><!-- .table-responsive -->\n                                                   </dd>\n\n                                                   <!--\n                                                   <dt></dt>\n                                                   <dd</dd>\n                                                   <div class="col-md-6">\n                                                      <dt></dt>\n                                                      <dd class="well well-sm"></dd>\n                                                   </div>\n                                                   -->\n\n                                                </div><!-- .col-md-12 -->\n                                             </div>\n                                          </dl><!-- dl-horizontal -->\n\n\n                                       </div><!-- .tab-pane .fade #lista_personas_run -->\n\n                                       <div role="tabpanel" class="tab-pane fade" id="lista_personas_correlativo">\n\n\n                                          <dl class="dl-vertical">\n                                             <div class="row">\n                                                <div class="col-md-12" style="overflow-y: scroll;max-height: 400px;">\n\n                                                   <dt>\n                                                      N\xFAmero de correlativo\n                                                   </dt>\n                                                   <dd>\n                                                      <input class="form-control"\n                                                             type="number"\n                                                             name="n_correlativo_interno"\n                                                             id="n_correlativo_interno">\n\n                                                     <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">\n                                                         Buscar&nbsp;<i class="fa fa-search"></i>\n                                                      </button>\n\n\n                                                      <div class="table-responsive" v-if="formulario_vacio_correlativo == false">\n                                                         Resultados encontrados\n                                                         <br>\n                                                         <table class="table table-striped small">\n                                                            <thead>\n                                                               <tr>\n                                                                  <th>Correlativo</th>\n                                                                  <th>Run Madre</th>\n                                                                  <th>Nombres</th>\n                                                                  <th>Apellido Paterno</th>\n                                                                  <th>Apellido Materno</th>\n                                                               </tr>\n                                                            </thead>\n                                                            <tbody>\n                                                               <tr v-for="f in formularios">\n                                                                  <td>{{f.n_correlativo_interno}}</td>\n                                                                  <td>{{f.run_madre}}</td>\n                                                                  <td>{{f.nombres_madre}}</td>\n                                                                  <td>{{f.primer_apellido_madre}}</td>\n                                                                  <td>{{f.segundo_apellido_madre}}</td>\n                                                               </tr>\n                                                            </tbody>\n                                                         </table>\n                                                      </div><!-- .table-responsive -->\n                                                   </dd>\n\n\n                                                   <!--\n                                                   <dt></dt>\n                                                   <dd</dd>\n                                                   <div class="col-md-6">\n                                                      <dt></dt>\n                                                      <dd class="well well-sm"></dd>\n                                                   </div>\n                                                   -->\n\n                                                </div><!-- .col-md-12 -->\n                                             </div><!-- .row -->\n                                          </dl><!-- dl-horizontal -->\n\n                                       </div><!-- .tab-pane .fade #lista_personas_correlativo -->\n\n                                    </div><!-- .panel-heading -->\n                                 </div><!-- .panel-heading -->\n                              </div><!-- .panel-heading -->\n\n\n\n\n                              <!--\n                               <dl class="dl-vertical">\n                                 <div class="row">\n\t\t\t\t\t\t\t\t\t         <div style="overflow-y: scroll;max-height: 400px;">\n\n                                       <div class="col-md-6">\n                                          <dt></dt>\n                                          <dd class="well well-sm"></dd>\n                                       </div>\n                                       <div class="col-md-6">\n                                          <dt></dt>\n                                          <dd class="well well-sm"></dd>\n                                       </div>\n\n                                    </div>\n                                 </div>\n                              </dl>\n                              -->\n\t\t\t\t\t\t\t      </slot>\n\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t      <!--\n\t\t\t\t\t\t      <div class="modal-footer">\n\t\t\t\t\t\t\t      <slot name="footer">\n\t\t\t\t\t\t\t         <button class="btn btn-sm btn-success" @click="$emit(\'close\')">\n\t\t\t\t\t\t\t\t         Aceptar\n\t\t\t\t\t\t\t         </button>\n                           </slot>\n\t\t\t\t\t\t      </div>\n\t\t\t\t\t\t      -->\n\t\t\t\t\t      </div>\n                  </div>\n\t\t\t\t   </div>\n\t\t\t   </transition>\n\t\t\t',
          name: 'modal_buscar_formulario',
          data: function data() {
             return {
                'run_madre': '',
                'n_correlativo_interno': '',
                'formularios': [],
-               'formulario_vacio': false
+               'formulario_vacio': true
             };
          },
          ready: function ready() {},
@@ -36980,7 +36980,7 @@ var FormularioController = new _vue2.default({
                   // success callback
                   //console.log(response);
                   _this.formularios = response.body.formularios;
-                  _this.formulario_vacio = $.isEmptyObject(_this.formularios);
+                  _this.formulario_vacio = $.isEmptyObject(_this.formularios) == true ? true : false;
                }, function (response) {
                   // error callback
                   console.log(response);
@@ -37025,6 +37025,7 @@ var FormularioController = new _vue2.default({
    filters: {},
    methods: {
       //camelCase() => for specific functions
+
       buscar_formulario: function buscar_formulario() {
          this.show_modal_buscar_formulario = true;
       },
@@ -37039,82 +37040,22 @@ var FormularioController = new _vue2.default({
          }
       },
 
-      renderizar_solo_inputs: function renderizar_solo_inputs() {
-         var _this2 = this;
-
-         this.$http.get('/formulario/inputs_formulario').then(function (response) {
-            // success callback
-            _this2.inputs = response.body.inputs;
-            _this2.nav_tab_form_deis = response.body.nav_tab_form_deis;
-            _this2.deis_form_table_options = response.body.deis_form_table_options;
-            _this2.pais_origen = response.body.pais_origen;
-         }, function (response) {
-            // error callback
-            console.log('Error datos_formulario: ' + response);
-         });
-      },
-
-      renderizar_formulario: function renderizar_formulario() {
-         var _this3 = this;
-
-         this.$http.get('/formulario/datos_formulario').then(function (response) {
-            // success callback
-            _this3.inputs = response.body.inputs;
-            _this3.nav_tab_form_deis = response.body.nav_tab_form_deis;
-            _this3.deis_form_table_options = response.body.deis_form_table_options;
-            _this3.pais_origen = response.body.pais_origen;
-            _this3.fdc = response.body.fdc;
-            _this3.formularioActivoObj = response.body.fdc;
-         }, function (response) {
-            // error callback
-            console.log('Error datos_formulario: ' + response);
-         });
-      },
-
       fetchFormulario: function fetchFormulario() {
-         var _this4 = this;
+         var _this2 = this;
 
          this.$http.get('/formulario/create').then(function (response) {
             // success callback
-            _this4.instructions = response.body.instructions;
+            _this2.instructions = response.body.instructions;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
          });
 
-         /*
-         var options = {'id_select' : 'id_organismo','name' : 'nombre_organismo','id' : 'id_organismo'};
-         appendOptionsIntoCombo(data, options);
-            }); //.get
-         });
-          function appendOptionsIntoCombo (data, options) {
-         $.each(data, function (i, v) {
-            var o = new Option(v[options.name], v[options.id]);
-            $(`#${options.id_select}`).append($(o).html(v[options.name]));
-         });
-         }
-           $(document).ready(function () {
-          $.each(this.pais_origen, function (i, v){
-          var o = new Option(v.id_pais, v.id_pais);
-          $('#pais_origen').append($(o).html(v.nombre_pais));
-          });
-          });
-         */
-         /*
-          var self = this;
-          setTimeout(function(){
-            self.spinner_iniciar = false;
-          }, 1500);
-         */
-
-         //console.log('FormularioController');
-
-
          return;
       },
 
       guardarFormulario: function guardarFormulario(tabName) {
-         var _this5 = this;
+         var _this3 = this;
 
          this.mini_loader = true;
          //this.spinner_finalizar = true;
@@ -37141,11 +37082,11 @@ var FormularioController = new _vue2.default({
             //alert('Guardado');
 
             //Si guardar salio bien
-            _this5.hayGuardadoActivo = true;
-            _this5.idFormularioActivo = _this5.fdc.id;
+            _this3.hayGuardadoActivo = true;
+            _this3.idFormularioActivo = _this3.fdc.id;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            _this5.mini_loader = false;
+            _this3.mini_loader = false;
          }, function (response) {
             // error callback
             console.log(response);
@@ -37159,8 +37100,36 @@ var FormularioController = new _vue2.default({
          return $.inArray(input.type, array) == -1 ? false : true;
       },
 
-      inputsQuantity: function inputsQuantity(inputType) {
-         console.log(inputType);
+      renderizar_solo_inputs: function renderizar_solo_inputs() {
+         var _this4 = this;
+
+         this.$http.get('/formulario/inputs_formulario').then(function (response) {
+            // success callback
+            _this4.inputs = response.body.inputs;
+            _this4.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            _this4.deis_form_table_options = response.body.deis_form_table_options;
+            _this4.pais_origen = response.body.pais_origen;
+         }, function (response) {
+            // error callback
+            console.log('Error datos_formulario: ' + response);
+         });
+      },
+
+      renderizar_formulario: function renderizar_formulario() {
+         var _this5 = this;
+
+         this.$http.get('/formulario/datos_formulario').then(function (response) {
+            // success callback
+            _this5.inputs = response.body.inputs;
+            _this5.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            _this5.deis_form_table_options = response.body.deis_form_table_options;
+            _this5.pais_origen = response.body.pais_origen;
+            _this5.fdc = response.body.fdc;
+            _this5.formularioActivoObj = response.body.fdc;
+         }, function (response) {
+            // error callback
+            console.log('Error datos_formulario: ' + response);
+         });
       }
 
       //with_dash() => for explained specific functions
