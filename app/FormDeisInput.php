@@ -20,6 +20,8 @@ class FormDeisInput extends Model
       'style',
       'readonly',
 
+      'v_on_change',
+
       'bloque',
       'seccion',
       'class_custom',

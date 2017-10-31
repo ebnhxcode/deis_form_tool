@@ -36961,7 +36961,8 @@ var FormularioController = new _vue2.default({
                'run_madre': '',
                'n_correlativo_interno': '',
                'formularios': [],
-               'formulario_vacio': true
+               'formulario_vacio': true,
+               'formulario_vacio_correlativo': true
             };
          },
          ready: function ready() {},
@@ -37025,6 +37026,26 @@ var FormularioController = new _vue2.default({
    filters: {},
    methods: {
       //camelCase() => for specific functions
+
+      verifica_validacion: function verifica_validacion(input) {
+         switch (input.id) {
+            case 'embarazo_con_control_parental':
+               if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
+                  for (var i in this.inputs) {
+                     if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
+                        this.inputs[i].readonly = true;
+                     }
+                  }
+               } else {
+                  for (var _i in this.inputs) {
+                     if (input.seccion == this.inputs[_i].seccion && input.name != this.inputs[_i].name) {
+                        this.inputs[_i].readonly = null;
+                     }
+                  }
+               }
+               break;
+         }
+      },
 
       buscar_formulario: function buscar_formulario() {
          this.show_modal_buscar_formulario = true;

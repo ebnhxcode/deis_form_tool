@@ -381,6 +381,7 @@ const FormularioController = new Vue({
                'n_correlativo_interno':'',
                'formularios':[],
                'formulario_vacio':true,
+               'formulario_vacio_correlativo':true,
             }
          },
          ready () {
@@ -444,6 +445,27 @@ const FormularioController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
+
+      verifica_validacion: function (input) {
+         switch (input.id) {
+            case 'embarazo_con_control_parental':
+               if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
+                  for (let i in this.inputs){
+                     if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
+                        this.inputs[i].readonly = true;
+                     }
+                  }
+               }else{
+                  for (let i in this.inputs){
+                     if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
+                        this.inputs[i].readonly = null;
+                     }
+                  }
+               }
+               break;
+         }
+
+      },
 
       buscar_formulario: function () {
          this.show_modal_buscar_formulario = true;

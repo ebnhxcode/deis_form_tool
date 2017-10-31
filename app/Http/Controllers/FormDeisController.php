@@ -19,10 +19,16 @@ class FormDeisController extends Controller {
     }
 
 
+    public function testapi (Request $request) {
+
+
+
+
+
+    }
+
     public function index (Request $request) {
         $returnData=[];
-
-
         return view('formulario.index', $returnData);
     }
 

@@ -55,6 +55,7 @@ return [
       'embarazo_con_control_parental' => [
          'Si' => 'Si',
          'No' => 'No',
+         'Desconocido' => 'Desconocido',
       ],
 
       'codigo_establecimiento_control_prenatal_embarazo' => [

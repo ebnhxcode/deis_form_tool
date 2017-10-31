@@ -116,6 +116,7 @@
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
                                                        :readonly="i.readonly!=''?i.readonly:''"
+                                                       @change.prevent="verifica_validacion(i)"
                                                        v-model="fdc[i.name]">
                                              </dd>
 
@@ -130,7 +131,8 @@
                                                         :placeholder="i.placeholder!=''?i.placeholder:''"
                                                         :readonly="i.readonly!=''?i.readonly:''"
                                                         :value="fdc[i.name]"
-                                                        v-model="fdc[i.name]">
+                                                        v-model="fdc[i.name]"
+                                                        @change.prevent="verifica_validacion(i)">
 
                                                    <option value="">Seleccione</option>
                                                    <option v-for="o,i in deis_form_table_options[i.name]" :value="i">
