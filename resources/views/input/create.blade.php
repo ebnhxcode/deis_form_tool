@@ -2,8 +2,7 @@
 @include('layouts.styles')
 
 @section('content')
-   <!-- jQuery 2.1.4 -->
-   <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+
 
    <div class="{{--container--}}" id="InputController">
       <div class="row">

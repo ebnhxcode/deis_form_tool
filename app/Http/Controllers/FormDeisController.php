@@ -35,7 +35,8 @@ class FormDeisController extends Controller {
         $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
         $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
         $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
-        $returnData['pais_origen'] = Pais::select('id_pais','nombre_pais')->get();
+        $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais','id_pais')];
+#        $returnData['pais_origen'] = Pais::pluck('nombre_pais','id_pais');
 
 
         if ($request->wantsJson()) {

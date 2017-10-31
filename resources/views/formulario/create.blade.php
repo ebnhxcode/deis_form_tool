@@ -123,10 +123,12 @@
                                                         :placeholder="i.placeholder!=''?i.placeholder:''"
                                                         :readonly="i.readonly!=''?i.readonly:''"
                                                         v-model="fdc[i.name]">
+
                                                    <option value="">Seleccione</option>
                                                    <option v-for="o in deis_form_table_options[i.name]" :value="o">
                                                       @{{ o }}
                                                    </option>
+
                                                 </select><!-- .form-control -->
                                              </dd>
 

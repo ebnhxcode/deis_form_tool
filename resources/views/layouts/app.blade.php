@@ -17,6 +17,8 @@
          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
+   <!-- jQuery 2.1.4 -->
+   <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
    <style>
       body {
          font-family: 'Lato';

@@ -37147,6 +37147,12 @@ var FormularioController = new _vue2.default({
    created: function created() {
       //this.spinner_iniciar = true;
       this.fetchFormulario();
+      $(document).ready(function () {
+         $.each(this.pais_origen, function (i, v) {
+            var o = new Option(v.id_pais, v.id_pais);
+            $('#pais_origen').append($(o).html(v.nombre_pais));
+         });
+      });
    },
 
    ready: {},
@@ -37176,6 +37182,18 @@ var FormularioController = new _vue2.default({
             console.log('Error fetch_formulario: ' + response);
          });
 
+         /*
+         var options = {'id_select' : 'id_organismo','name' : 'nombre_organismo','id' : 'id_organismo'};
+         appendOptionsIntoCombo(data, options);
+            }); //.get
+         });
+          function appendOptionsIntoCombo (data, options) {
+         $.each(data, function (i, v) {
+            var o = new Option(v[options.name], v[options.id]);
+            $(`#${options.id_select}`).append($(o).html(v[options.name]));
+         });
+         }
+         */
          /*
           var self = this;
           setTimeout(function(){
