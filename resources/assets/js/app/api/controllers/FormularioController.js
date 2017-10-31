@@ -371,7 +371,7 @@ const FormularioController = new Vue({
                                                        type="number"
                                                        name="n_correlativo_interno"
                                                        id="n_correlativo_interno"
-                                                       
+
                                                 >
                                              </dd>
 

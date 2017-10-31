@@ -116,7 +116,7 @@
                                              <dd v-else-if="inputInArray(i,inputTypes.select)">
                                                 <select :name="i.name"
                                                         :id="i.id"
-                                                        class="form-control"
+                                                        :class="i.class!=''?i.class:'form-control'"
                                                         :required="i.required!=''?i.required:''"
                                                         :readonly="i.readonly!=''?i.readonly:''"
                                                         :style="i.style!=''?i.style:''"
