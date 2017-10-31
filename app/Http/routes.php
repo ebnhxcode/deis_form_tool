@@ -19,8 +19,9 @@ Route::auth();
 
 
 
-
+Route::post ('/formulario/buscar_por_rut' , 'FormDeisController@buscar_por_rut') ;
 Route::resource ('/formulario' , 'FormDeisController') ;
+
 Route::post ('/input/add/label' , 'InputController@addLabelToInput') ;
 Route::resource ('/input' , 'InputController') ;
 

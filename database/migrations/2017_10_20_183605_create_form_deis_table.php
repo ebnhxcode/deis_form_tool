@@ -22,7 +22,7 @@ class CreateFormDeisTable extends Migration
             $table->integer('n_correlativo_interno')->unsigned()->nullable(true);
             $table->integer('id_region')->unsigned()->nullable(true);
             $table->integer('id_servicio_salud')->unsigned()->nullable(true);
-            $table->integer('run_madre')->unsigned()->nullable(true);
+            $table->string('run_madre')->unsigned()->nullable(true);
             $table->string('digito_verificador')->unsigned()->nullable(true);
             $table->integer('edad')->unsigned()->nullable(true);
             $table->string('nacionalidad')->unsigned()->nullable(true);

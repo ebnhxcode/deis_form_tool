@@ -26,6 +26,12 @@ class FormDeisController extends Controller {
         return view('formulario.index', $returnData);
     }
 
+    public function buscar_por_rut (Request $request){
+        $run_madre = $request->run_madre;
+        $formularios = FormDeis::where('run_madre', 'ilike', '%'.$run_madre.'%')->get();
+        return response()->json(['formularios'=>$formularios]);
+    }
+
 
     public function create (Request $request) {
         #dd($this->fdc);
