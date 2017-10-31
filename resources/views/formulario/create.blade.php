@@ -108,6 +108,7 @@
                                                        :class="i.class!=''?i.class:'form-control'"
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
+                                                       :readonly="i.readonly!=''?i.readonly:''"
                                                        v-model="i.value">
                                              </dd>
 

@@ -18,6 +18,7 @@ class FormDeisInput extends Model
       'required',
       'class',
       'style',
+      'readonly',
 
       'bloque',
       'seccion',

@@ -73,6 +73,7 @@
                               <th style="min-width: 140px !important;">required</th>
                               <th style="min-width: 140px !important;">class</th>
                               <th style="min-width: 140px !important;">style</th>
+                              <th style="min-width: 140px !important;">readonly</th>
                               <th style="min-width: 140px !important;">bloque</th>
                               <th style="min-width: 140px !important;">seccion</th>
                               <th style="min-width: 140px !important;">class_custom</th>
@@ -130,6 +131,10 @@
                               <td>
                                  <span v-if="editBy != input.id">@{{input.style}}</span>
                                  <input v-else type="text" class="form-control input-sm" v-model="input.style">
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.readonly}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.readonly">
                               </td>
                               <td>
                                  <span v-if="editBy != input.id">@{{input.bloque}}</span>
