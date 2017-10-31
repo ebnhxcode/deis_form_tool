@@ -37130,6 +37130,7 @@ var FormularioController = new _vue2.default({
             _this4.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this4.deis_form_table_options = response.body.deis_form_table_options;
             _this4.pais_origen = response.body.pais_origen;
+            //this.validar_validaciones_previas();
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
@@ -37147,12 +37148,18 @@ var FormularioController = new _vue2.default({
             _this5.pais_origen = response.body.pais_origen;
             _this5.fdc = response.body.fdc;
             _this5.formularioActivoObj = response.body.fdc;
+            _this5.validar_validaciones_previas();
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
          });
-      }
+      },
 
+      validar_validaciones_previas: function validar_validaciones_previas() {
+         for (var i in this.inputs) {
+            this.verifica_validacion(this.inputs[i]);
+         }
+      }
       //with_dash() => for explained specific functions
    }
 });

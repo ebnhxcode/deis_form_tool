@@ -543,6 +543,7 @@ const FormularioController = new Vue({
             this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             this.deis_form_table_options = response.body.deis_form_table_options;
             this.pais_origen = response.body.pais_origen;
+            //this.validar_validaciones_previas();
          }, response => { // error callback
             console.log('Error datos_formulario: '+response);
          });
@@ -556,12 +557,17 @@ const FormularioController = new Vue({
             this.pais_origen = response.body.pais_origen;
             this.fdc = response.body.fdc;
             this.formularioActivoObj = response.body.fdc;
-
+            this.validar_validaciones_previas();
          }, response => { // error callback
             console.log('Error datos_formulario: '+response);
          });
       },
 
+      validar_validaciones_previas: function () {
+         for (let i in this.inputs) {
+            this.verifica_validacion(this.inputs[i]);
+         }
+      },
       //with_dash() => for explained specific functions
    },
 });
