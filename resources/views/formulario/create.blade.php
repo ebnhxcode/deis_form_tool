@@ -109,7 +109,7 @@
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
                                                        :readonly="i.readonly!=''?i.readonly:''"
-                                                       v-model="i.value">
+                                                       v-model="fdc[i.name]">
                                              </dd>
 
                                              <!-- Select Inputs -->

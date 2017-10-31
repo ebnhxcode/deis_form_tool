@@ -36861,6 +36861,9 @@ var FormularioController = new _vue2.default({
          'spinner_iniciar': true,
          'spinner_finalizar': false,
 
+         'hayGuardadoActivo': false,
+         'idFormularioActivo': '',
+
          'deis_form_inputs': {
             'nombres_madre': '',
             'primer_apellido_madre': '',
@@ -37153,15 +37156,18 @@ var FormularioController = new _vue2.default({
             _this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this.deis_form_table_options = response.body.deis_form_table_options;
             _this.fdc = response.body.fdc;
+            $('#n_correlativo_interno').val(_this.fdc.id);
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
          });
 
-         var self = this;
-         setTimeout(function () {
+         /*
+          var self = this;
+          setTimeout(function(){
             self.spinner_iniciar = false;
-         }, 1500);
+          }, 1500);
+         */
 
          //console.log('FormularioController');
 
@@ -37181,15 +37187,7 @@ var FormularioController = new _vue2.default({
             }
          }
 
-         /*
-         let headers = new Headers({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json;'
-         });
-         */
-         //let options = new RequestOptions({ headers: this.headers });
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
          formData.append('_id_formulario', this.fdc.id);
 
          this.$http.post('/formulario', formData).then(function (response) {

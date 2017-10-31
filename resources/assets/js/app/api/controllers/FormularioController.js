@@ -41,6 +41,9 @@ const FormularioController = new Vue({
          'spinner_iniciar':true,
          'spinner_finalizar':false,
 
+         'hayGuardadoActivo':false,
+         'idFormularioActivo':'',
+
          'deis_form_inputs':{
             'nombres_madre':'',
             'primer_apellido_madre':'',
@@ -469,14 +472,17 @@ const FormularioController = new Vue({
             this.fdc = response.body.fdc;
 
 
+
          }, response => { // error callback
             console.log('Error fetch_formulario: '+response);
          });
 
+         /*
           var self = this;
           setTimeout(function(){
             self.spinner_iniciar = false;
           }, 1500);
+         */
 
          //console.log('FormularioController');
 
@@ -496,22 +502,22 @@ const FormularioController = new Vue({
                formData.append(this.inputs[i].directivas.name, this.inputs[i].directivas.value);
             }
          }
+         formData.append('n_correlativo_interno', this.fdc.id);
 
-
-         /*
-         let headers = new Headers({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json;'
-         });
-         */
-         //let options = new RequestOptions({ headers: this.headers });
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         //formData.append('_token', $('#_token').val());
          formData.append('_id_formulario', this.fdc.id);
 
          this.$http.post('/formulario', formData).then(response => { // success callback
             console.log(response);
+
             alert('Guardado');
+
+            //Si guardar salio bien
+            this.hayGuardadoActivo = true;
+            this.idFormularioActivo = this.fdc.id;
+
+
+
          }, response => { // error callback
             console.log(response);
          });

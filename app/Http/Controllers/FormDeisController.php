@@ -37,6 +37,9 @@ class FormDeisController extends Controller {
         if ($request->wantsJson()) {
             $this->fdc = new FormDeis();
             $this->fdc->save();
+            $this->fdc = FormDeis::find($this->fdc->id);
+            $this->fdc->n_correlativo_interno = $this->fdc->id;
+
             $returnData['fdc'] = $this->fdc;
             return response()->json($returnData);
         }
