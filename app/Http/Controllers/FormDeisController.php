@@ -34,6 +34,7 @@ class FormDeisController extends Controller {
         $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
         $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
         $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
+
         if ($request->wantsJson()) {
             $this->fdc = new FormDeis();
             $this->fdc->save();
@@ -62,11 +63,10 @@ class FormDeisController extends Controller {
                 if ($d) $fd[$key] = $d;
 
 
-
             #$result = FormDeis::create($fd);
             $result = $form_deis->update($fd);
 
-            return response()->json(['result' => $result]);
+            return response()->json(['result' => $result, 'data' => $fd]);
         }
 
 

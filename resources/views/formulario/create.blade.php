@@ -13,7 +13,7 @@
 
                         <div class="well well-sm">
                            <h3 class="text-center">
-                              Formulario · Informaciones de transmision Vertical de VIH y Sífilis
+                              Formulario · Informaciones de Transmision Vertical de VIH y Sífilis
                               <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
@@ -24,7 +24,7 @@
 
                            <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario"
                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
-                              Buscar Persona
+                              Buscar&nbsp;
                               <i class="fa fa-search"></i>
                            </button>
                            <modal_buscar_formulario
@@ -101,11 +101,11 @@
                                              <dd v-if="inputInArray(i,inputTypes.basics)">
                                                 <input :name="i.name"
                                                        :id="i.id"
-                                                       :type="i.type"
-                                                       :max-length="i.max_length"
-                                                       :required="i.required"
-                                                       :readonly="i.readonly"
                                                        :class="i.class!=''?i.class:'form-control'"
+                                                       :type="i.type!=''?i.type:''"
+                                                       :max-length="i.max_length!=''?i.max_length:''"
+                                                       :required="i.required!=''?i.required:''"
+                                                       :readonly="i.readonly!=''?i.readonly:''"
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
                                                        :readonly="i.readonly!=''?i.readonly:''"
@@ -116,7 +116,13 @@
                                              <dd v-else-if="inputInArray(i,inputTypes.select)">
                                                 <select :name="i.name"
                                                         :id="i.id"
-                                                        class="form-control">
+                                                        class="form-control"
+                                                        :required="i.required!=''?i.required:''"
+                                                        :readonly="i.readonly!=''?i.readonly:''"
+                                                        :style="i.style!=''?i.style:''"
+                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
+                                                        :readonly="i.readonly!=''?i.readonly:''"
+                                                        v-model="fdc[i.name]">
                                                    <option value="">Seleccione</option>
                                                    <option v-for="o in deis_form_table_options[i.name]" :value="o">
                                                       @{{ o }}
@@ -128,7 +134,8 @@
                                              <dd v-else-if="inputInArray(i,inputTypes.textarea)">
                                              <textarea :name="i.name"
                                                        :id="i.id"
-                                                       class="form-control">
+                                                       class="form-control"
+                                                       v-model="fdc[i.name]">
                                              </textarea>
                                              </dd>
 

@@ -341,7 +341,12 @@ const FormularioController = new Vue({
 
                                  <li role="presentation" class="active">
                                     <a href="#lista_personas" aria-controls="lista_personas" role="tab" data-toggle="tab">
-                                       Lista de Personas
+                                       Búsqueda de Personas - Correlativo
+                                    </a>
+                                 </li>
+                                 <li role="presentation">
+                                    <a href="#lista_personas_run" aria-controls="lista_personas_run" role="tab" data-toggle="tab">
+                                       Búsqueda de Personas - Run Madre
                                     </a>
                                  </li>
                               </ul>
@@ -353,7 +358,39 @@ const FormularioController = new Vue({
 
                                  <div role="tabpanel" class="'tab-pane fade in active" id="lista_personas">
 
-                                    <hr>
+
+                                    <dl class="dl-horizontal">
+                                       <div class="row">
+                                          <div style="overflow-y: scroll;max-height: 400px;">
+
+                                             <dt>
+                                                Número de correlativo
+                                             </dt>
+                                             <dd>
+                                                <input class="form-control"
+                                                       type="number"
+                                                       name="n_correlativo_interno"
+                                                       id="n_correlativo_interno"
+                                                       
+                                                >
+                                             </dd>
+
+
+                                             <dt></dt>
+                                             <dd</dd>
+
+                                             <!--
+                                             <div class="col-md-6">
+                                                <dt></dt>
+                                                <dd class="well well-sm"></dd>
+                                             </div>
+                                             -->
+
+                                          </div>
+                                       </div>
+                                    </dl><!-- dl-horizontal -->
+
+                                    <!--
                                     <div class="table-responsive">
                                        <table class="table table-striped">
                                           <thead>
@@ -378,8 +415,9 @@ const FormularioController = new Vue({
                                           </tbody>
                                        </table>
                                     </div>
+                                    -->
 
-                                 </div>
+                                 </div><!-- .tab-pane .fade -->
 
                               </div><!-- .panel-heading -->
                            </div><!-- .panel-heading -->
