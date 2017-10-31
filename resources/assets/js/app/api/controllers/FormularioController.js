@@ -26,6 +26,7 @@ const FormularioController = new Vue({
          //'labels':[],
          'nav_tab_form_deis':[],
          'deis_form_table_options':[],
+         'pais_origen':[],
          'fdc':[],
 
          'inputTypes':{
@@ -519,6 +520,7 @@ const FormularioController = new Vue({
             this.instructions = response.body.instructions;
             this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             this.deis_form_table_options = response.body.deis_form_table_options;
+            this.pais_origen = response.body.pais_origen;
             this.fdc = response.body.fdc;
 
 
