@@ -17,9 +17,16 @@
                               <img class="pull-right" width="90" src="{{url('img/logo.png')}}" alt="" style="border-radius: 3px;box-shadow: 2px 1px 2px 1px #dbdbdb;">
                            </h3> <!-- .text-center --> <br>
 
-                           <button class="btn btn-success" type="button" data-toggle="collapse" style="box-shadow: 2px 1px 2px 1px #dbdbdb;"
+                           <button class="btn btn-success" type="button" data-toggle="collapse"
+                                   style="box-shadow: 2px 1px 2px 1px #dbdbdb;"
                                    data-target="#instructions" aria-expanded="false" aria-controls="instructions">
                               <small>Leer instrucciones</small>
+                           </button>
+
+                           <button class="btn btn-sm btn-success pull-right small" @click.prevent="buscar_formulario"
+                                   style="box-shadow: 2px 1px 2px 1px #dbdbdb;margin-left: 10px;">
+                              Crear nuevo&nbsp;
+                              <i class="fa fa-plus"></i>
                            </button>
 
                            <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario"
