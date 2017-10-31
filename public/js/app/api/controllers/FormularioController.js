@@ -37147,12 +37147,6 @@ var FormularioController = new _vue2.default({
    created: function created() {
       //this.spinner_iniciar = true;
       this.fetchFormulario();
-      $(document).ready(function () {
-         $.each(this.pais_origen, function (i, v) {
-            var o = new Option(v.id_pais, v.id_pais);
-            $('#pais_origen').append($(o).html(v.nombre_pais));
-         });
-      });
    },
 
    ready: {},
@@ -37193,6 +37187,12 @@ var FormularioController = new _vue2.default({
             $(`#${options.id_select}`).append($(o).html(v[options.name]));
          });
          }
+           $(document).ready(function () {
+          $.each(this.pais_origen, function (i, v){
+          var o = new Option(v.id_pais, v.id_pais);
+          $('#pais_origen').append($(o).html(v.nombre_pais));
+          });
+          });
          */
          /*
           var self = this;

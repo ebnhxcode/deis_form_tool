@@ -220,10 +220,6 @@ return [
          'Parto Cesarea' => 'Parto Cesarea',
       ],
 
-      'lugar_atencion_parto' => [
-         '100025'=>'Hospital San Juan De Dios',
-      ],
-
       'tipo_establecimiento' => [
          'Publico' => 'Publico',
          'Privado' => 'Privado',

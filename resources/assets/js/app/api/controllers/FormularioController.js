@@ -528,8 +528,6 @@ const FormularioController = new Vue({
             console.log('Error fetch_formulario: '+response);
          });
 
-
-
          /*
          var options = {'id_select' : 'id_organismo','name' : 'nombre_organismo','id' : 'id_organismo'};
          appendOptionsIntoCombo(data, options);

@@ -186,6 +186,12 @@
          </div><!-- col-md-* -->
       </div><!-- .row -->
    </div><!-- .container -->
+   <script>
+      jQuery( function ($) {
+         $('#lugar_atencion_parto').select2();
+         $('#pais_origen').select2();
+      });
+   </script>
 @endsection
 
 @section('VueControllers')

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FormDeis;
 use App\Pais;
+use App\Establecimiento;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
@@ -36,6 +37,7 @@ class FormDeisController extends Controller {
         $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
         $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
         $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais','id_pais')];
+        $returnData['deis_form_table_options'] += ['lugar_atencion_parto' => Establecimiento::pluck('nombre_establecimiento','id_establecimiento')];
 #        $returnData['pais_origen'] = Pais::pluck('nombre_pais','id_pais');
 
 

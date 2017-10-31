@@ -19,6 +19,10 @@
 
    <!-- jQuery 2.1.4 -->
    <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+
+   <!-- Select2 2.1.4 -->
+   <script src="{{ asset('/js/select2.min.js') }}"></script>
+
    <style>
       body {
          font-family: 'Lato';
