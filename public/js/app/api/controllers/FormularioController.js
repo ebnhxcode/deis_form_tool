@@ -37223,7 +37223,7 @@ var FormularioController = new _vue2.default({
             case 'ano_sifilis_previa_embarazo':
                var d = new Date();
                var y = d.getFullYear();
-               if (parseInt(this.fdc[input.name]) < 0 || parseInt(this.fdc[input.name]) > y || parseInt(this.fdc[input.name]) < 1940) {
+               if (parseInt(this.fdc[input.name]) < 0 || parseInt(this.fdc[input.name]) > y || parseInt(this.fdc[input.name]) < 1920) {
                   this.fdc[input.name] = 0;
                }
                break;
