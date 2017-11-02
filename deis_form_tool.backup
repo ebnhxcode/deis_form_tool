@@ -162,7 +162,7 @@ CREATE TABLE form_deis (
     codigo_establecimiento integer,
     nombre_establecimiento_sin_codigo character varying(255),
     fecha_parto timestamp(0) without time zone,
-    hora_parto timestamp(0) without time zone,
+    hora_parto time(0) without time zone,
     tipo_parto character varying(255),
     via_parto character varying(255),
     resultado_vdrl_parto character varying(255),
@@ -177,12 +177,12 @@ CREATE TABLE form_deis (
     dosis_2_farmaco_1_vih character varying(255),
     fecha_inicio_farmaco_1_vih timestamp(0) without time zone,
     fecha_2_inicio_farmaco_1_vih timestamp(0) without time zone,
-    hora_inicio_farmaco_1_vih timestamp(0) without time zone,
-    hora_2_inicio_farmaco_1_vih timestamp(0) without time zone,
+    hora_inicio_farmaco_1_vih time(0) without time zone,
+    hora_2_inicio_farmaco_1_vih time(0) without time zone,
     nombre_farmaco_2_vih character varying(255),
     dosis_farmaco_2_vih character varying(255),
     fecha_inicio_farmaco_2_vih timestamp(0) without time zone,
-    hora_inicio_farmaco_2_vih timestamp(0) without time zone,
+    hora_inicio_farmaco_2_vih time(0) without time zone,
     nombre_farmaco_suspencion_lactancia character varying(255),
     fecha_administracion_farmaco_suspencion_lactancia timestamp(0) without time zone,
     estado_recien_nacido character varying(255),
@@ -192,7 +192,7 @@ CREATE TABLE form_deis (
     estado_clinico_recien_nacido character varying(255),
     run_recien_nacido integer,
     fecha_nacimiento_recien_nacido timestamp(0) without time zone,
-    hora_nacimiento_recien_nacido timestamp(0) without time zone,
+    hora_nacimiento_recien_nacido time(0) without time zone,
     digito_verificador_recien_nacido character varying(255),
     codigo_recien_nacido character varying(255),
     fecha_examen_vdrl_periferico_recien_nacido timestamp(0) without time zone,
@@ -209,16 +209,16 @@ CREATE TABLE form_deis (
     tratamiento_recien_nacido_frecuencia integer,
     sustituto_leche_materna character varying(255),
     fecha_inicio_sustituto_leche_materna timestamp(0) without time zone,
-    hora_inicio_sustituto_leche_materna timestamp(0) without time zone,
+    hora_inicio_sustituto_leche_materna time(0) without time zone,
     entrega_sustituto_leche_materna_al_alta character varying(255),
     nombre_farmaco_1_vih_recien_nacido character varying(255),
     dosis_farmaco_1_vih_recien_nacido character varying(255),
     fecha_inicio_farmaco_1_vih_recien_nacido timestamp(0) without time zone,
-    hora_inicio_farmaco_1_vih_recien_nacido timestamp(0) without time zone,
+    hora_inicio_farmaco_1_vih_recien_nacido time(0) without time zone,
     nombre_farmaco_2_vih_recien_nacido character varying(255),
     dosis_farmaco_2_vih_recien_nacido character varying(255),
     fecha_inicio_farmaco_2_vih_recien_nacido timestamp(0) without time zone,
-    hora_inicio_farmaco_2_vih_recien_nacido timestamp(0) without time zone,
+    hora_inicio_farmaco_2_vih_recien_nacido time(0) without time zone,
     fecha_1_examen_pcr_recien_nacido timestamp(0) without time zone,
     resultado_1_examen_pcr_recien_nacido character varying(255),
     fecha_2_examen_pcr_recien_nacido timestamp(0) without time zone,
@@ -332,74 +332,6 @@ ALTER TABLE form_deis_inputs_id_input_seq OWNER TO postgres;
 --
 
 ALTER SEQUENCE form_deis_inputs_id_input_seq OWNED BY form_deis_inputs.id_input;
-
-
---
--- Name: log_navegacions; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE log_navegacions (
-    id integer NOT NULL,
-    created_at timestamp(0) without time zone,
-    updated_at timestamp(0) without time zone
-);
-
-
-ALTER TABLE log_navegacions OWNER TO postgres;
-
---
--- Name: log_navegacions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE log_navegacions_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE log_navegacions_id_seq OWNER TO postgres;
-
---
--- Name: log_navegacions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE log_navegacions_id_seq OWNED BY log_navegacions.id;
-
-
---
--- Name: log_navegations; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE log_navegations (
-    id integer NOT NULL,
-    created_at timestamp(0) without time zone,
-    updated_at timestamp(0) without time zone
-);
-
-
-ALTER TABLE log_navegations OWNER TO postgres;
-
---
--- Name: log_navegations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE log_navegations_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE log_navegations_id_seq OWNER TO postgres;
-
---
--- Name: log_navegations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE log_navegations_id_seq OWNED BY log_navegations.id;
 
 
 --
@@ -530,20 +462,6 @@ ALTER TABLE ONLY form_deis ALTER COLUMN id SET DEFAULT nextval('form_deis_id_seq
 --
 
 ALTER TABLE ONLY form_deis_inputs ALTER COLUMN id_input SET DEFAULT nextval('form_deis_inputs_id_input_seq'::regclass);
-
-
---
--- Name: log_navegacions id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY log_navegacions ALTER COLUMN id SET DEFAULT nextval('log_navegacions_id_seq'::regclass);
-
-
---
--- Name: log_navegations id; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY log_navegations ALTER COLUMN id SET DEFAULT nextval('log_navegations_id_seq'::regclass);
 
 
 --
@@ -4695,7 +4613,7 @@ COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre
 237	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-31 21:52:12	2017-10-31 21:52:12	\N	\N	\N	\N
 238	\N	\N	\N	\N	238	\N	\N	\N	\N	\N	\N	Lican-Antai	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 03:12:20	2017-11-02 03:39:24	\N	\N	\N	\N
 239	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 13:45:58	2017-11-02 13:45:58	\N	\N	\N	\N
-168	Esteban Gonzalo	Ramos	Fernandez	1991-12-27 00:00:00	168	\N	\N	\N	\N	Austriaco	40	Rapa Nui	\N	\N	\N	1221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Si	\N	\N	\N	\N	\N	1991-12-12 00:00:00	No Realizado	1:2	4	\N	No Realizado	\N	\N	\N	No Reactivo	\N	\N	\N	No Realizado	\N	\N	\N	\N	\N	\N	No Reactivo	\N	\N	No Reactivo	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1232	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	55.1229999999999976	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.23399999999999999	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-31 16:59:11	2017-11-02 14:10:51	180025553	2s32	a221s	Fonasa
+168	Esteban Gonzalo	Ramos	Fernandez	1991-12-27 00:00:00	168	\N	\N	\N	\N	Austriaco	40	Rapa Nui	\N	\N	\N	1221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Si	\N	\N	\N	\N	\N	1991-12-12 00:00:00	No Realizado	1:2	4	\N	No Realizado	\N	\N	\N	No Reactivo	\N	\N	\N	No Realizado	\N	\N	\N	\N	\N	\N	No Reactivo	\N	\N	No Reactivo	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1232	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	55.1229999999999976	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.23399999999999999	\N	\N	\N	11:22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	03:01:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-31 16:59:11	2017-11-02 21:02:58	180025553	2s32	a221s	Fonasa
 \.
 
 
@@ -4889,22 +4807,6 @@ COPY form_deis_inputs (id_input, table_name, type, id, name, value, max_length, 
 131	form_deis_inputs	select	sexo_recien_nacido	sexo_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-2 col-md-2	Sexo Recién Nacido	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 17:28:58	131	\N	\N	\N	\N	\N
 167	form_deis_inputs	select	resultado_final_isp_examen_vih_recien_nacido	resultado_final_isp_examen_vih_recien_nacido							recien_nacido_muerto	datos_recien_nacido	col-sm-6 col-md-6	Resultado Final ISP Exámen VIH Recién nacido lactante	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:58:48	167	\N	\N	\N	\N	\N
 130	form_deis_inputs	select	estado_recien_nacido	estado_recien_nacido							recien_nacido_muerto	datos_recien_nacido	col-sm-2 col-md-2 col-md-offset-1	Estado del recién nacido	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 17:34:00	130	\N	\N	\N	\N	\N
-\.
-
-
---
--- Data for Name: log_navegacions; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY log_navegacions (id, created_at, updated_at) FROM stdin;
-\.
-
-
---
--- Data for Name: log_navegations; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY log_navegations (id, created_at, updated_at) FROM stdin;
 \.
 
 
@@ -5274,20 +5176,6 @@ SELECT pg_catalog.setval('form_deis_inputs_id_input_seq', 184, true);
 
 
 --
--- Name: log_navegacions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('log_navegacions_id_seq', 1, false);
-
-
---
--- Name: log_navegations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('log_navegations_id_seq', 1, false);
-
-
---
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -5308,22 +5196,6 @@ ALTER TABLE ONLY form_deis_inputs
 
 ALTER TABLE ONLY form_deis
     ADD CONSTRAINT form_deis_pkey PRIMARY KEY (id);
-
-
---
--- Name: log_navegacions log_navegacions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY log_navegacions
-    ADD CONSTRAINT log_navegacions_pkey PRIMARY KEY (id);
-
-
---
--- Name: log_navegations log_navegations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY log_navegations
-    ADD CONSTRAINT log_navegations_pkey PRIMARY KEY (id);
 
 
 --
