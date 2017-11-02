@@ -335,6 +335,39 @@ ALTER SEQUENCE form_deis_inputs_id_input_seq OWNED BY form_deis_inputs.id_input;
 
 
 --
+-- Name: log_navigation_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE log_navigation_id_seq
+    START WITH 239
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE log_navigation_id_seq OWNER TO postgres;
+
+--
+-- Name: log_navigation; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE log_navigation (
+    id_log_navigation integer DEFAULT nextval('log_navigation_id_seq'::regclass) NOT NULL,
+    user_id integer,
+    cod_establecimiento integer,
+    user_name text,
+    user_email text,
+    page_path text,
+    ip text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE log_navigation OWNER TO postgres;
+
+--
 -- Name: migrations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -4613,7 +4646,8 @@ COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre
 237	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-31 21:52:12	2017-10-31 21:52:12	\N	\N	\N	\N
 238	\N	\N	\N	\N	238	\N	\N	\N	\N	\N	\N	Lican-Antai	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 03:12:20	2017-11-02 03:39:24	\N	\N	\N	\N
 239	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 13:45:58	2017-11-02 13:45:58	\N	\N	\N	\N
-168	Esteban Gonzalo	Ramos	Fernandez	1991-12-27 00:00:00	168	\N	\N	\N	\N	Austriaco	40	Rapa Nui	\N	\N	\N	1221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Si	\N	\N	\N	\N	\N	1991-12-12 00:00:00	No Realizado	1:2	4	\N	No Realizado	\N	\N	\N	No Reactivo	\N	\N	\N	No Realizado	\N	\N	\N	\N	\N	\N	No Reactivo	\N	\N	No Reactivo	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1232	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	55.1229999999999976	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.23399999999999999	\N	\N	\N	11:22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	03:01:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-31 16:59:11	2017-11-02 21:02:58	180025553	2s32	a221s	Fonasa
+168	Esteban Gonzalo	Ramos	Fernandez	1991-12-12 00:00:00	168	\N	\N	\N	\N	Austriaco	40	Rapa Nui	\N	\N	\N	1221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	Si	\N	\N	\N	\N	\N	1991-12-12 00:00:00	No Realizado	1:2	4	\N	No Realizado	\N	\N	\N	No Reactivo	\N	\N	\N	No Realizado	\N	\N	\N	\N	\N	\N	No Reactivo	\N	\N	No Reactivo	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1232	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	55.1229999999999976	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.23399999999999999	\N	\N	\N	11:22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	03:01:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-10-31 16:59:11	2017-11-02 21:22:33	180025553	2s32	a221s	Fonasa
+240	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 21:31:10	2017-11-02 21:31:10	\N	\N	\N	\N
 \.
 
 
@@ -4754,7 +4788,6 @@ COPY form_deis_inputs (id_input, table_name, type, id, name, value, max_length, 
 173	form_deis_inputs	select	estado_seguimiento_3_meses	estado_seguimiento_3_meses							recien_nacido_muerto	datos_recien_nacido	col-sm-4 col-md-4	Estado de seguimiento a tres meses de edad	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:59:55	173	\N	\N	\N	\N	\N
 159	form_deis_inputs	select	resultado_1_examen_pcr_recien_nacido	resultado_1_examen_pcr_recien_nacido							recien_nacido_muerto	datos_recien_nacido	\N	Resultado  1° exámen de PCR recien nacido	\N	Exámenes VIH	\N	\N	2017-10-30 10:00:25	2017-11-02 15:12:55	158	\N	\N	\N	\N	\N
 178	form_deis_inputs	select	region	region							sin_examenes		\N	Región	\N	\N	\N	\N	2017-10-30 10:00:25	2017-10-30 14:15:14	178	\N	\N	\N	\N	\N
-3	form_deis_inputs	text	nombres_madre	nombres_madre			Ej: Nombre1 Nombre2				sin_examenes	identificacion_mujer	col-sm-6 col-md-6	Nombres	\N	\N	\N	\N	2017-10-30 10:00:24	2017-10-30 14:11:12	3	\N	\N	\N	\N	\N
 45	form_deis_inputs	select	estado_civil	estado_civil							sin_examenes	patologias_sifilis	col-sm-3 col-md-3	Estado Civil	\N	Datos Sociodemográficos	\N	\N	2017-10-30 10:00:25	2017-10-30 14:15:12	45	\N	\N	\N	\N	\N
 50	form_deis_inputs	number	nacidos_vivos_previos_embarazo	nacidos_vivos_previos_embarazo			Ej: 0				sin_examenes	patologias_sifilis	col-md-3 col-md-3	Nacidos vivos previo al embarazo	Antecedentes	\N	\N	\N	2017-10-30 10:00:25	2017-10-30 14:15:12	50	\N	\N	\N	\N	\N
 77	form_deis_inputs	select	vih_conocido_previa_embarazo	vih_conocido_previa_embarazo							sin_examenes	patologias_vih	col-sm-3 col-md-3	VIH conocido previa a este embarazo	Antecedentes	\N	\N	\N	2017-10-30 10:00:25	2017-10-30 14:15:12	77	\N	\N	\N	\N	\N
@@ -4781,6 +4814,7 @@ COPY form_deis_inputs (id_input, table_name, type, id, name, value, max_length, 
 144	form_deis_inputs	date	fecha_examen_treponemico_recien_nacido	fecha_examen_treponemico_recien_nacido			Ej: dd/mm/aaaa				recien_nacido_muerto	datos_recien_nacido	\N	Fecha examen treponémico del recién nacido	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:55:34	144	\N	\N	\N	\N	\N
 111	form_deis_inputs	number	peso_mujer_parto	peso_mujer_parto			Ej: 55				sin_examenes	datos_parto	col-md-offset-9 col-md-3	Peso de la mujer al parto (kg)	Tratamiento de VIH en el parto	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:11:45	111	\N	\N	\N	\N	\N
 133	form_deis_inputs	select	resultado_vdrl_periferico_recien_nacido	resultado_vdrl_periferico_recien_nacido							recien_nacido_muerto	datos_recien_nacido	col-sm-4 col-md-4	Resultado de VDRL periférico del recién nacido			\N	\N	2017-10-30 10:00:25	2017-11-02 14:52:24	133	\N	\N	\N	\N	\N
+3	form_deis_inputs	text	nombres_madre	nombres_madre		40	Ej: Nombre1 Nombre2				sin_examenes	identificacion_mujer	col-sm-6 col-md-6	Nombres	\N	\N	\N	\N	2017-10-30 10:00:24	2017-11-02 21:41:36	3	\N	\N	\N	\N	\N
 164	form_deis_inputs	select	diagnostico_final_vih_isp_recien_nacido	diagnostico_final_vih_isp_recien_nacido							recien_nacido_muerto	datos_recien_nacido	col-md-12	Diagnóstico Final (VIH) del Instituto de Salud Pública del Recién Nacido	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:58:24	164	\N	\N	\N	\N	\N
 168	form_deis_inputs	date	fecha_resultado_final_isp_examen_vih_recien_nacido	fecha_resultado_final_isp_examen_vih_recien_nacido			Ej: dd/mm/aaaa				recien_nacido_muerto	datos_recien_nacido	col-sm-6 col-md-6	Fecha Resultado Final ISP Examen VIH lactante	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:58:55	168	\N	\N	\N	\N	\N
 172	form_deis_inputs	select	estado_seguimiento_mes	estado_seguimiento_mes							recien_nacido_muerto	datos_recien_nacido	col-sm-4 col-md-4	Estado de seguimiento al mes de edad	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:59:37	172	\N	\N	\N	\N	\N
@@ -4797,7 +4831,6 @@ COPY form_deis_inputs (id_input, table_name, type, id, name, value, max_length, 
 15	form_deis_inputs	select	codigo_establecimiento_control_prenatal_embarazo	codigo_establecimiento_control_prenatal_embarazo							sin_examenes	control_embarazo	col-sm-3 col-md-3	Tipo de establecimiento prenatal		\N	\N	\N	2017-10-30 10:00:24	2017-11-02 14:30:45	15	\N	\N	\N	\N	\N
 38	form_deis_inputs	select	resultado_final_isp_examen_vih	resultado_final_isp_examen_vih							examenes_de_deteccion_de_vih	control_embarazo	col-sm-4 col-md-4	Resultado final ISP examen VIH	\N	Resultado de examen ISP	\N	\N	2017-10-30 10:00:25	2017-11-02 06:20:02	38	\N	\N	\N	\N	\N
 114	form_deis_inputs	date	fecha_inicio_farmaco_1_vih	fecha_inicio_farmaco_1_vih			Ej: dd/mm/aaaa				sin_examenes	datos_parto	col-sm-3 col-md-3	Fecha de inicio AZT	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 09:34:02	114	\N	\N	\N	\N	\N
-1	form_deis_inputs	text	run_madre	run_madre		3	Ej: 123456789				sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Run madre (Sin puntos ni guión)	Datos de identificación de la madre	\N		\N	2017-10-30 10:00:24	2017-11-02 13:28:57	1	\N	\N	\N	\N	\N
 132	form_deis_inputs	date	fecha_examen_vdrl_periferico_recien_nacido	fecha_examen_vdrl_periferico_recien_nacido			Ej: dd/mm/aaaa				recien_nacido_muerto	datos_recien_nacido	col-sm-4 col-md-4	Fecha de exámen  VDRL periférico del Recién nacido	Seguimiento RN de Sífilis	Examenes Sifilis	\N	\N	2017-10-30 10:00:25	2017-11-02 14:52:16	132	\N	\N	\N	\N	\N
 145	form_deis_inputs	select	resultado_examen_treponemico_parto	resultado_examen_treponemico_parto							recien_nacido_muerto	datos_recien_nacido	\N	Resultado examen treponémico	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:55:48	145	\N	\N	\N	\N	\N
 147	form_deis_inputs	date	fecha_inicio_sustituto_leche_materna	fecha_inicio_sustituto_leche_materna			Ej: dd/mm/aaaa				recien_nacido_muerto	datos_recien_nacido	col-sm-3 col-md-3	Fecha inicio Sustituto de Leche Materna	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:56:11	147	\N	\N	\N	\N	\N
@@ -4807,6 +4840,20 @@ COPY form_deis_inputs (id_input, table_name, type, id, name, value, max_length, 
 131	form_deis_inputs	select	sexo_recien_nacido	sexo_recien_nacido							sin_examenes	datos_recien_nacido	col-sm-2 col-md-2	Sexo Recién Nacido	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 17:28:58	131	\N	\N	\N	\N	\N
 167	form_deis_inputs	select	resultado_final_isp_examen_vih_recien_nacido	resultado_final_isp_examen_vih_recien_nacido							recien_nacido_muerto	datos_recien_nacido	col-sm-6 col-md-6	Resultado Final ISP Exámen VIH Recién nacido lactante	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 14:58:48	167	\N	\N	\N	\N	\N
 130	form_deis_inputs	select	estado_recien_nacido	estado_recien_nacido							recien_nacido_muerto	datos_recien_nacido	col-sm-2 col-md-2 col-md-offset-1	Estado del recién nacido	\N	\N	\N	\N	2017-10-30 10:00:25	2017-11-02 17:34:00	130	\N	\N	\N	\N	\N
+1	form_deis_inputs	text	run_madre	run_madre		9	Ej: 123456789				sin_examenes	identificacion_mujer	col-sm-3 col-md-3	Run madre (Sin puntos ni guión)	Datos de identificación de la madre	\N		\N	2017-10-30 10:00:24	2017-11-02 21:35:33	1	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- Data for Name: log_navigation; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY log_navigation (id_log_navigation, user_id, cod_establecimiento, user_name, user_email, page_path, ip, created_at, updated_at) FROM stdin;
+239	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-02 21:54:20	2017-11-02 21:54:20
+240	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-02 21:54:21	2017-11-02 21:54:21
+241	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_rut	10.0.2.15	2017-11-02 21:54:26	2017-11-02 21:54:26
+242	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-02 21:54:27	2017-11-02 21:54:27
+243	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario	10.0.2.15	2017-11-02 21:54:32	2017-11-02 21:54:32
 \.
 
 
@@ -5165,7 +5212,7 @@ COPY users (id, name, last_name, full_name, "position", establecimiento, rut, em
 -- Name: form_deis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('form_deis_id_seq', 239, true);
+SELECT pg_catalog.setval('form_deis_id_seq', 240, true);
 
 
 --
@@ -5173,6 +5220,13 @@ SELECT pg_catalog.setval('form_deis_id_seq', 239, true);
 --
 
 SELECT pg_catalog.setval('form_deis_inputs_id_input_seq', 184, true);
+
+
+--
+-- Name: log_navigation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('log_navigation_id_seq', 243, true);
 
 
 --
@@ -5196,6 +5250,14 @@ ALTER TABLE ONLY form_deis_inputs
 
 ALTER TABLE ONLY form_deis
     ADD CONSTRAINT form_deis_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: log_navigation log_navigations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY log_navigation
+    ADD CONSTRAINT log_navigations_pkey PRIMARY KEY (id_log_navigation);
 
 
 --
