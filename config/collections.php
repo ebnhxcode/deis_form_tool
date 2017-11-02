@@ -621,6 +621,13 @@ return [
          41=>41,42=>42
       ],
 
+      'prevision_madre' => [
+         'Isapre' => 'Isapre',
+         'FFAA' => 'FFAA',
+         'Fonasa' => 'Fonasa',
+         'Desconocido' => 'Desconocido',
+      ],
+
    ]
 
 

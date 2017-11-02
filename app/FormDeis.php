@@ -12,6 +12,7 @@ class FormDeis extends Model
    protected $fillable = [
       'estado_registro',
       'nombres_madre',
+      'prevision_madre',
       'primer_apellido_madre',
       'segundo_apellido_madre',
       'fecha_nacimiento_madre',
