@@ -27,10 +27,9 @@ class Authenticate
                 return redirect()->guest('login');
             }
         }
-        #$this->log_navigation();
+        $this->log_navigation();
         return $next($request);
     }
-    /*
     public function log_navigation () {
         #Aqui generamos la instancia
         $this->log['user_id'] = Auth::user()->id;
@@ -50,6 +49,5 @@ class Authenticate
         }
 
     }
-    */
 
 }

@@ -111,7 +111,7 @@
                                                        :disabled="i.disabled!=''?i.disabled:''"
                                                        :class="i.class!=''?i.class:'form-control'"
                                                        :type="i.type!=''?i.type:''"
-                                                       :max-length="i.max_length!=''?i.max_length:''"
+                                                       :maxlength="i.max_length!=''?i.max_length:''"
                                                        :required="i.required!=''?i.required:''"
                                                        :readonly="i.readonly!=''?i.readonly:''"
                                                        :style="i.style!=''?i.style:''"
