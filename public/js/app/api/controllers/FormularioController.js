@@ -37040,11 +37040,29 @@ var FormularioController = new _vue2.default({
                   }
                } else {
                   for (var _i2 in this.inputs) {
-                     if (input.seccion == this.inputs[_i2].seccion && input.name != this.inputs[_i2].name && (this.inputs[_i2].name != 'resultado_dilucion_1_vdrl_embarazo' && this.inputs[_i2].name != 'fecha_1_vdrl_embarazo' && this.inputs[_i2].name == 'eg_1_dvrl_embarazo' || this.fdc['resultado_1_vdrl_embarazo'] == 'Reactivo') && (this.inputs[_i2].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[_i2].name != 'fecha_2_vdrl_embarazo' && this.inputs[_i2].name == 'eg_2_dvrl_embarazo' || this.fdc['resultado_2_vdrl_embarazo'] == 'Reactivo') && (this.inputs[_i2].name != 'resultado_dilucion_3_vdrl_embarazo' && this.inputs[_i2].name != 'fecha_3_vdrl_embarazo' && this.inputs[_i2].name == 'eg_3_dvrl_embarazo' || this.fdc['resultado_3_vdrl_embarazo'] == 'Reactivo')) {
-                        if (this.fdc['acepta_rechaza_toma_examen_vih'] == 'Acepta' || this.fdc['acepta_rechaza_toma_examen_vih'] == 'Rechaza' || this.fdc['acepta_rechaza_toma_examen_vih'] == null || this.inputs[_i2].bloque == input.bloque /*&& this.fdc['acepta_rechaza_toma_examen_vih'] == 'Rechaza'*/) {
+                     if (input.seccion == this.inputs[_i2].seccion && input.name != this.inputs[_i2].name)
+
+                        /*
+                        &&
+                           (
+                              (this.inputs[i].name != 'resultado_dilucion_1_vdrl_embarazo' && this.inputs[i].name != 'fecha_1_vdrl_embarazo'
+                              && this.inputs[i].name == 'eg_1_dvrl_embarazo' ||
+                              this.fdc['resultado_1_vdrl_embarazo'] == 'Reactivo' ) &&
+                              (this.inputs[i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[i].name != 'fecha_2_vdrl_embarazo'
+                              && this.inputs[i].name == 'eg_2_dvrl_embarazo' ||
+                              this.fdc['resultado_2_vdrl_embarazo'] == 'Reactivo' ) &&
+                              (this.inputs[i].name != 'resultado_dilucion_3_vdrl_embarazo' && this.inputs[i].name != 'fecha_3_vdrl_embarazo'
+                              && this.inputs[i].name == 'eg_3_dvrl_embarazo' ||
+                              this.fdc['resultado_3_vdrl_embarazo'] == 'Reactivo')
+                            )
+                        )*/
+                        {
+                           //if (this.fdc['acepta_rechaza_toma_examen_vih'] == 'Acepta' ||
+                           //this.fdc['acepta_rechaza_toma_examen_vih'] == 'Rechaza' ||
+                           //this.fdc['acepta_rechaza_toma_examen_vih'] == null ||
+                           //(this.inputs[i].bloque == input.bloque /*&& this.fdc['acepta_rechaza_toma_examen_vih'] == 'Rechaza'*/) ){
                            this.inputs[_i2].disabled = null;
                         }
-                     }
                   }
                }
 

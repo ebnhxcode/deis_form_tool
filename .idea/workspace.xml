@@ -62,8 +62,8 @@
       <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.5154471">
-              <caret line="813" column="26" selection-start-line="813" selection-start-column="26" selection-end-line="813" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.58699185">
+              <caret line="476" column="79" selection-start-line="476" selection-start-column="79" selection-end-line="476" selection-end-column="79" />
               <folding>
                 <element signature="e#1391#1762#0" expanded="false" />
                 <element signature="e#1781#2140#0" expanded="false" />
@@ -72,20 +72,20 @@
                 <element signature="e#3295#3722#0" expanded="false" />
                 <element signature="e#3742#4175#0" expanded="false" />
                 <element signature="e#18100#18363#0" expanded="false" />
-                <element signature="e#23901#24260#0" expanded="false" />
-                <element signature="e#24280#24639#0" expanded="false" />
-                <element signature="e#26407#27742#0" expanded="false" />
-                <element signature="e#28009#28071#0" expanded="false" />
-                <element signature="e#28363#28425#0" expanded="false" />
-                <element signature="e#28542#28786#0" expanded="false" />
-                <element signature="e#28806#29050#0" expanded="false" />
-                <element signature="e#38723#38952#0" expanded="false" />
-                <element signature="e#38966#39195#0" expanded="false" />
-                <element signature="e#39897#40112#0" expanded="false" />
-                <element signature="e#40126#40341#0" expanded="false" />
-                <marker date="1509650142609" expanded="true" signature="2680:3147" placeholder="..." />
-                <marker date="1509650142609" expanded="true" signature="3410:3570" placeholder="..." />
-                <marker date="1509650142609" expanded="true" signature="3861:4021" placeholder="..." />
+                <element signature="e#23932#24291#0" expanded="false" />
+                <element signature="e#24311#24670#0" expanded="false" />
+                <element signature="e#26438#27773#0" expanded="false" />
+                <element signature="e#28040#28102#0" expanded="false" />
+                <element signature="e#28394#28456#0" expanded="false" />
+                <element signature="e#28573#28817#0" expanded="false" />
+                <element signature="e#28837#29081#0" expanded="false" />
+                <element signature="e#38754#38983#0" expanded="false" />
+                <element signature="e#38997#39226#0" expanded="false" />
+                <element signature="e#39928#40143#0" expanded="false" />
+                <element signature="e#40157#40372#0" expanded="false" />
+                <marker date="1509650824363" expanded="true" signature="2680:3147" placeholder="..." />
+                <marker date="1509650824363" expanded="true" signature="3410:3570" placeholder="..." />
+                <marker date="1509650824363" expanded="true" signature="3861:4021" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -273,8 +273,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -415,7 +415,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="8" width="1360" height="761" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19338235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -815,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5154471">
-          <caret line="813" column="26" selection-start-line="813" selection-start-column="26" selection-end-line="813" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.58699185">
+          <caret line="476" column="79" selection-start-line="476" selection-start-column="79" selection-end-line="476" selection-end-column="79" />
           <folding>
             <element signature="e#1391#1762#0" expanded="false" />
             <element signature="e#1781#2140#0" expanded="false" />
@@ -825,20 +825,20 @@
             <element signature="e#3295#3722#0" expanded="false" />
             <element signature="e#3742#4175#0" expanded="false" />
             <element signature="e#18100#18363#0" expanded="false" />
-            <element signature="e#23901#24260#0" expanded="false" />
-            <element signature="e#24280#24639#0" expanded="false" />
-            <element signature="e#26407#27742#0" expanded="false" />
-            <element signature="e#28009#28071#0" expanded="false" />
-            <element signature="e#28363#28425#0" expanded="false" />
-            <element signature="e#28542#28786#0" expanded="false" />
-            <element signature="e#28806#29050#0" expanded="false" />
-            <element signature="e#38723#38952#0" expanded="false" />
-            <element signature="e#38966#39195#0" expanded="false" />
-            <element signature="e#39897#40112#0" expanded="false" />
-            <element signature="e#40126#40341#0" expanded="false" />
-            <marker date="1509650142609" expanded="true" signature="2680:3147" placeholder="..." />
-            <marker date="1509650142609" expanded="true" signature="3410:3570" placeholder="..." />
-            <marker date="1509650142609" expanded="true" signature="3861:4021" placeholder="..." />
+            <element signature="e#23932#24291#0" expanded="false" />
+            <element signature="e#24311#24670#0" expanded="false" />
+            <element signature="e#26438#27773#0" expanded="false" />
+            <element signature="e#28040#28102#0" expanded="false" />
+            <element signature="e#28394#28456#0" expanded="false" />
+            <element signature="e#28573#28817#0" expanded="false" />
+            <element signature="e#28837#29081#0" expanded="false" />
+            <element signature="e#38754#38983#0" expanded="false" />
+            <element signature="e#38997#39226#0" expanded="false" />
+            <element signature="e#39928#40143#0" expanded="false" />
+            <element signature="e#40157#40372#0" expanded="false" />
+            <marker date="1509650824363" expanded="true" signature="2680:3147" placeholder="..." />
+            <marker date="1509650824363" expanded="true" signature="3410:3570" placeholder="..." />
+            <marker date="1509650824363" expanded="true" signature="3861:4021" placeholder="..." />
           </folding>
         </state>
       </provider>
