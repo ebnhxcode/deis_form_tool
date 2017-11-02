@@ -13,9 +13,49 @@
 
 #Route::get('/', function () {return view('welcome');});
 
+Route::get('/register', function () { return redirect()->to('/login'); });
+Route::get('/registro', 'Auth\AuthController@register');
+
 Route::auth();
 
+/*
+Route::get('/testapi', function () {
 
+   #https://api.minsal.cl
+   $url = 'http://api.minsal.cl/oauth/token';
+   $data = array('grant_type' => 'client_credentials');
+
+   #$client_id = "<<Client ID entregado>>";
+   #$client_secret = "<<Secret entregado>>";
+   #$str_base64 = base64_encode($client_id.':'.$client_secret);
+   $str_base64 = 'OVRTZzMwMDBVaVBvVkE4NVZqQ3N0MjFuam5EUFExNFM6UkpZRm1ITzB4SUNKNVQ2Zg==';
+
+   $options = array(
+      'http' => array(
+         'header'  => "Content-type: application/x-www-form-urlencoded\r\n".
+         "Authorization: Basic ".$str_base64,
+         'method'  => 'POST',
+         'content' => http_build_query($data)
+      ),
+      #'SSL' => array(
+         #'verify_peer' => false,
+         #'verify_peer_name' => false,
+         #'allow_self_signed' => true,
+         #'cafile' => 'C:/wamp/certificates/cacert.pem'
+      #)
+   );
+
+   $context  = stream_context_create($options);
+   $result = file_get_contents($url, false, $context);
+   if ($result === FALSE) {
+      # error
+   }
+   $authObj = json_decode($result);
+   $accessToken = $authObj->accessToken;
+   // echo "TOKEN ".$accessToken;
+   return $accessToken;
+});
+*/
 
 Route::get('/formulario/testapi', 'FormDeisController@testapi');
 
