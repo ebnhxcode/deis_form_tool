@@ -108,6 +108,7 @@
                                              <dd v-if="inputInArray(i,inputTypes.basics)">
                                                 <input :name="i.name"
                                                        :id="i.id"
+                                                       :disabled="i.disabled!=''?i.disabled:''"
                                                        :class="i.class!=''?i.class:'form-control'"
                                                        :type="i.type!=''?i.type:''"
                                                        :max-length="i.max_length!=''?i.max_length:''"
@@ -116,7 +117,7 @@
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
                                                        :readonly="i.readonly!=''?i.readonly:''"
-                                                       @change.prevent="verifica_validacion(i)"
+                                                       @change.prevent="verifica_validacion_change(i)"
                                                        v-model="fdc[i.name]">
                                              </dd>
 
@@ -124,6 +125,7 @@
                                              <dd v-else-if="inputInArray(i,inputTypes.select)">
                                                 <select :name="i.name"
                                                         :id="i.id"
+                                                        :disabled="i.disabled!=''?i.disabled:''"
                                                         :class="i.class!=''?i.class:'form-control'"
                                                         :required="i.required!=''?i.required:''"
                                                         :readonly="i.readonly!=''?i.readonly:''"
@@ -132,7 +134,8 @@
                                                         :readonly="i.readonly!=''?i.readonly:''"
                                                         :value="fdc[i.name]"
                                                         v-model="fdc[i.name]"
-                                                        @change.prevent="verifica_validacion(i)">
+                                                        @change.prevent="verifica_validacion_change(i)"
+                                                        @click.prevent="verifica_validacion_click(i)">
 
                                                    <option value="">Seleccione</option>
                                                    <option v-for="o,i in deis_form_table_options[i.name]" :value="i">
@@ -146,6 +149,7 @@
                                              <dd v-else-if="inputInArray(i,inputTypes.textarea)">
                                              <textarea :name="i.name"
                                                        :id="i.id"
+                                                       :disabled="i.disabled!=''?i.disabled:''"
                                                        class="form-control"
                                                        v-model="fdc[i.name]">
                                              </textarea>
@@ -196,13 +200,18 @@
          </div><!-- col-md-* -->
       </div><!-- .row -->
    </div><!-- .container -->
+
    <script>
-      jQuery( function ($) {
+      /*
+      $(document).ready(function(){
          $('#lugar_atencion_parto').select2();
          $('#pais_origen').select2();
       });
+      */
    </script>
+
 @endsection
+
 
 @section('VueControllers')
    {!!Html::script('js/app/api/controllers/FormularioController.js')!!}

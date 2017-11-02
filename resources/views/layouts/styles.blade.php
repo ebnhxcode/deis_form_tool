@@ -270,7 +270,7 @@
      Coded by /u/j0be in scss.
      See scss source here -> https://codepen.io/j0be/pen/MKRVyN
   */
-   body { padding: .5em; /*text-align: center;*/ }
+   /*body { padding: .5em; text-align: center; }*/
    h1 { margin-bottom: 1em; }
    .circle-loader {
       margin: 0 0 10px 10px;

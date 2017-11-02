@@ -446,25 +446,43 @@ const FormularioController = new Vue({
    methods: {
       //camelCase() => for specific functions
 
-      verifica_validacion: function (input) {
+      verifica_validacion_change: function (input) {
          switch (input.id) {
             case 'embarazo_con_control_parental':
                if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
                   for (let i in this.inputs){
                      if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
-                        this.inputs[i].readonly = true;
+                        this.inputs[i].disabled = true;
                      }
                   }
                }else{
                   for (let i in this.inputs){
                      if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
-                        this.inputs[i].readonly = null;
+                        this.inputs[i].disabled = null;
                      }
                   }
                }
                break;
+            case 'resultado_2_vdrl_embarazo':
+               if (this.fdc[input.name] == 'No Reactivo' || this.fdc[input.name] == 'No Realizado') {
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[i].name == 'fecha_2_vdrl_embarazo') {
+                        this.inputs[i].disabled = true;
+                        this.inputs[i].disabled = true;
+                     }
+                  }
+               }
+
+               break;
          }
 
+      },
+      verifica_validacion_click: function (input) {
+         switch (input.id) {
+            case 'pais_origen':
+
+               break;
+         }
       },
 
       buscar_formulario: function () {
@@ -565,7 +583,7 @@ const FormularioController = new Vue({
 
       validar_validaciones_previas: function () {
          for (let i in this.inputs) {
-            this.verifica_validacion(this.inputs[i]);
+            this.verifica_validacion_change(this.inputs[i]);
          }
       },
       //with_dash() => for explained specific functions

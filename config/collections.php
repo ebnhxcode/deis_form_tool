@@ -66,11 +66,6 @@ return [
          'Desconocido'=>'Desconocido',
       ],
 
-      'lugar_control_prenatal' => [
-         '100025'=>'Hospital San Juan De Dios',
-         '100026'=>'Otro',
-      ],
-
       'acepta_rechaza_toma_examen_vih' => [
          'Acepta' => 'Acepta',
          'Rechaza' => 'Rechaza',

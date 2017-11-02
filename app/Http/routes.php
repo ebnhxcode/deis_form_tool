@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+#Route::get('/', function () {return view('welcome');});
 
 Route::auth();
 
@@ -26,6 +24,15 @@ Route::get ('/formulario/datos_formulario' , 'FormDeisController@datos_formulari
 Route::get ('/formulario/inputs_formulario' , 'FormDeisController@inputs_formulario') ;
 
 Route::get ('/formulario/transmision_vertical' , 'FormDeisController@create') ;
+Route::get ('/formulario/create' , 'FormDeisController@create') ;
+Route::get ('/formulario/new' , 'FormDeisController@create') ;
+Route::get ('/formulario/' , 'FormDeisController@create') ;
+Route::get ('/plataforma/' , 'FormDeisController@create') ;
+Route::get ('/plataforma' , 'FormDeisController@create') ;
+Route::get ('/deis' , 'FormDeisController@create') ;
+Route::get ('/home' , 'FormDeisController@create') ;
+Route::get ('/' , 'FormDeisController@create') ;
+
 Route::resource ('/formulario' , 'FormDeisController') ;
 
 Route::post ('/input/add/label' , 'InputController@addLabelToInput') ;

@@ -28,6 +28,7 @@ class FormDeisController extends Controller {
     }
 
     public function index (Request $request) {
+        return $this->create($request);
         $returnData=[];
         return view('formulario.index', $returnData);
     }
@@ -46,6 +47,7 @@ class FormDeisController extends Controller {
             $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
             $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais', 'id_pais')];
             $returnData['deis_form_table_options'] += ['lugar_atencion_parto' => Establecimiento::pluck('nombre_establecimiento', 'id_establecimiento')];
+            $returnData['deis_form_table_options'] += ['lugar_control_prenatal' => Establecimiento::pluck('nombre_establecimiento', 'id_establecimiento')];
             return response()->json($returnData);
         }
     }
@@ -88,6 +90,8 @@ class FormDeisController extends Controller {
 
             $form_deis = FormDeis::find($formData['_id_formulario']);
             $formData['_id_formulario'] = null;
+
+
 
             foreach ($formData as $key => $d)
                 if ($d) $fd[$key] = $d;
