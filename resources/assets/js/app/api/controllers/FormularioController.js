@@ -543,7 +543,7 @@ const FormularioController = new Vue({
             this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             this.deis_form_table_options = response.body.deis_form_table_options;
             this.pais_origen = response.body.pais_origen;
-            //this.validar_validaciones_previas();
+            this.validar_validaciones_previas();
          }, response => { // error callback
             console.log('Error datos_formulario: '+response);
          });

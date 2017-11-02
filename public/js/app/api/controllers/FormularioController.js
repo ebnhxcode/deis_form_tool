@@ -37130,7 +37130,7 @@ var FormularioController = new _vue2.default({
             _this4.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this4.deis_form_table_options = response.body.deis_form_table_options;
             _this4.pais_origen = response.body.pais_origen;
-            //this.validar_validaciones_previas();
+            _this4.validar_validaciones_previas();
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
