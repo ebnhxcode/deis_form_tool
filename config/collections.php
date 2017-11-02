@@ -157,7 +157,7 @@ return [
       'tratamiento_sifilis_farmaco' => [
          'Penicilina Benzatina' => 'Penicilina Benzatina',
          'Penicilina Sodica' => 'Penicilina Sodica',
-         'Penicilina Sodica Mas' => 'Penicilina Sodica Mas',
+         'Penicilina Sodica Mas Benzatina' => 'Penicilina Sodica Mas Benzatina',
          'Otro Antibiotico' => 'Otro Antibiotico',
       ],
 

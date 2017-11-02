@@ -493,14 +493,12 @@ const FormularioController = new Vue({
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'resultado_dilucion_1_vdrl_embarazo' || this.inputs[i].name == 'fecha_1_vdrl_embarazo') {
                         this.inputs[i].disabled = true;
-                        this.inputs[i].disabled = true;
                      }
                   }
                }
                else{
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'resultado_dilucion_1_vdrl_embarazo' || this.inputs[i].name == 'fecha_1_vdrl_embarazo') {
-                        this.inputs[i].disabled = null;
                         this.inputs[i].disabled = null;
                      }
                   }
@@ -512,14 +510,12 @@ const FormularioController = new Vue({
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[i].name == 'fecha_2_vdrl_embarazo') {
                         this.inputs[i].disabled = true;
-                        this.inputs[i].disabled = true;
                      }
                   }
                }
                else{
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[i].name == 'fecha_2_vdrl_embarazo') {
-                        this.inputs[i].disabled = null;
                         this.inputs[i].disabled = null;
                      }
                   }
@@ -531,14 +527,12 @@ const FormularioController = new Vue({
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'resultado_dilucion_3_vdrl_embarazo' || this.inputs[i].name == 'fecha_3_vdrl_embarazo') {
                         this.inputs[i].disabled = true;
-                        this.inputs[i].disabled = true;
                      }
                   }
                }
                else{
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'resultado_dilucion_3_vdrl_embarazo' || this.inputs[i].name == 'fecha_3_vdrl_embarazo') {
-                        this.inputs[i].disabled = null;
                         this.inputs[i].disabled = null;
                      }
                   }
@@ -570,14 +564,12 @@ const FormularioController = new Vue({
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'fecha_1_examen_vih_embarazo') {
                         this.inputs[i].disabled = true;
-                        this.inputs[i].disabled = true;
                      }
                   }
                }
                else {
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'fecha_1_examen_vih_embarazo') {
-                        this.inputs[i].disabled = null;
                         this.inputs[i].disabled = null;
                      }
                   }
@@ -590,14 +582,12 @@ const FormularioController = new Vue({
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'fecha_2_examen_vih_embarazo') {
                         this.inputs[i].disabled = true;
-                        this.inputs[i].disabled = true;
                      }
                   }
                }
                else {
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'fecha_2_examen_vih_embarazo') {
-                        this.inputs[i].disabled = null;
                         this.inputs[i].disabled = null;
                      }
                   }
@@ -644,6 +634,50 @@ const FormularioController = new Vue({
                      break;
                }
                break;
+
+            case 'nacidos_vivos_previos_embarazo':
+            case 'nacidos_muertos_previos_embarazo':
+            case 'abortos_previos_embarazo':
+               if (parseInt(this.fdc[input.name]) > 10 || parseInt(this.fdc[input.name]) < 0) {
+                  this.fdc[input.name] = 0;
+               }
+               break;
+
+
+            case 'numero_contactos_sexuales_declarados':
+            case 'numero_contactos_sexuales_estudiados':
+            case 'numero_contactos_sexuales_tratados':
+               if (parseInt(this.fdc[input.name]) < 0) {
+                  this.fdc[input.name] = 0;
+               }
+               break;
+
+            case 'sifilis_previa_embarazo':
+               if (this.fdc[input.name] == 'No') {
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'ano_sifilis_previa_embarazo') {
+                        this.inputs[i].disabled = true;
+                     }
+                  }
+               }
+               else{
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'ano_sifilis_previa_embarazo') {
+                        this.inputs[i].disabled = null;
+                     }
+                  }
+               }
+
+
+               break;
+            case 'ano_sifilis_previa_embarazo':
+               var d = new Date();
+               var y = d.getFullYear();
+               if (parseInt(this.fdc[input.name]) < 0 || parseInt(this.fdc[input.name]) > y || parseInt(this.fdc[input.name]) < 1920{
+                  this.fdc[input.name] = 0;
+               }
+               break;
+
             default:
 
 
