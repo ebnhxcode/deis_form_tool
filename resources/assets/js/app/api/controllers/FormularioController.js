@@ -447,6 +447,8 @@ const FormularioController = new Vue({
       //camelCase() => for specific functions
 
       verifica_validacion_change: function (input) {
+
+
          switch (input.id) {
             case 'embarazo_con_control_parental':
                if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
@@ -532,9 +534,34 @@ const FormularioController = new Vue({
                }
 
                break;
-         }
+            default:
 
+
+
+
+               break;
+         }
+         //Validaciones latentes
+         if (
+            (this.fdc['resultado_1_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_vdrl_embarazo'] == 'No Realizado') &&
+            (this.fdc['resultado_2_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_vdrl_embarazo'] == 'No Realizado') &&
+            (this.fdc['resultado_3_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_3_vdrl_embarazo'] == 'No Realizado')
+         ) {
+            for (let i in this.inputs){
+               if (this.inputs[i].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
+                  this.inputs[i].disabled = true;
+               }
+            }
+         }
+         else{
+            for (let i in this.inputs){
+               if (this.inputs[i].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
+                  this.inputs[i].disabled = null;
+               }
+            }
+         }
       },
+
       verifica_validacion_click: function (input) {
          switch (input.id) {
             case 'pais_origen':
