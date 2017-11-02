@@ -472,7 +472,12 @@ const FormularioController = new Vue({
                            this.fdc['resultado_3_vdrl_embarazo'] == 'Reactivo')
                         )
                      ) {
-                        this.inputs[i].disabled = null;
+                        if (this.fdc['acepta_rechaza_toma_examen_vih'] == 'Acepta' ||
+                        this.fdc['acepta_rechaza_toma_examen_vih'] == 'Rechaza' ||
+                        this.fdc['acepta_rechaza_toma_examen_vih'] == null ||
+                           (this.inputs[i].bloque == input.bloque /*&& this.fdc['acepta_rechaza_toma_examen_vih'] == 'Rechaza'*/) ){
+                           this.inputs[i].disabled = null;
+                        }
                      }
                   }
                }
@@ -548,7 +553,7 @@ const FormularioController = new Vue({
                   for (let i in this.inputs){
                      //Aqui agregar la validacion del bloque para que no se lo pase de largo
                      if (input.bloque == this.inputs[i].bloque && input.name != this.inputs[i].name) {
-                        this.inputs[i].disabled = false;
+                        this.inputs[i].disabled = null;
                      }
                   }
                }

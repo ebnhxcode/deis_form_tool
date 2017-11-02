@@ -82,6 +82,7 @@ return [
       'derivada_a_especialidades_embarazo' => [
          'Si' => 'Si',
          'No' => 'No',
+         'No Corresponde' => 'No Corresponde',
       ],
 
       'estado_civil' => [
