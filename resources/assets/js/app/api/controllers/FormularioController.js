@@ -458,7 +458,8 @@ const FormularioController = new Vue({
                }else{
                   for (let i in this.inputs){
                      if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name
-                     && this.inputs[i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[i].name != 'fecha_2_vdrl_embarazo' ) {
+                     && ((this.inputs[i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[i].name != 'fecha_2_vdrl_embarazo')
+                     || this.fdc['resultado_2_vdrl_embarazo'] == 'Reactivo') ) {
                         this.inputs[i].disabled = null;
                      }
                   }

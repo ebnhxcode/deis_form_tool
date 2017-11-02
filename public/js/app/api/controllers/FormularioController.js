@@ -37038,7 +37038,7 @@ var FormularioController = new _vue2.default({
                   }
                } else {
                   for (var _i in this.inputs) {
-                     if (input.seccion == this.inputs[_i].seccion && input.name != this.inputs[_i].name && this.inputs[_i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[_i].name != 'fecha_2_vdrl_embarazo') {
+                     if (input.seccion == this.inputs[_i].seccion && input.name != this.inputs[_i].name && (this.inputs[_i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[_i].name != 'fecha_2_vdrl_embarazo' || this.fdc['resultado_2_vdrl_embarazo'] == 'Reactivo')) {
                         this.inputs[_i].disabled = null;
                      }
                   }
