@@ -37121,21 +37121,57 @@ var FormularioController = new _vue2.default({
                }
 
                break;
+            case 'resultado_1_examen_vih_embarazo':
+               if (this.fdc[input.name] == 'No Realizado') {
+                  for (var _i10 in this.inputs) {
+                     if (this.inputs[_i10].name == 'fecha_1_examen_vih_embarazo') {
+                        this.inputs[_i10].disabled = true;
+                        this.inputs[_i10].disabled = true;
+                     }
+                  }
+               } else {
+                  for (var _i11 in this.inputs) {
+                     if (this.inputs[_i11].name == 'fecha_1_examen_vih_embarazo') {
+                        this.inputs[_i11].disabled = null;
+                        this.inputs[_i11].disabled = null;
+                     }
+                  }
+               }
+
+               break;
+            case 'resultado_2_examen_vih_embarazo':
+               if (this.fdc[input.name] == 'No Realizado') {
+                  for (var _i12 in this.inputs) {
+                     if (this.inputs[_i12].name == 'fecha_2_examen_vih_embarazo') {
+                        this.inputs[_i12].disabled = true;
+                        this.inputs[_i12].disabled = true;
+                     }
+                  }
+               } else {
+                  for (var _i13 in this.inputs) {
+                     if (this.inputs[_i13].name == 'fecha_2_examen_vih_embarazo') {
+                        this.inputs[_i13].disabled = null;
+                        this.inputs[_i13].disabled = null;
+                     }
+                  }
+               }
+
+               break;
             default:
 
                break;
          }
          //Validaciones latentes
          if ((this.fdc['resultado_1_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_2_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_3_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_3_vdrl_embarazo'] == 'No Realizado')) {
-            for (var _i10 in this.inputs) {
-               if (this.inputs[_i10].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
-                  this.inputs[_i10].disabled = true;
+            for (var _i14 in this.inputs) {
+               if (this.inputs[_i14].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
+                  this.inputs[_i14].disabled = true;
                }
             }
          } else {
-            for (var _i11 in this.inputs) {
-               if (this.inputs[_i11].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
-                  this.inputs[_i11].disabled = null;
+            for (var _i15 in this.inputs) {
+               if (this.inputs[_i15].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
+                  this.inputs[_i15].disabled = null;
                }
             }
          }

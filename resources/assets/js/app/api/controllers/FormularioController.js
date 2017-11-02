@@ -560,6 +560,46 @@ const FormularioController = new Vue({
 
 
                break;
+            case 'resultado_1_examen_vih_embarazo':
+               if (this.fdc[input.name] == 'No Realizado') {
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'fecha_1_examen_vih_embarazo') {
+                        this.inputs[i].disabled = true;
+                        this.inputs[i].disabled = true;
+                     }
+                  }
+               }
+               else {
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'fecha_1_examen_vih_embarazo') {
+                        this.inputs[i].disabled = null;
+                        this.inputs[i].disabled = null;
+                     }
+                  }
+               }
+
+
+               break;
+            case 'resultado_2_examen_vih_embarazo':
+               if (this.fdc[input.name] == 'No Realizado') {
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'fecha_2_examen_vih_embarazo') {
+                        this.inputs[i].disabled = true;
+                        this.inputs[i].disabled = true;
+                     }
+                  }
+               }
+               else {
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'fecha_2_examen_vih_embarazo') {
+                        this.inputs[i].disabled = null;
+                        this.inputs[i].disabled = null;
+                     }
+                  }
+               }
+
+
+               break;
             default:
 
 
