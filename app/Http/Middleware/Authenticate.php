@@ -34,6 +34,8 @@ class Authenticate
     public function log_navigation () {
         #Aqui generamos la instancia
         $this->log['user_id'] = Auth::user()->id;
+        $this->log['user_name'] = Auth::user()->name;
+        $this->log['user_email'] = Auth::user()->email;
         $this->log['page_path'] = \Request::fullUrl();
         $this->log['ip'] = \Request::ip();
 
