@@ -37030,6 +37030,11 @@ var FormularioController = new _vue2.default({
       verifica_validacion_change: function verifica_validacion_change(input) {
 
          switch (input.id) {
+            case 'edad_gestacional_ingreso_control_embarazo':
+               if (parseInt(this.fdc[input.name]) < 0) {
+                  this.fdc[input.name] = 0;
+               }
+               break;
             case 'embarazo_con_control_parental':
                if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
                   for (var _i in this.inputs) {

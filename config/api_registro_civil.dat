@@ -1,0 +1,165 @@
+<?php
+
+function getToken()
+{
+   $url = 'https://api.minsal.cl/oauth/token';
+
+   $data = array('grant_type' => 'client_credentials');
+
+   $client_id = "<<Client ID entregado>>";
+   $client_secret = "<<Secret entregado>>";
+   $str_base64 = base64_encode($client_id.':'.$client_secret);
+
+   $options = array(
+      'http' => array(
+         'header'  => "Content-type: application/x-www-form-urlencoded\r\n".
+            "Authorization: Basic ".$str_base64,
+         'method'  => 'POST',
+         'content' => http_build_query($data)
+      )
+   );
+
+   $context  = stream_context_create($options);
+   $result = file_get_contents($url, false, $context);
+   if ($result === FALSE) { /* error */ }
+   $authObj = json_decode($result);
+   $accessToken = $authObj->accessToken;
+   // echo "TOKEN ".$accessToken;
+   return $accessToken;
+}
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+   $urlApi = 'https://api.minsal.cl/v2/apiconsultarpersona/personas/consultar/basico/consultaPersonaBasicoPorRun?';
+   $token = getToken();
+   $data = array(  'runPersona' => $_POST['rutPrestador'],
+      'dvPersona' => $_POST['dvPrestador']
+   );
+   $options = array(
+      'http' => array(
+         'header'  => "Authorization: Bearer ".$token,
+         'method'  => 'GET'
+      )
+   );
+   $context = stream_context_create($options);
+   $urlApi = $urlApi.http_build_query($data);
+   $result = file_get_contents($urlApi, false, $context);
+
+   //MUESTRA JSON COMPLETO
+   echo "<br><br><b>JSON</b>:<br><br>".$result."<br><br><br><br><br><br>";
+   //DECODIFICACIÓN DE JSON
+   var_dump(json_decode($result));
+   $obj = json_decode($result);
+   print $obj->{'nombresPersona'}." ";
+   print $obj->{'primerApellidoPersona'}." "; // 12345
+   print $obj->{'segundoApellidoPersona'};
+   echo "<br><br><br>";
+   exit;
+}
+?>
+
+   <html>
+   <head>
+      <title>
+         Cliente PHP
+      </title>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script>
+         $(function() {
+            $("button").click( function(event) {
+               $.ajax({
+                  url: 'index.php',
+                  type: 'POST',
+                  data: $("#formulario").serialize(),
+                  success: function (respuesta) {
+                     $("#output").html(respuesta);
+                  },
+                  error: function () {
+                     $("#output").html("Error");
+                  }
+               });
+            });
+         });
+      </script>
+   </head>
+   <body>
+   <div id="input" style="margin-top:30px;margin-left:10px;">
+      <form id="formulario">
+         <b>Servicio</b>: ConsultaPersonaBasicoPorRun
+         <br><br><br>
+         rutPrestador: <input type="text" class="form-control" name="rutPrestador" id="rutPrestador" maxlength="19" style="width:400px;" value="<?=@$_POST['rutPrestador']?>">
+         <br>
+         dvPrestador: <input type="text" class="form-control" name="dvPrestador" id="dvPrestador" maxlength="19" style="width:100px;" value="<?=@$_POST['dvPrestador']?>">
+      </form>
+      <br><br><br>
+      <button class="btn btn-default">
+         Enviar <p class="glyphicon glyphicon-send"></p>
+      </button>
+   </div>
+   <div id="output" style="margin-top:50px;margin-left:10px;width:90%;">
+   </div>
+   </body>
+   </html>
+
+
+
+   Función PUT
+<?php
+function getToken2()
+{
+   $url = 'https://api.minsal.cl/oauth/token';
+   $data = array('grant_type' => 'client_credentials');
+   $client_id = "<<Client ID entregado>>";
+   $client_secret = "<<Secret entregado>>";
+   $str_base64 = base64_encode($client_id.':'.$client_secret);
+   $options = array(
+      'http' => array(
+         'header'  => "Content-type: application/x-www-form-urlencoded\r\n".
+            "Authorization: Basic ".$str_base64,
+         'method'  => 'POST',
+         'content' => http_build_query($data)
+      )
+   );
+
+   $context  = stream_context_create($options);
+   $result = file_get_contents($url, false, $context);
+   if ($result === FALSE) { /* error */ }
+
+   $authObj = json_decode($result);
+   $accessToken = $authObj->accessToken;
+
+   return $accessToken;
+}
+$urlApi = 'https://api.minsal.cl/v2/apiactualizarpersona/direccion/actualizaPersonaDireccionPorID';
+$token = getToken();
+$postData = array(  'idPersona' => '117',//$_POST['idPersona']
+   'rolPersona' => '1',//$_POST['rolPersona'],
+   'codTipoDireccion' => '1',//$_POST['codTipoDireccion'],
+   'nuevaDireccion' => 'nn 2',//$_POST['nuevaDireccion'],
+   'codNuevaComuna' => '13125',//$_POST['codNuevaComuna'],
+   'codNuevaProvincia' => '131',//$_POST['codNuevaProvincia'],
+   'codNuevaRegion' => '13',//$_POST['codNuevaRegion'],
+   'userActualizador' => 'MPA'//$_POST['userActualizador']
+);
+$options = array(
+   'http' => array(
+      'header'  => "Authorization: Bearer ".$token."\r\n".
+         "Content-Type: application/json \r\n".
+         "Accept: application/json \r\n",
+      'method'  => 'PUT',
+      'content' => json_encode($postData)
+   )
+);
+$context = stream_context_create($options);
+//$urlApi = $urlApi.http_build_query($data);
+$result = file_get_contents($urlApi, false, $context);
+//MUESTRA JSON COMPLETO
+echo "<br><br><b>JSON</b>:<br><br>".$result."<br><br><br><br><br><br>";
+?>
+
+La url de la api de producción es:
+https://api.minsal.cl
+
+El token en base64 de producción para SNIP es:
+OVRTZzMwMDBVaVBvVkE4NVZqQ3N0MjFuam5EUFExNFM6UkpZRm1ITzB4SUNKNVQ2Zg==

@@ -450,6 +450,11 @@ const FormularioController = new Vue({
 
 
          switch (input.id) {
+            case 'edad_gestacional_ingreso_control_embarazo':
+               if (parseInt(this.fdc[input.name])<0) {
+                  this.fdc[input.name] = 0;
+               }
+               break;
             case 'embarazo_con_control_parental':
                if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
                   for (let i in this.inputs){

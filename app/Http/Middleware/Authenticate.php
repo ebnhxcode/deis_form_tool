@@ -4,9 +4,12 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use App\LogNavigation;
+use Carbon\Carbon;
 
 class Authenticate
 {
+    private $log = [];
     /**
      * Handle an incoming request.
      *
@@ -24,7 +27,27 @@ class Authenticate
                 return redirect()->guest('login');
             }
         }
-
+        #$this->log_navigation();
         return $next($request);
     }
+    /*
+    public function log_navigation () {
+        #Aqui generamos la instancia
+        $this->log['user_id'] = Auth::user()->id;
+        $this->log['page_path'] = \Request::fullUrl();
+        $this->log['ip'] = \Request::ip();
+
+        $log_exist = LogNavigation::where('created_at', Carbon::now())
+           ->where('user_id', Auth::user()->id)
+           ->where('page_path', \Request::fullUrl())
+           ->where('ip', \Request::ip())
+           ->first();
+
+        if (!$log_exist) {
+            LogNavigation::create($this->log);
+        }
+
+    }
+    */
+
 }
