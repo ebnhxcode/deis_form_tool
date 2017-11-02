@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deis_form_tool.backup" afterPath="$PROJECT_DIR$/deis_form_tool.backup" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
@@ -63,8 +62,8 @@
       <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.44479004">
-              <caret line="474" column="79" selection-start-line="474" selection-start-column="79" selection-end-line="474" selection-end-column="79" />
+            <state vertical-scroll-proportion="2.5154471">
+              <caret line="813" column="26" selection-start-line="813" selection-start-column="26" selection-end-line="813" selection-end-column="26" />
               <folding>
                 <element signature="e#1391#1762#0" expanded="false" />
                 <element signature="e#1781#2140#0" expanded="false" />
@@ -80,13 +79,13 @@
                 <element signature="e#28363#28425#0" expanded="false" />
                 <element signature="e#28542#28786#0" expanded="false" />
                 <element signature="e#28806#29050#0" expanded="false" />
-                <element signature="e#38700#38929#0" expanded="false" />
-                <element signature="e#38943#39172#0" expanded="false" />
-                <element signature="e#39874#40089#0" expanded="false" />
-                <element signature="e#40103#40318#0" expanded="false" />
-                <marker date="1509649834058" expanded="true" signature="2680:3147" placeholder="..." />
-                <marker date="1509649834058" expanded="true" signature="3410:3570" placeholder="..." />
-                <marker date="1509649834058" expanded="true" signature="3861:4021" placeholder="..." />
+                <element signature="e#38723#38952#0" expanded="false" />
+                <element signature="e#38966#39195#0" expanded="false" />
+                <element signature="e#39897#40112#0" expanded="false" />
+                <element signature="e#40126#40341#0" expanded="false" />
+                <marker date="1509650142609" expanded="true" signature="2680:3147" placeholder="..." />
+                <marker date="1509650142609" expanded="true" signature="3410:3570" placeholder="..." />
+                <marker date="1509650142609" expanded="true" signature="3861:4021" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -284,6 +283,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deis_form_tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -348,7 +415,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="8" width="1360" height="761" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19338235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -748,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.44479004">
-          <caret line="474" column="79" selection-start-line="474" selection-start-column="79" selection-end-line="474" selection-end-column="79" />
+        <state vertical-scroll-proportion="2.5154471">
+          <caret line="813" column="26" selection-start-line="813" selection-start-column="26" selection-end-line="813" selection-end-column="26" />
           <folding>
             <element signature="e#1391#1762#0" expanded="false" />
             <element signature="e#1781#2140#0" expanded="false" />
@@ -765,13 +832,13 @@
             <element signature="e#28363#28425#0" expanded="false" />
             <element signature="e#28542#28786#0" expanded="false" />
             <element signature="e#28806#29050#0" expanded="false" />
-            <element signature="e#38700#38929#0" expanded="false" />
-            <element signature="e#38943#39172#0" expanded="false" />
-            <element signature="e#39874#40089#0" expanded="false" />
-            <element signature="e#40103#40318#0" expanded="false" />
-            <marker date="1509649834058" expanded="true" signature="2680:3147" placeholder="..." />
-            <marker date="1509649834058" expanded="true" signature="3410:3570" placeholder="..." />
-            <marker date="1509649834058" expanded="true" signature="3861:4021" placeholder="..." />
+            <element signature="e#38723#38952#0" expanded="false" />
+            <element signature="e#38966#39195#0" expanded="false" />
+            <element signature="e#39897#40112#0" expanded="false" />
+            <element signature="e#40126#40341#0" expanded="false" />
+            <marker date="1509650142609" expanded="true" signature="2680:3147" placeholder="..." />
+            <marker date="1509650142609" expanded="true" signature="3410:3570" placeholder="..." />
+            <marker date="1509650142609" expanded="true" signature="3861:4021" placeholder="..." />
           </folding>
         </state>
       </provider>

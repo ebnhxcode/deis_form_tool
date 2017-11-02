@@ -809,22 +809,23 @@ const FormularioController = new Vue({
                else {
                   for (let i in this.inputs) {
                      if (
-                        this.inputs[i].bloque == input.bloque && this.inputs[i].name != input.name &&
-                        (
-                           this.inputs[i].name != 'fecha_inicio_sustituto_leche_materna' &&
-                           this.inputs[i].name != 'hora_inicio_sustituto_leche_materna' &&
-                           this.inputs[i].name != 'fecha_1_examen_pcr_recien_nacido' &&
-                           this.inputs[i].name != 'fecha_2_examen_pcr_recien_nacido' &&
-                           this.inputs[i].name != 'fecha_3_examen_pcr_recien_nacido' &&
-                           (
-                              this.fdc['resultado_1_examen_pcr_recien_nacido'] == 'No Realizado' ||
-                              this.fdc['resultado_2_examen_pcr_recien_nacido'] == 'No Realizado' ||
-                              this.fdc['resultado_3_examen_pcr_recien_nacido'] == 'No Realizado'
-                           )
-
-                        )
+                        this.inputs[i].bloque == input.bloque && this.inputs[i].name != input.name
                      ) {
+                        /*
+                         (
+                         this.inputs[i].name != 'fecha_inicio_sustituto_leche_materna' &&
+                         this.inputs[i].name != 'hora_inicio_sustituto_leche_materna' &&
+                         this.inputs[i].name != 'fecha_1_examen_pcr_recien_nacido' &&
+                         this.inputs[i].name != 'fecha_2_examen_pcr_recien_nacido' &&
+                         this.inputs[i].name != 'fecha_3_examen_pcr_recien_nacido' &&
+                         (
+                         this.fdc['resultado_1_examen_pcr_recien_nacido'] == 'No Realizado' ||
+                         this.fdc['resultado_2_examen_pcr_recien_nacido'] == 'No Realizado' ||
+                         this.fdc['resultado_3_examen_pcr_recien_nacido'] == 'No Realizado'
+                         )
 
+                         )
+                        */
                         this.inputs[i].disabled = null;
 
                      }
