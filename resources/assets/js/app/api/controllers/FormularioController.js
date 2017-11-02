@@ -472,11 +472,7 @@ const FormularioController = new Vue({
                            this.fdc['resultado_2_vdrl_embarazo'] == 'Reactivo' ) &&
                            (this.inputs[i].name != 'resultado_dilucion_3_vdrl_embarazo' && this.inputs[i].name != 'fecha_3_vdrl_embarazo'
                            && this.inputs[i].name == 'eg_3_dvrl_embarazo' ||
-                           this.fdc['resultado_3_vdrl_embarazo'] == 'Reactivo') &&
-                           (this.inputs[i].name != 'fecha_1_examen_vih_embarazo' && this.inputs[i].name != 'eg_1_examen_vih' ||
-                           this.fdc['resultado_1_examen_vih_embarazo'] != 'Reactivo') &&
-                           (this.inputs[i].name != 'fecha_2_examen_vih_embarazo' && this.inputs[i].name != 'eg_2_examen_vih' ||
-                           this.fdc['resultado_2_examen_vih_embarazo'] != 'Reactivo')
+                           this.fdc['resultado_3_vdrl_embarazo'] == 'Reactivo')
 
                         )
                      ) {
@@ -820,11 +816,12 @@ const FormularioController = new Vue({
                            this.inputs[i].name != 'fecha_1_examen_pcr_recien_nacido' &&
                            this.inputs[i].name != 'fecha_2_examen_pcr_recien_nacido' &&
                            this.inputs[i].name != 'fecha_3_examen_pcr_recien_nacido' &&
-                           (this.fdc['sustituto_leche_materna'] == 'No' ||
-                           this.fdc['sustituto_leche_materna'] == null ||
-                           this.fdc['resultado_1_examen_pcr_recien_nacido '] == 'No Realizado' ||
-                           this.fdc['resultado_2_examen_pcr_recien_nacido '] == 'No Realizado' ||
-                           this.fdc['resultado_3_examen_pcr_recien_nacido '] == 'No Realizado' )
+                           (
+                              this.fdc['resultado_1_examen_pcr_recien_nacido'] == 'No Realizado' ||
+                              this.fdc['resultado_2_examen_pcr_recien_nacido'] == 'No Realizado' ||
+                              this.fdc['resultado_3_examen_pcr_recien_nacido'] == 'No Realizado'
+                           )
+
                         )
                      ) {
 
