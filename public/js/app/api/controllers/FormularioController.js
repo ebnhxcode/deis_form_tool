@@ -37038,7 +37038,7 @@ var FormularioController = new _vue2.default({
                   }
                } else {
                   for (var _i in this.inputs) {
-                     if (input.seccion == this.inputs[_i].seccion && input.name != this.inputs[_i].name) {
+                     if (input.seccion == this.inputs[_i].seccion && input.name != this.inputs[_i].name && this.inputs[_i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[_i].name != 'fecha_2_vdrl_embarazo') {
                         this.inputs[_i].disabled = null;
                      }
                   }
@@ -37050,6 +37050,13 @@ var FormularioController = new _vue2.default({
                      if (this.inputs[_i2].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[_i2].name == 'fecha_2_vdrl_embarazo') {
                         this.inputs[_i2].disabled = true;
                         this.inputs[_i2].disabled = true;
+                     }
+                  }
+               } else {
+                  for (var _i3 in this.inputs) {
+                     if (this.inputs[_i3].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[_i3].name == 'fecha_2_vdrl_embarazo') {
+                        this.inputs[_i3].disabled = null;
+                        this.inputs[_i3].disabled = null;
                      }
                   }
                }

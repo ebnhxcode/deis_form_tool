@@ -457,7 +457,8 @@ const FormularioController = new Vue({
                   }
                }else{
                   for (let i in this.inputs){
-                     if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
+                     if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name
+                     && this.inputs[i].name != 'resultado_dilucion_2_vdrl_embarazo' && this.inputs[i].name != 'fecha_2_vdrl_embarazo' ) {
                         this.inputs[i].disabled = null;
                      }
                   }
@@ -469,9 +470,13 @@ const FormularioController = new Vue({
                      if (this.inputs[i].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[i].name == 'fecha_2_vdrl_embarazo') {
                         this.inputs[i].disabled = true;
                         this.inputs[i].disabled = true;
-                     }else{
-                        this.inputs['resultado_dilucion_2_vdrl_embarazo'].disabled = true;
-                        this.inputs['fecha_2_vdrl_embarazo'].disabled = true;
+                     }
+                  }
+               }else{
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'resultado_dilucion_2_vdrl_embarazo' || this.inputs[i].name == 'fecha_2_vdrl_embarazo') {
+                        this.inputs[i].disabled = null;
+                        this.inputs[i].disabled = null;
                      }
                   }
                }
