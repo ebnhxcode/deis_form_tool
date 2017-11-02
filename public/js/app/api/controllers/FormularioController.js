@@ -37155,6 +37155,8 @@ var FormularioController = new _vue2.default({
                      }
                   }
                }
+               break;
+            case 'anos_estudio':
 
                break;
             default:
@@ -37175,6 +37177,7 @@ var FormularioController = new _vue2.default({
                }
             }
          }
+
          if ((this.fdc['resultado_1_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_2_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_3_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_3_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_1_examen_vih_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_examen_vih_embarazo'] == 'No Realizado') && (this.fdc['resultado_2_examen_vih_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_examen_vih_embarazo'] == 'No Realizado')) {
             for (var _i16 in this.inputs) {
                if (this.inputs[_i16].name == 'derivada_a_especialidades_embarazo') {

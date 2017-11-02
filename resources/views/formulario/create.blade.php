@@ -117,6 +117,9 @@
                                                        :style="i.style!=''?i.style:''"
                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
                                                        :readonly="i.readonly!=''?i.readonly:''"
+                                                       :min="i.min!=''?i.min:''"
+                                                       :max="i.max!=''?i.max:''"
+                                                       :pattern="i.pattern!=''?i.pattern:''"
                                                        @change.prevent="verifica_validacion_change(i)"
                                                        v-model="fdc[i.name]">
                                              </dd>

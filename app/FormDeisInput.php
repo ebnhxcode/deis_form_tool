@@ -20,6 +20,9 @@ class FormDeisInput extends Model
       'style',
       'readonly',
       'disabled',
+      'min',
+      'max',
+      'pattern',
 
       'v_on_change',
 
