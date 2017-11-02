@@ -631,6 +631,26 @@ const FormularioController = new Vue({
                }
             }
          }
+         if (
+            (this.fdc['resultado_1_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_vdrl_embarazo'] == 'No Realizado') &&
+            (this.fdc['resultado_2_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_vdrl_embarazo'] == 'No Realizado') &&
+            (this.fdc['resultado_3_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_3_vdrl_embarazo'] == 'No Realizado') &&
+            (this.fdc['resultado_1_examen_vih_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_examen_vih_embarazo'] == 'No Realizado') &&
+            (this.fdc['resultado_2_examen_vih_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_examen_vih_embarazo'] == 'No Realizado')
+         ){
+            for (let i in this.inputs){
+               if (this.inputs[i].name == 'derivada_a_especialidades_embarazo') {
+                  this.inputs[i].disabled = true;
+               }
+            }
+         }
+         else{
+            for (let i in this.inputs){
+               if (this.inputs[i].name == 'derivada_a_especialidades_embarazo') {
+                  this.inputs[i].disabled = null;
+               }
+            }
+         }
 
 
 
