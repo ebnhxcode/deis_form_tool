@@ -75,6 +75,8 @@
                               <th style="min-width: 140px !important;">style</th>
                               <th style="min-width: 140px !important;">readonly</th>
                               <th style="min-width: 140px !important;">disabled</th>
+                              <th style="min-width: 140px !important;">min</th>
+                              <th style="min-width: 140px !important;">max</th>
                               <th style="min-width: 140px !important;">bloque</th>
                               <th style="min-width: 140px !important;">seccion</th>
                               <th style="min-width: 140px !important;">class_custom</th>
@@ -140,6 +142,14 @@
                               <td>
                                  <span v-if="editBy != input.id">@{{input.disabled}}</span>
                                  <input v-else type="text" class="form-control input-sm" v-model="input.disabled">
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.min}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.min">
+                              </td>
+                              <td>
+                                 <span v-if="editBy != input.id">@{{input.max}}</span>
+                                 <input v-else type="text" class="form-control input-sm" v-model="input.max">
                               </td>
                               <td>
                                  <span v-if="editBy != input.id">@{{input.bloque}}</span>

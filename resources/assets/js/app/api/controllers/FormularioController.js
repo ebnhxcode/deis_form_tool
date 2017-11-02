@@ -602,6 +602,8 @@ const FormularioController = new Vue({
                      }
                   }
                }
+               break;
+            case 'anos_estudio':
 
 
                break;
@@ -631,6 +633,7 @@ const FormularioController = new Vue({
                }
             }
          }
+
          if (
             (this.fdc['resultado_1_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_vdrl_embarazo'] == 'No Realizado') &&
             (this.fdc['resultado_2_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_vdrl_embarazo'] == 'No Realizado') &&
