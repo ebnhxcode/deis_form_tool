@@ -453,6 +453,7 @@ const FormularioController = new Vue({
             case 'embarazo_con_control_parental':
                if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
                   for (let i in this.inputs){
+                     //Aqui agregar la validacion del bloque para que no se lo pase de largo
                      if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
                         this.inputs[i].disabled = true;
                      }
@@ -534,6 +535,26 @@ const FormularioController = new Vue({
                }
 
                break;
+            case 'acepta_rechaza_toma_examen_vih':
+               if (this.fdc[input.name] == 'Rechaza') {
+                  for (let i in this.inputs){
+                     //Aqui agregar la validacion del bloque para que no se lo pase de largo
+                     if (input.bloque == this.inputs[i].bloque && input.name != this.inputs[i].name) {
+                        this.inputs[i].disabled = true;
+                     }
+                  }
+               }
+               else{
+                  for (let i in this.inputs){
+                     //Aqui agregar la validacion del bloque para que no se lo pase de largo
+                     if (input.bloque == this.inputs[i].bloque && input.name != this.inputs[i].name) {
+                        this.inputs[i].disabled = false;
+                     }
+                  }
+               }
+
+
+               break;
             default:
 
 
@@ -560,6 +581,11 @@ const FormularioController = new Vue({
                }
             }
          }
+
+
+
+
+
       },
 
       verifica_validacion_click: function (input) {

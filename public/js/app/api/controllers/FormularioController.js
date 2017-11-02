@@ -37033,6 +37033,7 @@ var FormularioController = new _vue2.default({
             case 'embarazo_con_control_parental':
                if (this.fdc[input.name] == 'No' || this.fdc[input.name] == 'Desconocido') {
                   for (var i in this.inputs) {
+                     //Aqui agregar la validacion del bloque para que no se lo pase de largo
                      if (input.seccion == this.inputs[i].seccion && input.name != this.inputs[i].name) {
                         this.inputs[i].disabled = true;
                      }
@@ -37100,21 +37101,32 @@ var FormularioController = new _vue2.default({
                }
 
                break;
+            case 'acepta_rechaza_toma_examen_vih':
+               if (this.fdc[input.name] == 'Rechaza') {
+                  for (var _i8 in this.inputs) {
+                     //Aqui agregar la validacion del bloque para que no se lo pase de largo
+                     if (input.bloque == this.inputs[_i8].bloque && input.name != this.inputs[_i8].name) {
+                        this.inputs[_i8].disabled = true;
+                     }
+                  }
+               }
+
+               break;
             default:
 
                break;
          }
          //Validaciones latentes
          if ((this.fdc['resultado_1_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_1_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_2_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_2_vdrl_embarazo'] == 'No Realizado') && (this.fdc['resultado_3_vdrl_embarazo'] == 'No Reactivo' || this.fdc['resultado_3_vdrl_embarazo'] == 'No Realizado')) {
-            for (var _i8 in this.inputs) {
-               if (this.inputs[_i8].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
-                  this.inputs[_i8].disabled = true;
+            for (var _i9 in this.inputs) {
+               if (this.inputs[_i9].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
+                  this.inputs[_i9].disabled = true;
                }
             }
          } else {
-            for (var _i9 in this.inputs) {
-               if (this.inputs[_i9].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
-                  this.inputs[_i9].disabled = null;
+            for (var _i10 in this.inputs) {
+               if (this.inputs[_i10].name == 'fecha_administracion_1_dosis_penicilina_gestante') {
+                  this.inputs[_i10].disabled = null;
                }
             }
          }
