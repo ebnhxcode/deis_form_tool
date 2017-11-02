@@ -77,6 +77,7 @@
                               <th style="min-width: 140px !important;">disabled</th>
                               <th style="min-width: 140px !important;">min</th>
                               <th style="min-width: 140px !important;">max</th>
+                              <th style="min-width: 140px !important;">pattern</th>
                               <th style="min-width: 140px !important;">bloque</th>
                               <th style="min-width: 140px !important;">seccion</th>
                               <th style="min-width: 140px !important;">class_custom</th>
