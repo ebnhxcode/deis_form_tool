@@ -266,6 +266,7 @@ return [
          'Reactivo' => 'Reactivo',
          'No Reactivo' => 'No Reactivo',
          'No Realizado' => 'No Realizado',
+         'No Corresponde' => 'No Corresponde',
       ],
 
       'tratamiento_retroviral_parto' => [

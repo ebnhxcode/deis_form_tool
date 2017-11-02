@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/collections.php" afterPath="$PROJECT_DIR$/config/collections.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/input/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/input/index.blade.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +63,8 @@
       <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7006689">
-              <caret line="687" column="94" selection-start-line="687" selection-start-column="94" selection-end-line="687" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.17056856">
+              <caret line="649" column="40" selection-start-line="649" selection-start-column="40" selection-end-line="649" selection-end-column="40" />
               <folding>
                 <element signature="e#1391#1762#0" expanded="false" />
                 <element signature="e#1781#2140#0" expanded="false" />
@@ -88,16 +89,16 @@
                 <element signature="e#25247#25491#0" expanded="false" />
                 <element signature="e#25711#27046#0" expanded="false" />
                 <element signature="e#27313#27375#0" expanded="false" />
-                <element signature="e#27624#27686#0" expanded="false" />
-                <element signature="e#27803#28047#0" expanded="false" />
-                <element signature="e#28067#28311#0" expanded="false" />
-                <element signature="e#29718#29947#0" expanded="false" />
-                <element signature="e#29961#30190#0" expanded="false" />
-                <element signature="e#30892#31107#0" expanded="false" />
-                <element signature="e#31121#31336#0" expanded="false" />
-                <marker date="1509615056571" expanded="true" signature="2680:3147" placeholder="..." />
-                <marker date="1509615056571" expanded="true" signature="3410:3570" placeholder="..." />
-                <marker date="1509615056571" expanded="true" signature="3861:4021" placeholder="..." />
+                <element signature="e#27667#27729#0" expanded="false" />
+                <element signature="e#27846#28090#0" expanded="false" />
+                <element signature="e#28110#28354#0" expanded="false" />
+                <element signature="e#31313#31542#0" expanded="false" />
+                <element signature="e#31556#31785#0" expanded="false" />
+                <element signature="e#32487#32702#0" expanded="false" />
+                <element signature="e#32716#32931#0" expanded="false" />
+                <marker date="1509616851720" expanded="true" signature="2680:3147" placeholder="..." />
+                <marker date="1509616851720" expanded="true" signature="3410:3570" placeholder="..." />
+                <marker date="1509616851720" expanded="true" signature="3861:4021" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -135,8 +136,8 @@
       <file leaf-file-name="collections.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/collections.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.884615">
-              <caret line="159" column="78" selection-start-line="159" selection-start-column="78" selection-end-line="159" selection-end-column="78" />
+            <state vertical-scroll-proportion="-10.384615">
+              <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -210,8 +211,8 @@
         <option value="$PROJECT_DIR$/app/FormDeisInput.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
         <option value="$PROJECT_DIR$/resources/views/formulario/create.blade.php" />
-        <option value="$PROJECT_DIR$/config/collections.php" />
         <option value="$PROJECT_DIR$/resources/views/input/index.blade.php" />
+        <option value="$PROJECT_DIR$/config/collections.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
       </list>
     </option>
@@ -1069,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/collections.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.884615">
-          <caret line="159" column="78" selection-start-line="159" selection-start-column="78" selection-end-line="159" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.0">
@@ -1110,10 +1103,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/collections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.384615">
+          <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7006689">
-          <caret line="687" column="94" selection-start-line="687" selection-start-column="94" selection-end-line="687" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.17056856">
+          <caret line="649" column="40" selection-start-line="649" selection-start-column="40" selection-end-line="649" selection-end-column="40" />
           <folding>
             <element signature="e#1391#1762#0" expanded="false" />
             <element signature="e#1781#2140#0" expanded="false" />
@@ -1138,16 +1139,16 @@
             <element signature="e#25247#25491#0" expanded="false" />
             <element signature="e#25711#27046#0" expanded="false" />
             <element signature="e#27313#27375#0" expanded="false" />
-            <element signature="e#27624#27686#0" expanded="false" />
-            <element signature="e#27803#28047#0" expanded="false" />
-            <element signature="e#28067#28311#0" expanded="false" />
-            <element signature="e#29718#29947#0" expanded="false" />
-            <element signature="e#29961#30190#0" expanded="false" />
-            <element signature="e#30892#31107#0" expanded="false" />
-            <element signature="e#31121#31336#0" expanded="false" />
-            <marker date="1509615056571" expanded="true" signature="2680:3147" placeholder="..." />
-            <marker date="1509615056571" expanded="true" signature="3410:3570" placeholder="..." />
-            <marker date="1509615056571" expanded="true" signature="3861:4021" placeholder="..." />
+            <element signature="e#27667#27729#0" expanded="false" />
+            <element signature="e#27846#28090#0" expanded="false" />
+            <element signature="e#28110#28354#0" expanded="false" />
+            <element signature="e#31313#31542#0" expanded="false" />
+            <element signature="e#31556#31785#0" expanded="false" />
+            <element signature="e#32487#32702#0" expanded="false" />
+            <element signature="e#32716#32931#0" expanded="false" />
+            <marker date="1509616851720" expanded="true" signature="2680:3147" placeholder="..." />
+            <marker date="1509616851720" expanded="true" signature="3410:3570" placeholder="..." />
+            <marker date="1509616851720" expanded="true" signature="3861:4021" placeholder="..." />
           </folding>
         </state>
       </provider>

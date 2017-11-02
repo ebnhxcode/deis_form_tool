@@ -647,6 +647,7 @@ const FormularioController = new Vue({
             case 'numero_contactos_sexuales_declarados':
             case 'numero_contactos_sexuales_estudiados':
             case 'numero_contactos_sexuales_tratados':
+            case 'codigo_establecimiento':
                if (parseInt(this.fdc[input.name]) < 0) {
                   this.fdc[input.name] = 0;
                }
@@ -684,9 +685,45 @@ const FormularioController = new Vue({
                break;
 
             case 'numero_carga_viral_control_prenatal':
+
             case 'carga_viral_numero_copia_semana_34':
                if (parseInt(this.fdc[input.name]) < 0 || parseInt(this.fdc[input.name]) > 9999999) {
                   this.fdc[input.name] = 0;
+               }
+               break;
+
+            case 'resultado_vdrl_parto':
+               if (this.fdc[input.name] == 'No Reactivo' || this.fdc[input.name] == 'No Realizado'){
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'resultado_dilucion_vdrl_parto' ||
+                        this.inputs[i].name == 'resultado_examen_treponemico_parto' ||
+                        this.inputs[i].name == 'tratamiento_sifilis_parto' ) {
+                        this.inputs[i].disabled = true;
+                     }
+                  }
+               }
+               else{
+                  for (let i in this.inputs){
+                     if (this.inputs[i].name == 'resultado_dilucion_vdrl_parto' ||
+                        this.inputs[i].name == 'resultado_examen_treponemico_parto' ||
+                        this.inputs[i].name == 'tratamiento_sifilis_parto' ) {
+                        this.inputs[i].disabled = null;
+                     }
+                  }
+               }
+               break;
+            case 'peso_mujer_parto':
+               if (parseInt(this.fdc[input.name])>0) {
+                  this.fdc[input.name] = this.fdc[input.name].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+                  /*
+                  this.fdc[input.name] =
+                     parseInt(this.fdc[input.name]) > 999 ?
+                     (  parseInt(this.fdc[input.name])/1000).toFixed(1) + 'g' :
+                        parseInt(this.fdc[input.name]).toFixed(1) + 'mg';
+                  */
+
+
                }
                break;
 
