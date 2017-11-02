@@ -65,6 +65,7 @@ class FormDeisController extends Controller {
             $returnData['deis_form_table_options'] = config('collections.deis_form_table_options');
             $returnData['deis_form_table_options'] += ['pais_origen' => Pais::pluck('nombre_pais', 'id_pais')];
             $returnData['deis_form_table_options'] += ['lugar_atencion_parto' => Establecimiento::pluck('nombre_establecimiento', 'id_establecimiento')];
+            $returnData['deis_form_table_options'] += ['anos_Estudio' => [''=>'Seleccione nivel de escolaridad']];
             return response()->json($returnData);
         }
     }

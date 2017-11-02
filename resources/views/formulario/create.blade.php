@@ -140,7 +140,7 @@
                                                         @change.prevent="verifica_validacion_change(i)"
                                                         @click.prevent="verifica_validacion_click(i)">
 
-                                                   <option value="">Seleccione</option>
+                                                   {{--<option value="">Seleccione</option>--}}
                                                    <option v-for="o,i in deis_form_table_options[i.name]" :value="i">
                                                       @{{ o }}
                                                    </option>
