@@ -733,7 +733,7 @@ const FormularioController = new Vue({
                   }else{
                      this.fdc[input.name] = this.fdc[input.name].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                   }
-                  
+
                }
                break;
 
