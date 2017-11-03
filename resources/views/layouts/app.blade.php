@@ -25,7 +25,7 @@
 
    <!-- Recaptcha V2 Google -->
    <script src='https://www.google.com/recaptcha/api.js'></script>
-
+   <meta name="google-site-verification" content="4otf3wwxl-5T_OWjpgvsuzwLFqHarlrXlKwFIiF6Xd0" />
    <style>
       body {
          font-family: 'Lato';

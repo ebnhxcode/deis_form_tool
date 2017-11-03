@@ -150,6 +150,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Zofe\Rapyd\RapydServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -208,6 +209,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+
     ],
 
 ];

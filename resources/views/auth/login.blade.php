@@ -38,6 +38,17 @@
                         </div>
                      </div>
 
+                     <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}" align="center">
+                        <div class="col-md-6">
+                           {!! Recaptcha::render() !!}
+                           @if ($errors->has('g-recaptcha-response'))
+                              <span class="help-block">
+                                  El captcha es requerido
+                              </span>
+                           @endif
+                        </div>
+                     </div>
+
                      <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
                            <div class="checkbox">
