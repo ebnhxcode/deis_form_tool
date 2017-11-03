@@ -182,7 +182,6 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Run Madre</b>
                                           </a>
                                        </li>
-                                       <!--
                                        <li role="presentation">
                                           <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo"
                                              role="tab" data-toggle="tab">
@@ -190,7 +189,6 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Correlativo</b>
                                           </a>
                                        </li>
-                                       -->
 
                                     </ul>
                                  </div><!-- .panel-heading -->
@@ -215,7 +213,7 @@ const FormularioController = new Vue({
                                                       <div class="form-group">
                                                          <div class="input-group input-group-sm">
                                                             <div class="input-group-addon">
-                                                               <i class="fa fa-pin"></i>
+                                                               <i class="fa fa-user"></i>
                                                             </div>
 
                                                             <input class="form-control"
@@ -224,10 +222,12 @@ const FormularioController = new Vue({
                                                              name="run_madre"
                                                              placeholder="Ej: 123456789 Sin puntos ni guión"
                                                              id="run_madre"
-                                                             v-model="run_madre">
+                                                             v-model="run_madre"
+                                                             @change="buscar_por_run">
 
                                                             <span class="input-group-btn">
-                                                               <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">
+                                                               <button class="btn btn-sm btn-info"
+                                                                  @click.prevent="buscar_por_run">
                                                                   Buscar&nbsp;<i class="fa fa-search"></i>
                                                                </button>
                                                             </span><!-- .input-group-btn -->
@@ -297,21 +297,23 @@ const FormularioController = new Vue({
                                                    <dd>
 
 
-                                                      <!-- Busqueda por RUN -->
+                                                      <!-- Busqueda por CORRELATIVO -->
                                                       <div class="form-group">
                                                          <div class="input-group input-group-sm">
                                                             <div class="input-group-addon">
-                                                               <i class="fa fa-user"></i>
+                                                               <i class="fa fa-thumb-tack"></i>
                                                             </div>
 
                                                             <input class="form-control"
                                                                    type="number"
                                                                    name="n_correlativo_interno"
                                                                    id="n_correlativo_interno"
-                                                                   v-model="n_correlativo_interno">
+                                                                   v-model="n_correlativo_interno"
+                                                                   @change="buscar_por_correlativo">
 
                                                             <span class="input-group-btn">
-                                                              <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">
+                                                              <button class="btn btn-sm btn-info"
+                                                                  @click.prevent="buscar_por_correlativo">
                                                                   Buscar&nbsp;<i class="fa fa-search"></i>
                                                                </button>
                                                             </span><!-- .input-group-btn -->
@@ -333,7 +335,7 @@ const FormularioController = new Vue({
                                                                </tr>
                                                             </thead>
                                                             <tbody>
-                                                               <tr v-for="f in formularios">
+                                                               <tr v-for="f in formularios_correlativo">
                                                                   <td>{{f.n_correlativo_interno}}</td>
                                                                   <td>{{f.run_madre}}</td>
                                                                   <td>{{f.nombres_madre}}</td>
@@ -419,13 +421,13 @@ const FormularioController = new Vue({
          created () {
          },
          methods: {
-            buscar_por_rut: function () {
+            buscar_por_run: function () {
                var formData = new FormData();
 
                Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
                formData.append('run_madre', this.run_madre);
 
-               this.$http.post('/formulario/buscar_por_rut', formData).then(response => { // success callback
+               this.$http.post('/formulario/buscar_por_run', formData).then(response => { // success callback
                   //console.log(response);
                   this.formularios = response.body.formularios;
                   this.formulario_vacio = $.isEmptyObject(this.formularios)==true?true:false;
@@ -443,8 +445,8 @@ const FormularioController = new Vue({
                this.$http.post('/formulario/buscar_por_correlativo', formData).then(response => { // success callback
                   //console.log(response);
 
-                  //this.formularios_correlativo = response.body.formularios;
-                  //this.formulario_vacio_correlativo = $.isEmptyObject(this.formularios)==true?true:false;
+                  this.formularios_correlativo = response.body.formularios;
+                  this.formulario_vacio_correlativo = $.isEmptyObject(this.formularios_correlativo)==true?true:false;
 
                }, response => { // error callback
                   console.log(response);
