@@ -236,7 +236,7 @@ const FormularioController = new Vue({
 
 
                                                       <div class="table-responsive" v-if="formulario_vacio == false">
-                                                         Resultados encontrados
+                                                         <small class="text-info">Resultados encontrados</small>
                                                          <br>
                                                          <table class="table table-striped small">
                                                             <thead>
@@ -322,11 +322,13 @@ const FormularioController = new Vue({
 
 
                                                       <div class="table-responsive" v-if="formulario_vacio_correlativo == false">
-                                                         Resultados encontrados
+
+                                                         <small class="text-info">Resultados encontrados</small>
                                                          <br>
                                                          <table class="table table-striped small">
                                                             <thead>
                                                                <tr>
+                                                                  <th>Accion</th>
                                                                   <th>Correlativo</th>
                                                                   <th>Run Madre</th>
                                                                   <th>Nombres</th>
@@ -336,6 +338,12 @@ const FormularioController = new Vue({
                                                             </thead>
                                                             <tbody>
                                                                <tr v-for="f in formularios_correlativo">
+                                                                  <td>
+                                                                     <button class="btn btn-sm btn-primary"
+                                                                        @click.prevent="modificar_usuario_seleccionado(f)">
+                                                                        <i class="fa fa-pencil"></i>
+                                                                     </button>
+                                                                  </td>
                                                                   <td>{{f.n_correlativo_interno}}</td>
                                                                   <td>{{f.run_madre}}</td>
                                                                   <td>{{f.nombres_madre}}</td>

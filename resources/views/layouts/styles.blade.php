@@ -263,6 +263,97 @@
       opacity: 0;
    }
 </style>
+<!--  Style template transitions-->
+<style scoped="">
+
+   .slide-fade-enter-active {
+      transition: all .3s ease;
+   }
+   .slide-fade-leave-active {
+      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+   }
+   .slide-fade-enter, .slide-fade-leave-to
+      /* .slide-fade-leave-active below version 2.1.8 */ {
+      transform: translateX(10px);
+      opacity: 0;
+   }
+
+   .fade-enter-active, .fade-leave-active {
+      transition: opacity .3s
+   }
+
+   .fade-enter, .fade-leave-to {
+      opacity: 0
+   }
+
+   .bounce-enter-active {
+      animation: bounce-in .3s;
+   }
+
+   .bounce-leave-active {
+      animation: bounce-in .2s reverse;
+   }
+
+   @keyframes bounce-in {
+      0% {
+         transform: scale(0);
+      }
+      50% {
+         transform: scale(1);
+      }
+      100% {
+         transform: scale(1);
+      }
+   }
+
+   .flip-list-move {
+      transition: transform 1s;
+   }
+
+   .wrap {
+      height: 80vh;
+      display: flex;
+      overflow-y: scroll;
+   }
+
+   .wrap-long-vertical {
+      height: 100vh;
+      display: flex;
+      overflow-y: scroll;
+   }
+
+   .list-complete-item {
+      transition: all 1s;
+      display: inline-block;
+      margin-right: 10px;
+   }
+   .list-complete-enter, .list-complete-leave-to
+      /* .list-complete-leave-active below version 2.1.8 */ {
+      opacity: 0;
+      transform: translateY(30px);
+   }
+   .list-complete-leave-active {
+      position: absolute;
+   }
+
+   .transition {
+      transition: all 1s linear;
+      position: fixed;
+      top: 0;
+      display: block;
+   }
+   .before-enter {
+      left: 10px;
+   }
+   .enter {
+      left: 20px;
+   }
+   .enter.leave {
+      left: 30px;
+   }
+
+</style>
+
 
 <!-- Success Circle -->
 <style>
