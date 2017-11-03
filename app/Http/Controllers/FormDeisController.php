@@ -59,6 +59,7 @@ class FormDeisController extends Controller {
         #$token = getToken();
         $token = $access_token;
 
+
         /*
         $data = array(
            'runPersona' => $_POST['rutPrestador'],
@@ -81,6 +82,30 @@ class FormDeisController extends Controller {
               "verify_peer_name"=>false,
            )
         );
+
+        $authorization = "Authorization: Bearer ".$token;
+
+
+        $url = $urlApi.http_build_query($data);
+        dd($url);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        #curl_setopt($curl, CURLOPT_POST, 0);
+
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array($authorization));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        #curl_setopt($curl, CURLOPT_POSTFIELDS,$post);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+        $result = curl_exec($curl);
+
+        #curl_setopt($curl, CURLOPT_HTTPGET, TRUE);
+        #curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        #curl_setopt($curl, CURLOPT_HEADER, true);
+
+        $data = curl_exec($curl);
+        dd($data);
+        curl_close($curl);
 
 
         $context = stream_context_create($options);
