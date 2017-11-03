@@ -20,13 +20,13 @@
                            </span>
                         </li>
                         <li>
-                           Debe ingresar el correo electrónico donde recibió su clave
+                           Debe ingresar el correo electrónico donde recibió su llave
                            <span class="pull-right" style="color: gray;">
                               <?php echo htmlspecialchars("name@ejemplo.com"); ?>
                            </span>
                         </li>
                         <li>
-                           Finalmente ingresar la clave electrónica enviada
+                           Finalmente ingresar la llave secreta enviada
                            <span class="pull-right" style="color: gray;">
                               xPl01t3d
                            </span>
