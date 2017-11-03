@@ -10,7 +10,7 @@ class UserController extends Controller
 {
 
     public function __construct () {
-        $this->middleware('auth', ['except' => ['registro', 'procesar_solicitud_clave']]);
+        $this->middleware('auth', ['except' => ['registro', 'procesar_solicitud_clave', 'crear_clave']]);
     }
 
     public function registro (Request $request) {
@@ -28,6 +28,16 @@ class UserController extends Controller
             $m->to($user->email, $user->name)->subject('Your Reminder!');
         });
         */
+        Mail::send('email.solicitud_clave_electronica', [], function ($message) {
+            $message->to('esteban.ramos@taisachile.cl', 'example_name')->subject('Welcome!');
+        });
+    }
+
+    public function crear_clave (Request $request) {
+        $email = $request->email;
+        
+
+
 
 
         Mail::send('email.solicitud_clave_electronica', [], function ($message) {

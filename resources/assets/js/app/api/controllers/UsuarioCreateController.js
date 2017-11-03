@@ -22,14 +22,18 @@ const UsuarioCreateController = new Vue({
    data(){
       return {
          'newuser': {
+            'run':'',
             'name':'',
             'email':'',
-            'clave_correo':'',
+            'clave_electronica':'',
             'clave_real':'',
             'rep_clave_real':'',
          },
+         'mostrar_input_password':false,
          'mini_loader_visible':false,
+         'btn_procesar_clave':true,
          'btn_generar_clave':false,
+         'btn_finalizar':false,
       }
    },
    computed: {},
@@ -383,18 +387,25 @@ const UsuarioCreateController = new Vue({
       },
 
       procesar_solicitud_clave: function () {
-
+         this.mini_loader_visible = true;
          var formData = new FormData();
-         formData.append('name', this.newuser.name);
+         formData.append('run', this.newuser.run);
          formData.append('email', this.newuser.email);
+         formData.append('clave_electronica', this.newuser.clave_electronica);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          $('.errors').text('');
          this.$http.post('/procesar_solicitud_clave', formData).then(response => { // success callback
-            this.btn_generar_clave = true;
-            alert('Su clave ha sido enviada');
-
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
             //this.json = response.body.created_inputs;
             this.mini_loader_visible = false;
+            this.btn_procesar_clave = false;
+
+            setTimeout(() => {
+               this.btn_generar_clave = true;
+               this.mostrar_input_password = true;
+            }, 1000);
+
          }, response => { // error callback
             this.boton_abrir_modal = false;
             this.err = response.body;
@@ -403,6 +414,36 @@ const UsuarioCreateController = new Vue({
                $(`#${i}_error`).text(error);
             }
          });
+      },
+
+      crear_clave: function () {
+
+         this.mini_loader_visible = true;
+         var formData = new FormData();
+         formData.append('clave_real', this.newuser.clave_real);
+         formData.append('email', this.newuser.email);
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         $('.errors').text('');
+         this.$http.post('/crear_clave', formData).then(response => { // success callback
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            //this.json = response.body.created_inputs;
+            this.mini_loader_visible = false;
+            this.btn_generar_clave = false;
+            setTimeout(() => {
+               this.btn_finalizar = true;
+            }, 500);
+
+         }, response => { // error callback
+            this.boton_abrir_modal = false;
+            this.err = response.body;
+            for (let i in this.err) {
+               var error = this.err[i][0];
+               $(`#${i}_error`).text(error);
+            }
+         });
+
+
       },
 
       procesar_json: function () {

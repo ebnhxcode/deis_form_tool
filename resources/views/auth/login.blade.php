@@ -38,6 +38,7 @@
                         </div>
                      </div>
 
+                     <!-- Recaptcha Module -->
                      <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}" align="center">
                         <label for="g-recaptcha-response" class="col-md-4 control-label">Captcha</label>
 

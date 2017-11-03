@@ -36844,14 +36844,18 @@ var UsuarioCreateController = new _vue2.default({
    data: function data() {
       return {
          'newuser': {
+            'run': '',
             'name': '',
             'email': '',
-            'clave_correo': '',
+            'clave_electronica': '',
             'clave_real': '',
             'rep_clave_real': ''
          },
+         'mostrar_input_password': false,
          'mini_loader_visible': false,
-         'btn_generar_clave': false
+         'btn_procesar_clave': true,
+         'btn_generar_clave': false,
+         'btn_finalizar': false
       };
    },
 
@@ -37031,18 +37035,25 @@ var UsuarioCreateController = new _vue2.default({
       procesar_solicitud_clave: function procesar_solicitud_clave() {
          var _this3 = this;
 
+         this.mini_loader_visible = true;
          var formData = new FormData();
-         formData.append('name', this.newuser.name);
+         formData.append('run', this.newuser.run);
          formData.append('email', this.newuser.email);
+         formData.append('clave_electronica', this.newuser.clave_electronica);
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          $('.errors').text('');
          this.$http.post('/procesar_solicitud_clave', formData).then(function (response) {
             // success callback
-            _this3.btn_generar_clave = true;
-            alert('Su clave ha sido enviada');
-
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
             //this.json = response.body.created_inputs;
             _this3.mini_loader_visible = false;
+            _this3.btn_procesar_clave = false;
+
+            setTimeout(function () {
+               _this3.btn_generar_clave = true;
+               _this3.mostrar_input_password = true;
+            }, 1000);
          }, function (response) {
             // error callback
             _this3.boton_abrir_modal = false;
@@ -37054,8 +37065,39 @@ var UsuarioCreateController = new _vue2.default({
          });
       },
 
-      procesar_json: function procesar_json() {
+      crear_clave: function crear_clave() {
          var _this4 = this;
+
+         this.mini_loader_visible = true;
+         var formData = new FormData();
+         formData.append('clave_real', this.newuser.clave_real);
+         formData.append('email', this.newuser.email);
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         $('.errors').text('');
+         this.$http.post('/crear_clave', formData).then(function (response) {
+            // success callback
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            //this.json = response.body.created_inputs;
+            _this4.mini_loader_visible = false;
+            _this4.btn_generar_clave = false;
+
+            setTimeout(function () {
+               _this4.btn_finalizar = true;
+            }, 1000);
+         }, function (response) {
+            // error callback
+            _this4.boton_abrir_modal = false;
+            _this4.err = response.body;
+            for (var i in _this4.err) {
+               var error = _this4.err[i][0];
+               $('#' + i + '_error').text(error);
+            }
+         });
+      },
+
+      procesar_json: function procesar_json() {
+         var _this5 = this;
 
          this.mini_loader = true;
          var j = this.json;
@@ -37068,24 +37110,24 @@ var UsuarioCreateController = new _vue2.default({
          this.$http.post('/input', formData).then(function (response) {
             // success callback
             //this.json = response.body.created_inputs;
-            _this4.json_modal = response.body.created_inputs;
-            _this4.modal_procesar_json = true;
-            _this4.boton_abrir_modal = true;
+            _this5.json_modal = response.body.created_inputs;
+            _this5.modal_procesar_json = true;
+            _this5.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            _this4.mini_loader = false;
+            _this5.mini_loader = false;
          }, function (response) {
             // error callback
-            _this4.boton_abrir_modal = false;
-            _this4.err = response.body;
-            for (var i in _this4.err) {
-               var error = _this4.err[i][0];
+            _this5.boton_abrir_modal = false;
+            _this5.err = response.body;
+            for (var i in _this5.err) {
+               var error = _this5.err[i][0];
                $('#' + i + '_error').text(error);
             }
          });
       },
       procesar_json_attr: function procesar_json_attr() {
-         var _this5 = this;
+         var _this6 = this;
 
          this.mini_loader = true;
          var ja = this.json_attr;
@@ -37097,30 +37139,30 @@ var UsuarioCreateController = new _vue2.default({
          $('.errors').text('');
          this.$http.post('/input/add/label', formData).then(function (response) {
             // success callback
-            _this5.json_modal_attr = response.body.created_labels;
-            _this5.modal_procesar_json_attr = true;
-            _this5.boton_abrir_modal = true;
+            _this6.json_modal_attr = response.body.created_labels;
+            _this6.modal_procesar_json_attr = true;
+            _this6.boton_abrir_modal = true;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            _this5.mini_loader = false;
+            _this6.mini_loader = false;
          }, function (response) {
             // error callback
-            _this5.boton_abrir_modal = false;
-            _this5.err = response.body;
-            for (var i in _this5.err) {
-               var error = _this5.err[i][0];
+            _this6.boton_abrir_modal = false;
+            _this6.err = response.body;
+            for (var i in _this6.err) {
+               var error = _this6.err[i][0];
                $('#' + i + '_error_attr').text(error);
             }
          });
       },
       //camelCase() => for specific functions
       fetchLista: function fetchLista() {
-         var _this6 = this;
+         var _this7 = this;
 
          this.$http.get('/input').then(function (response) {
             // success callback
-            _this6.tables = response.body.tables;
-            _this6.json = response.body.json;
+            _this7.tables = response.body.tables;
+            _this7.json = response.body.json;
          }, function (response) {
             // error callback
             console.log('Error fetch_lista: ' + response);
@@ -37137,13 +37179,13 @@ var UsuarioCreateController = new _vue2.default({
          this.editBy = input_id_directive;
       },
       save: function save(input) {
-         var _this7 = this;
+         var _this8 = this;
 
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          this.$http.put('/input/' + input.id_input, input).then(function (response) {
             // success callback
             //console.log(response);
-            _this7.editBy = '';
+            _this8.editBy = '';
             return response.body.input;
          }, function (response) {
             // error callback

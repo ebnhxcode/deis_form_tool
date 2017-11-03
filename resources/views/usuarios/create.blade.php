@@ -20,76 +20,112 @@
                            </span>
                         </li>
                         <li>
-                           Debe ingresar su correo electrónico para recibir la clave electrónica
+                           Debe ingresar el correo electrónico donde recibió su clave
                            <span class="pull-right" style="color: gray;">
                               <?php echo htmlspecialchars("name@ejemplo.com"); ?>
                            </span>
                         </li>
                         <li>
-                           Luego de recibir la clave electrónica, ingresar en el campo solicitado
+                           Finalmente ingresar la clave electrónica enviada
+                           <span class="pull-right" style="color: gray;">
+                              xPl01t3d
+                           </span>
                         </li>
                      </ul>
-                  </div>
+                  </div><!-- .well .small -->
 
-                  <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                     <label for="name" class="col-md-4 control-label">Run</label>
 
-                     <div class="col-md-6">
-                        <input id="run" type="text" class="form-control" name="run" value=""
-                               placeholder="Ej : 123456789" v-model="newuser.name">
+                  <div v-if="mostrar_input_password == false">
 
-                        @if ($errors->has('name'))
-                           <span class="help-block">
-                               <strong>{{ $errors->first('name') }}</strong>
-                           </span>
-                        @endif
+                     <!-- Error -->
+                     <div class="form-group">
+                        <label for="run" class="col-md-4 control-label">Run</label>
+
+                        <div class="col-md-6">
+                           <input id="run" type="text" class="form-control" name="run" value=""
+                                  placeholder="Ej : 123456789" v-model="newuser.run">
+
+                        </div>
                      </div>
-                  </div>
 
-                  <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                     <label for="email" class="col-md-4 control-label">Correo Electrónico</label>
+                     <!-- Correo -->
+                     <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">Correo Electrónico</label>
 
-                     <div class="col-md-6">
-                        <input id="email" type="email" class="form-control" name="email" value=""
-                               v-model="newuser.email">
+                        <div class="col-md-6">
+                           <input id="email" type="email" class="form-control" name="email" value=""
+                                  v-model="newuser.email">
 
-                        @if ($errors->has('email'))
-                           <span class="help-block">
-                               <strong>{{ $errors->first('email') }}</strong>
-                           </span>
-                        @endif
+                        </div>
                      </div>
-                  </div>
 
-                  <hr>
+                     <!-- Clave Electrónica -->
+                     <div class="form-group">
+                        <label for="clave_electronica" class="col-md-4 control-label">LLave secreta</label>
 
-                  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                     <label for="password" class="col-md-4 control-label">Clave entregada por correo</label>
+                        <div class="col-md-6">
+                           <input id="clave_electronica" type="password" class="form-control" name="clave_electronica"
+                                  v-model="newuser.clave_electronica">
 
-                     <div class="col-md-6">
-                        <input id="password" type="password" class="form-control" name="password">
-
-                        @if ($errors->has('password'))
-                           <span class="help-block">
-                               <strong>{{ $errors->first('password') }}</strong>
-                           </span>
-                        @endif
+                        </div>
                      </div>
+
+                  </div>
+                  <div v-else>
+
+                     <!-- Clave Real -->
+                     <div class="form-group" v-show="btn_generar_clave == true">
+                        <label for="clave_real" class="col-md-4 control-label">Ingrese su clave</label>
+
+                        <div class="col-md-6">
+                           <input id="clave_real" type="password" class="form-control" name="clave_real"
+                                  v-model="newuser.clave_real">
+
+                        </div>
+                     </div>
+
+                     <transition name="fade">
+                        <div v-show="btn_finalizar == true">
+                           <span class="text-success">
+                              La clave ha sido creada correctamente
+                           </span>
+                           <a href="{{url('/login')}}" class="btn btn-success">
+                              Finalizar
+                           </a>
+                        </div>
+                     </transition>
+
                   </div>
 
+
+                  <br><br>
                   <div class="form-group">
                      <div class="col-md-6 col-md-offset-4">
 
-                        <button type="submit" class="btn btn-primary" v-if="btn_generar_clave == false"
-                                @click.prevent="procesar_solicitud_clave">
-                           <i class="fa fa-btn fa-key"></i> Procesar solicitud
-                        </button>
-                        <button type="submit" class="btn btn-primary" v-else
-                                @click.prevent="procesar_solicitud_clave">
-                           <i class="fa fa-btn fa-key"></i> Crear Clave
-                        </button>
+                        <transition name="fade">
+                           <button class="btn btn-primary"
+                                   v-show="btn_procesar_clave == true"
+                                   @click.prevent="procesar_solicitud_clave">
+                              <i class="fa fa-btn fa-key"></i> Procesar
+                           </button>
+                        </transition>
 
-                        <transition v-if="mini_loader == true" name="slide-fade">
+
+                        <transition name="fade">
+                           <button class="btn btn-primary"
+                                   v-show="btn_generar_clave == true"
+                                   @click.prevent="crear_clave">
+                              <i class="fa fa-btn fa-key"></i> Crear
+                           </button>
+                        </transition>
+
+
+
+
+
+
+                        <!-- Mensaje de proceso exitoso -->
+                        <transition v-if="mini_loader_visible == true" name="slide-fade">
                            <div class="pull-right">
                               <div class="circle-loader">
                                  <div class="checkmark draw"></div>
