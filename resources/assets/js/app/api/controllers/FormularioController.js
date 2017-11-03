@@ -182,6 +182,7 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Run Madre</b>
                                           </a>
                                        </li>
+                                       <!--
                                        <li role="presentation">
                                           <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo"
                                              role="tab" data-toggle="tab">
@@ -189,6 +190,7 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Correlativo</b>
                                           </a>
                                        </li>
+                                       -->
 
                                     </ul>
                                  </div><!-- .panel-heading -->
@@ -216,9 +218,32 @@ const FormularioController = new Vue({
                                                              id="run_madre"
                                                              v-model="run_madre">
 
+
+
                                                       <button class="btn btn-sm btn-info" @click.prevent="buscar_por_rut">
                                                          Buscar&nbsp;<i class="fa fa-search"></i>
                                                       </button>
+
+
+
+                                                      <!-- Busqueda por RUN -->
+                                                      <div class="form-group">
+                                                         <div class="input-group input-group-sm">
+                                                            <div class="input-group-addon">
+                                                               <i class="fa fa-font"></i>
+                                                            </div>
+                                                            <!-- Input para escribir el termino a buscar -->
+                                                            <input type="text" class="form-control" placeholder="Ingrese criterio de búsqueda para filtrar"
+                                                                   v-model="filterTerm" id="filterTerm">
+                                                            <!-- Boton para limpiar contenido del filtro por criterio -->
+                                                               <span class="input-group-btn">
+                                                                  <button @click.prevent="filterTerm=''" type="button" class="btn btn-default">
+                                                                     Limpiar
+                                                                  </button>
+                                                               </span><!-- .input-group-btn -->
+                                                         </div><!-- /.input-group -->
+                                                      </div><!-- /.form-group -->
+
 
                                                       <div class="table-responsive" v-if="formulario_vacio == false">
                                                          Resultados encontrados

@@ -46,5 +46,6 @@ elixir(function (mix) {
      mix.version(['public/css/app.css', 'public/js/all.js']);*/
 
     mix.browserify('app/api/controllers/FormularioController.js', 'public/js/app/api/controllers/FormularioController.js');
-    mix.browserify('app/api/controllers/InputController.js', 'public/js/app/api/controllers/InputController.js');
+    //mix.browserify('app/api/controllers/InputController.js', 'public/js/app/api/controllers/InputController.js');
+    mix.browserify('app/api/controllers/UsuarioCreateController.js', 'public/js/app/api/controllers/UsuarioCreateController.js');
 });

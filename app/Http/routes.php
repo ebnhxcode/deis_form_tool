@@ -13,7 +13,8 @@
 
 #Route::get('/', function () {return view('welcome');});
 
-Route::get('/registro', 'UserController@register');
+Route::get('/registro', 'UserController@registro');
+Route::post('/procesar_solicitud_clave', 'UserController@procesar_solicitud_clave');
 Route::get('/register', function () { return redirect()->to('/login'); });
 
 

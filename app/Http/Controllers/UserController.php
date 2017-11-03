@@ -3,18 +3,36 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Mail;
 use App\Http\Requests;
 
 class UserController extends Controller
 {
 
     public function __construct () {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['registro', 'procesar_solicitud_clave']]);
     }
 
-    public function register (Request $request) {
+    public function registro (Request $request) {
 
+
+
+        return view ('usuarios.create');
+    }
+
+    public function procesar_solicitud_clave (Request $request) {
+        /*
+        Mail::send('emails.reminder', ['user' => $user], function ($m) use ($user) {
+            $m->from('hello@app.com', 'Your Application');
+
+            $m->to($user->email, $user->name)->subject('Your Reminder!');
+        });
+        */
+
+
+        Mail::send('email.solicitud_clave_electronica', [], function ($message) {
+            $message->to('esteban.ramos@taisachile.cl', 'example_name')->subject('Welcome!');
+        });
     }
 
 }
