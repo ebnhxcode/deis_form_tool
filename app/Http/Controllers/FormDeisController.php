@@ -15,14 +15,89 @@ class FormDeisController extends Controller {
 
     private $fdc;
     public function __construct () {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['testapi']]);
     }
 
 
     public function testapi (Request $request) {
 
+        #https://api.minsal.cl
+        $url = 'https://api.minsal.cl/oauth/token';
+        $data = array('grant_type' => 'client_credentials');
+
+        #$client_id = "<<Client ID entregado>>";
+        #$client_secret = "<<Secret entregado>>";
+        #$str_base64 = base64_encode($client_id.':'.$client_secret);
+        $str_base64 = 'OVRTZzMwMDBVaVBvVkE4NVZqQ3N0MjFuam5EUFExNFM6UkpZRm1ITzB4SUNKNVQ2Zg==';
+
+        $options = array(
+           'http' => array(
+              'header'  => "Content-type: application/x-www-form-urlencoded\r\n".
+                 "Authorization: Basic ".$str_base64,
+              'method'  => 'POST',
+              'content' => http_build_query($data)
+           ),
+           "ssl"=>array(
+              "verify_peer"=>false,
+              "verify_peer_name"=>false,
+           )
+        );
+
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        if ($result === FALSE) {
+            # error
+        }
+        $authObj = json_decode($result);
+        $access_token = $authObj->access_token;
+        // echo "TOKEN ".$access_token;
+        #return $access_token;
+
+        ######################################
+
+        $urlApi = 'https://api.minsal.cl/v2/apiconsultarpersona/personas/consultar/basico/consultaPersonaBasicoPorRun?';
+        #$token = getToken();
+        $token = $access_token;
+
+        /*
+        $data = array(
+           'runPersona' => $_POST['rutPrestador'],
+           'dvPersona' => $_POST['dvPrestador']
+        );
+        */
+
+        $data = array(
+           'runPersona' => '18002555',
+           'dvPersona' => '3'
+        );
+
+        $options = array(
+           'http' => array(
+              'header'  => "Authorization: Bearer ".$token,
+              'method'  => 'GET'
+           ),
+           "ssl"=>array(
+              "verify_peer"=>false,
+              "verify_peer_name"=>false,
+           )
+        );
 
 
+        $context = stream_context_create($options);
+        $urlApi = $urlApi.http_build_query($data);
+        $result = file_get_contents($urlApi, false, $context);
+        dd($result);
+
+        //MUESTRA JSON COMPLETO
+        echo "<br><br><b>JSON</b>:<br><br>".$result."<br><br><br><br><br><br>";
+        //DECODIFICACIÓN DE JSON
+        var_dump(json_decode($result)); die();
+        $obj = json_decode($result);
+        print $obj->{'nombresPersona'}." ";
+        print $obj->{'primerApellidoPersona'}." "; // 12345
+        print $obj->{'segundoApellidoPersona'};
+        echo "<br><br><br>";
+        exit;
 
 
     }

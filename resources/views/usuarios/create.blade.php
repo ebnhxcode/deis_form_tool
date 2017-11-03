@@ -44,7 +44,6 @@
                         <div class="col-md-6">
                            <input id="run" type="text" class="form-control" name="run" value=""
                                   placeholder="Ej : 123456789" v-model="newuser.run">
-
                         </div>
                      </div>
 
@@ -56,7 +55,6 @@
                         <div class="col-md-6">
                            <input id="email" type="email" class="form-control" name="email" value=""
                                   v-model="newuser.email">
-
                         </div>
                      </div>
 
@@ -67,7 +65,6 @@
                         <div class="col-md-6">
                            <input id="clave_electronica" type="password" class="form-control" name="clave_electronica"
                                   v-model="newuser.clave_electronica">
-
                         </div>
                      </div>
 
@@ -98,9 +95,7 @@
 
                         </div>
                      </transition>
-
                   </div>
-
 
                   <br><br>
                   <div class="form-group">
@@ -114,7 +109,6 @@
                            </button>
                         </transition>
 
-
                         <transition name="fade">
                            <button class="btn btn-primary"
                                    v-show="btn_generar_clave == true"
@@ -122,11 +116,6 @@
                               <i class="fa fa-btn fa-key"></i> Crear
                            </button>
                         </transition>
-
-
-
-
-
 
                         <!-- Mensaje de proceso exitoso -->
                         <transition v-if="mini_loader_visible == true" name="slide-fade">
