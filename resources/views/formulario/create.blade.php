@@ -37,7 +37,7 @@
                            <modal_buscar_formulario
                               v-if="show_modal_buscar_formulario == true">
                               <h3 slot="header">
-                                 Buscar formulario
+                                 Búsqueda DEIS
                                  <button class="btn btn-sm btn-default pull-right" @click.prevent="show_modal_buscar_formulario = false">
                                     Cerrar
                                  </button>

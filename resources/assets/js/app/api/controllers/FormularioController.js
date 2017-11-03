@@ -430,6 +430,8 @@ const FormularioController = new Vue({
          },
          methods: {
             buscar_por_run: function () {
+               if (!this.run_madre) return;
+
                var formData = new FormData();
 
                Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
@@ -445,6 +447,7 @@ const FormularioController = new Vue({
                });
             },
             buscar_por_correlativo: function () {
+               if (!this.n_correlativo_interno) return;
                var formData = new FormData();
 
                Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();

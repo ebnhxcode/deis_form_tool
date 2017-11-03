@@ -36973,6 +36973,8 @@ var FormularioController = new _vue2.default({
             buscar_por_run: function buscar_por_run() {
                var _this = this;
 
+               if (!this.run_madre) return;
+
                var formData = new FormData();
 
                _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
@@ -36991,6 +36993,7 @@ var FormularioController = new _vue2.default({
             buscar_por_correlativo: function buscar_por_correlativo() {
                var _this2 = this;
 
+               if (!this.n_correlativo_interno) return;
                var formData = new FormData();
 
                _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();

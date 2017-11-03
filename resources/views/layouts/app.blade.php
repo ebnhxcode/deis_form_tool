@@ -23,6 +23,9 @@
    <!-- Select2 2.1.4 -->
    <script src="{{ asset('/js/select2.min.js') }}"></script>
 
+   <!-- Recaptcha V2 Google -->
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+
    <style>
       body {
          font-family: 'Lato';
