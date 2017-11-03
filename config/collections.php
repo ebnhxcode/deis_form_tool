@@ -10,17 +10,17 @@ return [
       ],
       'control_embarazo' => [
          'name' => 'control_embarazo',
-         'description' => 'Control de Embarazo',
+         'description' => 'Control de Embarazo (APS)',
          'class' => '',
       ],
       'patologias_sifilis' => [
          'name' => 'patologias_sifilis',
-         'description' => 'Control Sífilis',
+         'description' => 'Control Sífilis (Especialidades)',
          'class' => '',
       ],
       'patologias_vih' => [
          'name' => 'patologias_vih',
-         'description' => 'Control VIH',
+         'description' => 'Control VIH (Especialidades)',
          'class' => '',
       ],
       'datos_parto' => [
