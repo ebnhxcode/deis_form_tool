@@ -38,8 +38,8 @@
                   <div v-if="mostrar_input_password == false">
 
                      <!-- Error -->
-                     <div class="form-group">
-                        <label for="run" class="col-md-4 control-label">Run</label>
+                     <div class="form-group" style="padding-bottom: 30px ;">
+                        <label for="run" class="col-md-4 control-label" align="right">Run</label>
 
                         <div class="col-md-6">
                            <input id="run" type="text" class="form-control" name="run" value=""
@@ -48,9 +48,10 @@
                         </div>
                      </div>
 
+
                      <!-- Correo -->
-                     <div class="form-group">
-                        <label for="email" class="col-md-4 control-label">Correo Electrónico</label>
+                     <div class="form-group" style="padding-bottom: 30px ;">
+                        <label for="email" class="col-md-4 control-label" align="right">Correo Electrónico</label>
 
                         <div class="col-md-6">
                            <input id="email" type="email" class="form-control" name="email" value=""
@@ -60,8 +61,8 @@
                      </div>
 
                      <!-- Clave Electrónica -->
-                     <div class="form-group">
-                        <label for="clave_electronica" class="col-md-4 control-label">LLave secreta</label>
+                     <div class="form-group" style="padding-bottom: 30px ;">
+                        <label for="clave_electronica" class="col-md-4 control-label" align="right">LLave secreta</label>
 
                         <div class="col-md-6">
                            <input id="clave_electronica" type="password" class="form-control" name="clave_electronica"
@@ -74,8 +75,8 @@
                   <div v-else>
 
                      <!-- Clave Real -->
-                     <div class="form-group" v-show="btn_generar_clave == true">
-                        <label for="clave_real" class="col-md-4 control-label">Ingrese su clave</label>
+                     <div class="form-group" v-show="btn_generar_clave == true" style="padding-bottom: 30px ;">
+                        <label for="clave_real" class="col-md-4 control-label" align="right">Ingrese su clave</label>
 
                         <div class="col-md-6">
                            <input id="clave_real" type="password" class="form-control" name="clave_real"
@@ -85,13 +86,16 @@
                      </div>
 
                      <transition name="fade">
-                        <div v-show="btn_finalizar == true">
+                        <div v-show="btn_finalizar == true" class="col-md-6 col-md-offset-3">
+
                            <span class="text-success">
                               La clave ha sido creada correctamente
                            </span>
+                           &nbsp;&nbsp;&nbsp;
                            <a href="{{url('/login')}}" class="btn btn-success">
                               Finalizar
                            </a>
+
                         </div>
                      </transition>
 
