@@ -13,8 +13,9 @@
 
 #Route::get('/', function () {return view('welcome');});
 
+Route::get('/registro', 'UserController@register');
 Route::get('/register', function () { return redirect()->to('/login'); });
-Route::get('/registro', 'Auth\AuthController@register');
+
 
 Route::auth();
 

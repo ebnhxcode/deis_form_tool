@@ -9,6 +9,10 @@ use App\Http\Requests;
 
 class InputController extends Controller
 {
+
+    public function __construct () {
+        $this->middleware('auth');
+    }
     private $returnData = [];
     public function index (Request $request) {
         $this->returnData['tables'] = config('collection.tables');
