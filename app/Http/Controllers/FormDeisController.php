@@ -34,10 +34,23 @@ class FormDeisController extends Controller {
     }
 
     public function buscar_por_rut (Request $request){
-        $run_madre = $request->run_madre;
+        $run_madre = isset($request->run_madre)?$request->run_madre:null;
         #$formularios = FormDeis::where('run_madre', 'ilike', '%'.$run_madre.'%')->get();
-        $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
-        return response()->json(['formularios'=>$formularios]);
+        if ($run_madre) {
+            $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
+            return response()->json(['formularios'=>$formularios]);
+        }else{
+            return response()->json(['error'=>['002' => 'El run no existe']]);
+        }
+    }
+    public function buscar_por_correlativo (Request $request){
+        $correlativo = isset($request->n_correlativo_interno)?$request->n_correlativo_interno:null;
+        if ($correlativo) {
+            $formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
+            return response()->json(['formularios'=>$formularios]);
+        }else{
+            return response()->json(['error'=>['002' => 'El correlativo no existe']]);
+        }
     }
 
     public function inputs_formulario (Request $request) {

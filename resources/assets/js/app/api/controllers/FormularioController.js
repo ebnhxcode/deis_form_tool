@@ -210,7 +210,15 @@ const FormularioController = new Vue({
                                                       Run Madre
                                                    </dt>
                                                    <dd>
-                                                      <input class="form-control"
+
+                                                      <!-- Busqueda por CORRELATIVO -->
+                                                      <div class="form-group">
+                                                         <div class="input-group input-group-sm">
+                                                            <div class="input-group-addon">
+                                                               <i class="fa fa-pin"></i>
+                                                            </div>
+
+                                                            <input class="form-control"
                                                              type="text"
                                                              style="padding-bottom: 5px;"
                                                              name="run_madre"
@@ -218,29 +226,11 @@ const FormularioController = new Vue({
                                                              id="run_madre"
                                                              v-model="run_madre">
 
-
-
-                                                      <button class="btn btn-sm btn-info" @click.prevent="buscar_por_rut">
-                                                         Buscar&nbsp;<i class="fa fa-search"></i>
-                                                      </button>
-
-
-
-                                                      <!-- Busqueda por RUN -->
-                                                      <div class="form-group">
-                                                         <div class="input-group input-group-sm">
-                                                            <div class="input-group-addon">
-                                                               <i class="fa fa-font"></i>
-                                                            </div>
-                                                            <!-- Input para escribir el termino a buscar -->
-                                                            <input type="text" class="form-control" placeholder="Ingrese criterio de búsqueda para filtrar"
-                                                                   v-model="filterTerm" id="filterTerm">
-                                                            <!-- Boton para limpiar contenido del filtro por criterio -->
-                                                               <span class="input-group-btn">
-                                                                  <button @click.prevent="filterTerm=''" type="button" class="btn btn-default">
-                                                                     Limpiar
-                                                                  </button>
-                                                               </span><!-- .input-group-btn -->
+                                                            <span class="input-group-btn">
+                                                               <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">
+                                                                  Buscar&nbsp;<i class="fa fa-search"></i>
+                                                               </button>
+                                                            </span><!-- .input-group-btn -->
                                                          </div><!-- /.input-group -->
                                                       </div><!-- /.form-group -->
 
@@ -305,14 +295,28 @@ const FormularioController = new Vue({
                                                       Número de correlativo
                                                    </dt>
                                                    <dd>
-                                                      <input class="form-control"
-                                                             type="number"
-                                                             name="n_correlativo_interno"
-                                                             id="n_correlativo_interno">
 
-                                                     <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">
-                                                         Buscar&nbsp;<i class="fa fa-search"></i>
-                                                      </button>
+
+                                                      <!-- Busqueda por RUN -->
+                                                      <div class="form-group">
+                                                         <div class="input-group input-group-sm">
+                                                            <div class="input-group-addon">
+                                                               <i class="fa fa-user"></i>
+                                                            </div>
+
+                                                            <input class="form-control"
+                                                                   type="number"
+                                                                   name="n_correlativo_interno"
+                                                                   id="n_correlativo_interno"
+                                                                   v-model="n_correlativo_interno">
+
+                                                            <span class="input-group-btn">
+                                                              <button class="btn btn-sm btn-info" @click.prevent="buscar_por_correlativo">
+                                                                  Buscar&nbsp;<i class="fa fa-search"></i>
+                                                               </button>
+                                                            </span><!-- .input-group-btn -->
+                                                         </div><!-- /.input-group -->
+                                                      </div><!-- /.form-group -->
 
 
                                                       <div class="table-responsive" v-if="formulario_vacio_correlativo == false">
@@ -405,6 +409,7 @@ const FormularioController = new Vue({
                'run_madre':'',
                'n_correlativo_interno':'',
                'formularios':[],
+               'formularios_correlativo':[],
                'formulario_vacio':true,
                'formulario_vacio_correlativo':true,
             }
@@ -424,6 +429,22 @@ const FormularioController = new Vue({
                   //console.log(response);
                   this.formularios = response.body.formularios;
                   this.formulario_vacio = $.isEmptyObject(this.formularios)==true?true:false;
+
+               }, response => { // error callback
+                  console.log(response);
+               });
+            },
+            buscar_por_correlativo: function () {
+               var formData = new FormData();
+
+               Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+               formData.append('n_correlativo_interno', this.n_correlativo_interno);
+
+               this.$http.post('/formulario/buscar_por_correlativo', formData).then(response => { // success callback
+                  //console.log(response);
+
+                  //this.formularios_correlativo = response.body.formularios;
+                  //this.formulario_vacio_correlativo = $.isEmptyObject(this.formularios)==true?true:false;
 
                }, response => { // error callback
                   console.log(response);

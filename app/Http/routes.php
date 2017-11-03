@@ -62,6 +62,7 @@ Route::get('/testapi', function () {
 Route::get('/formulario/testapi', 'FormDeisController@testapi');
 
 Route::post ('/formulario/buscar_por_rut' , 'FormDeisController@buscar_por_rut') ;
+Route::post ('/formulario/buscar_por_correlativo' , 'FormDeisController@buscar_por_correlativo') ;
 Route::get ('/formulario/datos_formulario' , 'FormDeisController@datos_formulario') ;
 Route::get ('/formulario/inputs_formulario' , 'FormDeisController@inputs_formulario') ;
 
