@@ -14,6 +14,8 @@
 #Route::get('/', function () {return view('welcome');});
 
 Route::get('/registro', 'UserController@registro');
+Route::get('/solicitud_clave', 'UserController@registro');
+Route::get('/clave_electronica', 'UserController@registro');
 Route::post('/procesar_solicitud_clave', 'UserController@procesar_solicitud_clave');
 Route::get('/register', function () { return redirect()->to('/login'); });
 

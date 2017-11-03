@@ -71,6 +71,13 @@
             <!-- Authentication Links -->
             @if (Auth::guest())
                <li><a href="{{ url('/login') }}">Login</a></li>
+               <li>
+                  <a href="{{ url('/registro') }}">
+                     Solicitar Clave
+                     &nbsp;&nbsp;
+                     <span class="label label-warning small pull-right">Nuevo</span>
+                  </a>
+               </li>
                {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
             @else
                <li class="dropdown">
