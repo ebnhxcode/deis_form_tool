@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mail;
 use App\Http\Requests;
+use App\User;
 
 class UserController extends Controller
 {
@@ -35,13 +36,14 @@ class UserController extends Controller
 
     public function crear_clave (Request $request) {
         $email = $request->email;
-        
+        $user = User::where('email', $email)->first();
+        $user->password = bcrypt($request->clave_real);
 
 
+        $user->save();
 
-
-        Mail::send('email.solicitud_clave_electronica', [], function ($message) {
-            $message->to('esteban.ramos@taisachile.cl', 'example_name')->subject('Welcome!');
+        Mail::send('email.solicitud_clave_electronica', [], function ($message) use ($email) {
+            $message->to($email, 'Cambio de Clave')->subject('Clave cambiada!');
         });
     }
 
