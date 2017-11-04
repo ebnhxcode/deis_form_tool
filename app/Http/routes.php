@@ -13,6 +13,10 @@
 
 #Route::get('/', function () {return view('welcome');});
 
+Route::get('/demo', function () {
+   return view('demo.demo');
+});
+
 Route::get('/registro', 'UserController@registro');
 Route::get('/solicitud_clave', 'UserController@registro');
 Route::get('/clave_electronica', 'UserController@registro');
