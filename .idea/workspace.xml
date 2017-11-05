@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/demo/demo.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/demo/demo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="104" selection-start-line="0" selection-start-column="104" selection-end-line="0" selection-end-column="104" />
+              <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -290,8 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -714,12 +710,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FLF" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="SearchEverywhereHistoryKey" value="FormDeisController&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/Controllers/FormDeisController.php&#10;UserController&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/Controllers/UserController.php&#10;routes.&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/routes.php&#10;/config/app&#9;FILE&#9;file:///var/www/html/deis_form_tool/config/app.php&#10;routes&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/routes.php&#10;route&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/routes.php&#10;routes.php&#9;FILE&#9;file:///var/www/html/deis_form_tool/app/Http/routes.php&#10;0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php&#9;FILE&#9;file:///var/www/html/deis_form_tool/storage/framework/views/0399988e8202f72fc2e08d1f72cd2a892a6a36cf.php" />
@@ -1231,7 +1229,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/demo/demo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="104" selection-start-line="0" selection-start-column="104" selection-end-line="0" selection-end-column="104" />
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
           <folding />
         </state>
       </provider>
