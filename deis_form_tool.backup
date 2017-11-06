@@ -190,7 +190,7 @@ CREATE TABLE form_deis (
     sexo_recien_nacido character varying(255),
     peso_recien_nacido double precision,
     estado_clinico_recien_nacido character varying(255),
-    run_recien_nacido integer,
+    run_recien_nacido text,
     fecha_nacimiento_recien_nacido date,
     hora_nacimiento_recien_nacido time(0) without time zone,
     digito_verificador_recien_nacido character varying(255),
@@ -4650,7 +4650,14 @@ COPY form_deis (id, nombres_madre, primer_apellido_madre, segundo_apellido_madre
 239	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 13:45:58	2017-11-02 13:45:58	\N	\N	\N	\N	\N	\N	\N
 240	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-02 21:31:10	2017-11-02 21:31:10	\N	\N	\N	\N	\N	\N	\N
 241	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 07:23:48	2017-11-06 07:23:48	\N	\N	\N	\N	\N	\N	\N
-168	Esteban Gonzalo	Ramos	Fernandez	1991-12-12	168	\N	\N	\N	\N	Austriaco	40	Rapa Nui	\N	\N	\N	1221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1991-12-12	Si	\N	\N	\N	\N	\N	1991-12-12	No Realizado	1:2	4	\N	No Realizado	\N	\N	\N	No Reactivo	\N	\N	\N	No Realizado	\N	\N	\N	\N	\N	\N	No Reactivo	\N	\N	No Reactivo	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1232	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	55.1229999999999976	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.23399999999999999	\N	\N	\N	11:22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	03:01:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1991-12-12	1991-12-12	\N	\N	\N	2017-10-31 16:59:11	2017-11-06 14:43:35	180025553	2s32	a221s	Fonasa	ocupado	1	\N
+244	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 14:54:33	2017-11-06 14:54:33	\N	\N	\N	\N	\N	\N	\N
+245	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 14:54:45	2017-11-06 14:54:45	\N	\N	\N	\N	\N	\N	\N
+246	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 15:24:58	2017-11-06 15:24:58	\N	\N	\N	\N	\N	\N	\N
+242	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 14:49:20	2017-11-06 14:49:20	\N	\N	\N	\N	\N	\N	\N
+247	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 15:25:13	2017-11-06 15:25:13	\N	\N	\N	\N	\N	\N	\N
+243	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 14:50:12	2017-11-06 14:50:12	\N	\N	\N	\N	\N	\N	\N
+248	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2017-11-06 15:26:28	2017-11-06 15:26:28	\N	\N	\N	\N	\N	\N	\N
+168	Esteban Gonzalo	Ramos	Fernandez	1991-12-12	168	\N	\N	\N	\N	Austriaco	40	Rapa Nui	\N	\N	\N	1221	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1991-12-12	Si	\N	\N	\N	\N	\N	1991-12-12	No Realizado	1:2	4	\N	No Realizado	\N	\N	\N	No Reactivo	\N	\N	\N	No Realizado	\N	\N	\N	\N	\N	\N	No Reactivo	\N	\N	No Reactivo	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1232	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	55.1229999999999976	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	2.23399999999999999	\N	\N	\N	11:22:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	03:01:00	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	1991-12-12	1991-12-12	\N	\N	\N	2017-10-31 16:59:11	2017-11-06 15:33:53	180025553	2s32	a221s	Fonasa	ocupado	1	\N
 \.
 
 
@@ -4939,6 +4946,236 @@ COPY log_navigation (id_log_navigation, user_id, cod_establecimiento, user_name,
 323	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:43:35	2017-11-06 14:43:35
 324	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:43:40	2017-11-06 14:43:40
 325	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:43:41	2017-11-06 14:43:41
+326	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:44:36	2017-11-06 14:44:36
+327	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:44:37	2017-11-06 14:44:37
+328	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:44:41	2017-11-06 14:44:41
+329	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:44:42	2017-11-06 14:44:42
+330	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:44:42	2017-11-06 14:44:42
+331	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:49:17	2017-11-06 14:49:17
+332	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:49:18	2017-11-06 14:49:18
+333	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:49:20	2017-11-06 14:49:20
+334	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 14:49:20	2017-11-06 14:49:20
+335	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:49:28	2017-11-06 14:49:28
+336	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:49:43	2017-11-06 14:49:43
+337	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:49:44	2017-11-06 14:49:44
+338	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:49:48	2017-11-06 14:49:48
+339	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:49:49	2017-11-06 14:49:49
+340	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:49:49	2017-11-06 14:49:49
+341	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:50:10	2017-11-06 14:50:10
+342	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:50:11	2017-11-06 14:50:11
+343	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 14:50:12	2017-11-06 14:50:12
+344	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:50:12	2017-11-06 14:50:12
+345	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:50:16	2017-11-06 14:50:16
+346	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:50:16	2017-11-06 14:50:16
+347	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:50:17	2017-11-06 14:50:17
+348	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:50:17	2017-11-06 14:50:17
+349	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:50:53	2017-11-06 14:50:53
+350	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:51:03	2017-11-06 14:51:03
+351	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:51:05	2017-11-06 14:51:05
+352	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:51:05	2017-11-06 14:51:05
+353	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:51:10	2017-11-06 14:51:10
+354	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:51:11	2017-11-06 14:51:11
+355	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:51:16	2017-11-06 14:51:16
+356	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:51:19	2017-11-06 14:51:19
+357	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:51:19	2017-11-06 14:51:19
+358	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:52:26	2017-11-06 14:52:26
+359	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:52:26	2017-11-06 14:52:26
+360	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:52:29	2017-11-06 14:52:29
+361	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:52:29	2017-11-06 14:52:29
+362	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:52:30	2017-11-06 14:52:30
+363	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:52:30	2017-11-06 14:52:30
+364	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:52:41	2017-11-06 14:52:41
+365	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:52:42	2017-11-06 14:52:42
+366	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:52:45	2017-11-06 14:52:45
+367	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:52:46	2017-11-06 14:52:46
+368	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:52:46	2017-11-06 14:52:46
+369	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:53:29	2017-11-06 14:53:29
+370	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:53:29	2017-11-06 14:53:29
+371	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:53:32	2017-11-06 14:53:32
+372	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:53:35	2017-11-06 14:53:35
+373	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:53:35	2017-11-06 14:53:35
+374	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:54:31	2017-11-06 14:54:31
+375	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:54:32	2017-11-06 14:54:32
+376	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:54:33	2017-11-06 14:54:33
+377	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 14:54:33	2017-11-06 14:54:33
+378	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:54:42	2017-11-06 14:54:42
+379	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:54:43	2017-11-06 14:54:43
+380	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 14:54:45	2017-11-06 14:54:45
+381	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:54:45	2017-11-06 14:54:45
+382	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:56:36	2017-11-06 14:56:36
+383	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:56:37	2017-11-06 14:56:37
+384	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:56:40	2017-11-06 14:56:40
+385	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:56:42	2017-11-06 14:56:42
+386	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:56:42	2017-11-06 14:56:42
+387	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:56:45	2017-11-06 14:56:45
+388	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:56:46	2017-11-06 14:56:46
+389	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:56:47	2017-11-06 14:56:47
+390	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:56:50	2017-11-06 14:56:50
+391	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:56:51	2017-11-06 14:56:51
+392	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:56:51	2017-11-06 14:56:51
+393	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:57:54	2017-11-06 14:57:54
+394	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:57:54	2017-11-06 14:57:54
+395	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:57:58	2017-11-06 14:57:58
+396	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:57:59	2017-11-06 14:57:59
+397	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:57:59	2017-11-06 14:57:59
+398	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:58:44	2017-11-06 14:58:44
+399	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:58:45	2017-11-06 14:58:45
+400	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:58:47	2017-11-06 14:58:47
+401	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:58:48	2017-11-06 14:58:48
+402	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:58:48	2017-11-06 14:58:48
+403	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:59:31	2017-11-06 14:59:31
+404	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:59:31	2017-11-06 14:59:31
+405	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:59:35	2017-11-06 14:59:35
+406	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 14:59:35	2017-11-06 14:59:35
+407	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 14:59:37	2017-11-06 14:59:37
+408	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 14:59:37	2017-11-06 14:59:37
+409	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 14:59:58	2017-11-06 14:59:58
+410	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 14:59:59	2017-11-06 14:59:59
+411	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:00:02	2017-11-06 15:00:02
+412	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:00:03	2017-11-06 15:00:03
+413	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:00:03	2017-11-06 15:00:03
+414	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:00:13	2017-11-06 15:00:13
+415	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:00:14	2017-11-06 15:00:14
+416	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:00:18	2017-11-06 15:00:18
+417	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:00:18	2017-11-06 15:00:18
+418	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:00:18	2017-11-06 15:00:18
+419	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:00:18	2017-11-06 15:00:18
+420	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/input	10.0.2.15	2017-11-06 15:06:56	2017-11-06 15:06:56
+421	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/input/create	10.0.2.15	2017-11-06 15:06:58	2017-11-06 15:06:58
+422	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/input	10.0.2.15	2017-11-06 15:06:58	2017-11-06 15:06:58
+423	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:07:37	2017-11-06 15:07:37
+424	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:07:38	2017-11-06 15:07:38
+425	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:07:41	2017-11-06 15:07:41
+426	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:07:41	2017-11-06 15:07:41
+427	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:07:42	2017-11-06 15:07:42
+428	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:07:42	2017-11-06 15:07:42
+429	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:10:29	2017-11-06 15:10:29
+430	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:10:29	2017-11-06 15:10:29
+431	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:10:31	2017-11-06 15:10:31
+432	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:10:35	2017-11-06 15:10:35
+433	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:10:36	2017-11-06 15:10:36
+434	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:10:43	2017-11-06 15:10:43
+435	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:10:45	2017-11-06 15:10:45
+436	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:10:45	2017-11-06 15:10:45
+437	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:12:00	2017-11-06 15:12:00
+438	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:12:01	2017-11-06 15:12:01
+439	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:12:03	2017-11-06 15:12:03
+440	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:12:04	2017-11-06 15:12:04
+441	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:12:04	2017-11-06 15:12:04
+442	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:13:53	2017-11-06 15:13:53
+443	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:13:54	2017-11-06 15:13:54
+444	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:14:00	2017-11-06 15:14:00
+445	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:14:02	2017-11-06 15:14:02
+446	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:14:02	2017-11-06 15:14:02
+447	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:15:03	2017-11-06 15:15:03
+448	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:15:04	2017-11-06 15:15:04
+449	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:15:07	2017-11-06 15:15:07
+450	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:15:08	2017-11-06 15:15:08
+451	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:15:08	2017-11-06 15:15:08
+452	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:16:15	2017-11-06 15:16:15
+453	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:16:15	2017-11-06 15:16:15
+454	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:16:18	2017-11-06 15:16:18
+455	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:16:19	2017-11-06 15:16:19
+456	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:16:19	2017-11-06 15:16:19
+457	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:16:34	2017-11-06 15:16:34
+458	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:16:35	2017-11-06 15:16:35
+459	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:16:37	2017-11-06 15:16:37
+460	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:16:38	2017-11-06 15:16:38
+461	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:16:38	2017-11-06 15:16:38
+462	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:17:03	2017-11-06 15:17:03
+463	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:17:03	2017-11-06 15:17:03
+464	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:17:07	2017-11-06 15:17:07
+465	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:17:09	2017-11-06 15:17:09
+466	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:17:09	2017-11-06 15:17:09
+467	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:17:12	2017-11-06 15:17:12
+468	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:17:13	2017-11-06 15:17:13
+469	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:17:15	2017-11-06 15:17:15
+470	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:17:16	2017-11-06 15:17:16
+471	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:17:16	2017-11-06 15:17:16
+472	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:17:24	2017-11-06 15:17:24
+473	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:17:25	2017-11-06 15:17:25
+474	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:17:28	2017-11-06 15:17:28
+475	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:17:28	2017-11-06 15:17:28
+476	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:17:30	2017-11-06 15:17:30
+477	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:17:30	2017-11-06 15:17:30
+478	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:20:02	2017-11-06 15:20:02
+479	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:20:03	2017-11-06 15:20:03
+480	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:20:09	2017-11-06 15:20:09
+481	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:20:10	2017-11-06 15:20:10
+482	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:20:10	2017-11-06 15:20:10
+483	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:20:15	2017-11-06 15:20:15
+484	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:20:16	2017-11-06 15:20:16
+485	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:20:18	2017-11-06 15:20:18
+486	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:20:18	2017-11-06 15:20:18
+487	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:20:20	2017-11-06 15:20:20
+488	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:20:20	2017-11-06 15:20:20
+489	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:20:22	2017-11-06 15:20:22
+490	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:20:23	2017-11-06 15:20:23
+491	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:20:26	2017-11-06 15:20:26
+492	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:20:27	2017-11-06 15:20:27
+493	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:20:27	2017-11-06 15:20:27
+494	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:20:32	2017-11-06 15:20:32
+495	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:20:33	2017-11-06 15:20:33
+496	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:21:16	2017-11-06 15:21:16
+497	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:21:17	2017-11-06 15:21:17
+498	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:22:06	2017-11-06 15:22:06
+499	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:22:07	2017-11-06 15:22:07
+500	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:22:10	2017-11-06 15:22:10
+501	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:22:11	2017-11-06 15:22:11
+502	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:22:11	2017-11-06 15:22:11
+503	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:22:17	2017-11-06 15:22:17
+504	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:22:19	2017-11-06 15:22:19
+505	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:22:22	2017-11-06 15:22:22
+506	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:22:23	2017-11-06 15:22:23
+507	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:22:23	2017-11-06 15:22:23
+508	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:22:29	2017-11-06 15:22:29
+509	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:22:30	2017-11-06 15:22:30
+510	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:22:51	2017-11-06 15:22:51
+511	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:22:52	2017-11-06 15:22:52
+512	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:22:55	2017-11-06 15:22:55
+513	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:22:55	2017-11-06 15:22:55
+514	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:22:55	2017-11-06 15:22:55
+515	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:22:55	2017-11-06 15:22:55
+516	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:22:59	2017-11-06 15:22:59
+517	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:23:01	2017-11-06 15:23:01
+518	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:23:04	2017-11-06 15:23:04
+519	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:23:05	2017-11-06 15:23:05
+520	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:23:05	2017-11-06 15:23:05
+521	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:23:11	2017-11-06 15:23:11
+522	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:23:12	2017-11-06 15:23:12
+523	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:23:12	2017-11-06 15:23:12
+524	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:23:15	2017-11-06 15:23:15
+525	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:23:16	2017-11-06 15:23:16
+526	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:23:18	2017-11-06 15:23:18
+527	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:23:19	2017-11-06 15:23:19
+528	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:23:22	2017-11-06 15:23:22
+529	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:23:22	2017-11-06 15:23:22
+530	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:23:24	2017-11-06 15:23:24
+531	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:23:24	2017-11-06 15:23:24
+532	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:24:55	2017-11-06 15:24:55
+533	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:24:57	2017-11-06 15:24:57
+534	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 15:24:58	2017-11-06 15:24:58
+535	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:24:58	2017-11-06 15:24:58
+536	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:25:10	2017-11-06 15:25:10
+537	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:25:11	2017-11-06 15:25:11
+538	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 15:25:13	2017-11-06 15:25:13
+539	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:25:14	2017-11-06 15:25:14
+540	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/transmision_vertical	10.0.2.15	2017-11-06 15:26:20	2017-11-06 15:26:20
+541	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:26:21	2017-11-06 15:26:21
+542	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:26:24	2017-11-06 15:26:24
+543	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:26:24	2017-11-06 15:26:24
+544	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:26:24	2017-11-06 15:26:24
+545	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/datos_formulario	10.0.2.15	2017-11-06 15:26:28	2017-11-06 15:26:28
+546	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:26:55	2017-11-06 15:26:55
+547	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:26:56	2017-11-06 15:26:56
+548	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:26:56	2017-11-06 15:26:56
+549	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:26:58	2017-11-06 15:26:58
+550	9	\N	Pruebas Minsal 2 	test2@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:26:59	2017-11-06 15:26:59
+551	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool	10.0.2.15	2017-11-06 15:33:48	2017-11-06 15:33:48
+552	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/create	10.0.2.15	2017-11-06 15:33:49	2017-11-06 15:33:49
+553	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/buscar_por_run	10.0.2.15	2017-11-06 15:33:52	2017-11-06 15:33:52
+554	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/inputs_formulario	10.0.2.15	2017-11-06 15:33:53	2017-11-06 15:33:53
+555	1	\N	Pruebas Minsal	test@minsal.cl	http://local.deisformtool/formulario/marcar_registro_form_deis	10.0.2.15	2017-11-06 15:33:53	2017-11-06 15:33:53
 \.
 
 
@@ -5290,6 +5527,7 @@ COPY users (id, name, last_name, full_name, "position", establecimiento, rut, em
 6	Talia Flores Gutierrez	\N	\N	\N	\N	\N	taliaxfg@gmail.com	$2y$10$FizR/IWLmuOkprq/HL4uweI145Q5a5LyZoBFNQwcuX3DmLeASN3BG	\N	\N	sqQYGthCHLaBAbJzxTyjF14BrEX2WxGFpgpBgJKFiMw8CSP2qoyBLNaMu2rB	2017-11-02 12:01:35	2017-11-02 12:02:03
 7	Patricio Aguilera	\N	\N	\N	\N	\N	patricioaguilerav@gmail.com	$2y$10$rFXpFLKLKwI0g8yzSfOEduEwgflbHZoakp0SH1CWPzpr0eFyOoxpK	\N	\N	Nrm0fmAVnM8H9D9wGLc4BTYqRTtxKaixtxdhQj1LQEL0tD09PBXjTe7pAiRB	2017-11-02 12:02:17	2017-11-02 12:02:19
 8	Daniel Aros	\N	\N	\N	\N	\N	darosu@gmail.com	$2y$10$giDsov3Ra37KvseWLmzyee8pT/6ojK1BIMnWILOPlcZ7fhnuSvIJ6	\N	\N	0xSNEwBrbM9uNvgkHaxl2YzkjC0R1WvqCHBANkO5IpkBLfC8lFwEQXYIoqCS	2017-11-02 12:02:31	2017-11-02 12:02:33
+9	Pruebas Minsal 2 	\N	\N	\N	\N	\N	test2@minsal.cl	$2y$10$r8wofcpZrFN2BPZ9fcuaOubMCWMsDNtTn6gpUs8dp8ETaAXogpHGi	\N	\N	\N	2017-11-06 15:15:03	2017-11-06 15:15:03
 \.
 
 
@@ -5297,7 +5535,7 @@ COPY users (id, name, last_name, full_name, "position", establecimiento, rut, em
 -- Name: form_deis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('form_deis_id_seq', 241, true);
+SELECT pg_catalog.setval('form_deis_id_seq', 248, true);
 
 
 --
@@ -5311,14 +5549,14 @@ SELECT pg_catalog.setval('form_deis_inputs_id_input_seq', 184, true);
 -- Name: log_navigation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('log_navigation_id_seq', 325, true);
+SELECT pg_catalog.setval('log_navigation_id_seq', 555, true);
 
 
 --
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('users_id_seq', 8, true);
+SELECT pg_catalog.setval('users_id_seq', 9, true);
 
 
 --
