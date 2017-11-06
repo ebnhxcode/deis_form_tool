@@ -70,6 +70,10 @@ Route::get('/formulario/testapi', 'FormDeisController@testapi');
 
 Route::post ('/formulario/buscar_por_run' , 'FormDeisController@buscar_por_run') ;
 Route::post ('/formulario/buscar_por_correlativo' , 'FormDeisController@buscar_por_correlativo') ;
+#Ruta para tomar el registro
+Route::post ('/marcar_registro_form_deis' , 'FormDeisController@marcar_registro_form_deis');
+
+
 Route::get ('/formulario/datos_formulario' , 'FormDeisController@datos_formulario') ;
 Route::get ('/formulario/inputs_formulario' , 'FormDeisController@inputs_formulario') ;
 

@@ -200,6 +200,22 @@ class FormDeisController extends Controller {
         }
     }
 
+    public function marcar_registro_form_deis (Request $request) {
+        $forms_deis_edited_by_user = FormDeis::where('usuario_modifica_form_deis', auth()->user()->id)->get();
+
+        foreach ($forms_deis_edited_by_user as $key => $form) {
+            $form->usuario_modifica_form_deis = null;
+            $form->estado_form_deis = 'disponible';
+            $form->save();
+        }
+
+        $form_deis = FormDeis::where('n_correlativo_interno', $request->n_correlativo_interno)->first();
+        $form_deis->usuario_modifica_form_deis = auth()->user()->id;
+        $form_deis->estado_form_deis = 'ocupado';
+        $form_deis->save();
+        #dd($forms_deis_edited_by_user);
+    }
+
     public function create (Request $request) {
         $returnData['instructions'] = config('collection.deis_form_instructions');
 
