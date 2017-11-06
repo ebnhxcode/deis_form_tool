@@ -143,6 +143,7 @@ class FormDeisController extends Controller {
             return response()->json(['error'=>['002' => 'El run no existe']]);
         }
     }
+
     public function buscar_por_correlativo (Request $request){
         $correlativo = isset($request->n_correlativo_interno)?$request->n_correlativo_interno:null;
         if ($correlativo) {
@@ -156,6 +157,7 @@ class FormDeisController extends Controller {
 
     public function inputs_formulario (Request $request) {
         if ($request->wantsJson()) {
+            $returnData['auth'] = auth()->user();
             $returnData['inputs'] = FormDeisInput::where('table_name', $table_name = 'form_deis_inputs')->orderby('order_layout_form', 'asc')->get();
             $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
             $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
@@ -183,6 +185,7 @@ class FormDeisController extends Controller {
             $this->fdc = FormDeis::find($this->fdc->id);
             $this->fdc->n_correlativo_interno = $this->fdc->id;
             $returnData['fdc'] = $this->fdc;
+            $returnData['auth'] = auth()->user();
             $returnData['inputs'] = FormDeisInput::where('table_name', $table_name = 'form_deis_inputs')->orderby('order_layout_form', 'asc')->get();
             $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
             $returnData['nav_tab_form_deis'] = config('collections.nav_tab_form_deis');
@@ -210,16 +213,20 @@ class FormDeisController extends Controller {
         }
 
         $form_deis = FormDeis::where('n_correlativo_interno', $request->n_correlativo_interno)->first();
-        $form_deis->usuario_modifica_form_deis = auth()->user()->id;
-        $form_deis->estado_form_deis = 'ocupado';
-        $form_deis->save();
-
-        return response()->json(['fdc' => $form_deis]);
+        if ($form_deis->estado_form_deis == 'ocupado') {
+            return response()->json(['fdc' => $form_deis]);
+        }else{
+            $form_deis->usuario_modifica_form_deis = auth()->user()->id;
+            $form_deis->estado_form_deis = 'ocupado';
+            $form_deis->save();
+            return response()->json(['fdc' => $form_deis]);
+        }
         #dd($forms_deis_edited_by_user);
     }
 
     public function create (Request $request) {
         $returnData['instructions'] = config('collection.deis_form_instructions');
+        $returnData['auth'] = auth()->user();
 
         if ($request->wantsJson()) {
             return response()->json($returnData);

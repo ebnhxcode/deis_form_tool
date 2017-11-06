@@ -28,6 +28,7 @@ const FormularioController = new Vue({
          'deis_form_table_options':[],
          'pais_origen':[],
          'fdc':[],
+         'auth':[],
 
          'inputTypes':{
             'basics':['text', 'number', 'email', 'password', 'date', 'time'],
@@ -1072,6 +1073,7 @@ const FormularioController = new Vue({
       fetchFormulario: function () {
          this.$http.get('/formulario/create').then(response => { // success callback
             this.instructions = response.body.instructions;
+            this.auth = response.body.auth;
          }, response => { // error callback
             console.log('Error fetch_formulario: '+response);
          });
@@ -1131,6 +1133,7 @@ const FormularioController = new Vue({
             this.nav_tab_form_deis = response.body.nav_tab_form_deis;
             this.deis_form_table_options = response.body.deis_form_table_options;
             this.pais_origen = response.body.pais_origen;
+            this.auth = response.body.auth;
             this.validar_validaciones_previas();
          }, response => { // error callback
             console.log('Error datos_formulario: '+response);
@@ -1145,24 +1148,29 @@ const FormularioController = new Vue({
             this.pais_origen = response.body.pais_origen;
             this.fdc = response.body.fdc;
             this.formularioActivoObj = response.body.fdc;
+            this.auth = response.body.auth;
             this.validar_validaciones_previas();
+
+
+            if (this.fdc != null) {
+               var formData = new FormData();
+               Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+               formData.append('n_correlativo_interno', this.fdc.n_correlativo_interno);
+
+               this.$http.post('/formulario/marcar_registro_form_deis', formData).then(response => { // success callback
+                  this.fdc = response.body.fdc;
+                  //console.log(response);
+               }, response => { // error callback
+                  console.log(response);
+               });
+            }
+
 
          }, response => { // error callback
             console.log('Error datos_formulario: '+response);
          });
 
-         if (this.fdc != null) {
-            var formData = new FormData();
-            Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-            formData.append('n_correlativo_interno', this.fdc.n_correlativo_interno);
 
-            this.$http.post('/formulario/marcar_registro_form_deis', formData).then(response => { // success callback
-               this.fdc = response.body.fdc;
-               //console.log(response);
-            }, response => { // error callback
-               console.log(response);
-            });
-         }
 
 
       },

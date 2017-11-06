@@ -36850,6 +36850,7 @@ var FormularioController = new _vue2.default({
          'deis_form_table_options': [],
          'pais_origen': [],
          'fdc': [],
+         'auth': [],
 
          'inputTypes': {
             'basics': ['text', 'number', 'email', 'password', 'date', 'time'],
@@ -37550,6 +37551,7 @@ var FormularioController = new _vue2.default({
          this.$http.get('/formulario/create').then(function (response) {
             // success callback
             _this4.instructions = response.body.instructions;
+            _this4.auth = response.body.auth;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
@@ -37613,6 +37615,7 @@ var FormularioController = new _vue2.default({
             _this6.nav_tab_form_deis = response.body.nav_tab_form_deis;
             _this6.deis_form_table_options = response.body.deis_form_table_options;
             _this6.pais_origen = response.body.pais_origen;
+            _this6.auth = response.body.auth;
             _this6.validar_validaciones_previas();
          }, function (response) {
             // error callback
@@ -37631,26 +37634,27 @@ var FormularioController = new _vue2.default({
             _this7.pais_origen = response.body.pais_origen;
             _this7.fdc = response.body.fdc;
             _this7.formularioActivoObj = response.body.fdc;
+            _this7.auth = response.body.auth;
             _this7.validar_validaciones_previas();
+
+            if (_this7.fdc != null) {
+               var formData = new FormData();
+               _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+               formData.append('n_correlativo_interno', _this7.fdc.n_correlativo_interno);
+
+               _this7.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {
+                  // success callback
+                  _this7.fdc = response.body.fdc;
+                  //console.log(response);
+               }, function (response) {
+                  // error callback
+                  console.log(response);
+               });
+            }
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
          });
-
-         if (this.fdc != null) {
-            var formData = new FormData();
-            _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-            formData.append('n_correlativo_interno', this.fdc.n_correlativo_interno);
-
-            this.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {
-               // success callback
-               _this7.fdc = response.body.fdc;
-               //console.log(response);
-            }, function (response) {
-               // error callback
-               console.log(response);
-            });
-         }
       },
 
       validar_validaciones_previas: function validar_validaciones_previas() {

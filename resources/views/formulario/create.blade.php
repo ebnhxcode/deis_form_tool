@@ -11,6 +11,9 @@
                   <div class="row">
                      <div class="col-md-12">
 
+                        {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}
+                        <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
+
                         <div class="well well-sm">
                            <h3 class="text-center">
                               Plataforma Informática Seguimiento de la Prevención de la Transmisión Vertical de VIH y Sífilis
@@ -56,148 +59,152 @@
 
                         </div><!-- .well .well-sm -->
 
-                        <div class="well well-sm">
-                           @{{ fdc.estado_form_deis }}
+                        <div class="well well-sm" v-if="fdc && fdc.estado_form_deis=='ocupado'
+                           && fdc.usuario_modifica_form_deis != auth.id">
+                           <div class="row">
+                              {{--<div class="col-md-11"></div>--}}
+                              <div class="col-md-1">
+                                 <span class="label label-warning">
+                                    @{{ fdc.estado_form_deis }}, el registro está siendo modificado por otro usuario
+                                 </span>
+                              </div><!-- col-off-md .label  -->
+                           </div><!-- .row -->
                         </div><!-- .well .well-sm -->
 
-                     </div><!-- .col-md-* -->
+                        <div v-if="fdc && fdc.estado_form_deis!='ocupado' || fdc.usuario_modifica_form_deis == auth.id">
+                           <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true || formularioEditActivo == true">
+                              <!-- Items elementos de cabecera -->
+                              <div class="panel-heading">
+                                 <!-- Nav tabs -->
+                                 <ul class="nav nav-tabs small" role="tablist">
+                                    <li role="presentation" :class="tab.class" v-for="tab in nav_tab_form_deis">
+                                       <a :href="'#'+tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
+                                          @{{ tab.description }}
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div><!-- .panel-heading -->
 
-                     {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}
-                     <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
-                     <div class="col-md-12">
+                              <div class="panel-body">
+                                 <!-- Tab panes -->
+                                 <div class="tab-content">
 
-                        <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true || formularioEditActivo == true">
-                           <!-- Items elementos de cabecera -->
-                           <div class="panel-heading">
-                              <!-- Nav tabs -->
-                              <ul class="nav nav-tabs small" role="tablist">
-                                 <li role="presentation" :class="tab.class" v-for="tab in nav_tab_form_deis">
-                                    <a :href="'#'+tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
-                                       @{{ tab.description }}
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div><!-- .panel-heading -->
+                                    <div role="tabpanel" :class="'tab-pane fade in '+tab.class" :id="tab.name" v-for="tab in nav_tab_form_deis">
 
-                           <div class="panel-body">
-                              <!-- Tab panes -->
-                              <div class="tab-content">
-
-                                 <div role="tabpanel" :class="'tab-pane fade in '+tab.class" :id="tab.name" v-for="tab in nav_tab_form_deis">
-
-                                    <dl class="dl-vertical">
-                                       <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
-                                       <div v-for="i in inputs" v-if="i.seccion == tab.name">
+                                       <dl class="dl-vertical">
+                                          <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
+                                          <div v-for="i in inputs" v-if="i.seccion == tab.name">
 
 
 
-                                          <!-- Prop para permitir insertar una cabecera de titulo -->
-                                          <div v-if="i.tag" class="col-md-12">
-                                             <h3><b>@{{ i.tag ? i.tag : '' }}</b></h3><br>
-                                          </div>
-                                          <!-- Prop para permitir insertar una cabecera de subtitulo -->
-                                          <div v-if="i.subtag" class="col-md-12"
-                                               style="padding-bottom: 10px;">
-                                             <h4><b>@{{ i.subtag ? i.subtag : '' }}</b></h4>
-                                          </div>
+                                             <!-- Prop para permitir insertar una cabecera de titulo -->
+                                             <div v-if="i.tag" class="col-md-12">
+                                                <h3><b>@{{ i.tag ? i.tag : '' }}</b></h3><br>
+                                             </div>
+                                             <!-- Prop para permitir insertar una cabecera de subtitulo -->
+                                             <div v-if="i.subtag" class="col-md-12"
+                                                  style="padding-bottom: 10px;">
+                                                <h4><b>@{{ i.subtag ? i.subtag : '' }}</b></h4>
+                                             </div>
 
-                                          <div :class="i.class_custom ? i.class_custom : 'col-xs-6 col-sm-6 col-md-6'">
-                                             <!-- Etiquetas de los campos -->
-                                             <dt class="small">
-                                                <!-- Prop para permitir insertar numero de orden de completado -->
-                                                <span v-if="i.order" style="zoom:1.4;">@{{ i.order ? i.order : '' }}-</span>
-                                                <span>@{{ i.label ? i.label : 'Sin Etiqueta' }}</span>
-                                             </dt>
+                                             <div :class="i.class_custom ? i.class_custom : 'col-xs-6 col-sm-6 col-md-6'">
+                                                <!-- Etiquetas de los campos -->
+                                                <dt class="small">
+                                                   <!-- Prop para permitir insertar numero de orden de completado -->
+                                                   <span v-if="i.order" style="zoom:1.4;">@{{ i.order ? i.order : '' }}-</span>
+                                                   <span>@{{ i.label ? i.label : 'Sin Etiqueta' }}</span>
+                                                </dt>
 
-                                             <!-- Input basicos como text,number,time,date,etc -->
-                                             <dd v-if="inputInArray(i,inputTypes.basics)">
-                                                <input :name="i.name"
-                                                       :id="i.id"
-                                                       :disabled="i.disabled!=''?i.disabled:''"
-                                                       :class="i.class!=''?i.class:'form-control'"
-                                                       :type="i.type!=''?i.type:''"
-                                                       :maxlength="i.max_length!=''?i.max_length:''"
-                                                       :required="i.required!=''?i.required:''"
-                                                       :readonly="i.readonly!=''?i.readonly:''"
-                                                       :style="i.style!=''?i.style:''"
-                                                       :placeholder="i.placeholder!=''?i.placeholder:''"
-                                                       :readonly="i.readonly!=''?i.readonly:''"
-                                                       :min="i.min!=''?i.min:''"
-                                                       :max="i.max!=''?i.max:''"
-                                                       :pattern="i.pattern!=''?i.pattern:''"
-                                                       @change.prevent="verifica_validacion_change(i)"
-                                                       v-model="fdc[i.name]">
-                                             </dd>
+                                                <!-- Input basicos como text,number,time,date,etc -->
+                                                <dd v-if="inputInArray(i,inputTypes.basics)">
+                                                   <input :name="i.name"
+                                                          :id="i.id"
+                                                          :disabled="i.disabled!=''?i.disabled:''"
+                                                          :class="i.class!=''?i.class:'form-control'"
+                                                          :type="i.type!=''?i.type:''"
+                                                          :maxlength="i.max_length!=''?i.max_length:''"
+                                                          :required="i.required!=''?i.required:''"
+                                                          :readonly="i.readonly!=''?i.readonly:''"
+                                                          :style="i.style!=''?i.style:''"
+                                                          :placeholder="i.placeholder!=''?i.placeholder:''"
+                                                          :readonly="i.readonly!=''?i.readonly:''"
+                                                          :min="i.min!=''?i.min:''"
+                                                          :max="i.max!=''?i.max:''"
+                                                          :pattern="i.pattern!=''?i.pattern:''"
+                                                          @change.prevent="verifica_validacion_change(i)"
+                                                          v-model="fdc[i.name]">
+                                                </dd>
 
-                                             <!-- Select Inputs -->
-                                             <dd v-else-if="inputInArray(i,inputTypes.select)">
-                                                <select :name="i.name"
-                                                        :id="i.id"
-                                                        :disabled="i.disabled!=''?i.disabled:''"
-                                                        :class="i.class!=''?i.class:'form-control'"
-                                                        :required="i.required!=''?i.required:''"
-                                                        :readonly="i.readonly!=''?i.readonly:''"
-                                                        :style="i.style!=''?i.style:''"
-                                                        :placeholder="i.placeholder!=''?i.placeholder:''"
-                                                        :readonly="i.readonly!=''?i.readonly:''"
-                                                        :value="fdc[i.name]"
-                                                        v-model="fdc[i.name]"
-                                                        @change.prevent="verifica_validacion_change(i)"
-                                                        @click.prevent="verifica_validacion_click(i)">
+                                                <!-- Select Inputs -->
+                                                <dd v-else-if="inputInArray(i,inputTypes.select)">
+                                                   <select :name="i.name"
+                                                           :id="i.id"
+                                                           :disabled="i.disabled!=''?i.disabled:''"
+                                                           :class="i.class!=''?i.class:'form-control'"
+                                                           :required="i.required!=''?i.required:''"
+                                                           :readonly="i.readonly!=''?i.readonly:''"
+                                                           :style="i.style!=''?i.style:''"
+                                                           :placeholder="i.placeholder!=''?i.placeholder:''"
+                                                           :readonly="i.readonly!=''?i.readonly:''"
+                                                           :value="fdc[i.name]"
+                                                           v-model="fdc[i.name]"
+                                                           @change.prevent="verifica_validacion_change(i)"
+                                                           @click.prevent="verifica_validacion_click(i)">
 
-                                                   {{--<option value="">Seleccione</option>--}}
-                                                   <option v-for="o,i in deis_form_table_options[i.name]" :value="i">
-                                                      @{{ o }}
-                                                   </option>
+                                                      {{--<option value="">Seleccione</option>--}}
+                                                      <option v-for="o,i in deis_form_table_options[i.name]" :value="i">
+                                                         @{{ o }}
+                                                      </option>
 
-                                                </select><!-- .form-control -->
-                                             </dd>
+                                                   </select><!-- .form-control -->
+                                                </dd>
 
-                                             <!-- Textarea Inputs -->
-                                             <dd v-else-if="inputInArray(i,inputTypes.textarea)">
+                                                <!-- Textarea Inputs -->
+                                                <dd v-else-if="inputInArray(i,inputTypes.textarea)">
                                              <textarea :name="i.name"
                                                        :id="i.id"
                                                        :disabled="i.disabled!=''?i.disabled:''"
                                                        class="form-control"
                                                        v-model="fdc[i.name]">
                                              </textarea>
-                                             </dd>
+                                                </dd>
 
-                                             <dd v-else>
-                                                Sin Campos
+                                                <dd v-else>
+                                                   Sin Campos
+                                                </dd>
+                                                <br>
+                                             </div><!-- .col-md-* -->
+
+                                             <div v-if="i.empty_column"
+                                                  :class="i.empty_column">
+                                             </div>
+                                          </div>
+
+                                          <div class="col-xs-12 col-sm-12 col-md-12">
+                                             <dt>
+                                             </dt>
+                                             <dd>
+                                                <input id="" name="" @click.prevent="guardarFormulario(tab.name)"
+                                                       class="btn btn-success" type="button" value="Guardar"
+                                                       style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
+                                                <transition v-if="mini_loader == true" name="slide-fade">
+                                                   <div class="pull-right">
+                                                      <div class="circle-loader">
+                                                         <div class="checkmark draw"></div>
+                                                      </div>
+                                                   </div>
+                                                </transition>
                                              </dd>
-                                             <br>
                                           </div><!-- .col-md-* -->
 
-                                          <div v-if="i.empty_column"
-                                               :class="i.empty_column">
-                                          </div>
-                                       </div>
+                                       </dl><!-- .dl-vertical -->
 
-                                       <div class="col-xs-12 col-sm-12 col-md-12">
-                                          <dt>
-                                          </dt>
-                                          <dd>
-                                             <input id="" name="" @click.prevent="guardarFormulario(tab.name)"
-                                                    class="btn btn-success" type="button" value="Guardar"
-                                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
-                                             <transition v-if="mini_loader == true" name="slide-fade">
-                                                <div class="pull-right">
-                                                   <div class="circle-loader">
-                                                      <div class="checkmark draw"></div>
-                                                   </div>
-                                                </div>
-                                             </transition>
-                                          </dd>
-                                       </div><!-- .col-md-* -->
+                                    </div><!-- .tab-pane -->
 
-                                    </dl><!-- .dl-vertical -->
-
-                                 </div><!-- .tab-pane -->
-
+                                 </div><!-- .panel-heading -->
                               </div><!-- .panel-heading -->
                            </div><!-- .panel-heading -->
-                        </div><!-- .panel-heading -->
+                        </div>
                      </div><!-- .col-md-* -->
 
 
