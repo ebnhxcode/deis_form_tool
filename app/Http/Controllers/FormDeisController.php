@@ -233,9 +233,6 @@ class FormDeisController extends Controller {
                 }
             }
 
-
-            return $fd;
-
             #$result = FormDeis::create($fd);
             $result = $form_deis->update($fd);
 
