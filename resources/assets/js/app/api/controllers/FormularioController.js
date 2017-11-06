@@ -465,6 +465,20 @@ const FormularioController = new Vue({
             },
             modificar_usuario_seleccionado: function (formulario) {
                this.$parent.renderizar_solo_inputs();
+
+
+               /*
+               for (let f in formulario) {
+
+                  if (f.indexOf('fecha')>-1 && formulario[f]) {
+                     let fecha_x = formulario[f].split('-');
+                     formulario[f] = fecha_x[2]+'-'+fecha_x[1]+'-'+fecha_x[0];
+                  }
+
+               }
+               */
+
+
                this.$parent.fdc = formulario;
                this.$parent.show_modal_buscar_formulario = false;
                this.$parent.formularioEditActivo = true;

@@ -37081,10 +37081,9 @@ var UsuarioCreateController = new _vue2.default({
             //this.json = response.body.created_inputs;
             _this4.mini_loader_visible = false;
             _this4.btn_generar_clave = false;
-
             setTimeout(function () {
                _this4.btn_finalizar = true;
-            }, 1000);
+            }, 500);
          }, function (response) {
             // error callback
             _this4.boton_abrir_modal = false;
