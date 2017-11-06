@@ -46,6 +46,7 @@ class FormDeis extends Model
 'entrega_sustituto_leche_materna_al_alta',
 'escolaridad',
 'estado_civil',
+'estado_form_deis',
 'estado_clinico_recien_nacido',
 'estado_recien_nacido',
 'estado_seguimiento_12_meses',
@@ -184,6 +185,7 @@ class FormDeis extends Model
 'tratamiento_sifilis_frecuencia',
 'tratamiento_sifilis_parto',
 'updated_at',
+'usuario_modifica_form_deis',
 'via_parto',
 'vih_conocido_previa_embarazo',
 
