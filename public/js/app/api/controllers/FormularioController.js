@@ -37637,20 +37637,20 @@ var FormularioController = new _vue2.default({
             _this7.auth = response.body.auth;
             _this7.validar_validaciones_previas();
 
-            if (_this7.fdc != null) {
+            /*
+            //NO es necesario al crear un nuevo formulario, ya que solo se debe manejar el control sobre el edit
+            if (this.fdc != null) {
                var formData = new FormData();
-               _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-               formData.append('n_correlativo_interno', _this7.fdc.n_correlativo_interno);
-
-               _this7.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {
-                  // success callback
-                  _this7.fdc = response.body.fdc;
+               Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+               formData.append('n_correlativo_interno', this.fdc.n_correlativo_interno);
+                this.$http.post('/formulario/marcar_registro_form_deis', formData).then(response => { // success callback
+                  this.fdc = response.body.fdc;
                   //console.log(response);
-               }, function (response) {
-                  // error callback
+               }, response => { // error callback
                   console.log(response);
                });
             }
+            */
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);

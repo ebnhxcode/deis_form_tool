@@ -1152,6 +1152,8 @@ const FormularioController = new Vue({
             this.validar_validaciones_previas();
 
 
+            /*
+            //NO es necesario al crear un nuevo formulario, ya que solo se debe manejar el control sobre el edit
             if (this.fdc != null) {
                var formData = new FormData();
                Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
@@ -1164,6 +1166,7 @@ const FormularioController = new Vue({
                   console.log(response);
                });
             }
+            */
 
 
          }, response => { // error callback
