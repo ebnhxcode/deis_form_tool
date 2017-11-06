@@ -213,6 +213,8 @@ class FormDeisController extends Controller {
         $form_deis->usuario_modifica_form_deis = auth()->user()->id;
         $form_deis->estado_form_deis = 'ocupado';
         $form_deis->save();
+
+        return response()->json(['fdc' => $form_deis]);
         #dd($forms_deis_edited_by_user);
     }
 

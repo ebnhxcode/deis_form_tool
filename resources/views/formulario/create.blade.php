@@ -55,6 +55,11 @@
                            </div><!-- .collapse #instructions -->
 
                         </div><!-- .well .well-sm -->
+
+                        <div class="well well-sm">
+                           @{{ fdc.estado_form_deis }}
+                        </div><!-- .well .well-sm -->
+
                      </div><!-- .col-md-* -->
 
                      {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}

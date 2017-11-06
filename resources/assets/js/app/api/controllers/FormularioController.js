@@ -484,6 +484,7 @@ const FormularioController = new Vue({
                formData.append('n_correlativo_interno', formulario.n_correlativo_interno);
 
                this.$http.post('/formulario/marcar_registro_form_deis', formData).then(response => { // success callback
+                  this.fdc = response.body.fdc;
                   //console.log(response);
                }, response => { // error callback
                   console.log(response);
@@ -1156,6 +1157,7 @@ const FormularioController = new Vue({
             formData.append('n_correlativo_interno', this.fdc.n_correlativo_interno);
 
             this.$http.post('/formulario/marcar_registro_form_deis', formData).then(response => { // success callback
+               this.fdc = response.body.fdc;
                //console.log(response);
             }, response => { // error callback
                console.log(response);

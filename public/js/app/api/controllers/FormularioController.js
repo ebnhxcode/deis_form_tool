@@ -37011,6 +37011,8 @@ var FormularioController = new _vue2.default({
                });
             },
             modificar_usuario_seleccionado: function modificar_usuario_seleccionado(formulario) {
+               var _this3 = this;
+
                /*
                 for (let f in formulario) {
                  if (f.indexOf('fecha')>-1 && formulario[f]) {
@@ -37028,7 +37030,9 @@ var FormularioController = new _vue2.default({
                _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
                formData.append('n_correlativo_interno', formulario.n_correlativo_interno);
 
-               this.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {// success callback
+               this.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {
+                  // success callback
+                  _this3.fdc = response.body.fdc;
                   //console.log(response);
                }, function (response) {
                   // error callback
@@ -37541,11 +37545,11 @@ var FormularioController = new _vue2.default({
       },
 
       fetchFormulario: function fetchFormulario() {
-         var _this3 = this;
+         var _this4 = this;
 
          this.$http.get('/formulario/create').then(function (response) {
             // success callback
-            _this3.instructions = response.body.instructions;
+            _this4.instructions = response.body.instructions;
          }, function (response) {
             // error callback
             console.log('Error fetch_formulario: ' + response);
@@ -37555,7 +37559,7 @@ var FormularioController = new _vue2.default({
       },
 
       guardarFormulario: function guardarFormulario(tabName) {
-         var _this4 = this;
+         var _this5 = this;
 
          this.mini_loader = true;
          //this.spinner_finalizar = true;
@@ -37582,11 +37586,11 @@ var FormularioController = new _vue2.default({
             //alert('Guardado');
 
             //Si guardar salio bien
-            _this4.hayGuardadoActivo = true;
-            _this4.idFormularioActivo = _this4.fdc.id;
+            _this5.hayGuardadoActivo = true;
+            _this5.idFormularioActivo = _this5.fdc.id;
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
-            _this4.mini_loader = false;
+            _this5.mini_loader = false;
          }, function (response) {
             // error callback
             console.log(response);
@@ -37601,15 +37605,15 @@ var FormularioController = new _vue2.default({
       },
 
       renderizar_solo_inputs: function renderizar_solo_inputs() {
-         var _this5 = this;
+         var _this6 = this;
 
          this.$http.get('/formulario/inputs_formulario').then(function (response) {
             // success callback
-            _this5.inputs = response.body.inputs;
-            _this5.nav_tab_form_deis = response.body.nav_tab_form_deis;
-            _this5.deis_form_table_options = response.body.deis_form_table_options;
-            _this5.pais_origen = response.body.pais_origen;
-            _this5.validar_validaciones_previas();
+            _this6.inputs = response.body.inputs;
+            _this6.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            _this6.deis_form_table_options = response.body.deis_form_table_options;
+            _this6.pais_origen = response.body.pais_origen;
+            _this6.validar_validaciones_previas();
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
@@ -37617,17 +37621,17 @@ var FormularioController = new _vue2.default({
       },
 
       renderizar_formulario: function renderizar_formulario() {
-         var _this6 = this;
+         var _this7 = this;
 
          this.$http.get('/formulario/datos_formulario').then(function (response) {
             // success callback
-            _this6.inputs = response.body.inputs;
-            _this6.nav_tab_form_deis = response.body.nav_tab_form_deis;
-            _this6.deis_form_table_options = response.body.deis_form_table_options;
-            _this6.pais_origen = response.body.pais_origen;
-            _this6.fdc = response.body.fdc;
-            _this6.formularioActivoObj = response.body.fdc;
-            _this6.validar_validaciones_previas();
+            _this7.inputs = response.body.inputs;
+            _this7.nav_tab_form_deis = response.body.nav_tab_form_deis;
+            _this7.deis_form_table_options = response.body.deis_form_table_options;
+            _this7.pais_origen = response.body.pais_origen;
+            _this7.fdc = response.body.fdc;
+            _this7.formularioActivoObj = response.body.fdc;
+            _this7.validar_validaciones_previas();
          }, function (response) {
             // error callback
             console.log('Error datos_formulario: ' + response);
@@ -37638,7 +37642,9 @@ var FormularioController = new _vue2.default({
             _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
             formData.append('n_correlativo_interno', this.fdc.n_correlativo_interno);
 
-            this.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {// success callback
+            this.$http.post('/formulario/marcar_registro_form_deis', formData).then(function (response) {
+               // success callback
+               _this7.fdc = response.body.fdc;
                //console.log(response);
             }, function (response) {
                // error callback
