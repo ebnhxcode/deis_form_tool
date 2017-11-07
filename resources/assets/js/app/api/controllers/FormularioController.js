@@ -8,7 +8,7 @@ Vue.use(Vue2Filters);
 import es from 'vee-validate/dist/locale/es';
 import VeeValidate, { Validator } from 'vee-validate';
 
-var $ = window.jQuery = require('jquery');
+import { validate, clean, format } from 'rut.js';
 
 // Add locale helper.
 Validator.addLocale(es);
@@ -212,7 +212,7 @@ const FormularioController = new Vue({
                                                    </dt>
                                                    <dd>
 
-                                                      <!-- Busqueda por CORRELATIVO -->
+                                                      <!-- Busqueda por RUN -->
                                                       <div class="form-group">
                                                          <div class="input-group input-group-sm">
                                                             <div class="input-group-addon">
@@ -226,6 +226,7 @@ const FormularioController = new Vue({
                                                              placeholder="Ej: 123456789 Sin puntos ni guión"
                                                              id="run_madre"
                                                              v-model="run_madre"
+                                                             @keyup.prevent="formatear_rut"
                                                              @change="buscar_por_run">
 
                                                             <span class="input-group-btn">
@@ -432,13 +433,28 @@ const FormularioController = new Vue({
          created () {
          },
          methods: {
+            formatear_rut: function () {
+               var run = this.run_madre;
+               this.run_madre = format(run);
+            },
+            validar_rut: function (run) {
+               if (validate(run) == false) {
+                  alert('El formato del rut es incorrecto');
+                  return this.run = null;
+               }else{
+                  return format(run);
+               }
+            },
             buscar_por_run: function () {
-               if (!this.run_madre) return;
+               if (!this.run_madre || validate(this.run_madre) == false){
+                  alert('Debe ingresar un rut valido');
+                  return this.run_madre = null;
+               }
 
                var formData = new FormData();
 
                Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-               formData.append('run_madre', this.run_madre);
+               formData.append('run_madre', clean(this.run_madre));
 
                this.$http.post('/formulario/buscar_por_run', formData).then(response => { // success callback
                   //console.log(response);
