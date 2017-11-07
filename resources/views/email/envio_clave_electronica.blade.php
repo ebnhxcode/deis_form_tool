@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -60,48 +61,6 @@
                      </tr>
 
 
-                     {{--
-                     <tr>
-                        <td>
-                           <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                              <tr>
-                                 <td width="260" valign="top">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                       <tr>
-                                          <td>
-                                             <img src="images/left.gif" alt="" width="100%" height="140" style="display: block;" />
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td style="padding: 25px 0 0 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
-                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-                                          </td>
-                                       </tr>
-                                    </table>
-                                 </td>
-                                 <td style="font-size: 0; line-height: 0;" width="20">
-                                    &nbsp;
-                                 </td>
-                                 <td width="260" valign="top">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                       <tr>
-                                          <td>
-                                             <img src="images/right.gif" alt="" width="100%" height="140" style="display: block;" />
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td style="padding: 25px 0 0 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
-                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in posuere mauris neque at erat.
-                                          </td>
-                                       </tr>
-                                    </table>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
-                     --}}
-
                   </table>
                </td>
             </tr>
@@ -117,26 +76,6 @@
                            En caso de dudas o consultas favor comunicarse al correo <a href="mailto:desarrollo@minsal.cl" target="_top">desarrollo@minsal.cl</a>
                         </td>
 
-                        {{--
-                        <td align="right" width="25%">
-                           <table border="0" cellpadding="0" cellspacing="0">
-                              <tr>
-                                 <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-                                    <a href="http://www.twitter.com/" style="color: #ffffff;">
-                                       <img src="images/tw.gif" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
-                                    </a>
-                                 </td>
-                                 <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
-                                 <td style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;">
-                                    <a href="http://www.twitter.com/" style="color: #ffffff;">
-                                       <img src="images/fb.gif" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
-                                    </a>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                        --}}
-
                      </tr>
                   </table>
                </td>
@@ -146,9 +85,6 @@
    </tr>
 </table>
 
-<!--analytics-->
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-{{--<script src="http://tutsplus.github.io/github-analytics/ga-tracking.min.js"></script>--}}
 
 </body>
 </html>

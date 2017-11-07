@@ -8,6 +8,8 @@ Vue.use(Vue2Filters);
 import es from 'vee-validate/dist/locale/es';
 import VeeValidate, { Validator } from 'vee-validate';
 
+var $ = window.jQuery = require('jquery');
+
 // Add locale helper.
 Validator.addLocale(es);
 

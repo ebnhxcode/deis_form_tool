@@ -28,7 +28,6 @@ class UserController extends Controller
 
     public function enviar_llaves_secretas () {
         $users = User::all();
-
         foreach($users as $key => $user){
 
             if ($user->confirmado_llave_secreta != 'enviado' && $user->email != null) {
@@ -36,11 +35,8 @@ class UserController extends Controller
                 $user->confirmado_llave_secreta = 'enviado';
                 $user->save();
                 $email = $user->email;
-                $data['llave'] = $user->clave_electronica;
-                $data['nombre'] = $user->name;
-
-                Mail::send('email.envio_clave_electronica', $data, function ($message) use ($email) {
-                    #$message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
+		sleep(4);
+                Mail::send('email.envio_clave_electronica', ['llave' => $user->clave_electronica, 'nombre' => $user->name], function ($message) use ($email) {
                     $message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
                 });
 
