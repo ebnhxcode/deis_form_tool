@@ -545,11 +545,36 @@ const FormularioController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
+      verifica_validacion_keyup: function (input) {
+         switch (input.id) {
+            case 'run_madre':
+               this.fdc[input.name] = format(this.fdc[input.name]);
+               break;
+            case 'run_recien_nacido':
+               this.fdc[input.name] = format(this.fdc[input.name]);
+               break;
+         }
+
+      },
 
       verifica_validacion_change: function (input) {
 
 
          switch (input.id) {
+
+            case 'run_madre':
+               if (validate(this.fdc[input.name]) == false) {
+                  this.fdc[input.name] = null;
+                  alert('Debe ingresar un rut valido');
+               }
+               break;
+            case 'run_recien_nacido':
+               if (validate(this.fdc[input.name]) == false) {
+                  this.fdc[input.name] = null;
+                  alert('Debe ingresar un rut valido');
+               }
+               break;
+
             case 'edad_gestacional_ingreso_control_embarazo':
                if (parseInt(this.fdc[input.name])<0) {
                   this.fdc[input.name] = 0;
@@ -1110,6 +1135,9 @@ const FormularioController = new Vue({
             if (this.inputs[i].seccion == tabName) {
                if (this.fdc[this.inputs[i].name] != null ) {
                   //Le pasa el valor en v-model
+                  if (this.inputs[i].name == 'run_madre' || this.inputs[i].name == 'run_recien_nacido') {
+                     this.fdc[this.inputs[i].name] = clean(this.fdc[this.inputs[i].name]);
+                  }
                   formData.append(this.inputs[i].name, this.fdc[this.inputs[i].name]);
                }
             }

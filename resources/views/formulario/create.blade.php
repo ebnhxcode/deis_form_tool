@@ -132,6 +132,7 @@
                                                           :max="i.max!=''?i.max:''"
                                                           :pattern="i.pattern!=''?i.pattern:''"
                                                           @change.prevent="verifica_validacion_change(i)"
+                                                          @keyup.prevent="verifica_validacion_keyup(i)"
                                                           v-model="fdc[i.name]">
                                                 </dd>
 
