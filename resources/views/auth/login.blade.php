@@ -28,7 +28,7 @@
                         <label for="password" class="col-md-4 control-label">Clave</label>
 
                         <div class="col-md-6">
-                           <input id="password" type="password" autocomplete="off" class="form-control" name="password">
+                           <input id="password" type="password" autocomplete="new-password" class="form-control" name="password">
 
                            @if ($errors->has('password'))
                               <span class="help-block">
@@ -39,14 +39,14 @@
                      </div>
 
                      <!-- Recaptcha Module -->
-                     <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}" align="center">
+                     <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                         <label for="g-recaptcha-response" class="col-md-4 control-label">Captcha</label>
 
                         <div class="col-md-6 col-md-offset-4">
                            {!! Recaptcha::render() !!}
                            @if ($errors->has('g-recaptcha-response'))
                               <span class="help-block">
-                                  El captcha es requerido
+                                  <b>El captcha es requerido</b>
                               </span>
                            @endif
                         </div>
