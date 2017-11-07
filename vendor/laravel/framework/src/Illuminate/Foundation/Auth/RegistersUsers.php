@@ -29,8 +29,8 @@ trait RegistersUsers
         if (property_exists($this, 'registerView')) {
             return view($this->registerView);
         }
-
-        return view('auth.register');
+        return redirect()->to('/login');
+        #return view('auth.register');
     }
 
     /**
