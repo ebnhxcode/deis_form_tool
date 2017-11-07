@@ -424,19 +424,23 @@ const UsuarioCreateController = new Vue({
       },
 
       check_password: function (inputtxt) {
-         var passw =  /^[A-Za-z]\w{7,14}$/;
-         if(inputtxt.value.match(passw)) {
-            alert('Correct, try another...');
+         //var passw =  /^[A-Za-z]\w{7,14}$/;
+         //var passw =  /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{7,}$/;
+         var passw =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+         if(inputtxt.match(passw)) {
+            //alert('Correct, try another...');
             return true;
          } else {
-            alert('Wrong...!');
+            //alert('Wrong...!');
             return false;
          }
       },
 
       crear_clave: function () {
 
-         this.check_password(this.newuser.clave_real);
+         if (this.check_password(this.newuser.clave_real) == true) {
+            alert('Error, la nueva clave debe tener numeros, letras, letras mayusculas, un caracter especial y que sea minimo de 8 caracteres');
+         }
 
          return;
 

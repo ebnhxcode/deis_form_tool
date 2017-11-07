@@ -77,7 +77,7 @@
 
                         <div class="col-md-6">
                            <input id="clave_real" type="password" autocomplete="new-password" class="form-control" name="clave_real"
-                                  v-model="newuser.clave_real">
+                                  v-model="newuser.clave_real" placeholder="Ej: abcDEF12$#">
 
                         </div>
                      </div>
