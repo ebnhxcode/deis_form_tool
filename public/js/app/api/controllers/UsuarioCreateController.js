@@ -37044,6 +37044,13 @@ var UsuarioCreateController = new _vue2.default({
          $('.errors').text('');
          this.$http.post('/procesar_solicitud_clave', formData).then(function (response) {
             // success callback
+            var rd = response.body.rd;
+            if (rd == 'false') {
+               alert('Error, los datos ingresados no son correctos');
+               _this3.mini_loader_visible = false;
+               return;
+            }
+
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
             //this.json = response.body.created_inputs;
@@ -37065,8 +37072,23 @@ var UsuarioCreateController = new _vue2.default({
          });
       },
 
+      check_password: function check_password(inputtxt) {
+         var passw = /^[A-Za-z]\w{7,14}$/;
+         if (inputtxt.value.match(passw)) {
+            alert('Correct, try another...');
+            return true;
+         } else {
+            alert('Wrong...!');
+            return false;
+         }
+      },
+
       crear_clave: function crear_clave() {
          var _this4 = this;
+
+         this.check_password(this.newuser.clave_real);
+
+         return;
 
          this.mini_loader_visible = true;
          var formData = new FormData();

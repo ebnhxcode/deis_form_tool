@@ -395,6 +395,13 @@ const UsuarioCreateController = new Vue({
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
          $('.errors').text('');
          this.$http.post('/procesar_solicitud_clave', formData).then(response => { // success callback
+            var rd = response.body.rd;
+            if (rd == 'false') {
+               alert ('Error, los datos ingresados no son correctos') ;
+               this.mini_loader_visible = false;
+               return;
+            }
+
             $('.circle-loader').toggleClass('load-complete');
             $('.checkmark').toggle();
             //this.json = response.body.created_inputs;
@@ -416,7 +423,22 @@ const UsuarioCreateController = new Vue({
          });
       },
 
+      check_password: function (inputtxt) {
+         var passw =  /^[A-Za-z]\w{7,14}$/;
+         if(inputtxt.value.match(passw)) {
+            alert('Correct, try another...');
+            return true;
+         } else {
+            alert('Wrong...!');
+            return false;
+         }
+      },
+
       crear_clave: function () {
+
+         this.check_password(this.newuser.clave_real);
+
+         return;
 
          this.mini_loader_visible = true;
          var formData = new FormData();

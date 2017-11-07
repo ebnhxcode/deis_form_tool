@@ -41,7 +41,22 @@ class UserController extends Controller
                ->where('clave_electronica', $clave_electronica)
                ->first();
 
-            return $user;
+            /*
+            return response()->json(['rd' => $user]);
+
+            return response()->json([
+               'email' => $email,
+               'run' => $run,
+               'clave_electronica' => $clave_electronica,
+            ]);
+            */
+
+            if ($user) {
+                return response()->json(['rd' => 'true']);
+            }else{
+                return response()->json(['rd' => 'false']);
+            }
+            #return $user;
         }
         /*
         Mail::send('emails.reminder', ['user' => $user], function ($m) use ($user) {
