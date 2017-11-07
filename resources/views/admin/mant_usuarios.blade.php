@@ -6,7 +6,7 @@
       <div class="row">
          <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-               <div class="panel-heading">Solicitud de claves</div>
+               <div class="panel-heading">Mantenedor de Usuario</div>
                <div class="panel-body">
                   <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
 
