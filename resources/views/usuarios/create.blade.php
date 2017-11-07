@@ -63,7 +63,7 @@
                         <label for="clave_electronica" class="col-md-4 control-label" align="right">LLave secreta</label>
 
                         <div class="col-md-6">
-                           <input id="clave_electronica" type="password" class="form-control" name="clave_electronica"
+                           <input id="clave_electronica" type="password" autocomplete="off" class="form-control" name="clave_electronica"
                                   v-model="newuser.clave_electronica">
                         </div>
                      </div>
@@ -76,7 +76,7 @@
                         <label for="clave_real" class="col-md-4 control-label" align="right">Ingrese su clave</label>
 
                         <div class="col-md-6">
-                           <input id="clave_real" type="password" class="form-control" name="clave_real"
+                           <input id="clave_real" type="password" autocomplete="off" class="form-control" name="clave_real"
                                   v-model="newuser.clave_real">
 
                         </div>

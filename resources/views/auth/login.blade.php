@@ -28,7 +28,7 @@
                         <label for="password" class="col-md-4 control-label">Clave</label>
 
                         <div class="col-md-6">
-                           <input id="password" type="password" class="form-control" name="password">
+                           <input id="password" type="password" autocomplete="off" class="form-control" name="password">
 
                            @if ($errors->has('password'))
                               <span class="help-block">
