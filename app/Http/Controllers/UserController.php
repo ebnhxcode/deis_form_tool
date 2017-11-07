@@ -32,25 +32,22 @@ class UserController extends Controller
         $users = User::all();
 
         foreach($users as $key => $user){
+
             if ($user->confirmado_llave_secreta != 'enviado' && $user->email != null) {
-                $user->llave_secreta = $this->quickRandom(8);
+                $user->clave_electronica = $this->quickRandom(8);
                 $user->confirmado_llave_secreta = 'enviado';
+                $user->save();
                 $email = $user->email;
 
-                Mail::send('email.envio_clave_electronica', [], function ($message) use ($email) {
+                Mail::send('email.envio_clave_electronica', ['llave' => $user->clave_electronica], function ($message) use ($email) {
+                    #$message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
                     $message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
                 });
 
             }
-            return $user;
-
-
-
-
-
-
         }
 
+        echo 'Finalizado';
 
 
     }

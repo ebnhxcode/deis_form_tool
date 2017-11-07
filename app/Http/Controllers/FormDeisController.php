@@ -289,10 +289,15 @@ class FormDeisController extends Controller {
         $formData = $request->all();
         return $formData;
 
-        foreach ($formData as $key => $d)
-            if ($d) $fd[$key] = $d;
-
-        return $fd;
+        foreach ($formData as $key => $d){
+            if ($d) {
+                if (strpos($key, 'fecha') > -1) {
+                    $f = explode('-',$d);
+                    $d = $f[2].'-'.$f[1].'-'.$f[0];
+                }
+                $fd[$key] = $d;
+            }
+        }
 
         $form_deis = FormDeis::find($id);
         $result = $form_deis->update($fd);

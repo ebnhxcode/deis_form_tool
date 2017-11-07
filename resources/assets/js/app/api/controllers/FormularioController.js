@@ -1043,9 +1043,6 @@ const FormularioController = new Vue({
          }
 
 
-
-
-
       },
 
       verifica_validacion_click: function (input) {
@@ -1055,6 +1052,7 @@ const FormularioController = new Vue({
                break;
          }
       },
+
 
       buscar_formulario: function () {
          this.show_modal_buscar_formulario = true;
