@@ -22,27 +22,27 @@ class UserController extends Controller
     }
 
     public function procesar_solicitud_clave (Request $request) {
-        $run = isset($request->run)?$request->run:null;
-        $email = isset($request->email)?$request->email:null;
-        $clave_electronica = isset($request->clave_electronica)?$request->clave_electronica:null;
-        if (!$run) {
-            return response()->json(['error:001' => 'El campo run es requerido']);
+
+        if ($request->wantsJson()) {
+            $run = isset($request->run)?$request->run:null;
+            $email = isset($request->email)?$request->email:null;
+            $clave_electronica = isset($request->clave_electronica)?$request->clave_electronica:null;
+            if (!$run) {
+                return response()->json(['error:001' => 'El campo run es requerido']);
+            }
+            if (!$email) {
+                return response()->json(['error:002' => 'El campo email es requerido']);
+            }
+            if (!$clave_electronica) {
+                return response()->json(['error:003' => 'La llave es requerida']);
+            }
+            $user = User::where('email', $email)
+               ->where('rut', $run)
+               ->where('clave_electronica', $clave_electronica)
+               ->first();
+
+            return $user;
         }
-        if (!$email) {
-            return response()->json(['error:002' => 'El campo email es requerido']);
-        }
-        if (!$clave_electronica) {
-            return response()->json(['error:003' => 'La llave es requerida']);
-        }
-        $user = User::where('email', $email)
-           ->where('rut', $run)
-           ->where('clave_electronica', $clave_electronica)
-           ->first();
-
-        return $user();
-
-
-
         /*
         Mail::send('emails.reminder', ['user' => $user], function ($m) use ($user) {
             $m->from('hello@app.com', 'Your Application');
