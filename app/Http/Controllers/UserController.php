@@ -36,8 +36,10 @@ class UserController extends Controller
                 $user->confirmado_llave_secreta = 'enviado';
                 $user->save();
                 $email = $user->email;
+                $data['llave'] = $user->clave_electronica;
+                $data['nombre'] = $user->name;
 
-                Mail::send('email.envio_clave_electronica', ['llave' => $user->clave_electronica], function ($message) use ($email) {
+                Mail::send('email.envio_clave_electronica', $data, function ($message) use ($email) {
                     #$message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
                     $message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
                 });

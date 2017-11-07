@@ -55,7 +55,7 @@ return [
     |
     */
 
-   'from' => ['address' => 'sistemas@minsal.cl', 'name' => 'Sistemas'],
+   'from' => ['address' => 'sistemas@minsal.cl', 'name' => 'TV.minsal.cl'],
 
     /*
     |--------------------------------------------------------------------------
