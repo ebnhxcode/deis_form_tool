@@ -72,7 +72,7 @@
             @if (Auth::guest())
                <li><a href="{{ url('/login') }}">Login</a></li>
                <li>
-                  <a href="{{ url('/registro') }}">
+                  <a href="{{ url('/crea_clave') }}">
                      Solicitar clave
                      &nbsp;
                      <span class="label label-warning small pull-right">Nuevo</span>
