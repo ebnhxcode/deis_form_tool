@@ -225,6 +225,7 @@ const FormularioController = new Vue({
                                                              name="run_madre"
                                                              placeholder="Ej: 123456789 Sin puntos ni guión"
                                                              id="run_madre"
+                                                             maxlength="12"
                                                              v-model="run_madre"
                                                              @keyup.prevent="formatear_rut"
                                                              @change="buscar_por_run">
