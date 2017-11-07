@@ -31,6 +31,18 @@
                               xPl01t3d
                            </span>
                         </li>
+                        <li>
+                           Para la nueva clave, el formato requerido debe contener:
+                           <span class="pull-right" style="color: gray;">
+                              Ej: Clave123%&/==
+                           </span>
+                           <ul>
+                              <li>Letras minúsculas</li>
+                              <li>Letras mayúsculas</li>
+                              <li>Números</li>
+                              <li>Caracteres especiales</li>
+                           </ul>
+                        </li>
                      </ul>
                   </div><!-- .well .small -->
 
@@ -74,7 +86,7 @@
 
                      <!-- Clave Real -->
                      <div class="form-group" v-show="btn_generar_clave == true" style="padding-bottom: 30px ;">
-                        <label for="clave_real" class="col-md-4 control-label" align="right">Ingrese su clave</label>
+                        <label for="clave_real" class="col-md-4 control-label" align="right">Ingrese su nueva clave:</label>
 
                         <div class="col-md-6">
                            <input id="clave_real" type="password" autocomplete="new-password" class="form-control" name="clave_real"

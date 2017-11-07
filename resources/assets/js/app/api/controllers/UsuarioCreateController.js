@@ -405,7 +405,7 @@ const UsuarioCreateController = new Vue({
       procesar_solicitud_clave: function () {
          this.mini_loader_visible = true;
          var formData = new FormData();
-         formData.append('run', this.newuser.run);
+         formData.append('run', clean(this.newuser.run));
          formData.append('email', this.newuser.email);
          formData.append('clave_electronica', this.newuser.clave_electronica);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
