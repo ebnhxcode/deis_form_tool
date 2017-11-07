@@ -11,7 +11,7 @@ class UserController extends Controller
 {
 
     public function __construct () {
-        $this->middleware('auth', ['except' => ['registro', 'procesar_solicitud_clave', 'crear_clave']]);
+        $this->middleware('auth', ['except' => ['registro', 'procesar_solicitud_clave', 'crear_clave', 'enviar_llaves_secretas']]);
     }
 
     public function registro (Request $request) {
@@ -19,6 +19,40 @@ class UserController extends Controller
 
 
         return view ('usuarios.create');
+    }
+
+    public static function quickRandom($length = 16)
+    {
+        $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        return substr(str_shuffle(str_repeat($pool, $length)), 0, $length);
+    }
+
+    public function enviar_llaves_secretas () {
+        $users = User::all();
+
+        foreach($users as $key => $user){
+            if ($user->confirmado_llave_secreta != 'enviado' && $user->email != null) {
+                $user->llave_secreta = $this->quickRandom(8);
+                $user->confirmado_llave_secreta = 'enviado';
+                $email = $user->email;
+
+                Mail::send('email.envio_clave_electronica', [], function ($message) use ($email) {
+                    $message->to($email, 'Envio de llave para generar clave')->subject('Envio de Llave!');
+                });
+
+            }
+            return $user;
+
+
+
+
+
+
+        }
+
+
+
     }
 
     public function procesar_solicitud_clave (Request $request) {

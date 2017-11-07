@@ -22,6 +22,8 @@ Route::get('/solicitud_clave', 'UserController@registro');
 Route::get('/clave_electronica', 'UserController@registro');
 Route::get('/crea_clave', 'UserController@registro');
 
+Route::get('/enviar_llaves_secretas', 'UserController@enviar_llaves_secretas');
+
 
 Route::post('/procesar_solicitud_clave', 'UserController@procesar_solicitud_clave');
 Route::post('/crear_clave', 'UserController@crear_clave');

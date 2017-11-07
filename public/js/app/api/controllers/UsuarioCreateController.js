@@ -37088,11 +37088,10 @@ var UsuarioCreateController = new _vue2.default({
       crear_clave: function crear_clave() {
          var _this4 = this;
 
-         if (this.check_password(this.newuser.clave_real) == true) {
+         if (this.check_password(this.newuser.clave_real) == false) {
             alert('Error, la nueva clave debe tener numeros, letras, letras mayusculas, un caracter especial y que sea minimo de 8 caracteres');
+            return;
          }
-
-         return;
 
          this.mini_loader_visible = true;
          var formData = new FormData();
