@@ -28,7 +28,7 @@
                         <li>
                            Finalmente ingresar la llave secreta enviada
                            <span class="pull-right" style="color: gray;">
-                              xPl01t3d
+                              xPl01t3d0
                            </span>
                         </li>
                      </ul>

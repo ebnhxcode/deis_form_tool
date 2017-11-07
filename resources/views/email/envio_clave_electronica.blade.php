@@ -11,3 +11,7 @@
 <p>
    <a href="http://tv.minsal.cl/crea_clave">http://tv.minsal.cl/crea_clave</a>
 </p>
+
+<p>
+   En caso de dudas o consultas favor comunicarse al correo <a href="mailto:desarrollo@minsal.cl" target="_top">mailto:desarrollo@minsal.cl</a>
+</p>
