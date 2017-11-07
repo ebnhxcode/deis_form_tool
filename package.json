@@ -47,6 +47,7 @@
     "awesome-vue-toast": "^1.0.5",
     "highcharts": "^5.0.12",
     "laravel-elixir-vue-2": "^0.3.0",
+    "rut.js": "^0.3.3",
     "vee-validate": "^2.0.0-rc.7",
     "vue-bootstrap-datetimepicker": "^3.0.0",
     "vue-json-excel": "0.0.4"

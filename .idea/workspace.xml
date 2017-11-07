@@ -3,12 +3,22 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" line="31" />
     <bookmark url="file://$PROJECT_DIR$/resources/views/auth/admin/mant_usuarios.blade.php" line="30" />
+    <bookmark url="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" line="390" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rut.js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rut.js/license" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rut.js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/rut.js/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/email/envio_clave_electronica.blade.php" afterPath="$PROJECT_DIR$/resources/views/email/envio_clave_electronica.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/UsuarioCreateController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/UsuarioCreateController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/UsuarioCreateController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/UsuarioCreateController.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,130 +40,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <file leaf-file-name="UsuarioCreateController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.653846">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state vertical-scroll-proportion="1.9658537">
+              <caret line="392" column="43" selection-start-line="392" selection-start-column="43" selection-end-line="392" selection-end-column="43" />
               <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="e#613#1026#0" expanded="false" />
+                <element signature="e#1869#2141#0" expanded="false" />
+                <element signature="e#2164#2446#0" expanded="false" />
+                <element signature="e#2463#3278#0" expanded="false" />
+                <element signature="e#3296#3723#0" expanded="false" />
+                <element signature="e#3743#4176#0" expanded="false" />
+                <element signature="e#4206#14369#0" expanded="false" />
+                <element signature="e#14377#14640#0" expanded="false" />
+                <marker date="1510084950138" expanded="true" signature="2681:3148" placeholder="..." />
+                <marker date="1510084950138" expanded="true" signature="3411:3571" placeholder="..." />
+                <marker date="1510084950138" expanded="true" signature="3862:4022" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/usuarios/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-              <folding>
-                <element signature="e#1455#1826#0" expanded="false" />
-                <element signature="e#1845#2204#0" expanded="false" />
-                <element signature="e#2227#2509#0" expanded="false" />
-                <element signature="e#3359#3786#0" expanded="false" />
-                <element signature="e#3806#4239#0" expanded="false" />
-                <element signature="e#21732#22027#0" expanded="false" />
-                <element signature="e#22862#23125#0" expanded="false" />
-                <element signature="e#23378#43267#0" expanded="false" />
-                <element signature="e#28894#29253#0" expanded="false" />
-                <element signature="e#29273#29632#0" expanded="false" />
-                <element signature="e#33002#33064#0" expanded="false" />
-                <element signature="e#33356#33418#0" expanded="false" />
-                <element signature="e#33535#33779#0" expanded="false" />
-                <element signature="e#33799#34043#0" expanded="false" />
-                <element signature="e#43716#43945#0" expanded="false" />
-                <element signature="e#43959#44188#0" expanded="false" />
-                <element signature="e#44890#45105#0" expanded="false" />
-                <element signature="e#45119#45334#0" expanded="false" />
-                <marker date="1510070441587" expanded="true" signature="2744:3211" placeholder="..." />
-                <marker date="1510070441587" expanded="true" signature="3474:3634" placeholder="..." />
-                <marker date="1510070441587" expanded="true" signature="3925:4085" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/InputController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormDeisController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="299" column="9" selection-start-line="299" selection-start-column="9" selection-end-line="299" selection-end-column="9" />
-              <folding>
-                <element signature="e#358#3794#0#PHP" expanded="false" />
-                <element signature="e#3972#4471#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collections.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/collections.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="633" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="envio_clave_electronica.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/email/envio_clave_electronica.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="35" />
-              <folding>
-                <element signature="e#1262#2425#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mant_usuarios.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/admin/mant_usuarios.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42139384">
-              <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="44" column="109" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -205,9 +118,7 @@
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
-        <option value="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/admin/mant_usuarios.blade.php" />
@@ -218,6 +129,8 @@
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
         <option value="$PROJECT_DIR$/resources/views/email/envio_clave_electronica.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" />
+        <option value="$PROJECT_DIR$/resources/views/usuarios/create.blade.php" />
       </list>
     </option>
   </component>
@@ -875,10 +788,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="8" width="1360" height="761" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19338235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19338235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1213,38 +1126,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="141" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/mail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1993517">
           <caret line="57" column="72" selection-start-line="57" selection-start-column="72" selection-end-line="57" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#996#1367#0" expanded="false" />
-            <element signature="e#1386#1745#0" expanded="false" />
-            <element signature="e#1763#2035#0" expanded="false" />
-            <element signature="e#2058#2340#0" expanded="false" />
-            <element signature="e#2357#3172#0" expanded="false" />
-            <element signature="e#3190#3617#0" expanded="false" />
-            <element signature="e#3637#4070#0" expanded="false" />
-            <element signature="e#4100#14263#0" expanded="false" />
-            <element signature="e#14271#14534#0" expanded="false" />
-            <marker date="1510030617354" expanded="true" signature="2575:3042" placeholder="..." />
-            <marker date="1510030617354" expanded="true" signature="3305:3465" placeholder="..." />
-            <marker date="1510030617354" expanded="true" signature="3756:3916" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1282,16 +1167,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="633" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="35" />
-          <folding>
-            <element signature="e#1262#2425#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1351,9 +1226,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42139384">
+        <state vertical-scroll-proportion="-10.0">
           <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07293355">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="e#1262#2425#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="44" column="109" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9658537">
+          <caret line="392" column="43" selection-start-line="392" selection-start-column="43" selection-end-line="392" selection-end-column="43" />
+          <folding>
+            <element signature="e#613#1026#0" expanded="false" />
+            <element signature="e#1869#2141#0" expanded="false" />
+            <element signature="e#2164#2446#0" expanded="false" />
+            <element signature="e#2463#3278#0" expanded="false" />
+            <element signature="e#3296#3723#0" expanded="false" />
+            <element signature="e#3743#4176#0" expanded="false" />
+            <element signature="e#4206#14369#0" expanded="false" />
+            <element signature="e#14377#14640#0" expanded="false" />
+            <marker date="1510084950138" expanded="true" signature="2681:3148" placeholder="..." />
+            <marker date="1510084950138" expanded="true" signature="3411:3571" placeholder="..." />
+            <marker date="1510084950138" expanded="true" signature="3862:4022" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

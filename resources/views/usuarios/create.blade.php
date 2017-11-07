@@ -42,8 +42,9 @@
                         <label for="run" class="col-md-4 control-label" align="right">Run</label>
 
                         <div class="col-md-6">
-                           <input id="run" type="text" class="form-control" name="run" value=""
-                                  placeholder="Ej : 123456789" v-model="newuser.run">
+                           <input id="run" type="text" class="form-control" name="run" value="" maxlength="12"
+                                  placeholder="Ej : 123456789" v-model="newuser.run" @keyup.prevent="formatear_rut"
+                                  @change.prevent="validar_rut">
                         </div>
                      </div>
 

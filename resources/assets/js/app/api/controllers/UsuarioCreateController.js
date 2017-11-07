@@ -8,6 +8,8 @@ Vue.use(Vue2Filters);
 import es from 'vee-validate/dist/locale/es';
 import VeeValidate, { Validator } from 'vee-validate';
 
+//const { validate, clean, format } = require('rut.js')
+import { validate, clean, format } from 'rut.js';
 
 // Add locale helper.
 Validator.addLocale(es);
@@ -364,6 +366,7 @@ const UsuarioCreateController = new Vue({
        */
    },
    created(){
+      //alert(format('180025553'));
       /*
        $(document).ready( function () {
        $('#toggle').click(function() {
@@ -378,6 +381,19 @@ const UsuarioCreateController = new Vue({
    },
    methods: {
       //camelCase() => for specific functions
+      //alert(validate('18.972.631-7'));
+      formatear_rut: function () {
+         var run = this.newuser.run;
+         this.newuser.run = format(run);
+      },
+      validar_rut: function () {
+         var run = this.newuser.run;
+         if (validate(run) == false) {
+            alert('El formato del rut es incorrecto');
+            return this.newuser.run = null;
+         }
+      },
+
       fetchInput: function () {
          this.$http.get('/input/create').then(response => { // success callback
             this.tables = response.body.tables;

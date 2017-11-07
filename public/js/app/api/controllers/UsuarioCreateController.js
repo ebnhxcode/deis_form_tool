@@ -17275,8 +17275,53 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],4:[function(require,module,exports){
-!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e.__vee_validate_locale__es=e.__vee_validate_locale__es||{},e.__vee_validate_locale__es.js=n())}(this,function(){"use strict";var e=function(e){var n=["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"],o=0===(e=1024*Number(e))?0:Math.floor(Math.log(e)/Math.log(1024));return 1*(e/Math.pow(1024,o)).toFixed(2)+" "+n[o]},n={name:"es",messages:{_default:function(e){return"El campo "+e+" no es válido."},after:function(e,n){var o=n[0];return"El campo "+e+" debe ser posterior "+(n[1]?"o igual ":"")+"a "+o+"."},alpha_dash:function(e){return"El campo "+e+" solo debe contener letras, números y guiones."},alpha_num:function(e){return"El campo "+e+" solo debe contener letras y números."},alpha_spaces:function(e){return"El campo "+e+" solo debe contener letras y espacios."},alpha:function(e){return"El campo "+e+" solo debe contener letras."},before:function(e,n){var o=n[0];return"El campo "+e+" debe ser anterior "+(n[1]?"o igual ":"")+"a "+o+"."},between:function(e,n){return"El campo "+e+" debe estar entre "+n[0]+" y "+n[1]+"."},confirmed:function(e){return"El campo "+e+" no coincide."},credit_card:function(e){return"El campo "+e+" es inválido."},date_between:function(e,n){return"El campo "+e+" debe estar entre "+n[0]+" y "+n[1]+"."},date_format:function(e,n){return"El campo "+e+" debe tener formato formato "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=["*"]);var o=n[0];return"El campo "+e+" debe ser númerico y contener "+("*"===o?"":o)+" puntos decimales."},digits:function(e,n){return"El campo "+e+" debe ser númerico y contener exactamente "+n[0]+" dígitos."},dimensions:function(e,n){return"El campo "+e+" debe ser de "+n[0]+" pixeles por "+n[1]+" pixeles."},email:function(e){return"El campo "+e+" debe ser un correo electrónico válido."},ext:function(e){return"El campo "+e+" debe ser un archivo válido."},image:function(e){return"El campo "+e+" debe ser una imagen."},in:function(e){return"El campo "+e+" debe ser un valor válido."},integer:function(e){return"El campo "+e+" debe ser un entero."},ip:function(e){return"El campo "+e+" debe ser una dirección ip válida."},length:function(e,n){var o=n[0],r=n[1];return r?"El largo del campo "+e+" debe estar entre "+o+" y "+r+".":"El largo del campo "+e+" debe ser "+o+"."},max:function(e,n){return"El campo "+e+" no debe ser mayor a "+n[0]+" caracteres."},max_value:function(e,n){return"El campo "+e+" debe de ser "+n[0]+" o menor."},mimes:function(e){return"El campo "+e+" debe ser un tipo de archivo válido."},min:function(e,n){return"El campo "+e+" debe tener al menos "+n[0]+" caracteres."},min_value:function(e,n){return"El campo "+e+" debe ser "+n[0]+" o superior."},not_in:function(e){return"El campo "+e+" debe ser un valor válido."},numeric:function(e){return"El campo "+e+" debe contener solo caracteres númericos."},regex:function(e){return"El formato del campo "+e+" no es válido."},required:function(e){return"El campo "+e+" es obligatorio."},size:function(n,o){var r=o[0];return"El campo "+n+" debe ser menor a "+e(r)+"."},url:function(e){return"El campo "+e+" no es una URL válida."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.addLocale(n),n});
+'use strict'
+
+function clean (rut) {
+  return typeof rut === 'string'
+    ? rut.replace(/^0+|[^0-9kK]+/g, '').toUpperCase()
+    : ''
+}
+
+function validate (rut) {
+  if (typeof rut !== 'string') {
+    return false
+  }
+  if (!/^0*(\d{1,3}(\.?\d{3})*)-?([\dkK])$/.test(rut)) {
+    return false
+  }
+
+  rut = clean(rut)
+
+  let t = parseInt(rut.slice(0, -1), 10)
+  let m = 0
+  let s = 1
+
+  while (t > 0) {
+    s = (s + t % 10 * (9 - m++ % 6)) % 11
+    t = Math.floor(t / 10)
+  }
+
+  const v = s > 0 ? `${s - 1}` : 'K'
+  return v === rut.slice(-1)
+}
+
+function format (rut) {
+  rut = clean(rut)
+
+  let result = `${rut.slice(-4, -1)}-${rut.substr(rut.length - 1)}`
+  for (let i = 4; i < rut.length; i += 3) {
+    result = rut.slice(-3 - i, -i) + '.' + result
+  }
+
+  return result
+}
+
+module.exports = { validate, clean, format }
+
 },{}],5:[function(require,module,exports){
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e.__vee_validate_locale__es=e.__vee_validate_locale__es||{},e.__vee_validate_locale__es.js=n())}(this,function(){"use strict";var e=function(e){var n=["Byte","KB","MB","GB","TB","PB","EB","ZB","YB"],o=0===(e=1024*Number(e))?0:Math.floor(Math.log(e)/Math.log(1024));return 1*(e/Math.pow(1024,o)).toFixed(2)+" "+n[o]},n={name:"es",messages:{_default:function(e){return"El campo "+e+" no es válido."},after:function(e,n){var o=n[0];return"El campo "+e+" debe ser posterior "+(n[1]?"o igual ":"")+"a "+o+"."},alpha_dash:function(e){return"El campo "+e+" solo debe contener letras, números y guiones."},alpha_num:function(e){return"El campo "+e+" solo debe contener letras y números."},alpha_spaces:function(e){return"El campo "+e+" solo debe contener letras y espacios."},alpha:function(e){return"El campo "+e+" solo debe contener letras."},before:function(e,n){var o=n[0];return"El campo "+e+" debe ser anterior "+(n[1]?"o igual ":"")+"a "+o+"."},between:function(e,n){return"El campo "+e+" debe estar entre "+n[0]+" y "+n[1]+"."},confirmed:function(e){return"El campo "+e+" no coincide."},credit_card:function(e){return"El campo "+e+" es inválido."},date_between:function(e,n){return"El campo "+e+" debe estar entre "+n[0]+" y "+n[1]+"."},date_format:function(e,n){return"El campo "+e+" debe tener formato formato "+n[0]+"."},decimal:function(e,n){void 0===n&&(n=["*"]);var o=n[0];return"El campo "+e+" debe ser númerico y contener "+("*"===o?"":o)+" puntos decimales."},digits:function(e,n){return"El campo "+e+" debe ser númerico y contener exactamente "+n[0]+" dígitos."},dimensions:function(e,n){return"El campo "+e+" debe ser de "+n[0]+" pixeles por "+n[1]+" pixeles."},email:function(e){return"El campo "+e+" debe ser un correo electrónico válido."},ext:function(e){return"El campo "+e+" debe ser un archivo válido."},image:function(e){return"El campo "+e+" debe ser una imagen."},in:function(e){return"El campo "+e+" debe ser un valor válido."},integer:function(e){return"El campo "+e+" debe ser un entero."},ip:function(e){return"El campo "+e+" debe ser una dirección ip válida."},length:function(e,n){var o=n[0],r=n[1];return r?"El largo del campo "+e+" debe estar entre "+o+" y "+r+".":"El largo del campo "+e+" debe ser "+o+"."},max:function(e,n){return"El campo "+e+" no debe ser mayor a "+n[0]+" caracteres."},max_value:function(e,n){return"El campo "+e+" debe de ser "+n[0]+" o menor."},mimes:function(e){return"El campo "+e+" debe ser un tipo de archivo válido."},min:function(e,n){return"El campo "+e+" debe tener al menos "+n[0]+" caracteres."},min_value:function(e,n){return"El campo "+e+" debe ser "+n[0]+" o superior."},not_in:function(e){return"El campo "+e+" debe ser un valor válido."},numeric:function(e){return"El campo "+e+" debe contener solo caracteres númericos."},regex:function(e){return"El formato del campo "+e+" no es válido."},required:function(e){return"El campo "+e+" es obligatorio."},size:function(n,o){var r=o[0];return"El campo "+n+" debe ser menor a "+e(r)+"."},url:function(e){return"El campo "+e+" no es una URL válida."}},attributes:{}};return"undefined"!=typeof VeeValidate&&VeeValidate.Validator.addLocale(n),n});
+},{}],6:[function(require,module,exports){
 /**
  * vee-validate v2.0.0-rc.19
  * (c) 2017 Abdelrahman Awad
@@ -24029,7 +24074,7 @@ return minimal$1;
 
 })));
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /*!
  * vue-resource v1.3.4
  * https://github.com/pagekit/vue-resource
@@ -25599,7 +25644,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 module.exports = plugin;
 
-},{"got":1}],7:[function(require,module,exports){
+},{"got":1}],8:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.2
@@ -36164,7 +36209,7 @@ Vue$3.compile = compileToFunctions;
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":3}],8:[function(require,module,exports){
+},{"_process":3}],9:[function(require,module,exports){
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -36800,7 +36845,7 @@ if (window.Vue) {
 /***/ }
 /******/ ]);
 });
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 'use strict';
 
 var _vue = require('vue/dist/vue.common');
@@ -36825,11 +36870,16 @@ var _veeValidate = require('vee-validate');
 
 var _veeValidate2 = _interopRequireDefault(_veeValidate);
 
+var _rut = require('rut.js');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_vueResource2.default);
 
 _vue2.default.use(_vue2Filters2.default);
+
+//const { validate, clean, format } = require('rut.js')
+
 
 // Add locale helper.
 _veeValidate.Validator.addLocale(_es2.default);
@@ -37006,6 +37056,7 @@ var UsuarioCreateController = new _vue2.default({
        */
    },
    created: function created() {
+      //alert(format('180025553'));
       /*
        $(document).ready( function () {
        $('#toggle').click(function() {
@@ -37020,6 +37071,19 @@ var UsuarioCreateController = new _vue2.default({
    filters: {},
    methods: {
       //camelCase() => for specific functions
+      //alert(validate('18.972.631-7'));
+      formatear_rut: function formatear_rut() {
+         var run = this.newuser.run;
+         this.newuser.run = (0, _rut.format)(run);
+      },
+      validar_rut: function validar_rut() {
+         var run = this.newuser.run;
+         if ((0, _rut.validate)(run) == false) {
+            alert('El formato del rut es incorrecto');
+            return this.newuser.run = null;
+         }
+      },
+
       fetchInput: function fetchInput() {
          var _this2 = this;
 
@@ -37220,6 +37284,6 @@ var UsuarioCreateController = new _vue2.default({
    }
 });
 
-},{"lodash":2,"vee-validate":5,"vee-validate/dist/locale/es":4,"vue-resource":6,"vue/dist/vue.common":7,"vue2-filters":8}]},{},[9]);
+},{"lodash":2,"rut.js":4,"vee-validate":6,"vee-validate/dist/locale/es":5,"vue-resource":7,"vue/dist/vue.common":8,"vue2-filters":9}]},{},[10]);
 
 //# sourceMappingURL=UsuarioCreateController.js.map
