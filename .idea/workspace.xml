@@ -4,11 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" line="31" />
     <bookmark url="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" line="30" />
     <bookmark url="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" line="390" />
+    <bookmark url="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" line="461" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,33 +85,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1138" column="90" selection-start-line="1138" selection-start-column="90" selection-end-line="1138" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.5660964">
+              <caret line="451" column="25" selection-start-line="451" selection-start-column="25" selection-end-line="451" selection-end-column="25" />
               <folding>
                 <element signature="e#1462#1833#0" expanded="false" />
                 <element signature="e#1852#2211#0" expanded="false" />
                 <element signature="e#2234#2516#0" expanded="false" />
                 <element signature="e#3366#3793#0" expanded="false" />
                 <element signature="e#3813#4246#0" expanded="false" />
-                <element signature="e#4280#23603#0" expanded="false" />
-                <element signature="e#22481#22776#0" expanded="false" />
-                <element signature="e#23611#23874#0" expanded="false" />
-                <element signature="e#30471#30830#0" expanded="false" />
-                <element signature="e#30850#31209#0" expanded="false" />
-                <element signature="e#34579#34641#0" expanded="false" />
-                <element signature="e#34933#34995#0" expanded="false" />
-                <element signature="e#35112#35356#0" expanded="false" />
-                <element signature="e#35376#35620#0" expanded="false" />
-                <element signature="e#45293#45522#0" expanded="false" />
-                <element signature="e#45536#45765#0" expanded="false" />
-                <element signature="e#46467#46682#0" expanded="false" />
-                <element signature="e#46696#46911#0" expanded="false" />
-                <marker date="1510090542522" expanded="true" signature="2751:3218" placeholder="..." />
-                <marker date="1510090542522" expanded="true" signature="3481:3641" placeholder="..." />
-                <marker date="1510090542522" expanded="true" signature="3932:4092" placeholder="..." />
+                <element signature="e#23832#24095#0" expanded="false" />
+                <element signature="e#30746#31105#0" expanded="false" />
+                <element signature="e#31125#31484#0" expanded="false" />
+                <element signature="e#34854#34916#0" expanded="false" />
+                <element signature="e#35208#35270#0" expanded="false" />
+                <element signature="e#35387#35631#0" expanded="false" />
+                <element signature="e#35651#35895#0" expanded="false" />
+                <element signature="e#45568#45797#0" expanded="false" />
+                <element signature="e#45811#46040#0" expanded="false" />
+                <element signature="e#46742#46957#0" expanded="false" />
+                <element signature="e#46971#47186#0" expanded="false" />
+                <marker date="1510147070288" expanded="true" signature="2751:3218" placeholder="..." />
+                <marker date="1510147070288" expanded="true" signature="3481:3641" placeholder="..." />
+                <marker date="1510147070288" expanded="true" signature="3932:4092" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -146,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mant_usuarios.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mant_usuarios.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10858144">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -213,8 +214,8 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/formulario/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
       </list>
     </option>
   </component>
@@ -237,7 +238,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="8" />
     <option name="width" value="1360" />
-    <option name="height" value="715" />
+    <option name="height" value="761" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -284,6 +285,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -648,7 +650,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -714,7 +715,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="8" width="1360" height="715" extended-state="6" />
+    <frame x="0" y="8" width="1360" height="761" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1151,41 +1152,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1138" column="90" selection-start-line="1138" selection-start-column="90" selection-end-line="1138" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.5660964">
+          <caret line="451" column="25" selection-start-line="451" selection-start-column="25" selection-end-line="451" selection-end-column="25" />
           <folding>
             <element signature="e#1462#1833#0" expanded="false" />
             <element signature="e#1852#2211#0" expanded="false" />
             <element signature="e#2234#2516#0" expanded="false" />
             <element signature="e#3366#3793#0" expanded="false" />
             <element signature="e#3813#4246#0" expanded="false" />
-            <element signature="e#4280#23603#0" expanded="false" />
-            <element signature="e#22481#22776#0" expanded="false" />
-            <element signature="e#23611#23874#0" expanded="false" />
-            <element signature="e#30471#30830#0" expanded="false" />
-            <element signature="e#30850#31209#0" expanded="false" />
-            <element signature="e#34579#34641#0" expanded="false" />
-            <element signature="e#34933#34995#0" expanded="false" />
-            <element signature="e#35112#35356#0" expanded="false" />
-            <element signature="e#35376#35620#0" expanded="false" />
-            <element signature="e#45293#45522#0" expanded="false" />
-            <element signature="e#45536#45765#0" expanded="false" />
-            <element signature="e#46467#46682#0" expanded="false" />
-            <element signature="e#46696#46911#0" expanded="false" />
-            <marker date="1510090542522" expanded="true" signature="2751:3218" placeholder="..." />
-            <marker date="1510090542522" expanded="true" signature="3481:3641" placeholder="..." />
-            <marker date="1510090542522" expanded="true" signature="3932:4092" placeholder="..." />
+            <element signature="e#23832#24095#0" expanded="false" />
+            <element signature="e#30746#31105#0" expanded="false" />
+            <element signature="e#31125#31484#0" expanded="false" />
+            <element signature="e#34854#34916#0" expanded="false" />
+            <element signature="e#35208#35270#0" expanded="false" />
+            <element signature="e#35387#35631#0" expanded="false" />
+            <element signature="e#35651#35895#0" expanded="false" />
+            <element signature="e#45568#45797#0" expanded="false" />
+            <element signature="e#45811#46040#0" expanded="false" />
+            <element signature="e#46742#46957#0" expanded="false" />
+            <element signature="e#46971#47186#0" expanded="false" />
+            <marker date="1510147070288" expanded="true" signature="2751:3218" placeholder="..." />
+            <marker date="1510147070288" expanded="true" signature="3481:3641" placeholder="..." />
+            <marker date="1510147070288" expanded="true" signature="3932:4092" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10858144">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>

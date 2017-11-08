@@ -449,13 +449,20 @@ const FormularioController = new Vue({
             buscar_por_run: function () {
                if (!this.run_madre || validate(this.run_madre) == false){
                   alert('Debe ingresar un rut valido');
-                  return this.run_madre = null;
+                  return;
                }
 
                var formData = new FormData();
 
                Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-               formData.append('run_madre', clean(this.run_madre));
+
+               var run_limpio = clean(this.run_madre);
+               run_limpio = run_limpio.substr(0, run_limpio.length-1);
+               //alert (run_limpio) ;
+               //return;
+
+               //formData.append('run_madre', this.run_madre);
+               formData.append('run_madre', run_limpio);
 
                this.$http.post('/formulario/buscar_por_run', formData).then(response => { // success callback
                   //console.log(response);
@@ -546,6 +553,7 @@ const FormularioController = new Vue({
    methods: {
       //camelCase() => for specific functions
       verifica_validacion_keyup: function (input) {
+         /*
          switch (input.id) {
             case 'run_madre':
                this.fdc[input.name] = format(this.fdc[input.name]);
@@ -554,6 +562,7 @@ const FormularioController = new Vue({
                this.fdc[input.name] = format(this.fdc[input.name]);
                break;
          }
+         */
 
       },
 
@@ -562,6 +571,7 @@ const FormularioController = new Vue({
 
          switch (input.id) {
 
+            /*
             case 'run_madre':
                if (validate(this.fdc[input.name]) == false) {
                   this.fdc[input.name] = null;
@@ -574,6 +584,7 @@ const FormularioController = new Vue({
                   alert('Debe ingresar un rut valido');
                }
                break;
+            */
 
             case 'edad_gestacional_ingreso_control_embarazo':
                if (parseInt(this.fdc[input.name])<0) {

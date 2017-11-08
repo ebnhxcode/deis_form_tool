@@ -37035,13 +37035,20 @@ var FormularioController = new _vue2.default({
 
                if (!this.run_madre || (0, _rut.validate)(this.run_madre) == false) {
                   alert('Debe ingresar un rut valido');
-                  return this.run_madre = null;
+                  return;
                }
 
                var formData = new FormData();
 
                _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-               formData.append('run_madre', (0, _rut.clean)(this.run_madre));
+
+               var run_limpio = (0, _rut.clean)(this.run_madre);
+               run_limpio = run_limpio.substr(0, run_limpio.length - 1);
+               //alert (run_limpio) ;
+               //return;
+
+               //formData.append('run_madre', this.run_madre);
+               formData.append('run_madre', run_limpio);
 
                this.$http.post('/formulario/buscar_por_run', formData).then(function (response) {
                   // success callback
@@ -37136,32 +37143,37 @@ var FormularioController = new _vue2.default({
    methods: {
       //camelCase() => for specific functions
       verifica_validacion_keyup: function verifica_validacion_keyup(input) {
+         /*
          switch (input.id) {
             case 'run_madre':
-               this.fdc[input.name] = (0, _rut.format)(this.fdc[input.name]);
+               this.fdc[input.name] = format(this.fdc[input.name]);
                break;
             case 'run_recien_nacido':
-               this.fdc[input.name] = (0, _rut.format)(this.fdc[input.name]);
+               this.fdc[input.name] = format(this.fdc[input.name]);
                break;
          }
+         */
+
       },
 
       verifica_validacion_change: function verifica_validacion_change(input) {
 
          switch (input.id) {
 
+            /*
             case 'run_madre':
-               if ((0, _rut.validate)(this.fdc[input.name]) == false) {
+               if (validate(this.fdc[input.name]) == false) {
                   this.fdc[input.name] = null;
                   alert('Debe ingresar un rut valido');
                }
                break;
             case 'run_recien_nacido':
-               if ((0, _rut.validate)(this.fdc[input.name]) == false) {
+               if (validate(this.fdc[input.name]) == false) {
                   this.fdc[input.name] = null;
                   alert('Debe ingresar un rut valido');
                }
                break;
+            */
 
             case 'edad_gestacional_ingreso_control_embarazo':
                if (parseInt(this.fdc[input.name]) < 0) {
