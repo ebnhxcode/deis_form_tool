@@ -405,6 +405,13 @@ const UsuarioCreateController = new Vue({
       procesar_solicitud_clave: function () {
          this.mini_loader_visible = true;
          var formData = new FormData();
+
+         if (!this.newuser.run || !this.newuser.email || !this.newuser.clave_electronica) {
+            alert('Debe completar todos los campos');
+            this.mini_loader_visible = false;
+            return;
+         }
+
          formData.append('run', clean(this.newuser.run));
          formData.append('email', this.newuser.email);
          formData.append('clave_electronica', this.newuser.clave_electronica);

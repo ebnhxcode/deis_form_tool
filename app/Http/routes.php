@@ -20,7 +20,8 @@ Route::get('/demoemail', function () {
 });
 */
 Route::get('/demo', function () {
-   return view('demo.demo');
+   #return view('demo.demo');
+   return redirect()->to('/login');
 });
 
 Route::get('/registro', 'UserController@registro');

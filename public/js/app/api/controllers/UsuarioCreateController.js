@@ -37101,6 +37101,13 @@ var UsuarioCreateController = new _vue2.default({
 
          this.mini_loader_visible = true;
          var formData = new FormData();
+
+         if (!this.newuser.run || !this.newuser.email || !this.newuser.clave_electronica) {
+            alert('Debe completar todos los campos');
+            this.mini_loader_visible = false;
+            return;
+         }
+
          formData.append('run', (0, _rut.clean)(this.newuser.run));
          formData.append('email', this.newuser.email);
          formData.append('clave_electronica', this.newuser.clave_electronica);
