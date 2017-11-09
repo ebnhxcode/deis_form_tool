@@ -13,7 +13,7 @@
             <tr>
                <td align="center" bgcolor="#205bb9" style="padding: 40px 0 30px 0; color: #cfd7ff; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
                   <img src="" alt="Transmision Vertical VIH y Sifilis" width="300" height="100" style="display: block;" />
-                  <img src="{{url('img/logo.png')}}" alt="" style="box-shadow: 2px 3px 8px 1px #303030;border-radius: 3px;">
+                  <img src="http://tv.minsal.cl/img/logo.png" alt="" style="box-shadow: 2px 3px 8px 1px #303030;border-radius: 3px;">
                </td>
             </tr>
             <tr>
