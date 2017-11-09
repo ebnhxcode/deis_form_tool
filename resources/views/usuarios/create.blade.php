@@ -55,8 +55,9 @@
 
                         <div class="col-md-6">
                            <input id="run" type="text" class="form-control" name="run" value="" maxlength="12"
-                                  placeholder="Ej : 123456789" v-model="newuser.run" @keyup.prevent="formatear_rut"
-                                  @change.prevent="validar_rut">
+                                  placeholder="Ej : 123456789" v-model="newuser.run">
+                           {{--@keyup.prevent="formatear_rut"
+                                  @change.prevent="validar_rut"--}}
                         </div>
                      </div>
 

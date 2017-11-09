@@ -412,7 +412,8 @@ const UsuarioCreateController = new Vue({
             return;
          }
 
-         formData.append('run', clean(this.newuser.run));
+         //formData.append('run', clean(this.newuser.run));
+         formData.append('run', this.newuser.run);
          formData.append('email', this.newuser.email);
          formData.append('clave_electronica', this.newuser.clave_electronica);
          Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();

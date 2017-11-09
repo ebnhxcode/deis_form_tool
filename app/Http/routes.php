@@ -12,13 +12,15 @@
 */
 
 #Route::get('/', function () {return view('welcome');});
-/*
+
 Route::get('/demoemail', function () {
    $returnData['llave'] = 'abcdefgh' ;
    $returnData['nombre'] = 'Usuario Prueba';
+   $returnData['email'] = 'email@dominio.cl';
+   $returnData['rut'] = '123456789';
    return view ('email.envio_clave_electronica', $returnData) ;
 });
-*/
+
 Route::get('/demo', function () {
    #return view('demo.demo');
    return redirect()->to('/login');

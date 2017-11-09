@@ -31,8 +31,15 @@
                               Su llave secreta es: <b style="border:dashed 1px grey;padding: 10px;border-radius: 5px;">
                                  {{$llave}}
                               </b>
+                              <br>
+                              <br>
+                              Ademas, le recordamos que sus datos para poder crear su clave son: <br>
+                              Rut: <b>{{$rut}}</b> <br>
+                              Email: <b>{{$email}}</b> <br>
                               <br><br>
                            </span>
+
+
                               ¿Que es la llave secreta? <br /><br />
                               La <b>Llave Secreta</b> es un código que se genera a partir del ingreso del usuario a la <b>Plataforma de Transmision Vertical VIH y Sifilis</b>, con esta <b>Llave Secreta</b> podrás solicitar crear una nueva clave para el ingreso al sistema.
                            </p>
