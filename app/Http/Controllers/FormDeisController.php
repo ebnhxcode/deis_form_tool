@@ -147,8 +147,8 @@ class FormDeisController extends Controller {
     public function buscar_por_correlativo (Request $request){
         $correlativo = isset($request->n_correlativo_interno)?$request->n_correlativo_interno:null;
         if ($correlativo) {
-            #$formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
-            $formularios = FormDeis::where('n_correlativo_interno', 'ilike', $correlativo.'%')->get();
+            $formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
+            #$formularios = FormDeis::where('n_correlativo_interno', 'ilike', $correlativo.'%')->get();
             return response()->json(['formularios'=>$formularios]);
         }else{
             return response()->json(['error'=>['002' => 'El correlativo no existe']]);
