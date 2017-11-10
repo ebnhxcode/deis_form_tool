@@ -571,13 +571,33 @@ const FormularioController = new Vue({
 
          switch (input.id) {
 
-            /*
+
             case 'run_madre':
+               /*
                if (validate(this.fdc[input.name]) == false) {
                   this.fdc[input.name] = null;
                   alert('Debe ingresar un rut valido');
                }
+               */
+
+               if (this.formularioNuevoActivo == true && this.fdc[input.name] != null) {
+                  var formData = new FormData();
+                  Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+                  formData.append('run_madre', this.fdc[input.name]);
+                  this.$http.post('/formulario/buscar_run_existente', formData).then(response => { // success callback
+                     console.log(response);
+                     var rd = response.body.rd;
+                     if (rd == 'Existe') {
+                        this.fdc[input.name] = null;
+                        alert('El rut ingresado ya existe');
+                     }
+
+                  }, response => { // error callback
+                     console.log(response);
+                  });
+               }
                break;
+            /*
             case 'run_recien_nacido':
                if (validate(this.fdc[input.name]) == false) {
                   this.fdc[input.name] = null;

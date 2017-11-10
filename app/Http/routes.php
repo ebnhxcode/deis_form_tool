@@ -83,6 +83,7 @@ Route::get('/testapi', function () {
 Route::get('/formulario/testapi', 'FormDeisController@testapi');
 
 Route::post ('/formulario/buscar_por_run' , 'FormDeisController@buscar_por_run') ;
+Route::post ('/formulario/buscar_run_existente' , 'FormDeisController@buscar_run_existente') ;
 Route::post ('/formulario/buscar_por_correlativo' , 'FormDeisController@buscar_por_correlativo') ;
 #Ruta para tomar el registro
 Route::post ('/formulario/marcar_registro_form_deis' , 'FormDeisController@marcar_registro_form_deis');
