@@ -8,6 +8,24 @@ use App\Http\Requests;
 
 class AdminController extends Controller {
 
+
+
+    public function mant_usuarios (Request $request) {
+
+
+        return view ('admin.mant_usuarios');
+    }
+
+    public function mant_usuarios_data (Request $request) {
+        if ($request->wantsJson()) {
+
+
+
+        }
+    }
+
+
+
     public function index()
     {
         //

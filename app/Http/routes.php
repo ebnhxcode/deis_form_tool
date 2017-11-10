@@ -107,3 +107,6 @@ Route::post ('/input/add/label' , 'InputController@addLabelToInput') ;
 Route::resource ('/input' , 'InputController') ;
 
 Route::get ('/home', 'HomeController@index') ;
+
+Route::get('/admin/mant_usuarios', 'AdminController@mant_usuarios');
+Route::get('/admin/mant_usuarios_data', 'AdminController@mant_usuarios_data');
