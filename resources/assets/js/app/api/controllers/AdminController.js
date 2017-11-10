@@ -23,6 +23,9 @@ const AdminUsuarios = new Vue({
    el: '#AdminUsuarios',
    data(){
       return {
+         'users':[],
+         'filterTerm':'',
+         'userEditId':'',
 
          'mostrar_input_password':false,
          'mini_loader_visible':false,
@@ -359,7 +362,7 @@ const AdminUsuarios = new Vue({
        */
    },
    created(){
-      //this.fetchAdminUsuarios();
+      this.fetchAdminUsuarios();
       /*
        $(document).ready( function () {
        $('#toggle').click(function() {
@@ -374,10 +377,18 @@ const AdminUsuarios = new Vue({
    },
    methods: {
 
+      editUser: function (id) {
+         this.userEditId = id;
+      },
+      unEditUser: function () {
+         this.userEditId=null;
+      },
       //camelCase() => for specific functions
       fetchAdminUsuarios: function () {
          this.$http.get('/admin/mant_usuarios_data').then(response => { // success callback
             console.log(response);
+            this.users = response.body.users;
+
          }, response => { // error callback
             console.log('Error fetch_lista: ' + response);
          });

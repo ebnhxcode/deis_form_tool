@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 use App\Http\Requests;
 
 class AdminController extends Controller {
@@ -18,9 +18,9 @@ class AdminController extends Controller {
 
     public function mant_usuarios_data (Request $request) {
         if ($request->wantsJson()) {
+            $returnData['users'] = User::with('role')->get();
 
-
-
+            return response()->json($returnData);
         }
     }
 
