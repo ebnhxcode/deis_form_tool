@@ -78,7 +78,7 @@
                                             v-if="userEditId!=user.id">
                                        <i class="fa fa-pencil"></i>
                                     </button>
-                                    <button class="btn btn-sm btn-success" @click.prevent="unEditUser(user.id)"
+                                    <button class="btn btn-sm btn-success" @click.prevent="saveUser(user)"
                                             v-else>
                                        <i class="fa fa-check"></i>
                                     </button>

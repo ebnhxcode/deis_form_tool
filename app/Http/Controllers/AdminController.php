@@ -24,6 +24,15 @@ class AdminController extends Controller {
         }
     }
 
+    public function guardar_usuario (Request $request) {
+
+        $user_parameters = $request->all();
+        $user = User::find($user_parameters['id']);
+        $user->update($user_parameters);
+        return response()->json(['rc' => '0', 'rd' => 'Success.']);
+
+    }
+
 
 
     public function index()

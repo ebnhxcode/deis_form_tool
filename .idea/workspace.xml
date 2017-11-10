@@ -9,7 +9,9 @@
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/AdminController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/AdminController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/AdminController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/AdminController.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/AdminController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/AdminController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" />
     </list>
@@ -46,8 +48,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.73077">
-              <caret line="111" column="74" selection-start-line="111" selection-start-column="74" selection-end-line="111" selection-end-column="74" />
+            <state vertical-scroll-proportion="-21.23077">
+              <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
               <folding>
                 <element signature="e#1383#2546#0#PHP" expanded="false" />
               </folding>
@@ -65,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mant_usuarios.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mant_usuarios.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7374392">
-              <caret line="95" column="74" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
+            <state vertical-scroll-proportion="37.5">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/AdminController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="367" column="38" selection-start-line="367" selection-start-column="38" selection-end-line="367" selection-end-column="38" />
+              <caret line="383" column="29" selection-start-line="383" selection-start-column="29" selection-end-line="383" selection-end-column="29" />
               <folding>
                 <element signature="e#955#1326#0" expanded="false" />
                 <element signature="e#1345#1704#0" expanded="false" />
@@ -110,19 +112,33 @@
                 <element signature="e#3596#4029#0" expanded="false" />
                 <element signature="e#4059#14222#0" expanded="false" />
                 <element signature="e#14230#14493#0" expanded="false" />
-                <marker date="1510321924226" expanded="true" signature="2534:3001" placeholder="..." />
-                <marker date="1510321924226" expanded="true" signature="3264:3424" placeholder="..." />
-                <marker date="1510321924226" expanded="true" signature="3715:3875" placeholder="..." />
+                <marker date="1510324177678" expanded="true" signature="2534:3001" placeholder="..." />
+                <marker date="1510324177678" expanded="true" signature="3264:3424" placeholder="..." />
+                <marker date="1510324177678" expanded="true" signature="3715:3875" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InputController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/InputController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="402" column="43" selection-start-line="402" selection-start-column="35" selection-end-line="402" selection-end-column="43" />
+              <folding>
+                <marker date="1509487345340" expanded="true" signature="2680:3147" placeholder="..." />
+                <marker date="1509487345340" expanded="true" signature="3410:3570" placeholder="..." />
+                <marker date="1509487345340" expanded="true" signature="3861:4021" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.173077">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6311337">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -181,14 +197,14 @@
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/email/envio_clave_electronica.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/app/Role.php" />
         <option value="$PROJECT_DIR$/resources/views/formulario/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/AdminController.js" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/AdminController.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
       </list>
     </option>
   </component>
@@ -1138,16 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.73077">
-          <caret line="111" column="74" selection-start-line="111" selection-start-column="74" selection-end-line="111" selection-end-column="74" />
-          <folding>
-            <element signature="e#1383#2546#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021069692">
@@ -1192,18 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/InputController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7918699">
-          <caret line="338" column="27" selection-start-line="338" selection-start-column="23" selection-end-line="338" selection-end-column="27" />
-          <folding>
-            <marker date="1509487345340" expanded="true" signature="2680:3147" placeholder="..." />
-            <marker date="1509487345340" expanded="true" signature="3410:3570" placeholder="..." />
-            <marker date="1509487345340" expanded="true" signature="3861:4021" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/input/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3888888">
@@ -1228,10 +1222,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/InputController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="402" column="43" selection-start-line="402" selection-start-column="35" selection-end-line="402" selection-end-column="43" />
+          <folding>
+            <marker date="1509487345340" expanded="true" signature="2680:3147" placeholder="..." />
+            <marker date="1509487345340" expanded="true" signature="3410:3570" placeholder="..." />
+            <marker date="1509487345340" expanded="true" signature="3861:4021" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.23077">
+          <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
+          <folding>
+            <element signature="e#1383#2546#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="37.5">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/AdminController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="367" column="38" selection-start-line="367" selection-start-column="38" selection-end-line="367" selection-end-column="38" />
+          <caret line="383" column="29" selection-start-line="383" selection-start-column="29" selection-end-line="383" selection-end-column="29" />
           <folding>
             <element signature="e#955#1326#0" expanded="false" />
             <element signature="e#1345#1704#0" expanded="false" />
@@ -1242,28 +1266,20 @@
             <element signature="e#3596#4029#0" expanded="false" />
             <element signature="e#4059#14222#0" expanded="false" />
             <element signature="e#14230#14493#0" expanded="false" />
-            <marker date="1510321924226" expanded="true" signature="2534:3001" placeholder="..." />
-            <marker date="1510321924226" expanded="true" signature="3264:3424" placeholder="..." />
-            <marker date="1510321924226" expanded="true" signature="3715:3875" placeholder="..." />
+            <marker date="1510324177678" expanded="true" signature="2534:3001" placeholder="..." />
+            <marker date="1510324177678" expanded="true" signature="3264:3424" placeholder="..." />
+            <marker date="1510324177678" expanded="true" signature="3715:3875" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.173077">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6311337">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/mant_usuarios.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7374392">
-          <caret line="95" column="74" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>

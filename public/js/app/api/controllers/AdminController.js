@@ -37070,8 +37070,28 @@ var AdminUsuarios = new _vue2.default({
       editUser: function editUser(id) {
          this.userEditId = id;
       },
-      unEditUser: function unEditUser() {
+      saveUser: function saveUser(user) {
          this.userEditId = null;
+         var formData = new FormData();
+         formData.append('id', user.id); //formData.append('_token', $('#_token').val());
+         formData.append('name', user.name); //formData.append('_token', $('#_token').val());
+         formData.append('email', user.email);
+         formData.append('position', user.position);
+         formData.append('establecimiento', user.establecimiento);
+         formData.append('rut', user.rut);
+         formData.append('telefono', user.telefono);
+         formData.append('id_role', user.id_role);
+         formData.append('confirmado_llave_secreta', user.confirmado_llave_secreta);
+
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+
+         this.$http.post('/admin/guardar_usuario', formData).then(function (response) {
+            // success callback
+            console.log(response);
+         }, function (response) {
+            // error callback
+            console.log('Error fetch_lista: ' + response);
+         });
       },
       //camelCase() => for specific functions
       fetchAdminUsuarios: function fetchAdminUsuarios() {
