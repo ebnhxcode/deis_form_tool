@@ -11,7 +11,7 @@
                   <div class="row">
                      <div class="col-md-12">
 
-                        {{ csrf_field() }} {{-- <keep-alive> </keep-alive>--}}
+                        {{ csrf_field() }}
                         <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
 
                         <div class="well well-sm">
@@ -24,19 +24,20 @@
                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;"
                                    data-target="#instructions" aria-expanded="false" aria-controls="instructions">
                               <small>Leer instrucciones</small>
-                           </button>
+                           </button><!-- .btn .btn-success -->
 
                            <button class="btn btn-sm btn-success pull-right small" @click.prevent="crear_nuevo_formulario"
                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;margin-left: 10px;">
                               Crear nuevo&nbsp;
                               <i class="fa fa-plus"></i>
-                           </button>
+                           </button><!-- .btn .btn-success -->
 
                            <button class="btn btn-sm btn-info pull-right small" @click.prevent="buscar_formulario"
                                    style="box-shadow: 2px 1px 2px 1px #dbdbdb;">
                               Buscar&nbsp;
                               <i class="fa fa-search"></i>
-                           </button>
+                           </button></button><!-- .btn .btn-info -->
+
                            <modal_buscar_formulario
                               v-if="show_modal_buscar_formulario == true">
                               <h3 slot="header">

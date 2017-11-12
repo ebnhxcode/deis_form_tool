@@ -129,50 +129,59 @@ class FormDeisController extends Controller {
 
     public function index (Request $request) {
         return $this->create($request);
-        $returnData=[];
-        return view('formulario.index', $returnData);
     }
 
+    #Busqueda de un registro por el run de la madre
     public function buscar_por_run (Request $request){
-        $run_madre = isset($request->run_madre)?$request->run_madre:null;
-        if ($run_madre) {
-            $formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
-            #$formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
-            return response()->json(['formularios'=>$formularios]);
-        }else{
-            return response()->json(['error'=>['002' => 'El run no existe']]);
+        if ($request->wantsJson()) {
+            $run_madre = isset($request->run_madre)?$request->run_madre:null;
+            if ($run_madre) {
+                $formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
+                #$formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
+                return response()->json(['formularios'=>$formularios]);
+            }else{
+                return response()->json(['error'=>['rd' => 'El run no existe']]);
+            }
         }
     }
 
+    #Busqueda de validacion para comprobar si es que el rut existe
     public function buscar_run_existente (Request $request) {
-        $run_madre = isset($request->run_madre)?$request->run_madre:null;
-        if ($run_madre) {
-            #$formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
-            $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
-            if (count($formularios)>0){
-                return response()->json(['rd'=>'Existe']);
+        if ($request->wantsJson()) {
+            $run_madre = isset($request->run_madre)?$request->run_madre:null;
+            if ($run_madre) {
+                #$formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
+                $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
+                if (count($formularios)>0){
+                    return response()->json(['rd'=>'Existe']);
+                }else{
+                    return response()->json(['rd'=>'No existe']);
+                }
+
             }else{
                 return response()->json(['rd'=>'No existe']);
             }
-
-        }else{
-            return response()->json(['rd'=>'No existe']);
         }
     }
 
+    #Busqueda de un registro por el correlativo del registro
     public function buscar_por_correlativo (Request $request){
-        $correlativo = isset($request->n_correlativo_interno)?$request->n_correlativo_interno:null;
-        if ($correlativo) {
-            $formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
-            #$formularios = FormDeis::where('n_correlativo_interno', 'ilike', $correlativo.'%')->get();
-            return response()->json(['formularios'=>$formularios]);
-        }else{
-            return response()->json(['error'=>['002' => 'El correlativo no existe']]);
+        if ($request->wantsJson()) {
+            $correlativo = isset($request->n_correlativo_interno)?$request->n_correlativo_interno:null;
+            if ($correlativo) {
+                $formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
+                #$formularios = FormDeis::where('n_correlativo_interno', 'ilike', $correlativo.'%')->get();
+                return response()->json(['formularios'=>$formularios]);
+            }else{
+                return response()->json(['error'=>['rd' => 'El correlativo no existe']]);
+            }
         }
     }
 
+    #Metodo que retorna la informacion necesaria para el renderizado de los inputs en el formulario de form_deis
     public function inputs_formulario (Request $request) {
         if ($request->wantsJson()) {
+            #Preparacion de variables que contienen la informacion del renderizado de los inputs y de las colecciones que llenan los comboboxes
             $returnData['auth'] = auth()->user();
             $returnData['inputs'] = FormDeisInput::where('table_name', $table_name = 'form_deis_inputs')->orderby('order_layout_form', 'asc')->get();
             $returnData['estades_gestacionales'] = config('collections.estades_gestacionales');
@@ -189,17 +198,21 @@ class FormDeisController extends Controller {
                   DB::raw("CONCAT(id_establecimiento,' - ',nombre_establecimiento) AS nombre_establecimiento"),'id_establecimiento')
                   ->pluck('nombre_establecimiento', 'id_establecimiento')];
 
-
             return response()->json($returnData);
         }
     }
 
+    #Metodo que retorna la informacion necesaria para el renderizado de los datos del formulario para crear un nuevo registro
+    #Similar al metodo de esta clase : inputs_formulario();
     public function datos_formulario (Request $request) {
         if ($request->wantsJson()) {
+            #Instancia y creacion del nuevo registro
             $this->fdc = new FormDeis();
             $this->fdc->save();
             $this->fdc = FormDeis::find($this->fdc->id);
             $this->fdc->n_correlativo_interno = $this->fdc->id;
+
+            #Preparacion de variables que contienen la informacion del renderizado de los inputs y de las colecciones que llenan los comboboxes
             $returnData['fdc'] = $this->fdc;
             $returnData['auth'] = auth()->user();
             $returnData['inputs'] = FormDeisInput::where('table_name', $table_name = 'form_deis_inputs')->orderby('order_layout_form', 'asc')->get();
@@ -215,42 +228,49 @@ class FormDeisController extends Controller {
                   DB::raw("CONCAT(id_establecimiento,' - ',nombre_establecimiento) AS nombre_establecimiento"),'id_establecimiento')
                   ->pluck('nombre_establecimiento', 'id_establecimiento')];
             $returnData['deis_form_table_options'] += ['anos_Estudio' => [''=>'Seleccione nivel de escolaridad']];
+
             return response()->json($returnData);
         }
     }
 
+    #Funcion que marca un registro como ocupado cuando se estaá modificando
     public function marcar_registro_form_deis (Request $request) {
-        $forms_deis_edited_by_user = FormDeis::where('usuario_modifica_form_deis', auth()->user()->id)->get();
+        if ($request->wantsJson()) {
+            #Busca todos los registros en modificacion por el usuario en sesion
+            $forms_deis_edited_by_user = FormDeis::where('usuario_modifica_form_deis', auth()->user()->id)->get();
+            #Recorre los registros y los disponibiliza
+            foreach ($forms_deis_edited_by_user as $key => $form) {
+                $form->usuario_modifica_form_deis = null;
+                $form->estado_form_deis = 'disponible';
+                $form->save();
+            }
 
-        foreach ($forms_deis_edited_by_user as $key => $form) {
-            $form->usuario_modifica_form_deis = null;
-            $form->estado_form_deis = 'disponible';
-            $form->save();
-        }
+            #Mediante el correlativo se busca el registro que el usuario ha seleccionado
+            $form_deis = FormDeis::where('n_correlativo_interno', $request->n_correlativo_interno)->first();
 
-        $form_deis = FormDeis::where('n_correlativo_interno', $request->n_correlativo_interno)->first();
-        if ($form_deis->estado_form_deis == 'ocupado') {
-            return response()->json(['fdc' => $form_deis]);
-        }else{
-            $form_deis->usuario_modifica_form_deis = auth()->user()->id;
-            $form_deis->estado_form_deis = 'ocupado';
-            $form_deis->save();
-            return response()->json(['fdc' => $form_deis]);
+            #Si el registro está ocupado, retorna esa informacion para que el usuario que intenta modificar el registro, no pueda hacerlo
+            if ($form_deis->estado_form_deis == 'ocupado') {
+                return response()->json(['fdc' => $form_deis]);
+            }else{
+                #Caso contrario, cambia el estado a ocupado y envia el registro
+                $form_deis->usuario_modifica_form_deis = auth()->user()->id;
+                $form_deis->estado_form_deis = 'ocupado';
+                $form_deis->save();
+                return response()->json(['fdc' => $form_deis]);
+            }
         }
-        #dd($forms_deis_edited_by_user);
     }
 
     public function create (Request $request) {
         $returnData['instructions'] = config('collection.deis_form_instructions');
         $returnData['auth'] = auth()->user();
 
-        if ($request->wantsJson()) {
+        if (!$request->wantsJson()) {
+            return view('formulario.create', $returnData);
+        }else{
             return response()->json($returnData);
         }
-        #$returnData['inputs'] = json_decode(json_encode(config('collection.deis_form_inputs')));
-        #$returnData['labels'] = config('collection.deis_form_table_labels');
-        #$returnData['instructions'] = config('collection.deis_form_instructions');
-        return view('formulario.create', $returnData);
+
     }
 
 
