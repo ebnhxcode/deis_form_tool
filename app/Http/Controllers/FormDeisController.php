@@ -131,20 +131,6 @@ class FormDeisController extends Controller {
         return $this->create($request);
     }
 
-    #Busqueda de un registro por el run de la madre
-    public function buscar_por_run (Request $request){
-        if ($request->wantsJson()) {
-            $run_madre = isset($request->run_madre)?$request->run_madre:null;
-            if ($run_madre) {
-                $formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
-                #$formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
-                return response()->json(['formularios'=>$formularios]);
-            }else{
-                return response()->json(['error'=>['rd' => 'El run no existe']]);
-            }
-        }
-    }
-
     #Busqueda de validacion para comprobar si es que el rut existe
     public function buscar_run_existente (Request $request) {
         if ($request->wantsJson()) {
@@ -164,13 +150,27 @@ class FormDeisController extends Controller {
         }
     }
 
+    #Busqueda de un registro por el run de la madre
+    public function buscar_por_run (Request $request){
+        if ($request->wantsJson()) {
+            $run_madre = isset($request->run_madre)?$request->run_madre:null;
+            if ($run_madre) {
+                #$formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
+                $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
+                return response()->json(['formularios'=>$formularios]);
+            }else{
+                return response()->json(['error'=>['rd' => 'El run no existe']]);
+            }
+        }
+    }
+
     #Busqueda de un registro por el correlativo del registro
     public function buscar_por_correlativo (Request $request){
         if ($request->wantsJson()) {
             $correlativo = isset($request->n_correlativo_interno)?$request->n_correlativo_interno:null;
             if ($correlativo) {
-                $formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
                 #$formularios = FormDeis::where('n_correlativo_interno', 'ilike', $correlativo.'%')->get();
+                $formularios = FormDeis::where('n_correlativo_interno', '=', $correlativo)->get();
                 return response()->json(['formularios'=>$formularios]);
             }else{
                 return response()->json(['error'=>['rd' => 'El correlativo no existe']]);
