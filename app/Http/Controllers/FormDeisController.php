@@ -261,6 +261,7 @@ class FormDeisController extends Controller {
         }
     }
 
+
     public function create (Request $request) {
         $returnData['instructions'] = config('collection.deis_form_instructions');
         $returnData['auth'] = auth()->user();
@@ -272,6 +273,7 @@ class FormDeisController extends Controller {
         }
     }
 
+    #Guardado de informacion, para guardar y actualizar
     public function store (Request $request) {
         if ($request->wantsJson()) {
             $formData = $request->all();
@@ -305,11 +307,8 @@ class FormDeisController extends Controller {
 
 
     public function show ($id) { }
-
-
     public function edit ($id) { }
-
-
+    public function destroy ($id) { }
     public function update (Request $request, $id) {
         /*
         $formData = $request->all();
@@ -332,6 +331,4 @@ class FormDeisController extends Controller {
         */
     }
 
-
-    public function destroy ($id) { }
 }
