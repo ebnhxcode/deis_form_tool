@@ -837,7 +837,7 @@ const FormularioController = new Vue({
                break;
 
             //case 'anos_estudio':
-               //break;
+               //    break;
             case 'escolaridad':
                $('.anos_estudio').find('option').remove().end();
                switch (this.fdc[input.id]) {
