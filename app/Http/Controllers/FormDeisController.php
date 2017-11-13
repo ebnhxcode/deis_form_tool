@@ -304,8 +304,14 @@ class FormDeisController extends Controller {
                 }
             }
 
+
             #$result = FormDeis::create($fd);
             $result = $form_deis->update($fd);
+
+            if ($form_deis->mujer_es_vih_positivo == 'Si') {
+
+            }
+
 
             return response()->json(['result' => $result, 'data' => $fd]);
         }

@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/formulario/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/formulario/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7136706">
+            <state vertical-scroll-proportion="-27.0">
               <caret line="78" column="115" selection-start-line="78" selection-start-column="115" selection-end-line="78" selection-end-column="115" />
               <folding />
             </state>
@@ -99,14 +99,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormDeisController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FormDeisController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.365385">
-              <caret line="270" column="33" selection-start-line="270" selection-start-column="33" selection-end-line="270" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.8560354">
+              <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
               <folding>
                 <element signature="e#395#3831#0#PHP" expanded="false" />
-                <element signature="e#13258#13792#0#PHP" expanded="false" />
+                <element signature="e#13337#13871#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -187,10 +187,10 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/config/collections.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
         <option value="$PROJECT_DIR$/app/FormDeis.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
         <option value="$PROJECT_DIR$/resources/views/formulario/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
       </list>
     </option>
   </component>
@@ -1277,17 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.365385">
-          <caret line="270" column="33" selection-start-line="270" selection-start-column="33" selection-end-line="270" selection-end-column="33" />
-          <folding>
-            <element signature="e#395#3831#0#PHP" expanded="false" />
-            <element signature="e#13258#13792#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/FormDeis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.0">
@@ -1336,9 +1325,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/formulario/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7136706">
+        <state vertical-scroll-proportion="-27.0">
           <caret line="78" column="115" selection-start-line="78" selection-start-column="115" selection-end-line="78" selection-end-column="115" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8560354">
+          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+          <folding>
+            <element signature="e#395#3831#0#PHP" expanded="false" />
+            <element signature="e#13337#13871#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
