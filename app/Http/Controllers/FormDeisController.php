@@ -270,19 +270,15 @@ class FormDeisController extends Controller {
         }else{
             return response()->json($returnData);
         }
-
     }
 
-
     public function store (Request $request) {
-
         if ($request->wantsJson()) {
             $formData = $request->all();
             $fd = [];
 
             $form_deis = FormDeis::find($formData['_id_formulario']);
             $formData['_id_formulario'] = null;
-
 
             foreach ($formData as $key => $d){
                 if ($d) {
@@ -299,29 +295,23 @@ class FormDeisController extends Controller {
 
             return response()->json(['result' => $result, 'data' => $fd]);
         }
-
-
         /*
         echo '<pre>';
         print_r($formData);
         echo '</pre>';
         return;
         */
-
     }
 
 
-    public function show ($id) {
-
-    }
+    public function show ($id) { }
 
 
-    public function edit ($id) {
-    }
+    public function edit ($id) { }
 
 
     public function update (Request $request, $id) {
-
+        /*
         $formData = $request->all();
         return $formData;
 
@@ -339,9 +329,9 @@ class FormDeisController extends Controller {
         $result = $form_deis->update($fd);
 
         return $result;
+        */
     }
 
 
-    public function destroy ($id) {
-    }
+    public function destroy ($id) { }
 }
