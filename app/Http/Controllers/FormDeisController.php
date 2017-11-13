@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\FormDeis;
+use App\FormDeisLogSeguimientoVih;
 use App\Pais;
 use App\Establecimiento;
 use Illuminate\Http\Request;
@@ -309,7 +310,8 @@ class FormDeisController extends Controller {
             $result = $form_deis->update($fd);
 
             if ($form_deis->mujer_es_vih_positivo == 'Si') {
-
+                $fd['usuario_modifica_form_deis'] = auth()->user()->id;
+                FormDeisLogSeguimientoVih::create($fd);
             }
 
 
