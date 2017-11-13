@@ -18,7 +18,6 @@ Vue.use(VeeValidate, {
    locale: 'es'
 });
 
-
 const FormularioController = new Vue({
    el: '#FormularioController ',
    data(){
@@ -1192,7 +1191,6 @@ const FormularioController = new Vue({
       verifica_validacion_click: function (input) {
          switch (input.id) {
             case 'pais_origen':
-
                break;
          }
       },

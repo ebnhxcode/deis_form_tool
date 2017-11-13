@@ -17,12 +17,25 @@
          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-   <!-- jQuery 2.1.4 -->
+   <!-- jQuery 2.2.1 -->
    {{--<script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>--}}
    <script src="{{ asset('/js/jquery-3.2.1.min.js') }}"></script>
 
+   <!-- jQuery UI 1.12.1 -->
+   {{--
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   --}}
+
    <!-- Select2 2.1.4 -->
    <script src="{{ asset('/js/select2.min.js') }}"></script>
+   <link rel="stylesheet" type="text/css" href="{{ asset('/css/select2.min.css') }}"></link>
+
+   <!-- Select2 4.0.4 -->
+   {{--
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+   --}}
 
    <!-- Sweet Alert JS -->
    <script src="{{asset('/js/sweetalert.min.js')}}" type="text/javascript"></script>

@@ -159,6 +159,7 @@
                                                       </option>
 
                                                    </select><!-- .form-control -->
+
                                                 </dd>
 
                                                 <!-- Textarea Inputs -->
@@ -217,15 +218,6 @@
          </div><!-- col-md-* -->
       </div><!-- .row -->
    </div><!-- .container -->
-
-   <script>
-      /*
-      $(document).ready(function(){
-         $('#lugar_atencion_parto').select2();
-         $('#pais_origen').select2();
-      });
-      */
-   </script>
 
 @endsection
 
