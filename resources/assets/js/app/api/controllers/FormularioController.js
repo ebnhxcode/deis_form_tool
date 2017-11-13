@@ -184,15 +184,6 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Run Madre</b>
                                           </a>
                                        </li>
-                                       <!--
-                                       <li role="presentation">
-                                          <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo"
-                                             role="tab" data-toggle="tab">
-
-                                             Búsqueda de Personas - <b>Correlativo</b>
-                                          </a>
-                                       </li>
-                                        -->
 
                                     </ul>
                                  </div><!-- .panel-heading -->
@@ -274,136 +265,17 @@ const FormularioController = new Vue({
                                                       </div><!-- .table-responsive -->
                                                    </dd>
 
-                                                   <!--
-                                                   <dt></dt>
-                                                   <dd</dd>
-                                                   <div class="col-md-6">
-                                                      <dt></dt>
-                                                      <dd class="well well-sm"></dd>
-                                                   </div>
-                                                   -->
-
                                                 </div><!-- .col-md-12 -->
                                              </div>
                                           </dl><!-- dl-horizontal -->
 
 
                                        </div><!-- .tab-pane .fade #lista_personas_run -->
-
-                                       <!--
-                                       <div role="tabpanel" class="tab-pane fade" id="lista_personas_correlativo">
-
-
-                                          <dl class="dl-vertical">
-                                             <div class="row">
-                                                <div class="col-md-12" style="overflow-y: scroll;max-height: 400px;">
-
-                                                   <dt>
-                                                      Número de correlativo
-                                                   </dt>
-                                                   <dd>
-
-
-                                                      <!-- Busqueda por CORRELATIVO -->
-                                                      <div class="form-group">
-                                                         <div class="input-group input-group-sm">
-                                                            <div class="input-group-addon">
-                                                               <i class="fa fa-thumb-tack"></i>
-                                                            </div>
-
-                                                            <input class="form-control"
-                                                                   type="number"
-                                                                   name="n_correlativo_interno"
-                                                                   id="n_correlativo_interno"
-                                                                   v-model="n_correlativo_interno"
-                                                                   @change="buscar_por_correlativo">
-
-                                                            <span class="input-group-btn">
-                                                              <button class="btn btn-sm btn-info"
-                                                                  @click.prevent="buscar_por_correlativo">
-                                                                  Buscar&nbsp;<i class="fa fa-search"></i>
-                                                               </button>
-                                                            </span><!-- .input-group-btn -->
-                                                         </div><!-- /.input-group -->
-                                                      </div><!-- /.form-group -->
-
-
-                                                      <div class="table-responsive" v-if="formulario_vacio_correlativo == false">
-
-                                                         <small class="text-info">Resultados encontrados</small>
-                                                         <br>
-                                                         <table class="table table-striped small">
-                                                            <thead>
-                                                               <tr>
-                                                                  <th>Accion</th>
-                                                                  <th>Correlativo</th>
-                                                                  <th>Run Madre</th>
-                                                                  <th>Nombres</th>
-                                                                  <th>Apellido Paterno</th>
-                                                                  <th>Apellido Materno</th>
-                                                               </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                               <tr v-for="f in formularios_correlativo">
-                                                                  <td>
-                                                                     <button class="btn btn-sm btn-primary"
-                                                                        @click.prevent="modificar_usuario_seleccionado(f)">
-                                                                        <i class="fa fa-pencil"></i>
-                                                                     </button>
-                                                                  </td>
-                                                                  <td>{{f.n_correlativo_interno}}</td>
-                                                                  <td>{{f.run_madre}}</td>
-                                                                  <td>{{f.nombres_madre}}</td>
-                                                                  <td>{{f.primer_apellido_madre}}</td>
-                                                                  <td>{{f.segundo_apellido_madre}}</td>
-                                                               </tr>
-                                                            </tbody>
-                                                         </table>
-                                                      </div><!-- .table-responsive -->
-                                                   </dd>
-
-
-                                                   <!--
-                                                   <dt></dt>
-                                                   <dd</dd>
-                                                   <div class="col-md-6">
-                                                      <dt></dt>
-                                                      <dd class="well well-sm"></dd>
-                                                   </div>
-                                                   -->
-
-                                                </div><!-- .col-md-12 -->
-                                             </div><!-- .row -->
-                                          </dl><!-- dl-horizontal -->
-
-                                       </div><!-- .tab-pane .fade #lista_personas_correlativo -->
-                                        -->
-
                                     </div><!-- .panel-heading -->
                                  </div><!-- .panel-heading -->
                               </div><!-- .panel-heading -->
 
 
-
-
-                              <!--
-                               <dl class="dl-vertical">
-                                 <div class="row">
-									         <div style="overflow-y: scroll;max-height: 400px;">
-
-                                       <div class="col-md-6">
-                                          <dt></dt>
-                                          <dd class="well well-sm"></dd>
-                                       </div>
-                                       <div class="col-md-6">
-                                          <dt></dt>
-                                          <dd class="well well-sm"></dd>
-                                       </div>
-
-                                    </div>
-                                 </div>
-                              </dl>
-                              -->
 							      </slot>
 						      </div>
 
