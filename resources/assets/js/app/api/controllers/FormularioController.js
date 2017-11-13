@@ -446,20 +446,31 @@ const FormularioController = new Vue({
       this.fetchFormulario();
       var self = this;
       setInterval(function () {
-
          self.guardarFormulario('identificacion_mujer');
          self.guardarFormulario('control_embarazo');
          self.guardarFormulario('patologias_sifilis');
          self.guardarFormulario('patologias_vih');
          self.guardarFormulario('datos_parto');
          self.guardarFormulario('datos_recien_nacido');
-
       },300000);
    },
    ready: {},
    filters: {
    },
    methods: {
+
+      validar_campos_completados: function (tabName) {
+         var validation = true;
+         for (let i in this.inputs){
+            //console.log(tabName);
+            //console.log(this.inputs[i].seccion == tabName);
+            if (this.inputs[i].seccion == tabName && this.fdc[this.inputs[i].name] == null
+               && this.inputs[i].disabled == null ) {
+               validation = false;
+            }
+         }
+         return validation;
+      },
       //camelCase() => for specific functions
       verifica_validacion_keyup: function (input) {
          /*

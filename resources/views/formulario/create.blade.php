@@ -83,7 +83,8 @@
                                  <!-- Nav tabs -->
                                  <ul class="nav nav-tabs small" role="tablist">
                                     <li role="presentation" :class="tab.class" v-for="tab in nav_tab_form_deis">
-                                       <a :href="'#'+tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab">
+                                       <a :href="'#'+tab.name" :aria-controls="tab.name" role="tab" data-toggle="tab"
+                                          :style="validar_campos_completados(tab.name)==true?'pointer-events:none;':''">
                                           @{{ tab.description }}
                                        </a>
                                     </li>

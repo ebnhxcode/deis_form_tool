@@ -37161,7 +37161,6 @@ var FormularioController = new _vue2.default({
       this.fetchFormulario();
       var self = this;
       setInterval(function () {
-
          self.guardarFormulario('identificacion_mujer');
          self.guardarFormulario('control_embarazo');
          self.guardarFormulario('patologias_sifilis');
@@ -37174,6 +37173,18 @@ var FormularioController = new _vue2.default({
    ready: {},
    filters: {},
    methods: {
+
+      validar_campos_completados: function validar_campos_completados(tabName) {
+         var validation = true;
+         for (var i in this.inputs) {
+            //console.log(tabName);
+            //console.log(this.inputs[i].seccion == tabName);
+            if (this.inputs[i].seccion == tabName && this.fdc[this.inputs[i].name] == null && this.inputs[i].disabled == null) {
+               validation = false;
+            }
+         }
+         return validation;
+      },
       //camelCase() => for specific functions
       verifica_validacion_keyup: function verifica_validacion_keyup(input) {
          /*
