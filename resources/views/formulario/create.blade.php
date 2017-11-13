@@ -76,7 +76,8 @@
                         <!-- style="pointer-events:none;" -->
 
                         <div v-if="fdc && fdc.estado_form_deis!='ocupado' || fdc.usuario_modifica_form_deis == auth.id">
-                           <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true || formularioEditActivo == true">
+                           <div id="" :class=" (fdc.mujer_es_vih_positivo=='Si') ?'panel with-nav-tabs panel-danger':'panel with-nav-tabs panel-primary'"
+                                v-if="formularioNuevoActivo == true || formularioEditActivo == true">
                               <!-- Items elementos de cabecera -->
                               <div class="panel-heading">
                                  <!-- Nav tabs -->
