@@ -37246,13 +37246,24 @@ var FormularioController = new _vue2.default({
                      self.$http.post('/formulario/confirmar_confidencialidad_mujer_vih', formData).then(function (response) {
                         // success callback
                         console.log(response);
-                        //var rd = response.body.rd;
+                        var rd = response.body.rd;
+                        if (rd == true) {
+                           swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
+                        } else {
+                           self.fdc[input.name] = null;
+                           swal({
+                              title: "Advertencia",
+                              text: "La clave ingresada es incorrecta.",
+                              type: "warning",
+                              confirmButtonClass: "btn-danger",
+                              closeOnConfirm: false
+                           });
+                        }
                      }, function (response) {
                         // error callback
                         console.log(response);
                      });
-
-                     swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
+                     return false;
                   });
 
                   /*

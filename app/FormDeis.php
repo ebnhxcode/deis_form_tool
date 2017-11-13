@@ -113,6 +113,7 @@ class FormDeis extends Model
 'lugar_control_prenatal_otro',
 'lugar_derivacion_recien_nacido_a_seguimiento',
 'mujer_continua_tratamiento_antiretroviral',
+'mujer_es_vih_positivo',
 'n_correlativo_interno',
 'nacidos_muertos_previos_embarazo',
 'nacidos_vivos_previos_embarazo',

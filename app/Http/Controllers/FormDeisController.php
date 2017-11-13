@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
 use App\FormDeisInput;
+use Illuminate\Support\Facades\Hash;
 
 
 class FormDeisController extends Controller {
@@ -266,9 +267,9 @@ class FormDeisController extends Controller {
 
     public function confirmar_confidencialidad_mujer_vih (Request $request) {
         if ($request->wantsJson()) {
-
-
-            return response()->json(['rd' => $request->all()]);
+            $password = Hash::check($request->clave_usuario, auth()->user()->password);
+            #Retorna true o false
+            return response()->json(['rd' => $password ]);
         }
     }
 
