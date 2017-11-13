@@ -837,32 +837,48 @@ const FormularioController = new Vue({
                break;
 
             //case 'anos_estudio':
-               //    break;
             case 'escolaridad':
-               $('.anos_estudio').find('option').remove().end();
+               $('.anos_estudio1').find('option').remove().end();
+               $('.anos_estudio2').find('option').remove().end();
                switch (this.fdc[input.id]) {
                   case 'Ed. Basica':
                      for (var i = 1;i<=8;i++) {
                         var o = new Option(i,i);
-                        $('.anos_estudio').append($(o).html(i));
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=8;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
                      }
                      break;
                   case 'Ed. Media':
                      for (var i = 1;i<=4;i++) {
                         var o = new Option(i,i);
-                        $('.anos_estudio').append($(o).html(i));
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=4;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
                      }
                      break;
                   case 'Tecnico':
                      for (var i = 1;i<=3;i++) {
                         var o = new Option(i,i);
-                        $('.anos_estudio').append($(o).html(i));
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=3;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
                      }
                      break;
                   case 'Superior':
                      for (var i = 1;i<=7;i++) {
                         var o = new Option(i,i);
-                        $('.anos_estudio').append($(o).html(i));
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=7;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
                      }
                      break;
                   default:
@@ -870,13 +886,20 @@ const FormularioController = new Vue({
                      do {
                         i++;
                         var o = new Option(i,i);
-                        $('.anos_estudio').append($(o).html(i));
+                        $('.anos_estudio1').append($(o).html(i));
+                        $('.anos_estudio2').append($(o).html(i));
                      }while(false);
                      break;
                }
 
-               //$('#anos_estudio').val(this.fdc['anos_estudio']);
+               $('.anos_estudio1').val(this.fdc['anos_estudio']);
+               $('.anos_estudio2').val(this.fdc['anos_estudio']);
                break;
+            /*
+            case 'anos_estudio':
+               $('.anos_estudio').val(this.fdc['anos_estudio']);
+                break;
+            */
 
             case 'nacidos_vivos_previos_embarazo':
             case 'nacidos_muertos_previos_embarazo':
@@ -1193,6 +1216,66 @@ const FormularioController = new Vue({
          switch (input.id) {
             case 'pais_origen':
                break;
+
+            //case 'anos_estudio':
+            case 'escolaridad':
+               $('.anos_estudio1').find('option').remove().end();
+               $('.anos_estudio2').find('option').remove().end();
+               switch (this.fdc[input.id]) {
+                  case 'Ed. Basica':
+                     for (var i = 1;i<=8;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=8;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
+                     }
+                     break;
+                  case 'Ed. Media':
+                     for (var i = 1;i<=4;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=4;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
+                     }
+                     break;
+                  case 'Tecnico':
+                     for (var i = 1;i<=3;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=3;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
+                     }
+                     break;
+                  case 'Superior':
+                     for (var i = 1;i<=7;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio1').append($(o).html(i));
+                     }
+                     for (var i = 1;i<=7;i++) {
+                        var o = new Option(i,i);
+                        $('.anos_estudio2').append($(o).html(i));
+                     }
+                     break;
+                  default:
+                     var i = -1;
+                     do {
+                        i++;
+                        var o = new Option(i,i);
+                        $('.anos_estudio1').append($(o).html(i));
+                        $('.anos_estudio2').append($(o).html(i));
+                     }while(false);
+                     break;
+               }
+               $('.anos_estudio1').val(this.fdc['anos_estudio']);
+               $('.anos_estudio2').val(this.fdc['anos_estudio']);
+               break;
+
          }
       },
 

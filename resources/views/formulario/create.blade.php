@@ -73,6 +73,8 @@
                            </div><!-- .row -->
                         </div><!-- .well .well-sm -->
 
+                        <!-- style="pointer-events:none;" -->
+
                         <div v-if="fdc && fdc.estado_form_deis!='ocupado' || fdc.usuario_modifica_form_deis == auth.id">
                            <div id="" class="panel with-nav-tabs panel-primary" v-if="formularioNuevoActivo == true || formularioEditActivo == true">
                               <!-- Items elementos de cabecera -->

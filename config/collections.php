@@ -217,7 +217,7 @@ return [
          'Parto Cesarea' => 'Parto Cesarea',
       ],
 
-      'tipo_establecimiento' => [
+      'tipo_establecimiento_control_prenatal_embarazo' => [
          'Publico' => 'Publico',
          'Privado' => 'Privado',
          'Otro' => 'Otro',

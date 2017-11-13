@@ -197,6 +197,7 @@ class FormDeisController extends Controller {
                Establecimiento::select(
                   DB::raw("CONCAT(id_establecimiento,' - ',nombre_establecimiento) AS nombre_establecimiento"),'id_establecimiento')
                   ->pluck('nombre_establecimiento', 'id_establecimiento')];
+            $returnData['deis_form_table_options'] += ['anos_estudio' => [''=>'Seleccione nivel de escolaridad']];
 
             return response()->json($returnData);
         }
@@ -227,7 +228,7 @@ class FormDeisController extends Controller {
                Establecimiento::select(
                   DB::raw("CONCAT(id_establecimiento,' - ',nombre_establecimiento) AS nombre_establecimiento"),'id_establecimiento')
                   ->pluck('nombre_establecimiento', 'id_establecimiento')];
-            $returnData['deis_form_table_options'] += ['anos_Estudio' => [''=>'Seleccione nivel de escolaridad']];
+            $returnData['deis_form_table_options'] += ['anos_estudio' => [''=>'Seleccione nivel de escolaridad']];
 
             return response()->json($returnData);
         }
