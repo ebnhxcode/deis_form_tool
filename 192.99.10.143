@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Nov 13 03:05:42 2017 as: nmap -vvv -sS -sV -O -Pn -p1-65535 -T4 --open -oN 192.99.10.143
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Mon Nov 13 03:05:42 2017 -- 0 IP addresses (0 hosts up) scanned in 0.73 seconds

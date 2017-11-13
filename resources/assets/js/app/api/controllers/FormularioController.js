@@ -835,35 +835,34 @@ const FormularioController = new Vue({
                   }
                }
                break;
-            /*
-            case 'anos_estudio':
-               break;
-            */
+
+            //case 'anos_estudio':
+               //break;
             case 'escolaridad':
-               $('#anos_estudio').find('option').remove().end();
-               switch (this.fdc[input.name]) {
+               $('.anos_estudio').find('option').remove().end();
+               switch (this.fdc[input.id]) {
                   case 'Ed. Basica':
                      for (var i = 1;i<=8;i++) {
                         var o = new Option(i,i);
-                        $('#anos_estudio').append($(o).html(i));
+                        $('.anos_estudio').append($(o).html(i));
                      }
                      break;
                   case 'Ed. Media':
                      for (var i = 1;i<=4;i++) {
                         var o = new Option(i,i);
-                        $('#anos_estudio').append($(o).html(i));
+                        $('.anos_estudio').append($(o).html(i));
                      }
                      break;
                   case 'Tecnico':
                      for (var i = 1;i<=3;i++) {
                         var o = new Option(i,i);
-                        $('#anos_estudio').append($(o).html(i));
+                        $('.anos_estudio').append($(o).html(i));
                      }
                      break;
                   case 'Superior':
                      for (var i = 1;i<=7;i++) {
                         var o = new Option(i,i);
-                        $('#anos_estudio').append($(o).html(i));
+                        $('.anos_estudio').append($(o).html(i));
                      }
                      break;
                   default:
@@ -871,10 +870,12 @@ const FormularioController = new Vue({
                      do {
                         i++;
                         var o = new Option(i,i);
-                        $('#anos_estudio').append($(o).html(i));
+                        $('.anos_estudio').append($(o).html(i));
                      }while(false);
                      break;
                }
+
+               //$('#anos_estudio').val(this.fdc['anos_estudio']);
                break;
 
             case 'nacidos_vivos_previos_embarazo':
@@ -1226,7 +1227,6 @@ const FormularioController = new Vue({
 
          return;
       },
-
 
       guardarFormulario: function (tabName) {
          this.mini_loader = true;
