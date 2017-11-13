@@ -138,8 +138,8 @@ class FormDeisController extends Controller {
         if ($request->wantsJson()) {
             $run_madre = isset($request->run_madre)?$request->run_madre:null;
             if ($run_madre) {
-                #$formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
-                $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
+                $formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
+                #$formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
                 if (count($formularios)>0){
                     return response()->json(['rd'=>'Existe']);
                 }else{
@@ -157,8 +157,8 @@ class FormDeisController extends Controller {
         if ($request->wantsJson()) {
             $run_madre = isset($request->run_madre)?$request->run_madre:null;
             if ($run_madre) {
-                #$formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
-                $formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
+                $formularios = FormDeis::where('run_madre', 'ilike', $run_madre.'%')->get();
+                #$formularios = FormDeis::where('run_madre', '=', $run_madre)->get();
                 return response()->json(['formularios'=>$formularios]);
             }else{
                 return response()->json(['error'=>['rd' => 'El run no existe']]);

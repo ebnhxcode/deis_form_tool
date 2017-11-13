@@ -37067,6 +37067,16 @@ var FormularioController = new _vue2.default({
                   //console.log(response);
                   _this.formularios = response.body.formularios;
                   _this.formulario_vacio = $.isEmptyObject(_this.formularios) == true ? true : false;
+
+                  if (_this.formulario_vacio == true) {
+                     swal({
+                        title: "Atención",
+                        text: "El rut ingresado no se encuentra registrado.",
+                        type: "warning",
+                        confirmButtonClass: "btn-danger",
+                        closeOnConfirm: false
+                     });
+                  }
                }, function (response) {
                   // error callback
                   console.log(response);

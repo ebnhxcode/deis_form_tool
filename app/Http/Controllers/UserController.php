@@ -38,7 +38,7 @@ class UserController extends Controller
 		          $returnData = [
                    'llave' => $user->clave_electronica,
                    'nombre' => $user->name,
-                   'rut' => $user->rut,
+                   #'rut' => $user->rut,
                    'email' => $user->email
                 ];
                 Mail::send('email.envio_clave_electronica', $returnData, function ($message) use ($email) {

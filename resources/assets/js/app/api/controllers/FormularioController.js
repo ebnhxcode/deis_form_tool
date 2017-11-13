@@ -480,6 +480,16 @@ const FormularioController = new Vue({
                   this.formularios = response.body.formularios;
                   this.formulario_vacio = $.isEmptyObject(this.formularios)==true?true:false;
 
+                  if (this.formulario_vacio == true) {
+                     swal({
+                        title: "Atención",
+                        text: "El rut ingresado no se encuentra registrado.",
+                        type: "warning",
+                        confirmButtonClass: "btn-danger",
+                        closeOnConfirm: false
+                     });
+                  }
+
                }, response => { // error callback
                   console.log(response);
                });

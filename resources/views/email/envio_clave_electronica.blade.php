@@ -33,8 +33,7 @@
                               </b>
                               <br>
                               <br>
-                              Ademas, le recordamos que sus datos para poder crear su clave son: <br>
-                              Rut: <b>{{$rut}}</b> <br>
+                              Ademas, le recordamos que el email registrado es: <br>
                               Email: <b>{{$email}}</b> <br>
                               <br><br>
                            </span>
