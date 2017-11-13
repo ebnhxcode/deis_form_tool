@@ -440,7 +440,13 @@ const FormularioController = new Vue({
             },
             validar_rut: function (run) {
                if (validate(run) == false) {
-                  alert('El formato del rut es incorrecto');
+                  swal({
+                     title: "Advertencia",
+                     text: "El formato del rut es incorrecto.",
+                     type: "warning",
+                     confirmButtonClass: "btn-danger",
+                     closeOnConfirm: false
+                  });
                   return this.run = null;
                }else{
                   return format(run);
@@ -448,7 +454,13 @@ const FormularioController = new Vue({
             },
             buscar_por_run: function () {
                if (!this.run_madre || validate(this.run_madre) == false){
-                  alert('Debe ingresar un rut valido');
+                  swal({
+                     title: "Advertencia",
+                     text: "Debe ingresar un rut valido.",
+                     type: "warning",
+                     confirmButtonClass: "btn-danger",
+                     closeOnConfirm: false
+                  });
                   return;
                }
 
@@ -589,7 +601,13 @@ const FormularioController = new Vue({
                      var rd = response.body.rd;
                      if (rd == 'Existe') {
                         this.fdc[input.name] = null;
-                        alert('El rut ingresado ya existe');
+                        swal({
+                           title: "Advertencia",
+                           text: "El rut ingresado ya existe.",
+                           type: "warning",
+                           confirmButtonClass: "btn-danger",
+                           closeOnConfirm: false
+                        });
                      }
 
                   }, response => { // error callback
@@ -1189,7 +1207,13 @@ const FormularioController = new Vue({
             this.formularioNuevoActivo = true;
          }else{
             this.fdc = this.formularioActivoObj;
-            alert('Ya se está creando un nuevo formulario');
+            swal({
+               title: "Advertencia",
+               text: "Ya se está creando un nuevo formulario.",
+               type: "warning",
+               confirmButtonClass: "btn-danger",
+               closeOnConfirm: false
+            });
          }
       },
 

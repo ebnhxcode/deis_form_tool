@@ -25,10 +25,10 @@
    <script src="{{ asset('/js/select2.min.js') }}"></script>
 
    <!-- Sweet Alert JS -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" type="text/javascript"></script>
+   <script src="{{asset('/js/sweetalert.min.js')}}" type="text/javascript"></script>
 
    <!-- Sweet Alert CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+   <link rel="stylesheet" href="{{asset('/css/sweetalert.min.css')}}">
 
 
    <!-- Recaptcha V2 Google -->

@@ -389,7 +389,13 @@ const UsuarioCreateController = new Vue({
       validar_rut: function () {
          var run = this.newuser.run;
          if (validate(run) == false) {
-            alert('El formato del rut es incorrecto');
+            swal({
+               title: "Advertencia",
+               text: "El formato del rut es incorrecto.",
+               type: "warning",
+               confirmButtonClass: "btn-danger",
+               closeOnConfirm: false
+            });
             return this.newuser.run = null;
          }
       },
@@ -407,7 +413,13 @@ const UsuarioCreateController = new Vue({
          var formData = new FormData();
 
          if (!this.newuser.run || !this.newuser.email || !this.newuser.clave_electronica) {
-            alert('Debe completar todos los campos');
+            swal({
+               title: "Advertencia",
+               text: "Debe completar todos los campos.",
+               type: "warning",
+               confirmButtonClass: "btn-danger",
+               closeOnConfirm: false
+            });
             this.mini_loader_visible = false;
             return;
          }
@@ -421,7 +433,13 @@ const UsuarioCreateController = new Vue({
          this.$http.post('/procesar_solicitud_clave', formData).then(response => { // success callback
             var rd = response.body.rd;
             if (rd == 'false') {
-               alert ('Error, los datos ingresados no son correctos') ;
+               swal({
+                  title: "Advertencia",
+                  text: "Los datos ingresados no son correctos.",
+                  type: "warning",
+                  confirmButtonClass: "btn-danger",
+                  closeOnConfirm: false
+               });
                this.mini_loader_visible = false;
                return;
             }
@@ -463,7 +481,13 @@ const UsuarioCreateController = new Vue({
       crear_clave: function () {
 
          if (this.check_password(this.newuser.clave_real) == false) {
-            alert('Error, la nueva clave debe tener numeros, letras, letras mayusculas, un caracter especial y que sea minimo de 8 caracteres');
+            swal({
+               title: "Advertencia",
+               text: "La nueva clave debe tener numeros, letras, letras mayusculas, un caracter especial y que sea minimo de 8 caracteres.",
+               type: "warning",
+               confirmButtonClass: "btn-danger",
+               closeOnConfirm: false
+            });
             return;
          }
 
