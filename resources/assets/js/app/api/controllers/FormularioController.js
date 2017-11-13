@@ -780,7 +780,7 @@ const FormularioController = new Vue({
 
                break;
             case 'resultado_1_examen_vih_embarazo':
-               if (this.fdc[input.name] == 'No Realizado' || this.fdc[input.name] == 'No Reactivo') {
+               if (this.fdc[input.name] == 'No Realizado') {
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'fecha_1_examen_vih_embarazo' || this.inputs[i].name == 'eg_1_examen_vih') {
                         this.inputs[i].disabled = true;
@@ -798,7 +798,7 @@ const FormularioController = new Vue({
 
                break;
             case 'resultado_2_examen_vih_embarazo':
-               if (this.fdc[input.name] == 'No Realizado' || this.fdc[input.name] == 'No Reactivo') {
+               if (this.fdc[input.name] == 'No Realizado') {
                   for (let i in this.inputs){
                      if (this.inputs[i].name == 'fecha_2_examen_vih_embarazo' || this.inputs[i].name == 'eg_2_examen_vih') {
                         this.inputs[i].disabled = true;

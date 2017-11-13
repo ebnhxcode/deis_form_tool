@@ -229,6 +229,11 @@ return [
          'Otro' => 'Otro',
       ],
 
+      'tipo_establecimiento' => [
+         'Publico' => 'Publico',
+         'Privado' => 'Privado',
+         'Otro' => 'Otro',
+      ],
 
       'tipo_parto' => [
          'Simple' => 'Simple',

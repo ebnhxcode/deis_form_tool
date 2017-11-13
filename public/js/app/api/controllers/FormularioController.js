@@ -37453,7 +37453,7 @@ var FormularioController = new _vue2.default({
 
                break;
             case 'resultado_1_examen_vih_embarazo':
-               if (this.fdc[input.name] == 'No Realizado' || this.fdc[input.name] == 'No Reactivo') {
+               if (this.fdc[input.name] == 'No Realizado') {
                   for (var _i11 in this.inputs) {
                      if (this.inputs[_i11].name == 'fecha_1_examen_vih_embarazo' || this.inputs[_i11].name == 'eg_1_examen_vih') {
                         this.inputs[_i11].disabled = true;
@@ -37469,7 +37469,7 @@ var FormularioController = new _vue2.default({
 
                break;
             case 'resultado_2_examen_vih_embarazo':
-               if (this.fdc[input.name] == 'No Realizado' || this.fdc[input.name] == 'No Reactivo') {
+               if (this.fdc[input.name] == 'No Realizado') {
                   for (var _i13 in this.inputs) {
                      if (this.inputs[_i13].name == 'fecha_2_examen_vih_embarazo' || this.inputs[_i13].name == 'eg_2_examen_vih') {
                         this.inputs[_i13].disabled = true;
