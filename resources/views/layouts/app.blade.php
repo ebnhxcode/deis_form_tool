@@ -24,6 +24,13 @@
    <!-- Select2 2.1.4 -->
    <script src="{{ asset('/js/select2.min.js') }}"></script>
 
+   <!-- Sweet Alert JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" type="text/javascript"></script>
+
+   <!-- Sweet Alert CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+
    <!-- Recaptcha V2 Google -->
    <script src='https://www.google.com/recaptcha/api.js'></script>
    <meta name="google-site-verification" content="4otf3wwxl-5T_OWjpgvsuzwLFqHarlrXlKwFIiF6Xd0" />
