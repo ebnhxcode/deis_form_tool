@@ -184,6 +184,7 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Run Madre</b>
                                           </a>
                                        </li>
+                                       <!--
                                        <li role="presentation">
                                           <a href="#lista_personas_correlativo" aria-controls="lista_personas_correlativo"
                                              role="tab" data-toggle="tab">
@@ -191,6 +192,7 @@ const FormularioController = new Vue({
                                              Búsqueda de Personas - <b>Correlativo</b>
                                           </a>
                                        </li>
+                                        -->
 
                                     </ul>
                                  </div><!-- .panel-heading -->
@@ -288,6 +290,7 @@ const FormularioController = new Vue({
 
                                        </div><!-- .tab-pane .fade #lista_personas_run -->
 
+                                       <!--
                                        <div role="tabpanel" class="tab-pane fade" id="lista_personas_correlativo">
 
 
@@ -374,6 +377,7 @@ const FormularioController = new Vue({
                                           </dl><!-- dl-horizontal -->
 
                                        </div><!-- .tab-pane .fade #lista_personas_correlativo -->
+                                        -->
 
                                     </div><!-- .panel-heading -->
                                  </div><!-- .panel-heading -->
@@ -568,6 +572,17 @@ const FormularioController = new Vue({
    created(){
       //this.spinner_iniciar = true;
       this.fetchFormulario();
+      var self = this;
+      setInterval(function () {
+
+         self.guardarFormulario('identificacion_mujer');
+         self.guardarFormulario('control_embarazo');
+         self.guardarFormulario('patologias_sifilis');
+         self.guardarFormulario('patologias_vih');
+         self.guardarFormulario('datos_parto');
+         self.guardarFormulario('datos_recien_nacido');
+
+      },300000);
    },
    ready: {},
    filters: {

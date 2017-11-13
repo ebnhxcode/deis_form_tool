@@ -37159,6 +37159,16 @@ var FormularioController = new _vue2.default({
    created: function created() {
       //this.spinner_iniciar = true;
       this.fetchFormulario();
+      var self = this;
+      setInterval(function () {
+
+         self.guardarFormulario('identificacion_mujer');
+         self.guardarFormulario('control_embarazo');
+         self.guardarFormulario('patologias_sifilis');
+         self.guardarFormulario('patologias_vih');
+         self.guardarFormulario('datos_parto');
+         self.guardarFormulario('datos_recien_nacido');
+      }, 300000);
    },
 
    ready: {},
