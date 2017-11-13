@@ -212,6 +212,12 @@ return [
          'Desconocido' => 'Desconocido',
       ],
 
+      'mujer_es_vih_positivo' => [
+         'Si' => 'Si',
+         'No' => 'No',
+         'Desconocido' => 'Desconocido',
+      ],
+
       'via_parto' => [
          'Parto Vaginal' => 'Parto Vaginal',
          'Parto Cesarea' => 'Parto Cesarea',
