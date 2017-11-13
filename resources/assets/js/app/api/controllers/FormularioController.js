@@ -624,6 +624,66 @@ const FormularioController = new Vue({
                break;
             */
 
+            case 'mujer_es_vih_positivo':
+               if (this.fdc[input.name] == 'Si') {
+                  var self = this;
+                  swal({
+                     title: "Advertencia!",
+                     text: `
+                     Acuerdo de confidencialidad
+
+                     Al seleccionar si, acuerdo mantener el proceso de ingreso de información de forma confidencial y anónima.
+
+                     Para confirmar ingrese su clave de acceso
+                     `,
+                     type: "input",
+                     inputType: "password",
+                     showCancelButton: true,
+                     closeOnConfirm: false,
+                     inputPlaceholder: "Ingrese su clave de acceso",
+                  }, function (inputValue) {
+                     if (inputValue === false) {
+                        self.fdc[input.name] = null;
+                        return false;
+                     }
+
+                     if (inputValue === "") {
+                        swal.showInputError("Necesitas ingresar tu clave de acceso!");
+                        //this.fdc[input.name] = null;
+                        return false;
+                     }
+
+                     var formData = new FormData();
+                     Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+                     formData.append('rut_usuario', self.auth.rut);
+                     formData.append('clave_usuario', inputValue);
+
+                     self.$http.post('/formulario/confirmar_confidencialidad_mujer_vih', formData).then(response => { // success callback
+                        console.log(response);
+                        //var rd = response.body.rd;
+
+                     }, response => { // error callback
+                        console.log(response);
+                     });
+
+
+                     swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
+                  });
+
+
+                  /*
+                  swal({
+                     title: "",
+                     text: "El rut ingresado ya existe.",
+                     type: "warning",
+                     confirmButtonClass: "btn-danger",
+                     closeOnConfirm: false
+                  });
+                  */
+               }
+
+               break;
+
             case 'edad_gestacional_ingreso_control_embarazo':
                if (parseInt(this.fdc[input.name])<0) {
                   this.fdc[input.name] = 0;

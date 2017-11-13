@@ -264,6 +264,14 @@ class FormDeisController extends Controller {
         }
     }
 
+    public function confirmar_confidencialidad_mujer_vih (Request $request) {
+        if ($request->wantsJson()) {
+
+
+            return response()->json(['rd' => $request->all()]);
+        }
+    }
+
 
     public function create (Request $request) {
         $returnData['instructions'] = config('collection.deis_form_instructions');
