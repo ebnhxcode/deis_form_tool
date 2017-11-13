@@ -37698,7 +37698,6 @@ var FormularioController = new _vue2.default({
       verifica_validacion_click: function verifica_validacion_click(input) {
          switch (input.id) {
             case 'pais_origen':
-               $(input.id).select2();
                break;
          }
       },
