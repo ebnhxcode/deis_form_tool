@@ -37107,6 +37107,7 @@ var FormularioController = new _vue2.default({
                this.$parent.fdc = formulario;
                this.$parent.show_modal_buscar_formulario = false;
                this.$parent.formularioEditActivo = true;
+               this.$parent.formularioNuevoActivo = false;
 
                var formData = new FormData();
                _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();

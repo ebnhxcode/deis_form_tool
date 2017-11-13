@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41f1858f-db14-4365-887d-6a2a9a7a39b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" afterPath="$PROJECT_DIR$/public/js/app/api/controllers/FormularioController.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" afterPath="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     </list>
     <ignored path="deis_form_tool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,12 +31,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36753926">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormularioController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5434555">
+              <caret line="519" column="57" selection-start-line="519" selection-start-column="57" selection-end-line="519" selection-end-column="57" />
+              <folding>
+                <element signature="e#1462#1833#0" expanded="false" />
+                <element signature="e#1852#2211#0" expanded="false" />
+                <element signature="e#2234#2516#0" expanded="false" />
+                <element signature="e#2533#3348#0" expanded="false" />
+                <element signature="e#3366#3793#0" expanded="false" />
+                <element signature="e#3813#4246#0" expanded="false" />
+                <element signature="e#24349#24612#0" expanded="false" />
+                <element signature="e#34301#34660#0" expanded="false" />
+                <element signature="e#34680#35039#0" expanded="false" />
+                <element signature="e#38409#38471#0" expanded="false" />
+                <element signature="e#38763#38825#0" expanded="false" />
+                <element signature="e#38942#39186#0" expanded="false" />
+                <element signature="e#39206#39450#0" expanded="false" />
+                <element signature="e#49123#49352#0" expanded="false" />
+                <element signature="e#49366#49595#0" expanded="false" />
+                <element signature="e#50297#50512#0" expanded="false" />
+                <element signature="e#50526#50741#0" expanded="false" />
+                <marker date="1510540166326" expanded="false" signature="2751:3218" placeholder="..." />
+                <marker date="1510540166326" expanded="true" signature="3481:3641" placeholder="..." />
+                <marker date="1510540166326" expanded="true" signature="3932:4092" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +162,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/UsuarioCreateController.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js" />
       </list>
     </option>
   </component>
@@ -1122,17 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.365385">
-          <caret line="258" column="63" selection-start-line="258" selection-start-column="63" selection-end-line="258" selection-end-column="63" />
-          <folding>
-            <element signature="e#358#3794#0#PHP" expanded="false" />
-            <element signature="e#12807#13341#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41980624">
@@ -1226,10 +1243,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormDeisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.365385">
+          <caret line="258" column="63" selection-start-line="258" selection-start-column="63" selection-end-line="258" selection-end-column="63" />
+          <folding>
+            <element signature="e#358#3794#0#PHP" expanded="false" />
+            <element signature="e#12807#13341#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app/api/controllers/FormularioController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35287958">
-          <caret line="472" column="22" selection-start-line="472" selection-start-column="17" selection-end-line="472" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5434555">
+          <caret line="519" column="57" selection-start-line="519" selection-start-column="57" selection-end-line="519" selection-end-column="57" />
           <folding>
             <element signature="e#1462#1833#0" expanded="false" />
             <element signature="e#1852#2211#0" expanded="false" />
@@ -1237,29 +1273,21 @@
             <element signature="e#2533#3348#0" expanded="false" />
             <element signature="e#3366#3793#0" expanded="false" />
             <element signature="e#3813#4246#0" expanded="false" />
-            <element signature="e#24290#24553#0" expanded="false" />
-            <element signature="e#34242#34601#0" expanded="false" />
-            <element signature="e#34621#34980#0" expanded="false" />
-            <element signature="e#38350#38412#0" expanded="false" />
-            <element signature="e#38704#38766#0" expanded="false" />
-            <element signature="e#38883#39127#0" expanded="false" />
-            <element signature="e#39147#39391#0" expanded="false" />
-            <element signature="e#49064#49293#0" expanded="false" />
-            <element signature="e#49307#49536#0" expanded="false" />
-            <element signature="e#50238#50453#0" expanded="false" />
-            <element signature="e#50467#50682#0" expanded="false" />
-            <marker date="1510539783427" expanded="false" signature="2751:3218" placeholder="..." />
-            <marker date="1510539783427" expanded="true" signature="3481:3641" placeholder="..." />
-            <marker date="1510539783427" expanded="true" signature="3932:4092" placeholder="..." />
+            <element signature="e#24349#24612#0" expanded="false" />
+            <element signature="e#34301#34660#0" expanded="false" />
+            <element signature="e#34680#35039#0" expanded="false" />
+            <element signature="e#38409#38471#0" expanded="false" />
+            <element signature="e#38763#38825#0" expanded="false" />
+            <element signature="e#38942#39186#0" expanded="false" />
+            <element signature="e#39206#39450#0" expanded="false" />
+            <element signature="e#49123#49352#0" expanded="false" />
+            <element signature="e#49366#49595#0" expanded="false" />
+            <element signature="e#50297#50512#0" expanded="false" />
+            <element signature="e#50526#50741#0" expanded="false" />
+            <marker date="1510540166326" expanded="false" signature="2751:3218" placeholder="..." />
+            <marker date="1510540166326" expanded="true" signature="3481:3641" placeholder="..." />
+            <marker date="1510540166326" expanded="true" signature="3932:4092" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36753926">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
