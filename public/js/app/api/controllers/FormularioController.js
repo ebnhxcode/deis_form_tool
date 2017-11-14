@@ -37168,6 +37168,19 @@ var FormularioController = new _vue2.default({
          self.guardarFormulario('datos_parto');
          self.guardarFormulario('datos_recien_nacido');
       }, 300000);
+
+      $(document).ready(function () {
+         window.onbeforeunload = function () {
+            return "Are you sure you want to close the window?";
+         };
+
+         $(window).unload(function () {
+            return "Are you sure you want to close the window?";
+         });
+         $(window).bind("beforeunload", function () {
+            return confirm("Do you really want to close?");
+         });
+      });
    },
 
    ready: {},
