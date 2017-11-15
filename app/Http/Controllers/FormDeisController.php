@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\FormDeis;
 use App\FormDeisLogSeguimientoVih;
 use App\Pais;
+use App\User;
 use App\Establecimiento;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -213,7 +214,7 @@ class FormDeisController extends Controller {
             $this->fdc = new FormDeis();
             $this->fdc->save();
             $this->fdc = FormDeis::find($this->fdc->id);
-            $this->fdc->n_correlativo_interno = $this->fdc->id;
+            $this->fdc->n_correlativo_interPaisno = $this->fdc->id;
 
             #Preparacion de variables que contienen la informacion del renderizado de los inputs y de las colecciones que llenan los comboboxes
             $returnData['fdc'] = $this->fdc;
@@ -263,6 +264,17 @@ class FormDeisController extends Controller {
                 $form_deis->save();
                 return response()->json(['fdc' => $form_deis]);
             }
+        }
+    }
+
+
+    public function confirmar_confidencialidad_usuario (Request $request) {
+        if ($request->wantsJson()) {
+            $user = User::find(auth()->user()->id);
+            $user->acepta_terminos = 'acepta';
+
+            #Retorna true o false
+            return response()->json(['rd' => 'O.' ]);
         }
     }
 

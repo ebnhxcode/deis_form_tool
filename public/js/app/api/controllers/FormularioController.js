@@ -37157,6 +37157,7 @@ var FormularioController = new _vue2.default({
        */
    },
    created: function created() {
+
       //this.spinner_iniciar = true;
       this.fetchFormulario();
       var self = this;
@@ -37169,6 +37170,44 @@ var FormularioController = new _vue2.default({
          self.guardarFormulario('datos_recien_nacido');
       }, 300000);
 
+      var self = this;
+      swal({
+         title: "Términos y condiciones de uso",
+         text: '\n           Al ingresar y o realizar cualquier operaci\xF3n de tratamiento de datos en esta base de datos declaro que tengo conocimiento que el art\xEDculo 7 de la ley 19628 dispone que  \u201CLas personas que trabajan en el tratamiento de datos personales, tanto en organismos p\xFAblicos como privados, est\xE1n obligadas a guardar secreto sobre los mismos, cuando provengan o hayan sido recolectados de fuentes no accesibles al p\xFAblico, como asimismo sobre los dem\xE1s datos y antecedentes relacionados con el banco de datos, obligaci\xF3n que no cesa por haber terminado sus actividades en ese campo\u201D. Asimismo, declaro que tengo conocimiento de que los datos que se tratan en este sistema son \u201Cdatos sensibles\u201D y por tanto los datos de este sistema s\xF3lo podr\xE1n ser tratados dentro de las finalidades que se declaran.\n\n            Adicionalmente, si de acuerdo a mis funciones no me corresponde tener acceso a esta informaci\xF3n, me hago responsable de notificar inmediatamente al administrador (cperedo@minsal.cl o gberrios@minsal.cl), sin perjuicio de cancelar los datos que se me hayan comunicado por error.\n         ',
+         closeOnConfirm: true,
+         confirmButtonText: 'Si, acepto'
+      }, function (isConfirm) {
+
+         alert(isConfirm);
+
+         var formData = new FormData();
+         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         formData.append('rut_usuario', self.auth.rut);
+         formData.append('clave_usuario', inputValue);
+
+         self.$http.post('/formulario/confirmar_confidencialidad_usuario', formData).then(function (response) {
+            // success callback
+            console.log(response);
+            var rd = response.body.rd;
+            if (rd == true) {
+               swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
+            } else {
+               self.fdc[input.name] = null;
+               swal({
+                  title: "Advertencia",
+                  text: "La clave ingresada es incorrecta.",
+                  type: "warning",
+                  confirmButtonClass: "btn-danger",
+                  closeOnConfirm: false
+               });
+            }
+         }, function (response) {
+            // error callback
+            console.log(response);
+         });
+         return false;
+      });
+
       $(document).ready(function () {
          window.onbeforeunload = function () {
             return "Are you sure you want to close the window?";
@@ -37180,6 +37219,10 @@ var FormularioController = new _vue2.default({
          $(window).bind("beforeunload", function () {
             return confirm("Do you really want to close?");
          });
+         window.onbeforeunload = confirmExit;
+         function confirmExit() {
+            return "You have attempted to leave this page.  If you have made any changes to the fields without clicking the Save button, your changes will be lost.  Are you sure you want to exit this page?";
+         }
       });
    },
 

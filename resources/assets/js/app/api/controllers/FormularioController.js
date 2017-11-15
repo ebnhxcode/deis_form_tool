@@ -442,6 +442,7 @@ const FormularioController = new Vue({
        */
    },
    created(){
+
       //this.spinner_iniciar = true;
       this.fetchFormulario();
       var self = this;
@@ -453,6 +454,52 @@ const FormularioController = new Vue({
          self.guardarFormulario('datos_parto');
          self.guardarFormulario('datos_recien_nacido');
       },300000);
+
+
+
+      var self = this;
+      swal({
+         title: "Términos y condiciones de uso",
+         text: `
+           Al ingresar y o realizar cualquier operación de tratamiento de datos en esta base de datos declaro que tengo conocimiento que el artículo 7 de la ley 19628 dispone que  “Las personas que trabajan en el tratamiento de datos personales, tanto en organismos públicos como privados, están obligadas a guardar secreto sobre los mismos, cuando provengan o hayan sido recolectados de fuentes no accesibles al público, como asimismo sobre los demás datos y antecedentes relacionados con el banco de datos, obligación que no cesa por haber terminado sus actividades en ese campo”. Asimismo, declaro que tengo conocimiento de que los datos que se tratan en este sistema son “datos sensibles” y por tanto los datos de este sistema sólo podrán ser tratados dentro de las finalidades que se declaran.
+
+            Adicionalmente, si de acuerdo a mis funciones no me corresponde tener acceso a esta información, me hago responsable de notificar inmediatamente al administrador (cperedo@minsal.cl o gberrios@minsal.cl), sin perjuicio de cancelar los datos que se me hayan comunicado por error.
+         `,
+         closeOnConfirm: true,
+         confirmButtonText: 'Si, acepto',
+      }, function (isConfirm) {
+
+         alert(isConfirm);
+
+
+         var formData = new FormData();
+         Vue.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+         formData.append('rut_usuario', self.auth.rut);
+         formData.append('clave_usuario', inputValue);
+
+         self.$http.post('/formulario/confirmar_confidencialidad_usuario', formData).then(response => { // success callback
+            console.log(response);
+            var rd = response.body.rd;
+            if (rd == true) {
+               swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
+            }else{
+               self.fdc[input.name] = null;
+               swal({
+                  title: "Advertencia",
+                  text: "La clave ingresada es incorrecta.",
+                  type: "warning",
+                  confirmButtonClass: "btn-danger",
+                  closeOnConfirm: false
+               });
+            }
+
+         }, response => { // error callback
+            console.log(response);
+         });
+         return false;
+      });
+
+
 
       $(document).ready(function () {
          window.onbeforeunload = function(){
