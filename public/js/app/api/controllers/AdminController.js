@@ -37080,8 +37080,9 @@ var AdminUsuarios = new _vue2.default({
          formData.append('establecimiento', user.establecimiento);
          formData.append('rut', user.rut);
          formData.append('telefono', user.telefono);
-         formData.append('id_role', user.id_role);
+         //formData.append('id_role', user.id_role);
          formData.append('confirmado_llave_secreta', user.confirmado_llave_secreta);
+         formData.append('acepta_terminos', user.acepta_terminos);
 
          _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
 

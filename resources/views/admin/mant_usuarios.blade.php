@@ -62,6 +62,7 @@
                                  <th>Email</th>
                                  <th>Rut</th>
                                  <th>Llave Secreta</th>
+                                 <th>Acepta Terminos</th>
                                  <th>Cargo</th>
                                  <th>Establecimiento</th>
                                  <th>Telefono</th>
@@ -103,6 +104,10 @@
                                  <td>
                                     <span v-if="userEditId!=user.id">@{{ user.clave_electronica }}</span>
                                     <input type="text" v-model="user.clave_electronica" class="form-control" v-else>
+                                 </td>
+                                 <td>
+                                    <span v-if="userEditId!=user.id">@{{ user.acepta_terminos }}</span>
+                                    <input type="text" v-model="user.acepta_terminos" class="form-control" v-else>
                                  </td>
                                  <td>
                                     <span v-if="userEditId!=user.id">@{{ user.position }}</span>
