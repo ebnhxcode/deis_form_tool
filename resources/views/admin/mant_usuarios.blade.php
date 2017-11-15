@@ -60,9 +60,10 @@
                                  <th>Id</th>
                                  <th>Nombre</th>
                                  <th>Email</th>
+                                 <th>Rut</th>
+                                 <th>Llave Secreta</th>
                                  <th>Cargo</th>
                                  <th>Establecimiento</th>
-                                 <th>Rut</th>
                                  <th>Telefono</th>
                                  <th>Role</th>
                                  <th>Se envió llave</th>
@@ -96,16 +97,20 @@
                                     <input type="text" v-model="user.email" class="form-control" v-else>
                                  </td>
                                  <td>
+                                    <span v-if="userEditId!=user.id">@{{ user.rut }}</span>
+                                    <input type="text" v-model="user.rut" class="form-control" v-else>
+                                 </td>
+                                 <td>
+                                    <span v-if="userEditId!=user.id">@{{ user.clave_electronica }}</span>
+                                    <input type="text" v-model="user.clave_electronica" class="form-control" v-else>
+                                 </td>
+                                 <td>
                                     <span v-if="userEditId!=user.id">@{{ user.position }}</span>
                                     <input type="text" v-model="user.position" class="form-control" v-else>
                                  </td>
                                  <td>
                                     <span v-if="userEditId!=user.id">@{{ user.establecimiento }}</span>
                                     <input type="text" v-model="user.establecimiento" class="form-control" v-else>
-                                 </td>
-                                 <td>
-                                    <span v-if="userEditId!=user.id">@{{ user.rut }}</span>
-                                    <input type="text" v-model="user.rut" class="form-control" v-else>
                                  </td>
                                  <td>
                                     <span v-if="userEditId!=user.id">@{{ user.telefono }}</span>
