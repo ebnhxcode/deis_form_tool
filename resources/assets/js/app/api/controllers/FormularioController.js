@@ -446,6 +446,7 @@ const FormularioController = new Vue({
       //this.spinner_iniciar = true;
       this.fetchFormulario();
       var self = this;
+
       setInterval(function () {
          self.guardarFormulario('identificacion_mujer');
          self.guardarFormulario('control_embarazo');
@@ -455,8 +456,7 @@ const FormularioController = new Vue({
          self.guardarFormulario('datos_recien_nacido');
       },300000);
 
-
-      if (this.auth && this.auth.acepta_terminos == null && this.auth.acepta_terminos != 'true') {
+      if (this.auth && this.auth.acepta_terminos == null) {
          var self = this;
          swal({
             title: "Términos y condiciones de uso",
@@ -482,15 +482,6 @@ const FormularioController = new Vue({
 
                   if (rd == true) {
                      swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
-                  }else{
-                     self.fdc[input.name] = null;
-                     swal({
-                        title: "Advertencia",
-                        text: "La clave ingresada es incorrecta.",
-                        type: "warning",
-                        confirmButtonClass: "btn-danger",
-                        closeOnConfirm: false
-                     });
                   }
 
                }, response => { // error callback
@@ -504,6 +495,7 @@ const FormularioController = new Vue({
 
 
 
+      /*
       $(document).ready(function () {
          window.onbeforeunload = function(){
             return "Are you sure you want to close the window?";
@@ -522,6 +514,7 @@ const FormularioController = new Vue({
          }
 
       });
+      */
 
    },
    ready: {},
