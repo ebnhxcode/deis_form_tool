@@ -26,6 +26,7 @@ class User extends Authenticatable
         'clave_electronica',
         'telefono',
         'id_role',
+        'acepta_terminos',
     ];
 
     /**

@@ -271,7 +271,8 @@ class FormDeisController extends Controller {
     public function confirmar_confidencialidad_usuario (Request $request) {
         if ($request->wantsJson()) {
             $user = User::find(auth()->user()->id);
-            $user->acepta_terminos = 'acepta';
+            $user->acepta_terminos = 'true';
+            $user->save();
 
             #Retorna true o false
             return response()->json(['rd' => 'true' ]);
