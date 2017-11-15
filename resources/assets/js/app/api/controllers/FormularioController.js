@@ -455,8 +455,7 @@ const FormularioController = new Vue({
          self.guardarFormulario('datos_parto');
          self.guardarFormulario('datos_recien_nacido');
       },300000);
-
-      /*
+      
       $(document).ready(function () {
          window.onbeforeunload = function(){
             return "Are you sure you want to close the window?";
@@ -475,7 +474,6 @@ const FormularioController = new Vue({
          }
 
       });
-      */
 
    },
    ready: {},
