@@ -37178,34 +37178,37 @@ var FormularioController = new _vue2.default({
          confirmButtonText: 'Si, acepto'
       }, function (isConfirm) {
 
-         alert(isConfirm);
+         //alert(isConfirm);
+         if (isConfirm == true) {
+            swal.close();
+            var formData = new FormData();
+            _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
+            formData.append('rut_usuario', self.auth.rut);
+            formData.append('clave_usuario', inputValue);
 
-         var formData = new FormData();
-         _vue2.default.http.headers.common['X-CSRF-TOKEN'] = $('#_token').val();
-         formData.append('rut_usuario', self.auth.rut);
-         formData.append('clave_usuario', inputValue);
-
-         self.$http.post('/formulario/confirmar_confidencialidad_usuario', formData).then(function (response) {
-            // success callback
-            console.log(response);
-            var rd = response.body.rd;
-            if (rd == true) {
-               swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
-            } else {
-               self.fdc[input.name] = null;
-               swal({
-                  title: "Advertencia",
-                  text: "La clave ingresada es incorrecta.",
-                  type: "warning",
-                  confirmButtonClass: "btn-danger",
-                  closeOnConfirm: false
-               });
-            }
-         }, function (response) {
-            // error callback
-            console.log(response);
-         });
-         return false;
+            self.$http.post('/formulario/confirmar_confidencialidad_usuario', formData).then(function (response) {
+               // success callback
+               console.log(response);
+               var rd = response.body.rd;
+               if (rd == true) {
+                  swal("Gracias!", "Te recordamos que al ser información sensible solicitamos tomar con seriedad el ingreso de la información.");
+               } else {
+                  self.fdc[input.name] = null;
+                  swal({
+                     title: "Advertencia",
+                     text: "La clave ingresada es incorrecta.",
+                     type: "warning",
+                     confirmButtonClass: "btn-danger",
+                     closeOnConfirm: false
+                  });
+               }
+            }, function (response) {
+               // error callback
+               console.log(response);
+            });
+         } else {
+            return;
+         }
       });
 
       $(document).ready(function () {

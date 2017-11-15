@@ -274,7 +274,7 @@ class FormDeisController extends Controller {
             $user->acepta_terminos = 'acepta';
 
             #Retorna true o false
-            return response()->json(['rd' => 'O.' ]);
+            return response()->json(['rd' => 'true' ]);
         }
     }
 
